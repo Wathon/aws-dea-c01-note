@@ -1,6 +1,6 @@
-# AWS Certified Data Engineer – Associate (DEA-C01) Foam Workspace
+# AWS Certified Data Engineer – Associate (DEA-C01) Knowledge Workspace
 
-This workspace is a pre-configured **Foam Personal Knowledge Management (PKM)** note-taking system designed specifically for studying for the **AWS Certified Data Engineer – Associate (DEA-C01)** exam using the official course slides by **Stephane Maarek & Frank Kane** (`[[AWSCertifiedDataEngineerSlides.pdf]]`).
+This workspace is a pre-configured **Personal Knowledge Management (PKM)** note-taking system designed specifically for studying for the **AWS Certified Data Engineer – Associate (DEA-C01)** exam using the official course slides by **Stephane Maarek & Frank Kane** (`[[AWSCertifiedDataEngineerSlides.pdf]]`).
 
 ---
 

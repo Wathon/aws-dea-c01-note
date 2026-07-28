@@ -1,16 +1,15 @@
 ---
-title: AWS DEA-C01 Foam Knowledge Hub
+title: AWS DEA-C01 Knowledge Hub
 type: hub
 tags:
   - hub
   - dea-c01
-  - foam
 date: 2026-07-28
 ---
 
-# 🧠 AWS Certified Data Engineer – Associate (DEA-C01) Foam Hub
+# 🧠 AWS Certified Data Engineer – Associate (DEA-C01) Knowledge Hub
 
-Welcome to your **Foam Personal Knowledge Management (PKM)** workspace for preparing for the **AWS Certified Data Engineer – Associate (DEA-C01)** certification exam!
+Welcome to your **Personal Knowledge Management (PKM)** workspace for preparing for the **AWS Certified Data Engineer – Associate (DEA-C01)** certification exam!
 
 This workspace is structured directly from the **AWS Certified Data Engineer Associate Course** by Stephane Maarek & Frank Kane (`[[AWSCertifiedDataEngineerSlides.pdf]]`).
 
