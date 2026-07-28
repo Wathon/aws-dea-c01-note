@@ -89,6 +89,7 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 - [[big-data-fundamentals]] — Big Data 5 V's, Data Warehouse vs Lake vs Swamp
 - [[data-formats-and-compression]] — Parquet, ORC, Avro, JSON, CSV & Snappy/Gzip compression
 - [[data-modeling-and-partitioning]] — Partition strategies, Adaptive partitioning, Schema design
+- [[data-validation-and-profiling]] — Data Quality rules (DQDL), profiling, Glue Data Quality, PyDeequ & anomaly detection
 - [[sql-and-version-control-review]] — Window Functions, GROUP BY, Joins & Git fundamentals
 
 ---
