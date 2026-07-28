@@ -11,7 +11,7 @@ date: 2026-07-28
 
 Welcome to your **Personal Knowledge Management (PKM)** workspace for preparing for the **AWS Certified Data Engineer – Associate (DEA-C01)** certification exam!
 
-This workspace is structured directly from the **AWS Certified Data Engineer Associate Course** by Stephane Maarek & Frank Kane (`[[AWSCertifiedDataEngineerSlides.pdf]]`).
+This workspace is structured directly from the **AWS Certified Data Engineer Associate Course** by Stephane Maarek & Frank Kane ([AWSCertifiedDataEngineerSlides.pdf](docs/AWSCertifiedDataEngineerSlides.pdf)).
 
 ---
 

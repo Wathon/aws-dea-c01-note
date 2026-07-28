@@ -35,7 +35,7 @@ This workspace is a pre-configured **Personal Knowledge Management (PKM)** note-
 - **`04-exam-tips/`**: Decision matrices, service comparisons, and exam scenario traps.
 - **`journal/`**: Daily study logs for tracking progress.
 - **`.foam/templates/`**: Foam templates for rapid, consistent note creation.
-- **`docs/`**: Source PDF slides (`AWSCertifiedDataEngineerSlides.pdf`).
+- **`content/docs/`**: Source PDF slides (`AWSCertifiedDataEngineerSlides.pdf`).
 
 ---
 
