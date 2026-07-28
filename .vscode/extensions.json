@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "foam.foam-vscode",
+    "yzhang.markdown-all-in-one",
+    "bierner.markdown-preview-github-styles",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

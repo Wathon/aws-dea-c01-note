@@ -1,0 +1,19 @@
+{
+  "foam.edit.linkReferenceDefinitions": "without",
+  "foam.openDailyNote.directory": "journal",
+  "foam.openDailyNote.filenameFormat": "YYYY-MM-DD",
+  "foam.openDailyNote.titleFormat": "YYYY-MM-DD",
+  "foam.files.ignore": [
+    "**/node_modules",
+    "**/.git",
+    "**/docs/*.pdf"
+  ],
+  "editor.wordWrap": "on",
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+  "markdown.extension.toc.orderedList": false,
+  "markdown.extension.wikilinks.completion": true
+}
