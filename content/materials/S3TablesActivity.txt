@@ -1,0 +1,32 @@
+CREATE TABLE `us_data`.state_population (
+state string, 
+year int, 
+population bigint)
+PARTITIONED BY (year)
+TBLPROPERTIES ('table_type' = 'iceberg')
+
+
+INSERT INTO us_data.state_population
+VALUES
+('Alabama', 2020, 5032962),
+('Alabama', 2021, 5050058),
+('Alabama', 2022, 5076868),
+('Alabama', 2023, 5117850),
+('Alabama', 2024, 5163055),
+
+('Alaska',  2020,  732906),
+('Alaska',  2021,  734590),
+('Alaska',  2022,  733659),
+('Alaska',  2023,  734654),
+('Alaska',  2024,  736537);
+
+
+SELECT
+  state,
+  COUNT(*)        AS years_of_data,
+  MIN(population) AS min_population,
+  MAX(population) AS max_population,
+  AVG(population) AS avg_population
+FROM us_data.state_population
+GROUP BY state
+ORDER BY avg_population DESC;
