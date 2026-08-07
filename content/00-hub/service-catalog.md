@@ -17,6 +17,7 @@ Categorized index of all AWS services covered in the **AWS Certified Data Engine
 ## 📦 Storage & File Systems
 
 - [[s3]] — Amazon Simple Storage Service (S3)
+- [[s3-versioning]] — Amazon S3 Versioning, Delete Markers & MFA Delete
 - [[s3-security]] — Amazon S3 Security & Access Management
 - [[s3-performance]] — Amazon S3 Performance & Optimization Strategies
 - [[s3-encryption]] — Amazon S3 Encryption (SSE-S3, SSE-KMS, SSE-C & Client-Side)

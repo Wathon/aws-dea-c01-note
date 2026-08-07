@@ -39,6 +39,7 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 #### 📦 Storage
 
 - [[s3]] — Amazon S3 Storage Classes, Policies, Lifecycle, Object Lock, Replication & Lens
+- [[s3-versioning]] — Object Revisions, Delete Markers, MFA Delete & Noncurrent Lifecycle Rules
 - [[s3-security]] — IAM Policies, Bucket Policies, Block Public Access, Object Lock WORM & Macie
 - [[s3-performance]] — S3 Prefix Limits, Multipart Upload, Byte-Range Fetches, S3 Express One Zone & Bucket Keys
 - [[s3-encryption]] — SSE-S3, SSE-KMS, SSE-C, Client-Side Encryption & Bucket Policies
