@@ -21,6 +21,7 @@ Categorized index of all AWS services covered in the **AWS Certified Data Engine
 - [[s3-encryption]] — Amazon S3 Encryption (SSE-S3, SSE-KMS, SSE-C & Client-Side)
 - [[s3-access-points]] — Amazon S3 Access Points & Object Lambda
 - [[s3-tables]] — Amazon S3 Tables for Apache Iceberg
+- [[s3-storage-lens]] — Amazon S3 Storage Lens Analytics & Insights
 - [[ebs-and-instance-store]] — Amazon Elastic Block Store (EBS) & EC2 Instance Store
 - [[efs-and-fsx]] — Amazon Elastic File System (EFS) & FSx (Lustre, ONTAP, Windows)
 

@@ -43,6 +43,7 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 - [[s3-encryption]] — SSE-S3, SSE-KMS, SSE-C, Client-Side Encryption & Bucket Policies
 - [[s3-access-points]] — S3 Access Points (VPC & Internet), Multi-Region Access Points & Object Lambda
 - [[s3-tables]] — Purpose-Built Table Storage for Apache Iceberg & Auto-Compaction
+- [[s3-storage-lens]] — Organization-Wide Storage Analytics, Cost Optimization & Parquet Exports
 - [[ebs-and-instance-store]] — EBS Elastic Block Store & Instance Store
 - [[efs-and-fsx]] — EFS & FSx (Lustre, ONTAP, Windows)
 
