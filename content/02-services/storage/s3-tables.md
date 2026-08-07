@@ -90,6 +90,17 @@ In standard S3 buckets, Apache Iceberg tables accumulate millions of small data 
 - S3 Tables natively integrates with **AWS Lake Formation**.
 - Fine-grained access control can be enforced down to the **column-level**, **row-level**, and **cell-level** using Lake Formation Tag-Based Access Control (LF-TBAC).
 
+### 4. Built-in S3 Intelligent-Tiering Integration
+
+- **Native Storage Tiering**: Amazon S3 Tables use **S3 Intelligent-Tiering** as their built-in storage foundation for object data files (Parquet).
+- **Automated Cost Optimization**:
+  - Automatically moves data files between access tiers based on real-time query patterns:
+    - **Frequent Access Tier**: Default for newly written objects and actively queried partitions.
+    - **Infrequent Access Tier**: Automatically moves files not accessed for 30 consecutive days (saves up to 40%).
+    - **Archive Instant Retrieval Tier**: Automatically moves files not accessed for 90 consecutive days (saves up to 68%).
+  - **Zero Retrieval Fees & Millisecond Performance**: Maintains consistent millisecond retrieval performance across all access tiers without retrieval fee penalties, allowing historical table partitions to age out automatically while remaining instantly queryable.
+  - **Zero Lifecycle Rule Overhead**: Fully managed by S3 Tables without needing custom S3 Lifecycle rules.
+
 ---
 
 ## 4. Storage Class Comparison: Standard vs. Express One Zone vs. Tables
@@ -124,6 +135,7 @@ Amazon S3 Tables seamlessly integrates with both AWS native services and open-so
 > - **Store Apache Iceberg tables in S3 with automated file compaction & snapshot maintenance**: Choose **Amazon S3 Tables**.
 > - **High-concurrency streaming ingestion into Apache Iceberg on S3**: Choose **Amazon S3 Tables** (provides 10x higher commit TPS).
 > - **Eliminate manual Glue ETL compaction scripts for data lake tables**: Migrate tables to **Amazon S3 Tables**.
+> - **Automatic cost optimization for aging table partitions without retrieval fees**: S3 Tables automatically use **S3 Intelligent-Tiering** for underlying data objects.
 > - **Single-digit millisecond latency for machine learning training & checkpoints**: Choose **S3 Express One Zone**.
 > - **Row- and Column-level security on S3 Tables**: Enforce via **AWS Lake Formation integration**.
 
