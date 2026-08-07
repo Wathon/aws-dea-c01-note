@@ -39,6 +39,7 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 
 - [[s3]] — Amazon S3 Storage Classes, Policies, Lifecycle, Object Lock, Replication & Lens
 - [[s3-performance]] — S3 Prefix Limits, Multipart Upload, Byte-Range Fetches, S3 Express One Zone & Bucket Keys
+- [[s3-encryption]] — SSE-S3, SSE-KMS, SSE-C, Client-Side Encryption & Bucket Policies
 - [[ebs-and-instance-store]] — EBS Elastic Block Store & Instance Store
 - [[efs-and-fsx]] — EFS & FSx (Lustre, ONTAP, Windows)
 
