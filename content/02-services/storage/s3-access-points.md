@@ -30,21 +30,21 @@ As data lakes grow in scale, managing access permissions through a single bucket
 
 ```mermaid
 graph TD
-    subgraph Clients & Applications
+    subgraph Clients["Clients & Applications"]
         App1["Finance Analytics (VPC A)"]
         App2["Marketing Data Science (VPC B)"]
         App3["External Audit App (Internet)"]
         App4["Real-time PII Masking App"]
     end
 
-    subgraph S3 Access Points Layer
+    subgraph APLayer["S3 Access Points Layer"]
         AP1["VPC Access Point A (Finance Policy)"]
         AP2["VPC Access Point B (Marketing Policy)"]
         AP3["Internet Access Point (Read-Only Policy)"]
         OLAP["S3 Object Lambda Access Point (Lambda Masking)"]
     end
 
-    subgraph Central Storage
+    subgraph Storage["Central Storage"]
         S3Bucket["Shared Data Lake S3 Bucket"]
     end
 

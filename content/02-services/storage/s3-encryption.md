@@ -30,17 +30,17 @@ Data security and encryption are foundational elements of the **AWS Certified Da
 
 ```mermaid
 graph TD
-    subgraph S3 Encryption Options
+    subgraph Options["S3 Encryption Options"]
         InTransit["Encryption In Transit (HTTPS/TLS)"]
         AtRest["Encryption At Rest"]
     end
 
-    subgraph At Rest Mechanisms
+    subgraph Mechanisms["At Rest Mechanisms"]
         SSE["Server-Side Encryption (SSE)"]
         CSE["Client-Side Encryption (CSE)"]
     end
 
-    subgraph SSE Variants
+    subgraph SSEVariants["SSE Variants"]
         SSES3["SSE-S3: S3 Managed Keys (AES-256)"]
         SSEKMS["SSE-KMS: KMS Managed Keys (CMK / AWS-Managed)"]
         DSSEKMS["DSSE-KMS: Dual-Layer Server-Side Encryption (KMS)"]

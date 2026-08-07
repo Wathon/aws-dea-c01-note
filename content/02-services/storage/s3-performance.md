@@ -43,11 +43,11 @@ Amazon S3 automatically scales to support very high request rates. Request limit
 
 ```mermaid
 graph TD
-    subgraph Single Prefix Bottleneck: 3,500 PUT / 5,500 GET max
+    subgraph SinglePrefix["Single Prefix Bottleneck: 3,500 PUT / 5,500 GET max"]
         P1["s3://data-lake/raw/data.csv"]
     end
 
-    subgraph Scaled Prefixes: 3x Throughput (10,500 PUT / 16,500 GET)
+    subgraph ScaledPrefixes["Scaled Prefixes: 3x Throughput (10,500 PUT / 16,500 GET)"]
         P2["s3://data-lake/raw/part-A/data1.csv"]
         P3["s3://data-lake/raw/part-B/data2.csv"]
         P4["s3://data-lake/raw/part-C/data3.csv"]

@@ -30,21 +30,21 @@ date: 2026-08-07
 
 ```mermaid
 graph TD
-    subgraph Amazon S3 Tables Architecture
+    subgraph S3Tables["Amazon S3 Tables Architecture"]
         TB["S3 Table Bucket (e.g. arn:aws:s3tables:us-east-1:123456789012:bucket/analytics-db)"]
 
-        subgraph Namespace Layer
+        subgraph NamespaceLayer["Namespace Layer"]
             NS1["Namespace: sales"]
             NS2["Namespace: marketing"]
         end
 
-        subgraph Table Layer (Apache Iceberg)
+        subgraph TableLayer["Table Layer (Apache Iceberg)"]
             T1["Table: transactions"]
             T2["Table: customers"]
             T3["Table: campaigns"]
         end
 
-        subgraph Automated Background Maintenance
+        subgraph Maintenance["Automated Background Maintenance"]
             COMP["Automatic File Compaction (Merges Small Parquet Files)"]
             SNAP["Automatic Snapshot Expiration"]
             ORPH["Orphan / Unreferenced File Pruning"]
