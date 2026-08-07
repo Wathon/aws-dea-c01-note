@@ -30,15 +30,15 @@ date: 2026-08-08
 
 ```mermaid
 graph TD
-    subgraph Source Bucket (us-east-1)
+    subgraph SrcGroup["Source Bucket (us-east-1)"]
         Src["Source S3 Bucket (Versioning Enabled)"]
     end
 
-    subgraph Cross-Region Replication (CRR)
+    subgraph CRRGroup["Cross-Region Replication (CRR)"]
         CRRDest["Destination Bucket: eu-west-1 (Different Region)"]
     end
 
-    subgraph Same-Region Replication (SRR)
+    subgraph SRRGroup["Same-Region Replication (SRR)"]
         SRRDest["Destination Bucket: us-east-1 (Same Region, Dev Account)"]
     end
 
@@ -63,7 +63,7 @@ Before S3 Replication can operate, three strict prerequisites must be satisfied:
 
 ```mermaid
 graph TD
-    subgraph Prerequisites Checklist
+    subgraph PrereqGroup["Prerequisites Checklist"]
         P1["1. S3 Versioning ENABLED on BOTH Source & Destination Buckets"]
         P2["2. IAM Replication Role with GetObjectVersion & ReplicateObject permissions"]
         P3["3. Cross-Account Policy: Destination Bucket Policy allowing IAM Replication Role"]

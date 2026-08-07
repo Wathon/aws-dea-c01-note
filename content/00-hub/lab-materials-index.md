@@ -23,7 +23,7 @@ The `content/materials/` directory contains all hands-on lab assets, sample data
 
 ```mermaid
 graph TD
-    subgraph Materials Structure: content/materials/
+    subgraph MatGroup["Materials Structure: content/materials/"]
         DS["Sample Datasets (USCensus.csv, DataZoneSampleData.txt)"]
         SQL["SQL Activities (S3TablesActivity.txt)"]
         KMS["KMS Security Labs (kms/kms-demo-cli.sh)"]

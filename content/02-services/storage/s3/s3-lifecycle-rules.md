@@ -30,7 +30,7 @@ date: 2026-08-08
 
 ```mermaid
 graph LR
-    subgraph S3 Storage Tiering Lifecycle
+    subgraph Tiering["S3 Storage Tiering Lifecycle"]
         Std["S3 Standard (Landing Zone / Active Analytics)"]
         IA["S3 Standard-IA (Infrequently accessed after 30 days)"]
         GIR["Glacier Instant Retrieval (Immediate retrieval archive)"]
@@ -79,13 +79,13 @@ Managing storage costs in version-enabled buckets requires rules specifically ta
 
 ```mermaid
 graph TD
-    subgraph S3 Versioned Lifecycle Scenarios
+    subgraph Scenarios["S3 Versioned Lifecycle Scenarios"]
         Current["Current Version (Active)"]
         Noncurrent["Noncurrent Versions (Old Revisions)"]
         IncompleteMPU["Incomplete Multipart Uploads"]
     end
 
-    subgraph Configured Actions
+    subgraph Actions["Configured Actions"]
         CurrAction["Transition to Standard-IA after 30 days"]
         NoncurrAction["Transition to Glacier after 30 days -> Expire after 365 days"]
         MPUAction["AbortIncompleteMultipartUpload after 7 days"]

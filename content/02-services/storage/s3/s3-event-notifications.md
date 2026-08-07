@@ -31,17 +31,17 @@ date: 2026-08-08
 
 ```mermaid
 graph TD
-    subgraph S3 Event Source
+    subgraph S3Src["S3 Event Source"]
         S3["S3 Bucket (Object Created / Deleted)"]
     end
 
-    subgraph Native Destination Targets
+    subgraph NativeDest["Native Destination Targets"]
         SNS["Amazon SNS Topic (Fan-out to multiple subscribers)"]
         SQS["Amazon SQS Queue (Asynchronous buffer & queueing)"]
         Lambda["AWS Lambda Function (Immediate serverless ETL / Processing)"]
     end
 
-    subgraph Modern EventBridge Target
+    subgraph EBDest["Modern EventBridge Target"]
         EB["Amazon EventBridge Event Bus"]
         SF["AWS Step Functions Workflow"]
         Kinesis["Kinesis Data Streams / Firehose"]

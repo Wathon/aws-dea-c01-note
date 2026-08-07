@@ -31,19 +31,19 @@ date: 2026-08-07
 
 ```mermaid
 graph TD
-    subgraph AWS Organizations / Account Scope
+    subgraph ScopeGroup["AWS Organizations / Account Scope"]
         Org["AWS Organization / Master Account"]
         Acc1["Account A (Data Lake)"]
         Acc2["Account B (Analytics)"]
     end
 
-    subgraph S3 Storage Lens Analytics Engine
+    subgraph EngineGroup["S3 Storage Lens Analytics Engine"]
         Lens["S3 Storage Lens Dashboard & Aggregator"]
         Free["Free Metrics (29 Usage Metrics, 14-day history)"]
         Adv["Advanced Metrics (Activity, Cost, Protection, 15-month history)"]
     end
 
-    subgraph Output & Actionable Recommendations
+    subgraph OutputGroup["Output & Actionable Recommendations"]
         Console["Console Dashboards & Insights"]
         CW["Amazon CloudWatch Metrics & Alarms"]
         Export["S3 Metrics Export (Daily Parquet / CSV)"]

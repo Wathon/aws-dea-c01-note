@@ -30,7 +30,7 @@ date: 2026-08-07
 
 ```mermaid
 graph TD
-    subgraph Bucket Versioning States
+    subgraph States["Bucket Versioning States"]
         Unversioned["1. Unversioned (Default for new buckets)"]
         Enabled["2. Versioning-Enabled (Stores every object revision)"]
         Suspended["3. Versioning-Suspended (New objects get versionId: null)"]
@@ -59,7 +59,7 @@ When an object with an existing key is uploaded to a versioning-enabled bucket:
 
 ```mermaid
 graph TD
-    subgraph Object Key: data.csv in Versioning-Enabled Bucket
+    subgraph ObjKey["Object Key: data.csv in Versioning-Enabled Bucket"]
         V3["Version ID: v3 (Current / Latest)"]
         V2["Version ID: v2 (Noncurrent)"]
         V1["Version ID: v1 (Noncurrent)"]
@@ -102,7 +102,7 @@ For mission-critical data lakes requiring extra security against compromised IAM
 
 ```mermaid
 graph TD
-    subgraph MFA Delete Protection Requirements
+    subgraph MFAReqs["MFA Delete Protection Requirements"]
         Root["AWS Root Account Credentials Mandatory"]
         Token["MFA Token Code (Hardware / Virtual TOTP)"]
         Ops["Protected Operations: Delete Version ID & Suspend Versioning"]

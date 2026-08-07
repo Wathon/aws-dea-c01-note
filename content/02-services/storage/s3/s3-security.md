@@ -31,7 +31,7 @@ Security is a primary focus area in the **AWS Certified Data Engineer – Associ
 
 ```mermaid
 graph TD
-    subgraph Defense-in-Depth S3 Security Layers
+    subgraph Layers["Defense-in-Depth S3 Security Layers"]
         Auth["1. Access Control & Authorization (IAM Policies, Bucket Policies, Access Points)"]
         Net["2. Network Isolation (Block Public Access, VPC Gateway/Interface Endpoints)"]
         Enc["3. Data Encryption (In Transit HTTPS/TLS, At Rest SSE-S3/SSE-KMS/DSSE-KMS)"]
@@ -113,7 +113,7 @@ Prevents object deletion or modification for compliance and ransomware protectio
 
 ```mermaid
 graph TD
-    subgraph S3 Object Lock Retention Modes
+    subgraph LockModes["S3 Object Lock Retention Modes"]
         Comp["Compliance Mode: NO ONE (including Root User) can overwrite/delete until retention expires"]
         Gov["Governance Mode: Special users with s3:BypassGovernanceRetention can overwrite/delete"]
         Hold["Legal Hold: Indefinite retention lock independent of expiration dates"]
