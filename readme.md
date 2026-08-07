@@ -28,14 +28,14 @@ This workspace is a pre-configured **Personal Knowledge Management (PKM)** note-
 
 ## 📂 Workspace Folder Organization
 
-- **`00-hub/`**: Master Maps of Content (MOCs), certification roadmap, and service catalog.
-- **`01-domains/`**: Breakdown of the 4 official DEA-C01 exam domains.
-- **`02-services/`**: Categorized notes for all AWS Data Engineering services (S3, Redshift, Glue, Athena, Kinesis, DynamoDB, Lambda, EMR, Lake Formation, etc.).
-- **`03-concepts/`**: Data engineering core concepts (Big Data V's, Parquet/ORC/Avro, Partitioning, SQL, Git).
-- **`04-exam-tips/`**: Decision matrices, service comparisons, and exam scenario traps.
-- **`journal/`**: Daily study logs for tracking progress.
-- **`.foam/templates/`**: Foam templates for rapid, consistent note creation.
+- **`content/00-hub/`**: Master Maps of Content (MOCs), certification roadmap, and service catalog.
+- **`content/01-domains/`**: Breakdown of the 4 official DEA-C01 exam domains.
+- **`content/02-services/`**: Categorized notes for all AWS Data Engineering services (S3, Redshift, Glue, Athena, Kinesis, DynamoDB, Lambda, EMR, Lake Formation, etc.).
+- **`content/03-concepts/`**: Data engineering core concepts (Big Data V's, Parquet/ORC/Avro, Partitioning, SQL, Git).
+- **`content/04-exam-tips/`**: Decision matrices, service comparisons, and exam scenario traps.
+- **`content/journal/`**: Daily study logs for tracking progress.
 - **`content/docs/`**: Source PDF slides (`AWSCertifiedDataEngineerSlides.pdf`).
+- **`.foam/templates/`**: Foam templates for rapid, consistent note creation.
 
 ---
 
