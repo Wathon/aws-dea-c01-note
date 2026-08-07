@@ -101,9 +101,38 @@ In standard S3 buckets, Apache Iceberg tables accumulate millions of small data 
   - **Zero Retrieval Fees & Millisecond Performance**: Maintains consistent millisecond retrieval performance across all access tiers without retrieval fee penalties, allowing historical table partitions to age out automatically while remaining instantly queryable.
   - **Zero Lifecycle Rule Overhead**: Fully managed by S3 Tables without needing custom S3 Lifecycle rules.
 
+### 5. Table Replication (CRR & SRR)
+
+- **Cross-Region (CRR) & Same-Region Replication (SRR)**: S3 Tables support asynchronous replication of Table Buckets across AWS Regions or within the same Region.
+- **Iceberg Catalog & Data Sync**: Replicates both underlying Parquet data files AND Apache Iceberg table metadata/snapshot histories to destination table buckets while maintaining transactional consistency.
+- **Use Cases**: Disaster recovery, multi-region analytical data distribution, compliance data residency, and low-latency local querying for global teams.
+
 ---
 
-## 4. Storage Class Comparison: Standard vs. Express One Zone vs. Tables
+## 4. Security & Access Control Architecture
+
+### 1. Multi-Layer Security Model
+
+```mermaid
+graph TD
+    subgraph SecurityLayer["Security Layer Structure"]
+        Auth["IAM & S3 Table Resource Policies (s3tables:*)"]
+        Network["VPC PrivateLink Endpoints (com.amazonaws.region.s3tables)"]
+        Gov["AWS Lake Formation (Column/Row/Cell Security & LF-TBAC)"]
+        Encrypt["Encryption at Rest (SSE-S3 / SSE-KMS) & TLS In Transit"]
+    end
+
+    Auth --> Network
+    Network --> Gov
+    Gov --> Encrypt
+```
+
+### 2. Detailed Security Breakdown
+
+- **S3 Table Resource Policies**: JSON access control policies applied at the Table Bucket or Namespace level (`s3tables:CreateTable`, `s3tables:GetTableData`, `s3tables:PutTableData`).
+- **AWS Lake Formation Governance**: Enforces fine-grained row-level filtering, column masking, and cell-level security using Tag-Based Access Control (LF-TBAC).
+- **Encryption at Rest & In Transit**: Data files and metadata manifests are encrypted at rest using SSE-S3 or SSE-KMS. All network communications enforce HTTPS/TLS 1.3.
+- **VPC Endpoints (PrivateLink)**: Private connectivity from Amazon VPCs to S3 Tables over AWS PrivateLink endpoints (`com.amazonaws.<region>.s3tables`), preventing data lake traffic from traversing the public internet.
 
 | Feature                 | S3 Standard                  | S3 Express One Zone             | Amazon S3 Tables                                |
 | ----------------------- | ---------------------------- | ------------------------------- | ----------------------------------------------- |
@@ -136,8 +165,9 @@ Amazon S3 Tables seamlessly integrates with both AWS native services and open-so
 > - **High-concurrency streaming ingestion into Apache Iceberg on S3**: Choose **Amazon S3 Tables** (provides 10x higher commit TPS).
 > - **Eliminate manual Glue ETL compaction scripts for data lake tables**: Migrate tables to **Amazon S3 Tables**.
 > - **Automatic cost optimization for aging table partitions without retrieval fees**: S3 Tables automatically use **S3 Intelligent-Tiering** for underlying data objects.
-> - **Single-digit millisecond latency for machine learning training & checkpoints**: Choose **S3 Express One Zone**.
 > - **Row- and Column-level security on S3 Tables**: Enforce via **AWS Lake Formation integration**.
+> - **Replicate Apache Iceberg tables across AWS regions for DR & compliance**: Enable **S3 Tables Cross-Region Replication (CRR)** (replicates data files + Iceberg catalog metadata).
+> - **Private connectivity to S3 Tables from VPC without public internet routing**: Use **AWS PrivateLink VPC Endpoints (`com.amazonaws.<region>.s3tables`)**.
 
 ---
 
