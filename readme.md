@@ -1,49 +1,63 @@
-# AWS Certified Data Engineer – Associate (DEA-C01) Knowledge Workspace
+# 🧠 AWS Certified Data Engineer – Associate (DEA-C01) Digital Garden
 
-This workspace is a pre-configured **Personal Knowledge Management (PKM)** note-taking system designed specifically for studying for the **AWS Certified Data Engineer – Associate (DEA-C01)** exam using the official course slides by **Stephane Maarek & Frank Kane** (`[[AWSCertifiedDataEngineerSlides.pdf]]`).
+A digital garden and personal knowledge base for the **AWS Certified Data Engineer – Associate (DEA-C01)** certification exam, built with **Quartz** and deployed automatically via **GitHub Pages**.
 
----
-
-## 🚀 Getting Started with Foam in VS Code
-
-1. **Install Recommended Extensions**:
-   When opening this workspace in VS Code, accept the prompt to install recommended extensions, or install:
-   - **Foam** (`foam.foam-vscode`)
-   - **Markdown All in One** (`yzhang.markdown-all-in-one`)
-
-2. **Navigate using Links & Graph**:
-   - Open [[index]] (`00-hub/index.md`) as your central control hub.
-   - Use `Ctrl + Click` (or `Cmd + Click`) on any `[[wikilink]]` to jump between notes.
-   - Open the **Foam Graph Visualizer** (`Foam: Show Graph` in VS Code Command Palette `Ctrl+Shift+P`) to visualize node connections across domains, services, and concepts!
-
-3. **Using Note Templates**:
-   Use VS Code Command Palette (`Ctrl+Shift+P`) -> `Foam: Create Note From Template` to create new structured notes:
-   - `aws-service` — For documenting new AWS services or deep-dives.
-   - `concept-note` — For core data engineering principles.
-   - `domain-note` — For exam domains & task statements.
-   - `daily-note` — For daily study logs in `journal/`.
-   - `exam-tip` — For scenario comparisons (e.g. Athena vs Redshift).
+Based on the official course slides by **Stephane Maarek & Frank Kane** (`AWSCertifiedDataEngineerSlides.pdf`).
 
 ---
 
-## 📂 Workspace Folder Organization
+## 🛠️ Local Development & Quartz Commands
 
-- **`content/00-hub/`**: Master Maps of Content (MOCs), certification roadmap, and service catalog.
-- **`content/01-domains/`**: Breakdown of the 4 official DEA-C01 exam domains.
-- **`content/02-services/`**: Categorized notes for all AWS Data Engineering services (S3, Redshift, Glue, Athena, Kinesis, DynamoDB, Lambda, EMR, Lake Formation, etc.).
-- **`content/03-concepts/`**: Data engineering core concepts (Big Data V's, Parquet/ORC/Avro, Partitioning, SQL, Git).
-- **`content/04-exam-tips/`**: Decision matrices, service comparisons, and exam scenario traps.
-- **`content/materials/`**: Hands-on lab code, CLI scripts, sample datasets (CSV/JSON/TXT), CloudFormation/CDK templates, and exercise files.
-- **`content/journal/`**: Daily study logs for tracking progress.
-- **`content/docs/`**: Source PDF slides (`AWSCertifiedDataEngineerSlides.pdf`).
-- **`.foam/templates/`**: Foam templates for rapid, consistent note creation.
+All notes are written in Markdown and stored in `./content/`. Quartz compiles them into static web pages in `./public/`.
+
+```bash
+# Install dependencies
+npm install
+
+# Build static site locally
+npx quartz build
+
+# Preview site locally with live reload (http://localhost:8080)
+npx quartz build --serve
+```
+
+---
+
+## 📂 Workspace Structure (`./content/`)
+
+`./content/` is the single source of truth for all notes, media, and lab materials.
+
+- **`content/00-hub/`**: Master Maps of Content (MOCs), certification roadmap, service catalog, and lab materials index.
+- **`content/01-domains/`**: Breakdown of the 4 official DEA-C01 exam domains & task statements.
+- **`content/02-services/`**: Deep-dive notes for AWS Data Engineering services:
+  - `storage/s3/`: S3 Overview, Performance, Encryption, Access Points, Tables, and Storage Lens.
+  - `storage/`: EBS, Instance Store, EFS, and FSx.
+  - `analytics-streaming/`: Athena, Glue, EMR, Kinesis, MSK Kafka, OpenSearch, QuickSight.
+  - `database/`: Redshift, DynamoDB, RDS & Aurora, ElastiCache, Timestream, Neptune.
+  - `integration/`: SQS, SNS, Step Functions, MWAA Airflow, AppFlow.
+  - `compute-containers/`: Lambda, Batch, ECR, ECS, EKS.
+  - `security-governance/`: Lake Formation, IAM, KMS, Secrets Manager, Macie, CloudTrail.
+  - `migration/`: DMS, SCT, DataSync, Snow Family.
+  - `networking-monitoring/`: VPC, Endpoints, CloudWatch, EventBridge.
+  - `ml-dev-cost/`: SageMaker, CDK, CloudFormation, Cost Explorer, Budgets.
+- **`content/03-concepts/`**: Core data engineering principles (Big Data V's, Parquet/ORC/Avro, Partitioning, Data Quality, SQL).
+- **`content/04-exam-tips/`**: Decision matrices, service comparisons, and high-frequency exam scenarios.
+- **`content/materials/`**: Hands-on lab scripts (Bash CLI), sample datasets (CSV/JSON/TXT), CloudFormation/CDK templates, and SQL exercises.
+- **`content/journal/`**: Daily study logs.
+- **`content/docs/`**: Reference PDF slides (`AWSCertifiedDataEngineerSlides.pdf`).
+
+---
+
+## 🚢 Automated Deployment
+
+Pushing changes to the `main` branch automatically triggers the **GitHub Actions workflow** (`.github/workflows/deploy.yml`), which builds the site with Quartz and publishes it to GitHub Pages.
 
 ---
 
 ## 🔗 Key Links
 
-- Central Hub: [[index]]
-- Certification Blueprint: [[dea-c01-roadmap]]
-- AWS Service Index: [[service-catalog]]
-- Decision Matrix: [[service-comparisons]]
-- Hands-on Lab Index: [[lab-materials-index]]
+- **Central Hub**: `content/00-hub/index.md`
+- **Certification Blueprint**: `content/00-hub/dea-c01-roadmap.md`
+- **AWS Service Index**: `content/00-hub/service-catalog.md`
+- **Decision Matrix**: `content/04-exam-tips/service-comparisons.md`
+- **Hands-on Lab Index**: `content/00-hub/lab-materials-index.md`
