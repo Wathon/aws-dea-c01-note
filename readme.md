@@ -33,6 +33,7 @@ This workspace is a pre-configured **Personal Knowledge Management (PKM)** note-
 - **`content/02-services/`**: Categorized notes for all AWS Data Engineering services (S3, Redshift, Glue, Athena, Kinesis, DynamoDB, Lambda, EMR, Lake Formation, etc.).
 - **`content/03-concepts/`**: Data engineering core concepts (Big Data V's, Parquet/ORC/Avro, Partitioning, SQL, Git).
 - **`content/04-exam-tips/`**: Decision matrices, service comparisons, and exam scenario traps.
+- **`content/materials/`**: Hands-on lab code, CLI scripts, sample datasets (CSV/JSON/TXT), CloudFormation/CDK templates, and exercise files.
 - **`content/journal/`**: Daily study logs for tracking progress.
 - **`content/docs/`**: Source PDF slides (`AWSCertifiedDataEngineerSlides.pdf`).
 - **`.foam/templates/`**: Foam templates for rapid, consistent note creation.
@@ -40,7 +41,9 @@ This workspace is a pre-configured **Personal Knowledge Management (PKM)** note-
 ---
 
 ## 🔗 Key Links
+
 - Central Hub: [[index]]
 - Certification Blueprint: [[dea-c01-roadmap]]
 - AWS Service Index: [[service-catalog]]
 - Decision Matrix: [[service-comparisons]]
+- Hands-on Lab Index: [[lab-materials-index]]

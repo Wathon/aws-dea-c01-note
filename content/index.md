@@ -21,6 +21,7 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 
 - [[dea-c01-roadmap]] — Exam domains breakdown, weightings & study strategy
 - [[service-catalog]] — Full directory of AWS services covered in the slides
+- [[lab-materials-index]] — Catalog of hands-on lab code, CLI scripts & sample datasets (`content/materials/`)
 
 ---
 
