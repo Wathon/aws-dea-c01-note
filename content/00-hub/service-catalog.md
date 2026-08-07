@@ -17,6 +17,7 @@ Categorized index of all AWS services covered in the **AWS Certified Data Engine
 ## 📦 Storage & File Systems
 
 - [[s3]] — Amazon Simple Storage Service (S3)
+- [[s3-event-notifications]] — Amazon S3 Event Notifications & EventBridge Integration
 - [[s3-lifecycle-rules]] — Amazon S3 Lifecycle Rules & Automated Cost Optimization
 - [[s3-replication]] — Amazon S3 Replication (CRR, SRR, RTC & Batch Replication)
 - [[s3-versioning]] — Amazon S3 Versioning, Delete Markers & MFA Delete

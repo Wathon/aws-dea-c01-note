@@ -39,6 +39,7 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 #### 📦 Storage
 
 - [[s3]] — Amazon S3 Storage Classes, Policies, Lifecycle, Object Lock, Replication & Lens
+- [[s3-event-notifications]] — SNS, SQS, Lambda Triggers & EventBridge Integration
 - [[s3-lifecycle-rules]] — Storage Class Transitions, Expirations, Noncurrent Rules & Abort Multipart Uploads
 - [[s3-replication]] — Cross-Region Replication (CRR), Same-Region (SRR), RTC 15-min SLA & Batch Replication
 - [[s3-versioning]] — Object Revisions, Delete Markers, MFA Delete & Noncurrent Lifecycle Rules
