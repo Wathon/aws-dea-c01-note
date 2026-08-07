@@ -19,6 +19,7 @@ Categorized index of all AWS services covered in the **AWS Certified Data Engine
 - [[s3]] — Amazon Simple Storage Service (S3)
 - [[s3-performance]] — Amazon S3 Performance & Optimization Strategies
 - [[s3-encryption]] — Amazon S3 Encryption (SSE-S3, SSE-KMS, SSE-C & Client-Side)
+- [[s3-access-points]] — Amazon S3 Access Points & Object Lambda
 - [[ebs-and-instance-store]] — Amazon Elastic Block Store (EBS) & EC2 Instance Store
 - [[efs-and-fsx]] — Amazon Elastic File System (EFS) & FSx (Lustre, ONTAP, Windows)
 
