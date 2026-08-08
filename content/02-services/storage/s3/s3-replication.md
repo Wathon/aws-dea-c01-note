@@ -70,11 +70,21 @@ graph TD
     end
 ```
 
-1. **S3 Versioning Enabled**: **S3 Versioning MUST be enabled** on BOTH the source bucket and the destination bucket.
-2. **IAM Replication Role**: S3 requires an IAM role with permissions to:
-   - Read objects & versions from source: `s3:GetObjectVersion`, `s3:GetObjectVersionAcl`, `s3:GetObjectVersionTagging`.
-   - Write objects to destination: `s3:ReplicateObject`, `s3:ReplicateDelete`, `s3:ReplicateTags`.
-3. **Cross-Account Bucket Policy**: If the destination bucket belongs to another AWS account, the destination bucket policy MUST explicitly grant permission to the source IAM Replication Role.
+### 1. S3 Versioning Enabled
+
+- **S3 Versioning MUST be enabled** on BOTH the source bucket and the destination bucket.
+- Versioning provides the immutable `versionId` identifiers required by S3 to track and replicate asynchronous changes.
+
+### 2. IAM Replication Role
+
+S3 requires a dedicated IAM service role assumed by `s3.amazonaws.com` with explicit permissions:
+
+- **Read from source**: `s3:GetObjectVersion`, `s3:GetObjectVersionAcl`, `s3:GetObjectVersionTagging`.
+- **Write to destination**: `s3:ReplicateObject`, `s3:ReplicateDelete`, `s3:ReplicateTags`.
+
+### 3. Cross-Account Destination Bucket Policy
+
+- If the destination bucket belongs to a different AWS account, the destination **Bucket Policy** must explicitly grant write permissions (`s3:ReplicateObject`) to the source account's IAM Replication Role.
 
 ---
 
