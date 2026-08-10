@@ -22,12 +22,28 @@ graph TD
     Data --> Analytics[Structured OLAP / Warehousing]
     Data --> SemiStructured[NoSQL Key-Value / Document]
     Data --> DataLake[Object / Unstructured Data Lake]
+    Data --> SharedFile[Shared POSIX File System]
+    Data --> HighIOPSBlock[High-IOPS Scratch Block]
 
     Structured --> RDS[[RDS / Aurora]]
     Analytics --> Redshift[[Amazon Redshift]]
     SemiStructured --> DynamoDB[[Amazon DynamoDB]]
     DataLake --> S3[[Amazon S3]]
+    SharedFile --> EFS[[Amazon EFS / FSx]]
+    HighIOPSBlock --> InstStore[[EC2 Instance Store / EBS]]
 ```
+
+### Storage Decision Matrix: S3 vs EBS vs EFS vs Instance Store vs FSx for Lustre
+
+| Storage Service | Protocol / Model | Scope / Durability | Persistence on STOP | Primary Data Engineering Role |
+| :--- | :--- | :--- | :--- | :--- |
+| **Amazon S3** | Object (REST API) | Multi-AZ (11 9's) | ✅ Persistent | Central Data Lake, Bronze/Silver/Gold analytics tables |
+| **Amazon EBS** | Block device (Network) | Single-AZ (99.9%+) | ✅ Persistent | Hosted relational databases, Kafka commit logs, OS boot |
+| **EC2 Instance Store** | Block device (PCIe Bus) | Host Server (Single Disk) | ❌ **WIPED** | **Spark shuffle partition cache, MapReduce spills, temp buffers** |
+| **Amazon EFS** | POSIX File (NFSv4.1) | Multi-AZ (11 9's) | ✅ Persistent | **Multi-AZ shared directories, Lambda model storage, EKS/ECS PVs** |
+| **AWS FSx for Lustre** | High-Perf Parallel File | Single-AZ (Linked S3) | ✅ Persistent in S3 | **Sub-ms HPC processing, distributed ML training, EMR staging** |
+
+> 🔗 **Deep Dive Reference**: See [[ebs-vs-efs-vs-instance-store]] for comprehensive lifecycle, throughput, and architecture breakdowns.
 
 ---
 

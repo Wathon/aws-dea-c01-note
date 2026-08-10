@@ -20,7 +20,7 @@ date: 2026-07-28
 
 ### Task Statement 2.1: Choose data storage solutions
 - **Object Storage**: [[s3]] (S3 Standard, Intelligent-Tiering, Glacier, S3 Express One Zone).
-- **Block & File Systems**: [[ebs-and-instance-store]] (EBS gp3/io2, Instance Store), [[efs-and-fsx]] (EFS, FSx for Lustre).
+- **Block & File Systems**: [[ebs-and-instance-store]] (EBS gp3/io2, Instance Store), [[efs-and-fsx]] (EFS, FSx for Lustre), [[ebs-vs-efs-vs-instance-store]] (Storage Comparison Matrix).
 - **Data Warehousing**: [[redshift]] (Redshift Provisioned RA3, Redshift Serverless, Redshift Spectrum).
 - **NoSQL & Specialized Databases**: [[dynamodb]], [[nosql-specialized-databases]] (ElastiCache, Timestream, Neptune, OpenSearch).
 

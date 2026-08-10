@@ -366,4 +366,5 @@ graph TD
 - [[rds-and-aurora]] — Amazon RDS storage engines and Aurora distributed storage
 - [[kms-and-secrets]] — AWS KMS encryption keys and EBS volume encryption
 - [[service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)
+- [[ebs-vs-efs-vs-instance-store]] — Deep Dive: Amazon EFS vs. EBS vs. EC2 Instance Store
 - [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

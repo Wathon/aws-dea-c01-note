@@ -51,6 +51,7 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 - [[s3-storage-lens]] — Organization-Wide Storage Analytics, Cost Optimization & Parquet Exports
 - [[ebs-and-instance-store]] — EBS Elastic Block Store & Instance Store
 - [[efs-and-fsx]] — EFS & FSx (Lustre, ONTAP, Windows)
+- [[ebs-vs-efs-vs-instance-store]] — Decision Matrix: EFS vs. EBS vs. EC2 Instance Store
 
 #### 🗄️ Database & Data Warehousing
 

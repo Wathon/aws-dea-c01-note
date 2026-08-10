@@ -29,6 +29,7 @@ Categorized index of all AWS services covered in the **AWS Certified Data Engine
 - [[s3-storage-lens]] — Amazon S3 Storage Lens Analytics & Insights
 - [[ebs-and-instance-store]] — Amazon Elastic Block Store (EBS) & EC2 Instance Store
 - [[efs-and-fsx]] — Amazon Elastic File System (EFS) & FSx (Lustre, ONTAP, Windows)
+- [[ebs-vs-efs-vs-instance-store]] — Storage Decision Matrix: EFS vs. EBS vs. EC2 Instance Store
 
 ## 🗄️ Databases & Data Warehouses
 
