@@ -94,6 +94,7 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 - [[iam]] — IAM Roles, Policies, Service Linked Roles, Access Analyzer
 - [[kms-and-secrets]] — KMS SSE-S3/SSE-KMS/SSE-C, Secrets Manager, Parameter Store
 - [[macie-and-cloudtrail]] — PII scanning with Macie & CloudTrail audit logs
+- [[aws-backup]] — Centralized Cross-Service Backup, Vault Lock WORM & Cross-Account DR
 
 #### 🌐 Networking & Governance
 

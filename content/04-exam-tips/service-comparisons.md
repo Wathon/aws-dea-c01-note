@@ -79,6 +79,7 @@ graph TD
 | **Automated PII Scanning in S3 (SSNs, Credit Cards)** | [[macie-and-cloudtrail]] (Amazon Macie) |
 | **Database Credential Rotation** | [[kms-and-secrets]] (AWS Secrets Manager) |
 | **Private S3 access without Internet Gateway** | [[vpc-and-networking]] (S3 Gateway VPC Endpoint) |
+| **Centralized Cross-Service Backup & WORM Immutability** | [[aws-backup]] (AWS Backup & Vault Lock) |
 
 ---
 

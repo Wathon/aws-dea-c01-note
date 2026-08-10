@@ -72,6 +72,7 @@ Categorized index of all AWS services covered in the **AWS Certified Data Engine
 - [[kms-and-secrets]] — AWS KMS, AWS Secrets Manager & SSM Parameter Store
 - [[lake-formation]] — AWS Lake Formation (Data Lake Access Control & Fine-Grained Permissions)
 - [[macie-and-cloudtrail]] — AWS Macie (PII Discovery) & AWS CloudTrail (Audit Logging)
+- [[aws-backup]] — AWS Backup (Centralized Policy-Based Data Protection & Vault Lock WORM)
 
 ## 🌐 Networking & Management
 

@@ -59,6 +59,7 @@ date: 2026-07-28
 | **AWS Secrets Manager** | Database Credential Rotation | Automatic rotation of Redshift/RDS password credentials | [[kms-and-secrets]] |
 | **Amazon Macie** | Machine Learning PII Discovery | Discovering sensitive PII data (SSN, credit card) in S3 buckets | [[macie-and-cloudtrail]] |
 | **VPC Endpoints** | Private Network Access | Connect S3/DynamoDB/Glue privately without traversing public internet | [[vpc-and-networking]] |
+| **AWS Backup** | Centralized Data Protection | Policy-driven multi-service backups, Vault Lock WORM compliance & cross-account DR | [[aws-backup]] |
 
 ---
 
@@ -77,4 +78,4 @@ date: 2026-07-28
 
 ## 📌 Checklist for Domain 4
 - [ ] Review slide pages: 542-589 (Security) and 590-617 (Networking) in [[AWSCertifiedDataEngineerSlides.pdf]]
-- [ ] Complete service notes: [[lake-formation]], [[iam]], [[kms-and-secrets]], [[macie-and-cloudtrail]], [[vpc-and-networking]]
+- [ ] Complete service notes: [[lake-formation]], [[iam]], [[kms-and-secrets]], [[macie-and-cloudtrail]], [[vpc-and-networking]], [[aws-backup]]
