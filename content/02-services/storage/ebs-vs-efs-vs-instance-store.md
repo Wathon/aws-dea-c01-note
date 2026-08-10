@@ -104,42 +104,79 @@ graph TB
 Understanding exact data retention behavior across operational events is one of the most frequently tested distinctions on the exam.
 
 ```mermaid
-sequenceDiagram
-    autonumber
-    actor Admin as Cloud Admin / Pipeline
-    participant EC2 as EC2 Compute Node
-    participant InstStore as EC2 Instance Store (NVMe)
-    participant EBS as Amazon EBS Volume
-    participant EFS as Amazon EFS (Multi-AZ)
+graph TD
+    Event["EC2 Instance Lifecycle / Failure Event"]
+    
+    Event --> E1["1. Operating System Reboot<br/><code>sudo reboot</code>"]
+    Event --> E2["2. Instance STOP<br/><code>aws ec2 stop-instances</code>"]
+    Event --> E3["3. Instance TERMINATION<br/><code>aws ec2 terminate-instances</code>"]
+    Event --> E4["4. Host Hardware Failure<br/>(Physical Host Crash)"]
+    Event --> E5["5. Availability Zone Outage<br/>(Regional AZ Degradation)"]
 
-    Note over EC2,EFS: Event 1: Operating System Reboot (sudo reboot)
-    Admin->>EC2: Reboot OS
-    Note over InstStore: ✅ Data PRESERVED across OS Reboot
-    Note over EBS: ✅ Data PRESERVED
-    Note over EFS: ✅ Data PRESERVED
+    E1 --> IS_1["Instance Store:<br/>✅ <b>Preserved</b>"]
+    E1 --> EBS_1["Amazon EBS:<br/>✅ <b>Preserved</b>"]
+    E1 --> EFS_1["Amazon EFS:<br/>✅ <b>Preserved</b>"]
 
-    Note over EC2,EFS: Event 2: Instance Stopped (aws ec2 stop-instances)
-    Admin->>EC2: Stop Instance
-    Note over InstStore: ❌ DATA PERMANENTLY WIPED & ERASED!
-    Note over EBS: ✅ Volume remains intact in AZ (detach/reattach ready)
-    Note over EFS: ✅ File system completely unaffected
+    E2 --> IS_2["Instance Store:<br/>❌ <b>PERMANENTLY WIPED</b>"]
+    E2 --> EBS_2["Amazon EBS:<br/>✅ <b>Preserved (Ready to Reattach)</b>"]
+    E2 --> EFS_2["Amazon EFS:<br/>✅ <b>Preserved (Unaffected)</b>"]
 
-    Note over EC2,EFS: Event 3: Underlying Host Hardware Failure
-    Note over EC2: Hardware Crash / Degradation
-    Note over InstStore: ❌ DATA IRRECOVERABLY LOST!
-    Note over EBS: ✅ Volume intact; launch new instance and reattach
-    Note over EFS: ✅ 11 9's Multi-AZ durability; unaffected
+    E3 --> IS_3["Instance Store:<br/>❌ <b>PERMANENTLY WIPED</b>"]
+    E3 --> EBS_3["Amazon EBS:<br/>⚠️ <b>Configurable (DeleteOnTermination)</b>"]
+    E3 --> EFS_3["Amazon EFS:<br/>✅ <b>Preserved (Unaffected)</b>"]
+
+    E4 --> IS_4["Instance Store:<br/>❌ <b>PERMANENTLY LOST</b>"]
+    E4 --> EBS_4["Amazon EBS:<br/>✅ <b>Preserved (Reattach to New Node)</b>"]
+    E4 --> EFS_4["Amazon EFS:<br/>✅ <b>11 9s Multi-AZ Intact</b>"]
+
+    E5 --> IS_5["Instance Store:<br/>❌ <b>Unavailable in AZ</b>"]
+    E5 --> EBS_5["Amazon EBS:<br/>❌ <b>Inaccessible (Tied to AZ)</b>"]
+    E5 --> EFS_5["Amazon EFS:<br/>✅ <b>100% Available across Surviving AZs</b>"]
+
+    classDef event fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
+    classDef pass fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#fff;
+    classDef fail fill:#0f172a,stroke:#ef4444,stroke-width:2px,color:#fff;
+    classDef warn fill:#0f172a,stroke:#f59e0b,stroke-width:2px,color:#fff;
+
+    class Event,E1,E2,E3,E4,E5 event;
+    class IS_1,EBS_1,EFS_1,EBS_2,EFS_2,EFS_3,EBS_4,EFS_4,EFS_5 pass;
+    class IS_2,IS_3,IS_4,IS_5,EBS_5 fail;
+    class EBS_3 warn;
 ```
 
-### Event Retention Summary
+### Event Retention Summary Matrix
 
-| Lifecycle Event | EC2 Instance Store | Amazon EBS | Amazon EFS |
-| :--- | :---: | :---: | :---: |
-| **Operating System Reboot (`sudo reboot`)** | ✅ **Preserved** | ✅ **Preserved** | ✅ **Preserved** |
-| **Instance Stop (`aws ec2 stop-instances`)** | ❌ **WIPED** | ✅ **Preserved** | ✅ **Preserved** |
-| **Instance Termination (`aws ec2 terminate-instances`)** | ❌ **WIPED** | ⚠️ **Configurable** (`DeleteOnTermination`) | ✅ **Preserved** |
-| **Host Hardware Failure** | ❌ **LOST** | ✅ **Preserved** | ✅ **Preserved** |
-| **Availability Zone Outage** | ❌ **Unavailable** | ❌ **Inaccessible** (Tied to that AZ) | ✅ **Available** (Multi-AZ redundant) |
+| Lifecycle / Failure Event | EC2 Instance Store | Amazon EBS | Amazon EFS |
+| :--- | :--- | :--- | :--- |
+| **Operating System Reboot (`sudo reboot`)** | ✅ **Preserved** (Data remains intact across OS reboots) | ✅ **Preserved** (Volume remains attached and online) | ✅ **Preserved** (NFS connection resumes automatically) |
+| **Instance Stop (`aws ec2 stop-instances`)** | ❌ **PERMANENTLY WIPED** (Physical host release wipes NVMe) | ✅ **Preserved** (Detached/preserved independently in AZ) | ✅ **Preserved** (Multi-AZ shared file system unaffected) |
+| **Instance Termination (`terminate-instances`)** | ❌ **PERMANENTLY WIPED** (Disks returned to pool) | ⚠️ **Configurable** (`DeleteOnTermination` flag) | ✅ **Preserved** (Managed independently from compute) |
+| **Physical Host Hardware Failure** | ❌ **PERMANENTLY LOST** (Unrecoverable without custom backups) | ✅ **Preserved** (Reattach EBS volume to a new instance) | ✅ **Preserved** (11 9's Multi-AZ automated redundancy) |
+| **Availability Zone (AZ) Outage** | ❌ **Unavailable** (Host is in degraded AZ) | ❌ **Inaccessible** (EBS is strictly bound to single AZ) | ✅ **Fully Available** (Clients failover to healthy AZs) |
+
+---
+
+### Detailed Operational Breakdown by Event
+
+#### 1. Operating System Reboot
+- **EC2 Instance Store**: Data is **preserved** through soft/graceful operating system reboots because the instance remains allocated to the exact same physical host.
+- **Amazon EBS**: Volume remains attached and block integrity is preserved.
+- **Amazon EFS**: Network connection re-establishes via the VPC Mount Target upon boot.
+
+#### 2. Instance Stop / Start (`aws ec2 stop-instances`)
+- **EC2 Instance Store**: **Data is permanently erased**. Stopping an instance deallocates the VM from the underlying physical server hardware. When started again, the instance launches on a different physical host with brand-new, wiped instance store volumes.
+- **Amazon EBS**: Volume data is **100% preserved**. The volume can remain detached or reattached to another EC2 instance in the same AZ.
+- **Amazon EFS**: Unaffected. Files remain safely stored across 3+ Availability Zones.
+
+#### 3. Instance Termination
+- **EC2 Instance Store**: **Data is permanently erased**.
+- **Amazon EBS**: Preserved by default for non-root volumes; root volumes are deleted unless `DeleteOnTermination=false` is explicitly set.
+- **Amazon EFS**: Independent serverless lifecycle; termination of compute clients has zero impact on EFS files.
+
+#### 4. Underlying Host Hardware Failure
+- **EC2 Instance Store**: **Data is permanently lost** if the physical NVMe SSD or host motherboard suffers a hardware failure.
+- **Amazon EBS**: Since EBS is a network SAN decoupled from host hardware, the volume can be detached and attached to a newly launched EC2 instance in the same AZ without data loss.
+- **Amazon EFS**: Built-in 11 9's durability automatically protects data against any individual hardware or facility failures.
 
 ---
 
