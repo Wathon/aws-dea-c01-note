@@ -283,7 +283,7 @@ graph TB
 
     subgraph SparkCluster["2. Amazon EMR / EC2 Spark Cluster"]
         direction TB
-        MasterNode["EMR Master Node<br/>- EBS gp3: OS Root & Cluster Metadata"]
+        MasterNode["EMR Master Node<br/>(EBS gp3: OS Root & Cluster Metadata)"]
         
         subgraph WorkerNodes["EMR Worker Nodes (EC2 Instances)"]
             Worker1["Worker Node 1"]

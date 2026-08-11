@@ -241,11 +241,11 @@ graph TD
     end
 
     subgraph Layer2["2. IAM Authorization Layer (EFS File System Policy)"]
-        FSPolicy["File System Policy<br/>- elasticfilesystem:ClientMount<br/>- elasticfilesystem:ClientWrite<br/>- elasticfilesystem:ClientRootAccess"]
+        FSPolicy["File System Policy<br/>(ClientMount / ClientWrite / ClientRootAccess)"]
     end
 
     subgraph Layer3["3. Application Access Point Layer"]
-        AccessPoint["EFS Access Point<br/>- Enforce POSIX UID/GID (Identity Masking)<br/>- Enforce Root Directory Path (Jailing)"]
+        AccessPoint["EFS Access Point<br/>(POSIX UID/GID Masking & Root Path Jailing)"]
     end
 
     subgraph Layer4["4. Operating System Layer"]

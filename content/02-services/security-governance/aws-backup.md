@@ -33,7 +33,7 @@ For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, AWS Backup
 ```mermaid
 graph TB
     subgraph Organization["AWS Organizations (Central Management)"]
-        BackupPlan["AWS Backup Plan<br/>- Cron Schedule (Daily / Hourly)<br/>- Lifecycle Tiering (Cold Storage)<br/>- Cross-Region / Cross-Account Rules"]
+        BackupPlan["AWS Backup Plan<br/>(Cron Schedule / Cold Tiering / Cross-Region Copy)"]
         TagRule["Tag-Based Resource Assignment<br/><code>Environment=Production</code><br/><code>BackupTier=Gold</code>"]
         BackupPlan --> TagRule
     end
@@ -123,7 +123,7 @@ graph TD
     VaultLock["AWS Backup Vault Lock"] --> GovMode["1. Governance Mode<br/>👥 Administrative Protection<br/>🔓 Can be unlocked/deleted by users with<br/>explicit IAM permissions (backup:DeleteVaultLockConfiguration)"]
     VaultLock --> CompMode["2. Compliance Mode<br/>🔒 True WORM (Regulatory Compliance)<br/>⏳ Cooling-Off Period (Grace Period: 3 to 365 days)<br/>🚫 CANNOT BE REMOVED OR DELETED BY ANYONE<br/>(Including AWS Root User and AWS Support!)"]
 
-    CompMode --> RetentionEnforce["Enforced Retention Window<br/>- Minimum Retention Days (e.g., 90 days)<br/>- Maximum Retention Days (e.g., 2555 days)<br/>🚫 Blocks any backup job outside retention window"]
+    CompMode --> RetentionEnforce["Enforced Retention Bounds<br/>(Min / Max Days: 90 to 2555 Days)<br/>🚫 Blocks Out-of-Bounds Backup Jobs"]
 
     classDef mode fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef comp fill:#0f172a,stroke:#ef4444,stroke-width:2px,color:#fff;
