@@ -307,9 +307,10 @@ graph TB
         JupyterEKS <-->|"EFS CSI Driver (/home/users)"| EFSShared
     end
 
-    Raw -->|"EMRFS S3 Connector"| WorkerNodes
-    WorkerNodes -->|"Write Curated Parquet"| Curated
-    Curated -->|"Inference & Ad-hoc Analysis"| ServerlessAnalytics
+    Raw -->|"EMRFS S3 Connector"| Worker1
+    Worker1 -->|"Write Curated Parquet"| Curated
+    Curated -->|"Read Curated Data"| LambdaETL
+    Curated -->|"Interactive Analytics"| JupyterEKS
 
     classDef s3 fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#fff;
     classDef ebs fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;

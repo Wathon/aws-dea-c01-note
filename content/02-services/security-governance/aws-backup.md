@@ -47,7 +47,9 @@ graph TB
         RedshiftClust[("Amazon Redshift<br/>Data Warehouse")]
     end
 
-    TagRule -.->|"Discovers & Protects"| SourceServices
+    TagRule -.->|"Discovers & Protects"| S3Data
+    TagRule -.->|"Discovers & Protects"| EBSVol
+    TagRule -.->|"Discovers & Protects"| RDSDB
 
     subgraph PrimaryVault["Primary Backup Vault (Region A)"]
         VaultLock["AWS Backup Vault Lock<br/>🔒 WORM Compliance (Immutable)<br/>🔑 Encrypted with AWS KMS"]
@@ -61,7 +63,9 @@ graph TB
         DRLock --- DRRecPoints
     end
 
-    SourceServices -->|"Automated Backup Job"| RecPoints
+    S3Data -->|"Automated Backup Job"| RecPoints
+    EBSVol -->|"Automated Backup Job"| RecPoints
+    RDSDB -->|"Automated Backup Job"| RecPoints
     RecPoints -->|"Encrypted Cross-Account / Cross-Region Copy"| DRRecPoints
 
     classDef plan fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;

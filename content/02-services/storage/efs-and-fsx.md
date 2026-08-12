@@ -57,12 +57,21 @@ graph TB
         S3Bucket[("Amazon S3 Data Lake<br/>📦 Automated Hydration & Export<br/>(Data Repository Association)")]
     end
 
-    ComputeLayer -->|"NFSv4 (Port 2049) + TLS"| AP
-    AP --> MT1 & MT2 & MT3
-    MT1 & MT2 & MT3 --> StandardTier
-    StandardTier <-->|"Lifecycle Policy / Auto-Tier"| IATier <-->|"Cold Policy"| ArchiveTier
+    EC2Node -->|"NFSv4 (Port 2049) + TLS"| AP
+    EKSContainers -->|"NFSv4 + TLS"| AP
+    Serverless -->|"NFSv4 + TLS"| AP
+    OnPrem -->|"Direct Connect / VPN"| AP
+    AP --> MT1
+    AP --> MT2
+    AP --> MT3
+    MT1 --> StandardTier
+    MT2 --> StandardTier
+    MT3 --> StandardTier
+    StandardTier <-->|"Lifecycle Policy"| IATier
+    IATier <-->|"Cold Policy"| ArchiveTier
 
-    ComputeLayer <-->|"POSIX Lustre Protocol"| LustreCluster
+    EC2Node <-->|"POSIX Lustre Protocol"| LustreCluster
+    EKSContainers <-->|"POSIX Lustre Protocol"| LustreCluster
     LustreCluster <-->|"Bi-directional Sync (DRA)"| S3Bucket
 
     classDef compute fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
@@ -257,8 +266,9 @@ graph TD
         TLS["TLS 1.2 In-Transit Encryption (stunnel)"]
     end
 
-    Layer1 --> Layer2 --> Layer3 --> Layer4
-    Layer4 -.-> Layer5
+    SG --> FSPolicy --> AccessPoint --> POSIX
+    POSIX -.-> KMS
+    POSIX -.-> TLS
 
     classDef sec fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef crypto fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#fff;

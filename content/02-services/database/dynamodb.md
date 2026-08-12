@@ -46,8 +46,8 @@ graph TB
         DAX["DynamoDB Accelerator (DAX)<br/>⚡ Microsecond In-Memory Cache"]
         
         subgraph TableStructure["DynamoDB Table"]
-            PK["Partition Key (HASH) -> Sharded Partitions"]
-            SK["Sort Key (RANGE) -> Sorted within Partition"]
+            PK["Partition Key (HASH) | Sharded Partitions"]
+            SK["Sort Key (RANGE) | Sorted within Partition"]
             LSI["Local Secondary Index (LSI)<br/>🔒 Created at Table Creation<br/>🔄 Shared RCU/WCU with Base Table"]
             GSI["Global Secondary Index (GSI)<br/>✨ Online Create/Delete<br/>⚡ Dedicated RCU/WCU"]
         end
@@ -68,12 +68,14 @@ graph TB
         AthenaQuery["Amazon Athena SQL"]
     end
 
-    ClientLayer <-->|"Read / Write (ms latency)"| DAX
-    DAX <--> TableStructure
-    ClientLayer <-->|"Direct API (Get / Put / Query / Scan)"| TableStructure
+    API -->|"Read / Write"| DAX
+    LambdaProducer -->|"Batch Ingestion"| DAX
+    Streaming -->|"Stream Ingestion"| PK
+    DAX <--> PK
+    API -->|"Direct Get / Put"| PK
 
-    TableStructure -->|"Item Modifications"| DDBStreams
-    TableStructure -->|"Zero-RCU Snapshot"| S3Export
+    PK -->|"Item Modifications"| DDBStreams
+    PK -->|"Zero-RCU Snapshot"| S3Export
 
     DDBStreams --> LambdaConsumer
     LambdaConsumer --> OpenSearch
@@ -131,9 +133,10 @@ graph LR
         P3Items["Cust#999 | 2026-08-01"]
     end
 
-    PK1 & PK2 -->|"Hash('Cust#101')"| Partition1
-    PK3 -->|"Hash('Cust#205')"| Partition2
-    PK4 -->|"Hash('Cust#999')"| Partition3
+    PK1 -->|"Hash('Cust#101')"| P1Items
+    PK2 -->|"Hash('Cust#101')"| P1Items
+    PK3 -->|"Hash('Cust#205')"| P2Items
+    PK4 -->|"Hash('Cust#999')"| P3Items
 
     classDef hash fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef part fill:#0f172a,stroke:#a855f7,stroke-width:2px,color:#fff;

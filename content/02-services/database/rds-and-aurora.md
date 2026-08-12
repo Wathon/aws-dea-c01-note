@@ -70,12 +70,18 @@ graph TB
     AppReads -->|"Load Balanced Reads"| Reader1
     AnalyticsQueries -->|"Isolated Analytics Reads"| Reader2
 
-    WriterNode -->|"Log Records (4/6 Quorum)"| StorageLayer
-    StorageLayer -.->|"Shared Storage Access (<10ms lag)"| ReaderNodes
+    WriterNode -->|"Log Records (4/6 Quorum)"| AZ1
+    WriterNode -->|"Log Records"| AZ2
+    WriterNode -->|"Log Records"| AZ3
+    AZ1 -.->|"Shared Storage Access (<10ms lag)"| Reader1
+    AZ2 -.->|"Shared Storage Access"| Reader2
 
-    WriterNode -->|"Zero-ETL Stream"| ZeroETL --> RedshiftDW
-    StorageLayer -->|"Direct Parquet Export"| S3Export --> S3Lake
-    WriterNode -->|"WAL / Binlog CDC"| DMS --> S3Lake
+    WriterNode -->|"Zero-ETL Stream"| ZeroETL
+    ZeroETL --> RedshiftDW
+    AZ1 -->|"Direct Parquet Export"| S3Export
+    S3Export --> S3Lake
+    WriterNode -->|"WAL / Binlog CDC"| DMS
+    DMS --> S3Lake
 
     classDef compute fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef aurora fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
@@ -174,9 +180,11 @@ graph TB
         end
     end
 
-    WriterNode -->|"Write: Sends Redo Log Stream Only"| StorageSubsystem
-    StorageSubsystem -.->|"Shared Disk Read (<10ms Replication Lag)"| ReaderNode1
-    StorageSubsystem -.->|"Shared Disk Read"| ReaderNode2
+    WriterNode -->|"Write: Sends Redo Log Stream Only"| Seg1
+    WriterNode -->|"Redo Logs"| Seg3
+    WriterNode -->|"Redo Logs"| Seg5
+    Seg1 -.->|"Shared Disk Read (<10ms Replication Lag)"| ReaderNode1
+    Seg3 -.->|"Shared Disk Read"| ReaderNode2
 
     classDef comp fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef store fill:#0f172a,stroke:#a855f7,stroke-width:2px,color:#fff;

@@ -34,24 +34,24 @@ For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you must r
 graph TD
     DataReq["Data Engineering Storage Requirement"] --> Q1{"Data Structure & Query Access Pattern?"}
 
-    Q1 -- "Key-Value / Document (Single-digit ms)" --> DDB[["Amazon DynamoDB<br/>⚡ Serverless Operational NoSQL"]]
+    Q1 -- "Key-Value / Document (Single-digit ms)" --> DDB["Amazon DynamoDB<br/>⚡ Serverless Operational NoSQL"]
     Q1 -- "In-Memory Microsecond Cache" --> Caching{"Durable Primary DB or Cache?"}
-    Caching -- "Read Cache / Ephemeral State" --> EC[["Amazon ElastiCache (Redis / Memcached)<br/>⚡ Microsecond In-Memory Cache"]]
-    Caching -- "Durable Transactional Primary DB" --> MDB[["Amazon MemoryDB for Redis<br/>💾 ACID In-Memory Primary Database"]]
+    Caching -- "Read Cache / Ephemeral State" --> EC["Amazon ElastiCache (Redis / Memcached)<br/>⚡ Microsecond In-Memory Cache"]
+    Caching -- "Durable Transactional Primary DB" --> MDB["Amazon MemoryDB for Redis<br/>💾 ACID In-Memory Primary Database"]
 
-    Q1 -- "Apache Cassandra Migration (CQL / Wide-Column)" --> Keyspaces[["Amazon Keyspaces<br/>🏛️ Serverless Apache Cassandra"]]
-    Q1 -- "Highly Connected Graphs / Fraud Rings / Knowledge" --> Neptune[["Amazon Neptune<br/>🕸️ Graph DB (Gremlin / SPARQL / openCypher)"]]
-    Q1 -- "Time-Series Telemetry / IoT Metrics / Logs" --> Timestream[["Amazon Timestream<br/>⏱️ Automated Memory-to-Magnetic Lifecycle"]]
-    Q1 -- "MongoDB Compatible JSON Documents" --> DocDB[["Amazon DocumentDB<br/>📄 Managed MongoDB Document Store"]]
+    Q1 -- "Apache Cassandra Migration (CQL / Wide-Column)" --> Keyspaces["Amazon Keyspaces<br/>🏛️ Serverless Apache Cassandra"]
+    Q1 -- "Highly Connected Graphs / Fraud Rings / Knowledge" --> Neptune["Amazon Neptune<br/>🕸️ Graph DB (Gremlin / SPARQL / openCypher)"]
+    Q1 -- "Time-Series Telemetry / IoT Metrics / Logs" --> Timestream["Amazon Timestream<br/>⏱️ Automated Memory-to-Magnetic Lifecycle"]
+    Q1 -- "MongoDB Compatible JSON Documents" --> DocDB["Amazon DocumentDB<br/>📄 Managed MongoDB Document Store"]
 
     classDef ddb fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef cache fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#fff;
-    classDef graph fill:#0f172a,stroke:#a855f7,stroke-width:2px,color:#fff;
+    classDef graphdb fill:#0f172a,stroke:#a855f7,stroke-width:2px,color:#fff;
     classDef ts fill:#0f172a,stroke:#f59e0b,stroke-width:2px,color:#fff;
 
     class DDB,DocDB,Keyspaces ddb;
     class EC,MDB cache;
-    class Neptune graph;
+    class Neptune graphdb;
     class Timestream ts;
 ```
 
@@ -129,7 +129,9 @@ graph LR
         AZ3[("AZ-c Storage")]
     end
 
-    Keyspaces --> AZ1 & AZ2 & AZ3
+    Keyspaces --> AZ1
+    Keyspaces --> AZ2
+    Keyspaces --> AZ3
 
     classDef client fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef ks fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
@@ -231,8 +233,14 @@ graph LR
         Grafana["Managed Grafana"]
     end
 
-    IngestionSources -->|"Write Time-Series Data"| MemoryStore
-    TimestreamStorage <-->|"SQL Time-Series Queries"| Consumption
+    IoTCore -->|"Telemetry Ingestion"| MemoryStore
+    Kinesis -->|"Stream Ingestion"| MemoryStore
+    CloudWatch -->|"Log Ingestion"| MemoryStore
+
+    MemoryStore <-->|"Real-Time Point Queries"| QuickSight
+    MemoryStore <-->|"Real-Time SQL"| Athena
+    MagneticStore <-->|"Historical Analytical SQL"| Athena
+    MagneticStore <-->|"Historical Dashboards"| Grafana
 
     classDef ingest fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef store fill:#0f172a,stroke:#f59e0b,stroke-width:2px,color:#fff;
@@ -309,7 +317,7 @@ Timestream uses ANSI SQL with built-in analytical functions:
 graph LR
     Sensors["50,000 IoT Sensors"] --> IoTCore["AWS IoT Core"]
     IoTCore --> Kinesis["Amazon Kinesis Data Streams"]
-    Kinesis --> Timestream[("Amazon Timestream<br/>Memory (7 Days) -> Magnetic (5 Years)")]
+    Kinesis --> Timestream[("Amazon Timestream<br/>Memory: 7 Days | Magnetic: 5 Years")]
     Timestream --> QuickSight["Amazon QuickSight / Grafana<br/>(Real-Time Monitoring)"]
     Timestream --> S3Lake[("Amazon S3 Data Lake<br/>(ML Historical Training)")]
 
