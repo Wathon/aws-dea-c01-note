@@ -65,7 +65,7 @@ gantt
 ### Week 3: Orchestration, Governance & Security
 - Workflow orchestration with Step Functions & MWAA (Airflow): [[step-functions]], [[mwaa-airflow]]
 - Governance & Access Control with Lake Formation, IAM, KMS: [[lake-formation]], [[iam]], [[kms-and-secrets]]
-- Migration with DMS/SCT, DataSync, Snowball: [[dms-and-sct]], [[datasync-and-snow]]
+- Migration & Transfer: [[dms-and-sct]], [[datasync-and-snow]], [[application-discovery-and-mgn]], [[data-exchange]], [[transfer-family]]
 
 ### Week 4: Scenarios, Optimization & Exam Practice
 - Review cross-service decision matrix: [[service-comparisons]]

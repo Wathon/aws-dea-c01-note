@@ -19,9 +19,12 @@ date: 2026-07-28
 ## 📋 Task Statements & Key Competencies
 
 ### Task Statement 1.1: Design and implement data ingestion solutions
-- **Batch Ingestion**:
+- **Batch & External Data Ingestion**:
   - Scheduled batch extraction from databases using [[dms-and-sct]] or [[glue]] JDBC connections.
   - Large-scale file transfer using [[datasync-and-snow]] (DataSync, Snowball Edge).
+  - External commercial third-party datasets using [[data-exchange]] (S3 exports, Redshift data sharing, REST APIs).
+  - Managed B2B partner file transfers via [[transfer-family]] (SFTP, FTPS, FTP, AS2).
+  - On-premises discovery & server rehosting via [[application-discovery-and-mgn]] (Application Discovery Service & MGN).
 - **Streaming Ingestion**:
   - Real-time streaming using [[kinesis]] (Kinesis Data Streams, Kinesis Data Firehose).
   - Managed Apache Kafka using [[msk-kafka]] (Amazon MSK & MSK Connect).
@@ -55,6 +58,12 @@ date: 2026-07-28
 | **AWS Step Functions** | Workflow Orchestration | Visual state machine for ETL pipelines with error handling | [[step-functions]] |
 | **Amazon MWAA** | Airflow DAG Orchestration | Complex python-defined dependency workflows | [[mwaa-airflow]] |
 | **AWS AppFlow** | SaaS Integration | Secure data flow from Salesforce, ServiceNow to S3/Redshift | [[appflow]] |
+| **AWS DMS & SCT** | Database Migration & CDC | Heterogeneous/homogeneous DB replication into S3/Redshift | [[dms-and-sct]] |
+| **AWS DataSync & Snow** | File Transfer & Edge Devices | High-speed network transfer & offline multi-TB/PB migration | [[datasync-and-snow]] |
+| **AWS Data Exchange** | 3rd-Party Data Marketplace | S3 export, Redshift zero-ETL querying, managed APIs | [[data-exchange]] |
+| **AWS Transfer Family** | Managed SFTP/FTPS | B2B vendor file exchange directly into S3 and EFS | [[transfer-family]] |
+| **Application Discovery & MGN** | Discovery & Server Rehost | Plan migration waves and automated block-level server rehosting | [[application-discovery-and-mgn]] |
+
 
 ---
 

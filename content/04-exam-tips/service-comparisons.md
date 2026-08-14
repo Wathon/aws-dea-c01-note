@@ -89,6 +89,8 @@ graph TD
 graph TD
     MigrationScenario[Migration Scenario?] --> RelationalDB[Relational / DW Migration]
     MigrationScenario --> BulkFiles[Bulk Files / Object Migration]
+    MigrationScenario --> ServerRehost[Server Discovery & Rehosting]
+    MigrationScenario --> ThirdPartyData[Third-Party External Datasets]
     MigrationScenario --> ClientUploads[External B2B / Global Ingestion]
 
     RelationalDB --> HeteroCheck{Heterogeneous?}
@@ -99,8 +101,11 @@ graph TD
     BandwidthCheck -->|"Yes (> 1-2 Weeks / Offline)"| SnowFam["[[datasync-and-snow]] (AWS Snowball Edge / Snowmobile)"]
     BandwidthCheck -->|"No (Continuous / Network WAN)"| DataSync["[[datasync-and-snow]] (AWS DataSync)"]
 
+    ServerRehost --> Discovery["[[application-discovery-and-mgn]] (Application Discovery Service & MGN)"]
+    ThirdPartyData --> DataEx["[[data-exchange]] (AWS Data Exchange: S3, Redshift, APIs)"]
+
     ClientUploads --> UseCaseCheck{Workload Type?}
-    UseCaseCheck -->|"B2B Partner SFTP into S3/EFS"| TransferFam["[[datasync-and-snow]] (AWS Transfer Family)"]
+    UseCaseCheck -->|"B2B Partner SFTP into S3/EFS"| TransferFam["[[transfer-family]] (AWS Transfer Family)"]
     UseCaseCheck -->|"Hybrid Local Cache Backed by S3"| StorageGW["[[datasync-and-snow]] (AWS Storage Gateway)"]
     UseCaseCheck -->|"Accelerate Global Internet Uploads"| S3TA["[[s3-performance]] (S3 Transfer Acceleration)"]
 ```
@@ -113,8 +118,13 @@ graph TD
 | **Automated NFS/SMB/HDFS scheduled sync to S3/EFS/FSx** | **AWS DataSync** | Preserves POSIX metadata, 10x faster than rsync | [[datasync-and-snow]] |
 | **Large offline physical migration (>10 TB to Petabytes)** | **AWS Snowball Edge** | Network transfer exceeds 1–2 weeks | [[datasync-and-snow]] |
 | **Exabyte-scale data center evacuation** | **AWS Snowmobile** | 100 PB per 45ft shipping container truck | [[datasync-and-snow]] |
+| **On-premises server discovery & dependency mapping** | **Application Discovery Service** | Plan migrations, agentless vCenter vs agent-based | [[application-discovery-and-mgn]] |
+| **Automated lift-and-shift server rehosting to EC2** | **AWS MGN (Application Migration Service)** | Continuous block replication, low-cost staging | [[application-discovery-and-mgn]] |
+| **Third-party datasets direct in Redshift without ETL** | **AWS Data Exchange for Redshift** | Query external vendor tables instantly via SQL | [[data-exchange]] |
+| **External commercial datasets loaded to S3 or APIs** | **AWS Data Exchange (S3 / APIs)** | Native IAM SigV4 auth, automated S3 revisions | [[data-exchange]] |
+| **Legacy SFTP/FTPS file exchange directly into S3/EFS** | **AWS Transfer Family** | Zero client modification, Active Directory auth | [[transfer-family]] |
 | **On-premises local file share cache backed by S3** | **AWS Storage Gateway** | Real-time hybrid cached NFS/SMB access | [[datasync-and-snow]] |
-| **Legacy SFTP/FTPS file exchange directly into S3/EFS** | **AWS Transfer Family** | Zero client modification, fully managed SFTP | [[datasync-and-snow]] |
+
 
 ---
 

@@ -42,6 +42,10 @@ Categorized index of all AWS services covered in the **AWS Certified Data Engine
 
 - [[dms-and-sct]] — AWS Database Migration Service (DMS) & Schema Conversion Tool (SCT)
 - [[datasync-and-snow]] — AWS DataSync & AWS Snow Family (Snowcone, Snowball Edge, Snowmobile)
+- [[application-discovery-and-mgn]] — AWS Application Discovery Service & AWS Application Migration Service (MGN)
+- [[data-exchange]] — AWS Data Exchange (Third-Party Data for S3, Redshift & APIs)
+- [[transfer-family]] — AWS Transfer Family (SFTP, FTPS, FTP, AS2)
+
 
 ## ⚡ Compute & Containers
 

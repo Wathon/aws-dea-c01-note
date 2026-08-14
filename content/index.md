@@ -64,6 +64,10 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 
 - [[dms-and-sct]] — Database Migration Service (DMS) & Schema Conversion Tool (SCT)
 - [[datasync-and-snow]] — DataSync & AWS Snow Family (Snowcone, Snowball, Snowmobile)
+- [[application-discovery-and-mgn]] — Application Discovery Service & Application Migration Service (MGN)
+- [[data-exchange]] — AWS Data Exchange (Third-Party Data for S3, Redshift & APIs)
+- [[transfer-family]] — AWS Transfer Family (SFTP, FTPS, FTP, AS2)
+
 
 #### ⚡ Compute & Containers
 
