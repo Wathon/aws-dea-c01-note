@@ -71,9 +71,11 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 
 #### ⚡ Compute & Containers
 
-- [[lambda]] — Serverless compute, Event Triggers, `/tmp` storage, DLQ
-- [[batch]] — AWS Batch compute environment & job queues
-- [[ecr-ecs-eks]] — Docker container registry & orchestration (ECS Fargate, EKS)
+- [[lambda]] — Serverless event-driven compute, Event Triggers, streaming batching, `/tmp`, EFS mounts
+- [[batch]] — Managed containerized batch compute, Job queues, Spot allocation, Array jobs
+- [[ecr-ecs-eks]] — Docker container registry & orchestration (ECS Fargate, EKS, EMR on EKS)
+- [[ec2-and-graviton]] — Amazon EC2 & AWS Graviton (On-Demand, Spot checkpointing, EMR node mapping)
+
 
 #### 📊 Analytics & Data Pipelines
 

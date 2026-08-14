@@ -33,8 +33,11 @@ date: 2026-07-28
 ### Task Statement 1.2: Transform and process data
 - **ETL/ELT Engine Selection**:
   - Serverless Spark processing using [[glue]] ETL jobs (PySpark, Scala) and [[glue]] DataBrew.
-  - Distributed cluster processing using [[emr]] (Spark, Hive, Presto, EMR Serverless).
-  - Light event-driven transformations using [[lambda]].
+  - Distributed cluster processing using [[emr]] (Spark, Hive, Presto, EMR Serverless, EMR on EKS).
+  - Light event-driven transformations using [[lambda]] (< 15 mins).
+  - Containerized batch compute & non-Spark workloads using [[batch]] (Spot allocation, Docker images).
+  - Container microservices & Kubernetes pipelines using [[ecr-ecs-eks]] (ECS Fargate, EKS).
+  - Spot Instance topologies & Graviton price-performance optimization using [[ec2-and-graviton]].
 - **Data Transformation Practices**:
   - Converting raw formats (CSV, JSON) into optimized columnar formats ([[data-formats-and-compression]] — Parquet, ORC).
   - Applying partition schemes ([[data-modeling-and-partitioning]]) for query performance.
@@ -55,6 +58,9 @@ date: 2026-07-28
 | **Amazon Kinesis** | Streaming Ingestion | Near real-time ingestion to S3/Redshift/OpenSearch | [[kinesis]] |
 | **Amazon MSK** | Apache Kafka | Open-source streaming compatibility with low latency | [[msk-kafka]] |
 | **AWS Lambda** | Event-Driven Compute | Micro-batch processing, file upload triggers from S3 | [[lambda]] |
+| **AWS Batch** | Containerized Batch Compute | Non-Spark batch processing (> 15 mins), Spot array jobs | [[batch]] |
+| **Amazon ECR, ECS & EKS** | Container Orchestration | Docker registries, Fargate serverless containers, EMR on EKS | [[ecr-ecs-eks]] |
+| **Amazon EC2 & Graviton** | Big Data Compute Infrastructure | Spot checkpointing, EMR node mapping, Graviton Arm pricing | [[ec2-and-graviton]] |
 | **AWS Step Functions** | Workflow Orchestration | Visual state machine for ETL pipelines with error handling | [[step-functions]] |
 | **Amazon MWAA** | Airflow DAG Orchestration | Complex python-defined dependency workflows | [[mwaa-airflow]] |
 | **AWS AppFlow** | SaaS Integration | Secure data flow from Salesforce, ServiceNow to S3/Redshift | [[appflow]] |
@@ -63,6 +69,7 @@ date: 2026-07-28
 | **AWS Data Exchange** | 3rd-Party Data Marketplace | S3 export, Redshift zero-ETL querying, managed APIs | [[data-exchange]] |
 | **AWS Transfer Family** | Managed SFTP/FTPS | B2B vendor file exchange directly into S3 and EFS | [[transfer-family]] |
 | **Application Discovery & MGN** | Discovery & Server Rehost | Plan migration waves and automated block-level server rehosting | [[application-discovery-and-mgn]] |
+
 
 
 ---

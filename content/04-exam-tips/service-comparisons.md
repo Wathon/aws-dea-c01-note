@@ -125,8 +125,45 @@ graph TD
 | **Legacy SFTP/FTPS file exchange directly into S3/EFS** | **AWS Transfer Family** | Zero client modification, Active Directory auth | [[transfer-family]] |
 | **On-premises local file share cache backed by S3** | **AWS Storage Gateway** | Real-time hybrid cached NFS/SMB access | [[datasync-and-snow]] |
 
+---
+
+## 6. Compute & Batch Processing Engine Matrix
+
+```mermaid
+graph TD
+    ComputeWorkload[Compute & Processing Workload?] --> ServerlessMicro[Serverless Event-Driven / Light ETL]
+    ComputeWorkload --> BatchDocker[Containerized Batch / Non-Spark Binaries]
+    ComputeWorkload --> DistributedSpark[Distributed Tabular & Spark Analytics]
+    ComputeWorkload --> MicroservicesK8s[Container Microservices & Shared Infrastructure]
+
+    ServerlessMicro --> TimeCheck{Runtime <= 15 Mins?}
+    TimeCheck -->|"Yes (< 15 mins)"| LambdaOpt["[[lambda]] (AWS Lambda)"]
+    TimeCheck -->|"No (> 15 mins)"| BatchOpt["[[batch]] (AWS Batch / ECS Fargate)"]
+
+    BatchDocker --> BatchChoice["[[batch]] (AWS Batch + EC2 Spot Instances)"]
+
+    DistributedSpark --> SparkEngine{Managed Serverless vs Dedicated Cluster?}
+    SparkEngine -->|"Serverless Spark / Data Catalog Native"| GlueOpt["[[glue]] (AWS Glue ETL)"]
+    SparkEngine -->|"Custom Hadoop / Presto / Spark Cluster"| EMROpt["[[emr]] (Amazon EMR on EC2)"]
+    SparkEngine -->|"Spark on Shared Kubernetes Cluster"| EMRonEKSOpt["[[ecr-ecs-eks]] (Amazon EMR on EKS)"]
+
+    MicroservicesK8s --> K8sChoice{Kubernetes or AWS-Native?}
+    K8sChoice -->|"AWS-Native Serverless Containers"| ECSOpt["[[ecr-ecs-eks]] (Amazon ECS + AWS Fargate)"]
+    K8sChoice -->|"Managed Kubernetes"| EKSOpt["[[ecr-ecs-eks]] (Amazon EKS)"]
+```
+
+| Workload Type / Requirement | Recommended Service | Key Keyword / Decision Rule | Deep Dive Link |
+| :--- | :--- | :--- | :--- |
+| **Event-driven streaming micro-batch / S3 trigger (< 15 mins)** | **AWS Lambda** | 15-min timeout, `/tmp` (10 GB), EFS mount | [[lambda]] |
+| **Long-running batch compute with custom binaries / C++ / R** | **AWS Batch** | Docker containers, Spot instances, Array jobs | [[batch]] |
+| **Serverless Apache Spark ETL for S3 Data Lakes** | **AWS Glue ETL** | PySpark/Scala, Data Catalog integration | [[glue]] |
+| **Petabyte-scale distributed Hadoop / Presto / Spark cluster** | **Amazon EMR (EC2)** | Master (On-Demand), Core, Task (Spot) | [[emr]], [[ec2-and-graviton]] |
+| **Run Spark analytics on existing Kubernetes cluster** | **Amazon EMR on EKS** | Multi-tenant cluster sharing, dynamic pod scaling | [[ecr-ecs-eks]], [[emr]] |
+| **AWS-native serverless containerized applications** | **Amazon ECS (AWS Fargate)** | Zero server management, Task IAM role | [[ecr-ecs-eks]] |
+| **Lowest cost Arm-based compute across analytics services** | **AWS Graviton** | 40% better price-performance (`m7g`, `c7g`, `r7g`) | [[ec2-and-graviton]] |
 
 ---
 
 ## 📌 Master Hub Link
 Return to main hub: [[index]]
+

@@ -49,9 +49,11 @@ Categorized index of all AWS services covered in the **AWS Certified Data Engine
 
 ## ⚡ Compute & Containers
 
-- [[lambda]] — AWS Lambda (Serverless Compute)
-- [[batch]] — AWS Batch (Batch Job Scheduling)
-- [[ecr-ecs-eks]] — Amazon ECR, Amazon ECS & Amazon EKS
+- [[lambda]] — AWS Lambda (Serverless Event-Driven Compute)
+- [[batch]] — AWS Batch (Managed Containerized Batch Computing)
+- [[ecr-ecs-eks]] — Amazon ECR, Amazon ECS & Amazon EKS (Containerized Workloads)
+- [[ec2-and-graviton]] — Amazon EC2 & AWS Graviton in Big Data (Purchasing Models & Arm Architecture)
+
 
 ## 📊 Analytics & Streaming
 

@@ -57,10 +57,12 @@ gantt
 - S3 Storage Classes, Lifecycle, Object Lock & Replication: [[s3]]
 - Relational (RDS/Aurora) & NoSQL (DynamoDB, Redshift): [[rds-and-aurora]], [[dynamodb]], [[redshift]]
 
-### Week 2: Ingestion & Analytics Pipelines
+### Week 2: Ingestion, Compute & Analytics Pipelines
 - Data Ingestion with Kinesis Data Streams / Firehose / MSK: [[kinesis]], [[msk-kafka]]
+- Serverless & Container Compute: [[lambda]], [[batch]], [[ecr-ecs-eks]], [[ec2-and-graviton]]
 - ETL with AWS Glue (Crawlers, Catalog, Jobs, DataBrew, Data Quality): [[glue]]
 - Interactive Querying with Athena & Big Data with EMR: [[athena]], [[emr]]
+
 
 ### Week 3: Orchestration, Governance & Security
 - Workflow orchestration with Step Functions & MWAA (Airflow): [[step-functions]], [[mwaa-airflow]]
