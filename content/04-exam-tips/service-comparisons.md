@@ -83,5 +83,40 @@ graph TD
 
 ---
 
+## 5. Migration & Data Transfer Decision Matrix
+
+```mermaid
+graph TD
+    MigrationScenario[Migration Scenario?] --> RelationalDB[Relational / DW Migration]
+    MigrationScenario --> BulkFiles[Bulk Files / Object Migration]
+    MigrationScenario --> ClientUploads[External B2B / Global Ingestion]
+
+    RelationalDB --> HeteroCheck{Heterogeneous?}
+    HeteroCheck -->|"Yes (Oracle/SQL Server to Aurora/Redshift)"| SCT_DMS["[[dms-and-sct]] (AWS SCT + AWS DMS CDC)"]
+    HeteroCheck -->|"No (Postgres to Aurora Postgres)"| Native_DMS["[[dms-and-sct]] (AWS DMS or Native Logical Replication)"]
+
+    BulkFiles --> BandwidthCheck{Transfer Time > 1-2 Weeks?}
+    BandwidthCheck -->|"Yes (> 1-2 Weeks / Offline)"| SnowFam["[[datasync-and-snow]] (AWS Snowball Edge / Snowmobile)"]
+    BandwidthCheck -->|"No (Continuous / Network WAN)"| DataSync["[[datasync-and-snow]] (AWS DataSync)"]
+
+    ClientUploads --> UseCaseCheck{Workload Type?}
+    UseCaseCheck -->|"B2B Partner SFTP into S3/EFS"| TransferFam["[[datasync-and-snow]] (AWS Transfer Family)"]
+    UseCaseCheck -->|"Hybrid Local Cache Backed by S3"| StorageGW["[[datasync-and-snow]] (AWS Storage Gateway)"]
+    UseCaseCheck -->|"Accelerate Global Internet Uploads"| S3TA["[[s3-performance]] (S3 Transfer Acceleration)"]
+```
+
+| Migration & Transfer Requirement | Recommended Service | Key Keyword / Criteria | Deep Dive Link |
+| :--- | :--- | :--- | :--- |
+| **Heterogeneous DB schema and code conversion** | **AWS SCT** | Convert PL/SQL, stored procedures, data types | [[dms-and-sct]] |
+| **Live database replication & CDC streaming to S3/Kinesis** | **AWS DMS** | Minimal downtime, full load + CDC, `Op` column | [[dms-and-sct]] |
+| **Mass data warehouse unload (Teradata/Oracle to Redshift)** | **SCT Data Extraction Agents** | Multi-TB/PB parallel unloads to S3/Snowball | [[dms-and-sct]] |
+| **Automated NFS/SMB/HDFS scheduled sync to S3/EFS/FSx** | **AWS DataSync** | Preserves POSIX metadata, 10x faster than rsync | [[datasync-and-snow]] |
+| **Large offline physical migration (>10 TB to Petabytes)** | **AWS Snowball Edge** | Network transfer exceeds 1–2 weeks | [[datasync-and-snow]] |
+| **Exabyte-scale data center evacuation** | **AWS Snowmobile** | 100 PB per 45ft shipping container truck | [[datasync-and-snow]] |
+| **On-premises local file share cache backed by S3** | **AWS Storage Gateway** | Real-time hybrid cached NFS/SMB access | [[datasync-and-snow]] |
+| **Legacy SFTP/FTPS file exchange directly into S3/EFS** | **AWS Transfer Family** | Zero client modification, fully managed SFTP | [[datasync-and-snow]] |
+
+---
+
 ## 📌 Master Hub Link
 Return to main hub: [[index]]
