@@ -29,14 +29,18 @@ date: 2026-08-15
 
 ## ၂။ အဓိက အစိတ်အပိုင်းများ (Core Concepts)
 
-### Databases နှင့် Tables
+### 1. Databases နှင့် Tables
 - **Databases**: Catalog အတွင်းရှိ Table များကို စနစ်တကျ စုစည်းထားသော နေရာ။
 - **Tables**: ဒေတာအမှန်တကယ် မဟုတ်ဘဲ ဒေတာ၏ ဖွဲ့စည်းပုံ (Metadata) ကိုသာ သိမ်းဆည်းသည်။ Table တွင် S3 တည်နေရာ၊ Columns အမည်များ၊ Data Types များနှင့် Parquet/JSON ကဲ့သို့ Format များကို မှတ်တမ်းတင်ထားသည်။
 
-### Lake Formation နှင့် ချိတ်ဆက်မှု
+### 2. Partition Indexes
+- Partition အရေအတွက် သန်းနှင့်ချီရှိသော S3 ဒေတာများကို Athena ဖြင့် Query ပြုလုပ်ရာတွင် ပိုမိုမြန်ဆန်စေရန် Glue Data Catalog table တွင် **Partition Indexes** များကို တည်ဆောက်နိုင်သည်။
+- ဤသို့ပြုလုပ်ခြင်းဖြင့် Athena သည် Partition အားလုံးကို အချိန်ယူ၍ Scan ဖတ်နေစရာမလိုတော့ဘဲ မိမိအလိုရှိသော သက်ဆိုင်ရာ Partition များကိုသာ အမြန်ဆုံး ဆွဲထုတ်နိုင်သည်။
+
+### 3. Lake Formation နှင့် ချိတ်ဆက်မှု
 - Data Catalog သည် `[[lake-formation]]` နှင့် တိုက်ရိုက် ချိတ်ဆက်အလုပ်လုပ်ပြီး Table များ၏ Column-level နှင့် Row-level Access Control (ဝင်ရောက်ကြည့်ရှုခွင့်) များကို တင်းကျပ်စွာ ထိန်းချုပ်နိုင်သည်။
 
-### Cross-Account Access (အကောင့်များအကြား မျှဝေခြင်း)
+### 4. Cross-Account Access (အကောင့်များအကြား မျှဝေခြင်း)
 - **AWS Resource Access Manager (RAM)** သို့မဟုတ် Lake Formation ကို အသုံးပြု၍ Data Catalog ကို အခြား AWS Accounts များနှင့် မျှဝေနိုင်ပြီး Data Mesh Architecture တည်ဆောက်ရာတွင် အဓိက အခန်းကဏ္ဍမှ ပါဝင်သည်။
 
 ---
@@ -47,6 +51,7 @@ date: 2026-08-15
 > **Key Exam Trigger Keywords**:
 > - **"Centralized metastore to store schema definitions for Athena, Redshift Spectrum, and EMR"** $\rightarrow$ **AWS Glue Data Catalog**.
 > - **"Hive-compatible metastore on AWS"** $\rightarrow$ **AWS Glue Data Catalog**.
+> - **"Speed up Athena queries on an S3 table with millions of partitions"** $\rightarrow$ **Glue Data Catalog တွင် Partition Index ဆောက်ပါ**။
 > - **"Apply column-level security to a Data Catalog table"** $\rightarrow$ **AWS Lake Formation**.
 
 ---

@@ -40,7 +40,16 @@ While standard Apache Spark uses DataFrames that require a strict, rigid schema,
 - When a Glue Job runs, it will only process the **new files** added to S3 since the last run.
 - **Exam Tip**: This is the built-in, no-code mechanism for achieving incremental data processing without maintaining custom state tracking in DynamoDB or passing timestamps manually.
 
-### 3. Worker Types (Capacity Planning)
+### 3. Pushdown Predicates (S3 Partition Filtering)
+- When reading partitioned data from S3, you can use **Pushdown Predicates** in your Glue script.
+- Instead of loading the entire dataset into Spark memory and then filtering it, Pushdown Predicates filter the data at the S3 directory level *before* it is read.
+- **Exam Tip**: This drastically reduces I/O costs and speeds up query execution.
+
+### 4. Built-in Machine Learning Transforms (`FindMatches`)
+- **FindMatches** is a built-in ML transform in AWS Glue used for **data deduplication** and record matching.
+- If you have customer records without a unique ID (e.g., "John Doe" vs "J. Doe"), `FindMatches` can identify them as the same person without writing complex fuzzy matching logic.
+
+### 5. Worker Types (Capacity Planning)
 AWS Glue provides different worker types based on the workload:
 - **`G.1X`**: 1 DPU (Data Processing Unit), 4 vCPU, 16 GB memory. Good for standard Spark ETL.
 - **`G.2X`**: 2 DPU, 8 vCPU, 32 GB memory. Recommended for memory-intensive workloads, heavy shuffles, or ML transforms.
@@ -55,6 +64,8 @@ AWS Glue provides different worker types based on the workload:
 > - **"Process nested, semi-structured JSON with changing data types without failing"** $\rightarrow$ **Use AWS Glue DynamicFrames and `ResolveChoice`**.
 > - **"Process only the newly arrived S3 files without maintaining custom tracking logic"** $\rightarrow$ **Enable AWS Glue Job Bookmarks**.
 > - **"Need to run a serverless Spark job to aggregate 10 TB of data with heavy joins"** $\rightarrow$ **Use AWS Glue ETL Jobs with `G.2X` workers for memory-intensive processing**.
+> - **"Optimize S3 reads by filtering out irrelevant partitions before loading data into memory"** $\rightarrow$ **Use Pushdown Predicates**.
+> - **"Deduplicate records across two tables without a unique identifier using Machine Learning"** $\rightarrow$ **Use the `FindMatches` transform**.
 
 ---
 

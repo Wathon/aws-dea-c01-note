@@ -41,7 +41,16 @@ date: 2026-08-15
 - ထို့ကြောင့် Job ကို ထပ်မံ Run သည့်အခါ S3 သို့ **အသစ်ရောက်ရှိလာသော ဖိုင်များကိုသာ (Incremental Processing)** ရွေးချယ်လုပ်ဆောင်ပေးသည်။
 - **စာမေးပွဲ အကြံပြုချက်**: ကိုယ်ပိုင် ခြေရာခံစနစ်များကို DynamoDB ဖြင့် တည်ဆောက်စရာမလိုဘဲ Incremental Processing ရရှိစေသော Built-in နည်းလမ်းဖြစ်သည်။
 
-### 3. Worker Types (Capacity ရွေးချယ်ခြင်း)
+### 3. Pushdown Predicates (S3 Partition များကို ကြိုတင် စစ်ထုတ်ခြင်း)
+- S3 မှ Partitioned Data များကို ဖတ်ရာတွင် Glue script ထဲ၌ **Pushdown Predicates** ကို ထည့်သွင်း အသုံးပြုနိုင်သည်။
+- ဒေတာအားလုံးကို Spark memory ထဲသို့ ဆွဲတင်ပြီးမှ Filter လုပ်မည့်အစား၊ Pushdown Predicates သည် S3 directory level တွင်သာ **ဖတ်မည့်ဒေတာများကို ကြိုတင်ရွေးချယ် စစ်ထုတ်** ပေးသည်။
+- **စာမေးပွဲ အကြံပြုချက်**: ဤနည်းလမ်းသည် မလိုအပ်သော ဒေတာများကို ဖတ်ရှုခြင်းမှ သက်သာစေသဖြင့် I/O ကုန်ကျစရိတ်ကို လျှော့ချပေးပြီး Query အမြန်နှုန်းကို များစွာ တိုးတက်စေသည်။
+
+### 4. Built-in Machine Learning Transforms (`FindMatches`)
+- **FindMatches** သည် AWS Glue တွင် အသင့်ပါဝင်သော ML Transform တစ်ခုဖြစ်ပြီး **ဒေတာများ ထပ်နေခြင်းကို ရှာဖွေဖယ်ရှားရာတွင် (Data deduplication)** အဓိက အသုံးပြုသည်။
+- ဥပမာ - Customer list တွင် Unique ID မပါဘဲ "John Doe" နှင့် "J. Doe" ဟု ကွဲလွဲနေပါက၊ ရှုပ်ထွေးသော String matching code များ ရေးစရာမလိုဘဲ `FindMatches` က ၎င်းတို့သည် လူတစ်ဦးတည်းဖြစ်ကြောင်း Machine Learning ဖြင့် ခွဲခြားပေးနိုင်သည်။
+
+### 5. Worker Types (Capacity ရွေးချယ်ခြင်း)
 Workload အပေါ်မူတည်၍ အောက်ပါ Worker အမျိုးအစားများကို ရွေးချယ်နိုင်သည်-
 - **`G.1X`**: 1 DPU, 4 vCPU, 16 GB memory. ပုံမှန် Spark ETL များအတွက်။
 - **`G.2X`**: 2 DPU, 8 vCPU, 32 GB memory. Memory အများအပြားလိုအပ်သော ကြီးမားသည့် Joins များ၊ Machine Learning Transforms များအတွက်။
@@ -56,6 +65,8 @@ Workload အပေါ်မူတည်၍ အောက်ပါ Worker အမ�
 > - **"Process nested, semi-structured JSON with changing data types without failing"** $\rightarrow$ **AWS Glue DynamicFrames နှင့် `ResolveChoice` ကိုသုံးပါ**။
 > - **"Process only the newly arrived S3 files without maintaining custom tracking logic"** $\rightarrow$ **AWS Glue Job Bookmarks ကို ဖွင့်ပါ**။
 > - **"Need to run a serverless Spark job to aggregate 10 TB of data with heavy joins"** $\rightarrow$ **Memory လိုအပ်ချက်များသောကြောင့် AWS Glue ETL Jobs တွင် `G.2X` workers များကို သုံးပါ**။
+> - **"Optimize S3 reads by filtering out irrelevant partitions before loading data into memory"** $\rightarrow$ **Pushdown Predicates ကို သုံးပါ**။
+> - **"Deduplicate records across two tables without a unique identifier using Machine Learning"** $\rightarrow$ **`FindMatches` transform ကို သုံးပါ**။
 
 ---
 

@@ -37,7 +37,14 @@ date: 2026-08-15
 - Crawler သည် S3 တွင် ခွဲခြားသိမ်းဆည်းထားသော Hive-style Directory အမည်များ (ဥပမာ- `s3://bucket/data/year=2026/month=08/`) ကို အလိုအလျောက် ရှာဖွေသိရှိပြီး Data Catalog တွင် Partition အဖြစ် ထည့်သွင်းပေးသည်။
 - ထို့ကြောင့် S3 သို့ ဒေတာအသစ် ဝင်လာတိုင်း Athena တွင် `MSCK REPAIR TABLE` command ကို ကိုယ်တိုင် ရိုက်ထည့်စရာ မလိုတော့ပါ။
 
-### 3. Schema Evolution (Schema Drift) ကို ဖြေရှင်းခြင်း
+### 3. Include နှင့် Exclude Patterns
+- ပုံမှန်အားဖြင့် Crawler သည် သတ်မှတ်ထားသော S3 လမ်းကြောင်းအောက်ရှိ ဖိုင်အားလုံးကို Scan ဖတ်သည်။ သို့သော် မလိုအပ်သော ဖိုင်များ သို့မဟုတ် ယာယီဖိုင်များကို ကျော်သွားစေရန် **Exclude Patterns** (ဥပမာ- `**/*.tmp` သို့မဟုတ် `**/archive/**`) သတ်မှတ်ပေးခြင်းဖြင့် အချိန်နှင့် ကုန်ကျစရိတ်ကို သက်သာစေနိုင်သည်။
+
+### 4. IAM Roles နှင့် Security
+- Crawler အလုပ်လုပ်ရန်အတွက် Target S3 bucket အပေါ်တွင် `s3:GetObject` နှင့် `s3:ListBucket` ခွင့်ပြုချက်များ (Permissions) ပါရှိသော **IAM Role** တစ်ခုကို တပ်ဆင်ပေးရန် မဖြစ်မနေ လိုအပ်သည်။
+- IAM Permission အလုံအလောက်မရှိပါက Crawler သည် အလုပ်ပြီးဆုံးကြောင်း ပြသသော်လည်း Table တစ်ခုမှ ရှာတွေ့မည် မဟုတ်ပါ။
+
+### 5. Schema Evolution (Schema Drift) ကို ဖြေရှင်းခြင်း
 အချိန်ကြာလာသည်နှင့်အမျှ ဒေတာရင်းမြစ်များတွင် Column အသစ်များ တိုးလာတတ်သည်။ Glue Crawler သည် ၎င်းအပြောင်းအလဲများကို အလိုအလျောက် သိရှိပြီး Data Catalog ကို Update လုပ်ပေးနိုင်သည်-
 - Crawler ကို Setup လုပ်ရာတွင် `Update the table definition in the data catalog` ဆိုသော အချက်ကို ရွေးချယ်ပေးရမည်။ ထိုသို့လုပ်မှသာ Column အသစ်များကို Athena တွင် ချက်ချင်း Query လုပ်၍ ရမည်ဖြစ်သည်။
 
@@ -50,6 +57,8 @@ date: 2026-08-15
 > - **"Automate the discovery of new partitions added to S3 daily"** $\rightarrow$ **AWS Glue Crawler ကို အချိန်ဇယားဆွဲ၍ Run ပါ**။
 > - **"Source data occasionally adds new columns. How to ensure Athena can query them?"** $\rightarrow$ **Crawler configuration တွင် 'Update the table definition in the data catalog' ကို ဖွင့်ပါ**။
 > - **"Data in S3 is in a proprietary log format that standard tools cannot parse"** $\rightarrow$ **Grok patterns ကိုသုံး၍ Custom Classifier ဖန်တီးပြီး Crawler နှင့် တွဲဖက်ပါ**။
+> - **"Crawler is scanning temporary files and taking too long"** $\rightarrow$ **Crawler definition တွင် Exclude Patterns များကို သုံးပါ**။
+> - **"Crawler finishes successfully but finds 0 tables"** $\rightarrow$ **IAM Role တွင် `s3:GetObject` permission ပါမပါ စစ်ဆေးပါ**။
 
 ---
 

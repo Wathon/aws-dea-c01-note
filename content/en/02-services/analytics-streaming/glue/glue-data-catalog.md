@@ -28,14 +28,18 @@ The **AWS Glue Data Catalog** is a managed, centralized, Apache Hive-compatible 
 
 ## 2. Core Concepts
 
-### Databases and Tables
+### 1. Databases and Tables
 - **Databases**: Logical groupings of tables in the catalog.
 - **Tables**: Metadata definitions that represent the underlying data. A table specifies the data location (e.g., an S3 URI), the schema (column names and data types), and the format (e.g., Parquet, JSON, CSV).
 
-### Integration with Lake Formation
+### 2. Partition Indexes
+- To speed up Amazon Athena queries on highly partitioned S3 data, you can create **Partition Indexes** on the Glue Data Catalog table.
+- Instead of Athena scanning the entire list of partitions (which can take minutes if there are millions of partitions), the partition index allows Athena to quickly retrieve only the relevant partitions.
+
+### 3. Integration with Lake Formation
 - The Data Catalog integrates closely with `[[lake-formation]]`, which provides fine-grained (column-level and row-level) access control over the tables and databases defined in the catalog.
 
-### Cross-Account Access
+### 4. Cross-Account Access
 - The Data Catalog can be shared across AWS accounts using **AWS Resource Access Manager (RAM)** or Lake Formation, enabling a centralized "Data Mesh" metadata architecture.
 
 ---
@@ -46,6 +50,7 @@ The **AWS Glue Data Catalog** is a managed, centralized, Apache Hive-compatible 
 > **Key Exam Trigger Keywords**:
 > - **"Centralized metastore to store schema definitions for Athena, Redshift Spectrum, and EMR"** $\rightarrow$ **AWS Glue Data Catalog**.
 > - **"Hive-compatible metastore on AWS"** $\rightarrow$ **AWS Glue Data Catalog**.
+> - **"Speed up Athena queries on an S3 table with millions of partitions"** $\rightarrow$ **Create a Partition Index in the Glue Data Catalog**.
 > - **"Apply column-level security to a Data Catalog table"** $\rightarrow$ **AWS Lake Formation**.
 
 ---

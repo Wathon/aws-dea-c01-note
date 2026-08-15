@@ -87,6 +87,7 @@ date: 2026-08-15
 - [[glue-studio]] — AWS Glue Studio Visual ETL
 - [[glue-workflows]] — AWS Glue Workflows Orchestration
 - [[glue-data-quality]] — AWS Glue Data Quality (DQDL)
+- [[glue-schema-registry]] — AWS Glue Schema Registry (Kafka/Kinesis)
 - [[glue-databrew]] — AWS Glue DataBrew No-code ETL
 - [[athena]] — Serverless SQL queries on S3, Partition Projection, CTAS, Federated queries
 - [[emr]] — Elastic MapReduce (Spark, Hadoop, Presto), EMR Serverless, EMR on EKS
