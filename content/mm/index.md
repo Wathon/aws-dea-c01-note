@@ -73,6 +73,34 @@ date: 2026-08-15
 - `[[mm/02-services/analytics-streaming/glue/glue-workflows|AWS Glue Workflows]]` — ETL အဆင့်များကို ချိတ်ဆက်ခြင်း (Orchestration)
 - `[[mm/02-services/analytics-streaming/glue/glue-data-quality|AWS Glue Data Quality]]` — DQDL rules များဖြင့် ဒေတာမှန်ကန်မှုကို အလိုအလျောက် စစ်ဆေးခြင်း
 - `[[mm/02-services/analytics-streaming/glue/glue-databrew|AWS Glue DataBrew]]` — Code ရေးစရာမလိုဘဲ UI မှတစ်ဆင့် Data Preparation ပြုလုပ်ခြင်း
+- `[[en/02-services/analytics-streaming/athena|Amazon Athena]]` — Serverless SQL queries on S3, Partition Projection, CTAS
+- `[[en/02-services/analytics-streaming/emr|Amazon EMR]]` — Elastic MapReduce (Spark, Hadoop, Presto), EMR Serverless, EMR on EKS
+- `[[en/02-services/analytics-streaming/kinesis|Amazon Kinesis]]` — Kinesis Data Streams, Firehose, Data Analytics, Video Streams
+- `[[en/02-services/analytics-streaming/msk-kafka|Amazon MSK]]` — Managed Streaming for Apache Kafka, MSK Connect
+- `[[en/02-services/analytics-streaming/opensearch|Amazon OpenSearch]]` — OpenSearch Service, Search indices, Shards
+- `[[en/02-services/analytics-streaming/quicksight|Amazon QuickSight]]` — Business Intelligence, SPICE engine, Dashboards
+
+### 🔀 Application Integration & Workflow Automation
+- `[[en/02-services/application-integration/step-functions|AWS Step Functions]]` — Orchestrating state machines (Standard vs Express workflows)
+- `[[en/02-services/application-integration/mwaa-airflow|Amazon MWAA (Airflow)]]` — Managed Workflows for Apache Airflow, DAGs & Operators
+- `[[en/02-services/application-integration/sqs-and-sns|Amazon SQS & SNS]]` — Simple Queue Service & Simple Notification Service
+- `[[en/02-services/application-integration/appflow|Amazon AppFlow]]` — SaaS & AWS integration (Salesforce, ServiceNow, S3)
+
+### 🔒 Security, Identity & Governance
+- `[[en/02-services/security-governance/lake-formation|AWS Lake Formation]]` — Data Lake Governance, Column/Row-level security
+- `[[en/02-services/security-governance/iam|AWS IAM]]` — IAM Roles, Policies, Service Linked Roles, Access Analyzer
+- `[[en/02-services/security-governance/kms-and-secrets|AWS KMS & Secrets Manager]]` — Encryption, Parameter Store
+- `[[en/02-services/security-governance/macie-and-cloudtrail|Amazon Macie & CloudTrail]]` — PII scanning with Macie & CloudTrail audit logs
+- `[[en/02-services/security-governance/aws-backup|AWS Backup]]` — Centralized Cross-Service Backup, Vault Lock WORM
+
+### 🌐 Networking & Governance
+- `[[en/02-services/networking/vpc-and-networking|Amazon VPC & Networking]]` — VPC, Subnets, Security Groups, Endpoints
+- `[[en/02-services/networking/cloudwatch-and-eventbridge|CloudWatch & EventBridge]]` — Metrics, Logs Insights, EventBridge rules
+
+### 🤖 ML, Developer Tools & Cost
+- `[[en/02-services/ml-developer-tools/sagemaker-and-ai|Amazon SageMaker & AI]]` — SageMaker Data Wrangler, Feature Store
+- `[[en/02-services/ml-developer-tools/cdk-cloudformation|CDK & CloudFormation]]` — Infrastructure as code
+- `[[en/02-services/ml-developer-tools/cost-management|AWS Cost Management]]` — Cost Explorer, Budgets, Savings Plans, CUR
 
 ---
 
