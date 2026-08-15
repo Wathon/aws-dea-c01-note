@@ -11,6 +11,7 @@ date: 2026-07-28
 # 🌐 Big Data Fundamentals & Data Lake Architecture
 
 - **Category**: Fundamentals
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/my/03-concepts/big-data-fundamentals.md)
 - **Slide Reference**: Pages 12–37 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[index]] | [[service-catalog]]
 

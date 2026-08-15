@@ -1,3 +1,19 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+body {
+  font-family: var(--bodyFont), "Noto Sans Myanmar", "Padauk", "Myanmar Text", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headerFont), "Noto Sans Myanmar", "Padauk", "Myanmar Text", sans-serif;
+}
+
+// Burmese text readability enhancements
+.burmese-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: var(--highlight);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}

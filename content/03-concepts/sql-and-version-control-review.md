@@ -11,6 +11,7 @@ date: 2026-07-28
 # 📊 SQL Review & Version Control (Git)
 
 - **Category**: Fundamentals
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/my/03-concepts/sql-and-version-control-review.md)
 - **Slide Reference**: Pages 51–75 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[index]] | [[service-catalog]]
 

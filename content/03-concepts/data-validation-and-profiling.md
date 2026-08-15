@@ -6,6 +6,9 @@ date: 2026-07-28
 ---
 
 # 🔍 Data Validation and Profiling
+- **Category**: Data Quality & Governance
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/my/03-concepts/data-validation-and-profiling.md)
+- **Hub Links**: [[index]] | [[service-catalog]] | [[glue]] | [[sagemaker-and-ai]]
 
 Data Validation and Profiling are core pillars of **Data Quality Management** in modern data engineering pipelines. In the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you are tested on how to automatically inspect, validate, profile, and quarantine bad data across batch and streaming architectures.
 

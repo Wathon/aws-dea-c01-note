@@ -11,6 +11,7 @@ date: 2026-07-28
 # 📄 Data Formats & Compression Codecs
 
 - **Category**: Fundamentals / Storage Optimization
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/my/03-concepts/data-formats-and-compression.md)
 - **Slide Reference**: Pages 38–48 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[index]] | [[service-catalog]]
 
