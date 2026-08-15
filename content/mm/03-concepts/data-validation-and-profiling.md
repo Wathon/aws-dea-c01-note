@@ -15,7 +15,7 @@ date: 2026-08-15
 # 🔍 Data Validation and Profiling (ဒေတာအရည်အသွေး စစ်ဆေးခြင်းနှင့် ပုံစံလေ့လာဆန်းစစ်ခြင်း)
 
 - **Category**: Data Quality & Governance (ဒေတာ အရည်အသွေး စီမံခန့်ခွဲမှု)
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/03-concepts/data-validation-and-profiling.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/03-concepts/data-validation-and-profiling.md) | **မြန်မာဘာသာ (Burmese)**
 - **Slide Reference**: Data Quality & Governance in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[glue]]` | `[[sagemaker-and-ai]]` | `[[lambda]]` | `[[s3]]`
 

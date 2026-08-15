@@ -14,7 +14,7 @@ date: 2026-08-15
 # 📄 Data Formats & Compression Codecs (ဒေတာဖော်မတ်များနှင့် ဖိသိပ်မှုစနစ်များ)
 
 - **Category**: Fundamentals / Storage & Query Optimization
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/03-concepts/data-formats-and-compression.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/03-concepts/data-formats-and-compression.md) | **မြန်မာဘာသာ (Burmese)**
 - **Slide Reference**: Pages 38–48 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[glue]]` | `[[redshift]]` | `[[emr]]` | `[[s3]]`
 

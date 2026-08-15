@@ -14,7 +14,7 @@ date: 2026-08-15
 # 🌐 Big Data Fundamentals & Data Lake Architecture (ဘစ်ဒေတာ အခြေခံနှင့် Data Lake တည်ဆောက်ပုံ)
 
 - **Category**: Fundamentals (ဒေတာ အင်ဂျင်နီယာ အခြေခံသဘောတရားများ)
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/03-concepts/big-data-fundamentals.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/03-concepts/big-data-fundamentals.md) | **မြန်မာဘာသာ (Burmese)**
 - **Slide Reference**: Pages 12–37 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-2-data-store-management]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
 
