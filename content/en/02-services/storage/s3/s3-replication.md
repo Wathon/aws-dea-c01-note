@@ -14,6 +14,7 @@ date: 2026-08-08
 # 🔁 Amazon S3 Replication (CRR & SRR)
 
 - **Category**: Storage Resilience & Data Availability
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/storage/s3/s3-replication.md)
 - **Primary Use Case**: Disaster Recovery (DR), Cross-Region Data Distribution, Compliance Data Residency, Log Aggregation
 - **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-versioning]] | [[s3-security]] | [[s3-encryption]]

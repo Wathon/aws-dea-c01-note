@@ -19,6 +19,7 @@ date: 2026-08-13
 # 🚚 AWS DataSync & AWS Snow Family (Data Migration & Edge Transfer)
 
 - **Category**: Migration & Transfer (Online High-Speed Network Transfer & Physical Offline Appliances)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/migration/datasync-and-snow.md)
 - **Primary Use Case**: Large-scale online file & object synchronization into [[s3]], [[efs-and-fsx]], and petabyte/exabyte-scale offline physical data migrations.
 - **Slide Reference**: Pages 276–285 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[s3]] | [[efs-and-fsx]] | [[dms-and-sct]]

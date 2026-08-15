@@ -15,6 +15,7 @@ date: 2026-08-13
 # 🔄 AWS Database Migration Service (DMS) & AWS Schema Conversion Tool (SCT)
 
 - **Category**: Migration & Transfer (Database & Analytics Migration, Continuous CDC Ingestion)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/migration/dms-and-sct.md)
 - **Primary Use Case**: Heterogeneous and homogeneous database migrations, continuous Change Data Capture (CDC) streaming into [[s3]] Data Lakes, [[redshift]], [[kinesis]], [[msk-kafka]], and [[dynamodb]] with minimal downtime.
 - **Slide Reference**: Pages 269–275 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[rds-and-aurora]] | [[redshift]] | [[s3]] | [[datasync-and-snow]]

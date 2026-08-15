@@ -15,6 +15,7 @@ date: 2026-08-10
 # ⚖️ Amazon EFS vs. Amazon EBS vs. EC2 Instance Store
 
 - **Category**: Storage Architecture & Service Selection
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/storage/ebs-vs-efs-vs-instance-store.md)
 - **Primary Use Case**: Definitive decision guide and architectural trade-off comparison between **Amazon EFS** (Shared Multi-AZ File), **Amazon EBS** (Persistent Network Block), and **EC2 Instance Store** (Ultra-High IOPS Ephemeral Block).
 - **Slide Reference**: Pages 139–154 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[service-comparisons]] | [[ebs-and-instance-store]] | [[efs-and-fsx]] | [[s3]]
