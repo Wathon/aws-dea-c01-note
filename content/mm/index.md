@@ -68,6 +68,9 @@ date: 2026-08-15
 - `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|AWS Glue Data Catalog]]` — S3, Athena, EMR အတွက် ဗဟို Metadata သိုလှောင်မှု
 - `[[mm/02-services/analytics-streaming/glue/glue-crawlers|AWS Glue Crawlers]]` — ဒေတာ Format, Schema နှင့် Partition များကို အလိုအလျောက် ရှာဖွေခြင်း
 - `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|AWS Glue ETL Jobs]]` — Serverless PySpark, DynamicFrames နှင့် Incremental Processing (Bookmarks)
+- `[[mm/02-services/analytics-streaming/glue/glue-flex|AWS Glue Flex]]` — ကုန်ကျစရိတ် သက်သာသော Execution Class
+- `[[mm/02-services/analytics-streaming/glue/glue-studio|AWS Glue Studio]]` — Code ရေးစရာမလိုဘဲ UI မှတစ်ဆင့် Visual ETL တည်ဆောက်ခြင်း
+- `[[mm/02-services/analytics-streaming/glue/glue-workflows|AWS Glue Workflows]]` — ETL အဆင့်များကို ချိတ်ဆက်ခြင်း (Orchestration)
 - `[[mm/02-services/analytics-streaming/glue/glue-data-quality|AWS Glue Data Quality]]` — DQDL rules များဖြင့် ဒေတာမှန်ကန်မှုကို အလိုအလျောက် စစ်ဆေးခြင်း
 - `[[mm/02-services/analytics-streaming/glue/glue-databrew|AWS Glue DataBrew]]` — Code ရေးစရာမလိုဘဲ UI မှတစ်ဆင့် Data Preparation ပြုလုပ်ခြင်း
 

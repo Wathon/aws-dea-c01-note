@@ -83,6 +83,9 @@ date: 2026-08-15
 - [[glue-data-catalog]] — Glue Data Catalog & Metastore
 - [[glue-crawlers]] — Glue Crawlers & Schema Inference
 - [[glue-etl-jobs]] — Glue ETL Jobs, DynamicFrames & Bookmarks
+- [[glue-flex]] — AWS Glue Flex Execution Class (Cost Optimization)
+- [[glue-studio]] — AWS Glue Studio Visual ETL
+- [[glue-workflows]] — AWS Glue Workflows Orchestration
 - [[glue-data-quality]] — AWS Glue Data Quality (DQDL)
 - [[glue-databrew]] — AWS Glue DataBrew No-code ETL
 - [[athena]] — Serverless SQL queries on S3, Partition Projection, CTAS, Federated queries
