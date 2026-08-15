@@ -6,16 +6,17 @@ tags:
   - dea-c01
   - sql
   - git
+  - window-functions
   - burmese
 date: 2026-08-15
 ---
 
 # 📊 SQL Review & Version Control (Git) (SQL နှင့် Version Control အခြေခံ)
 
-- **Category**: Fundamentals (အခြေခံ သဘောတရားများ)
-- **ဘာသာစကား လမ်းညွှန်**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/03-concepts/sql-and-version-control-review.md) | **မြန်မာဘာသာ (Burmese)**
+- **Category**: Fundamentals (ခွဲခြမ်းစိတ်ဖြာ SQL နှင့် Pipeline Version Control)
+- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/03-concepts/sql-and-version-control-review.md) | **မြန်မာဘာသာ (Burmese)**
 - **Slide Reference**: Pages 51–75 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[redshift]]`
+- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[redshift]]` | `[[cdk-cloudformation]]`
 
 ---
 
@@ -34,11 +35,15 @@ SELECT
 FROM employees;
 ```
 
-### အသုံးများသော Window Functions များနှင့် ကွာခြားချက်များ
-1. **`ROW_NUMBER()`**: Partition တစ်ခုအတွင်းရှိ Row တစ်ခုချင်းစီကို ၁ မှ စတင်၍ ထူးခြားသော အစဉ်လိုက်နံပါတ် သတ်မှတ်ပေးသည်။
-2. **`RANK()`**: တန်ဖိုးတူညီပါက အဆင့်တူပေးသော်လည်း နောက်နံပါတ်ကို ကျော်ခွသွားသည် (ဥပမာ `1, 2, 2, 4`)။
-3. **`DENSE_RANK()`**: တန်ဖိုးတူညီသော်လည်း အဆင့်နံပါတ်ကို ကျော်မသွားဘဲ ဆက်တိုက်သတ်မှတ်သည် (ဥပမာ `1, 2, 2, 3`)။
-4. **`LAG(col, offset)` / `LEAD(col, offset)`**: လက်ရှိ Row ၏ ရှေ့ သို့မဟုတ် နောက်တွင် ရှိသော Row တန်ဖိုးများကို ယူဆောင်နှိုင်းယှဉ်ခြင်း (ဥပမာ ပြီးခဲ့သည့်လနှင့် ယခုလ အရောင်းပမာဏ နှိုင်းယှဉ်ခြင်း)။
+### အဓိက Window Functions များ နှိုင်းယှဉ်ချက် ဇယား:
+
+| Function | တန်ဖိုးတူညီပါက အလုပ်လုပ်ပုံ (Behavior on Ties) | နမူနာ ထွက်ရှိချက် (Example Sequence) | Data Engineering အဓိက အသုံးပြုမှု |
+| :--- | :--- | :--- | :--- |
+| **`ROW_NUMBER()`** | Row တစ်ခုချင်းစီကို ၁ မှစ၍ ထူးခြားသော အစဉ်လိုက်နံပါတ် သတ်မှတ်သည်။ | `1, 2, 3, 4, 5` | **Deduplication** (ဥပမာ `ROW_NUMBER() = 1` ဖြင့် နောက်ဆုံး Record ရယူခြင်း) |
+| **`RANK()`** | တန်ဖိုးတူပါက အဆင့်တူပေးပြီး နောက်နံပါတ်ကို ကျော်ခွသွားသည်။ | `1, 2, 2, 4, 5` | Top-N Ranking (နေရာလွတ် ချန်ထားသည့် စနစ်) |
+| **`DENSE_RANK()`** | တန်ဖိုးတူပါက အဆင့်တူပေးသော်လည်း နောက်နံပါတ်ကို မကျော်ဘဲ ဆက်တိုက်ပေးသည်။ | `1, 2, 2, 3, 4` | Continuous Tier Ranking (ဥပမာ လစာအဆင့် သတ်မှတ်ခြင်း) |
+| **`LAG(col, offset)`** | လက်ရှိ Row ၏ အထက်/ရှေ့ရှိ Row တန်ဖိုးကို ယူဆောင်သည်။ | `Previous row value` | Period-over-Period တိုးတက်မှု တွက်ချက်ခြင်း (MoM, YoY) |
+| **`LEAD(col, offset)`**| လက်ရှိ Row ၏ အောက်/နောက်ရှိ Row တန်ဖိုးကို ယူဆောင်သည်။ | `Next row value` | Churn Analysis၊ Session ကြာချိန် တွက်ချက်ခြင်း |
 
 ---
 
@@ -58,31 +63,54 @@ graph LR
     class Inner,Left,Right,Full,Cross j;
 ```
 
-| Join အမျိုးအစား | ရှင်းလင်းချက် (Description) | Data Engineering သတိပြုရန် |
+| Join အမျိုးအစား | ရှင်းလင်းချက် (Description) | Distributed Big Data Performance သတိပြုရန် |
 | :--- | :--- | :--- |
-| **INNER JOIN** | Table နှစ်ခုစလုံးတွင် Key ကိုက်ညီသော Record များကိုသာ ထုတ်ပေးသည်။ | Data loss မဖြစ်စေရန် Data types ကိုက်ညီရမည်။ |
-| **LEFT OUTER JOIN** | ဘယ်ဘက် Table ရှိ Record အားလုံးနှင့် ညာဘက်မှ ကိုက်ညီသည်များကို ထုတ်ပေးသည် (မကိုက်ညီပါက NULL ဖြစ်သည်)။ | Dimension Table များနှင့် ချိတ်ဆက်ရာတွင် အသုံးများသည်။ |
-| **FULL OUTER JOIN** | မည်သည့်ဘက်တွင်မဆို ကိုက်ညီမှုရှိသော Record အားလုံးကို ထုတ်ပေးသည်။ | Data reconciliation နှင့် mismatch စစ်ဆေးရာတွင် သုံးသည်။ |
-| **CROSS JOIN** | Table A ရှိ Row တိုင်းကို Table B ရှိ Row တိုင်းနှင့် ပေါင်းစပ်သည် ($N \times M$)။ | ကြီးမားသော Dataset များတွင် ရှောင်ရှားရမည် (Out of Memory ဖြစ်စေနိုင်သည်)။ |
+| **INNER JOIN** | Table နှစ်ခုစလုံးတွင် Key ကိုက်ညီသော Record များကိုသာ ထုတ်ပေးသည်။ | အမြန်ဆုံး Join အမျိုးအစားဖြစ်ပြီး Spark တွင် Broadcast Hash Join နှင့် တွဲသုံးနိုင်သည်။ |
+| **LEFT OUTER JOIN** | ဘယ်ဘက် Table ရှိ Record အားလုံးနှင့် ညာဘက်မှ ကိုက်ညီသည်များကို ထုတ်ပေးသည် (မကိုက်ညီပါက NULL ဖြစ်သည်)။ | Star Schema တွင် Fact Table မှ Dimension Table သို့ Join ရာတွင် အသုံးများသည်။ |
+| **FULL OUTER JOIN** | မည်သည့်ဘက်တွင်မဆို ကိုက်ညီမှုရှိသော Record အားလုံးကို ထုတ်ပေးသည်။ | Data reconciliation နှင့် mismatch စစ်ဆေးရာတွင် သုံးပြီး Data Shuffle များပြားသည်။ |
+| **CROSS JOIN** | Table A ရှိ Row တိုင်းကို Table B ရှိ Row တိုင်းနှင့် ပေါင်းစပ်သည် ($N \times M$)။ | **Big Data တွင် အသုံးမပြုသင့်သော Anti-Pattern** (Spark/Redshift တွင် OOM ဖြစ်စေသည်)။ |
 
 ---
 
-## ၃။ Data Engineering တွင် Git Version Control အသုံးပြုမှု
+## ၃။ AWS Data Engineering တွင် Git Version Control အသုံးပြုမှု
 
-AWS Data Engineering ပရောဂျက်များတွင် အောက်ပါ အရာများကို Git ဖြင့် Version Control ပြုလုပ်ထိန်းသိမ်းရပါသည်-
-- **Infrastructure as Code (IaC)**: AWS CloudFormation၊ AWS SAM Templates၊ AWS CDK Stacks။
-- **Data Pipeline Code**: AWS Glue PySpark Scripts၊ AWS Lambda Handlers၊ Amazon MWAA (Airflow) DAGs။
-- **Database Migrations & Schemas**: DDL Scripts၊ Flyway/Liquibase migration files။
+ခေတ်မီ Data Engineering တွင် Continuous Integration & Continuous Deployment (CI/CD) နှင့် Disaster Recovery အတွက် Git ကို အသုံးပြုပါသည်-
 
-### မကြာခဏ အသုံးပြုသော Git Commands များ
-- `git commit` / `git push`: ပြင်ဆင်ချက်များကို Local မှ Remote Repository သို့ တင်ပို့ခြင်း။
-- `git branch` / `git merge`: Feature အသစ်များကို ခွဲထုတ်ရေးသားပြီး Main Pipeline သို့ ပေါင်းစည်းခြင်း။
-- `git rebase`: Commit History ကို သပ်ရပ်ရှင်းလင်းစေရန် ပေါင်းစည်းခြင်း။
+```mermaid
+graph LR
+    Dev["Data Engineer"] -->|"git commit & push"| Repo["Git Repository (CodeCommit / GitHub)"]
+    Repo -->|"Trigger Webhook"| Pipeline["AWS CodePipeline / GitHub Actions"]
+    Pipeline --> Test["Automated PySpark & SQL Unit Tests"]
+    Test --> Deploy["Deploy to AWS (Glue, Lambda, MWAA, Redshift)"]
+
+    classDef dev fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#fff;
+    classDef git fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
+    classDef cicd fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#fff;
+
+    class Dev dev;
+    class Repo git;
+    class Pipeline,Test,Deploy cicd;
+```
+
+### Git ဖြင့် ထိန်းသိမ်းရသော Data Assets များ:
+- **Infrastructure as Code (IaC)**: AWS CloudFormation Templates၊ AWS SAM Templates၊ AWS CDK Stacks။
+- **Pipeline Logic**: AWS Glue PySpark Scripts၊ AWS Lambda Handlers၊ Amazon MWAA (Airflow) DAGs။
+- **Database Migrations & Schemas**: SQL DDL Schemas၊ Flyway / Liquibase Database Migration Scripts။
+
+---
+
+## ၄။ DEA-C01 စာမေးပွဲ အဓိက အချက်အလက်များ (Exam Tips & Traps)
+
+> [!IMPORTANT]
+> **Key Exam Trigger Keywords**:
+> - **"Deduplicate records within a partition while retaining the latest record"** $\rightarrow$ **`ROW_NUMBER() OVER (PARTITION BY id ORDER BY timestamp DESC)`** ကို သုံးပြီး `row_num = 1` ဖြင့် Filter လုပ်ပါ။
+> - **"Track month-over-month growth metrics in SQL"** $\rightarrow$ **`LAG()`** Window Function ကို ရွေးပါ။
+> - **"Version control and automate serverless data pipeline deployments"** $\rightarrow$ **AWS CodePipeline + AWS SAM / CloudFormation**။
 
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
 
 - `[[athena]]` — Amazon Athena တွင် ANSI SQL Window Functions များ အသုံးပြုခြင်း
-- `[[redshift]]` — Amazon Redshift SQL Optimization နှင့် Join Performance
-- `[[cdk-cloudformation]]` — CloudFormation & AWS CDK ဖြင့် Infrastructure Versioning ပြုလုပ်ခြင်း
+- `[[redshift]]` — Amazon Redshift SQL Optimization၊ Sort Keys နှင့် Distribution Keys
+- `[[cdk-cloudformation]]` — AWS CloudFormation နှင့် CDK ဖြင့် Infrastructure Versioning ပြုလုပ်ခြင်း
