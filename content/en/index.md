@@ -79,7 +79,12 @@ date: 2026-08-15
 
 #### 📊 Analytics & Data Pipelines
 
-- [[glue]] — Glue Data Catalog, Crawlers, ETL, PySpark, DataBrew, Data Quality, Workflows
+- [[glue/glue|AWS Glue Overview]] — Serverless Data Integration & ETL
+- [[glue-data-catalog]] — Glue Data Catalog & Metastore
+- [[glue-crawlers]] — Glue Crawlers & Schema Inference
+- [[glue-etl-jobs]] — Glue ETL Jobs, DynamicFrames & Bookmarks
+- [[glue-data-quality]] — AWS Glue Data Quality (DQDL)
+- [[glue-databrew]] — AWS Glue DataBrew No-code ETL
 - [[athena]] — Serverless SQL queries on S3, Partition Projection, CTAS, Federated queries
 - [[emr]] — Elastic MapReduce (Spark, Hadoop, Presto), EMR Serverless, EMR on EKS
 - [[kinesis]] — Kinesis Data Streams, Firehose, Data Analytics (Flink), Video Streams

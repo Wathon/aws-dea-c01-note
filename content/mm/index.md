@@ -63,6 +63,14 @@ date: 2026-08-15
 - `[[mm/02-services/compute-containers/ec2-and-graviton|EC2 & AWS Graviton]]` — Spot instance strategies, EMR node mapping, & Arm price-performance
 - `[[mm/02-services/compute-containers/ecr-ecs-eks|Amazon ECR, ECS & EKS]]` — Container registries, ECS Fargate, & Amazon EMR on EKS Spark
 
+### 📊 Analytics & Data Pipelines (ဒေတာခွဲခြမ်းစိတ်ဖြာခြင်းနှင့် ပိုက်လိုင်းများ)
+- `[[mm/02-services/analytics-streaming/glue/glue|AWS Glue Overview]]` — Serverless Data Integration & ETL အကျဉ်းချုပ်
+- `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|AWS Glue Data Catalog]]` — S3, Athena, EMR အတွက် ဗဟို Metadata သိုလှောင်မှု
+- `[[mm/02-services/analytics-streaming/glue/glue-crawlers|AWS Glue Crawlers]]` — ဒေတာ Format, Schema နှင့် Partition များကို အလိုအလျောက် ရှာဖွေခြင်း
+- `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|AWS Glue ETL Jobs]]` — Serverless PySpark, DynamicFrames နှင့် Incremental Processing (Bookmarks)
+- `[[mm/02-services/analytics-streaming/glue/glue-data-quality|AWS Glue Data Quality]]` — DQDL rules များဖြင့် ဒေတာမှန်ကန်မှုကို အလိုအလျောက် စစ်ဆေးခြင်း
+- `[[mm/02-services/analytics-streaming/glue/glue-databrew|AWS Glue DataBrew]]` — Code ရေးစရာမလိုဘဲ UI မှတစ်ဆင့် Data Preparation ပြုလုပ်ခြင်း
+
 ---
 
 ## 🗺️ အင်္ဂလိပ်ဘာသာ အပြည့်အစုံ မှတ်စုများ (Full English Notes)
