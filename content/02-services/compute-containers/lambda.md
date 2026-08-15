@@ -41,20 +41,20 @@ For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you must m
 ```mermaid
 graph TB
     subgraph EventSources["Event Sources (Invocation Models)"]
-        subgraph AsyncSources["1. Asynchronous Triggers"]
+        subgraph AsyncSources["(1) Asynchronous Triggers"]
             S3Event["Amazon S3<br/>(s3:ObjectCreated:*)"]
             SNSEvent["Amazon SNS Topics"]
             EBEvent["Amazon EventBridge (Cron/Events)"]
         end
 
-        subgraph StreamSources["2. Event Source Mapping (Polling)"]
+        subgraph StreamSources["(2) Event Source Mapping (Polling)"]
             KinesisStream["Amazon Kinesis Data Streams"]
             DynamoStream["Amazon DynamoDB Streams"]
             MSKStream["Amazon MSK (Kafka)"]
             SQSQueue["Amazon SQS Queues"]
         end
 
-        subgraph SyncSources["3. Synchronous Invocations"]
+        subgraph SyncSources["(3) Synchronous Invocations"]
             APIGW["Amazon API Gateway"]
             FirehoseTrans["Kinesis Data Firehose (Transform)"]
         end
@@ -126,11 +126,11 @@ Understanding the three invocation models is vital for data pipeline reliability
 graph TD
     InvocationType{Choose Invocation Model}
 
-    InvocationType -->|"1. Synchronous Invocation"| Sync["Synchronous (Request-Response)<br/>• Caller waits for function response<br/>• Examples: API Gateway, Cognito, Kinesis Firehose Transform<br/>• Error Handling: Client is responsible for retrying"]
+    InvocationType -->|"(1) Synchronous Invocation"| Sync["Synchronous (Request-Response)<br/>• Caller waits for function response<br/>• Examples: API Gateway, Cognito, Kinesis Firehose Transform<br/>• Error Handling: Client is responsible for retrying"]
 
-    InvocationType -->|"2. Asynchronous Invocation"| Async["Asynchronous (Event Queue)<br/>• Lambda places event in internal queue and returns 202 Accepted<br/>• Examples: S3 Events, SNS, EventBridge, CloudWatch Logs<br/>• Error Handling: Built-in 2 retries, then routes to DLQ / Lambda Destination"]
+    InvocationType -->|"(2) Asynchronous Invocation"| Async["Asynchronous (Event Queue)<br/>• Lambda places event in internal queue and returns 202 Accepted<br/>• Examples: S3 Events, SNS, EventBridge, CloudWatch Logs<br/>• Error Handling: Built-in 2 retries, then routes to DLQ / Lambda Destination"]
 
-    InvocationType -->|"3. Event Source Mapping"| ESM["Event Source Mapping (Poller)<br/>• Lambda polls data source and invokes handler with batch<br/>• Examples: Kinesis Data Streams, DynamoDB Streams, SQS, MSK<br/>• Error Handling: Configurable retries, BisectBatch, DestinationOnFailure"]
+    InvocationType -->|"(3) Event Source Mapping"| ESM["Event Source Mapping (Poller)<br/>• Lambda polls data source and invokes handler with batch<br/>• Examples: Kinesis Data Streams, DynamoDB Streams, SQS, MSK<br/>• Error Handling: Configurable retries, BisectBatch, DestinationOnFailure"]
 
     classDef model fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     class Sync,Async,ESM model;

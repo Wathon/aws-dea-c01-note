@@ -100,9 +100,9 @@ AWS Batch operates through four interconnected abstractions:
 
 ```mermaid
 graph LR
-    JobDef["1. Job Definition<br/>(Blueprint / Docker Image)"] --> Job["2. Job Submission<br/>(Runtime Instance)"]
-    Job --> JobQueue["3. Job Queue<br/>(Priority & Scheduling)"]
-    JobQueue --> CompEnv["4. Compute Environment<br/>(EC2 / Spot / Fargate)"]
+    JobDef["(1) Job Definition<br/>(Blueprint / Docker Image)"] --> Job["(2) Job Submission<br/>(Runtime Instance)"]
+    Job --> JobQueue["(3) Job Queue<br/>(Priority & Scheduling)"]
+    JobQueue --> CompEnv["(4) Compute Environment<br/>(EC2 / Spot / Fargate)"]
 
     classDef block fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     class JobDef,Job,JobQueue,CompEnv block;
@@ -145,13 +145,13 @@ The pool of compute resources used to execute batch jobs:
 graph TD
     JobPatterns{Choose Batch Job Pattern}
 
-    JobPatterns -->|"1. Single Job"| Single["Single Job<br/>Runs an isolated container to process a specific input file"]
+    JobPatterns -->|"(1) Single Job"| Single["Single Job<br/>Runs an isolated container to process a specific input file"]
     
-    JobPatterns -->|"2. Array Jobs (Parallel Fan-out)"| Array["Array Jobs (Up to 10,000 Sub-tasks)<br/>• Spawns thousands of parallel sub-tasks sharing one definition<br/>• Each sub-task receives unique index: AWS_BATCH_JOB_ARRAY_INDEX<br/>• Perfect for parametric models and sharded dataset processing"]
+    JobPatterns -->|"(2) Array Jobs (Parallel Fan-out)"| Array["Array Jobs (Up to 10,000 Sub-tasks)<br/>• Spawns thousands of parallel sub-tasks sharing one definition<br/>• Each sub-task receives unique index: AWS_BATCH_JOB_ARRAY_INDEX<br/>• Perfect for parametric models and sharded dataset processing"]
 
-    JobPatterns -->|"3. Job Dependencies (DAGs)"| Dep["Sequential & Branching Dependencies<br/>• Job C starts only after Job A and Job B succeed<br/>• Native DAG workflow management without external orchestrator"]
+    JobPatterns -->|"(3) Job Dependencies (DAGs)"| Dep["Sequential & Branching Dependencies<br/>• Job C starts only after Job A and Job B succeed<br/>• Native DAG workflow management without external orchestrator"]
 
-    JobPatterns -->|"4. Multi-Node Parallel (MNP)"| MNP["Multi-Node Parallel (HPC & MPI)<br/>• Spawns tightly coupled jobs spanning multiple EC2 instances<br/>• Uses Elastic Fabric Adapter (EFA) for ultra-low latency internode networking"]
+    JobPatterns -->|"(4) Multi-Node Parallel (MNP)"| MNP["Multi-Node Parallel (HPC & MPI)<br/>• Spawns tightly coupled jobs spanning multiple EC2 instances<br/>• Uses Elastic Fabric Adapter (EFA) for ultra-low latency internode networking"]
 
     classDef pat fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     class Single,Array,Dep,MNP pat;
@@ -199,10 +199,10 @@ graph TD
 
 ```mermaid
 graph LR
-    Strategy1["1. Set Min vCPUs = 0<br/>(Zero idle compute cost when queue is empty)"]
-    Strategy2["2. Leverage EC2 Spot Instances<br/>(Up to 90% discount over On-Demand)"]
-    Strategy3["3. SPOT_CAPACITY_OPTIMIZED<br/>(Pulls from deepest Spot pools to minimize interruption)"]
-    Strategy4["4. State Checkpointing to S3<br/>(Write partial progress to S3 so retries resume quickly)"]
+    Strategy1["(1) Set Min vCPUs = 0<br/>(Zero idle compute cost when queue is empty)"]
+    Strategy2["(2) Leverage EC2 Spot Instances<br/>(Up to 90% discount over On-Demand)"]
+    Strategy3["(3) SPOT_CAPACITY_OPTIMIZED<br/>(Pulls from deepest Spot pools to minimize interruption)"]
+    Strategy4["(4) State Checkpointing to S3<br/>(Write partial progress to S3 so retries resume quickly)"]
 
     classDef opt fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#fff;
     class Strategy1,Strategy2,Strategy3,Strategy4 opt;

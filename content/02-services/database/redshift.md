@@ -135,10 +135,10 @@ Choosing the correct Distribution Style (`DISTSTYLE`) minimizes network I/O and 
 ```mermaid
 graph TD
     subgraph DistStyles["Redshift Distribution Styles"]
-        D_Auto["1. DISTSTYLE AUTO (Default)<br/>✨ Starts as ALL for small tables<br/>📈 Auto-transitions to EVEN as data grows"]
-        D_Even["2. DISTSTYLE EVEN<br/>🔄 Round-robin row distribution<br/>⚖️ Guarantees equal data volume per slice<br/>🎯 Best for tables not involved in joins"]
-        D_Key["3. DISTSTYLE KEY (DISTKEY)<br/>🔑 Hash on specific column<br/>📦 Colocates matching keys on the SAME slice<br/>🎯 Best for Fact & large Dimension joins"]
-        D_All["4. DISTSTYLE ALL<br/>📋 Full table copied to EVERY compute node<br/>🚫 Zero network broadcast on joins<br/>🎯 Best for small Dimension tables (< 2-3M rows)"]
+        D_Auto["(1) DISTSTYLE AUTO (Default)<br/>✨ Starts as ALL for small tables<br/>📈 Auto-transitions to EVEN as data grows"]
+        D_Even["(2) DISTSTYLE EVEN<br/>🔄 Round-robin row distribution<br/>⚖️ Guarantees equal data volume per slice<br/>🎯 Best for tables not involved in joins"]
+        D_Key["(3) DISTSTYLE KEY (DISTKEY)<br/>🔑 Hash on specific column<br/>📦 Colocates matching keys on the SAME slice<br/>🎯 Best for Fact & large Dimension joins"]
+        D_All["(4) DISTSTYLE ALL<br/>📋 Full table copied to EVERY compute node<br/>🚫 Zero network broadcast on joins<br/>🎯 Best for small Dimension tables (< 2-3M rows)"]
     end
 
     classDef d fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;

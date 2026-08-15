@@ -65,7 +65,7 @@ graph TB
         TargetDynamo[("Amazon DynamoDB<br/>(NoSQL Document Store)")]
     end
 
-    SourceOracle -->|"1. Schema / Stored Procedures"| SCT
+    SourceOracle -->|"(1) Schema / Stored Procedures"| SCT
     SCT -->|"Apply Target DDL"| TargetAurora
     SCT -->|"Apply DDL"| TargetRedshift
 
@@ -157,9 +157,9 @@ When creating a replication task, you configure one of three primary migration t
 graph TD
     Start["Replication Task Initialized"] --> Choice{Select Migration Type}
     
-    Choice -->|"1. Full Load Only"| FullOnly["Full Load Task<br/>- Extracts entire snapshot of selected tables<br/>- Writes to target<br/>- Task finishes and stops"]
-    Choice -->|"2. Full Load + CDC"| FullCDC["Full Load + CDC (Recommended for Live Apps)<br/>- Step 1: Takes baseline snapshot<br/>- Step 2: Buffers transactional changes occurred during load<br/>- Step 3: Applies changes and keeps continuously in sync"]
-    Choice -->|"3. CDC Only"| CDCOnly["CDC Only Task<br/>- Used when initial data was loaded via backup/Snowball<br/>- Starts reading transaction logs from specific LSN / Checkpoint / SCN"]
+    Choice -->|"(1) Full Load Only"| FullOnly["Full Load Task<br/>• Extracts entire snapshot of selected tables<br/>• Writes to target<br/>• Task finishes and stops"]
+    Choice -->|"(2) Full Load + CDC"| FullCDC["Full Load + CDC (Recommended for Live Apps)<br/>• Step 1: Takes baseline snapshot<br/>• Step 2: Buffers transactional changes occurred during load<br/>• Step 3: Applies changes and keeps continuously in sync"]
+    Choice -->|"(3) CDC Only"| CDCOnly["CDC Only Task<br/>• Used when initial data was loaded via backup/Snowball<br/>• Starts reading transaction logs from specific LSN / Checkpoint / SCN"]
 
     classDef proc fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     class Start,Choice,FullOnly,FullCDC,CDCOnly proc;
@@ -181,9 +181,9 @@ graph TD
     subgraph Decision["Database Migration Path Decision"]
         EngineComp{Are Source and Target Database Engines the Same?}
         
-        EngineComp -->|"YES (Homogeneous)<br/>e.g. Postgres to Aurora Postgres<br/>Oracle to RDS Oracle"| Homo["Homogeneous Migration<br/>- AWS DMS directly migrates data and schema<br/>- OR use native tools (pg_dump/restore, mysqldump, Oracle Data Pump)"]
+        EngineComp -->|"YES (Homogeneous)<br/>e.g. Postgres to Aurora Postgres<br/>Oracle to RDS Oracle"| Homo["Homogeneous Migration<br/>• AWS DMS directly migrates data and schema<br/>• OR use native tools (pg_dump/restore, mysqldump, Oracle Data Pump)"]
         
-        EngineComp -->|"NO (Heterogeneous)<br/>e.g. Oracle to Aurora Postgres<br/>SQL Server to Redshift<br/>Teradata to Redshift"| Hetero["Heterogeneous Migration<br/>- STEP 1: Run AWS SCT for schema/code translation<br/>- STEP 2: Apply converted DDL to target<br/>- STEP 3: Run AWS DMS for full load + continuous CDC"]
+        EngineComp -->|"NO (Heterogeneous)<br/>e.g. Oracle to Aurora Postgres<br/>SQL Server to Redshift<br/>Teradata to Redshift"| Hetero["Heterogeneous Migration<br/>• STEP 1: Run AWS SCT for schema/code translation<br/>• STEP 2: Apply converted DDL to target<br/>• STEP 3: Run AWS DMS for full load + continuous CDC"]
     end
 
     classDef homo fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#fff;
@@ -316,11 +316,11 @@ Handling LOB columns (BLOB, CLOB, NCLOB, TEXT, JSON, XML) is one of the most cri
 graph TD
     LOBDecision{Choose DMS LOB Handling Mode}
 
-    LOBDecision -->|"1. Limited LOB Mode (Default & Fastest)"| LimLOB["Limited LOB Mode<br/>⚡ Specifies Max LOB Size (e.g. 64 KB)<br/>⚡ Fast single-step query<br/>⚠️ Truncates data exceeding Max LOB size!"]
+    LOBDecision -->|"(1) Limited LOB Mode (Default & Fastest)"| LimLOB["Limited LOB Mode<br/>⚡ Specifies Max LOB Size (e.g. 64 KB)<br/>⚡ Fast single-step query<br/>⚠️ Truncates data exceeding Max LOB size!"]
     
-    LOBDecision -->|"2. Full LOB Mode (Safe & Slow)"| FullLOB["Full LOB Mode<br/>📦 Migrates LOBs regardless of size<br/>🐢 Two-step lookup: migrates row then queries LOB chunk by chunk<br/>⚠️ Severe performance penalty for high-throughput tables"]
+    LOBDecision -->|"(2) Full LOB Mode (Safe & Slow)"| FullLOB["Full LOB Mode<br/>📦 Migrates LOBs regardless of size<br/>🐢 Two-step lookup: migrates row then queries LOB chunk by chunk<br/>⚠️ Severe performance penalty for high-throughput tables"]
 
-    LOBDecision -->|"3. Inline LOB Mode (Optimal Balance)"| InlineLOB["Inline LOB Mode<br/>🚀 Small LOBs (< Inline Limit) migrated inline<br/>📦 Large LOBs fetched via lookup<br/>✅ High performance without data truncation"]
+    LOBDecision -->|"(3) Inline LOB Mode (Optimal Balance)"| InlineLOB["Inline LOB Mode<br/>🚀 Small LOBs (< Inline Limit) migrated inline<br/>📦 Large LOBs fetched via lookup<br/>✅ High performance without data truncation"]
 
     classDef mode fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     class LimLOB,FullLOB,InlineLOB mode;

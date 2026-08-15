@@ -31,9 +31,9 @@ date: 2026-08-07
 ```mermaid
 graph TD
     subgraph States["Bucket Versioning States"]
-        Unversioned["1. Unversioned (Default for new buckets)"]
-        Enabled["2. Versioning-Enabled (Stores every object revision)"]
-        Suspended["3. Versioning-Suspended (New objects get versionId: null)"]
+        Unversioned["(1) Unversioned (Default for new buckets)"]
+        Enabled["(2) Versioning-Enabled (Stores every object revision)"]
+        Suspended["(3) Versioning-Suspended (New objects get versionId: null)"]
     end
 
     Unversioned -->|Enable Versioning| Enabled

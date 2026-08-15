@@ -61,13 +61,13 @@ graph TD
 
 ```mermaid
 graph TB
-    subgraph ElastiCacheArch["1. Amazon ElastiCache (Caching Tier)"]
+    subgraph ElastiCacheArch["(1) Amazon ElastiCache (Caching Tier)"]
         EC_Node["ElastiCache Redis / Memcached<br/>⚡ Microsecond Read Latency<br/>⚠️ Ephemeral In-Memory Storage"]
         RDS_Backing[("Underlying Database (RDS / Aurora / DynamoDB)")]
         EC_Node -.->|"Cache-Aside / Write-Through"| RDS_Backing
     end
 
-    subgraph MemoryDBArch["2. Amazon MemoryDB (Primary Database)"]
+    subgraph MemoryDBArch["(2) Amazon MemoryDB (Primary Database)"]
         MDB_Compute["MemoryDB Compute Fleet<br/>⚡ Microsecond Reads / Low-ms Writes"]
         MDB_TxLog[("Distributed Multi-AZ Transaction Log<br/>💾 Multi-AZ Durability (Zero Data Loss)<br/>🔒 ACID Transactional Commit")]
         MDB_Compute <-->|"Synchronous Write Append"| MDB_TxLog
@@ -163,8 +163,8 @@ graph LR
 ```mermaid
 graph TD
     subgraph GraphModels["Neptune Supported Graph Models & Query Languages"]
-        PG["1. Property Graph Model<br/>(Vertices, Edges, Properties)"]
-        RDF["2. W3C RDF Model<br/>(Resource Description Framework - Triples)"]
+        PG["(1) Property Graph Model<br/>(Vertices, Edges, Properties)"]
+        RDF["(2) W3C RDF Model<br/>(Resource Description Framework - Triples)"]
         
         PG --> Gremlin["Apache TinkerPop Gremlin<br/>(Imperative Graph Traversal)"]
         PG --> Cypher["openCypher<br/>(Declarative Graph SQL-like)"]
@@ -220,9 +220,9 @@ graph LR
     end
 
     subgraph TimestreamStorage["Amazon Timestream Tiered Storage Subsystem"]
-        MemoryStore[("1. Memory Store<br/>⚡ High-Throughput Write Ingest Buffer<br/>⚡ Retention: 2 hours to 1 year<br/>⚡ Ultra-Fast Real-Time Point Queries")]
+        MemoryStore[("(1) Memory Store<br/>⚡ High-Throughput Write Ingest Buffer<br/>⚡ Retention: 2 hours to 1 year<br/>⚡ Ultra-Fast Real-Time Point Queries")]
         
-        MagneticStore[("2. Magnetic Store<br/>💾 Cost-Effective Cold Storage<br/>💾 Retention: 1 day to 200 years<br/>📊 Optimized for Analytical Scans")]
+        MagneticStore[("(2) Magnetic Store<br/>💾 Cost-Effective Cold Storage<br/>💾 Retention: 1 day to 200 years<br/>📊 Optimized for Analytical Scans")]
         
         MemoryStore -->|"Automated Background Lifecycle Tiering<br/>(ZERO User Action Required)"| MagneticStore
     end

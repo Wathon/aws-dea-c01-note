@@ -202,8 +202,8 @@ DynamoDB offers two capacity management modes: **Provisioned Mode** (with auto-s
 
 ```mermaid
 graph TD
-    CapMode["DynamoDB Capacity Modes"] --> Prov["1. Provisioned Capacity Mode<br/>📊 Pre-allocate explicit RCU and WCU<br/>📈 Auto Scaling based on target utilization %<br/>💰 Cost-effective for predictable workloads<br/>🎟️ Up to 77% discount with Reserved Capacity"]
-    CapMode --> OnDem["2. On-Demand Capacity Mode<br/>⚡ Fully Serverless (Zero Capacity Planning)<br/>📈 Instantly accommodates unexpected spikes<br/>💳 Pay per Read Request Unit (RRU) / Write Request Unit (WRU)<br/>🎯 Ideal for unpredictable, spiky, or low-traffic tables"]
+    CapMode["DynamoDB Capacity Modes"] --> Prov["(1) Provisioned Capacity Mode<br/>📊 Pre-allocate explicit RCU and WCU<br/>📈 Auto Scaling based on target utilization %<br/>💰 Cost-effective for predictable workloads<br/>🎟️ Up to 77% discount with Reserved Capacity"]
+    CapMode --> OnDem["(2) On-Demand Capacity Mode<br/>⚡ Fully Serverless (Zero Capacity Planning)<br/>📈 Instantly accommodates unexpected spikes<br/>💳 Pay per Read Request Unit (RRU) / Write Request Unit (WRU)<br/>🎯 Ideal for unpredictable, spiky, or low-traffic tables"]
 
     classDef prov fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef ondem fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#fff;
@@ -331,9 +331,9 @@ When enabling DynamoDB Streams, you choose the information written to each strea
 
 ```mermaid
 graph LR
-    App["Application Client"] -->|"1. Microsecond Read (Item/Query Cache Hit)"| DAX["DynamoDB Accelerator (DAX)<br/>⚡ In-Memory Cluster"]
-    DAX -.->|"2. Cache Miss (Reads from Table)"| DDB[("Amazon DynamoDB Table")]
-    App -->|"3. Write-Through (Sync Write to Table + Cache)"| DAX
+    App["Application Client"] -->|"(1) Microsecond Read (Item/Query Cache Hit)"| DAX["DynamoDB Accelerator (DAX)<br/>⚡ In-Memory Cluster"]
+    DAX -.->|"(2) Cache Miss (Reads from Table)"| DDB[("Amazon DynamoDB Table")]
+    App -->|"(3) Write-Through (Sync Write to Table + Cache)"| DAX
 
     classDef app fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef dax fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#fff;

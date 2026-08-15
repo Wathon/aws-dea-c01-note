@@ -45,13 +45,13 @@ graph TB
     end
 
     subgraph TransferMethods["Ingestion & Migration Pathways"]
-        subgraph OnlinePath["1. Online Transfer (Active Network WAN)"]
+        subgraph OnlinePath["(1) Online Transfer (Active Network WAN)"]
             DataSyncAgent["AWS DataSync Agent<br/>⚡ Up to 10 Gbps per Agent<br/>🔒 TLS 1.2+ & Verification"]
             TransferFam["AWS Transfer Family<br/>⚡ SFTP / FTPS / FTP"]
             S3TA["S3 Transfer Acceleration<br/>⚡ CloudFront Edge Routing"]
         end
 
-        subgraph OfflinePath["2. Offline Physical Appliances (Snow Family)"]
+        subgraph OfflinePath["(2) Offline Physical Appliances (Snow Family)"]
             Snowcone["AWS Snowcone<br/>📦 8 TB - 14 TB (Portable)"]
             Snowball["AWS Snowball Edge<br/>📦 80 TB - 210 TB (Storage/Compute)"]
             Snowmobile["AWS Snowmobile<br/>🚚 100 PB (45ft Container Truck)"]
@@ -155,9 +155,9 @@ The **AWS Snow Family** provides purpose-built, secure, ruggedized physical devi
 ```mermaid
 graph TD
     subgraph SnowFleet["AWS Snow Family Device Hierarchy"]
-        SnowconeDev["1. AWS Snowcone<br/>⚡ 8 TB HDD / 14 TB SSD<br/>⚡ 4.5 lbs (2.1 kg) Ultra-Portable<br/>⚡ Battery powered / IoT Greengrass / DataSync"]
-        SnowballEdgeDev["2. AWS Snowball Edge<br/>⚡ Storage Optimized: 80 TB - 210 TB NVMe<br/>⚡ Compute Optimized: 104 vCPUs / 42 TB NVMe / GPU<br/>⚡ S3 & NFS interface / EC2 compute on device"]
-        SnowmobileDev["3. AWS Snowmobile<br/>⚡ Up to 100 PB per truck<br/>⚡ 45-foot ruggedized container<br/>⚡ Exabyte-scale data center evacuation"]
+        SnowconeDev["(1) AWS Snowcone<br/>⚡ 8 TB HDD / 14 TB SSD<br/>⚡ 4.5 lbs (2.1 kg) Ultra-Portable<br/>⚡ Battery powered / IoT Greengrass / DataSync"]
+        SnowballEdgeDev["(2) AWS Snowball Edge<br/>⚡ Storage Optimized: 80 TB - 210 TB NVMe<br/>⚡ Compute Optimized: 104 vCPUs / 42 TB NVMe / GPU<br/>⚡ S3 & NFS interface / EC2 compute on device"]
+        SnowmobileDev["(3) AWS Snowmobile<br/>⚡ Up to 100 PB per truck<br/>⚡ 45-foot ruggedized container<br/>⚡ Exabyte-scale data center evacuation"]
     end
 
     classDef snow fill:#0f172a,stroke:#ec4899,stroke-width:2px,color:#fff;
@@ -196,9 +196,9 @@ $$\text{Transfer Time (Days)} = \frac{\text{Data Size (Bytes)} \times 8}{\text{B
 graph TD
     Calc["Calculate Estimated Network Transfer Time"] --> Check{Does network transfer take MORE than 1-2 weeks?}
     
-    Check -->|"YES (> 1-2 Weeks)<br/>or WAN bandwidth saturated/unavailable"| Offline["Choose AWS Snow Family<br/>- < 10 TB: AWS Snowcone<br/>- 10 TB to Multi-PB: AWS Snowball Edge<br/>- > 10 PB to Exabytes: AWS Snowmobile"]
+    Check -->|"YES (> 1-2 Weeks)<br/>or WAN bandwidth saturated/unavailable"| Offline["Choose AWS Snow Family<br/>• < 10 TB: AWS Snowcone<br/>• 10 TB to Multi-PB: AWS Snowball Edge<br/>• > 10 PB to Exabytes: AWS Snowmobile"]
     
-    Check -->|"NO (< 1-2 Weeks)<br/>and active WAN bandwidth available"| Online["Choose Online Transfer<br/>- Continuous file/object sync: AWS DataSync<br/>- S3 object acceleration over internet: S3 Transfer Acceleration<br/>- Client SFTP access: AWS Transfer Family"]
+    Check -->|"NO (< 1-2 Weeks)<br/>and active WAN bandwidth available"| Online["Choose Online Transfer<br/>• Continuous file/object sync: AWS DataSync<br/>• S3 object acceleration over internet: S3 Transfer Acceleration<br/>• Client SFTP access: AWS Transfer Family"]
 
     classDef dec fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef off fill:#0f172a,stroke:#ec4899,stroke-width:2px,color:#fff;

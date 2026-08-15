@@ -197,12 +197,12 @@ Choosing the correct combination of **Performance Mode** and **Throughput Mode**
 
 ```mermaid
 graph TD
-    subgraph PerfMode["1. Performance Modes (Set at Creation - Immutable)"]
+    subgraph PerfMode["(1) Performance Modes (Set at Creation - Immutable)"]
         GP["General Purpose (Default)<br/>⚡ Lowest per-operation latency (< 1ms)<br/>⚡ Best for web serving, dev notebooks, containers"]
         MaxIO["Max I/O<br/>⚡ Scale to tens of thousands of IOPS<br/>⚡ Higher metadata latency (multi-ms)<br/>⚡ Best for massive parallel scale-out big data"]
     end
 
-    subgraph ThroughputMode["2. Throughput Modes (Dynamic - Modifiable Live)"]
+    subgraph ThroughputMode["(2) Throughput Modes (Dynamic - Modifiable Live)"]
         Elastic["Elastic (Recommended Default)<br/>📈 Automatically scales up/down with demand<br/>📈 Up to 3 GB/s read, 1 GB/s write (Multi-AZ)<br/>📈 Pay only for data read/written"]
         Bursting["Bursting Throughput<br/>📊 Throughput scales linearly with storage (50 KB/s per GB)<br/>📊 Accumulates burst credits (up to 100 MB/s+)<br/>⚠️ Small file systems deplete burst credits quickly!"]
         Provisioned["Provisioned Throughput<br/>🎯 Dedicated fixed throughput (e.g., 500 MB/s)<br/>🎯 Independent of stored capacity<br/>🎯 Extra hourly charge for provisioned MB/s"]
@@ -245,23 +245,23 @@ EFS provides defense-in-depth security across network boundaries, IAM permission
 
 ```mermaid
 graph TD
-    subgraph Layer1["1. Network Layer (VPC & Mount Targets)"]
+    subgraph Layer1["(1) Network Layer (VPC & Mount Targets)"]
         SG["Mount Target Security Group<br/>(Inbound: TCP Port 2049 from Client SG)"]
     end
 
-    subgraph Layer2["2. IAM Authorization Layer (EFS File System Policy)"]
+    subgraph Layer2["(2) IAM Authorization Layer (EFS File System Policy)"]
         FSPolicy["File System Policy<br/>(ClientMount / ClientWrite / ClientRootAccess)"]
     end
 
-    subgraph Layer3["3. Application Access Point Layer"]
+    subgraph Layer3["(3) Application Access Point Layer"]
         AccessPoint["EFS Access Point<br/>(POSIX UID/GID Masking & Root Path Jailing)"]
     end
 
-    subgraph Layer4["4. Operating System Layer"]
+    subgraph Layer4["(4) Operating System Layer"]
         POSIX["POSIX File System Permissions<br/>(User / Group / Others rwx)"]
     end
 
-    subgraph Layer5["5. Cryptographic Layer"]
+    subgraph Layer5["(5) Cryptographic Layer"]
         KMS["AWS KMS Encryption at Rest (AES-256)"]
         TLS["TLS 1.2 In-Transit Encryption (stunnel)"]
     end

@@ -39,12 +39,12 @@ graph TB
         VMwareEnv["VMware vCenter Environment<br/>(VMs, Disks, Hypervisor)"]
         PhysicalServers["Physical Servers / Multi-Cloud VMs<br/>(Bare-metal Linux / Windows)"]
         
-        subgraph DiscoveryLayer["1. Discovery & Planning Phase"]
+        subgraph DiscoveryLayer["(1) Discovery & Planning Phase"]
             AgentlessConn["AWS Agentless Discovery Connector<br/>(OVA Virtual Appliance on vCenter)"]
             DiscoveryAgent["AWS Application Discovery Agent<br/>(Installed inside OS)"]
         end
 
-        subgraph ReplicationLayer["2. Migration Execution Phase (MGN)"]
+        subgraph ReplicationLayer["(2) Migration Execution Phase (MGN)"]
             MGNAgent["AWS Replication Agent<br/>(Continuous Block-Level Driver)"]
         end
     end
@@ -97,8 +97,8 @@ Planning an enterprise data and database migration requires collecting infrastru
 ```mermaid
 graph LR
     subgraph DiscoveryMethods["Discovery Data Collection Methods"]
-        Method1["1. Agentless Discovery Connector<br/>(VMware vCenter OVA Appliance)"]
-        Method2["2. Application Discovery Agent<br/>(Agent Installed on Host OS)"]
+        Method1["(1) Agentless Discovery Connector<br/>(VMware vCenter OVA Appliance)"]
+        Method2["(2) Application Discovery Agent<br/>(Agent Installed on Host OS)"]
     end
 
     subgraph CollectedData["Collected Information"]
@@ -107,7 +107,7 @@ graph LR
     end
 
     subgraph CentralDashboard["Target Destination"]
-        Hub["AWS Migration Hub<br/>+ Athena Data Exploration"]
+        Hub["AWS Migration Hub<br/>& Athena Data Exploration"]
     end
 
     Method1 --> Data1 --> Hub

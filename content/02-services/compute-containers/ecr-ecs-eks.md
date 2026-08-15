@@ -36,16 +36,16 @@ In modern AWS data engineering architectures:
 
 ```mermaid
 graph TB
-    subgraph DevLayer["1. Build & Packaging Layer"]
+    subgraph DevLayer["(1) Build & Packaging Layer"]
         Dockerfile["Dockerfile / Application Code"]
         DockerBuild["docker build & tag (Multi-stage)"]
     end
 
-    subgraph RegistryLayer["2. Amazon ECR (Container Registry)"]
+    subgraph RegistryLayer["(2) Amazon ECR (Container Registry)"]
         ECRRepo[("Amazon ECR Repository<br/>🔒 Image Tag Immutability<br/>🔍 Amazon Inspector Vulnerability Scan<br/>♻️ Automated Lifecycle Policies<br/>🌐 Cross-Region Replication")]
     end
 
-    subgraph OrchestrationLayer["3. Container Orchestration Platforms"]
+    subgraph OrchestrationLayer["(3) Container Orchestration Platforms"]
         subgraph ECSCluster["Amazon ECS (AWS Native)"]
             TaskDef["ECS Task Definition<br/>(vCPU, RAM, Secrets, awslogs)"]
             
@@ -65,7 +65,7 @@ graph TB
         end
     end
 
-    subgraph StorageLayer["4. Persistent & Object Storage"]
+    subgraph StorageLayer["(4) Persistent & Object Storage"]
         S3Bucket[("Amazon S3 Data Lake<br/>(Parquet / Iceberg / Delta Lake)")]
         EFSFS[("Amazon EFS File System<br/>(NFSv4.1 Multi-AZ Shared Volume)")]
         EBSCSI[("Amazon EBS Volumes<br/>(RWO High-IOPS Block Storage)")]
@@ -154,12 +154,12 @@ Amazon ECR is a fully managed, OCI-compliant container registry that makes it ea
 
 ```mermaid
 graph LR
-    Dev["Developer / CI/CD Pipeline"] -->|"1. Authenticate (aws ecr get-login-password)"| ECR[("Amazon ECR Repository")]
-    Dev -->|"2. docker push (image:v1.0)"| ECR
-    ECR -->|"3. Automated Vulnerability Scan"| Inspector["Amazon Inspector / Enhanced Scan"]
-    ECR -->|"4. Lifecycle Rule (Expire > 30 days)"| Cleaner["Automated Image Purge"]
-    ECR -->|"5. Cross-Region Replication"| DRRegion[("ECR Replica (us-west-2)")]
-    ECR -->|"6. Pull Image at Runtime"| ECS_EKS["Amazon ECS / EKS / AWS Batch"]
+    Dev["Developer / CI/CD Pipeline"] -->|"(1) Authenticate (aws ecr get-login-password)"| ECR[("Amazon ECR Repository")]
+    Dev -->|"(2) docker push (image:v1.0)"| ECR
+    ECR -->|"(3) Automated Vulnerability Scan"| Inspector["Amazon Inspector / Enhanced Scan"]
+    ECR -->|"(4) Lifecycle Rule (Expire > 30 days)"| Cleaner["Automated Image Purge"]
+    ECR -->|"(5) Cross-Region Replication"| DRRegion[("ECR Replica (us-west-2)")]
+    ECR -->|"(6) Pull Image at Runtime"| ECS_EKS["Amazon ECS / EKS / AWS Batch"]
 
     classDef dev fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#fff;
     classDef ecr fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
@@ -265,11 +265,11 @@ graph LR
 graph TD
     LaunchChoice{Choose ECS Launch Type}
 
-    LaunchChoice -->|"1. AWS Fargate (Serverless)"| Fargate["AWS Fargate<br/>⚡ Zero EC2 server provisioning or management<br/>⚡ AWS manages OS patching, scaling & kernel isolation<br/>💰 Pay strictly for provisioned vCPU and Memory per second<br/>🎯 Recommended default for microservices & batch ETL"]
+    LaunchChoice -->|"(1) AWS Fargate (Serverless)"| Fargate["AWS Fargate<br/>⚡ Zero EC2 server provisioning or management<br/>⚡ AWS manages OS patching, scaling & kernel isolation<br/>💰 Pay strictly for provisioned vCPU and Memory per second<br/>🎯 Recommended default for microservices & batch ETL"]
 
-    LaunchChoice -->|"2. AWS Fargate Spot"| FargateSpot["AWS Fargate Spot<br/>💰 Up to 70% discount over standard Fargate<br/>⚠️ Subject to reclamation when capacity is needed<br/>🎯 Best for fault-tolerant, stateless ETL jobs"]
+    LaunchChoice -->|"(2) AWS Fargate Spot"| FargateSpot["AWS Fargate Spot<br/>💰 Up to 70% discount over standard Fargate<br/>⚠️ Subject to reclamation when capacity is needed<br/>🎯 Best for fault-tolerant, stateless ETL jobs"]
 
-    LaunchChoice -->|"3. EC2 Launch Type (Managed VMs)"| EC2Launch["EC2 Launch Type<br/>🖥️ User provisions & manages EC2 instance cluster<br/>🖥️ Full root access, custom AMIs, specialized hardware (GPU)<br/>💰 Pay for EC2 instances regardless of container utilization<br/>🎯 Best for sustained 24/7 high-density workloads"]
+    LaunchChoice -->|"(3) EC2 Launch Type (Managed VMs)"| EC2Launch["EC2 Launch Type<br/>🖥️ User provisions & manages EC2 instance cluster<br/>🖥️ Full root access, custom AMIs, specialized hardware (GPU)<br/>💰 Pay for EC2 instances regardless of container utilization<br/>🎯 Best for sustained 24/7 high-density workloads"]
 
     classDef dec fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef opt fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#fff;
@@ -307,8 +307,8 @@ graph LR
     end
 
     subgraph IAMRoles["IAM Roles"]
-        ExecRole["1. Task Execution IAM Role<br/>(Infra & Lifecycle Permissions)"]
-        TaskRole["2. Task IAM Role<br/>(Application Data Permissions)"]
+        ExecRole["(1) Task Execution IAM Role<br/>(Infra & Lifecycle Permissions)"]
+        TaskRole["(2) Task IAM Role<br/>(Application Data Permissions)"]
     end
 
     subgraph AWSTargets["AWS Destinations"]
@@ -402,9 +402,9 @@ When running on user-managed EC2 clusters, ECS allows algorithmic control over t
 ```mermaid
 graph LR
     subgraph Strategies["Task Placement Strategies"]
-        Binpack["1. Binpack<br/>Minimizes number of EC2 instances used (Packs tasks based on CPU/RAM)"]
-        Spread["2. Spread<br/>Maximizes high availability by distributing across AZs or instance IDs"]
-        Random["3. Random<br/>Distributes tasks randomly across instances"]
+        Binpack["(1) Binpack<br/>Minimizes number of EC2 instances used (Packs tasks based on CPU/RAM)"]
+        Spread["(2) Spread<br/>Maximizes high availability by distributing across AZs or instance IDs"]
+        Random["(3) Random<br/>Distributes tasks randomly across instances"]
     end
 
     subgraph Constraints["Task Placement Constraints"]

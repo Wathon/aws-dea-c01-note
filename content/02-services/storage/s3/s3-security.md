@@ -32,11 +32,11 @@ Security is a primary focus area in the **AWS Certified Data Engineer – Associ
 ```mermaid
 graph TD
     subgraph Layers["Defense-in-Depth S3 Security Layers"]
-        Auth["1. Access Control & Authorization (IAM Policies, Bucket Policies, Access Points)"]
-        Net["2. Network Isolation (Block Public Access, VPC Gateway/Interface Endpoints)"]
-        Enc["3. Data Encryption (In Transit HTTPS/TLS, At Rest SSE-S3/SSE-KMS/DSSE-KMS)"]
-        Prot["4. Data Protection & Immutability (S3 Object Lock Compliance/Governance Mode, Versioning)"]
-        Audit["5. Monitoring & Auditing (AWS Macie PII Discovery, CloudTrail, Server Access Logs)"]
+        Auth["(1) Access Control & Authorization (IAM Policies, Bucket Policies, Access Points)"]
+        Net["(2) Network Isolation (Block Public Access, VPC Gateway/Interface Endpoints)"]
+        Enc["(3) Data Encryption (In Transit HTTPS/TLS, At Rest SSE-S3/SSE-KMS/DSSE-KMS)"]
+        Prot["(4) Data Protection & Immutability (S3 Object Lock Compliance/Governance Mode, Versioning)"]
+        Audit["(5) Monitoring & Auditing (AWS Macie PII Discovery, CloudTrail, Server Access Logs)"]
     end
 
     Auth --> Net

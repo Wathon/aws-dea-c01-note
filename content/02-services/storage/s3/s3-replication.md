@@ -64,9 +64,9 @@ Before S3 Replication can operate, three strict prerequisites must be satisfied:
 ```mermaid
 graph TD
     subgraph PrereqGroup["Prerequisites Checklist"]
-        P1["1. S3 Versioning ENABLED on BOTH Source & Destination Buckets"]
-        P2["2. IAM Replication Role with GetObjectVersion & ReplicateObject permissions"]
-        P3["3. Cross-Account Policy: Destination Bucket Policy allowing IAM Replication Role"]
+        P1["(1) S3 Versioning ENABLED on BOTH Source & Destination Buckets"]
+        P2["(2) IAM Replication Role with GetObjectVersion & ReplicateObject permissions"]
+        P3["(3) Cross-Account Policy: Destination Bucket Policy allowing IAM Replication Role"]
     end
 ```
 

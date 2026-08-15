@@ -262,7 +262,7 @@ sequenceDiagram
     UnencVol->>UnencSnap: 1. Take Snapshot of unencrypted volume
     UnencSnap->>EncSnap: 2. Copy Snapshot with KMS Encryption enabled
     EncSnap->>EncVol: 3. Create new EBS Volume from encrypted snapshot
-    Note over EncVol: 4. Attach new Encrypted Volume to EC2
+    Note over EncVol: (4) Attach new Encrypted Volume to EC2
 ```
 
 ---

@@ -36,9 +36,9 @@ For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you must m
 ```mermaid
 graph TB
     subgraph PurchasingModels["EC2 Purchasing Models"]
-        OnDemand["1. On-Demand Instances<br/>• Full flexibility, no commitment<br/>• Pay per second / hour<br/>🎯 Short-term, spiky, unpredictable jobs"]
-        SpotInst["2. Spot Instances<br/>• Up to 90% discount over On-Demand<br/>• Reclaimable with 2-min warning<br/>🎯 Fault-tolerant, stateless ETL & ML"]
-        SavingsPlans["3. Reserved Instances / Savings Plans<br/>• 1 or 3-Year commitment<br/>• Up to 72% discount<br/>🎯 24/7 Steady-state baseline clusters"]
+        OnDemand["(1) On-Demand Instances<br/>• Full flexibility, no commitment<br/>• Pay per second / hour<br/>🎯 Short-term, spiky, unpredictable jobs"]
+        SpotInst["(2) Spot Instances<br/>• Up to 90% discount over On-Demand<br/>• Reclaimable with 2-min warning<br/>🎯 Fault-tolerant, stateless ETL & ML"]
+        SavingsPlans["(3) Reserved Instances / Savings Plans<br/>• 1 or 3-Year commitment<br/>• Up to 72% discount<br/>🎯 24/7 Steady-state baseline clusters"]
     end
 
     subgraph EMRClusterMapping["Amazon EMR Cluster Topology"]
@@ -118,15 +118,15 @@ sequenceDiagram
 ```mermaid
 graph TD
     subgraph EMRClusterTopology["Amazon EMR Cluster Node Mapping"]
-        subgraph MasterLayer["1. Master Node"]
+        subgraph MasterLayer["(1) Master Node"]
             M1["Master Node<br/>• Runs YARN ResourceManager & HDFS NameNode<br/>• Single point of coordination<br/>🛑 NEVER use Spot Instances! (Cluster dies if master terminates)<br/>✅ Use On-Demand or Savings Plans"]
         end
 
-        subgraph CoreLayer["2. Core Nodes"]
+        subgraph CoreLayer["(2) Core Nodes"]
             C1["Core Nodes<br/>• Runs DataNode (stores HDFS data) & NodeManager<br/>⚠️ Terminating a Core node risks HDFS data loss / under-replication<br/>✅ Use On-Demand or Savings Plans (or conservative Spot with high minimums)"]
         end
 
-        subgraph TaskLayer["3. Task Nodes"]
+        subgraph TaskLayer["(3) Task Nodes"]
             T1["Task Nodes<br/>• Pure compute workers (Runs Spark Executors / NodeManager)<br/>• STORES ZERO HDFS DATA!<br/>✅ 100% Spot Instances (Safe to add, drop, or interrupt dynamically)"]
         end
     end

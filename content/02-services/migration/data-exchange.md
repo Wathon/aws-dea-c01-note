@@ -45,10 +45,10 @@ graph TB
         Marketplace["AWS Data Exchange Marketplace<br/>📜 Subscription & Entitlement Management<br/>💳 Consolidated AWS Invoicing<br/>🔄 Automated Revision Updates"]
         
         subgraph DeliveryModes["Data Delivery Modalities"]
-            ModeS3["1. File / S3 Export Delivery"]
-            ModeDirectS3["2. Direct S3 Bucket Access"]
-            ModeRedshift["3. Redshift Data Sharing (Zero-ETL)"]
-            ModeAPI["4. AWS Data Exchange for APIs"]
+            ModeS3["(1) File / S3 Export Delivery"]
+            ModeDirectS3["(2) Direct S3 Bucket Access"]
+            ModeRedshift["(3) Redshift Data Sharing (Zero-ETL)"]
+            ModeAPI["(4) AWS Data Exchange for APIs"]
         end
     end
 
@@ -97,10 +97,10 @@ AWS Data Exchange provides four native delivery mechanisms tailored for specific
 ```mermaid
 graph LR
     subgraph Modalities["AWS Data Exchange Product Types"]
-        P1["1. Data Sets (File-Based S3 Export)"]
-        P2["2. AWS Data Exchange for Amazon S3"]
-        P3["3. AWS Data Exchange for Amazon Redshift"]
-        P4["4. AWS Data Exchange for APIs"]
+        P1["(1) Data Sets (File-Based S3 Export)"]
+        P2["(2) AWS Data Exchange for Amazon S3"]
+        P3["(3) AWS Data Exchange for Amazon Redshift"]
+        P4["(4) AWS Data Exchange for APIs"]
     end
 
     subgraph Mechanics["Data Flow & Ingestion Mechanics"]

@@ -143,11 +143,11 @@ AWS Transfer Family provides flexible authentication architectures to integrate 
 graph TD
     AuthChoice{Select Authentication Mechanism}
     
-    AuthChoice -->|"1. Service-Managed"| ServMan["Service-Managed Users<br/>• Store SSH public keys & passwords directly in Transfer Family<br/>• Simplest setup for small vendor pools"]
+    AuthChoice -->|"(1) Service-Managed"| ServMan["Service-Managed Users<br/>• Store SSH public keys & passwords directly in Transfer Family<br/>• Simplest setup for small vendor pools"]
     
-    AuthChoice -->|"2. Active Directory / LDAP"| ADDir["AWS Directory Service (Active Directory)<br/>• Integrates with on-prem Microsoft AD or AWS Managed AD<br/>• Users authenticate with domain credentials"]
+    AuthChoice -->|"(2) Active Directory / LDAP"| ADDir["AWS Directory Service (Active Directory)<br/>• Integrates with on-prem Microsoft AD or AWS Managed AD<br/>• Users authenticate with domain credentials"]
 
-    AuthChoice -->|"3. Custom Lambda Authorizer"| LambAuth["Custom Identity Provider (AWS Lambda)<br/>• Connects to Okta, Auth0, Amazon Cognito, AWS Secrets Manager<br/>• Dynamic IAM role generation & home directory mapping"]
+    AuthChoice -->|"(3) Custom Lambda Authorizer"| LambAuth["Custom Identity Provider (AWS Lambda)<br/>• Connects to Okta, Auth0, Amazon Cognito, AWS Secrets Manager<br/>• Dynamic IAM role generation & home directory mapping"]
 
     classDef dec fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef opt fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;

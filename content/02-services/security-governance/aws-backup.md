@@ -85,11 +85,11 @@ graph TB
 
 ```mermaid
 graph LR
-    Plan["1. Backup Plan<br/>(Rules & Schedules)"] -->|"Assigns via Tags / ARNs"| Resources["2. Resource Assignment<br/>(S3, EBS, EFS, RDS, DDB)"]
-    Resources -->|"Executes Backup"| Vault["3. Backup Vault<br/>(KMS Encrypted Storage)"]
-    Vault -->|"Stores"| Points["4. Recovery Points<br/>(Point-in-Time Copies)"]
-    Points -->|"Enforces Immutability"| Lock["5. Vault Lock<br/>(WORM Compliance Mode)"]
-    Points -->|"Automated Testing"| Audit["6. Audit Manager &<br/>Restore Testing"]
+    Plan["(1) Backup Plan<br/>(Rules & Schedules)"] -->|"Assigns via Tags / ARNs"| Resources["(2) Resource Assignment<br/>(S3, EBS, EFS, RDS, DDB)"]
+    Resources -->|"Executes Backup"| Vault["(3) Backup Vault<br/>(KMS Encrypted Storage)"]
+    Vault -->|"Stores"| Points["(4) Recovery Points<br/>(Point-in-Time Copies)"]
+    Points -->|"Enforces Immutability"| Lock["(5) Vault Lock<br/>(WORM Compliance Mode)"]
+    Points -->|"Automated Testing"| Audit["(6) Audit Manager &<br/>Restore Testing"]
 
     classDef comp fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     class Plan,Resources,Vault,Points,Lock,Audit comp;
@@ -124,8 +124,8 @@ A **Backup Plan** is a policy definition that specifies when and how AWS Backup 
 
 ```mermaid
 graph TD
-    VaultLock["AWS Backup Vault Lock"] --> GovMode["1. Governance Mode<br/>👥 Administrative Protection<br/>🔓 Can be unlocked/deleted by users with<br/>explicit IAM permissions (backup:DeleteVaultLockConfiguration)"]
-    VaultLock --> CompMode["2. Compliance Mode<br/>🔒 True WORM (Regulatory Compliance)<br/>⏳ Cooling-Off Period (Grace Period: 3 to 365 days)<br/>🚫 CANNOT BE REMOVED OR DELETED BY ANYONE<br/>(Including AWS Root User and AWS Support!)"]
+    VaultLock["AWS Backup Vault Lock"] --> GovMode["(1) Governance Mode<br/>👥 Administrative Protection<br/>🔓 Can be unlocked/deleted by users with<br/>explicit IAM permissions (backup:DeleteVaultLockConfiguration)"]
+    VaultLock --> CompMode["(2) Compliance Mode<br/>🔒 True WORM (Regulatory Compliance)<br/>⏳ Cooling-Off Period (Grace Period: 3 to 365 days)<br/>🚫 CANNOT BE REMOVED OR DELETED BY ANYONE<br/>(Including AWS Root User and AWS Support!)"]
 
     CompMode --> RetentionEnforce["Enforced Retention Bounds<br/>(Min / Max Days: 90 to 2555 Days)<br/>🚫 Blocks Out-of-Bounds Backup Jobs"]
 
@@ -166,15 +166,15 @@ sequenceDiagram
     participant DRVault as DR Backup Vault (us-west-2)
     participant SecAcct as Isolated Security / Backup Account
 
-    Note over WorkloadAcct,PrimaryVault: 1. Scheduled Backup Job Executes
+    Note over WorkloadAcct,PrimaryVault: (1) Scheduled Backup Job Executes
     WorkloadAcct->>PrimaryVault: Snapshot RDS, EFS, DynamoDB, S3
     Note over PrimaryVault: Encrypted with Primary KMS CMK
 
-    Note over PrimaryVault,DRVault: 2. Cross-Region Disaster Recovery Copy
+    Note over PrimaryVault,DRVault: (2) Cross-Region Disaster Recovery Copy
     PrimaryVault->>DRVault: Copy Recovery Point to us-west-2
     Note over DRVault: Re-encrypted with Destination KMS CMK
 
-    Note over PrimaryVault,SecAcct: 3. Cross-Account Air-Gapped Archive Copy
+    Note over PrimaryVault,SecAcct: (3) Cross-Account Air-Gapped Archive Copy
     PrimaryVault->>SecAcct: Copy Recovery Point to Isolated Account Vault
     Note over SecAcct: Encrypted with Security Account KMS CMK<br/>Protected by Immutable Vault Lock!
 ```

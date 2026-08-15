@@ -116,14 +116,14 @@ Understanding the architectural distinction between **Multi-AZ** (for High Avail
 
 ```mermaid
 graph TD
-    subgraph MultiAZ["1. Standard Multi-AZ Deployment (High Availability / DR)"]
+    subgraph MultiAZ["(1) Standard Multi-AZ Deployment (High Availability / DR)"]
         PrimaryDB["Primary DB (AZ-a)<br/>(Active Read/Write)"]
         StandbyDB["Standby DB (AZ-b)<br/>(Passive / Synchronous Copy)"]
         PrimaryDB <-->|"Synchronous Replication (RPO = 0)"| StandbyDB
         Note1["⚠️ Standby CANNOT serve read traffic!<br/>⚡ Failover via automated DNS update (60-120s)"]
     end
 
-    subgraph ReadReps["2. Read Replicas (Horizontal Read Scalability)"]
+    subgraph ReadReps["(2) Read Replicas (Horizontal Read Scalability)"]
         MasterDB["Primary DB (AZ-a)<br/>(Read/Write Master)"]
         Replica1["Read Replica 1 (AZ-a / AZ-b)<br/>(Read-Only Serving)"]
         Replica2["Cross-Region Replica (Region-2)<br/>(Read-Only / DR Reporting)"]
@@ -267,11 +267,11 @@ graph TD
     end
 
     subgraph DataEngineeringPipelines["Data Engineering Ingestion & Extraction Options"]
-        Option1["1. Amazon Redshift Zero-ETL<br/>⚡ Fully Managed CDC Ingestion<br/>⏱️ Sub-minute Latency"]
-        Option2["2. RDS Snapshot Export to S3<br/>📦 Apache Parquet Format<br/>🚫 ZERO Compute Impact"]
-        Option3["3. Direct SQL S3 Export (aws_s3)<br/>🧪 Export Specific Query Results to S3"]
-        Option4["4. AWS DMS + S3 / Kinesis<br/>🔄 Continuous CDC Ingestion"]
-        Option5["5. Athena Federated Queries<br/>🔍 Live In-Place SQL Querying"]
+        Option1["(1) Amazon Redshift Zero-ETL<br/>⚡ Fully Managed CDC Ingestion<br/>⏱️ Sub-minute Latency"]
+        Option2["(2) RDS Snapshot Export to S3<br/>📦 Apache Parquet Format<br/>🚫 ZERO Compute Impact"]
+        Option3["(3) Direct SQL S3 Export (aws_s3)<br/>🧪 Export Specific Query Results to S3"]
+        Option4["(4) AWS DMS + S3 / Kinesis<br/>🔄 Continuous CDC Ingestion"]
+        Option5["(5) Athena Federated Queries<br/>🔍 Live In-Place SQL Querying"]
     end
 
     subgraph AnalyticsLayer["Analytics, Data Lake & Warehousing"]
@@ -328,10 +328,10 @@ SELECT * FROM aws_s3.query_export_to_s3(
 
 ```mermaid
 graph LR
-    Client["Application / Compute Instance<br/>(EC2 / Lambda / Glue / EKS)"] -->|"1. Requests Auth Token"| IAM["AWS IAM / STS"]
-    IAM -->|"2. Returns Signed 15-Min Token"| Client
-    Client -->|"3. Connects with Token as Password"| DBEngine["Amazon RDS / Aurora<br/>(db_user mapped to IAM)"]
-    DBEngine -->|"4. Validates Token Signature"| IAM
+    Client["Application / Compute Instance<br/>(EC2 / Lambda / Glue / EKS)"] -->|"(1) Requests Auth Token"| IAM["AWS IAM / STS"]
+    IAM -->|"(2) Returns Signed 15-Min Token"| Client
+    Client -->|"(3) Connects with Token as Password"| DBEngine["Amazon RDS / Aurora<br/>(db_user mapped to IAM)"]
+    DBEngine -->|"(4) Validates Token Signature"| IAM
 
     classDef client fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef iam fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;

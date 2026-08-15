@@ -107,11 +107,11 @@ Understanding exact data retention behavior across operational events is one of 
 graph TD
     Event["EC2 Instance Lifecycle / Failure Event"]
     
-    Event --> E1["1. Operating System Reboot<br/><code>sudo reboot</code>"]
-    Event --> E2["2. Instance STOP<br/><code>aws ec2 stop-instances</code>"]
-    Event --> E3["3. Instance TERMINATION<br/><code>aws ec2 terminate-instances</code>"]
-    Event --> E4["4. Host Hardware Failure<br/>(Physical Host Crash)"]
-    Event --> E5["5. Availability Zone Outage<br/>(Regional AZ Degradation)"]
+    Event --> E1["(1) Operating System Reboot<br/><code>sudo reboot</code>"]
+    Event --> E2["(2) Instance STOP<br/><code>aws ec2 stop-instances</code>"]
+    Event --> E3["(3) Instance TERMINATION<br/><code>aws ec2 terminate-instances</code>"]
+    Event --> E4["(4) Host Hardware Failure<br/>(Physical Host Crash)"]
+    Event --> E5["(5) Availability Zone Outage<br/>(Regional AZ Degradation)"]
 
     E1 --> IS_1["Instance Store:<br/>✅ <b>Preserved</b>"]
     E1 --> EBS_1["Amazon EBS:<br/>✅ <b>Preserved</b>"]
@@ -276,12 +276,12 @@ This reference architecture demonstrates how a production big data pipeline comb
 
 ```mermaid
 graph TB
-    subgraph S3DataLake["1. Amazon S3 (Central Persistent Data Lake)"]
+    subgraph S3DataLake["(1) Amazon S3 (Central Persistent Data Lake)"]
         Raw["Bronze Landing Zone (Raw S3)"]
         Curated["Gold Analytical Zone (Parquet S3)"]
     end
 
-    subgraph SparkCluster["2. Amazon EMR / EC2 Spark Cluster"]
+    subgraph SparkCluster["(2) Amazon EMR / EC2 Spark Cluster"]
         direction TB
         MasterNode["EMR Master Node<br/>(EBS gp3: OS Root & Cluster Metadata)"]
         
@@ -297,7 +297,7 @@ graph TB
         end
     end
 
-    subgraph ServerlessAnalytics["3. Serverless Analytics & Data Science Layer"]
+    subgraph ServerlessAnalytics["(3) Serverless Analytics & Data Science Layer"]
         LambdaETL["AWS Lambda Functions<br/>(Event-Driven Feature Validation)"]
         JupyterEKS["Amazon EKS JupyterHub<br/>(Data Science Shared Notebooks)"]
         
