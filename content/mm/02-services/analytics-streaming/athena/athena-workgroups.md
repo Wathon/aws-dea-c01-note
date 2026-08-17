@@ -7,61 +7,171 @@ tags:
   - dea-c01
   - analytics/athena
   - governance
+  - cost-management
+  - security
   - burmese
 date: 2026-08-17
 ---
 
-# 🛡️ Athena Workgroups & Cost Management
+# 🛡️ Athena Workgroups & Cost Management (မြန်မာဘာသာ)
 
-- **Category**: Analytics / Governance & Security
+- **Category**: Analytics / Governance, Security & Cost Controls
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-workgroups) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: အဖွဲ့အစည်းအသီးသီးအတွက် query run သည့် environment များကို ခွဲခြားထားရန်၊ ကုန်ကျစရိတ် ကန့်သတ်ချက်များ သတ်မှတ်ရန်နှင့် query history များကို သီးခြားစီထားရှိရန်။
-- **Hub Links**: `[[mm/index]]` | `[[mm/athena]]` | `[[mm/domain-5-security-and-governance]]`
+- **Primary Use Case**: Multi-tenant isolation ပြုလုပ်ရန်၊ per-query နှင့် workgroup အဆင့် data scan limit များ သတ်မှတ်ရန်၊ မဖြစ်မနေ encryption သတ်မှတ်စေရန် (mandatory encryption enforcement) နှင့် အသေးစိတ် cost tracking ပြုလုပ်ရန်။
+- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 365–382
+- **Hub Links**: `[[mm/index]]` | `[[athena]]` | `[[domain-5-security-and-governance]]` | `[[cost-management]]`
 
 ---
 
 ## 1. High-Level Summary
 
-Amazon Athena သည် scan လုပ်လိုက်သော data ပမာဏအပေါ် အခြေခံပြီး (TB လျှင် $5 နှုန်းဖြင့်) ကျသင့်ငွေကို ကောက်ခံသောကြောင့်၊ ညံ့ဖျင်းစွာရေးသားထားသော query တစ်ခု (ဥပမာ - partition မခွဲထားသော Petabyte အဆင့်ရှိ table တစ်ခုပေါ်တွင် `SELECT *` အသုံးပြုခြင်း) သည် တစ်ကြိမ် run ရုံဖြင့် ဒေါ်လာထောင်ချီပြီး မတော်တဆ ကုန်ကျသွားစေနိုင်ပါသည်။
+Amazon Athena သည် pay-per-scan model (**scan လုပ်ထားသော data တစ် TB လျှင် $5.00**) ဖြင့် ကျသင့်ငွေ ကောက်ခံသောကြောင့်၊ ညံ့ဖျင်းစွာ ရေးသားထားသော query တစ်ခု (ဥပမာ - partition filter များ မပါရှိဘဲ multi-petabyte uncompressed dataset ပေါ်တွင် `SELECT *` execute လုပ်ခြင်း) သည် စက္ကန့်ပိုင်းအတွင်း မတော်တဆ ဒေါ်လာထောင်ချီ၍ ကုန်ကျသွားစေနိုင်ပါသည်။
 
-**Athena Workgroups** များကို အသုံးပြုသူများ (users)၊ အဖွဲ့များ (teams)၊ သို့မဟုတ် application များကို သီးခြားစီခွဲထားရန် အသုံးပြုပြီး၊ administrator များအနေဖြင့် တင်းကျပ်သော စီမံခန့်ခွဲမှု (governance) များကို ပြုလုပ်နိုင်ခြင်း၊ အဖွဲ့အလိုက် ကုန်ကျစရိတ်များကို ခြေရာခံနိုင်ခြင်းနှင့် ထိန်းချုပ်မရသော query များကို တားဆီးနိုင်ခြင်းတို့ကို လုပ်ဆောင်နိုင်စေပါသည်။
+**Athena Workgroups** သည် multi-tenant isolation၊ cost governance နှင့် security policy enforcement များကို ထောက်ပံ့ပေးပါသည်။ User များ၊ application များနှင့် business unit များကို သီးသန့် workgroup များအဖြစ် စုစည်းပေးခြင်းဖြင့် administrator များသည် query တစ်ခုချင်းစီအလိုက် တင်းကျပ်သော data limit များကို သတ်မှတ်နိုင်ခြင်း၊ query result များအား မဖြစ်မနေ encrypt လုပ်စေရန် သတ်မှတ်နိုင်ခြင်း၊ query history များကို သီးခြားစီ ခွဲခြားထားနိုင်ခြင်းနှင့် department အလိုက် ကုန်ကျစရိတ်များကို **Amazon CloudWatch** မှတစ်ဆင့် ခြေရာခံ (track) နိုင်ခြင်းတို့ကို ပြုလုပ်နိုင်ပါသည်။
+
+```mermaid
+graph TD
+    subgraph EnterpriseTeams["Enterprise Multi-Tenant Teams"]
+        FinanceUser["Finance Analysts"]
+        MarketingUser["Marketing Analysts"]
+        DataScienceUser["Data Scientists / ML"]
+    end
+
+    subgraph AthenaWorkgroups["Athena Workgroups Governance Layer"]
+        WG1["Finance Workgroup<br>• Limit: 50 GB / query<br>• Output: s3://finance-results/<br>• KMS Key: Key-A<br>• Enforce Override: ON"]
+        WG2["Marketing Workgroup<br>• Limit: 100 GB / query<br>• Output: s3://marketing-results/<br>• KMS Key: Key-B<br>• Enforce Override: ON"]
+        WG3["Data Science Workgroup<br>• Limit: 1 TB / query<br>• Output: s3://ds-results/<br>• Engine: Athena Spark / SQL"]
+    end
+
+    subgraph MonitoringCost["CloudWatch Metrics & Alarms"]
+        CWMetrics["CloudWatch Metrics:<br>• DataScannedInBytes<br>• QueryEngineTime"]
+        SNSAlert["Amazon SNS Alert (Threshold Breached)"]
+    end
+
+    FinanceUser --> WG1
+    MarketingUser --> WG2
+    DataScienceUser --> WG3
+
+    WG1 --> CWMetrics
+    WG2 --> CWMetrics
+    WG3 --> CWMetrics
+    CWMetrics --> SNSAlert
+
+    classDef team fill:#8b5cf6,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef wg fill:#3b82f6,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef mon fill:#10b981,stroke:#fff,stroke-width:1px,color:#fff;
+
+    class FinanceUser,MarketingUser,DataScienceUser team;
+    class WG1,WG2,WG3 wg;
+    class CWMetrics,SNSAlert mon;
+```
 
 ---
 
-## 2. Core Capabilities of Workgroups
+## 2. Core Governance Capabilities
 
-### 1. Cost Control & Data Usage Limits
-- workgroup တစ်ခုစီအတွက် **Data Usage Control Limit** (ဥပမာ - query တစ်ခုလျှင် အများဆုံး scan လုပ်နိုင်မည့် data ပမာဏ 100 GB) ကို သတ်မှတ်နိုင်ပါသည်။
-- အကယ်၍ အသုံးပြုသူတစ်ဦးသည် သတ်မှတ်ထားသော limit ထက်ပို၍ data များကို scan လုပ်ရန်ကြိုးစားသော query တစ်ခုကို run ပါက၊ အဆမတန် ကုန်ကျစရိတ်များ မဖြစ်ပေါ်စေရန် Athena က ထို query ကို **အလိုအလျောက် cancel လုပ်ပေးမည်** ဖြစ်ပါသည်။
-- Limit များကို **per-query** (query တစ်ခုချင်းစီအတွက်) သို့မဟုတ် **workgroup-wide daily/hourly limit** (workgroup တစ်ခုလုံးအတွက် နေ့စဉ်/နာရီအလိုက် ကန့်သတ်ချက်) အနေဖြင့် သတ်မှတ်နိုင်ပါသည်။
+### 1. Cost Controls & Data Scan Limits (Circuit Breakers)
 
-### 2. Separation of Environments
-- Query တိုင်းသည် သတ်မှတ်ထားသော Workgroup တစ်ခုအတွင်း၌သာ run ပါသည်။
-- **Query History Isolation**: "Marketing" workgroup ရှိ အသုံးပြုသူများသည် "Finance" workgroup ၏ query history၊ သိမ်းဆည်းထားသော query များနှင့် query ရလဒ်များကို မြင်တွေ့နိုင်မည် မဟုတ်ပါ။
-- **IAM Integration**: အသုံးပြုသူတစ်ဦးအား သီးခြား Workgroup တစ်ခုတည်းကိုသာ ဝင်ရောက်အသုံးပြုခွင့်ပေးရန် IAM policy များကို အသုံးပြုနိုင်ပါသည်။
+Workgroups များသည် budget ကျော်လွန်ကုန်ကျမှုများကို ကာကွယ်ရန် data usage threshold အဆင့် (၂) မျိုးကို ထောက်ပံ့ပေးထားပါသည်:
 
-### 3. Overriding Client Settings
-- Workgroup တစ်ခုကို **client-side settings များကို override လုပ်ရန် (ကျော်လွန်၍ အစားထိုးသတ်မှတ်ရန်)** configure လုပ်နိုင်ပါသည်။
-- ဥပမာ - အသုံးပြုသူဘက်မှ မည်သို့ပင် တောင်းဆိုထားစေကာမူ၊ သီးခြား workgroup တစ်ခုတွင် run သည့် query အားလုံး၏ ရလဒ်များကို S3 တွင် သီးခြား AWS KMS key တစ်ခုအသုံးပြု၍ အတင်းအကျပ် encrypt လုပ်ခိုင်းနိုင်ပါသည်။
-- Workgroup တစ်ခုအတွက် query ရလဒ်များအားလုံးကို S3 bucket ရှိ သီးခြား path တစ်ခုသို့ မဖြစ်မနေ သိမ်းဆည်းစေရန် အတင်းအကျပ် သတ်မှတ်နိုင်ပါသည်။
+```mermaid
+graph LR
+    subgraph PerQueryThreshold["1. Per-Query Data Limit (Circuit Breaker)"]
+        Q1["User runs query scanning > 100 GB"] --> Action1["Query CANCELLED Immediately (Prevents runaway cost)"]
+    end
 
-### 4. CloudWatch Metrics Integration
-- Workgroup များသည် query metric များ (scan လုပ်ခဲ့သော data ပမာဏ၊ query ကြာချိန်) ကို **Amazon CloudWatch** သို့ အလိုအလျောက် ပေးပို့ (publish) ပါသည်။
-- ၎င်းသည် အဖွဲ့တစ်ဖွဲ့ချင်းစီအတွက် ဘေလ်ကောက်ခံမှုဆိုင်ရာ သတိပေးချက်များ (billing alerts) နှင့် dashboard များကို ပြုလုပ်နိုင်စေပါသည်။
+    subgraph AggregatedLimit["2. Aggregated Workgroup Limit (Hourly / Daily)"]
+        Q2["Total scans in workgroup exceed 5 TB today"] --> Action2["Triggers CloudWatch Metric -> SNS Email Alert"]
+    end
+
+    classDef alert fill:#ef4444,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef warn fill:#f59e0b,stroke:#fff,stroke-width:1px,color:#000;
+
+    class Action1 alert;
+    class Action2 warn;
+```
+
+1. **Per-Query Data Limit**:
+   - Query တစ်ခုချင်းစီအတွက် အများဆုံး data scan threshold (ဥပမာ - **100 GB**) ကို သတ်မှတ်နိုင်သည်။
+   - အကယ်၍ analyst တစ်ဦးသည် သတ်မှတ်ထားသော threshold ထက် ပိုမို scan လုပ်မည့် query တစ်ခုကို submit လုပ်ပါက၊ Athena သည် **query ကို execute မလုပ်မီ အလိုအလျောက် cancel လုပ်ပေးမည်** ဖြစ်ပြီး scan ကုန်ကျစရိတ် လုံးဝမရှိစေခြင်း သို့မဟုတ် အနည်းဆုံးသာ ဖြစ်စေပါသည်။
+2. **Workgroup-Wide Data Usage Alarms**:
+   - Workgroup တစ်ခုလုံးအတွက် နာရီအလိုက် သို့မဟုတ် နေ့စဉ် စုစုပေါင်း data scan limit များကို သတ်မှတ်နိုင်သည်။
+   - စုစုပေါင်း scan ပမာဏသည် threshold ကို ကျော်လွန်သွားပါက၊ Athena သည် **Amazon EventBridge** နှင့် **Amazon SNS** သို့ alert တစ်ခု publish လုပ်မည်ဖြစ်ပြီး administrator များကို အသိပေးခြင်းနှင့် လိုအပ်ပါက နောက်ထပ် query submission များကို တားဆီးပေးနိုင်သည်။
+
+---
+
+### 2. Multi-Tenant Environment Isolation
+
+- **Query History & Saved Queries Isolation**: `finance` workgroup အတွင်းရှိ user များသည် `marketing` workgroup ၏ query history၊ saved queries များနှင့် output data များကို ကြည့်ရှုခြင်း၊ စစ်ဆေးခြင်း သို့မဟုတ် download ပြုလုပ်ခြင်းများ မလုပ်ဆောင်နိုင်ပါ။
+- **IAM-Based Workgroup Access Control**: Workgroup များသို့ ဝင်ရောက်အသုံးပြုခွင့်ကို IAM policy များဖြင့် တင်းကျပ်စွာ စီမံခန့်ခွဲထားသည်:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "athena:StartQueryExecution",
+                "athena:GetQueryExecution",
+                "athena:GetQueryResults",
+                "athena:StopQueryExecution"
+            ],
+            "Resource": "arn:aws:athena:us-east-1:123456789012:workgroup/finance_analytics"
+        }
+    ]
+}
+```
+
+---
+
+### 3. Enforcing Security Policies ("Override Client-Side Settings")
+
+မူလအားဖြင့် (By default) JDBC/ODBC client များ သို့မဟုတ် Python script များသည် ၎င်းတို့၏ ကိုယ်ပိုင် S3 output path များနှင့် encryption setting များကို သတ်မှတ်နိုင်ပါသည်။ Corporate compliance စည်းမျဉ်းများကို လိုက်နာစေရန်အတွက် workgroup administrator များသည် **"Override client-side settings"** ကို enable ပြုလုပ်နိုင်ပါသည်:
+
+| Setting Enforced | Compliance & Security Impact |
+| :--- | :--- |
+| **Designated S3 Output Location** | ထို workgroup အတွက် query result အားလုံးကို သတ်မှတ်ထားသော၊ စစ်ဆေးမှုခံယူထားသည့် (audited) S3 bucket path (ဥပမာ `s3://corp-analytics-results/finance/`) သို့သာ မဖြစ်မနေ ရောက်ရှိစေပါသည်။ |
+| **Mandatory AWS KMS Encryption** | Client ၏ preference များကို လျစ်လျူရှုပြီး CSV query result များနှင့် metadata file များအားလုံးကို သတ်မှတ်ထားသော **AWS KMS Customer Managed Key (CMK)** ဖြင့် encrypt လုပ်ရန် အတင်းအကျပ် သတ်မှတ်စေပါသည်။ |
+| **Requester Pays Compliance** | Requester Pays ဖြင့် configure လုပ်ထားသော S3 bucket များပေါ်တွင် query များ run ခြင်း ရှိ/မရှိကို ထိန်းချုပ်ပေးပါသည်။ |
+
+---
+
+### 4. Athena Engine Version Management
+
+Athena သည် performance တိုးတက်ကောင်းမွန်မှုများ၊ SQL function အသစ်များနှင့် bug fix များ ပါဝင်သော engine version အသစ်များကို အခါအားလျော်စွာ ထုတ်ဝေပေးပါသည်:
+- **Engine Version 3**: Trino ပေါ်တွင် အခြေခံထားသော နောက်ဆုံးပေါ် high-performance engine ဖြစ်ပါသည်။
+- **Automatic vs. Manual Control**:
+  - **Automatic (Recommended)**: Engine version အသစ်တစ်ခု generally available ဖြစ်လာပါက Athena သည် workgroup ကို အလိုအလျောက် upgrade ပြုလုပ်ပေးပါသည်။
+  - **Manual Version Pinning**: Data engineering team များအနေဖြင့် workgroup တစ်ခုကို သီးခြား engine version တစ်ခုဖြင့် သတ်မှတ် (pin) ထားနိုင်စေပြီး၊ staging workgroup တွင် query များကို စမ်းသပ်ခြင်းနှင့် စီစဉ်ထားသော maintenance window များအတွင်း production upgrade များကို approve လုပ်ခွင့် ပြုပေးပါသည်။
+
+---
+
+### 5. Amazon CloudWatch Metrics Integration
+
+Athena သည် workgroup တစ်ခုချင်းစီ၏ real-time execution metric များကို **Amazon CloudWatch** သို့ အလိုအလျောက် ပေးပို့ (stream) ပေးပါသည်:
+- `DataScannedInBytes`: S3 မှ scan လုပ်ခဲ့သော စုစုပေါင်း byte ပမာဏ (billing နှင့် cost allocation အတွက် အသုံးပြုသည်)။
+- `QueryEngineTime`: Presto worker များပေါ်တွင် query ကို တက်ကြွစွာ execute လုပ်ခဲ့သော အချိန်။
+- `TotalExecutionTime`: စတင်ချိန်မှ ပြီးဆုံးချိန်အထိ စုစုပေါင်းကြာချိန် (End-to-end latency - queueing time + planning + execution)။
+- `ServicePreExecutionTime`: Query planning ပြုလုပ်ခြင်းနှင့် metadata ရှာဖွေရယူခြင်းတွင် ကုန်ဆုံးခဲ့သော အချိန်။
 
 ---
 
 ## 3. DEA-C01 Exam Tips & Scenarios
 
 > [!IMPORTANT]
-> **Key Exam Trigger Keywords**:
-> - **"Prevent users from running expensive queries that scan too much data"** $\rightarrow$ **Set per-query data usage limits on Athena Workgroups** (Athena Workgroups တွင် per-query data usage limit များကို သတ်မှတ်ပါ).
-> - **"Separate query history and saved queries between the Data Science and Marketing teams"** $\rightarrow$ **Create separate Athena Workgroups and assign IAM permissions** (သီးခြား Athena Workgroup များဖန်တီးပြီး IAM permission များသတ်မှတ်ပေးပါ).
-> - **"Force all query results to be encrypted with a specific KMS key"** $\rightarrow$ **Configure the Workgroup to override client-side settings for output encryption** (Output encryption အတွက် client-side setting များကို ကျော်လွန်သတ်မှတ်ရန် Workgroup ကို configure လုပ်ပါ).
+> **Key Exam Decision Triggers for Athena Workgroups**:
+>
+> - **"Prevent users from accidentally running expensive queries that scan terabytes of data"** $\rightarrow$ **Athena Workgroup တွင် per-query data scan limit ကို သတ်မှတ်ပါ**။
+> - **"Separate query execution histories, saved queries, and access permissions between different departments"** $\rightarrow$ **သီးသန့် Athena Workgroup များကို ဖန်တီးပြီး IAM resource-level permission များကို သတ်မှတ်ပါ**။
+> - **"Force all query results to be written to a dedicated bucket and encrypted with an AWS KMS key, regardless of client JDBC settings"** $\rightarrow$ Output location နှင့် KMS encryption အတွက် workgroup တွင် **"Override client-side settings"** ကို configure လုပ်ပါ။
+> - **"Track and allocate monthly Athena query spending to different business cost centers"** $\rightarrow$ Department တစ်ခုချင်းစီအတွက် သီးသန့် Workgroup တစ်ခုစီ သတ်မှတ်ပေးပြီး **Cost Allocation Tag များနှင့်အတူ CloudWatch `DataScannedInBytes` metric များကို စောင့်ကြည့်ပါ**။
+> - **"Test a new Athena Engine Version before rolling it out to all production BI reports"** $\rightarrow$ **Athena Engine Version အသစ်ဖြင့် pin လုပ်ထားသော staging Workgroup တစ်ခုကို ဖန်တီးပါ**။
 
 ---
 
 ## 📌 Related Notes
-- `[[mm/athena]]` — Athena Overview
-- `[[mm/macie]]` — S3 data discovery and protection
-- `[[mm/kms]]` — AWS Key Management Service
+- `[[athena]]` — Amazon Athena Architecture Overview
+- `[[athena-performance]]` — Query Cost Optimization
+- `[[domain-5-security-and-governance]]` — Security, Encryption & IAM Policies
+- `[[cost-management]]` — AWS Analytics Cost Allocation

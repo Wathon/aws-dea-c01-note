@@ -7,61 +7,142 @@ tags:
   - dea-c01
   - analytics/athena
   - spark
+  - notebooks
+  - python
   - burmese
 date: 2026-08-17
 ---
 
-# ⚡ Amazon Athena for Apache Spark
+# ⚡ Amazon Athena for Apache Spark (မြန်မာဘာသာ)
 
-- **Category**: Analytics / Distributed Processing
+- **Category**: Analytics / Distributed Serverless Processing & Interactive Notebooks
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-spark) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: clusters များကို provision လုပ်စရာမလိုဘဲ interactive PySpark data explorations နှင့် Jupyter notebooks များကို ချက်ချင်း run ရန်။
-- **Hub Links**: `[[mm/index]]` | `[[athena]]` | `[[glue-etl-jobs]]` | `[[emr]]`
+- **Primary Use Case**: Spark cluster များကို provision လုပ်စရာမလိုဘဲ S3 ပေါ်တွင် ချက်ချင်း အလုပ်လုပ်နိုင်သော interactive PySpark data exploration နှင့် serverless Jupyter notebooks များကို အသုံးပြုရန်။
+- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 365–382
+- **Hub Links**: `[[mm/index]]` | `[[athena]]` | `[[glue-etl-jobs]]` | `[[emr]]` | `[[domain-3-data-processing]]`
 
 ---
 
 ## 1. High-Level Summary
 
-Amazon Athena သည် **serverless SQL** အတွက် ကျော်ကြားသော်လည်း၊ ၎င်းသည် **serverless Apache Spark** ကိုလည်း ပံ့ပိုးပေးပါသည်။ 
-**Amazon Athena for Apache Spark** သည် data scientists နှင့် data engineers များကို **၁ စက္ကန့်အောက် (under 1 second)** startup time ဖြင့် Athena console တွင် တိုက်ရိုက် interactive PySpark analytics နှင့် Jupyter notebooks များကို run ရန် ခွင့်ပြုပေးပါသည်။
+Amazon Athena သည် အဓိကအားဖြင့် **serverless SQL** အတွက် လူသိများသော်လည်း၊ ၎င်းသည် **serverless Apache Spark** ကိုလည်း natively support လုပ်ပေးပါသည်။ 
+
+**Amazon Athena for Apache Spark** သည် data engineers၊ data analysts နှင့် data scientists များအား Athena Web Console မှ တိုက်ရိုက် **၁ စက္ကန့်အောက် (under 1 second)** မကြုံစဖူး မြန်ဆန်သော startup time ဖြင့် interactive PySpark analytics များနှင့် Jupyter notebooks များကို execute လုပ်ရန် ခွင့်ပြုပေးပါသည်။
+
+Engineers များအနေဖြင့် Amazon EMR clusters များ spin up ဖြစ်လာစေရန် ၅–၁၅ မိနစ်ခန့် စောင့်ဆိုင်းစရာမလိုဘဲ သို့မဟုတ် underlying infrastructure များကို manage လုပ်စရာမလိုဘဲ distributed Apache Spark dataframes များ၏ စွမ်းဆောင်ရည်နှင့် ကြွယ်ဝသော Python machine learning libraries များ (ဥပမာ Pandas, NumPy, Matplotlib, နှင့် Seaborn ကဲ့သို့သော) ကို ရရှိအသုံးပြုနိုင်ပါသည်။
+
+```mermaid
+graph LR
+    subgraph UserInterface["1. Interactive Interface"]
+        Console["Athena Web Console (Jupyter Notebook UI)"]
+        PythonDev["Data Scientist / Data Engineer (PySpark Script)"]
+    end
+
+    subgraph AthenaSparkEngine["2. Serverless Athena Spark Backend"]
+        Workgroup["Spark-Enabled Athena Workgroup"]
+        SparkCoordinator["Serverless Spark Coordinator (Sub-Second Startup)"]
+        DPUWorkers["Dynamic DPU Worker Allocation (Auto-Scaled)"]
+    end
+
+    subgraph StorageMetadata["3. Storage & Metadata Layer"]
+        Catalog[("AWS Glue Data Catalog")]
+        S3Data[("Amazon S3 Data Lake (Parquet / Iceberg / CSV)")]
+        NotebookBucket[("S3 Notebook & Session Storage")]
+    end
+
+    UserInterface --> Workgroup
+    Workgroup --> SparkCoordinator
+    SparkCoordinator --> DPUWorkers
+    DPUWorkers <--> Catalog
+    DPUWorkers <--> S3Data
+    SparkCoordinator --> NotebookBucket
+
+    classDef ui fill:#8b5cf6,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef engine fill:#3b82f6,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef storage fill:#10b981,stroke:#fff,stroke-width:1px,color:#fff;
+
+    class Console,PythonDev ui;
+    class Workgroup,SparkCoordinator,DPUWorkers engine;
+    class Catalog,S3Data,NotebookBucket storage;
+```
 
 ---
 
-## 2. Core Differences (Athena Spark vs. Glue vs. EMR)
+## 2. Core Architectural Features
 
-AWS သည် Apache Spark ကို run ရန် နည်းလမ်းများစွာ ပံ့ပိုးပေးပါသည်။ DEA-C01 စာမေးပွဲအတွက်၊ မည်သည့် service ကို မည်သည့်အချိန်တွင် ရွေးချယ်ရမည်ကို သိထားရန်လိုအပ်ပါသည်-
+### 1. Sub-Second Startup Latency
+- Amazon EMR သို့မဟုတ် AWS Glue ပေါ်ရှိ ရိုးရိုး standard Apache Spark သည် virtual machines များကို provision လုပ်ရန်နှင့် Spark contexts များကို initialize လုပ်ရန် မိနစ်အနည်းငယ် ကြာမြင့်တတ်သည်။
+- Athena for Apache Spark သည် pre-warmed ဖြစ်နေသော serverless compute capacity ကို အသုံးပြုထားသဖြင့် interactive notebooks များနှင့် sessions များကို **၁ စက္ကန့်အောက် (less than 1 second)** အတွင်း စတင်ပေးနိုင်သည်။
 
-### 1. Athena for Apache Spark
-- **Best for**: ချက်ချင်းလုပ်ဆောင်နိုင်သော (Instant)၊ interactive data exploration၊ ad-hoc Python analytics နှင့် Jupyter notebooks များမှတစ်ဆင့် Spark DataFrames ကို အသုံးပြု၍ data ကို query လုပ်ရန်။
-- **Key Feature**: **Instant startup (၁ စက္ကန့်အောက်)**။ Cluster provision လုပ်ရန် စောင့်ဆိုင်းရန် မလိုပါ။
-- **Use Case**: Data scientist တစ်ဦးသည် S3 data ပေါ်ရှိ PySpark transformation script တစ်ခုကို production သို့ မပြောင်းမီ ချက်ချင်း စမ်းသပ်လိုသည့်အခါ။
+### 2. Spark-Enabled Workgroups
+- Athena တွင် Spark jobs များကို run ရန်အတွက် **Apache Spark engine** ဖြင့် configure လုပ်ထားသော Athena Workgroup တစ်ခုကို ဖန်တီးရမည်ဖြစ်သည်။
+- Cost governance ကို ထိန်းသိမ်းရန်နှင့် မလိုလားအပ်သော computation ကုန်ကျစရိတ်များ မြင့်တက်မသွားစေရန် workgroup တစ်ခုချင်းစီအလိုက် အများဆုံး DPU limits (Data Processing Units) များကို configure လုပ်နိုင်သည်။
 
-### 2. AWS Glue ETL
-- **Best for**: အချိန်ဇယားဆွဲထားသော (Scheduled)၊ batch နှင့် အချိန်ကြာမြင့်စွာ run ရသော serverless ETL jobs များ။
-- **Key Feature**: Serverless ဖြစ်သော်လည်း၊ workers များကို provision လုပ်ရန် တစ်မိနစ် သို့မဟုတ် နှစ်မိနစ်ခန့် ကြာပါသည်။ Production pipelines နှင့် အဆင့်လိုက်လုပ်ဆောင်မှု (incremental processing) များအတွက် တည်ဆောက်ထားပါသည် (Job Bookmarks)။
-- **Use Case**: 5 TB ရှိသော data ကို clean၊ join နှင့် partition လုပ်ရန် နေ့စဉ် ၂ နာရီကြာ job တစ်ခု run သည့်အခါ။
+### 3. Interactive PySpark Code Example
+```python
+import athena_spark_utils as utils
+from pyspark.sql import SparkSession
+import matplotlib.pyplot as plt
+import pandas as pd
 
-### 3. Amazon EMR
-- **Best for**: ကြီးမားကျယ်ပြန့်သော (Massive-scale)၊ စိတ်ကြိုက်ပြင်ဆင်နိုင်သော (highly customized) Spark၊ Hadoop၊ သို့မဟုတ် Hive clusters များအတွက်ဖြစ်ပြီး အခြေခံ EC2 instances များအပေါ် အပြည့်အဝ ထိန်းချုပ်မှု လိုအပ်သည့်အခါ။
-- **Key Feature**: Persistent clusters ဖြစ်ပြီး အလွန် ချိန်ညှိနိုင်သည် (highly tunable)၊ ကြီးမားသော workloads များတွင် ကုန်ကျစရိတ် သက်သာစေရန် Spot Instances များကို ပံ့ပိုးပေးပါသည်။
-- **Use Case**: သီးသန့်အဖွဲ့ (dedicated team) တစ်ခုသည် petabyte-scale machine learning နှင့် streaming analytics များကို 24/7 run သည့်အခါ။
+# Initialize Spark session (Instant start)
+spark = SparkSession.builder.appName("AthenaSparkExploration").getOrCreate()
+
+# 1. Read directly from AWS Glue Data Catalog table
+df = spark.read.table("analytics_db.customer_churn_data")
+
+# 2. Perform distributed PySpark DataFrame transformations
+aggregated_df = df.groupBy("subscription_tier") \
+    .agg({"monthly_spend": "avg", "customer_id": "count"}) \
+    .withColumnRenamed("avg(monthly_spend)", "avg_spend") \
+    .withColumnRenamed("count(customer_id)", "total_users")
+
+# 3. Convert to Pandas for local in-notebook visualization
+pandas_df = aggregated_df.toPandas()
+
+# 4. Generate visual chart directly inside Athena Console
+plt.bar(pandas_df['subscription_tier'], pandas_df['avg_spend'], color='skyblue')
+plt.title('Average Spend by Subscription Tier')
+plt.xlabel('Tier')
+plt.ylabel('Average Spend ($)')
+plt.show()
+```
 
 ---
 
-## 3. DEA-C01 Exam Tips & Scenarios
+## 3. Decision Matrix: Spark on AWS (Athena Spark vs. Glue ETL vs. Amazon EMR)
+
+DEA-C01 စာမေးပွဲတွင် အမေးအများဆုံး concept များထဲမှ တစ်ခုမှာ အခြေအနေအလိုက် မည်သည့် Spark compute engine ကို ရွေးချယ်ရမည်ကို သိရှိခြင်းဖြစ်သည်:
+
+| Feature | Amazon Athena for Spark | AWS Glue ETL Jobs | Amazon EMR Clusters | Amazon EMR Serverless |
+| :--- | :--- | :--- | :--- | :--- |
+| **Primary Persona** | **Data Scientists / Analysts** | **Data Engineers** | **Big Data / Platform Engineers** | **Data Engineers / Analysts** |
+| **Startup Latency** | **Sub-second (< 1 sec)** | 1–2 minutes | 5–15 minutes (EC2 provisioning) | Seconds to ~1 minute |
+| **Execution Mode** | **Interactive exploration (Jupyter)** | **Scheduled batch / streaming pipelines** | **Persistent, long-running clusters** | Scheduled batch / ad-hoc jobs |
+| **State Management** | Interactive session memory | **Native Job Bookmarks** | Custom application logic | Custom application logic |
+| **Customizability** | Fixed standard PySpark environment | Standard Glue libraries + custom jars | **Full OS/Kernel/Hadoop customization** | Pre-packaged Spark/Hive runtimes |
+| **Cost Model** | Billed per DPU-hour active | Billed per DPU-second active | EC2 hourly + EMR surcharge (Spot ဖြင့် 90% အထိ လျှော့စျေး) | Billed per vCPU-hour and GB-hour |
+| **Best Used For** | Ad-hoc Python analytics & fast iteration | Enterprise ETL pipelines & CDC | Petabyte-scale multi-workload clusters | EC2 tuning လုပ်စရာမလိုဘဲ Scalable Spark batch run ရန် |
+
+---
+
+## 4. DEA-C01 Exam Tips & Scenarios
 
 > [!IMPORTANT]
-> **Key Exam Trigger Keywords**:
-> - **"Need to run interactive PySpark code or Jupyter Notebooks instantly without waiting for clusters to start"** (Clusters စတင်ရန် စောင့်ဆိုင်းစရာမလိုဘဲ interactive PySpark code သို့မဟုတ် Jupyter Notebooks များကို ချက်ချင်း run ရန် လိုအပ်သည်) $\rightarrow$ **Use Amazon Athena for Apache Spark**.
-> - **"Data Analysts are comfortable with SQL, but Data Scientists need Python/Spark on the same S3 data"** (Data Analysts များသည် SQL ဖြင့် အဆင်ပြေသော်လည်း၊ Data Scientists များသည် တူညီသော S3 data ပေါ်တွင် Python/Spark လိုအပ်သည်) $\rightarrow$ **Athena SQL for analysts, Athena Spark for scientists**.
+> **Key Exam Decision Triggers for Athena for Apache Spark**:
+>
+> - **"Need to run interactive PySpark code or Jupyter Notebooks instantly without waiting for clusters to start"** (Cluster များ စတင်ရန် စောင့်ဆိုင်းစရာမလိုဘဲ interactive PySpark code သို့မဟုတ် Jupyter Notebooks များကို ချက်ချင်း run ရန် လိုအပ်သည်) $\rightarrow$ **Amazon Athena for Apache Spark**။
+> - **"Data Analysts use SQL, but Data Scientists need Python/PySpark on the exact same S3 data lake"** (Data Analyst များသည် SQL ကို အသုံးပြုပြီး Data Scientist များသည် ထို S3 data lake ပေါ်တွင်ပင် Python/PySpark လိုအပ်သည်) $\rightarrow$ **Analyst များအတွက် Athena SQL ၊ Data Scientist များအတွက် Athena for Apache Spark**။
+> - **"Execute ad-hoc statistical data exploration in Python with sub-second startup latency"** (Sub-second startup latency ဖြင့် Python တွင် ad-hoc statistical data exploration ပြုလုပ်ရန်) $\rightarrow$ **Amazon Athena for Apache Spark**။
 
 > [!WARNING]
-> **Exam Trap**:
-> **အချိန်ကြာမြင့်စွာ run ရသော scheduled ETL pipelines များ** အတွက် Athena for Apache Spark ကို အသုံးမပြုပါနှင့်။ ၎င်းသည် နည်းပညာအရ code ကို run နိုင်သော်လည်း၊ **AWS Glue ETL** သည် scheduled batch processing အတွက် သင့်လျော်၍ scalable ဖြစ်သော service ဖြစ်ပါသည်။ Athena Spark သည် *interactive exploration* အတွက်သာ ဖြစ်ပါသည်။
+> **Critical Exam Trap**:
+> - **Mission-critical ဖြစ်ပြီး schedule ချထားသော production ETL pipelines များအတွက် Athena for Apache Spark ကို အသုံးမပြုပါနှင့်**။ ၎င်းသည် Spark code ကို run နိုင်သော်လည်း၊ **AWS Glue ETL Jobs** သည် production batch pipelines များအတွက် ရည်ရွယ်တည်ဆောက်ထားသော purpose-built service ဖြစ်ပါသည် (Job Bookmarks၊ Glue Workflows integration နှင့် automated retries များ ပါဝင်သောကြောင့် ဖြစ်သည်)။
 
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Athena Overview
-- `[[glue-etl-jobs]]` — Production Spark ETL အတွက် ပိုမိုသင့်လျော်ပါသည်
-- `[[emr]]` — Persistent Spark clusters များအတွက် ပိုမိုသင့်လျော်ပါသည်
+- `[[athena]]` — Amazon Athena Overview & Architecture
+- `[[glue-etl-jobs]]` — Production Serverless Spark ETL
+- `[[emr]]` — Massive-Scale Spark Clusters များအတွက် Amazon EMR
+- `[[domain-3-data-processing]]` — Distributed Processing Patterns

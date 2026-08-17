@@ -1,92 +1,184 @@
 ---
-title: Athena CTAS (Create Table As Select)
+title: Athena CTAS & UNLOAD Statements
 type: aws-service
 category: Analytics
 tags:
   - aws/service
   - dea-c01
   - analytics/athena
+  - ctas
+  - unload
   - etl
 date: 2026-08-17
 ---
 
-# 🔄 Athena CTAS (Create Table As Select)
+# 🔄 Athena CTAS & UNLOAD Statements (Serverless Lightweight ETL)
 
-- **Category**: Analytics / Lightweight ETL
+- **Category**: Analytics / Lightweight Serverless ETL & Data Transformation
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-ctas)
-- **Primary Use Case**: Performing lightweight data transformations (ETL) using SQL to convert, partition, and compress data in S3.
-- **Hub Links**: `[[index]]` | `[[athena]]` | `[[glue-etl-jobs]]`
+- **Primary Use Case**: Performing lightweight SQL-based ETL to transform, compress, partition, and export datasets in S3 without managing Spark clusters.
+- **Slide Reference**: Pages 365–382 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Hub Links**: `[[index]]` | `[[athena]]` | `[[glue-etl-jobs]]` | `[[data-formats-and-compression]]`
 
 ---
 
 ## 1. High-Level Summary
 
-**CTAS (Create Table As Select)** is a standard SQL statement supported by Amazon Athena. It allows you to run a query on an existing table and save the output of that query as a **completely new table** in Amazon S3, automatically adding the new table to the AWS Glue Data Catalog.
+**CTAS (Create Table As Select)** is a standard ANSI SQL statement supported by Amazon Athena that runs a query on an existing table and saves the result as a **new, fully managed table** in Amazon S3, automatically adding its schema and partition metadata into the **[[glue-data-catalog]]**.
 
-This makes Athena a powerful tool for **Lightweight ETL** (Extract, Transform, Load) operations without needing to provision Spark clusters or write complex Python/Scala code.
+Alongside CTAS, Athena provides the **`UNLOAD`** statement, which extracts query results directly into S3 in desired formats (Parquet, ORC, Avro, JSON, CSV) with partitioning and compression **without creating a table definition in the Data Catalog**.
+
+Together, CTAS and UNLOAD enable powerful **Serverless Lightweight ETL** pipelines using pure SQL, eliminating the need to write PySpark code or provision compute infrastructure for simple data conversions.
+
+```mermaid
+graph TD
+    subgraph RawData["Raw Landing Zone"]
+        RawCSV["Raw S3 Files (CSV / JSON / Text)"]
+    end
+
+    subgraph AthenaETL["Athena Serverless SQL Engine"]
+        CTAS["CTAS Query (SQL Filters, Type Casting, Joins, Aggregations)"]
+        UNLOADStmt["UNLOAD Statement (Data Extraction & Export)"]
+    end
+
+    subgraph CuratedLake["Curated Target Storage"]
+        CatalogTable["New Table in Glue Data Catalog"]
+        ParquetData[("Optimized S3 Storage (Snappy Parquet / Partitions)")]
+        ExportBucket[("Downstream S3 Export Bucket")]
+    end
+
+    RawCSV --> CTAS
+    RawCSV --> UNLOADStmt
+
+    CTAS --> CatalogTable
+    CTAS --> ParquetData
+    UNLOADStmt --> ExportBucket
+
+    classDef raw fill:#8b5cf6,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef engine fill:#3b82f6,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef target fill:#10b981,stroke:#fff,stroke-width:1px,color:#fff;
+
+    class RawCSV raw;
+    class CTAS,UNLOADStmt engine;
+    class CatalogTable,ParquetData,ExportBucket target;
+```
 
 ---
 
-## 2. Core Capabilities & Use Cases
+## 2. Core Capabilities & Syntax Deep Dive
 
-### 1. Data Format Conversion (CSV $\rightarrow$ Parquet)
-If you receive raw CSV data, querying it repeatedly is slow and expensive. You can use a CTAS query to select the CSV data and write it out as compressed Parquet.
-
-```sql
-CREATE TABLE new_parquet_table
-WITH (
-  format = 'PARQUET',
-  parquet_compression = 'SNAPPY',
-  external_location = 's3://my-bucket/optimized-data/'
-) AS
-SELECT * FROM raw_csv_table;
-```
-
-### 2. Partitioning Data
-You can restructure unpartitioned data into a partitioned directory structure in S3 to optimize future queries.
+### 1. Data Format Conversion & Partitioning via CTAS
 
 ```sql
-CREATE TABLE partitioned_sales
+CREATE TABLE curated_orders_parquet
 WITH (
-  format = 'PARQUET',
-  partitioned_by = ARRAY['year', 'month']
-) AS
-SELECT order_id, total, year, month FROM raw_sales;
-```
+    -- 1. Specify target storage format
+    format = 'PARQUET',
+    parquet_compression = 'SNAPPY',
 
-### 3. Data Cleansing & Aggregation
-You can filter out null records, join tables, or pre-calculate daily aggregations, saving the cleaned/aggregated dataset as a new table for business analysts to query quickly.
+    -- 2. Define S3 partition hierarchy
+    partitioned_by = ARRAY['order_year', 'order_month'],
+
+    -- 3. Define hash-based bucketing for fast joins
+    bucketed_by = ARRAY['customer_id'],
+    bucket_count = 10,
+
+    -- 4. Custom destination S3 location
+    external_location = 's3://my-analytics-lake/curated/orders/'
+) AS
+SELECT 
+    order_id,
+    customer_id,
+    amount,
+    status,
+    year AS order_year,
+    month AS order_month
+FROM raw_orders_csv
+WHERE status != 'CANCELLED';
+```
 
 ---
 
-## 3. CTAS vs. AWS Glue ETL
+### 2. Appending Incremental Data (`INSERT INTO`)
 
-When should you use Athena CTAS vs. AWS Glue?
+Once a CTAS table is created, you can append subsequent daily or hourly batches to the existing table using standard `INSERT INTO` statements:
 
-| Feature | Athena CTAS | AWS Glue ETL (Spark) |
+```sql
+INSERT INTO curated_orders_parquet
+SELECT 
+    order_id,
+    customer_id,
+    amount,
+    status,
+    year AS order_year,
+    month AS order_month
+FROM raw_orders_csv
+WHERE order_year = '2026' AND order_month = '09';
+```
+
+---
+
+### 3. The `UNLOAD` Statement (Exporting without Catalog Tables)
+
+If you need to transform and export query results to S3 for a third-party team or downstream system, but **do not want to create or pollute the Glue Data Catalog** with a new table definition, use `UNLOAD`:
+
+```sql
+UNLOAD (
+    SELECT 
+        customer_id, 
+        SUM(amount) AS total_spend, 
+        country
+    FROM raw_orders_csv
+    GROUP BY customer_id, country
+)
+TO 's3://export-bucket/customer_aggregates/'
+WITH (
+    format = 'PARQUET',
+    compression = 'SNAPPY',
+    partitioned_by = ARRAY['country']
+);
+```
+
+---
+
+## 3. CTAS Constraints & Rules for DEA-C01
+
+| Constraint / Limit | Description | DEA-C01 Remediation |
 | :--- | :--- | :--- |
-| **Skill Required** | Standard SQL | Python (PySpark) / Scala |
-| **Complexity Limit** | Simple joins, filters, format conversion | Complex, multi-step transformations, ML transforms |
-| **Execution Limit** | Fails if query takes > 30 minutes | Can run for hours (supports massive datasets) |
-| **Cost** | Charged per TB scanned | Charged per DPU-hour (Compute time) |
+| **100 Partitions Limit** | A single CTAS query can generate at most **100 partitions**. If a query attempts to write 101+ partitions, it fails with `EXCEEDED_MAX_WRITER_PARTITIONS`. | 1. Break the CTAS into multiple smaller runs using `WHERE` clauses (e.g., write year-by-year).<br>2. Use **AWS Glue ETL Jobs** for massive multi-partition writes. |
+| **30-Minute Timeout** | Athena queries time out after **30 minutes** of continuous execution. | Optimize query with partition pruning, or use AWS Glue / EMR. |
+| **Read/Write Pricing** | Billed standard **$5.00 per TB scanned** for the `SELECT` query + standard S3 storage and `PUT` request costs for files written. | Use columnar input data to minimize scan charges. |
 
 ---
 
-## 4. DEA-C01 Exam Tips & Scenarios
+## 4. Comparison Matrix: Athena CTAS vs. AWS Glue ETL vs. Amazon EMR
+
+| Feature | Athena CTAS | AWS Glue ETL Jobs | Amazon EMR |
+| :--- | :--- | :--- | :--- |
+| **Language / Skill** | **ANSI SQL** | **PySpark, Scala, Python** | **Spark, Hive, Flink, Presto** |
+| **Infrastructure Management** | **100% Serverless** | **Serverless (Configurable DPUs)** | **Managed Clusters (EC2 / EKS)** |
+| **Partitioning Capacity** | Up to **100 partitions** per query | Unlimited partitions | Unlimited partitions |
+| **Transformation Complexity** | Simple SQL filters, joins, aggregations, format conversion | Complex multi-stage DAGs, ML transforms, fuzzy matching | Highly customized big data, petabyte-scale graph processing |
+| **Timeout Limit** | **30 minutes** | Configurable (Default 48 hours) | Unlimited |
+| **Cost Model** | $5/TB data scanned | Per DPU-second consumed | EC2 instance hours + EMR software fee |
+
+---
+
+## 5. DEA-C01 Exam Tips & Scenarios
 
 > [!IMPORTANT]
-> **Key Exam Trigger Keywords**:
-> - **"Convert CSV data to Parquet using only SQL without managing servers"** $\rightarrow$ **Use Athena CTAS**.
-> - **"Create a subset of a massive table for analysts to query faster and cheaper"** $\rightarrow$ **Use an Athena CTAS query with aggregation**.
-> - **"Transform data in S3 but the team only knows SQL"** $\rightarrow$ **Use Athena CTAS**.
-
-> [!WARNING]
-> **Exam Trap**:
-> - Do not use Athena CTAS for complex ETL logic that requires thousands of transformations or takes hours to process. For heavy ETL, the exam answer will be **AWS Glue ETL** or **Amazon EMR**.
+> **Key Exam Decision Triggers for Athena CTAS & UNLOAD**:
+>
+> - **"Convert raw CSV data in S3 to Snappy-compressed Parquet using pure SQL without provisioning clusters"** $\rightarrow$ **Amazon Athena CTAS query**.
+> - **"Export aggregated query results to S3 in Parquet format partitioned by country without creating a Data Catalog table"** $\rightarrow$ **Amazon Athena `UNLOAD` statement**.
+> - **"CTAS query fails with `EXCEEDED_MAX_WRITER_PARTITIONS` error"** $\rightarrow$ The query attempted to create more than **100 partitions**; split the query into smaller date ranges or use **AWS Glue ETL**.
+> - **"Transform data in S3 but the team has no Python/Spark skills and knows only standard SQL"** $\rightarrow$ **Athena CTAS**.
+> - **"Perform complex ETL involving fuzzy deduplication and machine learning transforms"** $\rightarrow$ *DO NOT use Athena CTAS; use **AWS Glue ETL (`FindMatches`)***.
 
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Athena Overview
-- `[[glue-etl-jobs]]` — Heavyweight Spark ETL
-- `[[athena-performance]]` — Why Parquet and partitioning matter
+- `[[athena]]` — Amazon Athena Overview
+- `[[athena-performance]]` — Why Columnar Formats Matter
+- `[[glue-etl-jobs]]` — Heavyweight PySpark ETL Alternatives
+- `[[data-formats-and-compression]]` — Parquet, ORC & Compression
