@@ -10,32 +10,39 @@ tags:
   - event-driven
   - sam
   - burmese
-date: 2026-08-15
+date: 2026-08-14
 ---
 
-# ⚡ AWS Lambda (Serverless Event-Driven Compute & Data Transformation) (ဆာဗာမဲ့ အစီအစဉ်မောင်းနှင် ဒေတာပြုပြင်ခြင်း)
+# ⚡ AWS Lambda (Serverless Event-Driven Compute & Data Transformation)
 
 - **Category**: Compute (Serverless Compute & Event-Driven Processing)
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/compute-containers/lambda.md) | **မြန်မာဘာသာ (Burmese)**
-- **အဓိက အသုံးပြုမှု**: Real-time event-driven data processing၊ `[[kinesis]]` နှင့် `[[msk-kafka]]` တို့မှ streaming micro-batching ရယူခြင်း၊ lightweight ETL၊ S3 file ingestion triggers များနှင့် workflow orchestration glue အဖြစ် အသုံးပြုခြင်း။
-- **Slide Reference**: Pages 289–310 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: `[[mm/index]]` | `[[en/index]]` | `[[kinesis]]` | `[[s3]]` | `[[dynamodb]]` | `[[redshift]]` | `[[efs-and-fsx]]` | `[[step-functions]]`
+- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/compute-containers/lambda.md) | **မြန်မာဘာသာ (Burmese)**
+- **Primary Use Case**: Real-time event-driven data processing, [[kinesis]] နှင့် [[msk-kafka]] တို့မှ streaming micro-batching လုပ်ခြင်း၊ ပေါ့ပါးသော ETL၊ S3 file ingestion triggers များနှင့် workflow orchestration glue အဖြစ် အသုံးပြုခြင်း။
+- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 289–310 
+- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[kinesis]] | [[s3]] | [[dynamodb]] | [[redshift]] | [[efs-and-fsx]] | [[step-functions]]
 
 ---
 
-## ၁။ အကျဉ်းချုပ် (High-Level Summary)
+## 1. High-Level Summary
 
-**AWS Lambda** သည် ဆာဗာများကို ကြိုတင်စီမံခန့်ခွဲရန် မလိုဘဲ Event (ဖြစ်ရပ်များ) အပေါ် အခြေခံ၍ Code များကို အလိုအလျောက် မောင်းနှင်ပေးသည့် Fully Managed Serverless Compute ဝန်ဆောင်မှု ဖြစ်သည်။ Lambda သည် သုညမှ Concurrent Execution ထောင်သောင်းချီအထိ အလိုအလျောက် Scale လုပ်ပေးပြီး Code စတင်လည်ပတ်သည့် ကြာချိန်ကို 1-millisecond အဆင့်အထိ တိကျစွာ တွက်ချက်ခွင့်ပြုသည်။
+**AWS Lambda** သည် server များကို provision လုပ်ခြင်း သို့မဟုတ် စီမံခန့်ခွဲခြင်းများ မလိုအပ်ဘဲ event များတုံ့ပြန်မှုအဖြစ် code ကို run ပေးသော fully managed, event-driven serverless compute service တစ်ခုဖြစ်ပါသည်။ Lambda သည် သုညမှ သောင်းနှင့်ချီသော concurrent executions အထိ အလိုအလျောက် scale လုပ်ပေးနိုင်ပြီး 1-millisecond အပိုင်းအခြားဖြင့် compute ကြာမြင့်ချိန် (duration) ကိုသာ တိကျစွာ ငွေကောက်ခံပါသည်။
 
-Data Engineering စနစ်များတွင် AWS Lambda သည် မရှိမဖြစ် **Event-Driven Glue** အဖြစ် အောက်ပါနေရာများတွင် အလုပ်လုပ်သည်-
-1. **Real-Time File Processing**: `[[s3]]` ပေါ်သို့ ဖိုင်အသစ် ရောက်ရှိလာသည့် Event (`s3:ObjectCreated:*`) ဖြင့် ချက်ချင်း အလုပ်လုပ်ပြီး Validation၊ Decompression သို့မဟုတ် Metadata ခွဲထုတ်ခြင်း။
-2. **Stream Processing & Micro-Batching**: `[[kinesis]]` Data Streams၊ `[[dynamodb]]` Streams နှင့် `[[msk-kafka]]` တို့မှ Record များကို Batch လိုက် ဖတ်ယူသန့်စင်ခြင်း။
-3. **Data Lake Hydration & Data Warehouse Loading**: `[[redshift]]` သို့ `COPY` command များ လှမ်းခေါ်ခြင်း သို့မဟုတ် `[[glue]]` Data Catalog တွင် Metadata Update ပြုလုပ်ခြင်း။
-4. **Database Event Streaming**: Operational Database များမှ Change Events များကို `[[opensearch]]` သို့ ရှာဖွေနိုင်ရန် ပို့ပေးခြင်း သို့မဟုတ် `[[sqs-and-sns]]` ဖြင့် Alert ထုတ်ပေးခြင်း။
+Data engineering architectures များတွင် AWS Lambda သည် မရှိမဖြစ်လိုအပ်သော **event-driven glue** အဖြစ် လုပ်ဆောင်ပေးပါသည်-
+1. **Real-Time File Processing**: Validate လုပ်ရန်၊ decompress လုပ်ရန် သို့မဟုတ် metadata ထုတ်ယူရန် [[s3]] object creation events (`s3:ObjectCreated:*`) ဖြင့် ချက်ချင်း trigger လုပ်ပါသည်။
+2. **Stream Processing & Micro-Batching**: [[kinesis]] Data Streams, [[dynamodb]] Streams, နှင့် [[msk-kafka]] တို့မှ streaming records များကိုဖတ်ရှုပြီး transform လုပ်ပါသည်။
+3. **Data Lake Hydration & Data Warehouse Loading**: [[redshift]] အတွင်းသို့ bulk `COPY` commands ကို အစပျိုးပေးခြင်း သို့မဟုတ် [[glue]] Data Catalog တွင် metadata ကို update လုပ်ပေးခြင်း။
+4. **Database Event Streaming**: Operational databases များမှ change events များကို [[opensearch]] ကဲ့သို့သော search indexes များသို့ ပွားယူခြင်း သို့မဟုတ် [[sqs-and-sns]] မှတစ်ဆင့် alerting topics များသို့ပေးပို့ခြင်း။
+
+**AWS Certified Data Engineer – Associate (DEA-C01)** exam အတွက် သင် ကျွမ်းကျင်ထားရမည့်အချက်များ-
+- **Invocation Models**: Synchronous နှင့် Asynchronous အပြင် Event Source Mapping (Stream/Queue Polling) အကြောင်း။
+- **Stream Ingestion Tuning**: Batch size, batching window, parallelization factor, error handling (`BisectBatchOnFunctionError`), နှင့် tumbling windows.
+- **Compute Limits & Storage**: တင်းကျပ်သော **15-minute execution limit**, memory allocation (128 MB မှ 10 GB အထိ), ephemeral storage (`/tmp` 10 GB အထိ), နှင့် multi-gigabyte persistent storage အတွက် **Amazon EFS** ကို mount လုပ်ခြင်း။
+- **Concurrency & Cold Starts**: Reserved နှင့် Provisioned Concurrency ကြားကွာခြားချက်များ။
+- **AWS SAM (Serverless Application Model)**: Serverless data pipelines များကို local နှင့် AWS တွင် deploy လုပ်ခြင်း။
 
 ```mermaid
 graph TB
-    subgraph EventSources["Event Sources (အစပျိုး အကြောင်းရင်းများ)"]
+    subgraph EventSources["Event Sources (Invocation Models)"]
         subgraph AsyncSources["(1) Asynchronous Triggers"]
             S3Event["Amazon S3<br/>(s3:ObjectCreated:*)"]
             SNSEvent["Amazon SNS Topics"]
@@ -99,31 +106,33 @@ graph TB
 
 ---
 
-## ၂။ နည်းပညာဆိုင်ရာ ကန့်သတ်ချက်များ (Compute Limits & Specs)
+## 2. Technical Specifications & Compute Limits
 
-| Parameter / Resource | ကန့်သတ်ချက် (Limit) | Data Engineering အတွက် အရေးပါပုံ |
+| Parameter / Resource | Hard / Soft Limit | Data Engineering Significance |
 | :--- | :--- | :--- |
-| **Max Execution Timeout** | **15 minutes (900 seconds)** | **Strict Hard Limit**: ၁၅ မိနစ်ထက် ကြာသော Spark သို့မဟုတ် ကြီးမားသည့် ETL များသည် `[[glue]]`၊ `[[emr]]`၊ `[[batch]]` သို့မဟုတ် `[[ecr-ecs-eks]]` ပေါ်တွင် run ရမည်။ |
-| **Memory Allocation** | **128 MB မှ 10,240 MB (10 GB)** | 1 MB စီ တိုးမြှင့်နိုင်သည်။ **CPU သည် Memory အချိုးအစားအလိုက် အလိုအလျောက် တိုးတက်လာသည်** (1,769 MB တွင် 1 vCPU ရရှိပြီး 10 GB တွင် 6 vCPUs အထိ ရရှိသည်)။ |
-| **Ephemeral Storage (`/tmp`)** | **512 MB မှ 10,240 MB (10 GB)** | Local ယာယီသိုလှောင်မှု။ ဖိုင်ကြီးများကို S3 သို့ မတင်မီ ဒေါင်းလုဒ်ဆွဲခြင်း၊ Uncompress လုပ်ခြင်းတို့အတွက် အသုံးပြုသည်။ |
-| **Direct Deployment Package Size** | **50 MB** (zipped) / **250 MB** (unzipped) | Function Code နှင့် Unzipped Library များ စုစုပေါင်း အရွယ်အစား။ |
-| **Container Image Deployment** | **Up to 10 GB** | Docker Container အဖြစ် `[[ecr-ecs-eks]]` (ECR) မှတစ်ဆင့် တင်သွင်းနိုင်သည်။ ကြီးမားသော ML Packages (PyTorch, TensorFlow) များအတွက် အထူးသင့်လျော်သည်။ |
-| **Lambda Layers** | Max **5 layers** per function | မျှဝေသုံးစွဲနိုင်သော Library များ (`awswrangler`, `numpy`, `pandas`)။ |
-| **Default Regional Concurrency** | **1,000 concurrent executions** | Region တစ်ခုအတွင်း Default ကန့်သတ်ချက် (Quota တောင်းခံ၍ တိုးမြှင့်နိုင်သည်)။ |
+| **Max Execution Timeout** | **15 minutes (900 seconds)** | **Strict Hard Limit**: 15 မိနစ်ထက်ကျော်လွန်သော long-running Spark သို့မဟုတ် custom ETL jobs များကို [[glue]], [[emr]], [[batch]], သို့မဟုတ် [[ecr-ecs-eks]] တွင်မဖြစ်မနေ run ရပါမည်။ |
+| **Memory Allocation** | **128 MB မှ 10,240 MB (10 GB) အထိ** | 1 MB တိုးနှုန်းများဖြင့် configure လုပ်နိုင်သည်။ **CPU သည် memory နှင့်အချိုးကျစွာ scale လုပ်ပါသည်** (1,769 MB တွင် Lambda သည် full vCPU 1 ခုကို ခွဲဝေချထားပေးပြီး၊ 10 GB တွင် 6 vCPUs အထိ ရရှိပါသည်)။ |
+| **Ephemeral Storage (`/tmp`)** | **512 MB မှ 10,240 MB (10 GB) အထိ** | Configure လုပ်နိုင်သော local scratch disk space ဖြစ်သည်။ S3 သို့ upload မလုပ်မီ multi-gigabyte files များကို local တွင် download, uncompress နှင့် process လုပ်ရန်အတွက် မရှိမဖြစ်လိုအပ်ပါသည်။ |
+| **Direct Deployment Package Size** | **50 MB** (zipped) / **250 MB** (unzipped) | Code နှင့် unzipped dependencies များပါဝင်ပါသည်။ |
+| **Container Image Deployment** | **10 GB အထိ** | [[ecr-ecs-eks]] (Amazon ECR) တွင်သိမ်းဆည်းထားသော Docker container အနေဖြင့် package လုပ်ထားသည်။ ကြီးမားသော ML packages များ (TensorFlow, PyTorch) သို့မဟုတ် custom C++ libraries များအတွက် အထူးသင့်လျော်ပါသည်။ |
+| **Lambda Layers** | Function တစ်ခုလျှင် အများဆုံး **5 layers** | Shared reusable libraries များ (ဥပမာ AWS SDK, `awswrangler`, `numpy`, `pandas`) ဖြစ်သည်။ Function ၏ unzipped size စုစုပေါင်းနှင့် layers အားလုံးပေါင်းသည် 250 MB ထက် မကျော်လွန်ရပါ။ |
+| **Default Regional Concurrency** | **1,000 concurrent executions** | AWS Region တစ်ခုအတွက် Soft limit (quota request မှတစ်ဆင့် တိုးမြှင့်နိုင်ပါသည်)။ |
 
 ---
 
-## ၃။ Invocation Models & Error Handling (ခေါ်ယူအသုံးပြုမှု ပုံစံများနှင့် အမှားစီမံခန့်ခွဲမှု)
+## 3. Lambda Invocation Models & Error Handling
+
+Data pipeline ယုံကြည်စိတ်ချရမှုအတွက် invocation models သုံးခုကို နားလည်ထားရန် အရေးကြီးပါသည်-
 
 ```mermaid
 graph TD
     InvocationType{Choose Invocation Model}
 
-    InvocationType -->|"(1) Synchronous Invocation"| Sync["Synchronous (Request-Response)<br/>• Client သည် Response ပြန်လာသည်အထိ စောင့်ဆိုင်းရသည်<br/>• ဥပမာ- API Gateway, Kinesis Firehose Transform<br/>• Error ဖြစ်ပါက Client ဘက်မှ Retry လုပ်ရသည်"]
+    InvocationType -->|"(1) Synchronous Invocation"| Sync["Synchronous (Request-Response)<br/>• Caller waits for function response<br/>• Examples: API Gateway, Cognito, Kinesis Firehose Transform<br/>• Error Handling: Client is responsible for retrying"]
 
-    InvocationType -->|"(2) Asynchronous Invocation"| Async["Asynchronous (Event Queue)<br/>• Event ကို Internal Queue သို့ ပို့ပြီး 202 Accepted ချက်ချင်းပြန်ပေးသည်<br/>• ဥပမာ- S3 Events, SNS, EventBridge<br/>• Error ဖြစ်ပါက အလိုအလျောက် ၂ ကြိမ် Retry လုပ်ပြီး DLQ သို့ ပို့သည်"]
+    InvocationType -->|"(2) Asynchronous Invocation"| Async["Asynchronous (Event Queue)<br/>• Lambda places event in internal queue and returns 202 Accepted<br/>• Examples: S3 Events, SNS, EventBridge, CloudWatch Logs<br/>• Error Handling: Built-in 2 retries, then routes to DLQ / Lambda Destination"]
 
-    InvocationType -->|"(3) Event Source Mapping"| ESM["Event Source Mapping (Poller)<br/>• Lambda Service ကိုယ်တိုင် Stream/Queue ကို ပုံမှန်သွားရောက်ဖတ်ရှုသည်<br/>• ဥပမာ- Kinesis Data Streams, DynamoDB Streams, SQS, MSK<br/>• BisectBatch, DestinationOnFailure ဖြင့် Error ထိန်းချုပ်နိုင်သည်"]
+    InvocationType -->|"(3) Event Source Mapping"| ESM["Event Source Mapping (Poller)<br/>• Lambda polls data source and invokes handler with batch<br/>• Examples: Kinesis Data Streams, DynamoDB Streams, SQS, MSK<br/>• Error Handling: Configurable retries, BisectBatch, DestinationOnFailure"]
 
     classDef model fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     class Sync,Async,ESM model;
@@ -131,16 +140,18 @@ graph TD
 
 ### Event Source Mapping Stream Controls (Kinesis & DynamoDB Streams)
 
+Lambda ဖြင့် streaming data များကို process လုပ်သောအခါ၊ poison pill records များမှ stream partitions များကို ရပ်တန့်မသွားစေရန် fine-grained batching နှင့် retry parameters များက ကာကွယ်ပေးပါသည်-
+
 ```mermaid
 graph LR
     Shard["Kinesis Shard / Partition"] -->|"Polled by Lambda Service"| ESM["Event Source Mapping"]
-    ESM -->|"Batch Size (ဥပမာ 100) OR Batch Window (ဥပမာ 60s)"| LambdaExec["Lambda Function Execution"]
+    ESM -->|"Batch Size (e.g. 100 records) OR Batch Window (e.g. 60s)"| LambdaExec["Lambda Function Execution"]
     
     LambdaExec -->|"Success"| Commit["Advance Shard Checkpoint"]
     LambdaExec -->|"Error Occurs"| BisectCheck{"BisectBatchOnFunctionError Enabled?"}
     
-    BisectCheck -->|"YES"| Split["Split Batch in Half (50 / 50)<br/>Sub-Batches များကို ပြန်စမ်း၍ Bad Record ကို ရှာဖွေသည်"]
-    BisectCheck -->|"NO"| RetryLoop["MaxRecordAge သို့မဟုတ် MaxRetries ပြည့်သည်အထိ အကုန်ပြန်စမ်းသည်"]
+    BisectCheck -->|"YES"| Split["Split Batch in Half (50 / 50)<br/>Retry Sub-Batches to Isolate Bad Record"]
+    BisectCheck -->|"NO"| RetryLoop["Retry Entire Batch until MaxRecordAge or MaxRetries"]
     
     Split --> Drop["Discard Bad Record to SQS/SNS Failure Destination"]
 
@@ -153,17 +164,24 @@ graph LR
     class Commit succ;
 ```
 
-#### အဓိက Streaming Tuning Parameters များ:
-1. **`BatchSize`**: Invocation တစ်ခုစီသို့ ပေးပို့မည့် အများဆုံး Record အရေအတွက် (1 မှ 10,000)။
-2. **`MaximumBatchingWindowInSeconds`**: Record မပြည့်မီ စောင့်ဆိုင်းမည့် အများဆုံးကြာချိန် (0 မှ 300 စက္ကန့်)။ Low-throughput အချိန်များတွင် Batch ဖွဲ့စည်းပေးခြင်းဖြင့် Cost သက်သာစေသည်။
-3. **`ParallelizationFactor`**: Shard တစ်ခုတည်းပေါ်တွင် **Concurrent Lambda Invocations ၁၀ ခုအထိ တစ်ပြိုင်နက် မောင်းနှင်နိုင်သည်** (Partition Key အလိုက် Order မပျက်စေပါ)။
-4. **`BisectBatchOnFunctionError`**: Error ဖြစ်သော Batch ကို ထက်ဝက်စီ အဆင့်ဆင့် ခွဲခြမ်းပြီး ပြဿနာဖြစ်စေသော Poison Pill Record တစ်ခုတည်းကို ရှာဖွေဖယ်ထုတ်ပေးသည်။
-5. **`DestinationOnFailure`**: ပျက်စီးနေသော Record များကို Amazon SQS သို့မဟုတ် SNS သို့ ပို့ဆောင်ပေးသည်။
-6. **`TumblingWindows`**: အချိန်အပိုင်းအခြားအလိုက် Continuous Window Aggregations (၁၅ မိနစ်အထိ) တွက်ချက်ပေးနိုင်သည်။
+#### Key Streaming Tuning Parameters:
+1. **`BatchSize`**: Invocation တစ်ခုတည်းတွင် function ထံသို့ ပေးပို့မည့် records အရေအတွက် အများဆုံး (1 မှ 10,000 အထိ)။
+2. **`MaximumBatchingWindowInSeconds`**: Lambda သည် function ကို invoke မလုပ်မီ records များကို buffer လုပ်မည့် အများဆုံးအချိန် (0 မှ 300 စက္ကန့်)။ ကုန်ကျစရိတ်နှင့် downstream database ရေးသားမှုများကို အကောင်းဆုံးဖြစ်စေရန် throughput နည်းပါးချိန်များတွင် micro-records များကို batch လုပ်နိုင်စေပါသည်။
+3. **`ParallelizationFactor`**: Throughput ကို scale လုပ်နေစဉ် partition key တစ်ခုချင်းစီအလိုက် in-order processing ကိုထိန်းသိမ်းထားပြီး **Kinesis shard တစ်ခုလျှင် အများဆုံး concurrent Lambda invocations 10 ခုအထိ** လုပ်ဆောင်နိုင်စေပါသည်။
+4. **`BisectBatchOnFunctionError`**: Shard တစ်ခုလုံးကို ရပ်တန့်မသွားစေဘဲ ပျက်စီးနေသော မှတ်တမ်းတစ်ခု ("poison pill") ကို ခွဲထုတ်နိုင်ရန် ကျရှုံးခဲ့သော batch တစ်ခုကို ထက်ဝက်နှစ်ခု အလိုအလျောက်ခွဲပြီး တစ်ခုစီကို ထပ်မံကြိုးစား (retry) လုပ်ဆောင်ပေးပါသည်။
+5. **`MaximumRecordAgeInSeconds` & `MaximumRetryAttempts`**: Stream စီးဆင်းမှုကို ပြန်လည်စတင်ရန် သက်တမ်းကုန်ဆုံးသွားသော streaming records များကို **Destination on Failure** (Amazon SQS သို့မဟုတ် SNS) သို့ ချန်လှပ် (drop) ထားခဲ့ပါသည်။
+6. **`TumblingWindows`**: Stateful tumbling window calculations များကို လုပ်ဆောင်နိုင်စေပါသည် (15 မိနစ်အထိ အဆက်မပြတ် tumbling time windows များပေါ်တွင် aggregations လုပ်ခြင်း)။
 
 ---
 
-## ၄။ Persistent Storage: Amazon EFS ချိတ်ဆက်မှု
+## 4. Lambda VPC Networking & Amazon EFS Mounting
+
+### 1. VPC Networking (ENI Architecture)
+- ပုံမှန်အားဖြင့် (By default), Lambda သည် public internet နှင့် public AWS endpoints များသို့ တိုက်ရိုက်ချိတ်ဆက်ခွင့်ရှိသော လုံခြုံသည့် AWS-managed VPC တစ်ခုအတွင်းတွင် အလုပ်လုပ်ပါသည်။
+- Private resources များ (ဥပမာ private subnets များအတွင်းရှိ Amazon RDS, Amazon Redshift, သို့မဟုတ် internal microservices) ကို ချိတ်ဆက်အသုံးပြုရန် Lambda function ကို **သင်၏ VPC အတွင်းရှိ private subnets များ** တွင် attach လုပ်ပါ။
+- **Important**: VPC-enabled Lambda function မှ public internet သို့ ချိတ်ဆက်နိုင်ရန်၊ public subnet တစ်ခုအတွင်းရှိ **NAT Gateway** မှတစ်ဆင့် traffic ကို route လုပ်ပါ။
+
+### 2. Persistent Storage: Amazon EFS Integration
 
 ```mermaid
 graph LR
@@ -183,31 +201,89 @@ graph LR
     class EFSStorage store;
 ```
 
-- Lambda သည် **EFS Access Point** မှတစ်ဆင့် **Amazon EFS** ကို NFSv4.1 POSIX File System အဖြစ် တိုက်ရိုက် Mount လုပ်နိုင်သည်။
-- **Data Engineering အကျိုးကျေးဇူး**: 10 GB `/tmp` ကန့်သတ်ချက်ကို ကျော်လွန်၍ ကြီးမားသော ML Model Weights များနှင့် မျှဝေသုံးစွဲရမည့် Reference Datasets များကို Lambda Invocations များစွာက တစ်ပြိုင်နက် ရယူနိုင်သည်။
+- Lambda သည် **EFS Access Point** မှတစ်ဆင့် **Amazon EFS** file systems များကို mount လုပ်နိုင်ပါသည်။
+- **Benefits for Data Engineering**:
+  - (10 GB `/tmp` limit ကိုကျော်လွန်ပြီး) **အကန့်အသတ်မရှိသော storage capacity** ဖြင့် မျှဝေအသုံးပြုနိုင်သော, အမြဲတည်ရှိနေမည့် (persistent) POSIX file system တစ်ခုကို ထောက်ပံ့ပေးပါသည်။
+  - တစ်ပြိုင်နက်လုပ်ဆောင်နေသော Lambda function invocations အများအပြားကို ကြီးမားသည့် machine learning model weights, search indexes, သို့မဟုတ် stateful reference datasets များအား မျှဝေအသုံးပြုနိုင်စေပါသည်။
 
 ---
 
-## ၅။ Concurrency စီမံခန့်ခွဲမှု: Reserved vs. Provisioned Concurrency
+## 5. Concurrency Management: Reserved vs. Provisioned Concurrency
 
 ```mermaid
 graph TD
-    ConcurrencyPool["Total Account Concurrency Limit (ဥပမာ 1,000)"]
+    ConcurrencyPool["Total Account Concurrency Limit (e.g. 1,000)"]
     
-    ConcurrencyPool --> Unreserved["Unreserved Concurrency Pool<br/>(Function အားလုံး မျှဝေသုံးစွဲသည်)"]
-    ConcurrencyPool --> Reserved["Reserved Concurrency<br/>🔒 သီးသန့် Capacity သတ်မှတ်ပေးသည်<br/>🛑 Downstream DB များ Connection မပြည့်စေရန် Limit လုပ်ပေးသည်"]
-    ConcurrencyPool --> Provisioned["Provisioned Concurrency<br/>⚡ Execution Environment များကို ကြိုတင် Initialize လုပ်ထားသည်<br/>❄️ Cold Start Latency ကို လုံးဝ ပပျောက်စေသည်"]
+    ConcurrencyPool --> Unreserved["Unreserved Concurrency Pool<br/>(Shared by default across all functions)"]
+    ConcurrencyPool --> Reserved["Reserved Concurrency<br/>🔒 Guaranteed dedicated slice of capacity<br/>🛑 Caps max concurrency to prevent overwhelming downstream DBs"]
+    ConcurrencyPool --> Provisioned["Provisioned Concurrency<br/>⚡ Pre-initializes execution environments<br/>❄️ Eliminates cold start latency completely"]
 
     classDef conc fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
     class ConcurrencyPool,Unreserved,Reserved,Provisioned conc;
 ```
 
-1. **Reserved Concurrency**: Function တစ်ခုအတွက် အများဆုံး Concurrency ပမာဏကို ကန့်သတ်ပေးသည်။ Downstream Relational Databases (`[[rds-and-aurora]]`) များ Connection မပြည့်လျှံစေရန် Rate Limiter / Circuit Breaker အဖြစ် သုံးသည်။
-2. **Provisioned Concurrency**: Execution Environment များကို ကြိုတင် ပြင်ဆင်ထားပေးခြင်းဖြင့် **Cold Start Latency ကို လုံးဝ ပပျောက်စေသည်**။
+1. **Reserved Concurrency**:
+   - တိကျသော function တစ်ခုအတွက် အများဆုံး concurrent execution instances အရေအတွက်ကို အာမခံချက်ဖြင့် သီးသန့်ဖယ်ထားပေးပါသည်။
+   - **Crucial Data Engineering Role**: အများအပြားသော events များ Lambda သို့ ဝင်ရောက်လာသည့်အခါ downstream transactional databases ([[rds-and-aurora]]) များကို connections ပြည့်သွားခြင်းမှ ကာကွယ်ပေးရန် **rate limiter (circuit breaker)** အနေဖြင့် လုပ်ဆောင်ပေးပါသည်။
+2. **Provisioned Concurrency**:
+   - တောင်းဆိုထားသော execution environments အရေအတွက်ကို ကြိုတင် (pre-initializes) ပြင်ဆင်ပေးပါသည် (code ကို download လုပ်ခြင်း, runtime ကို initialize လုပ်ခြင်း, initialization code များကို run ခြင်း)။
+   - Real-time APIs သို့မဟုတ် synchronous stream transformations များအတွက် **cold start latency** ကို လုံးဝပပျောက်စေပါသည်။
 
 ---
 
-## ၆။ Data Engineering Production Architecture Patterns
+## 6. AWS Serverless Application Model (AWS SAM)
+
+**AWS SAM** သည် serverless data architectures များကို သတ်မှတ်ရန်၊ တည်ဆောက်ရန်၊ စမ်းသပ်ရန်နှင့် deploy လုပ်ရန် AWS CloudFormation ကို တိုးချဲ့ထားသော open-source framework တစ်ခုဖြစ်ပါသည်-
+
+```mermaid
+graph LR
+    SAMTemplate["SAM Template (template.yaml)<br/>Transform: 'AWS::Serverless-2016-10-31'"] --> SAMBuild["sam build<br/>(Packages code & dependencies)"]
+    SAMBuild --> SAMLocal["sam local invoke / start-api<br/>(Local Docker testing)"]
+    SAMBuild --> SAMDeploy["sam deploy --guided<br/>(Generates CloudFormation Stack)"]
+    SAMDeploy --> AWSDeployed["Live AWS Serverless Infrastructure"]
+
+    classDef sam fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
+    class SAMTemplate,SAMBuild,SAMLocal,SAMDeploy,AWSDeployed sam;
+```
+
+### SAM Template Example for Event-Driven Ingestion:
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: 'S3 Ingestion & Redshift Copy Trigger'
+
+Resources:
+  DataIngestFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      Runtime: python3.11
+      MemorySize: 1024
+      Timeout: 60
+      Policies:
+        - S3ReadPolicy:
+            BucketName: raw-data-lake-bucket
+      Events:
+        S3FileUpload:
+          Type: S3
+          Properties:
+            Bucket: !Ref RawDataBucket
+            Events: s3:ObjectCreated:*
+            Filter:
+              S3Key:
+                Rules:
+                  - Name: suffix
+                    Value: .parquet
+
+  RawDataBucket:
+    Type: AWS::S3::Bucket
+```
+
+- **SAM Accelerate (`sam sync --watch`)**: လျင်မြန်သော cloud ဖွံ့ဖြိုးတိုးတက်မှုနှင့် စမ်းသပ်မှုအတွက် CloudFormation stack အပြည့်အစုံ update လုပ်ခြင်းကို ကျော်ဖြတ်ပြီး local code ပြောင်းလဲမှုများကို AWS သို့ real-time တိုက်ရိုက် synchronize လုပ်ပေးပါသည်။
+
+---
+
+## 7. Data Engineering Production Architecture Patterns
 
 ### Pattern A: Event-Driven Redshift Data Warehouse Bulk Ingestion
 
@@ -219,39 +295,53 @@ sequenceDiagram
     participant Lambda as Ingestion Lambda
     participant Redshift as Amazon Redshift Data Warehouse
 
-    Producer->>S3: (1) Uploads batch data file (sales_2026.parquet)
-    S3->>Lambda: (2) Emits s3:ObjectCreated:* notification event
+    Producer->>S3: 1. Uploads batch data file (e.g. sales_2026.parquet)
+    S3->>Lambda: 2. Emits s3:ObjectCreated:* notification event
     Note over Lambda: Anti-Pattern: Do NOT read file & run single-row INSERTs!
-    Lambda->>Redshift: (3) Executes Redshift Data API asynchronously:<br/>COPY sales FROM 's3://bucket/...' IAM_ROLE '...' FORMAT AS PARQUET
-    Redshift-->>Lambda: (4) Returns StatementId (Sub-second response)
-    Redshift->>S3: (5) Redshift MPP cluster reads S3 file in parallel at wire speed
+    Lambda->>Redshift: 3. Executes Redshift Data API asynchronously:<br/>COPY sales FROM 's3://bucket/...' IAM_ROLE '...' FORMAT AS PARQUET
+    Redshift-->>Lambda: 4. Returns StatementId (Sub-second response)
+    Redshift->>S3: 5. Redshift MPP cluster reads S3 file in parallel at wire speed
 ```
+
+### Pattern B: Real-Time Stream Ingestion & OpenSearch Log Indexing
+- **Scenario**: High-volume clickstream logs များသည် [[kinesis]] Data Streams အတွင်းသို့ စီးဝင်နေပါသည်။ Analytics dashboards များသည် စက္ကန့်ပိုင်းအတွင်း ရှာဖွေနိုင်သော documents များကို [[opensearch]] တွင် လိုအပ်ပါသည်။
+- **Architecture**:
+  - Kinesis Data Streams သည် log records များကို ဖမ်းယူပါသည်။
+  - Lambda Event Source Mapping သည် `BatchSize: 500` နှင့် `MaximumBatchingWindowInSeconds: 10` ဖြင့် Kinesis ကို poll လုပ်ပါသည်။
+  - Lambda သည် JSON records များကို transform လုပ်ပြီး၊ geolocation ကို ထုတ်ယူကာ Amazon OpenSearch Service ထဲသို့ bulk indexing requests များကို လုပ်ဆောင်ပါသည်။
+  - ကျရှုံးသွားသော records များကို `BisectBatchOnFunctionError: true` ဖြင့် SQS Dead Letter Queue သို့ ပို့ဆောင်ပေးပါသည်။
 
 ---
 
-## ၇။ DEA-C01 စာမေးပွဲ အဓိက အချက်အလက်များနှင့် ထောင်ချောက်များ (Exam Tips & Traps)
+## 8. High-Yield DEA-C01 Exam Tips & Traps
 
 > [!IMPORTANT]
 > **Key Exam Trigger Keywords**:
 > - **"Event-driven serverless processing triggered by S3 uploads or Kinesis streams"** $\rightarrow$ **AWS Lambda**.
-> - **"Loading large S3 files into Amazon Redshift via event trigger"** $\rightarrow$ **Lambda triggers Redshift `COPY` command via Redshift Data API** (Single SQL INSERT များ မသုံးရပါ!).
-> - **"Prevent poison pill records from blocking a Kinesis data stream"** $\rightarrow$ **Enable `BisectBatchOnFunctionError: true` and configure `DestinationOnFailure` (SQS/SNS)**.
+> - **"Loading large S3 files into Amazon Redshift via event trigger"** $\rightarrow$ **Lambda triggers Redshift `COPY` command via Redshift Data API** (Lambda အတွင်း line-by-line SQL `INSERT`s ကို ဘယ်တော့မှ မသုံးပါနှင့်!)။
+> - **"Prevent poison pill records from blocking a Kinesis data stream"** $\rightarrow$ **`BisectBatchOnFunctionError: true` ကို enable လုပ်ပြီး `DestinationOnFailure` (SQS/SNS) ကို configure လုပ်ပါ**။
 > - **"Eliminate cold start latency for critical Lambda workloads"** $\rightarrow$ **Provisioned Concurrency**.
-> - **"Prevent bursty Lambda invocations from exhausting relational database connections"** $\rightarrow$ **Reserved Concurrency သို့မဟုတ် Amazon RDS Proxy**.
-> - **"Serverless function requires multi-gigabyte shared ML model cache"** $\rightarrow$ **Attach Amazon EFS to Lambda via EFS Access Point**.
+> - **"Prevent bursty Lambda invocations from exhausting relational database connections"** $\rightarrow$ **Reserved Concurrency (acts as a throttling ceiling) သို့မဟုတ် Amazon RDS Proxy**.
+> - **"Serverless function requires multi-gigabyte shared ML model cache or shared file system"** $\rightarrow$ **EFS Access Point မှတစ်ဆင့် Amazon EFS ကို Lambda သို့ attach လုပ်ပါ**.
 
 > [!WARNING]
-> **Exam Traps (သတိထားရမည့် အချက်များ)**:
-> 1. **15-Minute Timeout Trap**: ၁၅ မိနစ်ထက် ကြာမည့် Batch လုပ်ငန်းစဉ်များအတွက် Lambda ကို မရွေးချယ်ရပါ; **AWS Batch**, **AWS Glue ETL**, သို့မဟုတ် **Amazon EMR** ကို ရွေးချယ်ပါ။
-> 2. **S3 Event Recursive Loop Trap**: Lambda Trigger ဖြစ်စေသော S3 Bucket/Prefix သို့ Output ပြန်ရေးမိပါက Infinite Loop ဖြစ်ပြီး Bill အဆမတန် တက်လာနိုင်သည်။ Output ကို အခြား Bucket သို့မဟုတ် Prefix အသစ်တွင် သိမ်းရမည်။
+> **Exam Traps & Failure Modes**:
+> 1. **The 15-Minute Execution Limit**:
+>    - Lambda functions များသည် **15 မိနစ် (စက္ကန့် 900) တွင် အလိုအလျောက် ရပ်တန့် (terminate) သွားပါသည်**။ အကယ်၍ စာမေးပွဲမေးခွန်းတစ်ခုသည် 30 မိနစ် သို့မဟုတ် နာရီအတော်ကြာ လုပ်ဆောင်ရသော batch processing task အကြောင်းကို ဖော်ပြနေပါက Lambda သည် အဖြေမှားဖြစ်ပါသည်၊ **AWS Batch**, **AWS Glue ETL**, သို့မဟုတ် **Amazon EMR** ကို ရွေးချယ်ပါ။
+> 2. **S3 Event Notification Recursion Trap**:
+>    - အကယ်၍ Lambda function သည် S3 bucket upload ဖြင့် အစပျိုး (trigger) လုပ်ခံရပြီး ၎င်း၏ output file ကို **တူညီသော prefix ရှိသည့် တူညီသော S3 bucket သို့** ပြန်လည်ရေးသားပါက၊ ၎င်းသည် **infinite recursive execution loop** ကို ဖြစ်စေပြီး ကြီးမားလှသော AWS bills များကို ဖြစ်ပေါ်စေပါသည်! အမြဲတမ်း output ကို ကွဲပြားသော bucket သို့မဟုတ် သီးခြားဖြစ်သော prefix သို့ ရေးသားပါ။
+> 3. **Asynchronous Retry Behavior**:
+>    - Asynchronous invocations (S3, SNS, EventBridge မှ) များသည် DLQ သို့ မပို့ဆောင်မီ ကျရှုံးမှုဖြစ်ပေါ်သောအခါ **နှစ်ကြိမ် အလိုအလျောက် retry** လုပ်ပါသည်၊ ထို့ကြောင့် retry လုပ်ခြင်းသည် downstream databases တွင် ပုံတူ records များကို မဖြစ်ပေါ်စေရန် functions များသည် **idempotent** ဖြစ်ရပါမည်။
 
 ---
 
-## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
+## 📌 Related Notes
 
-- `[[batch]]` — AWS Batch (၁၅ မိနစ်ထက် ကျော်လွန်သော Container Batch များ)
-- `[[glue]]` — AWS Glue Serverless Spark ETL
-- `[[emr]]` — Amazon EMR Distributed Big Data Clusters
-- `[[kinesis]]` — Amazon Kinesis Streaming Ingestion with Lambda
-- `[[s3-event-notifications]]` — S3 Event Notifications & EventBridge
-- `[[step-functions]]` — Step Functions ဖြင့် Multi-Step Lambda Workflows
+- [[batch]] — 15 မိနစ်ထက်ကျော်လွန်သော long-running containerized batch computing အတွက် AWS Batch
+- [[glue]] — Distributed serverless Spark ETL အတွက် AWS Glue
+- [[emr]] — Petabyte-scale distributed cluster processing အတွက် Amazon EMR
+- [[kinesis]] — Lambda consumers များဖြင့် streaming ingestion အတွက် Amazon Kinesis
+- [[s3-event-notifications]] — S3 Event Notifications နှင့် EventBridge integration
+- [[step-functions]] — Multi-step Lambda workflows များကို Orchestrating လုပ်ခြင်း
+- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
