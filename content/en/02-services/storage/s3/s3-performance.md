@@ -13,7 +13,7 @@ date: 2026-08-07
 # ⚡ Amazon S3 Performance & Optimization
 
 - **Category**: Storage / Performance Engineering
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/storage/s3/s3-performance.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-performance)
 - **Primary Use Case**: High-Throughput Analytics, Low-Latency Data Lake I/O, Large File Transfers
 - **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[domain-2-data-store-management]]

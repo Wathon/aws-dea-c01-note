@@ -13,7 +13,7 @@ date: 2026-08-15
 # 🛤️ AWS Glue Workflows
 
 - **Category**: Analytics / Orchestration
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/glue/glue-workflows.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-workflows)
 - **Primary Use Case**: Orchestrating and scheduling multiple Glue Crawlers, Glue Jobs, and triggers.
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[step-functions]]` | `[[mwaa-airflow]]`

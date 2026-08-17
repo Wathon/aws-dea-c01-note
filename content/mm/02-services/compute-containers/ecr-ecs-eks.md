@@ -19,7 +19,7 @@ date: 2026-08-14
 # 🐳 Amazon ECR, Amazon ECS & Amazon EKS (Containers & Kubernetes on AWS)
 
 - **Category**: Compute & Containers (Container Registry, Serverless Containers & Kubernetes Orchestration)
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/compute-containers/ecr-ecs-eks.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/ecr-ecs-eks) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Container image များကို Amazon ECR တွင် သိမ်းဆည်းခြင်း၊ containerized microservices များနှင့် data processing များကို Amazon ECS (EC2/Fargate) တွင် run ခြင်းနှင့် distributed big data engines (အထူးသဖြင့် **Amazon EMR on EKS**) များကို managed Kubernetes တွင် run ခြင်း။
 - **Slide Reference**: Pages 313–330 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-1-ingestion-and-processing]] | [[mm/batch]] | [[mm/lambda]] | [[mm/emr]] | [[mm/efs-and-fsx]] | [[mm/s3]] | [[mm/glue]] | [[mm/step-functions]]

@@ -14,7 +14,7 @@ date: 2026-08-15
 # 🎨 AWS Glue Studio (Visual ETL တည်ဆောက်ခြင်း)
 
 - **Category**: Analytics / Visual ETL & Monitoring
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/glue/glue-studio.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue-studio) | **မြန်မာဘာသာ (Burmese)**
 - **အဓိက အသုံးပြုမှု**: AWS Glue ETL jobs များကို Drag-and-drop ပြုလုပ်နိုင်သော Visual Interface ဖြင့် ရေးဆွဲခြင်း၊ Run ခြင်းနှင့် စောင့်ကြည့်စစ်ဆေးခြင်း။
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-etl-jobs]]`

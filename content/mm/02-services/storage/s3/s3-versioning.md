@@ -15,7 +15,7 @@ date: 2026-08-07
 # 🔄 Amazon S3 Versioning & MFA Delete
 
 - **Category**: Storage Protection & Data Governance
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/storage/s3/s3-versioning.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-versioning) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အမှတ်တမဲ့ ဖျက်မိခြင်းနှင့် အပေါ်မှထပ်ရေးမိခြင်းများမှ ကာကွယ်ခြင်း (Protection Against Accidental Overwrites & Deletions), ဘေးအန္တရာယ်မှ ပြန်လည်ကုစားခြင်း (Disaster Recovery), S3 Replication & Object Lock အတွက် ကြိုတင်လိုအပ်ချက်
 - **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[s3-security]] | [[s3-encryption]]

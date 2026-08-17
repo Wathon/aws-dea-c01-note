@@ -10,7 +10,7 @@ date: 2026-08-15
 
 # 🧠 AWS Certified Data Engineer – Associate (DEA-C01) မြန်မာဘာသာ လေ့လာရေးဗဟို
 
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/index.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/index) | **မြန်မာဘာသာ (Burmese)**
 - **မူရင်းသင်ရိုး Slides**: [AWSCertifiedDataEngineerSlides.pdf](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **လက်တွေ့ Lab ကုဒ်များနှင့် Datasets များ**: [Materials Directory](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/materials)
 - **လေ့လာမှု မှတ်တမ်း (Journal)**: [[journal/2026-07-28]]

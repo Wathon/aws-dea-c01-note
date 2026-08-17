@@ -14,7 +14,7 @@ date: 2026-08-15
 # 🛤️ AWS Glue Workflows (ETL အဆင့်များကို ချိတ်ဆက်ခြင်း)
 
 - **Category**: Analytics / Orchestration
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/glue/glue-workflows.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue-workflows) | **မြန်မာဘာသာ (Burmese)**
 - **အဓိက အသုံးပြုမှု**: Glue Crawlers များနှင့် Glue Jobs များစွာကို အစဉ်လိုက် ချိတ်ဆက်ပြီး (Orchestrate) အလိုအလျောက် အလုပ်လုပ်စေရန် စီမံခန့်ခွဲခြင်း။
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[step-functions]]` | `[[mwaa-airflow]]`

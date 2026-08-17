@@ -13,7 +13,7 @@ date: 2026-08-17
 # 🏛️ Amazon Athena Overview (မြန်မာဘာသာ)
 
 - **Category**: Analytics / Interactive Query
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/athena/athena.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Provisioning server များမလိုအပ်ဘဲ Amazon S3 data lake များပေါ်တွင် standard ANSI SQL ဖြင့် Interactive ad-hoc SQL query များကို တိုက်ရိုက်လုပ်ဆောင်ရန်။
 - **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 365–382
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-2-data-store-management]]` | `[[s3]]`

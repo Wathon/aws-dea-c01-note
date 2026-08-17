@@ -14,7 +14,7 @@ date: 2026-08-09
 # 💾 Amazon EBS & EC2 Instance Store
 
 - **Category**: Storage (Block Storage)
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/storage/ebs-and-instance-store.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/ebs-and-instance-store)
 - **Primary Use Case**: Block-level storage for EC2 compute instances, high-throughput intermediate scratch storage for big data processing, persistent volumes for databases, and streaming broker storage.
 - **Slide Reference**: Pages 139–154 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[s3]] | [[efs-and-fsx]]

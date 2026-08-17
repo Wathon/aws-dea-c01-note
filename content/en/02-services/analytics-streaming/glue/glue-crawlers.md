@@ -13,7 +13,7 @@ date: 2026-08-15
 # 🕷️ AWS Glue Crawlers
 
 - **Category**: Analytics / Automated Schema Discovery
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/glue/glue-crawlers.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-crawlers)
 - **Primary Use Case**: Automatic Schema Inference, Partition Detection, and Data Catalog Population.
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[glue-data-catalog]]` | `[[athena]]`

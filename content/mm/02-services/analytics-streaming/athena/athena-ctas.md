@@ -14,7 +14,7 @@ date: 2026-08-17
 # 🔄 Athena CTAS (Create Table As Select)
 
 - **Category**: Analytics / Lightweight ETL
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/athena/athena-ctas.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-ctas) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: S3 တွင်ရှိသော data များကို convert, partition နှင့် compress လုပ်ရန် SQL ကို အသုံးပြု၍ lightweight data transformations (ETL) ကို ဆောင်ရွက်ခြင်း။
 - **Hub Links**: `[[mm/index]]` | `[[mm/athena]]` | `[[mm/glue-etl-jobs]]`
 

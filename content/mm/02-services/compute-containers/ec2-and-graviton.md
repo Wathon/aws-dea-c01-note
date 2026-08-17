@@ -16,7 +16,7 @@ date: 2026-08-14
 # 🖥️ Amazon EC2 & AWS Graviton in Big Data (Purchasing Models & Arm Architecture)
 
 - **Category**: Compute (Virtual Machine Infrastructure, Spot Pricing & Arm Processors)
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/compute-containers/ec2-and-graviton.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/ec2-and-graviton) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: ကိုယ်ပိုင် hosting လုပ်ထားသော data platform များအတွက် Compute အဓိကအစိတ်အပိုင်း၊ [[emr]] cluster များ (Master, Core, Task nodes) အတွက် အခြေခံ instance ဖွဲ့စည်းပုံ၊ နှင့် [[msk-kafka]], [[rds-and-aurora]], [[opensearch]], နှင့် [[lambda]] တို့တွင် ကိုယ်ပိုင် **AWS Graviton** silicon ကို အသုံးပြု၍ ဈေးနှုန်း-စွမ်းဆောင်ရည် (price-performance) အမြင့်ဆုံးရယူခြင်း။
 - **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ စာမျက်နှာ 286–288
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[emr]] | [[batch]] | [[ecr-ecs-eks]] | [[lambda]]

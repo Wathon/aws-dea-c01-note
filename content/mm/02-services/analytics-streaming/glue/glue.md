@@ -13,7 +13,7 @@ date: 2026-08-15
 # 🧪 AWS Glue Overview (Serverless Data Integration & ETL)
 
 - **Category**: Analytics / Data Pipelines
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/glue/glue.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue) | **မြန်မာဘာသာ (Burmese)**
 - **အဓိက အသုံးပြုမှု**: Serverless ETL၊ Data Cataloging၊ Schema Discovery နှင့် Data Quality စစ်ဆေးခြင်းများအတွက် အဓိက Data Pipeline ဝန်ဆောင်မှု။
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[mm/index]]` | `[[en/index]]` | `[[domain-1-ingestion-and-processing]]`

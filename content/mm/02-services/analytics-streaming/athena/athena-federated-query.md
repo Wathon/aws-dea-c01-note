@@ -14,7 +14,7 @@ date: 2026-08-17
 # 🔗 Athena Federated Query
 
 - **Category**: Analytics / Data Integration
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/athena/athena-federated-query.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-federated-query) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon S3 *ပြင်ပ* တွင်သိမ်းဆည်းထားသောဒေတာများ (ဥပမာ - DynamoDB, Redshift, MySQL) ကို စံ SQL အသုံးပြု၍ Athena မှတိုက်ရိုက် Query ပြုလုပ်ခြင်း။
 - **Hub Links**: `[[mm/index]]` | `[[athena]]` | `[[dynamodb]]`
 

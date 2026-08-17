@@ -15,7 +15,7 @@ date: 2026-08-07
 # 🔒 Amazon S3 Encryption
 
 - **Category**: Security & Storage Governance
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/storage/s3/s3-encryption.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-encryption) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Data Protection at Rest & In Transit, Compliance, Fine-Grained Access Control
 - **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/s3]] | [[mm/s3-performance]] | [[mm/kms-and-secrets]]

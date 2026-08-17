@@ -16,7 +16,7 @@ date: 2026-08-07
 # 🔍 Amazon S3 Storage Lens
 
 - **Category**: Storage Analytics & Governance
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/storage/s3/s3-storage-lens.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-storage-lens) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Organization-Wide Storage Visibility, Cost Optimization, Security & Protection Auditing
 - **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[s3-performance]] | [[s3-encryption]] | [[cost-management]]

@@ -13,7 +13,7 @@ date: 2026-08-15
 # ✅ AWS Glue Data Quality
 
 - **Category**: Analytics / Data Governance
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/glue/glue-data-quality.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-data-quality)
 - **Primary Use Case**: Automated Data Validation, Rules-based Anomaly Detection, Halting Bad Pipelines.
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[data-validation-and-profiling]]`

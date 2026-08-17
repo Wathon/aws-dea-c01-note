@@ -14,7 +14,7 @@ date: 2026-08-17
 # 🛡️ Athena Workgroups & Cost Management
 
 - **Category**: Analytics / Governance & Security
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/athena/athena-workgroups.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-workgroups) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အဖွဲ့အစည်းအသီးသီးအတွက် query run သည့် environment များကို ခွဲခြားထားရန်၊ ကုန်ကျစရိတ် ကန့်သတ်ချက်များ သတ်မှတ်ရန်နှင့် query history များကို သီးခြားစီထားရှိရန်။
 - **Hub Links**: `[[mm/index]]` | `[[mm/athena]]` | `[[mm/domain-5-security-and-governance]]`
 

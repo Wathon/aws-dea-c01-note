@@ -10,7 +10,7 @@ date: 2026-08-15
 
 # 🧠 AWS Certified Data Engineer – Associate (DEA-C01) Knowledge Hub (English)
 
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/index.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/index)
 - **Course Slides**: [AWSCertifiedDataEngineerSlides.pdf](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hands-on Labs & Datasets**: [Lab Materials Directory](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/materials) | [[lab-materials-index]]
 - **Study Journal**: [[journal/2026-07-28]]

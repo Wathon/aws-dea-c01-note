@@ -14,7 +14,7 @@ date: 2026-08-15
 # ⚙️ AWS Glue ETL Jobs & DynamicFrames
 
 - **Category**: Analytics / Distributed Processing
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/glue/glue-etl-jobs.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-etl-jobs)
 - **Primary Use Case**: Serverless Apache Spark Data Transformations, Incremental Data Processing, Handling Semi-Structured Data.
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[emr]]` | `[[domain-3-data-processing]]`

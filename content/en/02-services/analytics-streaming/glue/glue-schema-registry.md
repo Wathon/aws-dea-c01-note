@@ -13,7 +13,7 @@ date: 2026-08-15
 # 🧬 AWS Glue Schema Registry
 
 - **Category**: Analytics / Streaming Data Governance
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/glue/glue-schema-registry.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-schema-registry)
 - **Primary Use Case**: Centralized discovery and control of data schemas for streaming applications (Kafka, Kinesis).
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[msk-kafka]]` | `[[kinesis]]`

@@ -14,7 +14,7 @@ date: 2026-08-15
 # ✅ AWS Glue Data Quality (ဒေတာ အရည်အသွေး စစ်ဆေးခြင်း)
 
 - **Category**: Analytics / Data Governance
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/glue/glue-data-quality.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue-data-quality) | **မြန်မာဘာသာ (Burmese)**
 - **အဓိက အသုံးပြုမှု**: ဒေတာမှန်ကန်မှုကို အလိုအလျောက် စစ်ဆေးခြင်း၊ မှားယွင်းသော ဒေတာများပါလာပါက Pipeline ကို ရပ်တန့်ပစ်ခြင်း သို့မဟုတ် သီးခြားဖယ်ထုတ်ခြင်း။
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[data-validation-and-profiling]]`

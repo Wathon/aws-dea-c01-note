@@ -15,7 +15,7 @@ date: 2026-08-08
 # ⏳ Amazon S3 Lifecycle Rules
 
 - **Category**: Storage Governance & Cost Optimization
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/storage/s3/s3-lifecycle-rules.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-lifecycle-rules) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Automated Data Tiering, Retention Management, Storage Cost Reduction, Cleanup of Noncurrent Versions & Incomplete Multipart Uploads
 - **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/s3]] | [[mm/s3-versioning]] | [[mm/cost-management]] | [[mm/s3-storage-lens]]

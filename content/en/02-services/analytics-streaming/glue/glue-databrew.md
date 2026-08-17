@@ -13,7 +13,7 @@ date: 2026-08-15
 # ☕ AWS Glue DataBrew
 
 - **Category**: Analytics / Visual Data Preparation
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/glue/glue-databrew.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-databrew)
 - **Primary Use Case**: No-code Visual ETL, Data Cleaning by Data Analysts & Scientists.
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[glue]]`

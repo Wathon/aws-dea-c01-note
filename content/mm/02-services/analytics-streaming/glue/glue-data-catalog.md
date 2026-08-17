@@ -14,7 +14,7 @@ date: 2026-08-15
 # 📖 AWS Glue Data Catalog (ဗဟို Metadata သိုလှောင်မှု)
 
 - **Category**: Analytics / Metadata Management
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/glue/glue-data-catalog.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue-data-catalog) | **မြန်မာဘာသာ (Burmese)**
 - **အဓိက အသုံးပြုမှု**: S3 Data Lakes, Athena, EMR နှင့် Redshift Spectrum တို့အတွက် ဗဟို Apache Hive-compatible Metastore အဖြစ် အသုံးပြုခြင်း။
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[athena]]` | `[[lake-formation]]`

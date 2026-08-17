@@ -15,7 +15,7 @@ date: 2026-08-07
 # 📊 Amazon S3 Tables
 
 - **Category**: Tabular Object Storage & Data Lake Architecture
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/storage/s3/s3-tables.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-tables) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Managed Apache Iceberg Tables, Automated Data Lake Maintenance, High-Throughput ACID Transactions
 - **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[athena]] | [[lake-formation]] | [[glue]]

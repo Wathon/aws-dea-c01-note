@@ -13,7 +13,7 @@ date: 2026-08-15
 # 📐 Data Modeling & Partitioning Strategies
 
 - **Category**: Fundamentals / Data Architecture & Storage Optimization
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/03-concepts/data-modeling-and-partitioning.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/03-concepts/data-modeling-and-partitioning)
 - **Slide Reference**: Pages 49–75 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[redshift]]` | `[[glue]]` | `[[s3]]`
 

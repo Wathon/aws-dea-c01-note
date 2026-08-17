@@ -16,7 +16,7 @@ date: 2026-08-14
 # 📦 AWS Batch (Managed Containerized Batch Computing & HPC Workloads)
 
 - **Category**: Compute (Containerized Batch Processing & High-Performance Computing)
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/compute-containers/batch.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/batch) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အချိန်ကြာမြင့်စွာ run ရသော (> 15 min) batch computing job များ၊ Spark မဟုတ်သော data transformation များ၊ scientific simulation များ၊ ML data preprocessing နှင့် Dockerized image processing များကို managed EC2, Spot Instances, သို့မဟုတ် AWS Fargate တွင် run ရန်။
 - **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 311–312
 - **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-1-ingestion-and-processing]] | [[mm/lambda]] | [[mm/glue]] | [[mm/emr]] | [[mm/ecr-ecs-eks]] | [[mm/step-functions]]

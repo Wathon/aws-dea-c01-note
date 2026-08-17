@@ -14,7 +14,7 @@ date: 2026-08-15
 # ☕ AWS Glue DataBrew (Code မလိုသော Visual Data Preparation)
 
 - **Category**: Analytics / Visual Data Preparation
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/glue/glue-databrew.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue-databrew) | **မြန်မာဘာသာ (Burmese)**
 - **အဓိက အသုံးပြုမှု**: Data Analysts နှင့် Data Scientists များအနေဖြင့် PySpark / SQL Code ရေးစရာမလိုဘဲ UI မှတစ်ဆင့် ဒေတာများကို သန့်စင်ခြင်း၊ ပြင်ဆင်ခြင်း (Visual ETL)။
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]`

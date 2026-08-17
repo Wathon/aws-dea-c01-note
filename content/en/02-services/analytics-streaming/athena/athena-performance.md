@@ -13,7 +13,7 @@ date: 2026-08-17
 # 🚀 Athena Performance & Optimization
 
 - **Category**: Analytics / Optimization
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/athena/athena-performance.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-performance)
 - **Primary Use Case**: Reducing query costs and improving query latency by limiting the amount of data scanned from S3.
 - **Hub Links**: `[[index]]` | `[[athena]]` | `[[s3]]`
 

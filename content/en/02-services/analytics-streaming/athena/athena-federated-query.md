@@ -13,7 +13,7 @@ date: 2026-08-17
 # 🔗 Athena Federated Query
 
 - **Category**: Analytics / Data Integration
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/athena/athena-federated-query.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-federated-query)
 - **Primary Use Case**: Querying data stored *outside* of Amazon S3 (e.g., DynamoDB, Redshift, MySQL) using standard SQL directly from Athena.
 - **Hub Links**: `[[index]]` | `[[athena]]` | `[[dynamodb]]`
 

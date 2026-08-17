@@ -14,7 +14,7 @@ date: 2026-08-15
 # 🕷️ AWS Glue Crawlers (အလိုအလျောက် Schema ရှာဖွေသူများ)
 
 - **Category**: Analytics / Automated Schema Discovery
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/glue/glue-crawlers.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue-crawlers) | **မြန်မာဘာသာ (Burmese)**
 - **အဓိက အသုံးပြုမှု**: S3 နှင့် Database များရှိ ဒေတာ Format များကို ခွဲခြမ်းစိတ်ဖြာပြီး Schema နှင့် Partition များကို အလိုအလျောက် ရှာဖွေဖော်ထုတ်ခြင်း။
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-data-catalog]]` | `[[athena]]`

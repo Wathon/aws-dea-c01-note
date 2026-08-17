@@ -13,7 +13,7 @@ date: 2026-08-17
 # 🧊 Athena ACID Transactions (Apache Iceberg)
 
 - **Category**: Analytics / Data Lake Formats
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/athena/athena-iceberg.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-iceberg)
 - **Primary Use Case**: Enabling row-level updates, deletes, and time-travel queries on S3 data lakes with ACID guarantees.
 - **Hub Links**: `[[index]]` | `[[athena]]` | `[[domain-2-data-store-management]]`
 

@@ -16,7 +16,7 @@ date: 2026-08-14
 # 🔍 AWS Application Discovery Service & AWS Application Migration Service (MGN)
 
 - **Category**: Migration & Transfer (Discovery, Assessment, Dependency Mapping & Automated Server Rehosting)
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/migration/application-discovery-and-mgn.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/migration/application-discovery-and-mgn) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Enterprise cloud migration များကို စီစဉ်ရာတွင် on-premises server infrastructure များကို ရှာဖွေဖော်ထုတ်ခြင်း၊ dependency များကို မြေပုံဆွဲခြင်း နှင့် continuous block-level replication ကိုအသုံးပြုကာ အလိုအလျောက် lift-and-shift (rehost) server migration များကို လုပ်ဆောင်ခြင်း။
 - **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 267–268
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[dms-and-sct]] | [[datasync-and-snow]] | [[data-exchange]] | [[transfer-family]]

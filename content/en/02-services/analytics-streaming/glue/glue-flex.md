@@ -13,7 +13,7 @@ date: 2026-08-15
 # 💰 AWS Glue Flex Execution Class
 
 - **Category**: Analytics / Cost Optimization
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/glue/glue-flex.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-flex)
 - **Primary Use Case**: Cost reduction for non-urgent, non-time-sensitive data integration workloads.
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[glue-etl-jobs]]`

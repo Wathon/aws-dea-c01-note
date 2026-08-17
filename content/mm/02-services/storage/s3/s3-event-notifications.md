@@ -16,7 +16,7 @@ date: 2026-08-08
 # ⚡ Amazon S3 Event Notifications & EventBridge Integration
 
 - **Category**: Event-Driven Architecture & Integration
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/storage/s3/s3-event-notifications.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-event-notifications) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Automated Data Pipeline Triggering, Asynchronous ETL Ingestion, Decoupled Processing
 - **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[lambda]] | [[sqs-and-sns]] | [[eventbridge]]

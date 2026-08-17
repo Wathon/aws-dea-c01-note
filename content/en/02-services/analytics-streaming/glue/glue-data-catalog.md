@@ -13,7 +13,7 @@ date: 2026-08-15
 # 📖 AWS Glue Data Catalog
 
 - **Category**: Analytics / Metadata Management
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/analytics-streaming/glue/glue-data-catalog.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-data-catalog)
 - **Primary Use Case**: Centralized Hive-compatible Metastore for S3 Data Lakes, Athena, EMR, and Redshift Spectrum.
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[athena]]` | `[[lake-formation]]`

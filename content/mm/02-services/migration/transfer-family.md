@@ -18,7 +18,7 @@ date: 2026-08-14
 # 📂 AWS Transfer Family (Managed SFTP, FTPS, FTP & AS2)
 
 - **Category**: Migration & Transfer (B2B Partner File Exchange & Managed File Transfer)
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/migration/transfer-family.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/migration/transfer-family) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: ပြင်ပ စီးပွားရေးလုပ်ဖော်ကိုင်ဖက်များနှင့် legacy enterprise system များကို client ၏ workflow များ ပြောင်းလဲရန်မလိုဘဲ သို့မဟုတ် server များ စီမံခန့်ခွဲရန်မလိုဘဲ **SFTP, FTPS, FTP, AS2** မှတစ်ဆင့် လုံခြုံစိတ်ချရသော ဖိုင်လွှဲပြောင်းမှုဖြင့် [[s3]] Data Lakes များနှင့် [[efs-and-fsx]] (Amazon EFS) ထဲသို့ တိုက်ရိုက် ချိတ်ဆက်ပေးရန် ဖြစ်သည်။
 - **Slide Reference**: Pages 284–285 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-1-ingestion-and-processing]] | [[mm/domain-2-data-store-management]] | [[mm/s3]] | [[mm/efs-and-fsx]] | [[mm/datasync-and-snow]]

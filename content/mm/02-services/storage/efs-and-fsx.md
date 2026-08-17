@@ -16,7 +16,7 @@ date: 2026-08-09
 # 📁 Amazon EFS & AWS FSx (Lustre, ONTAP, Windows, OpenZFS)
 
 - **Category**: Storage (Shared Managed File Systems)
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/storage/efs-and-fsx.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/efs-and-fsx) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Distributed Linux compute cluster များ၊ container persistent volume များ ([[ecr-ecs-eks]])၊ serverless function များ ([[lambda]]) နှင့် [[s3]] မှ ultra-high-throughput HPC / ML data staging အတွက် Shared POSIX file storage ဖြစ်သည်။
 - **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ စာမျက်နှာ 139–154
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[s3]] | [[ebs-and-instance-store]]

@@ -16,7 +16,7 @@ date: 2026-08-10
 # ⚡ Amazon DynamoDB (Serverless NoSQL Key-Value & Document Database)
 
 - **Category**: Database (Serverless NoSQL Key-Value & Document)
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/database/dynamodb.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/database/dynamodb) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Ultra-low-latency single-digit millisecond operational data store, real-time feature stores, streaming pipeline state tracking, Change Data Capture (CDC) with DynamoDB Streams, နှင့် distributed metadata catalogs။
 - **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 156–195
 - **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-2-data-store-management]] | [[mm/domain-1-ingestion-and-processing]] | [[mm/s3]] | [[mm/lambda]] | [[mm/glue]] | [[mm/redshift]]

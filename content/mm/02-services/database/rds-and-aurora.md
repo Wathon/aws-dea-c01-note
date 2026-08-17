@@ -17,7 +17,7 @@ date: 2026-08-11
 # 🐘 Amazon RDS & Amazon Aurora (Managed Relational OLTP Databases)
 
 - **Category**: Database (Relational OLTP & Cloud-Native Storage)
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/database/rds-and-aurora.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/database/rds-and-aurora) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Managed relational databases for transactional operational workloads, ACID transactions, Change Data Capture (CDC) ingestion, zero-ETL integration with [[redshift]], and direct S3 Parquet export. (transactional operational workload များ၊ ACID transaction များ၊ Change Data Capture (CDC) ingestion၊ [[redshift]] နှင့် zero-ETL integration လုပ်ခြင်းနှင့် S3 Parquet သို့ တိုက်ရိုက် export လုပ်ခြင်းတို့အတွက် Managed relational database များ)
 - **Slide Reference**: Pages 196–213 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[domain-1-ingestion-and-processing]] | [[redshift]] | [[dms-and-sct]] | [[s3]] | [[kms-and-secrets]]

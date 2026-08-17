@@ -19,7 +19,7 @@ date: 2026-08-12
 # 🔮 Specialized AWS Databases (ElastiCache, MemoryDB, Keyspaces, Neptune, Timestream, DocumentDB)
 
 - **Category**: Database (Purpose-Built NoSQL & Specialized Engines)
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/database/nosql-specialized-databases.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/database/nosql-specialized-databases) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Microsecond in-memory caching, durable in-memory primary databases, managed Apache Cassandra, relationship graph traversal, time-series IoT telemetry, နှင့် managed MongoDB document storage အဖြစ် အသုံးပြုရန်။
 - **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ၏ စာမျက်နှာ 214–219
 - **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-2-data-store-management]] | [[mm/domain-1-ingestion-and-processing]] | [[mm/dynamodb]] | [[mm/rds-and-aurora]] | [[mm/redshift]] | [[mm/kinesis]]

@@ -14,7 +14,7 @@ date: 2026-08-17
 # ⚡ Amazon Athena for Apache Spark
 
 - **Category**: Analytics / Distributed Processing
-- **Language / ဘာသာစကား**: [English (Original)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/athena/athena-spark.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-spark) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: clusters များကို provision လုပ်စရာမလိုဘဲ interactive PySpark data explorations နှင့် Jupyter notebooks များကို ချက်ချင်း run ရန်။
 - **Hub Links**: `[[mm/index]]` | `[[athena]]` | `[[glue-etl-jobs]]` | `[[emr]]`
 

@@ -15,7 +15,7 @@ date: 2026-08-07
 # 🛡️ Amazon S3 Security & Access Management
 
 - **Category**: Storage Security & Data Protection
-- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/mm/02-services/storage/s3/s3-security.md)
+- **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-security)
 - **Primary Use Case**: Defense-in-Depth Security, Access Control, Regulatory Compliance, Data Immutability & Auditing
 - **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
 - **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-encryption]] | [[s3-access-points]] | [[iam]] | [[lake-formation]] | [[macie-and-cloudtrail]]

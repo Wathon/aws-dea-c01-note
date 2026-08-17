@@ -14,7 +14,7 @@ date: 2026-08-15
 # 💰 AWS Glue Flex Execution Class (ကုန်ကျစရိတ် သက်သာသော Glue အသုံးပြုမှု)
 
 - **Category**: Analytics / Cost Optimization
-- **Language / ဘာသာစကား**: [English Version](file:///home/monetine/Workspace/Wathon/aws-dea-c01/content/en/02-services/analytics-streaming/glue/glue-flex.md) | **မြန်မာဘာသာ (Burmese)**
+- **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue-flex) | **မြန်မာဘာသာ (Burmese)**
 - **အဓိက အသုံးပြုမှု**: အချိန်အတိအကျ မလိုအပ်သော (Non-urgent) Data Integration လုပ်ငန်းစဉ်များအတွက် ကုန်ကျစရိတ် ချွေတာရန်။
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-etl-jobs]]`
