@@ -7,14 +7,15 @@ tags:
   - dea-c01
   - analytics/glue
   - orchestration
-date: 2026-08-15
+  - workflows
+date: 2026-08-17
 ---
 
 # 🛤️ AWS Glue Workflows
 
-- **Category**: Analytics / Orchestration
+- **Category**: Analytics / Pipeline Orchestration
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-workflows)
-- **Primary Use Case**: Orchestrating and scheduling multiple Glue Crawlers, Glue Jobs, and triggers.
+- **Primary Use Case**: Native, serverless orchestration of multi-step Glue Crawlers, Jobs, and Triggers with dynamic parameter sharing.
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[step-functions]]` | `[[mwaa-airflow]]`
 
@@ -22,48 +23,141 @@ date: 2026-08-15
 
 ## 1. High-Level Summary
 
-**AWS Glue Workflows** allow you to create and visualize complex extract, transform, and load (ETL) activities involving multiple crawlers, jobs, and triggers. While services like **AWS Step Functions** or **Amazon MWAA (Apache Airflow)** can orchestrate tasks across the entire AWS ecosystem, **Glue Workflows** is purpose-built and scoped *specifically* for orchestrating components within AWS Glue.
+**AWS Glue Workflows** is a fully managed orchestration service designed specifically to coordinate and monitor multi-step extract, transform, and load (ETL) pipelines consisting of **AWS Glue Crawlers, Jobs, and Triggers**.
+
+While enterprise-wide workflows spanning multiple AWS services (such as AWS Lambda, Amazon EMR, Amazon ECS, or Amazon SNS) are typically orchestrated using **[[step-functions]]** or **[[mwaa-airflow]]**, **Glue Workflows** provides a lightweight, zero-infrastructure solution dedicated exclusively to the AWS Glue ecosystem.
+
+```mermaid
+graph LR
+    subgraph TriggerLayer["1. Ingestion Triggers"]
+        SchedTrigger["Schedule Trigger (e.g., Daily at 01:00 UTC)"]
+        EventTrigger["EventBridge Trigger (S3 File Arrival)"]
+    end
+
+    subgraph WorkflowDAG["2. AWS Glue Workflow DAG"]
+        CrawlerNode["Crawler 1: Discover Raw S3 Schemas"]
+        CondTrigger1{"Conditional Trigger (On Crawler Success)"}
+        Job1["Glue Spark Job: Heavy Data Cleansing"]
+        Job2["Glue Data Quality: DQDL Validation"]
+        CondTrigger2{"Conditional Trigger (On Job & DQ Success)"}
+        Job3["Glue Job: Curated Parquet Aggregation"]
+        CrawlerNode2["Crawler 2: Update Curated Lake Partitions"]
+    end
+
+    SchedTrigger --> CrawlerNode
+    EventTrigger --> CrawlerNode
+    CrawlerNode --> CondTrigger1
+    CondTrigger1 --> Job1
+    Job1 --> Job2
+    Job2 --> CondTrigger2
+    CondTrigger2 --> Job3
+    Job3 --> CrawlerNode2
+
+    classDef trig fill:#8b5cf6,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef node fill:#3b82f6,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef cond fill:#f59e0b,stroke:#fff,stroke-width:1px,color:#000;
+
+    class SchedTrigger,EventTrigger trig;
+    class CrawlerNode,Job1,Job2,Job3,CrawlerNode2 node;
+    class CondTrigger1,CondTrigger2 cond;
+```
 
 ---
 
-## 2. Core Capabilities
+## 2. Core Architectural Features
 
-### 1. Triggers
-Workflows use triggers to start and coordinate execution. A trigger can be:
-- **On-Demand**: Started manually.
-- **Schedule-based**: Started at a specific time (e.g., cron expression).
-- **Event-based**: Started when an EventBridge event occurs (e.g., a file lands in an S3 bucket).
-- **Conditional**: Started only if previous jobs or crawlers in the workflow succeed, fail, or meet certain conditions.
+### 1. Trigger Types & Coordination Mechanics
 
-### 2. Directed Acyclic Graphs (DAGs)
-- Glue Workflows automatically generate a visual DAG representation of your ETL pipeline.
-- You can monitor the entire workflow's progress in the AWS Management Console, seeing exactly which job succeeded, failed, or is currently running.
+Workflows rely on **Triggers** to initiate and synchronize execution across pipeline stages:
 
-### 3. State Management
-- Workflows can share state between jobs. You can define workflow properties (key-value pairs) that are accessible to every Glue job within the workflow. If Job A calculates a dynamic partition date, it can pass that value to Job B.
+| Trigger Type | Firing Condition | DEA-C01 Use Case |
+| :--- | :--- | :--- |
+| **Schedule-based** | Cron or rate expression (e.g., `cron(0 2 * * ? *)`). | Nightly recurring batch pipelines. |
+| **On-Demand** | Manually started via AWS Console, AWS CLI, or SDK. | Ad-hoc data backfills and testing. |
+| **Event-based** | Invoked when an **Amazon EventBridge event** occurs (e.g., S3 upload, API gateway). | Event-driven, near-real-time ingestion pipelines. |
+| **Conditional** | Fires when **all** or **any** antecedent jobs/crawlers complete with status `SUCCEEDED`, `FAILED`, `STOPPED`, or `TIMEOUT`. | Branching logic, failure handling, and multi-job dependencies. |
 
 ---
 
-## 3. Glue Workflows vs. Step Functions vs. MWAA
+### 2. Workflow Run Properties (State Sharing Between Nodes)
 
-| Feature | AWS Glue Workflows | AWS Step Functions | Amazon MWAA (Airflow) |
+In a multi-stage pipeline, subsequent jobs often need runtime context generated by upstream jobs (e.g., the exact partition timestamp calculated by Job 1, or the S3 file count detected by Crawler 1).
+
+Glue Workflows provides **Workflow Run Properties** (key-value metadata pairs) that persist across the entire execution graph:
+
+```mermaid
+graph LR
+    JobA["Glue Job A (Upstream)"] -->|Writes Key-Value Metadata| Props[("Workflow Run Properties: {'target_partition': '2026-08-17'}")]
+    Props -->|Reads Metadata Context| JobB["Glue Job B (Downstream)"]
+
+    classDef job fill:#3b82f6,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef prop fill:#10b981,stroke:#fff,stroke-width:1px,color:#fff;
+
+    class JobA,JobB job;
+    class Props prop;
+```
+
+#### Python (Boto3) Code Snippet for Workflow State Sharing:
+```python
+import boto3
+import sys
+from awsglue.utils import getResolvedOptions
+
+# Retrieve the current workflow run ID passed into the Glue Job arguments
+args = getResolvedOptions(sys.argv, ['WORKFLOW_NAME', 'WORKFLOW_RUN_ID'])
+workflow_name = args['WORKFLOW_NAME']
+workflow_run_id = args['WORKFLOW_RUN_ID']
+
+glue_client = boto3.client('glue')
+
+# 1. Job A: Put dynamic runtime properties into the workflow
+glue_client.put_workflow_run_properties(
+    Name=workflow_name,
+    RunId=workflow_run_id,
+    RunProperties={'target_date': '2026-08-17', 'batch_id': 'B-90210'}
+)
+
+# 2. Job B: Retrieve runtime properties set by upstream jobs
+response = glue_client.get_workflow_run_properties(
+    Name=workflow_name,
+    RunId=workflow_run_id
+)
+current_date = response['RunProperties']['target_date']
+print(f"Processing partition date: {current_date}")
+```
+
+---
+
+### 3. Orchestration Tool Decision Matrix (Glue Workflows vs. Step Functions vs. MWAA)
+
+Choosing the correct orchestration tool is one of the most heavily tested concepts in the DEA-C01 exam:
+
+| Feature | AWS Glue Workflows | AWS Step Functions | Amazon MWAA (Apache Airflow) |
 | :--- | :--- | :--- | :--- |
-| **Scope** | Native Glue components ONLY (Jobs, Crawlers) | AWS-wide ecosystem (Lambda, ECS, EMR, SNS, etc.) | Cloud-agnostic / Multi-cloud ecosystem (Python DAGs) |
-| **Complexity** | Simple ETL orchestration | Complex state machines, branching, human-in-the-loop | Complex data pipelines, custom operators |
-| **Setup Overhead** | None (Built into Glue) | Low (JSON/ASL definitions) | High (Requires provisioning Airflow environments) |
+| **Primary Scope** | **Exclusively AWS Glue components** (Crawlers, Jobs, Triggers). | **Entire AWS Ecosystem** (200+ services: Lambda, EMR, ECS, SNS, DynamoDB). | **Multi-Cloud & Hybrid Ecosystem** (Python DAGs, on-prem, multi-cloud). |
+| **Complexity** | Simple, linear ETL pipelines. | Complex state machines, branching, loops, human-in-the-loop approvals. | Complex, dynamic data dependency graphs. |
+| **Infrastructure** | **Zero infrastructure**; built into Glue. | **Serverless** (Pay per state transition). | **Managed Instances** (Requires provisioning Airflow environments). |
+| **Authoring** | Visual console / JSON API. | Amazon States Language (ASL) / Visual Studio. | Pure Python Code (Airflow DAG files). |
+| **Error Handling** | Basic conditional triggers (success/fail). | Advanced `Retry` and `Catch` blocks with exponential backoff. | Advanced task retries, custom failure callbacks. |
 
 ---
 
-## 4. DEA-C01 Exam Tips & Scenarios
+## 3. DEA-C01 Exam Tips & Scenarios
 
 > [!IMPORTANT]
-> **Key Exam Trigger Keywords**:
-> - **"Need to orchestrate a Glue Crawler, followed by a Glue ETL job, followed by another Crawler, without managing external infrastructure"** $\rightarrow$ **AWS Glue Workflows**.
-> - **"Need to trigger a Glue workflow automatically when a file lands in S3"** $\rightarrow$ **Use Amazon EventBridge to trigger the Glue Workflow**.
-> - **"Need to orchestrate an AWS Batch job, an EMR cluster, and a Glue job"** $\rightarrow$ *Do not use Glue Workflows. Use **AWS Step Functions** or **MWAA***.
+> **Key Exam Decision Triggers for Glue Workflows**:
+>
+> - **"Orchestrate a pipeline consisting solely of an S3 Glue Crawler followed by two Glue PySpark jobs without managing external infrastructure"** $\rightarrow$ **AWS Glue Workflows**.
+> - **"Automatically trigger a Glue workflow when a new data manifest lands in S3"** $\rightarrow$ **Amazon S3 Event Notification $\rightarrow$ Amazon EventBridge $\rightarrow$ Glue Event Trigger**.
+> - **"Pass dynamic partition dates generated in step 1 to downstream jobs in step 2"** $\rightarrow$ Use **AWS Glue Workflow Run Properties (`put_workflow_run_properties` / `get_workflow_run_properties`)**.
+> - **"Orchestrate a pipeline that coordinates an AWS Batch job, an Amazon EMR cluster, an AWS Lambda function, and an Amazon SNS alert"** $\rightarrow$ *DO NOT use Glue Workflows; use **AWS Step Functions***.
+> - **"Data engineering team requires Python-based DAGs with hundreds of cross-cloud dependencies"** $\rightarrow$ **Amazon MWAA (Managed Apache Airflow)**.
 
 ---
 
 ## 📌 Related Notes
-- `[[step-functions]]` — General AWS orchestration
-- `[[mwaa-airflow]]` — Managed Apache Airflow for complex data pipelines
+- `[[glue]]` — AWS Glue Architecture Overview
+- `[[glue-etl-jobs]]` — AWS Glue ETL Jobs & Transforms
+- `[[glue-crawlers]]` — Automating Data Catalog Crawls
+- `[[step-functions]]` — AWS Step Functions Enterprise Orchestration
+- `[[mwaa-airflow]]` — Amazon Managed Workflows for Apache Airflow
