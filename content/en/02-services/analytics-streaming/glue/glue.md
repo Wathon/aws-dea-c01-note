@@ -45,6 +45,10 @@ AWS Glue is divided into several major feature sets, each critical for the DEA-C
 3. **[[glue-etl-jobs]]**: Serverless distributed processing using Apache Spark (PySpark/Scala) or Python shell, featuring Glue DynamicFrames and Job Bookmarks.
 4. **[[glue-data-quality]]**: Rule-based DQDL validation to halt pipelines or quarantine bad data without writing custom Spark scripts.
 5. **[[glue-databrew]]**: A visual data preparation tool enabling analysts to clean and transform data without writing code.
+6. **[[glue-studio]]**: A visual, drag-and-drop interface for authoring, running, and monitoring AWS Glue ETL jobs without writing code.
+7. **[[glue-flex]]**: A cost-effective execution class for non-urgent, non-time-sensitive data integration workloads.
+8. **[[glue-workflows]]**: An orchestration tool to create and visualize complex ETL activities involving multiple crawlers, jobs, and triggers.
+9. **[[glue-schema-registry]]**: A feature to discover, control, and evolve data stream schemas centrally.
 
 ---
 
@@ -65,5 +69,9 @@ AWS Glue is divided into several major feature sets, each critical for the DEA-C
 - `[[glue-etl-jobs]]` — Glue ETL Jobs, DynamicFrames & Bookmarks
 - `[[glue-data-quality]]` — AWS Glue Data Quality (DQDL)
 - `[[glue-databrew]]` — AWS Glue DataBrew
+- `[[glue-studio]]` — AWS Glue Studio
+- `[[glue-flex]]` — AWS Glue Flex Execution
+- `[[glue-workflows]]` — AWS Glue Workflows
+- `[[glue-schema-registry]]` — AWS Glue Schema Registry
 - `[[athena]]` — Serverless SQL queries on Glue Data Catalog
 - `[[emr]]` — Managed EMR clusters vs Glue Serverless Spark

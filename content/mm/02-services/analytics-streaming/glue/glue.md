@@ -46,6 +46,10 @@ AWS Glue တွင် DEA-C01 စာမေးပွဲအတွက် အရေ�
 3. **[[glue-etl-jobs]]**: Apache Spark (PySpark/Scala) ကို အသုံးပြု၍ Serverless အနေဖြင့် ဒေတာပြောင်းလဲခြင်း (Transform) များကို လုပ်ဆောင်ပေးသည်။
 4. **[[glue-data-quality]]**: PySpark Code ရေးစရာမလိုဘဲ DQDL rules များဖြင့် ဒေတာအရည်အသွေး (Data Quality) ကို အလိုအလျောက် စစ်ဆေးပေးသည်။
 5. **[[glue-databrew]]**: Code ရေးစရာမလိုဘဲ Visual UI မှတစ်ဆင့် Data Preparation ကို လွယ်ကူစွာ ပြုလုပ်ပေးနိုင်သည်။
+6. **[[glue-studio]]**: Code ရေးသားရန်မလိုဘဲ AWS Glue ETL jobs များကို ဖန်တီးရန်၊ run ရန်နှင့် စောင့်ကြည့်ရန် visual, drag-and-drop interface တစ်ခုဖြစ်သည်။
+7. **[[glue-flex]]**: အချိန်မရွေးလုပ်ဆောင်နိုင်သော data integration workloads များအတွက် ကုန်ကျစရိတ်သက်သာသော execution class တစ်ခုဖြစ်သည်။
+8. **[[glue-workflows]]**: Crawlers, jobs နှင့် triggers များပါဝင်သော ရှုပ်ထွေးသည့် ETL activities များကို စီမံခန့်ခွဲရန် (orchestration) နှင့် visual ပြသရန် အသုံးပြုသည်။
+9. **[[glue-schema-registry]]**: Data stream schemas များကို ဗဟိုမှ ရှာဖွေရန်၊ ထိန်းချုပ်ရန်နှင့် တိုးချဲ့ရန် အသုံးပြုသည်။
 
 ---
 
@@ -67,5 +71,9 @@ AWS Glue တွင် DEA-C01 စာမေးပွဲအတွက် အရေ�
 - `[[glue-etl-jobs]]` — Glue ETL Jobs, DynamicFrames & Bookmarks
 - `[[glue-data-quality]]` — AWS Glue Data Quality (DQDL)
 - `[[glue-databrew]]` — AWS Glue DataBrew
+- `[[glue-studio]]` — AWS Glue Studio
+- `[[glue-flex]]` — AWS Glue Flex Execution
+- `[[glue-workflows]]` — AWS Glue Workflows
+- `[[glue-schema-registry]]` — AWS Glue Schema Registry
 - `[[athena]]` — Amazon Athena
 - `[[emr]]` — Amazon EMR
