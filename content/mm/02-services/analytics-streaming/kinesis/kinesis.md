@@ -129,6 +129,7 @@ DEA-C01 စာမေးပွဲရှိ scenario မေးခွန်းအ�
 4. `[[kinesis-apache-flink]]` — **KPU Sizing, Tumbling / Sliding / Session Windows, Event-Time Watermarks & RocksDB Checkpoints**
 5. `[[kinesis-security-and-monitoring]]` — **KMS SSE, VPC PrivateLink, Glue Schema Registry Integration & `IteratorAgeMilliseconds` Alerting**
 6. `[[kinesis-architecture-and-patterns]]` — **End-to-End Real-Time Pipelines, Hot Shard Mitigation, Deduplication & Comparison Matrices**
+7. `[[kinesis-troubleshooting-and-tuning]]` — **Production Troubleshooting, Hot Shards, Consumer Lag (IteratorAge) နှင့် Poison Pill Isolation**
 
 ---
 
@@ -146,6 +147,8 @@ DEA-C01 စာမေးပွဲရှိ scenario မေးခွန်းအ�
 
 ## 📌 Related Notes (ဆက်စပ် မှတ်စုများ)
 - `[[kinesis-data-streams]]` — Kinesis Data Streams Core Architecture
+- `[[kinesis-consumers-and-scaling]]` — Standard vs. Enhanced Fan-Out & KCL
+- `[[kinesis-troubleshooting-and-tuning]]` — Troubleshooting & Performance Tuning
 - `[[kinesis-firehose]]` — Amazon Data Firehose Delivery Pipelines
 - `[[kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
 - `[[msk-kafka]]` — Amazon Managed Streaming for Apache Kafka
