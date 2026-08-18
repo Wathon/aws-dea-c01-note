@@ -31,10 +31,10 @@ Unlike **[[emr]]**, where engineers must size, provision, monitor, and scale EC2
 ```mermaid
 graph TD
     subgraph JobTypes["AWS Glue ETL Job Types"]
-        SparkBatch["1. Glue Spark (Batch) - PySpark / Scala"]
-        SparkStream["2. Glue Streaming ETL (Kinesis / MSK)"]
-        PythonShell["3. Python Shell (0.0625 / 1 DPU)"]
-        RayJobs["4. Glue Ray Jobs (Distributed Python)"]
+        SparkBatch["(1) Glue Spark (Batch) - PySpark / Scala"]
+        SparkStream["(2) Glue Streaming ETL (Kinesis / MSK)"]
+        PythonShell["(3) Python Shell (0.0625 / 1 DPU)"]
+        RayJobs["(4) Glue Ray Jobs (Distributed Python)"]
     end
 
     subgraph CoreFeatures["Core Engine Features"]

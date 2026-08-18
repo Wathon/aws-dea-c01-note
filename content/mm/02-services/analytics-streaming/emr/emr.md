@@ -36,9 +36,9 @@ graph TD
     end
 
     subgraph EMRPlatform["Amazon EMR Ecosystem & Deployment Models"]
-        EMREC2["1. EMR on EC2<br>• Dedicated / Persistent Clusters<br>• Full OS/Kernel Root Access<br>• Spot Instance Fleets (Up to 90% Savings)"]
-        EMRServ["2. EMR Serverless<br>• Zero Infrastructure Management<br>• Auto-Scaling for Spark & Hive<br>• Pre-Initialized Warm Capacity (< 5s)"]
-        EMREKS["3. EMR on EKS<br>• Containerized Spark on Kubernetes<br>• Multi-Tenant Infrastructure Sharing<br>• Rapid Pod Provisioning"]
+        EMREC2["(1) EMR on EC2<br>• Dedicated / Persistent Clusters<br>• Full OS/Kernel Root Access<br>• Spot Instance Fleets (Up to 90% Savings)"]
+        EMRServ["(2) EMR Serverless<br>• Zero Infrastructure Management<br>• Auto-Scaling for Spark & Hive<br>• Pre-Initialized Warm Capacity (< 5s)"]
+        EMREKS["(3) EMR on EKS<br>• Containerized Spark on Kubernetes<br>• Multi-Tenant Infrastructure Sharing<br>• Rapid Pod Provisioning"]
     end
 
     subgraph FrameworkStack["Open-Source Big Data Applications"]
@@ -102,14 +102,14 @@ Amazon EMR on EC2 cluster တစ်ခုတွင် သီးခြားက�
 
 ```mermaid
 graph TD
-    Primary["1. Primary / Master Node (Coordinates Cluster, YARN Resource Manager, NameNode)"]
+    Primary["(1) Primary / Master Node (Coordinates Cluster, YARN Resource Manager, NameNode)"]
     
-    Primary --> Core1["2. Core Node 1 (Runs Tasks + Stores HDFS Data)"]
-    Primary --> Core2["2. Core Node 2 (Runs Tasks + Stores HDFS Data)"]
+    Primary --> Core1["(2) Core Node 1 (Runs Tasks + Stores HDFS Data)"]
+    Primary --> Core2["(2) Core Node 2 (Runs Tasks + Stores HDFS Data)"]
     
-    Primary --> Task1["3. Task Node 1 - Spot (Compute ONLY - No HDFS)"]
-    Primary --> Task2["3. Task Node 2 - Spot (Compute ONLY - No HDFS)"]
-    Primary --> Task3["3. Task Node 3 - Spot (Compute ONLY - No HDFS)"]
+    Primary --> Task1["(3) Task Node 1 - Spot (Compute ONLY - No HDFS)"]
+    Primary --> Task2["(3) Task Node 2 - Spot (Compute ONLY - No HDFS)"]
+    Primary --> Task3["(3) Task Node 3 - Spot (Compute ONLY - No HDFS)"]
 
     classDef master fill:#ef4444,stroke:#fff,stroke-width:1px,color:#fff;
     classDef core fill:#3b82f6,stroke:#fff,stroke-width:1px,color:#fff;

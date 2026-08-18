@@ -31,8 +31,8 @@ date: 2026-08-17
 ```mermaid
 graph TD
     subgraph ExecutionTiers["AWS Glue Execution Classes"]
-        Standard["1. Standard Execution Class ($0.44 / DPU-Hour)"]
-        Flex["2. Flex Execution Class ($0.29 / DPU-Hour ~ 34-35% သက်သာ)"]
+        Standard["(1) Standard Execution Class ($0.44 / DPU-Hour)"]
+        Flex["(2) Flex Execution Class ($0.29 / DPU-Hour ~ 34-35% သက်သာ)"]
     end
 
     subgraph WorkloadMatch["Workload ရွေးချယ်မှု သတ်မှတ်ချက်များ"]

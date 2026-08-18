@@ -35,10 +35,10 @@ graph TD
     end
 
     subgraph CrawlerEngine["AWS Glue Crawler Execution"]
-        Classifiers["1. Evaluate Classifiers (Custom Grok -> Built-in)"]
-        SchemaInfer["2. Infer Column Schema & Data Types"]
-        PartitionInfer["3. Infer Partition Hierarchy (year, month, day)"]
-        DriftPolicy["4. Apply Schema Drift & Deletion Policies"]
+        Classifiers["(1) Evaluate Classifiers (Custom Grok -> Built-in)"]
+        SchemaInfer["(2) Infer Column Schema & Data Types"]
+        PartitionInfer["(3) Infer Partition Hierarchy (year, month, day)"]
+        DriftPolicy["(4) Apply Schema Drift & Deletion Policies"]
     end
 
     subgraph DataCatalogTarget["AWS Glue Data Catalog"]
@@ -74,9 +74,9 @@ A **Classifier** determines whether a data file matches a specific format and ex
 
 ```mermaid
 graph LR
-    InputData["Input Data File"] --> Step1{"1. Custom Classifiers (Checked in Priority Order)"}
+    InputData["Input Data File"] --> Step1{"(1) Custom Classifiers (Checked in Priority Order)"}
     Step1 -->|Match Found| SchemaOut["Generate Schema Definition"]
-    Step1 -->|No Match| Step2{"2. Built-in Classifiers (Checked in Fixed Order)"}
+    Step1 -->|No Match| Step2{"(2) Built-in Classifiers (Checked in Fixed Order)"}
     Step2 -->|Match (Parquet, JSON, CSV...)| SchemaOut
     Step2 -->|No Match| Unknown["UNKNOWN_CLASSIFIER_EXCEPTION"]
 

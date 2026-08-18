@@ -32,10 +32,10 @@ date: 2026-08-17
 ```mermaid
 graph TD
     subgraph DataLakeOperations["ACID Data Lake Operations"]
-        Upsert["1. Row-Level Upserts: MERGE INTO"]
-        GDPR["2. Row-Level Deletes: DELETE (GDPR / CCPA)"]
-        TimeTravel["3. Time-Travel Queries: FOR SYSTEM_TIME AS OF"]
-        SchemaEvol["4. In-Place Schema & Partition Evolution"]
+        Upsert["(1) Row-Level Upserts: MERGE INTO"]
+        GDPR["(2) Row-Level Deletes: DELETE (GDPR / CCPA)"]
+        TimeTravel["(3) Time-Travel Queries: FOR SYSTEM_TIME AS OF"]
+        SchemaEvol["(4) In-Place Schema & Partition Evolution"]
     end
 
     subgraph IcebergMetadata["Apache Iceberg Architecture in S3"]

@@ -42,9 +42,9 @@ graph TD
     end
 
     subgraph ActionsOnFailure["Action on Failure"]
-        FailJob["1. Fail Job Immediately (Pipeline Circuit Breaker)"]
-        Quarantine["2. Split Dataset: Route Bad Rows to S3 Quarantine Bucket"]
-        CloudWatch["3. Publish Metrics to CloudWatch & EventBridge (SNS Alert)"]
+        FailJob["(1) Fail Job Immediately (Pipeline Circuit Breaker)"]
+        Quarantine["(2) Split Dataset: Route Bad Rows to S3 Quarantine Bucket"]
+        CloudWatch["(3) Publish Metrics to CloudWatch & EventBridge (SNS Alert)"]
     end
 
     subgraph CleanDataTarget["Curated Analytics Target"]

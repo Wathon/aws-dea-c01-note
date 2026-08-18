@@ -41,10 +41,10 @@ sequenceDiagram
     Pipeline->>EMRService: CreateCluster (Auto-Terminate = True)
     EMRService->>ClusterNodes: Provisions EC2 Instances (Master, Core, Task)
     ClusterNodes->>S3Scripts: 1. Downloads & Runs Bootstrap Actions (pip install, configs)
-    Note over ClusterNodes: 2. Starts Hadoop / Spark Daemons
+    Note over ClusterNodes: (2) Starts Hadoop / Spark Daemons
     ClusterNodes->>S3Scripts: 3. Executes Step 1 (Spark ETL Job)
     ClusterNodes->>S3Lake: 4. Writes Transformed Parquet Data via EMRFS
-    Note over ClusterNodes: 5. All Steps Completed Successfully
+    Note over ClusterNodes: (5) All Steps Completed Successfully
     EMRService->>ClusterNodes: 6. Automatically Terminates Cluster (Zero Idle Cost)
 ```
 
@@ -66,13 +66,13 @@ sequenceDiagram
 
 ```mermaid
 graph LR
-    subgraph TransientModel["1. Transient (Step-Based) Cluster"]
+    subgraph TransientModel["(1) Transient (Step-Based) Cluster"]
         T_Start["Launch Cluster"] --> T_Boot["Bootstrap"]
         T_Boot --> T_Run["Run Steps (Batch ETL)"]
         T_Run --> T_Term["Auto-Terminate (0% Idle Cost)"]
     end
 
-    subgraph PersistentModel["2. Persistent (Long-Running) Cluster"]
+    subgraph PersistentModel["(2) Persistent (Long-Running) Cluster"]
         P_Start["Launch Cluster"] --> P_Run["Runs 24/7 for Multi-Tenant Ad-Hoc / Streaming"]
         P_Run --> P_Scale["EMR Managed Scaling (Scale up/down on demand)"]
     end

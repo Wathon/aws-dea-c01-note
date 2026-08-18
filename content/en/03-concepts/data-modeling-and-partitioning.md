@@ -95,11 +95,11 @@ GROUP BY customer_id;
 
 ```mermaid
 graph LR
-    subgraph Pitfall1["1. Over-Partitioning (The 'Small File Problem')"]
+    subgraph Pitfall1["(1) Over-Partitioning (The 'Small File Problem')"]
         OP["Millions of tiny files (< 1 MB) in thousands of partitions<br/>• Massive S3 LIST API overhead<br/>• Slows down Athena / Spark job scheduling"]
     end
 
-    subgraph Pitfall2["2. Under-Partitioning"]
+    subgraph Pitfall2["(2) Under-Partitioning"]
         UP["Terabytes of data dumped into a single root prefix<br/>• Forces query engines into full table scans<br/>• Maximum query latency and cost"]
     end
 

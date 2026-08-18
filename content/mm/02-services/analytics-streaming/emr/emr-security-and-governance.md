@@ -33,26 +33,26 @@ Amazon EMR သည် encryption၊ authentication နှင့် authorization 
 ```mermaid
 graph TD
     subgraph SecurityConfiguration["EMR Security Configuration"]
-        subgraph AtRest["1. Encryption at Rest"]
+        subgraph AtRest["(1) Encryption at Rest"]
             S3Enc["EMRFS (Amazon S3):<br>SSE-S3 / SSE-KMS / CSE-KMS"]
             LocalEnc["Local Disk (EBS / NVMe):<br>LUKS Encryption with KMS"]
             HDFSEnc["HDFS Encryption Zones (TDE)"]
         end
 
-        subgraph InTransit["2. Encryption in Transit"]
+        subgraph InTransit["(2) Encryption in Transit"]
             TLS["TLS / SSL Encryption for Hadoop RPC, Spark Shuffle & Presto"]
             Certs["PEM Certificates (.zip in S3 / ACM)"]
             TLS --- Certs
         end
 
-        subgraph AuthAccess["3. Authentication & Governance"]
+        subgraph AuthAccess["(3) Authentication & Governance"]
             Kerberos["Kerberos (Active Directory / MIT KDC)"]
             LakeFormation["AWS Lake Formation (Column/Row FGAC)"]
             Ranger["Apache Ranger (Centralized RBAC)"]
         end
     end
 
-    subgraph VPCNetwork["4. Network Security Isolation"]
+    subgraph VPCNetwork["(4) Network Security Isolation"]
         PrivateSubnet["Private Subnet (No Public IP)"]
         S3Endpoint["S3 Gateway VPC Endpoint"]
         SecurityGroups["EMR Managed Security Groups (Master & Slave)"]

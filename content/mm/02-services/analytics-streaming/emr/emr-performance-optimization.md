@@ -32,9 +32,9 @@ DEA-C01 စာမေးပွဲတွင် ထူးချွန်ရန်�
 ```mermaid
 graph TD
     subgraph EMRPerformancePillars["The 3 Pillars of EMR Performance Optimization"]
-        Pillar1["1. EMR Runtime for Apache Spark<br>• 3x အထိ ပိုမိုမြန်ဆန်သော Execution<br>• 100% Open-Source API Compatible<br>• Dynamic Partition Pruning & Adaptive Query Execution"]
-        Pillar2["2. S3DistCp Distributed File Merging<br>• သေးငယ်သော File သန်းပေါင်းများစွာကို 128 MB+ File များအဖြစ် ပေါင်းစည်းခြင်း<br>• S3 GET Request Throttling ကို ဖယ်ရှားခြင်း<br>• လျင်မြန်သော S3-to-S3 / HDFS-to-S3 Replication"]
-        Pillar3["3. Spark & YARN Memory Tuning<br>• Executor Sizing (4-5 Cores အသင့်တော်ဆုံး Sweet Spot)<br>• Memory Overhead Buffer (YARN မှ Kill လုပ်ခြင်းကို ကာကွယ်ခြင်း)<br>• Dynamic Allocation"]
+        Pillar1["(1) EMR Runtime for Apache Spark<br>• 3x အထိ ပိုမိုမြန်ဆန်သော Execution<br>• 100% Open-Source API Compatible<br>• Dynamic Partition Pruning & Adaptive Query Execution"]
+        Pillar2["(2) S3DistCp Distributed File Merging<br>• သေးငယ်သော File သန်းပေါင်းများစွာကို 128 MB+ File များအဖြစ် ပေါင်းစည်းခြင်း<br>• S3 GET Request Throttling ကို ဖယ်ရှားခြင်း<br>• လျင်မြန်သော S3-to-S3 / HDFS-to-S3 Replication"]
+        Pillar3["(3) Spark & YARN Memory Tuning<br>• Executor Sizing (4-5 Cores အသင့်တော်ဆုံး Sweet Spot)<br>• Memory Overhead Buffer (YARN မှ Kill လုပ်ခြင်းကို ကာကွယ်ခြင်း)<br>• Dynamic Allocation"]
     end
 
     subgraph OptimalOutcome["ရရှိလာသော Architecture"]

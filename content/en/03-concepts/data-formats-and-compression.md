@@ -25,13 +25,13 @@ In cloud big data analytics, the choice of storage format dramatically impacts s
 
 ```mermaid
 graph TD
-    subgraph RowLayout["1. Row-Based Storage (CSV / JSON / Avro)"]
+    subgraph RowLayout["(1) Row-Based Storage (CSV / JSON / Avro)"]
         R1["Row 1: ID=1, Name=Alice, Age=25, Country=US"]
         R2["Row 2: ID=2, Name=Bob,   Age=30, Country=UK"]
         R3["Row 3: ID=3, Name=Carol, Age=28, Country=CA"]
     end
 
-    subgraph ColumnarLayout["2. Columnar Storage (Apache Parquet / ORC)"]
+    subgraph ColumnarLayout["(2) Columnar Storage (Apache Parquet / ORC)"]
         C1["IDs Block: [1, 2, 3...]"]
         C2["Names Block: ['Alice', 'Bob', 'Carol'...]"]
         C3["Ages Block: [25, 30, 28...] (Stats: Min=25, Max=30)"]

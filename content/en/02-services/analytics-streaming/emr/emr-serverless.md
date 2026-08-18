@@ -30,18 +30,18 @@ With EMR Serverless, data engineers do not need to configure cluster topologies,
 
 ```mermaid
 graph TD
-    subgraph JobSubmission["1. Developer / Orchestration Layer"]
+    subgraph JobSubmission["(1) Developer / Orchestration Layer"]
         Pipeline["Airflow / Step Functions / EventBridge / AWS CLI"]
         JobScript["Spark Script (Python / Scala / SQL) in S3"]
     end
 
-    subgraph EMRServerlessApp["2. Amazon EMR Serverless Application"]
+    subgraph EMRServerlessApp["(2) Amazon EMR Serverless Application"]
         WarmPool["Pre-Initialized Warm Capacity (Instant Sub-5s Start)"]
         DynamicWorkers["Dynamic Worker Auto-Scaling (Scales vCPU/RAM up & down)"]
         AutoStop["Auto-Stop Idle Applications (Zero Idle Cost)"]
     end
 
-    subgraph ExternalResources["3. Storage, Metadata & VPC Resources"]
+    subgraph ExternalResources["(3) Storage, Metadata & VPC Resources"]
         GlueCatalog[("AWS Glue Data Catalog")]
         S3Data[("Amazon S3 Data Lake (Parquet / Iceberg)")]
         PrivateVPC["Corporate VPC (RDS / Redshift / MSK via Private Subnet)"]

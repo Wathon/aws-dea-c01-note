@@ -31,9 +31,9 @@ To excel on the DEA-C01 exam, data engineers must understand the performance ben
 ```mermaid
 graph TD
     subgraph EMRPerformancePillars["The 3 Pillars of EMR Performance Optimization"]
-        Pillar1["1. EMR Runtime for Apache Spark<br>• Up to 3x Faster Execution<br>• 100% Open-Source API Compatible<br>• Dynamic Partition Pruning & Adaptive Query Execution"]
-        Pillar2["2. S3DistCp Distributed File Merging<br>• Consolidates Millions of Tiny Files into 128 MB+ Files<br>• Eliminates S3 GET Request Throttling<br>• Fast S3-to-S3 / HDFS-to-S3 Replication"]
-        Pillar3["3. Spark & YARN Memory Tuning<br>• Executor Sizing (4-5 Cores Sweet Spot)<br>• Memory Overhead Buffer (Prevents YARN Kills)<br>• Dynamic Allocation"]
+        Pillar1["(1) EMR Runtime for Apache Spark<br>• Up to 3x Faster Execution<br>• 100% Open-Source API Compatible<br>• Dynamic Partition Pruning & Adaptive Query Execution"]
+        Pillar2["(2) S3DistCp Distributed File Merging<br>• Consolidates Millions of Tiny Files into 128 MB+ Files<br>• Eliminates S3 GET Request Throttling<br>• Fast S3-to-S3 / HDFS-to-S3 Replication"]
+        Pillar3["(3) Spark & YARN Memory Tuning<br>• Executor Sizing (4-5 Cores Sweet Spot)<br>• Memory Overhead Buffer (Prevents YARN Kills)<br>• Dynamic Allocation"]
     end
 
     subgraph OptimalOutcome["Resulting Architecture"]

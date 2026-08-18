@@ -30,20 +30,20 @@ Visual interface ထဲတွင် nodes များကို configure ပြ
 
 ```mermaid
 graph LR
-    subgraph SourceNodes["1. Source Nodes"]
+    subgraph SourceNodes["(1) Source Nodes"]
         S3In["Amazon S3 (Catalog / Direct)"]
         RDSIn["Amazon RDS / JDBC"]
         KinesisIn["Kinesis / MSK Streaming"]
     end
 
-    subgraph TransformNodes["2. Transform Nodes (Visual DAG)"]
+    subgraph TransformNodes["(2) Transform Nodes (Visual DAG)"]
         ApplyMap["ApplyMapping (Rename / Cast)"]
         DropNull["Drop Null Fields / Filter"]
         JoinNode["Join / Aggregate / SQL Query"]
         DQNode["Glue Data Quality (DQDL Validation)"]
     end
 
-    subgraph TargetNodes["3. Target Nodes"]
+    subgraph TargetNodes["(3) Target Nodes"]
         S3Out[("Amazon S3 (Parquet / Iceberg)")]
         RedshiftOut[("Amazon Redshift")]
         SnowflakeOut[("Snowflake / BigQuery")]

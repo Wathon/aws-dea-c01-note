@@ -75,11 +75,11 @@ Workgroups provide two distinct levels of data usage thresholds to prevent budge
 
 ```mermaid
 graph LR
-    subgraph PerQueryThreshold["1. Per-Query Data Limit (Circuit Breaker)"]
+    subgraph PerQueryThreshold["(1) Per-Query Data Limit (Circuit Breaker)"]
         Q1["User runs query scanning > 100 GB"] --> Action1["Query CANCELLED Immediately (Prevents runaway cost)"]
     end
 
-    subgraph AggregatedLimit["2. Aggregated Workgroup Limit (Hourly / Daily)"]
+    subgraph AggregatedLimit["(2) Aggregated Workgroup Limit (Hourly / Daily)"]
         Q2["Total scans in workgroup exceed 5 TB today"] --> Action2["Triggers CloudWatch Metric -> SNS Email Alert"]
     end
 

@@ -30,8 +30,8 @@ Similar in concept to **Amazon EC2 Spot Instances**, Glue Flex leverages spare, 
 ```mermaid
 graph TD
     subgraph ExecutionTiers["AWS Glue Execution Classes"]
-        Standard["1. Standard Execution Class ($0.44 / DPU-Hour)"]
-        Flex["2. Flex Execution Class ($0.29 / DPU-Hour ~ 34-35% Off)"]
+        Standard["(1) Standard Execution Class ($0.44 / DPU-Hour)"]
+        Flex["(2) Flex Execution Class ($0.29 / DPU-Hour ~ 34-35% Off)"]
     end
 
     subgraph WorkloadMatch["Workload Decision Criteria"]

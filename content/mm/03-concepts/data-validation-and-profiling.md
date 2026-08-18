@@ -27,11 +27,11 @@ date: 2026-08-15
 
 ```mermaid
 graph LR
-    subgraph Profiling["1. Data Profiling (Discovery Phase)"]
+    subgraph Profiling["(1) Data Profiling (Discovery Phase)"]
         ProfDesc["• Statistical Analysis (Min/Max/Mean)<br/>• Value Distributions & Cardinality<br/>• Schema Drift & Nested Type Inference<br/>• Identifies missingness (Nulls)"]
     end
 
-    subgraph Validation["2. Data Validation (ETL / Ingestion Phase)"]
+    subgraph Validation["(2) Data Validation (ETL / Ingestion Phase)"]
         ValDesc["• Rule Enforcement (Completeness, Uniqueness)<br/>• Column Constraints & Range Checks<br/>• Automated threshold alerting<br/>• Quarantine bad records / Fail jobs"]
     end
 

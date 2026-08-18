@@ -29,12 +29,12 @@ While enterprise-wide workflows spanning multiple AWS services (such as AWS Lamb
 
 ```mermaid
 graph LR
-    subgraph TriggerLayer["1. Ingestion Triggers"]
+    subgraph TriggerLayer["(1) Ingestion Triggers"]
         SchedTrigger["Schedule Trigger (e.g., Daily at 01:00 UTC)"]
         EventTrigger["EventBridge Trigger (S3 File Arrival)"]
     end
 
-    subgraph WorkflowDAG["2. AWS Glue Workflow DAG"]
+    subgraph WorkflowDAG["(2) AWS Glue Workflow DAG"]
         CrawlerNode["Crawler 1: Discover Raw S3 Schemas"]
         CondTrigger1{"Conditional Trigger (On Crawler Success)"}
         Job1["Glue Spark Job: Heavy Data Cleansing"]

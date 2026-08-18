@@ -37,9 +37,9 @@ graph LR
     end
 
     subgraph DataBrewWorkspace["DataBrew Visual Workspace"]
-        SampleView["1. Interactive Sample Grid (Spreadsheet UI)"]
-        RecipeDef["2. Step-by-Step Recipe (250+ Transforms)"]
-        ProfileEngine["3. Statistical Profiling Engine (40+ Metrics)"]
+        SampleView["(1) Interactive Sample Grid (Spreadsheet UI)"]
+        RecipeDef["(2) Step-by-Step Recipe (250+ Transforms)"]
+        ProfileEngine["(3) Statistical Profiling Engine (40+ Metrics)"]
     end
 
     subgraph ExecutionEngine["Serverless DataBrew Job Engine"]

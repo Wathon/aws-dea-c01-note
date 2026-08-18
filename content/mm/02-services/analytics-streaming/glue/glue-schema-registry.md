@@ -32,23 +32,23 @@ date: 2026-08-17
 
 ```mermaid
 graph LR
-    subgraph Producers["1. Streaming Producers"]
+    subgraph Producers["(1) Streaming Producers"]
         JavaApp["Producer Application (Kafka / Kinesis SDK)"]
         Serializer["Glue Client-Side Serializer"]
         JavaApp --> Serializer
     end
 
-    subgraph Governance["2. AWS Glue Schema Registry"]
+    subgraph Governance["(2) AWS Glue Schema Registry"]
         Registry[("Central Schema Registry (Avro / JSON / Protobuf)")]
         Compatibility{"Compatibility Check Engine (BACKWARD / FULL)"}
         Registry <--> Compatibility
     end
 
-    subgraph DataStream["3. Streaming Transport"]
+    subgraph DataStream["(3) Streaming Transport"]
         KinesisStream[("Amazon Kinesis / Amazon MSK Stream")]
     end
 
-    subgraph Consumers["4. Streaming Consumers"]
+    subgraph Consumers["(4) Streaming Consumers"]
         Deserializer["Glue Client-Side Deserializer"]
         ConsumerApp["Consumer Application (Spark / Flink / Lambda)"]
         Deserializer --> ConsumerApp

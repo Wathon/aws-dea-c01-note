@@ -32,26 +32,26 @@ Amazon Athena ၏ နောက်ကွယ်တွင် distributed SQL execut
 
 ```mermaid
 graph TD
-    subgraph Clients["1. SQL Clients & BI Applications"]
+    subgraph Clients["(1) SQL Clients & BI Applications"]
         Analyst["Data Analyst / Engineer (Athena Console / API)"]
         BI["Amazon QuickSight / Tableau / JDBC / ODBC"]
     end
 
-    subgraph AthenaEngine["2. Amazon Athena Serverless Query Engine"]
+    subgraph AthenaEngine["(2) Amazon Athena Serverless Query Engine"]
         Coordinator["Athena Query Coordinator (Trino Engine v3)"]
         Workgroups["Athena Workgroups (Cost Controls & Security)"]
         ResultCache["Query Result Reuse Cache (Up to 7 Days)"]
         FederationEngine["Athena Query Federation (AWS Lambda)"]
     end
 
-    subgraph MetadataStorage["3. Metadata & Source Storage"]
+    subgraph MetadataStorage["(3) Metadata & Source Storage"]
         Catalog[("AWS Glue Data Catalog (Hive Metastore)")]
         LakeFormation["AWS Lake Formation (Column/Row FGAC)"]
         S3DataLake[("Amazon S3 Data Lake (Parquet / ORC / Iceberg)")]
         ExtDB[("Federated Sources: DynamoDB / RDS / CloudWatch")]
     end
 
-    subgraph OutputLocation["4. Query Results & Storage"]
+    subgraph OutputLocation["(4) Query Results & Storage"]
         S3Results[("S3 Query Results Bucket (CSV / Metadata)")]
     end
 

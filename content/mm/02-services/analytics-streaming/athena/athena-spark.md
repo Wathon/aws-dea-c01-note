@@ -33,18 +33,18 @@ Engineers များအနေဖြင့် Amazon EMR clusters များ 
 
 ```mermaid
 graph LR
-    subgraph UserInterface["1. Interactive Interface"]
+    subgraph UserInterface["(1) Interactive Interface"]
         Console["Athena Web Console (Jupyter Notebook UI)"]
         PythonDev["Data Scientist / Data Engineer (PySpark Script)"]
     end
 
-    subgraph AthenaSparkEngine["2. Serverless Athena Spark Backend"]
+    subgraph AthenaSparkEngine["(2) Serverless Athena Spark Backend"]
         Workgroup["Spark-Enabled Athena Workgroup"]
         SparkCoordinator["Serverless Spark Coordinator (Sub-Second Startup)"]
         DPUWorkers["Dynamic DPU Worker Allocation (Auto-Scaled)"]
     end
 
-    subgraph StorageMetadata["3. Storage & Metadata Layer"]
+    subgraph StorageMetadata["(3) Storage & Metadata Layer"]
         Catalog[("AWS Glue Data Catalog")]
         S3Data[("Amazon S3 Data Lake (Parquet / Iceberg / CSV)")]
         NotebookBucket[("S3 Notebook & Session Storage")]

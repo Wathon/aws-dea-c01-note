@@ -27,19 +27,19 @@ Unlike cluster-based frameworks such as **[[emr]]**, AWS Glue abstracts away all
 
 ```mermaid
 graph TD
-    subgraph DataSources["1. Source Ingestion Layer"]
+    subgraph DataSources["(1) Source Ingestion Layer"]
         S3Raw["Amazon S3 Raw Data Lake"]
         RDS["Amazon RDS / Aurora / JDBC"]
         KinesisMSK["Kinesis Data Streams / Amazon MSK"]
     end
 
-    subgraph MetadataLayer["2. Metadata & Discovery"]
+    subgraph MetadataLayer["(2) Metadata & Discovery"]
         Crawler["Glue Crawler"]
         Catalog[("Glue Data Catalog (Hive Metastore)")]
         SchemaReg["Glue Schema Registry"]
     end
 
-    subgraph ProcessingLayer["3. Serverless Compute Engine"]
+    subgraph ProcessingLayer["(3) Serverless Compute Engine"]
         SparkETL["Glue PySpark / Scala ETL Jobs"]
         StreamingETL["Glue Streaming ETL"]
         DataQuality["Glue Data Quality (DQDL)"]
@@ -48,7 +48,7 @@ graph TD
         RayJobs["Glue Ray Jobs (Python Distributed)"]
     end
 
-    subgraph StorageConsumption["4. Curated Analytics & Targets"]
+    subgraph StorageConsumption["(4) Curated Analytics & Targets"]
         S3Curated[("Curated S3 Data Lake (Parquet/Iceberg)")]
         Redshift[("Amazon Redshift Data Warehouse")]
         Athena["Amazon Athena (SQL Querying)"]

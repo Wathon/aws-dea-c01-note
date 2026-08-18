@@ -37,10 +37,10 @@ graph TD
     end
 
     subgraph OptimizedPillars["The 4 Pillars of Athena Performance Tuning"]
-        P1["1. Columnar Storage (Parquet / ORC) - Column Pruning"]
-        P2["2. Splittable Compression (Snappy / ZSTD) - Data Shrinkage"]
-        P3["3. Partition Projection - Dynamic In-Memory Path Calculation"]
-        P4["4. S3 File Sizing (128 MB - 512 MB) - High I/O Throughput"]
+        P1["(1) Columnar Storage (Parquet / ORC) - Column Pruning"]
+        P2["(2) Splittable Compression (Snappy / ZSTD) - Data Shrinkage"]
+        P3["(3) Partition Projection - Dynamic In-Memory Path Calculation"]
+        P4["(4) S3 File Sizing (128 MB - 512 MB) - High I/O Throughput"]
     end
 
     subgraph OptimizedTarget["Optimized Architecture (Fast & Ultra-Cheap)"]

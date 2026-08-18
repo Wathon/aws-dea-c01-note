@@ -104,13 +104,13 @@ When provisioning an Amazon EMR cluster, you must select one of two cluster comp
 
 ```mermaid
 graph LR
-    subgraph InstanceGroups["1. Instance Groups (Legacy / Simple)"]
+    subgraph InstanceGroups["(1) Instance Groups (Legacy / Simple)"]
         IG_Master["Master: 1x m5.xlarge (On-Demand)"]
         IG_Core["Core: 5x m5.2xlarge (On-Demand)"]
         IG_Task["Task: 20x c5.2xlarge (Spot)"]
     end
 
-    subgraph InstanceFleets["2. Instance Fleets (Recommended / Resilient)"]
+    subgraph InstanceFleets["(2) Instance Fleets (Recommended / Resilient)"]
         IF_Task["Task Fleet Target: 100 vCPUs<br>• Pool: c5.2xlarge, c5.4xlarge, m5.2xlarge, r5.2xlarge<br>• Strategy: capacity-optimized<br>• Allocation: Spot & On-Demand mix"]
     end
 

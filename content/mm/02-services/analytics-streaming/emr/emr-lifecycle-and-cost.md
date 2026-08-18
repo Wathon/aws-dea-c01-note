@@ -42,10 +42,10 @@ sequenceDiagram
     Pipeline->>EMRService: CreateCluster (Auto-Terminate = True)
     EMRService->>ClusterNodes: EC2 Instances (Master, Core, Task) များကို Provision ပြုလုပ်ခြင်း
     ClusterNodes->>S3Scripts: 1. Bootstrap Actions များကို Download လုပ်ပြီး Run ခြင်း (pip install, configs)
-    Note over ClusterNodes: 2. Hadoop / Spark Daemons များကို စတင်ခြင်း
+    Note over ClusterNodes: (2) Hadoop / Spark Daemons များကို စတင်ခြင်း
     ClusterNodes->>S3Scripts: 3. Step 1 (Spark ETL Job) ကို Execute ပြုလုပ်ခြင်း
     ClusterNodes->>S3Lake: 4. Transformed Parquet Data များကို EMRFS မှတစ်ဆင့် ရေးသားခြင်း
-    Note over ClusterNodes: 5. Steps အားလုံး အောင်မြင်စွာ ပြီးဆုံးခြင်း
+    Note over ClusterNodes: (5) Steps အားလုံး အောင်မြင်စွာ ပြီးဆုံးခြင်း
     EMRService->>ClusterNodes: 6. Cluster ကို အလိုအလျောက် Terminate ပြုလုပ်ခြင်း (Zero Idle Cost)
 ```
 
@@ -67,13 +67,13 @@ sequenceDiagram
 
 ```mermaid
 graph LR
-    subgraph TransientModel["1. Transient (Step-Based) Cluster"]
+    subgraph TransientModel["(1) Transient (Step-Based) Cluster"]
         T_Start["Cluster ကို Launch လုပ်ခြင်း"] --> T_Boot["Bootstrap"]
         T_Boot --> T_Run["Steps များကို Run ခြင်း (Batch ETL)"]
         T_Run --> T_Term["Auto-Terminate (0% Idle Cost)"]
     end
 
-    subgraph PersistentModel["2. Persistent (Long-Running) Cluster"]
+    subgraph PersistentModel["(2) Persistent (Long-Running) Cluster"]
         P_Start["Cluster ကို Launch လုပ်ခြင်း"] --> P_Run["Multi-Tenant Ad-Hoc / Streaming အတွက် 24/7 Run ခြင်း"]
         P_Run --> P_Scale["EMR Managed Scaling (လိုအပ်ချက်အရ Scale up/down လုပ်ခြင်း)"]
     end

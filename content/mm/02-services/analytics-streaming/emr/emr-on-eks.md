@@ -32,13 +32,13 @@ Big data analytics အတွက် သီးသန့် long-running EC2 cluste
 
 ```mermaid
 graph TD
-    subgraph EMRControlPlane["1. AWS EMR Management Plane"]
+    subgraph EMRControlPlane["(1) AWS EMR Management Plane"]
         EMRAPI["EMR API / StartJobRun"]
         VirtualCluster["EMR Virtual Cluster (Logical Mapping)"]
         EMRAPI --> VirtualCluster
     end
 
-    subgraph EKSCluster["2. Amazon EKS Kubernetes Cluster"]
+    subgraph EKSCluster["(2) Amazon EKS Kubernetes Cluster"]
         subgraph KubeNamespace["Kubernetes Namespace: 'analytics-prod'"]
             SparkDriver["Spark Driver Pod (Coordinates Job)"]
             SparkExec1["Spark Executor Pod 1 (Worker)"]
@@ -48,7 +48,7 @@ graph TD
         KubeAutoscaler["Karpenter / Cluster Autoscaler (Auto-Scales EC2 Nodes)"]
     end
 
-    subgraph StorageSecurity["3. Data Lake & Security Layer"]
+    subgraph StorageSecurity["(3) Data Lake & Security Layer"]
         IRSA["IAM Roles for Service Accounts (IRSA)"]
         S3DataLake[("Amazon S3 Data Lake (EMRFS)")]
         GlueCatalog[("AWS Glue Data Catalog")]

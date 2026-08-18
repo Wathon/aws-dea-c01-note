@@ -130,9 +130,9 @@ graph TD
     ConsumerAccount["Consumer AWS Account (Athena / EMR / QuickSight)"]
 
     subgraph SharingMechanisms["Cross-Account Sharing Methods"]
-        Method1["1. AWS Lake Formation Permissions (Recommended)"]
-        Method2["2. Glue Resource-Based Policy (IAM)"]
-        Method3["3. AWS Resource Access Manager (RAM)"]
+        Method1["(1) AWS Lake Formation Permissions (Recommended)"]
+        Method2["(2) Glue Resource-Based Policy (IAM)"]
+        Method3["(3) AWS Resource Access Manager (RAM)"]
     end
 
     ConsumerAccount --> SharingMechanisms
