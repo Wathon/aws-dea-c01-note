@@ -151,6 +151,6 @@ DEA-C01 စာမေးပွဲရှိ scenario မေးခွန်းအ�
 - `[[kinesis-troubleshooting-and-tuning]]` — Troubleshooting & Performance Tuning
 - `[[kinesis-firehose]]` — Amazon Data Firehose Delivery Pipelines
 - `[[kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
-- `[[msk-kafka]]` — Amazon Managed Streaming for Apache Kafka
+- `[[msk]]` — Amazon Managed Streaming for Apache Kafka
 - `[[lambda]]` — Serverless Stream Consumers
 - `[[s3]]` — S3 Data Lake Storage Architecture

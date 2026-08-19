@@ -83,7 +83,7 @@ This workspace is structured directly from the **AWS Certified Data Engineer Ass
 - [[athena]] — Serverless SQL queries on S3, Partition Projection, CTAS, Federated queries
 - [[emr]] — Elastic MapReduce (Spark, Hadoop, Presto), EMR Serverless, EMR on EKS
 - [[kinesis]] — Kinesis Data Streams, Firehose, Data Analytics (Flink), Video Streams
-- [[msk-kafka]] — Managed Streaming for Apache Kafka, MSK Connect
+- [[msk]] — Managed Streaming for Apache Kafka, MSK Connect
 - [[opensearch]] — OpenSearch Service, Search indices, Shards & Serverless
 - [[quicksight]] — Business Intelligence, SPICE engine, Dashboards, RLS
 

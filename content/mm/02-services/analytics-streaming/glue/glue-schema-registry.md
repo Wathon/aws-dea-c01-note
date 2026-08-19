@@ -20,7 +20,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue-schema-registry) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon MSK, Amazon Kinesis နှင့် Apache Flink တို့အတွက် event stream schemas များကို ဗဟိုမှ ရှာဖွေတွေ့ရှိခြင်း (discovery)၊ စစ်ဆေးအတည်ပြုခြင်း (validation) နှင့် စနစ်တကျ ထိန်းချုပ်ပြောင်းလဲခြင်း (controlled evolution) ပြုလုပ်ရန်။
 - **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[msk-kafka]]` | `[[kinesis]]`
+- **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[msk]]` | `[[kinesis]]`
 
 ---
 
@@ -28,7 +28,7 @@ date: 2026-08-17
 
 **AWS Glue Schema Registry** သည် streaming data applications များတစ်လျှောက် schemas များကို စစ်ဆေးအတည်ပြုခြင်း (validating)၊ ရှာဖွေဖော်ထုတ်ခြင်း (discovering) နှင့် စနစ်တကျ ပြောင်းလဲတိုးချဲ့ခြင်း (evolving) တို့အတွက် ဗဟို repository တစ်ခုကို ထောက်ပံ့ပေးသော AWS Glue ၏ serverless feature တစ်ခု ဖြစ်သည်။ 
 
-**[[msk-kafka]]**, **[[kinesis]]** သို့မဟုတ် **Amazon Managed Service for Apache Flink** တို့ကို အသုံးပြု၍ distributed streaming architectures များကို တည်ဆောက်ရာတွင် သီးခြားစီဖြစ်နေသော producer နှင့် consumer အဖွဲ့များသည် တိကျသော data contract တစ်ခုကို လိုက်နာရမည်ဖြစ်သည်။ Glue Schema Registry သည် ဤ contract ကို producer level တွင် စတင်သတ်မှတ်ထိန်းချုပ် (enforce) ပေးပြီး ပုံစံမကျသော (malformed) သို့မဟုတ် စနစ်ကို ပျက်စီးစေနိုင်သော (breaking) schema အပြောင်းအလဲများသည် data streams များအတွင်းသို့ မရောက်ရှိအောင် တားဆီးပေးသည်။
+**[[msk]]**, **[[kinesis]]** သို့မဟုတ် **Amazon Managed Service for Apache Flink** တို့ကို အသုံးပြု၍ distributed streaming architectures များကို တည်ဆောက်ရာတွင် သီးခြားစီဖြစ်နေသော producer နှင့် consumer အဖွဲ့များသည် တိကျသော data contract တစ်ခုကို လိုက်နာရမည်ဖြစ်သည်။ Glue Schema Registry သည် ဤ contract ကို producer level တွင် စတင်သတ်မှတ်ထိန်းချုပ် (enforce) ပေးပြီး ပုံစံမကျသော (malformed) သို့မဟုတ် စနစ်ကို ပျက်စီးစေနိုင်သော (breaking) schema အပြောင်းအလဲများသည် data streams များအတွင်းသို့ မရောက်ရှိအောင် တားဆီးပေးသည်။
 
 ```mermaid
 graph LR
@@ -145,6 +145,6 @@ graph TD
 
 ## 📌 Related Notes
 - `[[glue]]` — AWS Glue Architecture Overview
-- `[[msk-kafka]]` — Amazon Managed Streaming for Apache Kafka
+- `[[msk]]` — Amazon Managed Streaming for Apache Kafka
 - `[[kinesis]]` — Amazon Kinesis Data Streams
 - `[[glue-data-catalog]]` — Glue Metadata Catalog

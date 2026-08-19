@@ -27,7 +27,7 @@ date: 2026-07-28
   - On-premises discovery & server rehosting via [[application-discovery-and-mgn]] (Application Discovery Service & MGN).
 - **Streaming Ingestion**:
   - Real-time streaming using [[kinesis]] (Kinesis Data Streams, Kinesis Data Firehose).
-  - Managed Apache Kafka using [[msk-kafka]] (Amazon MSK & MSK Connect).
+  - Managed Apache Kafka using [[msk]] (Amazon MSK & MSK Connect).
   - SaaS application ingestion using [[appflow]] (Salesforce, ServiceNow, Slack).
 
 ### Task Statement 1.2: Transform and process data
@@ -56,7 +56,7 @@ date: 2026-07-28
 | --- | --- | --- | --- |
 | **AWS Glue** | Serverless ETL & Crawlers | Transform data in S3 to Parquet; catalog schemas automatically | [[glue]] |
 | **Amazon Kinesis** | Streaming Ingestion | Near real-time ingestion to S3/Redshift/OpenSearch | [[kinesis]] |
-| **Amazon MSK** | Apache Kafka | Open-source streaming compatibility with low latency | [[msk-kafka]] |
+| **Amazon MSK** | Apache Kafka | Open-source streaming compatibility with low latency | [[msk]] |
 | **AWS Lambda** | Event-Driven Compute | Micro-batch processing, file upload triggers from S3 | [[lambda]] |
 | **AWS Batch** | Containerized Batch Compute | Non-Spark batch processing (> 15 mins), Spot array jobs | [[batch]] |
 | **Amazon ECR, ECS & EKS** | Container Orchestration | Docker registries, Fargate serverless containers, EMR on EKS | [[ecr-ecs-eks]] |
@@ -80,7 +80,7 @@ date: 2026-07-28
 > **Stream vs Batch Selection**:
 > - If requirement is **real-time ingestion with custom transformation logic and retention up to 365 days**: Choose [[kinesis]] (Kinesis Data Streams).
 > - If requirement is **zero-code streaming direct to S3, Redshift, or OpenSearch with micro-batching**: Choose [[kinesis]] (Kinesis Data Firehose).
-> - If requirement is **open-source Kafka ecosystem / custom producers**: Choose [[msk-kafka]].
+> - If requirement is **open-source Kafka ecosystem / custom producers**: Choose [[msk]].
 
 > [!TIP]
 > **Glue vs EMR Selection**:

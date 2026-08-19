@@ -77,7 +77,7 @@ date: 2026-08-15
 - `[[en/02-services/analytics-streaming/athena|Amazon Athena]]` — Serverless SQL queries on S3, Partition Projection, CTAS
 - `[[en/02-services/analytics-streaming/emr|Amazon EMR]]` — Elastic MapReduce (Spark, Hadoop, Presto), EMR Serverless, EMR on EKS
 - `[[en/02-services/analytics-streaming/kinesis|Amazon Kinesis]]` — Kinesis Data Streams, Firehose, Data Analytics, Video Streams
-- `[[en/02-services/analytics-streaming/msk-kafka|Amazon MSK]]` — Managed Streaming for Apache Kafka, MSK Connect
+- `[[en/02-services/analytics-streaming/msk/msk|Amazon MSK]]` — Managed Streaming for Apache Kafka, MSK Connect
 - `[[en/02-services/analytics-streaming/opensearch|Amazon OpenSearch]]` — OpenSearch Service, Search indices, Shards
 - `[[en/02-services/analytics-streaming/quicksight|Amazon QuickSight]]` — Business Intelligence, SPICE engine, Dashboards
 

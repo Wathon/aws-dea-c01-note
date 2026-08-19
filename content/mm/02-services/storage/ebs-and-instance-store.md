@@ -146,7 +146,7 @@ graph TD
 - Burst-bucket credit model ကို အသုံးပြုသည်: baseline throughput အနေဖြင့် ၁ TiB လျှင် ၄၀ MB/s နှုန်းဖြင့် ၂၅၀ MB/s အထိရရှိပြီး၊ ၅၀၀ MB/s အထိ burst လုပ်နိုင်သည်။
 - **Data Engineering Key Fit**:
   - EC2 / [[emr]] ပေါ်ရှိ Apache Spark / Hadoop cluster များ။
-  - Distributed Kafka broker logs ([[msk-kafka]]).
+  - Distributed Kafka broker logs ([[msk]]).
   - Data warehouse staging နှင့် log aggregation pipeline များ။
 - **Limitation**: **OS boot volume အဖြစ် အသုံးမပြုနိုင်ပါ**။
 
@@ -364,7 +364,7 @@ graph TD
 - [[s3]] — Persistent object storage and Data Lake architecture
 - [[efs-and-fsx]] — Amazon EFS & AWS FSx (Lustre, ONTAP, Windows)
 - [[emr]] — Amazon EMR cluster node storage and EMRFS
-- [[msk-kafka]] — Managed Streaming for Apache Kafka broker storage
+- [[msk]] — Managed Streaming for Apache Kafka broker storage
 - [[rds-and-aurora]] — Amazon RDS storage engines and Aurora distributed storage
 - [[kms-and-secrets]] — AWS KMS encryption keys and EBS volume encryption
 - [[service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)

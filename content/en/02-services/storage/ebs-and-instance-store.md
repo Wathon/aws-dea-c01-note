@@ -145,7 +145,7 @@ graph TD
 - Uses a burst-bucket credit model: baseline throughput scales at $40 \text{ MB/s per TiB}$ up to $250 \text{ MB/s}$, bursting up to $500 \text{ MB/s}$.
 - **Data Engineering Key Fit**:
   - Apache Spark / Hadoop clusters on EC2 / [[emr]].
-  - Distributed Kafka broker logs ([[msk-kafka]]).
+  - Distributed Kafka broker logs ([[msk]]).
   - Data warehouse staging and log aggregation pipelines.
 - **Limitation**: **Cannot be used as an OS boot volume**.
 
@@ -363,7 +363,7 @@ graph TD
 - [[s3]] — Persistent object storage and Data Lake architecture
 - [[efs-and-fsx]] — Amazon EFS & AWS FSx (Lustre, ONTAP, Windows)
 - [[emr]] — Amazon EMR cluster node storage and EMRFS
-- [[msk-kafka]] — Managed Streaming for Apache Kafka broker storage
+- [[msk]] — Managed Streaming for Apache Kafka broker storage
 - [[rds-and-aurora]] — Amazon RDS storage engines and Aurora distributed storage
 - [[kms-and-secrets]] — AWS KMS encryption keys and EBS volume encryption
 - [[service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)

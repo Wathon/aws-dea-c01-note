@@ -127,4 +127,4 @@ graph LR
 - `[[data-modeling-and-partitioning]]` — S3 Partition Prefix များနှင့် Data Modeling
 - `[[athena]]` — Amazon Athena ဖြင့် Parquet ဒေတာများကို Query ပြုလုပ်ခြင်း
 - `[[glue]]` — AWS Glue ETL ဖြင့် ဖော်မတ်ပြောင်းလဲခြင်း (CSV $\rightarrow$ Parquet)
-- `[[msk-kafka]]` — Amazon MSK Avro Serialization နှင့် Schema Registry
+- `[[msk]]` — Amazon MSK Avro Serialization နှင့် Schema Registry

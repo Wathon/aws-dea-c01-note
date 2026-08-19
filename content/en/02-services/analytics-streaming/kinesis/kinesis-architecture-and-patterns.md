@@ -19,7 +19,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis-architecture-and-patterns)
 - **Primary Use Case**: Designing end-to-end streaming data pipelines, implementing record deduplication, isolating poison pills, and choosing between KDS, Firehose, MSK, and SQS.
 - **Slide Reference**: Pages 414–459 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[kinesis-firehose]]` | `[[kinesis-apache-flink]]` | `[[msk-kafka]]`
+- **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[kinesis-firehose]]` | `[[kinesis-apache-flink]]` | `[[msk]]`
 
 ---
 
@@ -149,5 +149,5 @@ graph TD
 - `[[kinesis-data-streams]]` — KDS Ingestion & Shards
 - `[[kinesis-firehose]]` — Micro-Batch Streaming Delivery
 - `[[kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
-- `[[msk-kafka]]` — Amazon Managed Streaming for Apache Kafka
+- `[[msk]]` — Amazon Managed Streaming for Apache Kafka
 - `[[dynamodb]]` — Deduplication State Storage

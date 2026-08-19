@@ -17,7 +17,7 @@ date: 2026-08-13
 
 - **Category**: Migration & Transfer (Database & Analytics Migration, Continuous CDC Ingestion)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/migration/dms-and-sct) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: Heterogeneous နှင့် homogeneous database migration များ၊ application downtime အနည်းဆုံးဖြင့် [[s3]] Data Lakes, [[redshift]], [[kinesis]], [[msk-kafka]], နှင့် [[dynamodb]] တို့သို့ ဆက်တိုက် Change Data Capture (CDC) streaming ပြုလုပ်ခြင်း။
+- **Primary Use Case**: Heterogeneous နှင့် homogeneous database migration များ၊ application downtime အနည်းဆုံးဖြင့် [[s3]] Data Lakes, [[redshift]], [[kinesis]], [[msk]], နှင့် [[dynamodb]] တို့သို့ ဆက်တိုက် Change Data Capture (CDC) streaming ပြုလုပ်ခြင်း။
 - **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ Pages 269–275
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[rds-and-aurora]] | [[redshift]] | [[s3]] | [[datasync-and-snow]]
 
@@ -33,7 +33,7 @@ date: 2026-08-13
 1. **Homogeneous vs. Heterogeneous Migrations**: DMS ကို သီးခြား (standalone - same engine) အသုံးပြုနိုင်သည့် အခြေအနေ နှင့် AWS SCT ကို မဖြစ်မနေ လိုအပ်သည့် အခြေအနေ (different engines)။
 2. **DMS Replication Tasks & Load Modes**: Full load, Full load + CDC, နှင့် CDC-only။
 3. **Change Data Capture (CDC) Mechanics**: Transaction logs များကို ဖတ်ခြင်း (PostgreSQL WAL, MySQL binlogs, Oracle Redo/LogMiner, SQL Server MS-CDC) နှင့် inserts/updates/deletes များကို stream လုပ်ခြင်း။
-4. **Target Data Lake & Streaming Integrations**: CDC event များကို [[s3]] သို့ CSV သို့မဟုတ် Apache Parquet format ( `Op` operation column ဖြင့်) ထုတ်ပေးခြင်း၊ [[kinesis]], နှင့် [[msk-kafka]] တို့သို့ ချိတ်ဆက်ခြင်း။
+4. **Target Data Lake & Streaming Integrations**: CDC event များကို [[s3]] သို့ CSV သို့မဟုတ် Apache Parquet format ( `Op` operation column ဖြင့်) ထုတ်ပေးခြင်း၊ [[kinesis]], နှင့် [[msk]] တို့သို့ ချိတ်ဆက်ခြင်း။
 5. **LOB (Large Object) Handling Tradeoffs**: Limited LOB mode vs. Full LOB mode vs. Inline LOB mode.
 6. **SCT Data Extraction Agents & Hybrid Snowball Migration**: [[datasync-and-snow]] (Snowball Edge) ကိုသုံး၍ offline ဖြင့် multi-terabyte/petabyte data warehouses များကို ပြောင်းရွှေ့ခြင်း (Teradata, Oracle, Greenplum) နှင့် DMS continuous CDC ဖြင့် ဆက်တိုက် catch-up လုပ်ခြင်း။
 7. **DMS Serverless & DMS Fleet Advisor**: Replication capacity units (DCUs) ကို auto-scaling လုပ်ခြင်း နှင့် fleet များကို automated အနေဖြင့် ရှာဖွေဖော်ထုတ်ခြင်း (discovery)။
@@ -436,6 +436,6 @@ sequenceDiagram
 - [[redshift]] — Amazon Redshift data warehouse target and Zero-ETL comparison
 - [[s3]] — S3 Data Lake target for CDC Parquet ingestion
 - [[kinesis]] — Streaming ingestion target for real-time CDC
-- [[msk-kafka]] — Managed Kafka target for change stream event messaging
+- [[msk]] — Managed Kafka target for change stream event messaging
 - [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
 - [[service-comparisons]] — Master DEA-C01 Service Decision Matrix

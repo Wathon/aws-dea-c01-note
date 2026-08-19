@@ -16,7 +16,7 @@ date: 2026-08-13
 
 - **Category**: Migration & Transfer (Database & Analytics Migration, Continuous CDC Ingestion)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/migration/dms-and-sct)
-- **Primary Use Case**: Heterogeneous and homogeneous database migrations, continuous Change Data Capture (CDC) streaming into [[s3]] Data Lakes, [[redshift]], [[kinesis]], [[msk-kafka]], and [[dynamodb]] with minimal downtime.
+- **Primary Use Case**: Heterogeneous and homogeneous database migrations, continuous Change Data Capture (CDC) streaming into [[s3]] Data Lakes, [[redshift]], [[kinesis]], [[msk]], and [[dynamodb]] with minimal downtime.
 - **Slide Reference**: Pages 269–275 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[rds-and-aurora]] | [[redshift]] | [[s3]] | [[datasync-and-snow]]
 
@@ -32,7 +32,7 @@ For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you must m
 1. **Homogeneous vs. Heterogeneous Migrations**: When DMS works standalone (same engine) vs. when AWS SCT is strictly required (different engines).
 2. **DMS Replication Tasks & Load Modes**: Full load, Full load + CDC, and CDC-only.
 3. **Change Data Capture (CDC) Mechanics**: Reading transaction logs (PostgreSQL WAL, MySQL binlogs, Oracle Redo/LogMiner, SQL Server MS-CDC) and streaming inserts/updates/deletes.
-4. **Target Data Lake & Streaming Integrations**: Outputting CDC events to [[s3]] in CSV or Apache Parquet format (with `Op` operation column), [[kinesis]], and [[msk-kafka]].
+4. **Target Data Lake & Streaming Integrations**: Outputting CDC events to [[s3]] in CSV or Apache Parquet format (with `Op` operation column), [[kinesis]], and [[msk]].
 5. **LOB (Large Object) Handling Tradeoffs**: Limited LOB mode vs. Full LOB mode vs. Inline LOB mode.
 6. **SCT Data Extraction Agents & Hybrid Snowball Migration**: Migrating multi-terabyte/petabyte data warehouses (Teradata, Oracle, Greenplum) offline via [[datasync-and-snow]] (Snowball Edge) + DMS continuous CDC catch-up.
 7. **DMS Serverless & DMS Fleet Advisor**: Auto-scaling replication capacity units (DCUs) and automated fleet discovery.
@@ -435,7 +435,7 @@ sequenceDiagram
 - [[redshift]] — Amazon Redshift data warehouse target and Zero-ETL comparison
 - [[s3]] — S3 Data Lake target for CDC Parquet ingestion
 - [[kinesis]] — Streaming ingestion target for real-time CDC
-- [[msk-kafka]] — Managed Kafka target for change stream event messaging
+- [[msk]] — Managed Kafka target for change stream event messaging
 - [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
 - [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
 

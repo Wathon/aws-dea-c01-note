@@ -61,7 +61,7 @@ Categorized index of all AWS services covered in the **AWS Certified Data Engine
 - [[athena]] — Amazon Athena (Interactive Serverless SQL)
 - [[emr]] — Amazon EMR (Spark, Hadoop, Hive, Presto, EMR Serverless)
 - [[kinesis]] — Amazon Kinesis (Data Streams, Data Firehose, Data Analytics/Flink, Video Streams)
-- [[msk-kafka]] — Amazon MSK (Managed Streaming for Apache Kafka)
+- [[msk]] — Amazon MSK (Managed Streaming for Apache Kafka)
 - [[opensearch]] — Amazon OpenSearch Service (Search & Analytics)
 - [[quicksight]] — Amazon QuickSight (Business Intelligence & Dashboards)
 

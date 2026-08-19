@@ -58,7 +58,7 @@ gantt
 - Relational (RDS/Aurora) & NoSQL (DynamoDB, Redshift): [[rds-and-aurora]], [[dynamodb]], [[redshift]]
 
 ### Week 2: Ingestion, Compute & Analytics Pipelines
-- Data Ingestion with Kinesis Data Streams / Firehose / MSK: [[kinesis]], [[msk-kafka]]
+- Data Ingestion with Kinesis Data Streams / Firehose / MSK: [[kinesis]], [[msk]]
 - Serverless & Container Compute: [[lambda]], [[batch]], [[ecr-ecs-eks]], [[ec2-and-graviton]]
 - ETL with AWS Glue (Crawlers, Catalog, Jobs, DataBrew, Data Quality): [[glue]]
 - Interactive Querying with Athena & Big Data with EMR: [[athena]], [[emr]]

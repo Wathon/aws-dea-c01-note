@@ -126,4 +126,4 @@ graph LR
 - `[[data-modeling-and-partitioning]]` — Structuring S3 partitions for Parquet datasets
 - `[[athena]]` — Query performance and cost optimization on Parquet
 - `[[glue]]` — Format conversion jobs in AWS Glue ETL
-- `[[msk-kafka]]` — Avro serialization and Schema Registry
+- `[[msk]]` — Avro serialization and Schema Registry

@@ -17,7 +17,7 @@ date: 2026-08-14
 
 - **Category**: Compute (Serverless Compute & Event-Driven Processing)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/lambda) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: Real-time event-driven data processing, [[kinesis]] နှင့် [[msk-kafka]] တို့မှ streaming micro-batching လုပ်ခြင်း၊ ပေါ့ပါးသော ETL၊ S3 file ingestion triggers များနှင့် workflow orchestration glue အဖြစ် အသုံးပြုခြင်း။
+- **Primary Use Case**: Real-time event-driven data processing, [[kinesis]] နှင့် [[msk]] တို့မှ streaming micro-batching လုပ်ခြင်း၊ ပေါ့ပါးသော ETL၊ S3 file ingestion triggers များနှင့် workflow orchestration glue အဖြစ် အသုံးပြုခြင်း။
 - **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 289–310 
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[kinesis]] | [[s3]] | [[dynamodb]] | [[redshift]] | [[efs-and-fsx]] | [[step-functions]]
 
@@ -29,7 +29,7 @@ date: 2026-08-14
 
 Data engineering architectures များတွင် AWS Lambda သည် မရှိမဖြစ်လိုအပ်သော **event-driven glue** အဖြစ် လုပ်ဆောင်ပေးပါသည်-
 1. **Real-Time File Processing**: Validate လုပ်ရန်၊ decompress လုပ်ရန် သို့မဟုတ် metadata ထုတ်ယူရန် [[s3]] object creation events (`s3:ObjectCreated:*`) ဖြင့် ချက်ချင်း trigger လုပ်ပါသည်။
-2. **Stream Processing & Micro-Batching**: [[kinesis]] Data Streams, [[dynamodb]] Streams, နှင့် [[msk-kafka]] တို့မှ streaming records များကိုဖတ်ရှုပြီး transform လုပ်ပါသည်။
+2. **Stream Processing & Micro-Batching**: [[kinesis]] Data Streams, [[dynamodb]] Streams, နှင့် [[msk]] တို့မှ streaming records များကိုဖတ်ရှုပြီး transform လုပ်ပါသည်။
 3. **Data Lake Hydration & Data Warehouse Loading**: [[redshift]] အတွင်းသို့ bulk `COPY` commands ကို အစပျိုးပေးခြင်း သို့မဟုတ် [[glue]] Data Catalog တွင် metadata ကို update လုပ်ပေးခြင်း။
 4. **Database Event Streaming**: Operational databases များမှ change events များကို [[opensearch]] ကဲ့သို့သော search indexes များသို့ ပွားယူခြင်း သို့မဟုတ် [[sqs-and-sns]] မှတစ်ဆင့် alerting topics များသို့ပေးပို့ခြင်း။
 

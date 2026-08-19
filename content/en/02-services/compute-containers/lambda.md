@@ -16,7 +16,7 @@ date: 2026-08-14
 
 - **Category**: Compute (Serverless Compute & Event-Driven Processing)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/compute-containers/lambda)
-- **Primary Use Case**: Real-time event-driven data processing, streaming micro-batching from [[kinesis]] and [[msk-kafka]], lightweight ETL, S3 file ingestion triggers, and workflow orchestration glue.
+- **Primary Use Case**: Real-time event-driven data processing, streaming micro-batching from [[kinesis]] and [[msk]], lightweight ETL, S3 file ingestion triggers, and workflow orchestration glue.
 - **Slide Reference**: Pages 289–310 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[kinesis]] | [[s3]] | [[dynamodb]] | [[redshift]] | [[efs-and-fsx]] | [[step-functions]]
 
@@ -28,7 +28,7 @@ date: 2026-08-14
 
 In data engineering architectures, AWS Lambda serves as the essential **event-driven glue**:
 1. **Real-Time File Processing**: Triggered instantly by [[s3]] object creation events (`s3:ObjectCreated:*`) to validate, decompress, or extract metadata.
-2. **Stream Processing & Micro-Batching**: Reading and transforming streaming records from [[kinesis]] Data Streams, [[dynamodb]] Streams, and [[msk-kafka]].
+2. **Stream Processing & Micro-Batching**: Reading and transforming streaming records from [[kinesis]] Data Streams, [[dynamodb]] Streams, and [[msk]].
 3. **Data Lake Hydration & Data Warehouse Loading**: Initiating bulk `COPY` commands into [[redshift]] or updating metadata in [[glue]] Data Catalog.
 4. **Database Event Streaming**: Replicating change events from operational databases to search indexes like [[opensearch]] or alerting topics via [[sqs-and-sns]].
 

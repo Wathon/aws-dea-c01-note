@@ -53,7 +53,7 @@ graph TD
 | --- | --- | --- |
 | **Real-time custom stream processing (Retention up to 365 days)** | [[kinesis]] (Data Streams) | Multi-consumer, sub-second latency, custom processing code |
 | **Zero-code streaming delivery to S3 / Redshift / OpenSearch** | [[kinesis]] (Data Firehose) | Micro-batching, direct delivery, automatic Parquet transformation |
-| **Open-source Kafka streaming ecosystem** | [[msk-kafka]] (Amazon MSK) | Apache Kafka compatibility, Kafka Connect |
+| **Open-source Kafka streaming ecosystem** | [[msk]] (Amazon MSK) | Apache Kafka compatibility, Kafka Connect |
 | **Ingesting data from SaaS (Salesforce, ServiceNow)** | [[appflow]] (AWS AppFlow) | No-code SaaS connector, PrivateLink security |
 | **Migrating databases with continuous replication** | [[dms-and-sct]] (AWS DMS + CDC) | Heterogeneous database migration, minimal downtime |
 

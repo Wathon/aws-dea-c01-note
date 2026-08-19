@@ -35,7 +35,7 @@ This knowledge base is structured directly from the **AWS Certified Data Enginee
 
 ## 🎯 Official Exam Domains Overview
 
-1. **Domain 1: Data Ingestion and Processing** _(28%)_ — Batch & Streaming with [[lambda]], [[glue]], [[emr]], [[kinesis]], [[msk-kafka]], [[batch]], [[ecr-ecs-eks]]
+1. **Domain 1: Data Ingestion and Processing** _(28%)_ — Batch & Streaming with [[lambda]], [[glue]], [[emr]], [[kinesis]], [[msk]], [[batch]], [[ecr-ecs-eks]]
 2. **Domain 2: Data Store Management** _(26%)_ — Storage & Warehousing with [[s3]], [[redshift]], [[dynamodb]], [[rds-and-aurora]], [[lake-formation]]
 3. **Domain 3: Data Operations and Support** _(22%)_ — Automation & Monitoring with [[step-functions]], [[mwaa-airflow]], [[cloudwatch-and-eventbridge]], [[cdk-cloudformation]]
 4. **Domain 4: Data Security and Governance** _(24%)_ — Security & Compliance with [[iam]], [[kms-and-secrets]], [[macie-and-cloudtrail]], [[aws-backup]]
