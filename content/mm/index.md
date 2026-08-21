@@ -82,7 +82,7 @@ date: 2026-08-15
 - `[[en/02-services/analytics-streaming/quicksight|Amazon QuickSight]]` — Business Intelligence, SPICE engine, Dashboards
 
 ### 🔀 Application Integration & Workflow Automation
-- `[[en/02-services/application-integration/step-functions|AWS Step Functions]]` — Orchestrating state machines (Standard vs Express workflows)
+- `[[mm/02-services/integration/step-functions/step-functions|AWS Step Functions]]` — Orchestrating state machines (Standard vs Express workflows)
 - `[[en/02-services/application-integration/mwaa-airflow|Amazon MWAA (Airflow)]]` — Managed Workflows for Apache Airflow, DAGs & Operators
 - `[[mm/02-services/integration/sqs/sqs|Amazon SQS]]` — Simple Queue Service (Standard/FIFO, Timing, DLQ, Fan-Out & Security)
 - `[[mm/02-services/integration/sns/sns|Amazon SNS]]` — Simple Notification Service (Topics, Filter Policies, Delivery Retries & Firehose)
