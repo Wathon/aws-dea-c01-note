@@ -67,13 +67,13 @@ sequenceDiagram
     participant SQS as SQS Queue
     actor Worker2 as Consumer Worker 2
 
-    Worker1->>SQS: 1. ReceiveMessage (Visibility Timeout = 30s)
+    Worker1->>SQS: ReceiveMessage (Visibility Timeout = 30s)
     Note over SQS: Message hidden from other consumers
-    Worker1->>Worker1: 2. Heavy data processing begins (Takes 50s)...
+    Worker1->>Worker1: Heavy data processing begins (Takes 50s)...
     Note over SQS: At 30s: Visibility Timeout Expired! Message becomes visible again ⚠️
-    Worker2->>SQS: 3. ReceiveMessage (Pulls the exact same message!)
-    Worker2->>Worker2: 4. Worker 2 processes duplicate message!
-    Worker1->>SQS: 5. DeleteMessage (Fails or causes race condition)
+    Worker2->>SQS: ReceiveMessage (Pulls the exact same message!)
+    Worker2->>Worker2: Worker 2 processes duplicate message!
+    Worker1->>SQS: DeleteMessage (Fails or causes race condition)
 ```
 
 ---

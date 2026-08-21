@@ -78,13 +78,13 @@ sequenceDiagram
     participant SQS as Amazon SQS Queue
     actor Consumer as Consumer Worker (EC2/Lambda)
 
-    Producer->>SQS: 1. SendMessage (Payload up to 256 KB)
-    Note over SQS: Message stored; ApproximateNumberOfMessagesVisible increments
-    Consumer->>SQS: 2. ReceiveMessage (Long Polling: WaitTimeSeconds=20)
-    SQS-->>Consumer: 3. Message delivered & Visibility Timeout starts (e.g. 30s)
+    Producer->>SQS: SendMessage (Payload up to 256 KB)
+    Note over SQS: Message stored (ApproximateNumberOfMessagesVisible increments)
+    Consumer->>SQS: ReceiveMessage (Long Polling: WaitTimeSeconds=20)
+    SQS-->>Consumer: Message delivered & Visibility Timeout starts (e.g. 30s)
     Note over SQS: Message hidden from other consumers (In-Flight)
-    Consumer->>Consumer: 4. Processes data record (Writes to RDS / S3 / Redshift)
-    Consumer->>SQS: 5. DeleteMessage (with ReceiptHandle)
+    Consumer->>Consumer: Processes data record (Writes to RDS / S3 / Redshift)
+    Consumer->>SQS: DeleteMessage (with ReceiptHandle)
     Note over SQS: Message permanently removed from queue
 ```
 
