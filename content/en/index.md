@@ -101,6 +101,7 @@ date: 2026-08-15
 - [[step-functions]] — Orchestrating state machines (Standard vs Express workflows)
 - [[mwaa-airflow]] — Managed Workflows for Apache Airflow, DAGs & Operators
 - [[sqs]] — Amazon SQS (Simple Queue Service: Standard/FIFO, Timing, DLQ, Fan-Out & Security)
+- [[sns]] — Amazon SNS (Simple Notification Service: Topics, Filter Policies, Delivery Retries & Firehose)
 - [[sqs-and-sns]] — Simple Queue Service & Simple Notification Service Overview
 - [[appflow]] — SaaS & AWS integration (Salesforce, ServiceNow, S3)
 

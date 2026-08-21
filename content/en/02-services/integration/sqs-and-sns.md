@@ -60,5 +60,6 @@ graph TD
 
 ## 📌 Related Notes
 - [[sqs]] — Amazon SQS Dedicated Modular Deep-Dive Suite
+- [[sns]] — Amazon SNS Dedicated Modular Deep-Dive Suite
 - [[lambda]] — Lambda consumers for SQS/SNS
 - [[step-functions]] — Workflow integration
