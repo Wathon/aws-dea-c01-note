@@ -87,7 +87,7 @@ date: 2026-08-15
 - `[[mm/02-services/integration/sqs/sqs|Amazon SQS]]` — Simple Queue Service (Standard/FIFO, Timing, DLQ, Fan-Out & Security)
 - `[[mm/02-services/integration/sns/sns|Amazon SNS]]` — Simple Notification Service (Topics, Filter Policies, Delivery Retries & Firehose)
 - `[[en/02-services/application-integration/sqs-and-sns|Amazon SQS & SNS]]` — Simple Queue Service & Simple Notification Service
-- `[[en/02-services/application-integration/appflow|Amazon AppFlow]]` — SaaS & AWS integration (Salesforce, ServiceNow, S3)
+- `[[mm/02-services/integration/appflow/appflow|Amazon AppFlow]]` — SaaS & AWS integration (Salesforce, ServiceNow, S3)
 
 ### 🔒 Security, Identity & Governance
 - `[[en/02-services/security-governance/lake-formation|AWS Lake Formation]]` — Data Lake Governance, Column/Row-level security
