@@ -67,7 +67,8 @@ Categorized index of all AWS services covered in the **AWS Certified Data Engine
 
 ## 🔀 Integration & Orchestration
 
-- [[sqs-and-sns]] — Amazon SQS (Simple Queue Service) & Amazon SNS (Simple Notification Service)
+- [[sqs]] — Amazon SQS (Simple Queue Service Modular Suite)
+- [[sqs-and-sns]] — Amazon SQS & Amazon SNS Overview
 - [[step-functions]] — AWS Step Functions (State Machines)
 - [[appflow]] — AWS AppFlow (SaaS Data Integration)
 - [[mwaa-airflow]] — Amazon Managed Workflows for Apache Airflow (MWAA)
