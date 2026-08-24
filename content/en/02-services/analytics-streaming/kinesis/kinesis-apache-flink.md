@@ -19,7 +19,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis-apache-flink)
 - **Primary Use Case**: Sub-second, stateful stream processing, continuous anomaly detection, time-window aggregations (Tumbling, Sliding, Session), and exact-once delivery semantics.
 - **Slide Reference**: Pages 451–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[s3]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -183,7 +183,7 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-data-streams]]` — KDS Ingestion & Shards
-- `[[kinesis-firehose]]` — Micro-Batch Streaming Delivery
-- `[[s3]]` — S3 Checkpoint and Sink Storage
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shards
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Micro-Batch Streaming Delivery
+- `[[en/02-services/storage/s3/s3|s3]]` — S3 Checkpoint and Sink Storage

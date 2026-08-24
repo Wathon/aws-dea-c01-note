@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sns/sns-fanout-firehose-and-eventbridge) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: SNS+SQS Fan-Out pattern ကို architect ပြုလုပ်ခြင်း၊ serverless S3/Redshift data lake ingestion အတွက် SNS topics များမှ Amazon Data Firehose ထဲသို့ တိုက်ရိုက် deliver ပြုလုပ်ခြင်း၊ နှင့် SNS နှင့် Amazon EventBridge တို့အကြား ရွေးချယ်အသုံးပြုခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 499–525
-- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/integration/sns/sns|sns]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/sns/sns|sns]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 

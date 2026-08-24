@@ -17,9 +17,9 @@ date: 2026-08-14
 
 - **Category**: Migration & Transfer (Third-Party Data Ingestion, Data Marketplace & Data Licensing)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/migration/data-exchange) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: Third-party external dataset များကို ရှာဖွေခြင်း၊ subscribe လုပ်ခြင်းနှင့် [[s3]] သို့ ချောမွေ့စွာ load လုပ်ခြင်း၊ ပြင်ပ data များကို ETL မလိုဘဲ [[redshift]] တွင် တိုက်ရိုက် query လုပ်ခြင်း၊ နှင့် native AWS IAM governance ကိုအသုံးပြုပြီး third-party API များကို ခေါ်ဆိုခြင်း (invoke) များအတွက်ဖြစ်ပါသည်။
+- **Primary Use Case**: Third-party external dataset များကို ရှာဖွေခြင်း၊ subscribe လုပ်ခြင်းနှင့် [[mm/02-services/storage/s3/s3|s3]] သို့ ချောမွေ့စွာ load လုပ်ခြင်း၊ ပြင်ပ data များကို ETL မလိုဘဲ [[mm/02-services/database/redshift|redshift]] တွင် တိုက်ရိုက် query လုပ်ခြင်း၊ နှင့် native AWS IAM governance ကိုအသုံးပြုပြီး third-party API များကို ခေါ်ဆိုခြင်း (invoke) များအတွက်ဖြစ်ပါသည်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 281–283
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[s3]] | [[redshift]] | [[lake-formation]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/database/redshift|redshift]] | [[mm/02-services/security-governance/lake-formation|lake-formation]]
 
 ---
 
@@ -28,11 +28,11 @@ date: 2026-08-14
 **AWS Data Exchange** သည် cloud ပေါ်တွင် commercial provider များ (ဥပမာ - Reuters, Dun & Bradstreet, Foursquare, Change Healthcare, S&P Global) ထံမှ third-party dataset ထောင်ပေါင်းများစွာကို လွယ်ကူစွာရှာဖွေရန်၊ subscribe လုပ်ရန်နှင့် အသုံးပြုရန် ပြုလုပ်ပေးသည်။ Custom SFTP pipeline များ၊ one-off API credentials များ၊ သို့မဟုတ် physical media contract များကို ကိုယ်တိုင်စီမံခန့်ခွဲနေမည့်အစား AWS Data Exchange သည် data ပေးပို့ခြင်း (data delivery)၊ အလိုအလျောက် update လုပ်ခြင်းများ၊ billing နှင့် governance တို့ကို AWS အတွင်းတွင် native အဖြစ် standard သတ်မှတ်ပေးသည်။
 
 **AWS Certified Data Engineer – Associate (DEA-C01)** exam အတွက် သင် ကျွမ်းကျင်ထားရမည်မှာ-
-1. **Core Data Ingestion into Amazon S3**: အသစ်ထုတ်ဝေသော dataset revision များကို [[s3]] data lake များသို့ အလိုအလျောက် export လုပ်ခြင်းဖြင့် [[glue]], [[athena]], နှင့် [[emr]] တို့မှ downstream processing ပြုလုပ်နိုင်ရန်။
-2. **AWS Data Exchange for Amazon Redshift**: Live ဖြစ်သော third-party data များကို [[redshift]] table များမှနေ၍ **data ကူးယူခြင်း (သို့မဟုတ်) ETL pipeline များတည်ဆောက်ခြင်း မရှိဘဲ** တိုက်ရိုက် query လုပ်ခြင်း (Redshift Data Sharing ဖြင့် အလုပ်လုပ်သည်)။
+1. **Core Data Ingestion into Amazon S3**: အသစ်ထုတ်ဝေသော dataset revision များကို [[mm/02-services/storage/s3/s3|s3]] data lake များသို့ အလိုအလျောက် export လုပ်ခြင်းဖြင့် [[mm/02-services/analytics-streaming/glue/glue|glue]], [[mm/02-services/analytics-streaming/athena/athena|athena]], နှင့် [[mm/02-services/analytics-streaming/emr/emr|emr]] တို့မှ downstream processing ပြုလုပ်နိုင်ရန်။
+2. **AWS Data Exchange for Amazon Redshift**: Live ဖြစ်သော third-party data များကို [[mm/02-services/database/redshift|redshift]] table များမှနေ၍ **data ကူးယူခြင်း (သို့မဟုတ်) ETL pipeline များတည်ဆောက်ခြင်း မရှိဘဲ** တိုက်ရိုက် query လုပ်ခြင်း (Redshift Data Sharing ဖြင့် အလုပ်လုပ်သည်)။
 3. **AWS Data Exchange for Amazon S3**: Multi-terabyte ရှိသော dataset များကို သင့် account ထဲသို့ copy မကူးဘဲ provider မှ စီမံထားသော S3 bucket များကို တိုက်ရိုက် access လုပ်ခြင်းနှင့် query လုပ်ခြင်း။
 4. **AWS Data Exchange for APIs**: စံသတ်မှတ်ထားသော **AWS SDKs**, native IAM authentication, နှင့် ပေါင်းစည်းထားသော AWS billing တို့ဖြင့် third-party REST API များကို ခေါ်ဆိုခြင်း။
-5. **Data Lake & ML Integrations**: ပြင်ပ market/financial/demographic data များကို အတွင်းပိုင်း operational dataset များနှင့် ပေါင်းစပ်၍ Amazon SageMaker တွင် machine learning အတွက်နှင့် [[quicksight]] တွင် analytics အတွက် အသုံးပြုခြင်း။
+5. **Data Lake & ML Integrations**: ပြင်ပ market/financial/demographic data များကို အတွင်းပိုင်း operational dataset များနှင့် ပေါင်းစပ်၍ Amazon SageMaker တွင် machine learning အတွက်နှင့် [[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]] တွင် analytics အတွက် အသုံးပြုခြင်း။
 
 ```mermaid
 graph TB
@@ -199,7 +199,7 @@ sequenceDiagram
     ```sql
     CREATE DATABASE market_data FROM DATA EXCHANGE 'arn:aws:dataexchange:us-east-1:...';
     ```
-  - Data analyst များနှင့် BI dashboard များ ([[quicksight]]) သည် **latency လုံးဝမရှိဘဲနှင့် ETL overhead လုံးဝမရှိဘဲ** ပြင်ပ database နှင့်ချိတ်ဆက်၍ real-time join query များကို run နိုင်သည်။
+  - Data analyst များနှင့် BI dashboard များ ([[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]) သည် **latency လုံးဝမရှိဘဲနှင့် ETL overhead လုံးဝမရှိဘဲ** ပြင်ပ database နှင့်ချိတ်ဆက်၍ real-time join query များကို run နိုင်သည်။
 
 ---
 
@@ -237,9 +237,9 @@ sequenceDiagram
 
 ## 📌 Related Notes
 
-- [[redshift]] — Amazon Redshift data warehouse, Datashares, and Spectrum
-- [[s3]] — S3 Data Lake destination for Data Exchange revisions
-- [[application-discovery-and-mgn]] — Application discovery and automated server migration
-- [[transfer-family]] — Managed SFTP/FTPS file ingestion
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/02-services/database/redshift|redshift]] — Amazon Redshift data warehouse, Datashares, and Spectrum
+- [[mm/02-services/storage/s3/s3|s3]] — S3 Data Lake destination for Data Exchange revisions
+- [[mm/02-services/migration/application-discovery-and-mgn|application-discovery-and-mgn]] — Application discovery and automated server migration
+- [[mm/02-services/migration/transfer-family|transfer-family]] — Managed SFTP/FTPS file ingestion
+- [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

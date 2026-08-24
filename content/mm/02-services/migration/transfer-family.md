@@ -19,9 +19,9 @@ date: 2026-08-14
 
 - **Category**: Migration & Transfer (B2B Partner File Exchange & Managed File Transfer)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/migration/transfer-family) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: ပြင်ပ စီးပွားရေးလုပ်ဖော်ကိုင်ဖက်များနှင့် legacy enterprise system များကို client ၏ workflow များ ပြောင်းလဲရန်မလိုဘဲ သို့မဟုတ် server များ စီမံခန့်ခွဲရန်မလိုဘဲ **SFTP, FTPS, FTP, AS2** မှတစ်ဆင့် လုံခြုံစိတ်ချရသော ဖိုင်လွှဲပြောင်းမှုဖြင့် [[s3]] Data Lakes များနှင့် [[efs-and-fsx]] (Amazon EFS) ထဲသို့ တိုက်ရိုက် ချိတ်ဆက်ပေးရန် ဖြစ်သည်။
+- **Primary Use Case**: ပြင်ပ စီးပွားရေးလုပ်ဖော်ကိုင်ဖက်များနှင့် legacy enterprise system များကို client ၏ workflow များ ပြောင်းလဲရန်မလိုဘဲ သို့မဟုတ် server များ စီမံခန့်ခွဲရန်မလိုဘဲ **SFTP, FTPS, FTP, AS2** မှတစ်ဆင့် လုံခြုံစိတ်ချရသော ဖိုင်လွှဲပြောင်းမှုဖြင့် [[mm/02-services/storage/s3/s3|s3]] Data Lakes များနှင့် [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] (Amazon EFS) ထဲသို့ တိုက်ရိုက် ချိတ်ဆက်ပေးရန် ဖြစ်သည်။
 - **Slide Reference**: Pages 284–285 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]]
 
 ---
 
@@ -38,7 +38,7 @@ date: 2026-08-14
    - **AS2** (Port 443): Non-repudiation နှင့် MDN receipts များပါဝင်သည့် စနစ်တကျတည်ဆောက်ထားသော B2B Electronic Data Interchange (EDI) အတွက် ဖြစ်သည်။
 3. **Identity & Authentication Options**: Service-managed credentials, **Microsoft Active Directory** (AWS Directory Service မှတစ်ဆင့်), **LDAP**, **Okta**, **Amazon Cognito** သို့မဟုတ် မိမိစိတ်ကြိုက်ဖန်တီးထားသော **AWS Lambda authorizers** များကို အသုံးပြုနိုင်ပါသည်။
 4. **Network & Endpoint Architecture**: Amazon Route 53 ဖြင့် custom domain names များကိုသုံးသည့် Public internet-facing endpoints များ နှင့် VPC-hosted endpoints များ (Elastic IPs သုံးသည့် internal သို့မဟုတ် internet-facing) ဆိုပြီး ရွေးချယ်နိုင်ပါသည်။
-5. **Automated Managed Workflows**: ဖိုင်များ S3 သို့ မရောက်ရှိမီ pre-processing (antivirus scanning, PII redaction, file decompression) များကို အလိုအလျောက်လုပ်ဆောင်ခြင်းနှင့် post-processing အတွက် Amazon EventBridge နှင့် [[step-functions]] ကို အသုံးပြု၍ အသိပေးချက်များ (notifications) ပေးပို့ခြင်းတို့ ပါဝင်ပါသည်။
+5. **Automated Managed Workflows**: ဖိုင်များ S3 သို့ မရောက်ရှိမီ pre-processing (antivirus scanning, PII redaction, file decompression) များကို အလိုအလျောက်လုပ်ဆောင်ခြင်းနှင့် post-processing အတွက် Amazon EventBridge နှင့် [[mm/02-services/integration/step-functions/step-functions|step-functions]] ကို အသုံးပြု၍ အသိပေးချက်များ (notifications) ပေးပို့ခြင်းတို့ ပါဝင်ပါသည်။
 
 ```mermaid
 graph TB
@@ -132,7 +132,7 @@ graph LR
     class S3Choice,EFSChoice store;
 ```
 
-- **Amazon S3 Target**: SFTP မှတစ်ဆင့် upload လုပ်သော file များကို native object များအနေဖြင့် S3 သို့ တိုက်ရိုက် ရေးသားပါသည်။ နောက်ဆက်တွဲ data lake tools များဖြစ်သော ([[glue]], [[athena]], [[redshift]]) တို့မှ အဆိုပါ file များကို ချက်ချင်း query ပြုလုပ်ခြင်းနှင့် transform ပြုလုပ်ခြင်းတို့ကို လုပ်ဆောင်နိုင်ပါသည်။
+- **Amazon S3 Target**: SFTP မှတစ်ဆင့် upload လုပ်သော file များကို native object များအနေဖြင့် S3 သို့ တိုက်ရိုက် ရေးသားပါသည်။ နောက်ဆက်တွဲ data lake tools များဖြစ်သော ([[mm/02-services/analytics-streaming/glue/glue|glue]], [[mm/02-services/analytics-streaming/athena/athena|athena]], [[mm/02-services/database/redshift|redshift]]) တို့မှ အဆိုပါ file များကို ချက်ချင်း query ပြုလုပ်ခြင်းနှင့် transform ပြုလုပ်ခြင်းတို့ကို လုပ်ဆောင်နိုင်ပါသည်။
 - **Amazon EFS Target**: SFTP မှတစ်ဆင့် upload လုပ်သော file များကို Amazon EFS file system သို့ ရေးသားပေးပြီး POSIX user permissions (UID/GID) များနှင့် directory hierarchies များကို ထိန်းသိမ်းထားပါသည်။
 
 ---

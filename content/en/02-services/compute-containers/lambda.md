@@ -16,9 +16,9 @@ date: 2026-08-14
 
 - **Category**: Compute (Serverless Compute & Event-Driven Processing)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/compute-containers/lambda)
-- **Primary Use Case**: Real-time event-driven data processing, streaming micro-batching from [[kinesis]] and [[msk]], lightweight ETL, S3 file ingestion triggers, and workflow orchestration glue.
+- **Primary Use Case**: Real-time event-driven data processing, streaming micro-batching from [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]] and [[en/02-services/analytics-streaming/msk/msk|msk]], lightweight ETL, S3 file ingestion triggers, and workflow orchestration glue.
 - **Slide Reference**: Pages 289–310 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[kinesis]] | [[s3]] | [[dynamodb]] | [[redshift]] | [[efs-and-fsx]] | [[step-functions]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/database/dynamodb|dynamodb]] | [[en/02-services/database/redshift|redshift]] | [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[en/02-services/integration/step-functions/step-functions|step-functions]]
 
 ---
 
@@ -27,10 +27,10 @@ date: 2026-08-14
 **AWS Lambda** is a fully managed, event-driven serverless compute service that runs code in response to events without provisioning or managing servers. Lambda automatically scales from zero to tens of thousands of concurrent executions, billing strictly for compute duration in 1-millisecond increments.
 
 In data engineering architectures, AWS Lambda serves as the essential **event-driven glue**:
-1. **Real-Time File Processing**: Triggered instantly by [[s3]] object creation events (`s3:ObjectCreated:*`) to validate, decompress, or extract metadata.
-2. **Stream Processing & Micro-Batching**: Reading and transforming streaming records from [[kinesis]] Data Streams, [[dynamodb]] Streams, and [[msk]].
-3. **Data Lake Hydration & Data Warehouse Loading**: Initiating bulk `COPY` commands into [[redshift]] or updating metadata in [[glue]] Data Catalog.
-4. **Database Event Streaming**: Replicating change events from operational databases to search indexes like [[opensearch]] or alerting topics via [[sqs-and-sns]].
+1. **Real-Time File Processing**: Triggered instantly by [[en/02-services/storage/s3/s3|s3]] object creation events (`s3:ObjectCreated:*`) to validate, decompress, or extract metadata.
+2. **Stream Processing & Micro-Batching**: Reading and transforming streaming records from [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]] Data Streams, [[en/02-services/database/dynamodb|dynamodb]] Streams, and [[en/02-services/analytics-streaming/msk/msk|msk]].
+3. **Data Lake Hydration & Data Warehouse Loading**: Initiating bulk `COPY` commands into [[en/02-services/database/redshift|redshift]] or updating metadata in [[en/02-services/analytics-streaming/glue/glue|glue]] Data Catalog.
+4. **Database Event Streaming**: Replicating change events from operational databases to search indexes like [[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]] or alerting topics via [[en/02-services/integration/sqs-and-sns|sqs-and-sns]].
 
 For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you must master:
 - **Invocation Models**: Synchronous vs. Asynchronous vs. Event Source Mapping (Stream/Queue Polling).
@@ -109,11 +109,11 @@ graph TB
 
 | Parameter / Resource | Hard / Soft Limit | Data Engineering Significance |
 | :--- | :--- | :--- |
-| **Max Execution Timeout** | **15 minutes (900 seconds)** | **Strict Hard Limit**: Long-running Spark or custom ETL jobs exceeding 15 minutes MUST run on [[glue]], [[emr]], [[batch]], or [[ecr-ecs-eks]]. |
+| **Max Execution Timeout** | **15 minutes (900 seconds)** | **Strict Hard Limit**: Long-running Spark or custom ETL jobs exceeding 15 minutes MUST run on [[en/02-services/analytics-streaming/glue/glue|glue]], [[en/02-services/analytics-streaming/emr/emr|emr]], [[en/02-services/compute-containers/batch|batch]], or [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]]. |
 | **Memory Allocation** | **128 MB to 10,240 MB (10 GB)** | Configured in 1 MB increments. **CPU scales proportionally with memory** (at 1,769 MB, Lambda allocates 1 full vCPU; at 10 GB, up to 6 vCPUs). |
 | **Ephemeral Storage (`/tmp`)** | **512 MB to 10,240 MB (10 GB)** | Configurable local scratch disk space. Essential for downloading, uncompressing, and processing multi-gigabyte files locally before uploading to S3. |
 | **Direct Deployment Package Size** | **50 MB** (zipped) / **250 MB** (unzipped) | Includes code and unzipped dependencies. |
-| **Container Image Deployment** | **Up to 10 GB** | Packaged as a Docker container stored in [[ecr-ecs-eks]] (Amazon ECR). Ideal for large ML packages (TensorFlow, PyTorch) or custom C++ libraries. |
+| **Container Image Deployment** | **Up to 10 GB** | Packaged as a Docker container stored in [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] (Amazon ECR). Ideal for large ML packages (TensorFlow, PyTorch) or custom C++ libraries. |
 | **Lambda Layers** | Max **5 layers** per function | Shared reusable libraries (e.g. AWS SDK, `awswrangler`, `numpy`, `pandas`). Total unzipped size of function + all layers must not exceed 250 MB. |
 | **Default Regional Concurrency** | **1,000 concurrent executions** | Soft limit per AWS Region (can be increased via quota request). |
 
@@ -223,7 +223,7 @@ graph TD
 
 1. **Reserved Concurrency**:
    - Allocates a guaranteed maximum number of concurrent execution instances to a specific function.
-   - **Crucial Data Engineering Role**: Acts as a **rate limiter (circuit breaker)** to protect downstream transactional databases ([[rds-and-aurora]]) from connection exhaustion when massive bursts of events hit Lambda.
+   - **Crucial Data Engineering Role**: Acts as a **rate limiter (circuit breaker)** to protect downstream transactional databases ([[en/02-services/database/rds-and-aurora|rds-and-aurora]]) from connection exhaustion when massive bursts of events hit Lambda.
 2. **Provisioned Concurrency**:
    - Pre-initializes a requested number of execution environments (downloads code, initializes runtime, runs initialization code).
    - Completely eliminates **cold start latency** for real-time APIs or synchronous stream transformations.
@@ -303,7 +303,7 @@ sequenceDiagram
 ```
 
 ### Pattern B: Real-Time Stream Ingestion & OpenSearch Log Indexing
-- **Scenario**: High-volume clickstream logs flow into [[kinesis]] Data Streams. Analytics dashboards require searchable documents in [[opensearch]] within seconds.
+- **Scenario**: High-volume clickstream logs flow into [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]] Data Streams. Analytics dashboards require searchable documents in [[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]] within seconds.
 - **Architecture**:
   - Kinesis Data Streams captures log records.
   - Lambda Event Source Mapping polls Kinesis with `BatchSize: 500` and `MaximumBatchingWindowInSeconds: 10`.
@@ -336,12 +336,12 @@ sequenceDiagram
 
 ## 📌 Related Notes
 
-- [[batch]] — AWS Batch for long-running containerized batch computing (> 15 mins)
-- [[glue]] — AWS Glue for distributed serverless Spark ETL
-- [[emr]] — Amazon EMR for petabyte-scale distributed cluster processing
-- [[kinesis]] — Amazon Kinesis streaming ingestion with Lambda consumers
-- [[s3-event-notifications]] — S3 Event Notifications & EventBridge integration
-- [[step-functions]] — Orchestrating multi-step Lambda workflows
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/02-services/compute-containers/batch|batch]] — AWS Batch for long-running containerized batch computing (> 15 mins)
+- [[en/02-services/analytics-streaming/glue/glue|glue]] — AWS Glue for distributed serverless Spark ETL
+- [[en/02-services/analytics-streaming/emr/emr|emr]] — Amazon EMR for petabyte-scale distributed cluster processing
+- [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]] — Amazon Kinesis streaming ingestion with Lambda consumers
+- [[en/02-services/storage/s3/s3-event-notifications|s3-event-notifications]] — S3 Event Notifications & EventBridge integration
+- [[en/02-services/integration/step-functions/step-functions|step-functions]] — Orchestrating multi-step Lambda workflows
+- [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
 

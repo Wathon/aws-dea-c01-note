@@ -17,9 +17,9 @@ date: 2026-08-09
 
 - **Category**: Storage (Shared Managed File Systems)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/efs-and-fsx) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: Distributed Linux compute cluster များ၊ container persistent volume များ ([[ecr-ecs-eks]])၊ serverless function များ ([[lambda]]) နှင့် [[s3]] မှ ultra-high-throughput HPC / ML data staging အတွက် Shared POSIX file storage ဖြစ်သည်။
+- **Primary Use Case**: Distributed Linux compute cluster များ၊ container persistent volume များ ([[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]])၊ serverless function များ ([[mm/02-services/compute-containers/lambda|lambda]]) နှင့် [[mm/02-services/storage/s3/s3|s3]] မှ ultra-high-throughput HPC / ML data staging အတွက် Shared POSIX file storage ဖြစ်သည်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ စာမျက်နှာ 139–154
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[s3]] | [[ebs-and-instance-store]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]]
 
 ---
 
@@ -280,7 +280,7 @@ graph TD
 ```
 
 ### 1. Encryption
-- **Encryption at Rest**: ဖန်တီးစဉ်အတွင်း [[kms-and-secrets]] (AWS KMS CMK သို့မဟုတ် AWS-managed key `aws/elasticfilesystem`) ကို အသုံးပြု၍ ဖွင့်နိုင်သည်။ Metadata နှင့် file content အားလုံးကို performance ထိခိုက်မှုမရှိဘဲ လုံခြုံစွာ encrypt လုပ်ထားသည်။
+- **Encryption at Rest**: ဖန်တီးစဉ်အတွင်း [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] (AWS KMS CMK သို့မဟုတ် AWS-managed key `aws/elasticfilesystem`) ကို အသုံးပြု၍ ဖွင့်နိုင်သည်။ Metadata နှင့် file content အားလုံးကို performance ထိခိုက်မှုမရှိဘဲ လုံခြုံစွာ encrypt လုပ်ထားသည်။
 - **Encryption in Transit**: `amazon-efs-utils` ( `-o tls` mount flag ကို အသုံးပြု၍) မှတစ်ဆင့် mount လုပ်သောအခါ အလိုအလျောက် စီမံခန့်ခွဲပေးသော industry-standard **TLS 1.2** ကို အသုံးပြုသည်။
 
 ### 2. IAM Policies for NFS Clients
@@ -513,13 +513,13 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[s3]] — Persistent object storage and Data Lake architecture
-- [[ebs-and-instance-store]] — Amazon EBS volume types and EC2 Instance Store
-- [[ecr-ecs-eks]] — Containerized compute and persistent volume mounting
-- [[lambda]] — Serverless data processing and EFS integration
-- [[emr]] — Big data processing clusters and storage options
-- [[datasync-and-snow]] — AWS DataSync for NFS/EFS automated migrations
-- [[kms-and-secrets]] — AWS KMS keys and file system encryption
-- [[service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)
-- [[ebs-vs-efs-vs-instance-store]] — Deep Dive: Amazon EFS vs. EBS vs. EC2 Instance Store
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[mm/02-services/storage/s3/s3|s3]] — Persistent object storage and Data Lake architecture
+- [[mm/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] — Amazon EBS volume types and EC2 Instance Store
+- [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] — Containerized compute and persistent volume mounting
+- [[mm/02-services/compute-containers/lambda|lambda]] — Serverless data processing and EFS integration
+- [[mm/02-services/analytics-streaming/emr/emr|emr]] — Big data processing clusters and storage options
+- [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] — AWS DataSync for NFS/EFS automated migrations
+- [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — AWS KMS keys and file system encryption
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)
+- [[mm/02-services/storage/ebs-vs-efs-vs-instance-store|ebs-vs-efs-vs-instance-store]] — Deep Dive: Amazon EFS vs. EBS vs. EC2 Instance Store
+- [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

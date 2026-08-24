@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/step-functions/step-functions-parallel-and-distributed-map)
 - **Primary Use Case**: Choosing between Parallel branching, Inline Map iteration, and Distributed Map to process millions of Amazon S3 objects with up to 10,000 concurrent child executions.
 - **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[step-functions]]` | `[[s3]]` | `[[lambda]]` | `[[domain-1-ingestion-and-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/step-functions/step-functions|step-functions]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[en/02-services/compute-containers/lambda|lambda]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]`
 
 ---
 
@@ -130,7 +130,7 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[step-functions]]` — Step Functions Master Hub
-- `[[step-functions-standard-vs-express-workflows]]` — Standard vs Express Workflows
-- `[[s3]]` — Amazon S3 Big Data Lake Storage
-- `[[lambda]]` — AWS Lambda Serverless Workers
+- `[[en/02-services/integration/step-functions/step-functions|step-functions]]` — Step Functions Master Hub
+- `[[en/02-services/integration/step-functions/step-functions-standard-vs-express-workflows|step-functions-standard-vs-express-workflows]]` — Standard vs Express Workflows
+- `[[en/02-services/storage/s3/s3|s3]]` — Amazon S3 Big Data Lake Storage
+- `[[en/02-services/compute-containers/lambda|lambda]]` — AWS Lambda Serverless Workers

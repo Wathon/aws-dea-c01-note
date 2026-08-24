@@ -23,7 +23,7 @@ date: 2026-08-24
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/data-masking-anonymization-and-salting) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Data masking၊ tokenization၊ cryptographic key salting ဖြင့် hashing ပြုလုပ်ခြင်းတို့ကို အသုံးပြု၍ data engineering lifecycle တစ်လျှောက်လုံးတွင် Personally Identifiable Information (PII) များကို ကာကွယ်ခြင်းနှင့် partition key salting ကို အသုံးပြု၍ data skew ပြဿနာများကို ရှင်းထုတ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 630–675
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[redshift]]` | `[[glue]]` | `[[athena]]` | `[[kinesis]]` | `[[dynamodb]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/database/dynamodb|dynamodb]]`
 
 ---
 
@@ -290,9 +290,9 @@ glueContext.write_dynamic_frame.from_options(
 ---
 
 ## 📌 Related Notes
-- `[[macie-and-cloudtrail]]` — Amazon Macie & AWS CloudTrail Auditing
-- `[[iam]]` — IAM Policies & Lake Formation Fine-Grained Permissions
-- `[[redshift]]` — Amazon Redshift Architecture & Performance Tuning
-- `[[glue]]` — AWS Glue Studio & PySpark Transforms
-- `[[dynamodb]]` — Amazon DynamoDB Partitioning & Performance
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[mm/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]` — Amazon Macie & AWS CloudTrail Auditing
+- `[[mm/02-services/security-governance/iam|iam]]` — IAM Policies & Lake Formation Fine-Grained Permissions
+- `[[mm/02-services/database/redshift|redshift]]` — Amazon Redshift Architecture & Performance Tuning
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Studio & PySpark Transforms
+- `[[mm/02-services/database/dynamodb|dynamodb]]` — Amazon DynamoDB Partitioning & Performance
+- `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

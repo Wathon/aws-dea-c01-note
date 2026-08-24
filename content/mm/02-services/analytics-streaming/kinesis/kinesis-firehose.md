@@ -20,7 +20,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/kinesis/kinesis-firehose) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: S3 data lakes, Redshift နှင့် OpenSearch များဆီသို့ native Parquet conversion နှင့် dynamic S3 partitioning တို့ဖြင့် serverless ဖြစ်ပြီး zero-maintenance streaming ingestion ပြုလုပ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 436–450
-- **Hub Links**: `[[mm/index]]` | `[[kinesis]]` | `[[s3]]` | `[[glue-data-catalog]]` | `[[athena]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]`
 
 ---
 
@@ -203,7 +203,7 @@ Firehose သည် data loss (ဒေတာဆုံးရှုံးမှု) 
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
-- `[[glue-data-catalog]]` — Firehose Schema Lookups အတွက် Glue Metastore
-- `[[athena]]` — Serverless SQL ဖြင့် Firehose Parquet Output ကို Query ပြုလုပ်ခြင်း
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
+- `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Firehose Schema Lookups အတွက် Glue Metastore
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Serverless SQL ဖြင့် Firehose Parquet Output ကို Query ပြုလုပ်ခြင်း

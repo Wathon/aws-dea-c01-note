@@ -12,29 +12,29 @@ date: 2026-07-28
 
 - **Domain ID**: Domain 2
 - **Focus**: Choosing appropriate data stores, designing data schemas, managing data lifecycles, and optimizing storage performance and cost.
-- **Hub Links**: [[index]] | [[dea-c01-roadmap]] | [[service-catalog]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/dea-c01-roadmap|dea-c01-roadmap]] | [[en/00-hub/service-catalog|service-catalog]]
 
 ---
 
 ## 📋 Task Statements & Key Competencies
 
 ### Task Statement 2.1: Choose data storage solutions
-- **Object Storage**: [[s3]] (S3 Standard, Intelligent-Tiering, Glacier, S3 Express One Zone).
-- **Block & File Systems**: [[ebs-and-instance-store]] (EBS gp3/io2, Instance Store), [[efs-and-fsx]] (EFS, FSx for Lustre), [[ebs-vs-efs-vs-instance-store]] (Storage Comparison Matrix).
-- **Data Warehousing**: [[redshift]] (Redshift Provisioned RA3, Redshift Serverless, Redshift Spectrum).
-- **NoSQL & Specialized Databases**: [[dynamodb]], [[nosql-specialized-databases]] (ElastiCache, Timestream, Neptune, OpenSearch).
+- **Object Storage**: [[en/02-services/storage/s3/s3|s3]] (S3 Standard, Intelligent-Tiering, Glacier, S3 Express One Zone).
+- **Block & File Systems**: [[en/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] (EBS gp3/io2, Instance Store), [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] (EFS, FSx for Lustre), [[en/02-services/storage/ebs-vs-efs-vs-instance-store|ebs-vs-efs-vs-instance-store]] (Storage Comparison Matrix).
+- **Data Warehousing**: [[en/02-services/database/redshift|redshift]] (Redshift Provisioned RA3, Redshift Serverless, Redshift Spectrum).
+- **NoSQL & Specialized Databases**: [[en/02-services/database/dynamodb|dynamodb]], [[en/02-services/database/nosql-specialized-databases|nosql-specialized-databases]] (ElastiCache, Timestream, Neptune, OpenSearch).
 
 ### Task Statement 2.2: Design data models and schema evolution
-- **Relational vs Dimensional Modeling**: Star schema vs Snowflake schema in [[redshift]].
+- **Relational vs Dimensional Modeling**: Star schema vs Snowflake schema in [[en/02-services/database/redshift|redshift]].
 - **Partition Keys & Sort Keys**:
-  - Primary key design, Partition keys, Sort keys, LSI/GSI in [[dynamodb]].
-  - Distribution keys (EVEN, KEY, ALL) and Sort keys (COMPOUND, INTERLEAVED) in [[redshift]].
-- **Schema Evolution & Cataloging**: Using [[glue]] Schema Registry and Data Catalog to handle schema drift.
+  - Primary key design, Partition keys, Sort keys, LSI/GSI in [[en/02-services/database/dynamodb|dynamodb]].
+  - Distribution keys (EVEN, KEY, ALL) and Sort keys (COMPOUND, INTERLEAVED) in [[en/02-services/database/redshift|redshift]].
+- **Schema Evolution & Cataloging**: Using [[en/02-services/analytics-streaming/glue/glue|glue]] Schema Registry and Data Catalog to handle schema drift.
 
 ### Task Statement 2.3: Manage data lifecycles & storage optimization
 - **S3 Lifecycle Management**: Transition rules (Standard -> Standard-IA -> Glacier Flexible / Deep Archive), expiration rules.
 - **S3 Object Lock & Immutability**: WORM (Write Once Read Many) for compliance (Governance mode vs Compliance mode).
-- **Compaction & Vacuuming**: VACUUM and ANALYZE operations in [[redshift]] for reclaimed storage and query optimization.
+- **Compaction & Vacuuming**: VACUUM and ANALYZE operations in [[en/02-services/database/redshift|redshift]] for reclaimed storage and query optimization.
 
 ---
 
@@ -42,11 +42,11 @@ date: 2026-07-28
 
 | Service | Primary Function | High-Frequency Exam Use Case | Note Link |
 | --- | --- | --- | --- |
-| **Amazon S3** | Data Lake Object Storage | Central data lake storage, lifecycle tiering, S3 Express One Zone | [[s3]] |
-| **Amazon Redshift** | Petabyte-Scale DW | OLAP queries, RA3 managed storage, Redshift Spectrum for S3 querying | [[redshift]] |
-| **Amazon DynamoDB** | Serverless NoSQL | Low-latency key-value store, DynamoDB Streams for CDC | [[dynamodb]] |
-| **Amazon RDS & Aurora** | Hosted OLTP Databases | Relational database workloads, Aurora Serverless v2, Read Replicas | [[rds-and-aurora]] |
-| **FSx for Lustre** | High-Perf File Storage | Fast parallel file system for HPC & EMR/S3 staging | [[efs-and-fsx]] |
+| **Amazon S3** | Data Lake Object Storage | Central data lake storage, lifecycle tiering, S3 Express One Zone | [[en/02-services/storage/s3/s3|s3]] |
+| **Amazon Redshift** | Petabyte-Scale DW | OLAP queries, RA3 managed storage, Redshift Spectrum for S3 querying | [[en/02-services/database/redshift|redshift]] |
+| **Amazon DynamoDB** | Serverless NoSQL | Low-latency key-value store, DynamoDB Streams for CDC | [[en/02-services/database/dynamodb|dynamodb]] |
+| **Amazon RDS & Aurora** | Hosted OLTP Databases | Relational database workloads, Aurora Serverless v2, Read Replicas | [[en/02-services/database/rds-and-aurora|rds-and-aurora]] |
+| **FSx for Lustre** | High-Perf File Storage | Fast parallel file system for HPC & EMR/S3 staging | [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] |
 
 ---
 
@@ -66,5 +66,5 @@ date: 2026-07-28
 
 ## 📌 Checklist for Domain 2
 - [ ] Review slide pages: 76-154 (Storage) and 155-265 (Database) in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- [ ] Complete service notes: [[s3]], [[redshift]], [[dynamodb]], [[rds-and-aurora]]
-- [ ] Review concepts: [[data-modeling-and-partitioning]], [[data-formats-and-compression]]
+- [ ] Complete service notes: [[en/02-services/storage/s3/s3|s3]], [[en/02-services/database/redshift|redshift]], [[en/02-services/database/dynamodb|dynamodb]], [[en/02-services/database/rds-and-aurora|rds-and-aurora]]
+- [ ] Review concepts: [[en/03-concepts/data-modeling-and-partitioning|data-modeling-and-partitioning]], [[en/03-concepts/data-formats-and-compression|data-formats-and-compression]]

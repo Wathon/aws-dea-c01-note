@@ -21,7 +21,7 @@ date: 2026-08-24
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/security-governance/macie)
 - **Primary Use Case**: Continuous, machine learning-powered discovery, classification, and protection of sensitive Personally Identifiable Information (PII), financial records, credentials, and custom proprietary data across Amazon S3 data lakes.
 - **Slide Reference**: Pages 635–655 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[s3]]` | `[[cloudwatch-and-eventbridge]]` | `[[macie-and-cloudtrail]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` | `[[en/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]`
 
 ---
 
@@ -250,8 +250,8 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes
-- `[[macie-and-cloudtrail]]` — AWS CloudTrail Audit Logging & PII Governance
-- `[[data-masking-anonymization-and-salting]]` — In-Flight Masking & Salting
-- `[[s3]]` — Amazon S3 Data Lake Security & Encryption
-- `[[cloudwatch-and-eventbridge]]` — Amazon EventBridge Security Automation
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[en/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]` — AWS CloudTrail Audit Logging & PII Governance
+- `[[en/02-services/security-governance/data-masking-anonymization-and-salting|data-masking-anonymization-and-salting]]` — In-Flight Masking & Salting
+- `[[en/02-services/storage/s3/s3|s3]]` — Amazon S3 Data Lake Security & Encryption
+- `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — Amazon EventBridge Security Automation
+- `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

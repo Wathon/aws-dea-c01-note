@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-architecture-and-patterns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Enterprise log analytics pipelines များ ဒီဇိုင်းဆွဲခြင်း၊ Amazon Bedrock ဖြင့် Generative AI RAG vector search အကောင်အထည်ဖော်ခြင်း၊ နှင့် OpenSearch ကို Athena, Redshift, CloudWatch Logs Insights တို့နှင့် နှိုင်းယှဉ်သုံးသပ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 460–478
-- **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[athena]]` | `[[redshift]]` | `[[cloudwatch-and-eventbridge]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 
@@ -136,9 +136,9 @@ DEA-C01 စာမေးပွဲတွင် အဓိကစစ်ဆေးလ�
 ---
 
 ## 📌 Related Notes
-- `[[opensearch]]` — OpenSearch Master Hub
-- `[[opensearch-serverless]]` — Vector Search & Serverless Collections
-- `[[opensearch-storage-tiers-and-ism]]` — UltraWarm & Index State Management
-- `[[athena]]` — S3 Serverless SQL Engine
-- `[[redshift]]` — Enterprise Data Warehousing
-- `[[cloudwatch-and-eventbridge]]` — CloudWatch Logs & Subscription Filters
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Master Hub
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-serverless|opensearch-serverless]]` — Vector Search & Serverless Collections
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` — UltraWarm & Index State Management
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — S3 Serverless SQL Engine
+- `[[mm/02-services/database/redshift|redshift]]` — Enterprise Data Warehousing
+- `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — CloudWatch Logs & Subscription Filters

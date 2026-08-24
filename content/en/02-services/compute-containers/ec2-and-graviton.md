@@ -16,9 +16,9 @@ date: 2026-08-14
 
 - **Category**: Compute (Virtual Machine Infrastructure, Spot Pricing & Arm Processors)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/compute-containers/ec2-and-graviton)
-- **Primary Use Case**: Compute backbone for self-hosted data platforms, underlying instance topology for [[emr]] clusters (Master, Core, Task nodes), and maximizing price-performance using custom **AWS Graviton** silicon across [[msk]], [[rds-and-aurora]], [[opensearch]], and [[lambda]].
+- **Primary Use Case**: Compute backbone for self-hosted data platforms, underlying instance topology for [[en/02-services/analytics-streaming/emr/emr|emr]] clusters (Master, Core, Task nodes), and maximizing price-performance using custom **AWS Graviton** silicon across [[en/02-services/analytics-streaming/msk/msk|msk]], [[en/02-services/database/rds-and-aurora|rds-and-aurora]], [[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]], and [[en/02-services/compute-containers/lambda|lambda]].
 - **Slide Reference**: Pages 286–288 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[emr]] | [[batch]] | [[ecr-ecs-eks]] | [[lambda]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/02-services/analytics-streaming/emr/emr|emr]] | [[en/02-services/compute-containers/batch|batch]] | [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] | [[en/02-services/compute-containers/lambda|lambda]]
 
 ---
 
@@ -89,7 +89,7 @@ graph TB
 | :--- | :--- | :--- | :--- |
 | **On-Demand** | Baseline price ($0\%$) | **None** (Guaranteed availability until stopped) | • Dev/Test environments<br/>• Short, non-interruptible one-off data processing<br/>• EMR Master nodes |
 | **Spot Instances** | **Up to 90% discount** | ⚠️ **Can be reclaimed by AWS with a 2-minute warning** | • **EMR Task Nodes** (Pure compute, no HDFS storage)<br/>• **AWS Batch jobs with S3 checkpointing**<br/>• Distributed ML model training & hyperparameter tuning |
-| **Compute Savings Plans / EC2 Instance Savings Plans** | **Up to 72% discount** | **None** (1-year or 3-year hourly spend commitment) | • 24/7 Production databases ([[rds-and-aurora]])<br/>• Long-running continuous **EMR Master & Core nodes**<br/>• 24/7 **Amazon MSK** Kafka broker fleets |
+| **Compute Savings Plans / EC2 Instance Savings Plans** | **Up to 72% discount** | **None** (1-year or 3-year hourly spend commitment) | • 24/7 Production databases ([[en/02-services/database/rds-and-aurora|rds-and-aurora]])<br/>• Long-running continuous **EMR Master & Core nodes**<br/>• 24/7 **Amazon MSK** Kafka broker fleets |
 
 ---
 
@@ -195,10 +195,10 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[emr]] — Amazon EMR cluster architecture, Master/Core/Task node mapping
-- [[batch]] — AWS Batch for spot-driven containerized batch computing
-- [[lambda]] — AWS Lambda Arm64 Graviton execution architecture
-- [[ecr-ecs-eks]] — Running containers on EC2, Fargate, and EKS
-- [[msk]] — Amazon MSK Graviton broker deployment
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/02-services/analytics-streaming/emr/emr|emr]] — Amazon EMR cluster architecture, Master/Core/Task node mapping
+- [[en/02-services/compute-containers/batch|batch]] — AWS Batch for spot-driven containerized batch computing
+- [[en/02-services/compute-containers/lambda|lambda]] — AWS Lambda Arm64 Graviton execution architecture
+- [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] — Running containers on EC2, Fargate, and EKS
+- [[en/02-services/analytics-streaming/msk/msk|msk]] — Amazon MSK Graviton broker deployment
+- [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

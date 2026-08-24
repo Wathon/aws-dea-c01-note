@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/emr/emr-lifecycle-and-cost)
 - **Primary Use Case**: Automating node initialization via Bootstrap Actions, orchestrating batch workflows via Steps, and maximizing cost savings via Transient Clusters and EMR Managed Scaling.
 - **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[emr]]` | `[[cost-management]]` | `[[step-functions]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/emr/emr|emr]]` | `[[en/02-services/ml-dev-cost/cost-management|cost-management]]` | `[[en/02-services/integration/step-functions/step-functions|step-functions]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -135,7 +135,7 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[emr]]` — Amazon EMR Overview Hub
-- `[[emr-cluster-architecture]]` — Master, Core & Task Nodes
-- `[[cost-management]]` — AWS Cloud Financial Management
-- `[[step-functions]]` — Orchestrating Transient EMR Pipelines
+- `[[en/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR Overview Hub
+- `[[en/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]` — Master, Core & Task Nodes
+- `[[en/02-services/ml-dev-cost/cost-management|cost-management]]` — AWS Cloud Financial Management
+- `[[en/02-services/integration/step-functions/step-functions|step-functions]]` — Orchestrating Transient EMR Pipelines

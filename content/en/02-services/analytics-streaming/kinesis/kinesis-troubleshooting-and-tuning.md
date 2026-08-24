@@ -20,7 +20,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis-troubleshooting-and-tuning)
 - **Primary Use Case**: Diagnosing producer/consumer throttling, investigating consumer lag (`IteratorAgeMilliseconds`), tuning KCL/DynamoDB lease performance, and resolving poison pill blocking.
 - **Slide Reference**: Pages 420–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[kinesis-consumers-and-scaling]]` | `[[kinesis-security-and-monitoring]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling|kinesis-consumers-and-scaling]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring|kinesis-security-and-monitoring]]`
 
 ---
 
@@ -243,8 +243,8 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
-- `[[kinesis-consumers-and-scaling]]` — Standard vs. Enhanced Fan-Out & KCL
-- `[[kinesis-security-and-monitoring]]` — KMS SSE & CloudWatch Metrics
-- `[[dynamodb]]` — DynamoDB On-Demand & Lease Coordination
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling|kinesis-consumers-and-scaling]]` — Standard vs. Enhanced Fan-Out & KCL
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring|kinesis-security-and-monitoring]]` — KMS SSE & CloudWatch Metrics
+- `[[en/02-services/database/dynamodb|dynamodb]]` — DynamoDB On-Demand & Lease Coordination

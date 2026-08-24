@@ -22,7 +22,7 @@ date: 2026-08-24
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/security-governance/data-masking-anonymization-and-salting)
 - **Primary Use Case**: Protecting Personally Identifiable Information (PII) across the data engineering lifecycle using masking, tokenization, hashing with cryptographic key salting, and eliminating data skew using partition key salting.
 - **Slide Reference**: Pages 630–675 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[redshift]]` | `[[glue]]` | `[[athena]]` | `[[kinesis]]` | `[[dynamodb]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[en/02-services/database/redshift|redshift]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/database/dynamodb|dynamodb]]`
 
 ---
 
@@ -289,9 +289,9 @@ glueContext.write_dynamic_frame.from_options(
 ---
 
 ## 📌 Related Notes
-- `[[macie-and-cloudtrail]]` — Amazon Macie & AWS CloudTrail Auditing
-- `[[iam]]` — IAM Policies & Lake Formation Fine-Grained Permissions
-- `[[redshift]]` — Amazon Redshift Architecture & Performance Tuning
-- `[[glue]]` — AWS Glue Studio & PySpark Transforms
-- `[[dynamodb]]` — Amazon DynamoDB Partitioning & Performance
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[en/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]` — Amazon Macie & AWS CloudTrail Auditing
+- `[[en/02-services/security-governance/iam|iam]]` — IAM Policies & Lake Formation Fine-Grained Permissions
+- `[[en/02-services/database/redshift|redshift]]` — Amazon Redshift Architecture & Performance Tuning
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Studio & PySpark Transforms
+- `[[en/02-services/database/dynamodb|dynamodb]]` — Amazon DynamoDB Partitioning & Performance
+- `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

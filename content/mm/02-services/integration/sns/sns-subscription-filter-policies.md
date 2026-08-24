@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sns/sns-subscription-filter-policies) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Message Attributes သို့မဟုတ် Payload contents ပေါ်အခြေခံ၍ သက်ဆိုင်ရာ subscriber များထံသို့သာ messages များကို route လုပ်ပေးပြီး မလိုအပ်သော downstream Lambda invocations များနှင့် SQS processing cost များကို လျှော့ချခြင်း။
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/integration/sns/sns|sns]]` | `[[mm/02-services/integration/sns/sns-standard-vs-fifo-topics|sns-standard-vs-fifo-topics]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/compute-containers/lambda|lambda]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/sns/sns|sns]]` | `[[mm/02-services/integration/sns/sns-standard-vs-fifo-topics|sns-standard-vs-fifo-topics]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/compute-containers/lambda|lambda]]`
 
 ---
 

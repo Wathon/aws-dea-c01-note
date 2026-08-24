@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow-comparison-and-troubleshooting) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: AppFlow ကို AWS Glue, Lambda, EventBridge တို့နှင့် နှိုင်းယှဉ်ခြင်း၊ SaaS API quotas များကို စီမံခန့်ခွဲခြင်းနှင့် အဖြစ်များသော production authentication, staging နှင့် network errors များကို ဖြေရှင်းခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 530–537
-- **Hub Links**: `[[mm/index]]` | `[[appflow]]` | `[[glue]]` | `[[cloudwatch-and-eventbridge]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/appflow/appflow|appflow]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -90,7 +90,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[appflow]]` — Amazon AppFlow Master Hub
-- `[[glue]]` — AWS Glue ETL & Spark Processing
-- `[[cloudwatch-and-eventbridge]]` — Amazon EventBridge Routing
-- `[[domain-3-data-operations-and-support]]` — Troubleshooting & Operations
+- `[[mm/02-services/integration/appflow/appflow|appflow]]` — Amazon AppFlow Master Hub
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue ETL & Spark Processing
+- `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — Amazon EventBridge Routing
+- `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — Troubleshooting & Operations

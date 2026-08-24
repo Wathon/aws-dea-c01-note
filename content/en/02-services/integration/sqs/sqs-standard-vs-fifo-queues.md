@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sqs/sqs-standard-vs-fifo-queues)
 - **Primary Use Case**: Choosing between Standard and FIFO queue semantics, configuring Message Group IDs for parallel ordered processing, enabling Content-Based Deduplication, and scaling with High-Throughput FIFO mode.
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[sqs]]` | `[[sqs-timing-parameters-and-polling]]` | `[[sqs-dead-letter-queues-and-error-handling]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/sqs/sqs|sqs]]` | `[[en/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` | `[[en/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]`
 
 ---
 
@@ -153,7 +153,7 @@ There are two deduplication methods:
 ---
 
 ## 📌 Related Notes
-- `[[sqs]]` — SQS Master Hub
-- `[[sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Long Polling
-- `[[sqs-dead-letter-queues-and-error-handling]]` — DLQs and Poison Pill Isolation
-- `[[lambda]]` — SQS Batch Size and Scaling
+- `[[en/02-services/integration/sqs/sqs|sqs]]` — SQS Master Hub
+- `[[en/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Long Polling
+- `[[en/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` — DLQs and Poison Pill Isolation
+- `[[en/02-services/compute-containers/lambda|lambda]]` — SQS Batch Size and Scaling

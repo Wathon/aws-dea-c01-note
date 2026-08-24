@@ -15,7 +15,7 @@ date: 2026-08-15
 - **Category**: Fundamentals (Data Engineering Core Architecture)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/03-concepts/big-data-fundamentals)
 - **Slide Reference**: Pages 12–37 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-2-data-store-management]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[en/02-services/database/redshift|redshift]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]`
 
 ---
 
@@ -116,12 +116,12 @@ graph TD
     class DS,DS_Desc ds;
 ```
 
-| Characteristic | Data Warehouse (e.g. `[[redshift]]`) | Data Lake (e.g. `[[s3]]`) | Data Swamp (Anti-Pattern) |
+| Characteristic | Data Warehouse (e.g. `[[en/02-services/database/redshift|redshift]]`) | Data Lake (e.g. `[[en/02-services/storage/s3/s3|s3]]`) | Data Swamp (Anti-Pattern) |
 | :--- | :--- | :--- | :--- |
 | **Data Structure** | **Schema-on-Write**: Schema must be defined before loading data. | **Schema-on-Read**: Raw data is stored first; schema is applied upon query. | Unstructured, ungoverned data dumps without schemas. |
 | **Data Formats** | Structured relational tables (OLAP columnar). | Structured, semi-structured (JSON, Parquet), and unstructured. | Disorganized files with no consistent format. |
 | **Storage vs. Compute** | Managed scaling (Redshift Serverless or provisioned clusters). | **Fully Decoupled** (Cheap S3 storage + independent compute). | Decoupled but unorganized and unindexed. |
-| **Governance** | Strict ACID transactions, primary/foreign keys. | Governed via `[[lake-formation]]` & `[[glue]]` Data Catalog. | Zero governance, no security tagging or catalog. |
+| **Governance** | Strict ACID transactions, primary/foreign keys. | Governed via `[[en/02-services/security-governance/lake-formation|lake-formation]]` & `[[en/02-services/analytics-streaming/glue/glue|glue]]` Data Catalog. | Zero governance, no security tagging or catalog. |
 | **Primary Users** | Business Analysts, BI Developers, SQL power users. | Data Engineers, Data Scientists, Machine Learning Engineers. | None (Data is unusable and untrusted). |
 
 ---
@@ -171,9 +171,9 @@ graph LR
 
 ## 📌 Related Notes
 
-- `[[data-formats-and-compression]]` — Parquet, ORC, Avro, and Compression Codecs
-- `[[data-modeling-and-partitioning]]` — Dimensional modeling and S3 partitioning strategies
-- `[[data-validation-and-profiling]]` — Glue Data Quality (DQDL) and data profiling
-- `[[s3]]` — Amazon S3 Data Lake architecture
-- `[[redshift]]` — Amazon Redshift Data Warehouse and Spectrum
-- `[[glue]]` — AWS Glue ETL and Data Catalog
+- `[[en/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — Parquet, ORC, Avro, and Compression Codecs
+- `[[en/03-concepts/data-modeling-and-partitioning|data-modeling-and-partitioning]]` — Dimensional modeling and S3 partitioning strategies
+- `[[en/03-concepts/data-validation-and-profiling|data-validation-and-profiling]]` — Glue Data Quality (DQDL) and data profiling
+- `[[en/02-services/storage/s3/s3|s3]]` — Amazon S3 Data Lake architecture
+- `[[en/02-services/database/redshift|redshift]]` — Amazon Redshift Data Warehouse and Spectrum
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue ETL and Data Catalog

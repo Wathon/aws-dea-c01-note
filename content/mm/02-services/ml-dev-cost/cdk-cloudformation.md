@@ -16,7 +16,7 @@ date: 2026-07-28
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/ml-dev-cost/cdk-cloudformation) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Infrastructure as Code (IaC)၊ data pipeline များကို automate လုပ်ပြီး deploy ပြုလုပ်ခြင်း၊ ပြန်လည်အသုံးပြုနိုင်သော stack creation ပြုလုပ်ခြင်း။
 - **Slide Reference**: [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf) မှ Pages 742–755
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-3-data-operations-and-support]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]
 
 ---
 
@@ -44,5 +44,5 @@ Production data engineering pipeline များကို deploy ပြုလ�
 ---
 
 ## 📌 Related Notes
-- [[lambda]] — SAM deployment target
-- [[step-functions]] — CDK workflow deployment
+- [[mm/02-services/compute-containers/lambda|lambda]] — SAM deployment target
+- [[mm/02-services/integration/step-functions/step-functions|step-functions]] — CDK workflow deployment

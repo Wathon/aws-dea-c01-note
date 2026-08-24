@@ -17,13 +17,13 @@ date: 2026-08-09
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/ebs-and-instance-store)
 - **Primary Use Case**: Block-level storage for EC2 compute instances, high-throughput intermediate scratch storage for big data processing, persistent volumes for databases, and streaming broker storage.
 - **Slide Reference**: Pages 139–154 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[s3]] | [[efs-and-fsx]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/efs-and-fsx|efs-and-fsx]]
 
 ---
 
 ## 1. High-Level Summary
 
-Block storage provides dedicated, low-latency disk volumes attached directly to compute instances ([[ecr-ecs-eks]] / EC2). In modern AWS Data Engineering architectures, block storage serves as the working storage layer for data processing engines, distributed streaming brokers, and self-hosted databases.
+Block storage provides dedicated, low-latency disk volumes attached directly to compute instances ([[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] / EC2). In modern AWS Data Engineering architectures, block storage serves as the working storage layer for data processing engines, distributed streaming brokers, and self-hosted databases.
 
 Data engineers must master the trade-offs between **EC2 Instance Store** (physically attached, ephemeral, maximum IOPS/throughput) and **Amazon EBS** (network-attached, persistent, snapshot-backed block storage), as well as selecting the exact EBS volume type (`gp3`, `io2`, `st1`, `sc1`) matching the workload's access pattern.
 
@@ -144,8 +144,8 @@ graph TD
 - Built specifically for **frequently accessed, throughput-intensive workloads** that execute large, sequential read/write operations.
 - Uses a burst-bucket credit model: baseline throughput scales at $40 \text{ MB/s per TiB}$ up to $250 \text{ MB/s}$, bursting up to $500 \text{ MB/s}$.
 - **Data Engineering Key Fit**:
-  - Apache Spark / Hadoop clusters on EC2 / [[emr]].
-  - Distributed Kafka broker logs ([[msk]]).
+  - Apache Spark / Hadoop clusters on EC2 / [[en/02-services/analytics-streaming/emr/emr|emr]].
+  - Distributed Kafka broker logs ([[en/02-services/analytics-streaming/msk/msk|msk]]).
   - Data warehouse staging and log aggregation pipelines.
 - **Limitation**: **Cannot be used as an OS boot volume**.
 
@@ -214,7 +214,7 @@ sequenceDiagram
 
 ## 5. EBS Security & Encryption
 
-Amazon EBS provides end-to-end encryption integrated seamlessly with [[kms-and-secrets]] (AWS KMS).
+Amazon EBS provides end-to-end encryption integrated seamlessly with [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] (AWS KMS).
 
 ```mermaid
 graph LR
@@ -310,7 +310,7 @@ graph TD
 | **Amazon EBS (`gp3`/`io2`)** | Block device (Network)          | 99.8% – 99.999%           | Single-digit ms (Sub-ms on `io2`)               | Up to 64 TiB per volume                     | Database storage (Postgres, RDS, Cassandra), persistent stateful compute disks.         |
 | **Amazon EBS (`st1`)**       | Block device (Network)          | 99.8% – 99.9%             | Milliseconds (Up to 500 MB/s)                   | Up to 16 TiB per volume                     | **MapReduce sequential storage, Kafka commit logs, ETL staging directories.**           |
 | **EC2 Instance Store**       | Block device (Direct Host NVMe) | Single disk (Ephemeral)   | **Sub-millisecond (Fastest)**                   | Fixed by instance type (up to dozens of TB) | **Spark shuffle data, intermediate MapReduce spills, memory swap, temporary caches.**   |
-| **Amazon EFS**               | POSIX File (NFSv4)              | 11 9's (Multi-AZ)         | Low ms                                          | Elastic (Petabytes)                         | Shared application storage across multiple Linux instances / [[ecr-ecs-eks]] pods.      |
+| **Amazon EFS**               | POSIX File (NFSv4)              | 11 9's (Multi-AZ)         | Low ms                                          | Elastic (Petabytes)                         | Shared application storage across multiple Linux instances / [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] pods.      |
 | **AWS FSx for Lustre**       | POSIX High Performance File     | High (Integrated with S3) | **Sub-millisecond (Hundreds of GB/s)**          | Petabytes                                   | **HPC, high-throughput distributed ML model training, massive parallel S3 processing.** |
 
 ---
@@ -331,7 +331,7 @@ graph TD
 
 ### Pattern C: Decoupled Storage & Compute Architecture
 
-- **Rule of Thumb**: Never store long-term data lake assets on EBS or Instance Store. Always stream or stage data from EBS/Instance Store to **Amazon S3** for centralized durability, lifecycle tiering, and multi-engine querying via [[athena]], [[glue]], and [[redshift]].
+- **Rule of Thumb**: Never store long-term data lake assets on EBS or Instance Store. Always stream or stage data from EBS/Instance Store to **Amazon S3** for centralized durability, lifecycle tiering, and multi-engine querying via [[en/02-services/analytics-streaming/athena/athena|athena]], [[en/02-services/analytics-streaming/glue/glue|glue]], and [[en/02-services/database/redshift|redshift]].
 
 ---
 
@@ -360,12 +360,12 @@ graph TD
 
 ## 📌 Related Notes
 
-- [[s3]] — Persistent object storage and Data Lake architecture
-- [[efs-and-fsx]] — Amazon EFS & AWS FSx (Lustre, ONTAP, Windows)
-- [[emr]] — Amazon EMR cluster node storage and EMRFS
-- [[msk]] — Managed Streaming for Apache Kafka broker storage
-- [[rds-and-aurora]] — Amazon RDS storage engines and Aurora distributed storage
-- [[kms-and-secrets]] — AWS KMS encryption keys and EBS volume encryption
-- [[service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)
-- [[ebs-vs-efs-vs-instance-store]] — Deep Dive: Amazon EFS vs. EBS vs. EC2 Instance Store
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[en/02-services/storage/s3/s3|s3]] — Persistent object storage and Data Lake architecture
+- [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] — Amazon EFS & AWS FSx (Lustre, ONTAP, Windows)
+- [[en/02-services/analytics-streaming/emr/emr|emr]] — Amazon EMR cluster node storage and EMRFS
+- [[en/02-services/analytics-streaming/msk/msk|msk]] — Managed Streaming for Apache Kafka broker storage
+- [[en/02-services/database/rds-and-aurora|rds-and-aurora]] — Amazon RDS storage engines and Aurora distributed storage
+- [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — AWS KMS encryption keys and EBS volume encryption
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)
+- [[en/02-services/storage/ebs-vs-efs-vs-instance-store|ebs-vs-efs-vs-instance-store]] — Deep Dive: Amazon EFS vs. EBS vs. EC2 Instance Store
+- [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

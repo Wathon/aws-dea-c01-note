@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling)
 - **Primary Use Case**: Isolating unprocessable poison pill messages, configuring `RedrivePolicy` and `maxReceiveCount`, preventing infinite retry loops, and executing DLQ Redrive for batch reprocessing.
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[sqs]]` | `[[sqs-standard-vs-fifo-queues]]` | `[[sqs-timing-parameters-and-polling]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/sqs/sqs|sqs]]` | `[[en/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` | `[[en/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` | `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -141,7 +141,7 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[sqs]]` — SQS Master Hub
-- `[[sqs-standard-vs-fifo-queues]]` — FIFO Ordering & Deduplication
-- `[[sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Polling
-- `[[domain-3-data-operations-and-support]]` — Operational Monitoring and Support
+- `[[en/02-services/integration/sqs/sqs|sqs]]` — SQS Master Hub
+- `[[en/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` — FIFO Ordering & Deduplication
+- `[[en/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Polling
+- `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — Operational Monitoring and Support

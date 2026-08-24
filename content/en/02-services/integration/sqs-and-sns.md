@@ -14,7 +14,7 @@ date: 2026-07-28
 - **Category**: Application Integration
 - **Primary Use Case**: Asynchronous message queuing, pub/sub notification fanout, decoupling microservices.
 - **Slide Reference**: Pages 499–525 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]
 
 ---
 
@@ -59,7 +59,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- [[sqs]] — Amazon SQS Dedicated Modular Deep-Dive Suite
-- [[sns]] — Amazon SNS Dedicated Modular Deep-Dive Suite
-- [[lambda]] — Lambda consumers for SQS/SNS
-- [[step-functions]] — Workflow integration
+- [[en/02-services/integration/sqs/sqs|sqs]] — Amazon SQS Dedicated Modular Deep-Dive Suite
+- [[en/02-services/integration/sns/sns|sns]] — Amazon SNS Dedicated Modular Deep-Dive Suite
+- [[en/02-services/compute-containers/lambda|lambda]] — Lambda consumers for SQS/SNS
+- [[en/02-services/integration/step-functions/step-functions|step-functions]] — Workflow integration

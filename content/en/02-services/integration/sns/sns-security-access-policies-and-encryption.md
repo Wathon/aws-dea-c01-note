@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sns/sns-security-access-policies-and-encryption)
 - **Primary Use Case**: Authorizing AWS services and cross-account publishers via Topic Access Policies, securing messages at rest with AWS KMS, routing via VPC PrivateLink, and monitoring delivery health.
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[sns]]` | `[[sns-standard-vs-fifo-topics]]` | `[[sns-delivery-retries-and-dead-letter-queues]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/sns/sns|sns]]` | `[[en/02-services/integration/sns/sns-standard-vs-fifo-topics|sns-standard-vs-fifo-topics]]` | `[[en/02-services/integration/sns/sns-delivery-retries-and-dead-letter-queues|sns-delivery-retries-and-dead-letter-queues]]` | `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -160,7 +160,7 @@ When enabling SSE-KMS encryption on an SNS topic:
 ---
 
 ## 📌 Related Notes
-- `[[sns]]` — SNS Master Hub
-- `[[sns-standard-vs-fifo-topics]]` — Standard vs FIFO Topics
-- `[[sns-delivery-retries-and-dead-letter-queues]]` — Delivery Retries & DLQs
-- `[[sqs-security-monitoring-and-troubleshooting]]` — SQS Security & Access Governance
+- `[[en/02-services/integration/sns/sns|sns]]` — SNS Master Hub
+- `[[en/02-services/integration/sns/sns-standard-vs-fifo-topics|sns-standard-vs-fifo-topics]]` — Standard vs FIFO Topics
+- `[[en/02-services/integration/sns/sns-delivery-retries-and-dead-letter-queues|sns-delivery-retries-and-dead-letter-queues]]` — Delivery Retries & DLQs
+- `[[en/02-services/integration/sqs/sqs-security-monitoring-and-troubleshooting|sqs-security-monitoring-and-troubleshooting]]` — SQS Security & Access Governance

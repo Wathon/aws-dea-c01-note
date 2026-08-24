@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/msk/msk-troubleshooting-and-tuning) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Broker disk full failures များကို ရှာဖွေဖော်ထုတ်ခြင်း၊ producer `TimeoutException` များကို ဖြေရှင်းခြင်း၊ consumer rebalance storms များကို ဖယ်ရှားရှင်းလင်းခြင်း၊ producer batching ကို tune ပြုလုပ်ခြင်း နှင့် partition skew များကို ပြန်လည် ချိန်ညှိ (rebalance) ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 450–459
-- **Hub Links**: `[[mm/index]]` | `[[msk]]` | `[[msk-cluster-architecture]]` | `[[msk-security-and-monitoring]]` | `[[kinesis-troubleshooting-and-tuning]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]` | `[[mm/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` | `[[mm/02-services/analytics-streaming/msk/msk-security-and-monitoring|msk-security-and-monitoring]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-troubleshooting-and-tuning|kinesis-troubleshooting-and-tuning]]`
 
 ---
 
@@ -169,7 +169,7 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes (ဆက်စပ် မှတ်စုများ)
-- `[[msk]]` — Amazon MSK Master Hub
-- `[[msk-cluster-architecture]]` — Broker Topologies & Tiered Storage
-- `[[msk-security-and-monitoring]]` — CloudWatch Metrics & `SumOffsetLag`
-- `[[kinesis-troubleshooting-and-tuning]]` — Kinesis Data Streams Troubleshooting Comparison
+- `[[mm/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Master Hub
+- `[[mm/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — Broker Topologies & Tiered Storage
+- `[[mm/02-services/analytics-streaming/msk/msk-security-and-monitoring|msk-security-and-monitoring]]` — CloudWatch Metrics & `SumOffsetLag`
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-troubleshooting-and-tuning|kinesis-troubleshooting-and-tuning]]` — Kinesis Data Streams Troubleshooting Comparison

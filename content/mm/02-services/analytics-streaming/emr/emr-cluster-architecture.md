@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/emr/emr-cluster-architecture) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Master၊ Core နှင့် Task nodes များ၊ Spot Instance Fleets၊ HDFS နှင့် Amazon S3 ပေါ်ရှိ EMRFS တို့ကို အသုံးပြု၍ fault-tolerant ဖြစ်ပြီး cost-effective သော EMR clusters များကို design ပြုလုပ်ရန်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 383–413
-- **Hub Links**: `[[mm/index]]` | `[[emr]]` | `[[s3]]` | `[[ec2-and-graviton]]` | `[[domain-1-ingestion-and-processing]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/emr/emr|emr]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/compute-containers/ec2-and-graviton|ec2-and-graviton]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]`
 
 ---
 
@@ -189,8 +189,8 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[emr]]` — Amazon EMR Overview Hub
-- `[[emr-performance-optimization]]` — Spark Optimization & S3DistCp
-- `[[emr-lifecycle-and-cost]]` — Bootstrap Actions & EMR Managed Scaling
-- `[[s3]]` — S3 Data Lake Foundation
-- `[[ec2-and-graviton]]` — EC2 Instance Topologies & Graviton
+- `[[mm/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR Overview Hub
+- `[[mm/02-services/analytics-streaming/emr/emr-performance-optimization|emr-performance-optimization]]` — Spark Optimization & S3DistCp
+- `[[mm/02-services/analytics-streaming/emr/emr-lifecycle-and-cost|emr-lifecycle-and-cost]]` — Bootstrap Actions & EMR Managed Scaling
+- `[[mm/02-services/storage/s3/s3|s3]]` — S3 Data Lake Foundation
+- `[[mm/02-services/compute-containers/ec2-and-graviton|ec2-and-graviton]]` — EC2 Instance Topologies & Graviton

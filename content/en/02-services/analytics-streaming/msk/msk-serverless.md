@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk-serverless)
 - **Primary Use Case**: Running Apache Kafka workloads with zero infrastructure management, automatic scaling for variable traffic, and pay-for-throughput billing.
 - **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[msk]]` | `[[msk-cluster-architecture]]` | `[[kinesis-data-streams]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/msk/msk|msk]]` | `[[en/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]`
 
 ---
 
@@ -120,7 +120,7 @@ Amazon MSK Serverless eliminates fixed EC2 broker costs and bills based on actua
 ---
 
 ## 📌 Related Notes
-- `[[msk]]` — Amazon MSK Master Hub
-- `[[msk-cluster-architecture]]` — MSK Provisioned Clusters & Brokers
-- `[[msk-security-and-monitoring]]` — IAM Authentication & Kafka ACLs
-- `[[kinesis-data-streams]]` — Kinesis On-Demand Mode Comparison
+- `[[en/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Master Hub
+- `[[en/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — MSK Provisioned Clusters & Brokers
+- `[[en/02-services/analytics-streaming/msk/msk-security-and-monitoring|msk-security-and-monitoring]]` — IAM Authentication & Kafka ACLs
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — Kinesis On-Demand Mode Comparison

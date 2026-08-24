@@ -16,7 +16,7 @@ date: 2026-08-10
 - **Category**: Security, Governance & Storage Management
 - **Primary Use Case**: Centralized, automated, policy-driven backup management, disaster recovery, WORM compliance (**AWS Backup Vault Lock**), and cross-account / cross-Region data protection across AWS services.
 - **Slide Reference**: Pages 139–154, 410–430 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-4-data-security-and-governance]] | [[domain-2-data-store-management]] | [[s3]] | [[ebs-and-instance-store]] | [[efs-and-fsx]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] | [[en/02-services/storage/efs-and-fsx|efs-and-fsx]]
 
 ---
 
@@ -314,13 +314,13 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[kms-and-secrets]] — AWS KMS encryption keys, CMKs, and cross-account key policies
-- [[lake-formation]] — Data Lake security, governance, and centralized access control
-- [[macie-and-cloudtrail]] — Amazon Macie PII discovery and CloudTrail API auditing
-- [[s3]] — Amazon S3 object storage and central Data Lake protection
-- [[ebs-and-instance-store]] — Amazon EBS volume snapshots and lifecycle management
-- [[efs-and-fsx]] — Amazon EFS and AWS FSx backup integrations
-- [[ebs-vs-efs-vs-instance-store]] — Storage Decision Matrix (EFS vs. EBS vs. Instance Store)
-- [[domain-4-data-security-and-governance]] — DEA-C01 Domain 4 Study Guide
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
-- [[domain-3-data-operations-and-support]] — DEA-C01 Domain 3 Study Guide
+- [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — AWS KMS encryption keys, CMKs, and cross-account key policies
+- [[en/02-services/security-governance/lake-formation|lake-formation]] — Data Lake security, governance, and centralized access control
+- [[en/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]] — Amazon Macie PII discovery and CloudTrail API auditing
+- [[en/02-services/storage/s3/s3|s3]] — Amazon S3 object storage and central Data Lake protection
+- [[en/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] — Amazon EBS volume snapshots and lifecycle management
+- [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] — Amazon EFS and AWS FSx backup integrations
+- [[en/02-services/storage/ebs-vs-efs-vs-instance-store|ebs-vs-efs-vs-instance-store]] — Storage Decision Matrix (EFS vs. EBS vs. Instance Store)
+- [[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]] — DEA-C01 Domain 4 Study Guide
+- [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]] — DEA-C01 Domain 3 Study Guide

@@ -20,7 +20,7 @@ date: 2026-08-23
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/iam) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Least-privilege identity access management၊ pipeline execution roles (AWS Glue, Lambda, EMR, Redshift)၊ cross-account data lake access နှင့် IAM database authentication။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 542–559
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[lake-formation]]` | `[[kms-and-secrets]]` | `[[glue]]` | `[[redshift]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[mm/02-services/security-governance/lake-formation|lake-formation]]` | `[[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/database/redshift|redshift]]`
 
 ---
 
@@ -253,8 +253,8 @@ graph LR
 ---
 
 ## 📌 Related Notes (ဆက်စပ် လေ့လာရန်များ)
-- `[[lake-formation]]` — Fine-Grained Lake Formation Governance vs IAM
-- `[[kms-and-secrets]]` — KMS Key Policies & Secrets Manager
-- `[[glue]]` — AWS Glue Execution Roles
-- `[[redshift]]` — Amazon Redshift Spectrum IAM Role & Query Federation
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[mm/02-services/security-governance/lake-formation|lake-formation]]` — Fine-Grained Lake Formation Governance vs IAM
+- `[[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]]` — KMS Key Policies & Secrets Manager
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Execution Roles
+- `[[mm/02-services/database/redshift|redshift]]` — Amazon Redshift Spectrum IAM Role & Query Federation
+- `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

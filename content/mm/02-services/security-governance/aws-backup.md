@@ -18,7 +18,7 @@ date: 2026-08-10
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/aws-backup) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: ဗဟိုချုပ်ကိုင်မှုရှိပြီး မူဝါဒအခြေပြု (centralized, automated, policy-driven) backup management၊ disaster recovery၊ WORM compliance (**AWS Backup Vault Lock**) နှင့် AWS services များအနှံ့ cross-account / cross-Region data protection လုပ်ဆောင်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 139–154, 410–430
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[domain-2-data-store-management]]` | `[[s3]]` | `[[ebs-and-instance-store]]` | `[[efs-and-fsx]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]]` | `[[mm/02-services/storage/efs-and-fsx|efs-and-fsx]]`
 
 ---
 
@@ -316,13 +316,13 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[kms-and-secrets]] — AWS KMS encryption keys, CMKs, and cross-account key policies
-- [[lake-formation]] — Data Lake security, governance, and centralized access control
-- [[macie-and-cloudtrail]] — Amazon Macie PII discovery and CloudTrail API auditing
-- [[s3]] — Amazon S3 object storage and central Data Lake protection
-- [[ebs-and-instance-store]] — Amazon EBS volume snapshots and lifecycle management
-- [[efs-and-fsx]] — Amazon EFS and AWS FSx backup integrations
-- [[ebs-vs-efs-vs-instance-store]] — Storage Decision Matrix (EFS vs. EBS vs. Instance Store)
-- [[domain-4-data-security-and-governance]] — DEA-C01 Domain 4 Study Guide
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
-- [[domain-3-data-operations-and-support]] — DEA-C01 Domain 3 Study Guide
+- [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — AWS KMS encryption keys, CMKs, and cross-account key policies
+- [[mm/02-services/security-governance/lake-formation|lake-formation]] — Data Lake security, governance, and centralized access control
+- [[mm/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]] — Amazon Macie PII discovery and CloudTrail API auditing
+- [[mm/02-services/storage/s3/s3|s3]] — Amazon S3 object storage and central Data Lake protection
+- [[mm/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] — Amazon EBS volume snapshots and lifecycle management
+- [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] — Amazon EFS and AWS FSx backup integrations
+- [[mm/02-services/storage/ebs-vs-efs-vs-instance-store|ebs-vs-efs-vs-instance-store]] — Storage Decision Matrix (EFS vs. EBS vs. Instance Store)
+- [[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]] — DEA-C01 Domain 4 Study Guide
+- [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]] — DEA-C01 Domain 3 Study Guide

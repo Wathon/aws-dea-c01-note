@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance)
 - **Primary Use Case**: Restricting dashboard rows and columns based on user identity (RLS & CLS), connecting to private databases via QuickSight VPC connections, and managing enterprise SSO with IAM Identity Center.
 - **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[quicksight]]` | `[[redshift]]` | `[[rds-and-aurora]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` | `[[en/02-services/database/redshift|redshift]]` | `[[en/02-services/database/rds-and-aurora|rds-and-aurora]]` | `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -176,7 +176,7 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[quicksight]]` — QuickSight Master Hub
-- `[[quicksight-spice-engine]]` — SPICE In-Memory Engine
-- `[[redshift]]` — Securing Amazon Redshift Clusters
-- `[[rds-and-aurora]]` — Private VPC Database Connectivity
+- `[[en/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` — QuickSight Master Hub
+- `[[en/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` — SPICE In-Memory Engine
+- `[[en/02-services/database/redshift|redshift]]` — Securing Amazon Redshift Clusters
+- `[[en/02-services/database/rds-and-aurora|rds-and-aurora]]` — Private VPC Database Connectivity

@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/opensearch/opensearch-security-and-monitoring)
 - **Primary Use Case**: Configuring Fine-Grained Access Control (FGAC), implementing Document and Field-Level Security, securing OpenSearch Dashboards with Amazon Cognito, and monitoring critical cluster health metrics.
 - **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[opensearch]]` | `[[opensearch-cluster-architecture]]` | `[[opensearch-troubleshooting-and-tuning]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning|opensearch-troubleshooting-and-tuning]]`
 
 ---
 
@@ -139,7 +139,7 @@ To allow analysts and security teams to log into OpenSearch Dashboards without d
 ---
 
 ## 📌 Related Notes
-- `[[opensearch]]` — OpenSearch Master Hub
-- `[[opensearch-cluster-architecture]]` — Master & Data Node Topologies
-- `[[opensearch-troubleshooting-and-tuning]]` — Diagnosing Red/Yellow Status & Watermarks
-- `[[cloudwatch-and-eventbridge]]` — CloudWatch Metrics & Alarms
+- `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Master Hub
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` — Master & Data Node Topologies
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning|opensearch-troubleshooting-and-tuning]]` — Diagnosing Red/Yellow Status & Watermarks
+- `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — CloudWatch Metrics & Alarms

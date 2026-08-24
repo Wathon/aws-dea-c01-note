@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/msk/msk-security-and-monitoring) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: IAM authentication ဖြင့် Kafka clusters များကို လုံခြုံအောင် ပြုလုပ်ခြင်း၊ TLS encryption ကို configure ပြုလုပ်ခြင်း၊ consumer group lag (`SumOffsetLag`) ကို စောင့်ကြည့်ထောက်လှမ်းခြင်း နှင့် Prometheus OpenMonitoring နှင့် ချိတ်ဆက်ပေါင်းစပ်ခြင်း။
 - **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[msk]]` | `[[msk-cluster-architecture]]` | `[[glue-schema-registry]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]` | `[[mm/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` | `[[mm/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]`
 
 ---
 
@@ -125,8 +125,8 @@ Amazon MSK သည် broker nodes များမှ standardized Prometheus met
 ---
 
 ## 📌 Related Notes
-- `[[msk]]` — Amazon MSK Master Hub
-- `[[msk-cluster-architecture]]` — MSK Replication & Storage
-- `[[msk-troubleshooting-and-tuning]]` — Diagnosing Lag & Timeout Errors
-- `[[glue-schema-registry]]` — Data Governance & Schema Evolution
-- `[[kinesis-security-and-monitoring]]` — Kinesis CloudWatch & KMS Comparison
+- `[[mm/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Master Hub
+- `[[mm/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — MSK Replication & Storage
+- `[[mm/02-services/analytics-streaming/msk/msk-troubleshooting-and-tuning|msk-troubleshooting-and-tuning]]` — Diagnosing Lag & Timeout Errors
+- `[[mm/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` — Data Governance & Schema Evolution
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring|kinesis-security-and-monitoring]]` — Kinesis CloudWatch & KMS Comparison

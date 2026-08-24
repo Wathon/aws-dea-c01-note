@@ -19,7 +19,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis-architecture-and-patterns)
 - **Primary Use Case**: Designing end-to-end streaming data pipelines, implementing record deduplication, isolating poison pills, and choosing between KDS, Firehose, MSK, and SQS.
 - **Slide Reference**: Pages 414–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[kinesis-firehose]]` | `[[kinesis-apache-flink]]` | `[[msk]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-apache-flink|kinesis-apache-flink]]` | `[[en/02-services/analytics-streaming/msk/msk|msk]]`
 
 ---
 
@@ -145,9 +145,9 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-data-streams]]` — KDS Ingestion & Shards
-- `[[kinesis-firehose]]` — Micro-Batch Streaming Delivery
-- `[[kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
-- `[[msk]]` — Amazon Managed Streaming for Apache Kafka
-- `[[dynamodb]]` — Deduplication State Storage
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shards
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Micro-Batch Streaming Delivery
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-apache-flink|kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
+- `[[en/02-services/analytics-streaming/msk/msk|msk]]` — Amazon Managed Streaming for Apache Kafka
+- `[[en/02-services/database/dynamodb|dynamodb]]` — Deduplication State Storage

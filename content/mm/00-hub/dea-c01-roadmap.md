@@ -29,10 +29,10 @@ pie title DEA-C01 Domain Weightings
 
 | Domain | Weighting | Key Focus Areas | Note Link |
 | --- | --- | --- | --- |
-| **Domain 1: Data Ingestion and Processing** | **28%** | Batch vs Streaming ingestion, ETL pipelines, transformation, schema evolution, Glue, Kinesis, Lambda, MWAA, Step Functions | [[domain-1-ingestion-and-processing]] |
-| **Domain 2: Data Store Management** | **26%** | Data store selection, schema design, Redshift, S3, DynamoDB, RDS/Aurora, OpenSearch, storage tiering & partitioning | [[domain-2-data-store-management]] |
-| **Domain 3: Data Operations and Support** | **22%** | Pipeline automation, monitoring, CloudWatch, EventBridge, error handling, performance tuning, data quality (Glue DQ) | [[domain-3-data-operations-and-support]] |
-| **Domain 4: Data Security and Governance** | **24%** | Identity & access management (IAM), encryption (KMS), governance (Lake Formation, DataZone), PII protection (Macie) | [[domain-4-data-security-and-governance]] |
+| **Domain 1: Data Ingestion and Processing** | **28%** | Batch vs Streaming ingestion, ETL pipelines, transformation, schema evolution, Glue, Kinesis, Lambda, MWAA, Step Functions | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] |
+| **Domain 2: Data Store Management** | **26%** | Data store selection, schema design, Redshift, S3, DynamoDB, RDS/Aurora, OpenSearch, storage tiering & partitioning | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] |
+| **Domain 3: Data Operations and Support** | **22%** | Pipeline automation, monitoring, CloudWatch, EventBridge, error handling, performance tuning, data quality (Glue DQ) | [[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]] |
+| **Domain 4: Data Security and Governance** | **24%** | Identity & access management (IAM), encryption (KMS), governance (Lake Formation, DataZone), PII protection (Macie) | [[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]] |
 
 ---
 
@@ -56,27 +56,27 @@ gantt
 ```
 
 ### Week 1: Fundamentals & Core Data Stores
-- Big Data 5 V's၊ SQL joins/window functions များကို ပြန်လည်သုံးသပ်ခြင်း: [[big-data-fundamentals]], [[sql-and-version-control-review]]
-- S3 Storage Classes၊ Lifecycle၊ Object Lock & Replication: [[s3]]
-- Relational (RDS/Aurora) & NoSQL (DynamoDB, Redshift): [[rds-and-aurora]], [[dynamodb]], [[redshift]]
+- Big Data 5 V's၊ SQL joins/window functions များကို ပြန်လည်သုံးသပ်ခြင်း: [[mm/03-concepts/big-data-fundamentals|big-data-fundamentals]], [[mm/03-concepts/sql-and-version-control-review|sql-and-version-control-review]]
+- S3 Storage Classes၊ Lifecycle၊ Object Lock & Replication: [[mm/02-services/storage/s3/s3|s3]]
+- Relational (RDS/Aurora) & NoSQL (DynamoDB, Redshift): [[mm/02-services/database/rds-and-aurora|rds-and-aurora]], [[mm/02-services/database/dynamodb|dynamodb]], [[mm/02-services/database/redshift|redshift]]
 
 ### Week 2: Ingestion, Compute & Analytics Pipelines
-- Kinesis Data Streams / Firehose / MSK ဖြင့် Data Ingestion ပြုလုပ်ခြင်း: [[kinesis]], [[msk]]
-- Serverless & Container Compute: [[lambda]], [[batch]], [[ecr-ecs-eks]], [[ec2-and-graviton]]
-- AWS Glue ဖြင့် ETL ပြုလုပ်ခြင်း (Crawlers, Catalog, Jobs, DataBrew, Data Quality): [[glue]]
-- Athena ဖြင့် Interactive Querying ပြုလုပ်ခြင်း & EMR ဖြင့် Big Data စီမံခြင်း: [[athena]], [[emr]]
+- Kinesis Data Streams / Firehose / MSK ဖြင့် Data Ingestion ပြုလုပ်ခြင်း: [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]], [[mm/02-services/analytics-streaming/msk/msk|msk]]
+- Serverless & Container Compute: [[mm/02-services/compute-containers/lambda|lambda]], [[mm/02-services/compute-containers/batch|batch]], [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]], [[mm/02-services/compute-containers/ec2-and-graviton|ec2-and-graviton]]
+- AWS Glue ဖြင့် ETL ပြုလုပ်ခြင်း (Crawlers, Catalog, Jobs, DataBrew, Data Quality): [[mm/02-services/analytics-streaming/glue/glue|glue]]
+- Athena ဖြင့် Interactive Querying ပြုလုပ်ခြင်း & EMR ဖြင့် Big Data စီမံခြင်း: [[mm/02-services/analytics-streaming/athena/athena|athena]], [[mm/02-services/analytics-streaming/emr/emr|emr]]
 
 ### Week 3: Orchestration, Governance & Security
-- Step Functions & MWAA (Airflow) ဖြင့် Workflow orchestration ပြုလုပ်ခြင်း: [[step-functions]], [[mwaa-airflow]]
-- Lake Formation၊ IAM၊ KMS တို့ဖြင့် Governance & Access Control စီမံခြင်း: [[lake-formation]], [[iam]], [[kms-and-secrets]]
-- Migration & Transfer: [[dms-and-sct]], [[datasync-and-snow]], [[application-discovery-and-mgn]], [[data-exchange]], [[transfer-family]]
+- Step Functions & MWAA (Airflow) ဖြင့် Workflow orchestration ပြုလုပ်ခြင်း: [[mm/02-services/integration/step-functions/step-functions|step-functions]], [[mm/02-services/integration/mwaa-airflow|mwaa-airflow]]
+- Lake Formation၊ IAM၊ KMS တို့ဖြင့် Governance & Access Control စီမံခြင်း: [[mm/02-services/security-governance/lake-formation|lake-formation]], [[mm/02-services/security-governance/iam|iam]], [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]]
+- Migration & Transfer: [[mm/02-services/migration/dms-and-sct|dms-and-sct]], [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]], [[mm/02-services/migration/application-discovery-and-mgn|application-discovery-and-mgn]], [[mm/02-services/migration/data-exchange|data-exchange]], [[mm/02-services/migration/transfer-family|transfer-family]]
 
 ### Week 4: Scenarios, Optimization & Exam Practice
-- Cross-service decision matrix ကို ပြန်လည်သုံးသပ်ခြင်း: [[service-comparisons]]
-- စာမေးပွဲတွင် မကြာခဏတွေ့ရတတ်သော High-frequency exam traps & keywords များ: [[high-frequency-exam-patterns]]
+- Cross-service decision matrix ကို ပြန်လည်သုံးသပ်ခြင်း: [[mm/04-exam-tips/service-comparisons|service-comparisons]]
+- စာမေးပွဲတွင် မကြာခဏတွေ့ရတတ်သော High-frequency exam traps & keywords များ: [[mm/04-exam-tips/high-frequency-exam-patterns|high-frequency-exam-patterns]]
 - Slide Exam Tips များကို ပြန်လည်သုံးသပ်ခြင်း: [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 
 ---
 
 ## 📌 Master Hub Link
-Return to main hub: [[mm/index]]
+Return to main hub: [[mm/index|index]]

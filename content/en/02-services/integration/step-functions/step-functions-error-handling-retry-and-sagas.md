@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/step-functions/step-functions-error-handling-retry-and-sagas)
 - **Primary Use Case**: Configuring automated `Retry` policies with exponential backoff, isolating failed pipeline states with `Catch` handlers, and implementing the Saga Pattern for distributed compensating transactions.
 - **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[step-functions]]` | `[[step-functions-standard-vs-express-workflows]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/step-functions/step-functions|step-functions]]` | `[[en/02-services/integration/step-functions/step-functions-standard-vs-express-workflows|step-functions-standard-vs-express-workflows]]` | `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -163,7 +163,7 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[step-functions]]` — Step Functions Master Hub
-- `[[step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
-- `[[domain-3-data-operations-and-support]]` — Incident Triage & Operations
-- `[[sns]]` — Amazon SNS Alerting Destinations
+- `[[en/02-services/integration/step-functions/step-functions|step-functions]]` — Step Functions Master Hub
+- `[[en/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns|step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
+- `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — Incident Triage & Operations
+- `[[en/02-services/integration/sns/sns|sns]]` — Amazon SNS Alerting Destinations

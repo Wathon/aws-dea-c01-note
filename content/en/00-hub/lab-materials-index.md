@@ -13,7 +13,7 @@ date: 2026-08-07
 
 - **Category**: Hands-on Exercises & Implementation Code
 - **Primary Use Case**: Practical AWS Data Engineering Labs, CLI Scripts, Sample Datasets, Infrastructure as Code (IaC)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[dea-c01-roadmap]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/00-hub/dea-c01-roadmap|dea-c01-roadmap]]
 
 ---
 
@@ -40,11 +40,11 @@ graph TD
 - **`content/materials/S3TablesActivity.txt`**:
   - SQL script for testing **Amazon S3 Tables** with **Apache Iceberg**.
   - Demonstrates `CREATE TABLE` with Iceberg `TBLPROPERTIES`, partitioning by year, multi-row `INSERT`, and aggregation queries in Athena.
-  - Linked Note: [[s3-tables]] | [[athena]]
+  - Linked Note: [[en/02-services/storage/s3/s3-tables|s3-tables]] | [[en/02-services/analytics-streaming/athena/athena|athena]]
 - **`content/materials/USCensus.csv`**:
   - Standard CSV dataset (US State population & demographic data).
   - Used for S3 ingestion, Glue Crawlers, Athena query performance tests, and Parquet conversion labs.
-  - Linked Note: [[s3]] | [[data-formats-and-compression]]
+  - Linked Note: [[en/02-services/storage/s3/s3|s3]] | [[en/03-concepts/data-formats-and-compression|data-formats-and-compression]]
 - **`content/materials/code/s3/`**:
   - Sample static assets (`index.html`, test images) for testing S3 static website hosting and CORS configurations.
 
@@ -52,16 +52,16 @@ graph TD
 
 - **`content/materials/kms/kms-demo-cli.sh`**:
   - Shell script demonstrating AWS KMS CLI operations: envelope encryption, data key generation (`aws kms generate-data-key`), and encryption/decryption validation.
-  - Linked Note: [[kms-and-secrets]] | [[s3-encryption]]
+  - Linked Note: [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] | [[en/02-services/storage/s3/s3-encryption|s3-encryption]]
 - **`content/materials/DataZoneSampleData.txt`**:
   - Structured text payload used for publishing data assets, metadata forms, and data governance policies in Amazon DataZone.
-  - Linked Note: [[lake-formation]]
+  - Linked Note: [[en/02-services/security-governance/lake-formation|lake-formation]]
 
 ### 3. Streaming & Analytics Labs (`Kinesis` & Serverless)
 
 - **`content/materials/code/kinesis/kinesis-data-streams.sh`**:
   - CLI script for putting records into Kinesis Data Streams (`aws kinesis put-record`), inspecting shard iterators, and testing stream consumer throughput.
-  - Linked Note: [[kinesis]]
+  - Linked Note: [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]
 
 ### 4. Infrastructure as Code & Automation (`CDK`, `CloudFormation`, `SAM`)
 
@@ -86,5 +86,5 @@ graph TD
 
 ## 📌 Master Hub Links
 
-- Return to main hub: [[index]]
-- AWS Service Catalog: [[service-catalog]]
+- Return to main hub: [[en/index|index]]
+- AWS Service Catalog: [[en/00-hub/service-catalog|service-catalog]]

@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-iceberg) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: S3 Data Lakes များပေါ်တွင် row-level `UPDATE`၊ `DELETE`၊ `MERGE INTO`၊ time-travel queries များနှင့် concurrent write guarantees များကို လုပ်ဆောင်နိုင်စေရန်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 365–382
-- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]]` | `[[mm/02-services/storage/s3/s3-tables|s3-tables]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]]` | `[[mm/02-services/storage/s3/s3-tables|s3-tables]]`
 
 ---
 

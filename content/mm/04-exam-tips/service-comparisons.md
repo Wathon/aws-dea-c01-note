@@ -46,7 +46,7 @@ graph TD
 | **Amazon EFS** | POSIX File (NFSv4.1) | Multi-AZ (11 9's) | ✅ Persistent | **Multi-AZ shared directories, Lambda model storage, EKS/ECS PVs** |
 | **AWS FSx for Lustre** | High-Perf Parallel File | Single-AZ (Linked S3) | ✅ Persistent in S3 | **Sub-ms HPC processing, distributed ML training, EMR staging** |
 
-> 🔗 **Deep Dive Reference**: အသေးစိတ် lifecycle၊ throughput နှင့် architecture အချက်အလက်များအတွက် [[ebs-vs-efs-vs-instance-store]] ကို ကြည့်ရှုပါ။
+> 🔗 **Deep Dive Reference**: အသေးစိတ် lifecycle၊ throughput နှင့် architecture အချက်အလက်များအတွက် [[mm/02-services/storage/ebs-vs-efs-vs-instance-store|ebs-vs-efs-vs-instance-store]] ကို ကြည့်ရှုပါ။
 
 ---
 
@@ -54,11 +54,11 @@ graph TD
 
 | Use Case (အသုံးပြုမည့် လုပ်ငန်းလိုအပ်ချက်) | AWS Service Choice (ရွေးချယ်ရမည့် AWS Service) | Key Keyword Trigger (စာမေးပွဲ အဓိက Keyword များ) |
 | --- | --- | --- |
-| **Real-time custom stream processing (Data Retention ရက် ၃၆၅ အထိ)** | [[kinesis]] (Data Streams) | Multi-consumer, sub-second latency, custom processing code |
-| **S3 / Redshift / OpenSearch သို့ Zero-code streaming delivery ပြုလုပ်ခြင်း** | [[kinesis]] (Data Firehose) | Micro-batching, direct delivery, automatic Parquet transformation |
-| **Open-source Kafka streaming ecosystem အသုံးပြုခြင်း** | [[msk]] (Amazon MSK) | Apache Kafka compatibility, Kafka Connect |
-| **SaaS (Salesforce, ServiceNow) များမှ data များ ingest ပြုလုပ်ခြင်း** | [[appflow]] (AWS AppFlow) | No-code SaaS connector, PrivateLink security |
-| **Continuous replication ဖြင့် database များကို migrate ပြုလုပ်ခြင်း** | [[dms-and-sct]] (AWS DMS + CDC) | Heterogeneous database migration, minimal downtime |
+| **Real-time custom stream processing (Data Retention ရက် ၃၆၅ အထိ)** | [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] (Data Streams) | Multi-consumer, sub-second latency, custom processing code |
+| **S3 / Redshift / OpenSearch သို့ Zero-code streaming delivery ပြုလုပ်ခြင်း** | [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] (Data Firehose) | Micro-batching, direct delivery, automatic Parquet transformation |
+| **Open-source Kafka streaming ecosystem အသုံးပြုခြင်း** | [[mm/02-services/analytics-streaming/msk/msk|msk]] (Amazon MSK) | Apache Kafka compatibility, Kafka Connect |
+| **SaaS (Salesforce, ServiceNow) များမှ data များ ingest ပြုလုပ်ခြင်း** | [[mm/02-services/integration/appflow/appflow|appflow]] (AWS AppFlow) | No-code SaaS connector, PrivateLink security |
+| **Continuous replication ဖြင့် database များကို migrate ပြုလုပ်ခြင်း** | [[mm/02-services/migration/dms-and-sct|dms-and-sct]] (AWS DMS + CDC) | Heterogeneous database migration, minimal downtime |
 
 ---
 
@@ -78,11 +78,11 @@ graph TD
 
 | Security Goal (လုံခြုံရေးဆိုင်ရာ ရည်မှန်းချက်) | Primary AWS Service (အဓိက AWS Service) |
 | --- | --- |
-| **S3 Data Lake ပေါ်တွင် Column & Row-Level Security သတ်မှတ်ခြင်း** | [[lake-formation]] (AWS Lake Formation) |
-| **S3 အတွင်း PII (SSNs, Credit Cards) များကို Automated Scanning ပြုလုပ်ခြင်း** | [[macie-and-cloudtrail]] (Amazon Macie) |
-| **Database Credential များ အလိုအလျောက် Rotate ပြုလုပ်ခြင်း** | [[kms-and-secrets]] (AWS Secrets Manager) |
-| **Internet Gateway မလိုဘဲ Private S3 access ပြုလုပ်ခြင်း** | [[vpc-and-networking]] (S3 Gateway VPC Endpoint) |
-| **Centralized Cross-Service Backup & WORM Immutability ရရှိစေခြင်း** | [[aws-backup]] (AWS Backup & Vault Lock) |
+| **S3 Data Lake ပေါ်တွင် Column & Row-Level Security သတ်မှတ်ခြင်း** | [[mm/02-services/security-governance/lake-formation|lake-formation]] (AWS Lake Formation) |
+| **S3 အတွင်း PII (SSNs, Credit Cards) များကို Automated Scanning ပြုလုပ်ခြင်း** | [[mm/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]] (Amazon Macie) |
+| **Database Credential များ အလိုအလျောက် Rotate ပြုလုပ်ခြင်း** | [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] (AWS Secrets Manager) |
+| **Internet Gateway မလိုဘဲ Private S3 access ပြုလုပ်ခြင်း** | [[mm/02-services/networking-monitoring/vpc-and-networking|vpc-and-networking]] (S3 Gateway VPC Endpoint) |
+| **Centralized Cross-Service Backup & WORM Immutability ရရှိစေခြင်း** | [[mm/02-services/security-governance/aws-backup|aws-backup]] (AWS Backup & Vault Lock) |
 
 ---
 
@@ -115,18 +115,18 @@ graph TD
 
 | Migration & Transfer Requirement (လိုအပ်ချက်) | Recommended Service (အကြံပြုထားသော Service) | Key Keyword / Criteria (အဓိက သတ်မှတ်ချက်များ) | Deep Dive Link |
 | :--- | :--- | :--- | :--- |
-| **မတူညီသော (Heterogeneous) DB schema နှင့် code များကို convert ပြုလုပ်ခြင်း** | **AWS SCT** | PL/SQL, stored procedures, data types များကို ပြောင်းလဲခြင်း | [[dms-and-sct]] |
-| **Live database replication နှင့် S3/Kinesis သို့ CDC streaming ပြုလုပ်ခြင်း** | **AWS DMS** | Minimal downtime, full load + CDC, `Op` column | [[dms-and-sct]] |
-| **Mass data warehouse unload (Teradata/Oracle မှ Redshift သို့)** | **SCT Data Extraction Agents** | S3/Snowball သို့ Multi-TB/PB parallel unloads ပြုလုပ်ခြင်း | [[dms-and-sct]] |
-| **S3/EFS/FSx သို့ အလိုအလျောက် NFS/SMB/HDFS scheduled sync ပြုလုပ်ခြင်း** | **AWS DataSync** | POSIX metadata များကို ထိန်းသိမ်းပေးခြင်း၊ rsync ထက် 10 ဆ ပိုမြန်ခြင်း | [[datasync-and-snow]] |
-| **ကြီးမားသော offline physical migration (>10 TB မှ Petabytes အထိ)** | **AWS Snowball Edge** | Network transfer ကြာချိန် ၁-၂ ပတ်ထက် ကျော်လွန်နေခြင်း | [[datasync-and-snow]] |
-| **Exabyte-scale data center evacuation (တစ်ခုလုံး ရွှေ့ပြောင်းခြင်း)** | **AWS Snowmobile** | 45ft shipping container ကုန်တင်ကားတစ်စီးလျှင် 100 PB | [[datasync-and-snow]] |
-| **On-premises server discovery နှင့် dependency mapping ပြုလုပ်ခြင်း** | **Application Discovery Service** | Migrations စီစဉ်ခြင်း၊ agentless vCenter vs agent-based | [[application-discovery-and-mgn]] |
-| **EC2 သို့ Automated lift-and-shift server rehosting ပြုလုပ်ခြင်း** | **AWS MGN (Application Migration Service)** | Continuous block replication, low-cost staging | [[application-discovery-and-mgn]] |
-| **ETL မလိုဘဲ Redshift အတွင်း Third-party datasets များကို တိုက်ရိုက်အသုံးပြုခြင်း** | **AWS Data Exchange for Redshift** | SQL မှတစ်ဆင့် external vendor tables များကို ချက်ချင်း query ပြုလုပ်နိုင်ခြင်း | [[data-exchange]] |
-| **External commercial datasets များကို S3 သို့မဟုတ် APIs သို့ load ပြုလုပ်ခြင်း** | **AWS Data Exchange (S3 / APIs)** | Native IAM SigV4 auth, automated S3 revisions | [[data-exchange]] |
-| **Legacy SFTP/FTPS file exchange ကို S3/EFS အတွင်းသို့ တိုက်ရိုက် ပို့ဆောင်ခြင်း** | **AWS Transfer Family** | Client ဘက်မှ ပြင်ဆင်ရန်မလိုခြင်း (Zero client modification), Active Directory auth | [[transfer-family]] |
-| **S3 ဖြင့် ထောက်ပံ့ထားသော On-premises local file share cache ပြုလုပ်ခြင်း** | **AWS Storage Gateway** | Real-time hybrid cached NFS/SMB access | [[datasync-and-snow]] |
+| **မတူညီသော (Heterogeneous) DB schema နှင့် code များကို convert ပြုလုပ်ခြင်း** | **AWS SCT** | PL/SQL, stored procedures, data types များကို ပြောင်းလဲခြင်း | [[mm/02-services/migration/dms-and-sct|dms-and-sct]] |
+| **Live database replication နှင့် S3/Kinesis သို့ CDC streaming ပြုလုပ်ခြင်း** | **AWS DMS** | Minimal downtime, full load + CDC, `Op` column | [[mm/02-services/migration/dms-and-sct|dms-and-sct]] |
+| **Mass data warehouse unload (Teradata/Oracle မှ Redshift သို့)** | **SCT Data Extraction Agents** | S3/Snowball သို့ Multi-TB/PB parallel unloads ပြုလုပ်ခြင်း | [[mm/02-services/migration/dms-and-sct|dms-and-sct]] |
+| **S3/EFS/FSx သို့ အလိုအလျောက် NFS/SMB/HDFS scheduled sync ပြုလုပ်ခြင်း** | **AWS DataSync** | POSIX metadata များကို ထိန်းသိမ်းပေးခြင်း၊ rsync ထက် 10 ဆ ပိုမြန်ခြင်း | [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] |
+| **ကြီးမားသော offline physical migration (>10 TB မှ Petabytes အထိ)** | **AWS Snowball Edge** | Network transfer ကြာချိန် ၁-၂ ပတ်ထက် ကျော်လွန်နေခြင်း | [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] |
+| **Exabyte-scale data center evacuation (တစ်ခုလုံး ရွှေ့ပြောင်းခြင်း)** | **AWS Snowmobile** | 45ft shipping container ကုန်တင်ကားတစ်စီးလျှင် 100 PB | [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] |
+| **On-premises server discovery နှင့် dependency mapping ပြုလုပ်ခြင်း** | **Application Discovery Service** | Migrations စီစဉ်ခြင်း၊ agentless vCenter vs agent-based | [[mm/02-services/migration/application-discovery-and-mgn|application-discovery-and-mgn]] |
+| **EC2 သို့ Automated lift-and-shift server rehosting ပြုလုပ်ခြင်း** | **AWS MGN (Application Migration Service)** | Continuous block replication, low-cost staging | [[mm/02-services/migration/application-discovery-and-mgn|application-discovery-and-mgn]] |
+| **ETL မလိုဘဲ Redshift အတွင်း Third-party datasets များကို တိုက်ရိုက်အသုံးပြုခြင်း** | **AWS Data Exchange for Redshift** | SQL မှတစ်ဆင့် external vendor tables များကို ချက်ချင်း query ပြုလုပ်နိုင်ခြင်း | [[mm/02-services/migration/data-exchange|data-exchange]] |
+| **External commercial datasets များကို S3 သို့မဟုတ် APIs သို့ load ပြုလုပ်ခြင်း** | **AWS Data Exchange (S3 / APIs)** | Native IAM SigV4 auth, automated S3 revisions | [[mm/02-services/migration/data-exchange|data-exchange]] |
+| **Legacy SFTP/FTPS file exchange ကို S3/EFS အတွင်းသို့ တိုက်ရိုက် ပို့ဆောင်ခြင်း** | **AWS Transfer Family** | Client ဘက်မှ ပြင်ဆင်ရန်မလိုခြင်း (Zero client modification), Active Directory auth | [[mm/02-services/migration/transfer-family|transfer-family]] |
+| **S3 ဖြင့် ထောက်ပံ့ထားသော On-premises local file share cache ပြုလုပ်ခြင်း** | **AWS Storage Gateway** | Real-time hybrid cached NFS/SMB access | [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] |
 
 ---
 
@@ -157,15 +157,15 @@ graph TD
 
 | Workload Type / Requirement (လုပ်ငန်းအမျိုးအစား / လိုအပ်ချက်) | Recommended Service (အကြံပြုထားသော Service) | Key Keyword / Decision Rule (အဓိက သတ်မှတ်ချက်နှင့် စည်းမျဉ်းများ) | Deep Dive Link |
 | :--- | :--- | :--- | :--- |
-| **Event-driven streaming micro-batch / S3 trigger (< 15 မိနစ်)** | **AWS Lambda** | 15-min timeout, `/tmp` (10 GB), EFS mount | [[lambda]] |
-| **Custom binaries / C++ / R များဖြင့် Long-running batch compute ပြုလုပ်ခြင်း** | **AWS Batch** | Docker containers, Spot instances, Array jobs | [[batch]] |
-| **S3 Data Lakes များအတွက် Serverless Apache Spark ETL** | **AWS Glue ETL** | PySpark/Scala, Data Catalog integration | [[glue]] |
-| **Petabyte-scale distributed Hadoop / Presto / Spark cluster** | **Amazon EMR (EC2)** | Master (On-Demand), Core, Task (Spot) | [[emr]], [[ec2-and-graviton]] |
-| **ရှိပြီးသား Kubernetes cluster ပေါ်တွင် Spark analytics များ run ပြုလုပ်ခြင်း** | **Amazon EMR on EKS** | Multi-tenant cluster sharing, dynamic pod scaling | [[ecr-ecs-eks]], [[emr]] |
-| **AWS-native serverless containerized applications များ** | **Amazon ECS (AWS Fargate)** | Zero server management, Task IAM role | [[ecr-ecs-eks]] |
-| **Analytics services များအကြား ကုန်ကျစရိတ် အသက်သာဆုံး Arm-based compute** | **AWS Graviton** | 40% ပိုမိုကောင်းမွန်သော price-performance (`m7g`, `c7g`, `r7g`) | [[ec2-and-graviton]] |
+| **Event-driven streaming micro-batch / S3 trigger (< 15 မိနစ်)** | **AWS Lambda** | 15-min timeout, `/tmp` (10 GB), EFS mount | [[mm/02-services/compute-containers/lambda|lambda]] |
+| **Custom binaries / C++ / R များဖြင့် Long-running batch compute ပြုလုပ်ခြင်း** | **AWS Batch** | Docker containers, Spot instances, Array jobs | [[mm/02-services/compute-containers/batch|batch]] |
+| **S3 Data Lakes များအတွက် Serverless Apache Spark ETL** | **AWS Glue ETL** | PySpark/Scala, Data Catalog integration | [[mm/02-services/analytics-streaming/glue/glue|glue]] |
+| **Petabyte-scale distributed Hadoop / Presto / Spark cluster** | **Amazon EMR (EC2)** | Master (On-Demand), Core, Task (Spot) | [[mm/02-services/analytics-streaming/emr/emr|emr]], [[mm/02-services/compute-containers/ec2-and-graviton|ec2-and-graviton]] |
+| **ရှိပြီးသား Kubernetes cluster ပေါ်တွင် Spark analytics များ run ပြုလုပ်ခြင်း** | **Amazon EMR on EKS** | Multi-tenant cluster sharing, dynamic pod scaling | [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]], [[mm/02-services/analytics-streaming/emr/emr|emr]] |
+| **AWS-native serverless containerized applications များ** | **Amazon ECS (AWS Fargate)** | Zero server management, Task IAM role | [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] |
+| **Analytics services များအကြား ကုန်ကျစရိတ် အသက်သာဆုံး Arm-based compute** | **AWS Graviton** | 40% ပိုမိုကောင်းမွန်သော price-performance (`m7g`, `c7g`, `r7g`) | [[mm/02-services/compute-containers/ec2-and-graviton|ec2-and-graviton]] |
 
 ---
 
 ## 📌 Master Hub Link
-ပင်မစာမျက်နှာသို့ ပြန်သွားရန် (Return to main hub): [[mm/index]]
+ပင်မစာမျက်နှာသို့ ပြန်သွားရန် (Return to main hub): [[mm/index|index]]

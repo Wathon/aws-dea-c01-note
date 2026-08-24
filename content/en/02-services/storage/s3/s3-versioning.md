@@ -17,7 +17,7 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-versioning)
 - **Primary Use Case**: Protection Against Accidental Overwrites & Deletions, Disaster Recovery, Prerequisite for S3 Replication & Object Lock
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-security]] | [[s3-encryption]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/s3/s3-security|s3-security]] | [[en/02-services/storage/s3/s3-encryption|s3-encryption]]
 
 ---
 
@@ -194,8 +194,8 @@ S3 Versioning is a mandatory technical prerequisite for several core S3 features
 
 ## 📌 Related Notes
 
-- [[s3]] — Main Amazon S3 Overview & Storage Classes
-- [[s3-security]] — S3 Security, Object Lock Compliance & Access Management
-- [[s3-encryption]] — S3 Encryption (SSE-S3, SSE-KMS, DSSE-KMS, SSE-C)
-- [[s3-performance]] — Request Performance & S3 Bucket Keys
-- [[cost-management]] — Cost Optimization & Lifecycle Tiering
+- [[en/02-services/storage/s3/s3|s3]] — Main Amazon S3 Overview & Storage Classes
+- [[en/02-services/storage/s3/s3-security|s3-security]] — S3 Security, Object Lock Compliance & Access Management
+- [[en/02-services/storage/s3/s3-encryption|s3-encryption]] — S3 Encryption (SSE-S3, SSE-KMS, DSSE-KMS, SSE-C)
+- [[en/02-services/storage/s3/s3-performance|s3-performance]] — Request Performance & S3 Bucket Keys
+- [[en/02-services/ml-dev-cost/cost-management|cost-management]] — Cost Optimization & Lifecycle Tiering

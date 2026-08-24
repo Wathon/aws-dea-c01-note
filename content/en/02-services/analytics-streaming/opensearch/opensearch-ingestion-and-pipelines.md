@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/opensearch/opensearch-ingestion-and-pipelines)
 - **Primary Use Case**: Ingesting high-throughput streaming logs into OpenSearch using serverless OpenSearch Ingestion (OSIS), Amazon Data Firehose, CloudWatch subscription filters, and Amazon DynamoDB Zero-ETL.
 - **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[opensearch]]` | `[[kinesis-firehose]]` | `[[dynamodb]]` | `[[cloudwatch-and-eventbridge]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[en/02-services/database/dynamodb|dynamodb]]` | `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 
@@ -144,7 +144,7 @@ With **DynamoDB Zero-ETL**:
 ---
 
 ## 📌 Related Notes
-- `[[opensearch]]` — OpenSearch Master Hub
-- `[[kinesis-firehose]]` — Firehose Buffering & Destinations
-- `[[dynamodb]]` — DynamoDB Architecture & Streams
-- `[[cloudwatch-and-eventbridge]]` — CloudWatch Log Subscriptions
+- `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Master Hub
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Firehose Buffering & Destinations
+- `[[en/02-services/database/dynamodb|dynamodb]]` — DynamoDB Architecture & Streams
+- `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — CloudWatch Log Subscriptions

@@ -21,7 +21,7 @@ date: 2026-08-23
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/security-governance/kms-and-secrets)
 - **Primary Use Case**: Managing cryptographic keys (AWS KMS), securing data at rest across S3/Redshift/RDS, optimizing big data KMS costs with S3 Bucket Keys, and automating database credential rotation with AWS Secrets Manager.
 - **Slide Reference**: Pages 560–575 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[iam]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[en/02-services/security-governance/iam|iam]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[en/02-services/database/redshift|redshift]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]`
 
 ---
 
@@ -250,8 +250,8 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[iam]]` — IAM Service Roles & Cross-Account Trust Policies
-- `[[s3]]` — Amazon S3 Storage & Encryption Defaults
-- `[[redshift]]` — Amazon Redshift Credential Management & KMS Encryption
-- `[[glue]]` — AWS Glue Security Configurations & Connection Secrets
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[en/02-services/security-governance/iam|iam]]` — IAM Service Roles & Cross-Account Trust Policies
+- `[[en/02-services/storage/s3/s3|s3]]` — Amazon S3 Storage & Encryption Defaults
+- `[[en/02-services/database/redshift|redshift]]` — Amazon Redshift Credential Management & KMS Encryption
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Security Configurations & Connection Secrets
+- `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

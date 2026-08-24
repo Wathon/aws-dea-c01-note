@@ -20,7 +20,7 @@ date: 2026-08-23
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/networking-monitoring/vpc-and-networking) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Data resources များ (Amazon Redshift, RDS, EMR, Lambda, Glue) ကို private subnets များအတွင်း သီးခြားခွဲထုတ်ထားခြင်း (isolating)၊ VPC Endpoints & AWS PrivateLink မှတစ်ဆင့် private connectivity တည်ဆောက်ခြင်း၊ နှင့် S3 Data Perimeters များကို enforce ပြုလုပ်ခြင်း။
 - **Slide Reference**: Pages 590–617 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]`
 
 ---
 
@@ -193,8 +193,8 @@ graph LR
 ---
 
 ## 📌 ဆက်စပ်လေ့လာရန် မှတ်စုများ (Related Notes)
-- `[[iam]]` — IAM Policy Evaluation & Condition Keys (`aws:sourceVpce`)
-- `[[s3]]` — S3 Gateway Endpoints & Bucket Policies
-- `[[redshift]]` — Redshift VPC Deployment & Enhanced VPC Routing
-- `[[kms-and-secrets]]` — KMS & Secrets Manager သို့ PrivateLink ဖြင့် ချိတ်ဆက်ခြင်း
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 လေ့လာရန်လမ်းညွှန်
+- `[[mm/02-services/security-governance/iam|iam]]` — IAM Policy Evaluation & Condition Keys (`aws:sourceVpce`)
+- `[[mm/02-services/storage/s3/s3|s3]]` — S3 Gateway Endpoints & Bucket Policies
+- `[[mm/02-services/database/redshift|redshift]]` — Redshift VPC Deployment & Enhanced VPC Routing
+- `[[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]]` — KMS & Secrets Manager သို့ PrivateLink ဖြင့် ချိတ်ဆက်ခြင်း
+- `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 လေ့လာရန်လမ်းညွှန်

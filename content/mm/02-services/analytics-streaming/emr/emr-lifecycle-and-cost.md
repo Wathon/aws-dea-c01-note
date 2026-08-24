@@ -20,7 +20,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/emr/emr-lifecycle-and-cost) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Bootstrap Actions မှတစ်ဆင့် node initialization ကို automate ပြုလုပ်ရန်၊ Steps မှတစ်ဆင့် batch workflows များကို orchestrate ပြုလုပ်ရန်နှင့် Transient Clusters များနှင့် EMR Managed Scaling တို့မှတစ်ဆင့် ကုန်ကျစရိတ် သက်သာမှုကို အမြင့်ဆုံးရရှိစေရန်။
 - **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[emr]]` | `[[cost-management]]` | `[[step-functions]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/emr/emr|emr]]` | `[[mm/02-services/ml-dev-cost/cost-management|cost-management]]` | `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -136,7 +136,7 @@ graph LR
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[emr]]` — Amazon EMR Overview Hub
-- `[[emr-cluster-architecture]]` — Master, Core & Task Nodes
-- `[[cost-management]]` — AWS Cloud Financial Management
-- `[[step-functions]]` — Orchestrating Transient EMR Pipelines
+- `[[mm/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR Overview Hub
+- `[[mm/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]` — Master, Core & Task Nodes
+- `[[mm/02-services/ml-dev-cost/cost-management|cost-management]]` — AWS Cloud Financial Management
+- `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` — Orchestrating Transient EMR Pipelines

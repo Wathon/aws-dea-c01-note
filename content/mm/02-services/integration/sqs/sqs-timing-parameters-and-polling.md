@@ -21,7 +21,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sqs/sqs-timing-parameters-and-polling) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Duplicate processing မဖြစ်စေရန် visibility timeouts များကို configure ပြုလုပ်ခြင်း၊ long-running ETL job များအတွက် `ChangeMessageVisibility` ကို implement ပြုလုပ်ခြင်း၊ Long Polling ဖြင့် cost များကို လျှော့ချခြင်း နှင့် Delay Queues များကို configure ပြုလုပ်ခြင်း။
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[sqs]]` | `[[sqs-standard-vs-fifo-queues]]` | `[[sqs-dead-letter-queues-and-error-handling]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` | `[[mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]`
 
 ---
 
@@ -170,7 +170,7 @@ Downstream system များတွင် cooldown သို့မဟုတ် 
 ---
 
 ## 📌 Related Notes
-- `[[sqs]]` — SQS Master Hub
-- `[[sqs-standard-vs-fifo-queues]]` — Standard vs FIFO Queues
-- `[[sqs-dead-letter-queues-and-error-handling]]` — Poison Pills & DLQs များကို ကိုင်တွယ်ဖြေရှင်းခြင်း
-- `[[s3]]` — Extended Payloads များအတွက် S3 Object Storage
+- `[[mm/02-services/integration/sqs/sqs|sqs]]` — SQS Master Hub
+- `[[mm/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` — Standard vs FIFO Queues
+- `[[mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` — Poison Pills & DLQs များကို ကိုင်တွယ်ဖြေရှင်းခြင်း
+- `[[mm/02-services/storage/s3/s3|s3]]` — Extended Payloads များအတွက် S3 Object Storage

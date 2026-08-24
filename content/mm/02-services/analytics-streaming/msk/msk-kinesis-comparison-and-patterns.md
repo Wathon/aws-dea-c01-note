@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/msk/msk-kinesis-comparison-and-patterns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon MSK နှင့် Amazon Kinesis Data Streams တို့အကြား trade-offs များကို အကဲဖြတ်ခြင်း၊ MirrorMaker 2 ကို အသုံးပြု၍ Kafka-to-MSK migration များ ပြုလုပ်ခြင်း၊ နှင့် multi-service streaming architectures များကို ဒီဇိုင်းရေးဆွဲခြင်း။
 - **Slide Reference**: Pages 414–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]`
 
 ---
 

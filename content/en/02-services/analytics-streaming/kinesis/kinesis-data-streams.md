@@ -19,7 +19,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis-data-streams)
 - **Primary Use Case**: Ingesting massive data streams with custom partition keys, sub-second latency, multi-consumer replay, and flexible capacity scaling.
 - **Slide Reference**: Pages 414–435 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[kinesis-consumers-and-scaling]]` | `[[domain-1-ingestion-and-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling|kinesis-consumers-and-scaling]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]`
 
 ---
 
@@ -185,7 +185,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-consumers-and-scaling]]` — Standard vs. Enhanced Fan-Out & KCL
-- `[[kinesis-firehose]]` — Amazon Data Firehose Pipelines
-- `[[kinesis-security-and-monitoring]]` — KMS Encryption & CloudWatch Metrics
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling|kinesis-consumers-and-scaling]]` — Standard vs. Enhanced Fan-Out & KCL
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Amazon Data Firehose Pipelines
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring|kinesis-security-and-monitoring]]` — KMS Encryption & CloudWatch Metrics

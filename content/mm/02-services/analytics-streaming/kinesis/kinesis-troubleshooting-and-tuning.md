@@ -21,7 +21,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/kinesis/kinesis-troubleshooting-and-tuning) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Producer/consumer throttling များကို ရှာဖွေဖော်ထုတ်ခြင်း၊ consumer lag (`IteratorAgeMilliseconds`) ကို စုံစမ်းစစ်ဆေးခြင်း၊ KCL/DynamoDB lease performance ကို tune ပြုလုပ်ခြင်း နှင့် poison pill blocking ပြဿနာများကို ဖြေရှင်းခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 420–459
-- **Hub Links**: `[[mm/index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[kinesis-consumers-and-scaling]]` | `[[kinesis-security-and-monitoring]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling|kinesis-consumers-and-scaling]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring|kinesis-security-and-monitoring]]`
 
 ---
 
@@ -244,8 +244,8 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
-- `[[kinesis-consumers-and-scaling]]` — Standard vs. Enhanced Fan-Out & KCL
-- `[[kinesis-security-and-monitoring]]` — KMS SSE & CloudWatch Metrics
-- `[[dynamodb]]` — DynamoDB On-Demand & Lease Coordination
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling|kinesis-consumers-and-scaling]]` — Standard vs. Enhanced Fan-Out & KCL
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring|kinesis-security-and-monitoring]]` — KMS SSE & CloudWatch Metrics
+- `[[mm/02-services/database/dynamodb|dynamodb]]` — DynamoDB On-Demand & Lease Coordination

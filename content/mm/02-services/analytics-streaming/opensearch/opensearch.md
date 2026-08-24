@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Real-time application monitoring, operational log analytics, interactive full-text search, နှင့် AI/ML vector similarity search တို့အတွက် အသုံးပြုသော Managed distributed Lucene search engine ဖြစ်ပါသည်။
 - **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-2-data-store-management]]` | `[[kinesis-firehose]]` | `[[cloudwatch-and-eventbridge]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 
@@ -120,13 +120,13 @@ graph TD
 
 **AWS Certified Data Engineer - Associate (DEA-C01)** စာမေးပွဲအတွက် Amazon OpenSearch ကို ကျွမ်းကျင်စွာ နားလည်နိုင်ရန် အောက်ပါ modular notes များကို လေ့လာပါ-
 
-1. `[[opensearch-cluster-architecture]]` — **Cluster Manager Nodes, Data Nodes, Indices, Primary & Replica Shards, နှင့် Sizing Rules**
-2. `[[opensearch-storage-tiers-and-ism]]` — **Hot, UltraWarm, Cold, Frozen Storage & Index State Management (ISM) Policies**
-3. `[[opensearch-serverless]]` — **OpenSearch Serverless (AOSS), OCUs, Collection Types (Search, Time-Series, Vector) & Security Policies**
-4. `[[opensearch-ingestion-and-pipelines]]` — **OpenSearch Ingestion (OSIS), Data Prepper, Firehose Direct Delivery & DynamoDB Zero-ETL**
-5. `[[opensearch-security-and-monitoring]]` — **Fine-Grained Access Control (FGAC), Document/Field-Level Security, Cognito Dashboards, KMS & TLS**
-6. `[[opensearch-troubleshooting-and-tuning]]` — **Red/Yellow/Green Cluster Health, Disk Watermarks, JVM Memory Pressure, Circuit Breakers & Bulk Load Tuning**
-7. `[[opensearch-architecture-and-patterns]]` — **End-to-End Log Analytics, Vector Search / RAG, နှင့် OpenSearch vs. Athena vs. CloudWatch Insights Decision Matrix**
+1. `[[mm/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` — **Cluster Manager Nodes, Data Nodes, Indices, Primary & Replica Shards, နှင့် Sizing Rules**
+2. `[[mm/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` — **Hot, UltraWarm, Cold, Frozen Storage & Index State Management (ISM) Policies**
+3. `[[mm/02-services/analytics-streaming/opensearch/opensearch-serverless|opensearch-serverless]]` — **OpenSearch Serverless (AOSS), OCUs, Collection Types (Search, Time-Series, Vector) & Security Policies**
+4. `[[mm/02-services/analytics-streaming/opensearch/opensearch-ingestion-and-pipelines|opensearch-ingestion-and-pipelines]]` — **OpenSearch Ingestion (OSIS), Data Prepper, Firehose Direct Delivery & DynamoDB Zero-ETL**
+5. `[[mm/02-services/analytics-streaming/opensearch/opensearch-security-and-monitoring|opensearch-security-and-monitoring]]` — **Fine-Grained Access Control (FGAC), Document/Field-Level Security, Cognito Dashboards, KMS & TLS**
+6. `[[mm/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning|opensearch-troubleshooting-and-tuning]]` — **Red/Yellow/Green Cluster Health, Disk Watermarks, JVM Memory Pressure, Circuit Breakers & Bulk Load Tuning**
+7. `[[mm/02-services/analytics-streaming/opensearch/opensearch-architecture-and-patterns|opensearch-architecture-and-patterns]]` — **End-to-End Log Analytics, Vector Search / RAG, နှင့် OpenSearch vs. Athena vs. CloudWatch Insights Decision Matrix**
 
 ---
 
@@ -143,8 +143,8 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[opensearch-cluster-architecture]]` — Sharding, Node Sizing & Resilience
-- `[[opensearch-storage-tiers-and-ism]]` — UltraWarm & Index State Management
-- `[[opensearch-serverless]]` — Serverless Collections & OCUs
-- `[[kinesis-firehose]]` — Streaming Delivery to OpenSearch Destination
-- `[[cloudwatch-and-eventbridge]]` — CloudWatch Subscription Filters
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` — Sharding, Node Sizing & Resilience
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` — UltraWarm & Index State Management
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-serverless|opensearch-serverless]]` — Serverless Collections & OCUs
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Streaming Delivery to OpenSearch Destination
+- `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — CloudWatch Subscription Filters

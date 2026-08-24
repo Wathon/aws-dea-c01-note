@@ -16,7 +16,7 @@ date: 2026-08-15
 - **Category**: Fundamentals / Storage & Query Optimization
 - **Language / ဘာသာစကား**: [English Version](/en/03-concepts/data-formats-and-compression) | **မြန်မာဘာသာ (Burmese)**
 - **Slide Reference**: Pages 38–48 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[glue]]` | `[[redshift]]` | `[[emr]]` | `[[s3]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/analytics-streaming/emr/emr|emr]]` | `[[mm/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -123,8 +123,8 @@ graph LR
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
 
-- `[[big-data-fundamentals]]` — Big Data 5 V's နှင့် Data Lake Architecture
-- `[[data-modeling-and-partitioning]]` — S3 Partition Prefix များနှင့် Data Modeling
-- `[[athena]]` — Amazon Athena ဖြင့် Parquet ဒေတာများကို Query ပြုလုပ်ခြင်း
-- `[[glue]]` — AWS Glue ETL ဖြင့် ဖော်မတ်ပြောင်းလဲခြင်း (CSV $\rightarrow$ Parquet)
-- `[[msk]]` — Amazon MSK Avro Serialization နှင့် Schema Registry
+- `[[mm/03-concepts/big-data-fundamentals|big-data-fundamentals]]` — Big Data 5 V's နှင့် Data Lake Architecture
+- `[[mm/03-concepts/data-modeling-and-partitioning|data-modeling-and-partitioning]]` — S3 Partition Prefix များနှင့် Data Modeling
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena ဖြင့် Parquet ဒေတာများကို Query ပြုလုပ်ခြင်း
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue ETL ဖြင့် ဖော်မတ်ပြောင်းလဲခြင်း (CSV $\rightarrow$ Parquet)
+- `[[mm/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Avro Serialization နှင့် Schema Registry

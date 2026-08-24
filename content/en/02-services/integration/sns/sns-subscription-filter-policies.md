@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sns/sns-subscription-filter-policies)
 - **Primary Use Case**: Routing messages to specific subscribers based on Message Attributes or Payload contents, eliminating unneeded downstream Lambda invocations and SQS processing costs.
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[sns]]` | `[[sns-standard-vs-fifo-topics]]` | `[[sqs]]` | `[[lambda]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/sns/sns|sns]]` | `[[en/02-services/integration/sns/sns-standard-vs-fifo-topics|sns-standard-vs-fifo-topics]]` | `[[en/02-services/integration/sqs/sqs|sqs]]` | `[[en/02-services/compute-containers/lambda|lambda]]`
 
 ---
 
@@ -158,7 +158,7 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[sns]]` — SNS Master Hub
-- `[[sns-standard-vs-fifo-topics]]` — Standard vs FIFO Topics
-- `[[sqs]]` — Amazon SQS Queue Buffering
-- `[[lambda]]` — AWS Lambda Ingestion Consumers
+- `[[en/02-services/integration/sns/sns|sns]]` — SNS Master Hub
+- `[[en/02-services/integration/sns/sns-standard-vs-fifo-topics|sns-standard-vs-fifo-topics]]` — Standard vs FIFO Topics
+- `[[en/02-services/integration/sqs/sqs|sqs]]` — Amazon SQS Queue Buffering
+- `[[en/02-services/compute-containers/lambda|lambda]]` — AWS Lambda Ingestion Consumers

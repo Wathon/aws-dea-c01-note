@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk-kinesis-comparison-and-patterns)
 - **Primary Use Case**: Evaluating trade-offs between Amazon MSK and Amazon Kinesis Data Streams, executing Kafka-to-MSK migrations using MirrorMaker 2, and designing multi-service streaming architectures.
 - **Slide Reference**: Pages 414–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[msk]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[kinesis-firehose]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/msk/msk|msk]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]`
 
 ---
 
@@ -152,10 +152,10 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[msk]]` — Amazon MSK Master Hub
-- `[[msk-cluster-architecture]]` — MSK Broker Architecture & Tiered Storage
-- `[[msk-connect]]` — Serverless S3 Sink Connectors
-- `[[kinesis]]` — Amazon Kinesis Ecosystem Hub
-- `[[kinesis-data-streams]]` — KDS Ingestion & Shards
-- `[[kinesis-firehose]]` — Serverless Micro-Batch Delivery
-- `[[kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
+- `[[en/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Master Hub
+- `[[en/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — MSK Broker Architecture & Tiered Storage
+- `[[en/02-services/analytics-streaming/msk/msk-connect|msk-connect]]` — Serverless S3 Sink Connectors
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Amazon Kinesis Ecosystem Hub
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shards
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Serverless Micro-Batch Delivery
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-apache-flink|kinesis-apache-flink]]` — Real-Time Stateful Stream Processing

@@ -16,7 +16,7 @@ date: 2026-07-28
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sqs-and-sns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Asynchronous message queuing, pub/sub notification fanout, microservices များကို decouple ပြုလုပ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 499–525
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]
 
 ---
 
@@ -62,7 +62,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- [[sqs]] — Amazon SQS Dedicated Modular Deep-Dive Suite
-- [[sns]] — Amazon SNS Dedicated Modular Deep-Dive Suite
-- [[lambda]] — SQS/SNS အတွက် Lambda consumers များ
-- [[step-functions]] — Workflow integration
+- [[mm/02-services/integration/sqs/sqs|sqs]] — Amazon SQS Dedicated Modular Deep-Dive Suite
+- [[mm/02-services/integration/sns/sns|sns]] — Amazon SNS Dedicated Modular Deep-Dive Suite
+- [[mm/02-services/compute-containers/lambda|lambda]] — SQS/SNS အတွက် Lambda consumers များ
+- [[mm/02-services/integration/step-functions/step-functions|step-functions]] — Workflow integration

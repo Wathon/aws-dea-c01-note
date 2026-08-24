@@ -19,7 +19,7 @@ date: 2026-08-23
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/security-governance/iam)
 - **Primary Use Case**: Least-privilege identity access management, pipeline execution roles (AWS Glue, Lambda, EMR, Redshift), cross-account data lake access, and IAM database authentication.
 - **Slide Reference**: Pages 542–559 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[lake-formation]]` | `[[kms-and-secrets]]` | `[[glue]]` | `[[redshift]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[en/02-services/security-governance/lake-formation|lake-formation]]` | `[[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/database/redshift|redshift]]`
 
 ---
 
@@ -252,8 +252,8 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[lake-formation]]` — Fine-Grained Lake Formation Governance vs IAM
-- `[[kms-and-secrets]]` — KMS Key Policies & Secrets Manager
-- `[[glue]]` — AWS Glue Execution Roles
-- `[[redshift]]` — Amazon Redshift Spectrum IAM Role & Query Federation
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[en/02-services/security-governance/lake-formation|lake-formation]]` — Fine-Grained Lake Formation Governance vs IAM
+- `[[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]]` — KMS Key Policies & Secrets Manager
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Execution Roles
+- `[[en/02-services/database/redshift|redshift]]` — Amazon Redshift Spectrum IAM Role & Query Federation
+- `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

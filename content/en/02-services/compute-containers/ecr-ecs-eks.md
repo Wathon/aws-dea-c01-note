@@ -21,7 +21,7 @@ date: 2026-08-14
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/compute-containers/ecr-ecs-eks)
 - **Primary Use Case**: Storing container images in Amazon ECR, running containerized microservices & data processing on Amazon ECS (EC2/Fargate), and running distributed big data engines (notably **Amazon EMR on EKS**) on managed Kubernetes.
 - **Slide Reference**: Pages 313–330 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[batch]] | [[lambda]] | [[emr]] | [[efs-and-fsx]] | [[s3]] | [[glue]] | [[step-functions]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/02-services/compute-containers/batch|batch]] | [[en/02-services/compute-containers/lambda|lambda]] | [[en/02-services/analytics-streaming/emr/emr|emr]] | [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/analytics-streaming/glue/glue|glue]] | [[en/02-services/integration/step-functions/step-functions|step-functions]]
 
 ---
 
@@ -30,7 +30,7 @@ date: 2026-08-14
 Containers package application code, runtime environments, system libraries, and configurations into standardized, isolated, and immutable units that run reliably across development, testing, and cloud production environments.
 
 In modern AWS data engineering architectures:
-1. **Amazon Elastic Container Registry (Amazon ECR)**: Secure, scalable private Docker and OCI-compliant registry storing custom ETL container images, machine learning model scoring containers, and [[batch]] job definitions.
+1. **Amazon Elastic Container Registry (Amazon ECR)**: Secure, scalable private Docker and OCI-compliant registry storing custom ETL container images, machine learning model scoring containers, and [[en/02-services/compute-containers/batch|batch]] job definitions.
 2. **Amazon Elastic Container Service (Amazon ECS)**: AWS-native, highly opinionated container orchestration platform supporting both traditional **Amazon EC2 Launch Types** and serverless **AWS Fargate** compute.
 3. **Amazon Elastic Kubernetes Service (Amazon EKS)**: Managed Kubernetes platform enabling enterprises to run distributed big data analytics engines—specifically **Amazon EMR on EKS** (Apache Spark)—alongside operational microservices on a single shared compute cluster.
 4. **AWS Fargate**: Serverless compute engine for both Amazon ECS and Amazon EKS that eliminates the need to provision, configure, patch, or scale virtual machine clusters.
@@ -540,7 +540,7 @@ graph TB
 2. **Dynamic Pod Lifecycle**: EMR dynamically provisions Spark driver and executor pods when a job starts and terminates them immediately upon job completion.
 3. **Up to 3x Faster**: Utilizes the performance-optimized **EMR runtime for Apache Spark** (up to 3x faster and 68% lower cost than open-source Spark on Kubernetes).
 4. **Per-Job Isolation**: Different teams can run different versions of Spark and custom Docker container images with distinct IAM execution roles on the same cluster.
-5. **Native Integration**: Seamlessly connects with [[glue]] Data Catalog and [[lake-formation]] for data governance.
+5. **Native Integration**: Seamlessly connects with [[en/02-services/analytics-streaming/glue/glue|glue]] Data Catalog and [[en/02-services/security-governance/lake-formation|lake-formation]] for data governance.
 
 ---
 
@@ -669,12 +669,12 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[batch]] — AWS Batch for managed containerized batch compute and Spot optimization
-- [[lambda]] — AWS Lambda for serverless micro-batch processing and container image packaging
-- [[emr]] — Amazon EMR distributed analytics and EMR on EKS architecture
-- [[efs-and-fsx]] — Amazon EFS shared storage integration with containers
-- [[s3]] — Amazon S3 Data Lake target for containerized ETL pipelines
-- [[glue]] — AWS Glue serverless Spark ETL and Data Catalog integration
-- [[step-functions]] — Orchestrating ECS/EKS containerized pipelines
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/02-services/compute-containers/batch|batch]] — AWS Batch for managed containerized batch compute and Spot optimization
+- [[en/02-services/compute-containers/lambda|lambda]] — AWS Lambda for serverless micro-batch processing and container image packaging
+- [[en/02-services/analytics-streaming/emr/emr|emr]] — Amazon EMR distributed analytics and EMR on EKS architecture
+- [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] — Amazon EFS shared storage integration with containers
+- [[en/02-services/storage/s3/s3|s3]] — Amazon S3 Data Lake target for containerized ETL pipelines
+- [[en/02-services/analytics-streaming/glue/glue|glue]] — AWS Glue serverless Spark ETL and Data Catalog integration
+- [[en/02-services/integration/step-functions/step-functions|step-functions]] — Orchestrating ECS/EKS containerized pipelines
+- [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

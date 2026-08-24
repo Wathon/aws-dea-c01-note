@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-spark)
 - **Primary Use Case**: Instant, interactive PySpark data exploration and serverless Jupyter notebooks on S3 without provisioning Spark clusters.
 - **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[athena]]` | `[[glue-etl-jobs]]` | `[[emr]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[en/02-services/analytics-streaming/emr/emr|emr]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -141,7 +141,7 @@ One of the most frequently tested concepts on the DEA-C01 exam is knowing which 
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Amazon Athena Overview & Architecture
-- `[[glue-etl-jobs]]` — Production Serverless Spark ETL
-- `[[emr]]` — Amazon EMR for Massive-Scale Spark Clusters
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Overview & Architecture
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Production Serverless Spark ETL
+- `[[en/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR for Massive-Scale Spark Clusters
 - `[[domain-3-data-processing]]` — Distributed Processing Patterns

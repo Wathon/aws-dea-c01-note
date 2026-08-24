@@ -19,7 +19,7 @@ date: 2026-08-23
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/networking-monitoring/vpc-and-networking)
 - **Primary Use Case**: Isolating data resources (Amazon Redshift, RDS, EMR, Lambda, Glue) in private subnets, establishing private connectivity via VPC Endpoints & AWS PrivateLink, and enforcing S3 Data Perimeters.
 - **Slide Reference**: Pages 590–617 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[en/02-services/database/redshift|redshift]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]`
 
 ---
 
@@ -192,8 +192,8 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[iam]]` — IAM Policy Evaluation & Condition Keys (`aws:sourceVpce`)
-- `[[s3]]` — S3 Gateway Endpoints & Bucket Policies
-- `[[redshift]]` — Redshift VPC Deployment & Enhanced VPC Routing
-- `[[kms-and-secrets]]` — PrivateLink connectivity to KMS & Secrets Manager
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[en/02-services/security-governance/iam|iam]]` — IAM Policy Evaluation & Condition Keys (`aws:sourceVpce`)
+- `[[en/02-services/storage/s3/s3|s3]]` — S3 Gateway Endpoints & Bucket Policies
+- `[[en/02-services/database/redshift|redshift]]` — Redshift VPC Deployment & Enhanced VPC Routing
+- `[[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]]` — PrivateLink connectivity to KMS & Secrets Manager
+- `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

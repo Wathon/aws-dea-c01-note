@@ -16,7 +16,7 @@ date: 2026-08-15
 - **Category**: Fundamentals / Data Architecture & Storage Optimization
 - **Language / ဘာသာစကား**: [English Version](/en/03-concepts/data-modeling-and-partitioning) | **မြန်မာဘာသာ (Burmese)**
 - **Slide Reference**: Pages 49–75 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[redshift]]` | `[[glue]]` | `[[s3]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -137,7 +137,7 @@ graph LR
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
 
-- `[[big-data-fundamentals]]` — Big Data 5 V's နှင့် Data Lake Architecture
-- `[[data-formats-and-compression]]` — Parquet file formatting inside S3 partitions
-- `[[athena]]` — Amazon Athena Partition Projection ဖွဲ့စည်းပုံ
-- `[[redshift]]` — Redshift Distribution Keys နှင့် Sort Keys
+- `[[mm/03-concepts/big-data-fundamentals|big-data-fundamentals]]` — Big Data 5 V's နှင့် Data Lake Architecture
+- `[[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — Parquet file formatting inside S3 partitions
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Partition Projection ဖွဲ့စည်းပုံ
+- `[[mm/02-services/database/redshift|redshift]]` — Redshift Distribution Keys နှင့် Sort Keys

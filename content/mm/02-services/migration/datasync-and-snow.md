@@ -21,22 +21,22 @@ date: 2026-08-13
 
 - **Category**: Migration & Transfer (Online High-Speed Network Transfer & Physical Offline Appliances)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/migration/datasync-and-snow) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: [[s3]], [[efs-and-fsx]] များအတွင်းသို့ Large-scale online file နှင့် object synchronization ပြုလုပ်ရန်နှင့် petabyte/exabyte-scale offline physical data များ migration ပြုလုပ်ရန်။
+- **Primary Use Case**: [[mm/02-services/storage/s3/s3|s3]], [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] များအတွင်းသို့ Large-scale online file နှင့် object synchronization ပြုလုပ်ရန်နှင့် petabyte/exabyte-scale offline physical data များ migration ပြုလုပ်ရန်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 276–285
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[s3]] | [[efs-and-fsx]] | [[dms-and-sct]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/migration/dms-and-sct|dms-and-sct]]
 
 ---
 
 ## 1. High-Level Summary
 
-AWS အတွင်းသို့ large datasets များပြောင်းရွှေ့ရာတွင် ရရှိနိုင်သော network bandwidth, dataset size, security လိုအပ်ချက်များ နှင့် အချိန်ကန့်သတ်ချက်များအပေါ်မူတည်၍ **network-based online transfer** ([[datasync-and-snow]] — AWS DataSync) နှင့် **physical appliance-based offline transfer** (AWS Snow Family) တို့အကြား ရွေးချယ်ရမည်ဖြစ်သည်။
+AWS အတွင်းသို့ large datasets များပြောင်းရွှေ့ရာတွင် ရရှိနိုင်သော network bandwidth, dataset size, security လိုအပ်ချက်များ နှင့် အချိန်ကန့်သတ်ချက်များအပေါ်မူတည်၍ **network-based online transfer** ([[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] — AWS DataSync) နှင့် **physical appliance-based offline transfer** (AWS Snow Family) တို့အကြား ရွေးချယ်ရမည်ဖြစ်သည်။
 
 **AWS Certified Data Engineer – Associate (DEA-C01)** exam အတွက် အောက်ပါအချက်များကို သိရှိထားရပါမည် -
-1. **Online Transfer (AWS DataSync)**: NFS, SMB, HDFS, နှင့် Object storage များမှ [[s3]], [[efs-and-fsx]] (EFS, FSx for Lustre/ONTAP/Windows/OpenZFS) အတွင်းသို့ Agent-based, accelerated network data transfer ပြုလုပ်ခြင်း။
+1. **Online Transfer (AWS DataSync)**: NFS, SMB, HDFS, နှင့် Object storage များမှ [[mm/02-services/storage/s3/s3|s3]], [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] (EFS, FSx for Lustre/ONTAP/Windows/OpenZFS) အတွင်းသို့ Agent-based, accelerated network data transfer ပြုလုပ်ခြင်း။
 2. **Offline Physical Transfer (AWS Snow Family)**: **AWS Snowcone** (8–14 TB), **AWS Snowball Edge** (80–210 TB Storage / Compute Optimized), နှင့် **AWS Snowmobile** (ကားတစ်စီးလျှင် 100 PB အထိ)။
 3. **The 1–2 Week Network Bandwidth Rule**: DataSync နှင့် Snowball Edge အကြား ရွေးချယ်ရန် transfer time တွက်ချက်ခြင်းဆိုင်ရာ mathematical formulas များ။
 4. **Service Differentiation**: **AWS DataSync** vs. **AWS Snowball** vs. **AWS Storage Gateway** vs. **AWS Transfer Family** vs. **S3 Transfer Acceleration** တို့အကြား ကွဲပြားချက်များကို ခွဲခြားသိမြင်ခြင်း။
-5. **Hybrid Migration Workflows**: Initial mass data transfer အတွက် Snowball Edge ကိုအသုံးပြုပြီး ongoing delta catch-up အတွက် AWS DataSync သို့မဟုတ် [[dms-and-sct]] ကိုအသုံးပြုခြင်း။
+5. **Hybrid Migration Workflows**: Initial mass data transfer အတွက် Snowball Edge ကိုအသုံးပြုပြီး ongoing delta catch-up အတွက် AWS DataSync သို့မဟုတ် [[mm/02-services/migration/dms-and-sct|dms-and-sct]] ကိုအသုံးပြုခြင်း။
 
 ```mermaid
 graph TB
@@ -178,7 +178,7 @@ graph TD
 | **Target Storage** | Amazon S3 | Amazon S3 | Amazon S3 | Amazon S3 |
 
 ### 2. Device Security & Management (AWS OpsHub)
-- **Encryption**: Disk သို့ မရေးသွင်းမီ data အားလုံးကို [[kms-and-secrets]] (AWS KMS) အသုံးပြုပြီး 256-bit keys ဖြင့် အလိုအလျောက် encrypt လုပ်ပေးသည်။
+- **Encryption**: Disk သို့ မရေးသွင်းမီ data အားလုံးကို [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] (AWS KMS) အသုံးပြုပြီး 256-bit keys ဖြင့် အလိုအလျောက် encrypt လုပ်ပေးသည်။
 - **Hardware Security**: ဖောက်ထွင်းပါက အလိုအလျောက် ခြေရာဖျောက်ပေးနိုင်သော (cryptographic erasure) နှင့် tamper-evident seals များပါရှိသည့် onboard **Trusted Platform Module (TPM)** chip ကိုအသုံးပြုထားသည်။
 - **AWS OpsHub**: Snow devices များကို unlock လုပ်ခြင်း၊ network settings များကို configure လုပ်ခြင်း၊ metrics များကို ကြည့်ရှုခြင်း၊ EC2 instances များ launch လုပ်ခြင်း နှင့် local NFS storage ကို manage လုပ်ခြင်းတို့အတွက် အသုံးပြုသော သီးသန့် desktop GUI application ဖြစ်သည်။
 
@@ -186,7 +186,7 @@ graph TD
 
 ## 4. The 1–2 Week Decision Rule & Transfer Time Formulas
 
-Online network transfer ([[datasync-and-snow]] / Direct Connect) နှင့် offline physical transfer (Snowball Edge) အကြား ရွေးချယ်ရာတွင် အောက်ပါ transfer time formula ကိုအသုံးပြုနိုင်သည် -
+Online network transfer ([[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] / Direct Connect) နှင့် offline physical transfer (Snowball Edge) အကြား ရွေးချယ်ရာတွင် အောက်ပါ transfer time formula ကိုအသုံးပြုနိုင်သည် -
 
 $$\text{Transfer Time (Seconds)} = \frac{\text{Data Size (Bits)}}{\text{Available Bandwidth (Bits/Second)} \times \text{Network Efficiency Factor}}$$
 
@@ -315,10 +315,10 @@ graph TD
 
 ## 📌 Related Notes
 
-- [[dms-and-sct]] — Database migrations နှင့် Snowball hybrid loads များအတွက် AWS DMS & SCT
-- [[s3]] — Snowball နှင့် DataSync ingestion အတွက် Amazon S3 Data Lake target
-- [[efs-and-fsx]] — Amazon EFS နှင့် AWS FSx target shared file systems
-- [[s3-performance]] — S3 Multi-part uploads နှင့် S3 Transfer Acceleration
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/02-services/migration/dms-and-sct|dms-and-sct]] — Database migrations နှင့် Snowball hybrid loads များအတွက် AWS DMS & SCT
+- [[mm/02-services/storage/s3/s3|s3]] — Snowball နှင့် DataSync ingestion အတွက် Amazon S3 Data Lake target
+- [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] — Amazon EFS နှင့် AWS FSx target shared file systems
+- [[mm/02-services/storage/s3/s3-performance|s3-performance]] — S3 Multi-part uploads နှင့် S3 Transfer Acceleration
+- [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

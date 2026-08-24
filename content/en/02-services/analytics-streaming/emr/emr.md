@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/emr/emr)
 - **Primary Use Case**: Petabyte-scale distributed data processing, SQL analytics, real-time streaming, and machine learning using open-source big data frameworks (Apache Spark, Hadoop, Presto/Trino, Hive, Flink, HBase, Hudi, Iceberg).
 - **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]` | `[[s3]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]` | `[[en/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -86,12 +86,12 @@ To master Amazon EMR for the AWS Certified Data Engineer exam, explore the compr
 
 | Sub-Module Note | Primary Technical Focus | Key Exam Concepts |
 | :--- | :--- | :--- |
-| **[[emr-cluster-architecture]]** | Master, Core, and Task node topologies; Instance Groups vs. Instance Fleets; HDFS vs. EMRFS. | Spot Instances on Task nodes; data loss prevention on Core nodes; EMRFS S3 decoupling. |
-| **[[emr-serverless]]** | Serverless big data compute for Spark and Hive. | Pre-initialized capacity; auto-scaling worker pools; zero EC2 cluster maintenance. |
-| **[[emr-on-eks]]** | Running Spark applications inside Amazon EKS Kubernetes pods. | Virtual clusters; multi-tenant infrastructure consolidation; IRSA role mapping. |
-| **[[emr-performance-optimization]]** | EMR Runtime for Spark (up to 3x speedup), S3DistCp, and memory/executor tuning. | Small file aggregation with `s3-dist-cp --groupBy`; Spark dynamic allocation and shuffle tuning. |
-| **[[emr-security-and-governance]]** | EMR Security Configurations, Kerberos, Lake Formation, and VPC private networking. | In-transit and at-rest encryption; fine-grained access control; Apache Ranger; private subnets. |
-| **[[emr-lifecycle-and-cost]]** | Bootstrap actions, Steps execution, Transient vs. Persistent clusters, and Auto-Scaling. | Custom package installation; transient batch ETL termination; Managed Auto Scaling policies. |
+| **[[en/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]** | Master, Core, and Task node topologies; Instance Groups vs. Instance Fleets; HDFS vs. EMRFS. | Spot Instances on Task nodes; data loss prevention on Core nodes; EMRFS S3 decoupling. |
+| **[[en/02-services/analytics-streaming/emr/emr-serverless|emr-serverless]]** | Serverless big data compute for Spark and Hive. | Pre-initialized capacity; auto-scaling worker pools; zero EC2 cluster maintenance. |
+| **[[en/02-services/analytics-streaming/emr/emr-on-eks|emr-on-eks]]** | Running Spark applications inside Amazon EKS Kubernetes pods. | Virtual clusters; multi-tenant infrastructure consolidation; IRSA role mapping. |
+| **[[en/02-services/analytics-streaming/emr/emr-performance-optimization|emr-performance-optimization]]** | EMR Runtime for Spark (up to 3x speedup), S3DistCp, and memory/executor tuning. | Small file aggregation with `s3-dist-cp --groupBy`; Spark dynamic allocation and shuffle tuning. |
+| **[[en/02-services/analytics-streaming/emr/emr-security-and-governance|emr-security-and-governance]]** | EMR Security Configurations, Kerberos, Lake Formation, and VPC private networking. | In-transit and at-rest encryption; fine-grained access control; Apache Ranger; private subnets. |
+| **[[en/02-services/analytics-streaming/emr/emr-lifecycle-and-cost|emr-lifecycle-and-cost]]** | Bootstrap actions, Steps execution, Transient vs. Persistent clusters, and Auto-Scaling. | Custom package installation; transient batch ETL termination; Managed Auto Scaling policies. |
 
 ---
 
@@ -153,11 +153,11 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[emr-cluster-architecture]]` — Node Types, Instance Fleets & Storage
-- `[[emr-serverless]]` — Serverless Spark & Hive Applications
-- `[[emr-on-eks]]` — Containerized Distributed Processing on Kubernetes
-- `[[emr-performance-optimization]]` — Spark Optimization, S3DistCp & Performance
-- `[[emr-security-and-governance]]` — Security Configurations, Kerberos & Lake Formation
-- `[[emr-lifecycle-and-cost]]` — Bootstrap Actions, Steps & Cost Governance
-- `[[glue]]` — AWS Glue Serverless Data Integration
-- `[[athena]]` — Serverless Interactive SQL on S3
+- `[[en/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]` — Node Types, Instance Fleets & Storage
+- `[[en/02-services/analytics-streaming/emr/emr-serverless|emr-serverless]]` — Serverless Spark & Hive Applications
+- `[[en/02-services/analytics-streaming/emr/emr-on-eks|emr-on-eks]]` — Containerized Distributed Processing on Kubernetes
+- `[[en/02-services/analytics-streaming/emr/emr-performance-optimization|emr-performance-optimization]]` — Spark Optimization, S3DistCp & Performance
+- `[[en/02-services/analytics-streaming/emr/emr-security-and-governance|emr-security-and-governance]]` — Security Configurations, Kerberos & Lake Formation
+- `[[en/02-services/analytics-streaming/emr/emr-lifecycle-and-cost|emr-lifecycle-and-cost]]` — Bootstrap Actions, Steps & Cost Governance
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Serverless Data Integration
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Serverless Interactive SQL on S3

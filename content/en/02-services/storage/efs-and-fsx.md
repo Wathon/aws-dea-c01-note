@@ -16,9 +16,9 @@ date: 2026-08-09
 
 - **Category**: Storage (Shared Managed File Systems)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/efs-and-fsx)
-- **Primary Use Case**: Shared POSIX file storage for distributed Linux compute clusters, container persistent volumes ([[ecr-ecs-eks]]), serverless functions ([[lambda]]), and ultra-high-throughput HPC / ML data staging from [[s3]].
+- **Primary Use Case**: Shared POSIX file storage for distributed Linux compute clusters, container persistent volumes ([[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]]), serverless functions ([[en/02-services/compute-containers/lambda|lambda]]), and ultra-high-throughput HPC / ML data staging from [[en/02-services/storage/s3/s3|s3]].
 - **Slide Reference**: Pages 139–154 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[s3]] | [[ebs-and-instance-store]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]]
 
 ---
 
@@ -279,7 +279,7 @@ graph TD
 ```
 
 ### 1. Encryption
-- **Encryption at Rest**: Enabled during creation using [[kms-and-secrets]] (AWS KMS CMK or AWS-managed key `aws/elasticfilesystem`). All metadata and file contents are encrypted transparently with zero performance impact.
+- **Encryption at Rest**: Enabled during creation using [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] (AWS KMS CMK or AWS-managed key `aws/elasticfilesystem`). All metadata and file contents are encrypted transparently with zero performance impact.
 - **Encryption in Transit**: Uses industry-standard **TLS 1.2** managed automatically when mounting via `amazon-efs-utils` (using the `-o tls` mount flag).
 
 ### 2. IAM Policies for NFS Clients
@@ -512,13 +512,13 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[s3]] — Persistent object storage and Data Lake architecture
-- [[ebs-and-instance-store]] — Amazon EBS volume types and EC2 Instance Store
-- [[ecr-ecs-eks]] — Containerized compute and persistent volume mounting
-- [[lambda]] — Serverless data processing and EFS integration
-- [[emr]] — Big data processing clusters and storage options
-- [[datasync-and-snow]] — AWS DataSync for NFS/EFS automated migrations
-- [[kms-and-secrets]] — AWS KMS keys and file system encryption
-- [[service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)
-- [[ebs-vs-efs-vs-instance-store]] — Deep Dive: Amazon EFS vs. EBS vs. EC2 Instance Store
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[en/02-services/storage/s3/s3|s3]] — Persistent object storage and Data Lake architecture
+- [[en/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] — Amazon EBS volume types and EC2 Instance Store
+- [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] — Containerized compute and persistent volume mounting
+- [[en/02-services/compute-containers/lambda|lambda]] — Serverless data processing and EFS integration
+- [[en/02-services/analytics-streaming/emr/emr|emr]] — Big data processing clusters and storage options
+- [[en/02-services/migration/datasync-and-snow|datasync-and-snow]] — AWS DataSync for NFS/EFS automated migrations
+- [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — AWS KMS keys and file system encryption
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)
+- [[en/02-services/storage/ebs-vs-efs-vs-instance-store|ebs-vs-efs-vs-instance-store]] — Deep Dive: Amazon EFS vs. EBS vs. EC2 Instance Store
+- [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

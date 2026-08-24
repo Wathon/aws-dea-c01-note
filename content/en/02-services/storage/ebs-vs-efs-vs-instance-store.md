@@ -18,7 +18,7 @@ date: 2026-08-10
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/ebs-vs-efs-vs-instance-store)
 - **Primary Use Case**: Definitive decision guide and architectural trade-off comparison between **Amazon EFS** (Shared Multi-AZ File), **Amazon EBS** (Persistent Network Block), and **EC2 Instance Store** (Ultra-High IOPS Ephemeral Block).
 - **Slide Reference**: Pages 139–154 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[service-comparisons]] | [[ebs-and-instance-store]] | [[efs-and-fsx]] | [[s3]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/04-exam-tips/service-comparisons|service-comparisons]] | [[en/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] | [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[en/02-services/storage/s3/s3|s3]]
 
 ---
 
@@ -34,7 +34,7 @@ AWS provides three primary compute-attached storage solutions, each engineered f
    - **Data is ephemeral**: Permanently lost if the instance is **stopped**, **terminated**, or encounters a **host hardware failure** (survives OS reboots only).
 2. **Amazon EBS (Persistent Network Block)**:
    - Network-attached virtual block devices communicating with EC2 over dedicated network bandwidth.
-   - **Persistent & independent**: Data survives instance stops, terminations, and host migrations; backed by point-in-time incremental snapshots to [[s3]].
+   - **Persistent & independent**: Data survives instance stops, terminations, and host migrations; backed by point-in-time incremental snapshots to [[en/02-services/storage/s3/s3|s3]].
    - **Single-AZ boundary**: Bound to a single Availability Zone (Multi-Attach supported on `io1`/`io2` up to 16 Nitro instances strictly in the *same* AZ).
 3. **Amazon EFS (Elastic Shared Multi-AZ POSIX File)**:
    - Fully managed, serverless, elastic POSIX-compliant shared file system accessible concurrently over **NFSv4** by thousands of compute instances.
@@ -265,8 +265,8 @@ graph TD
   - **EFS Access Points**: Enforces POSIX user identities (`UID`/`GID`) and jails clients to specific root directory paths (mandatory for Lambda integration).
   - **Automated Lifecycle Tiering**: Transparently moves inactive files from **Standard** to **Infrequent Access (IA)** (92% savings) and **Archive** tiers. **EFS Intelligent-Tiering** auto-restores accessed files back to Standard.
 - **Top Data Engineering Use Cases**:
-  1. **Serverless ML Model Inference & ETL**: Mounting heavy model weights (> 10 GB) into [[lambda]] functions via EFS Access Points.
-  2. **Multi-Tenant Container Storage**: Shared persistent storage for data science notebooks (JupyterHub) on [[ecr-ecs-eks]] (ECS/EKS).
+  1. **Serverless ML Model Inference & ETL**: Mounting heavy model weights (> 10 GB) into [[en/02-services/compute-containers/lambda|lambda]] functions via EFS Access Points.
+  2. **Multi-Tenant Container Storage**: Shared persistent storage for data science notebooks (JupyterHub) on [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] (ECS/EKS).
   3. **Shared Application & Enterprise Directories**: Multi-AZ web applications, ETL script repositories, and cross-AZ log aggregation.
 
 ---
@@ -364,11 +364,11 @@ graph TB
 
 ## 📌 Related Notes
 
-- [[ebs-and-instance-store]] — Dedicated deep dive on EBS volume types (`gp3`, `io2`, `st1`, `sc1`), snapshots, and Instance Store
-- [[efs-and-fsx]] — Dedicated deep dive on Amazon EFS (Access Points, Tiering) and AWS FSx (Lustre, ONTAP, Windows)
-- [[s3]] — Persistent object storage and Central Data Lake architecture
-- [[ecr-ecs-eks]] — Container persistent volume claims and CSI drivers
-- [[lambda]] — Serverless data processing and EFS integration
-- [[emr]] — Big data processing clusters, EMRFS, and Spark shuffle storage
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[en/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] — Dedicated deep dive on EBS volume types (`gp3`, `io2`, `st1`, `sc1`), snapshots, and Instance Store
+- [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] — Dedicated deep dive on Amazon EFS (Access Points, Tiering) and AWS FSx (Lustre, ONTAP, Windows)
+- [[en/02-services/storage/s3/s3|s3]] — Persistent object storage and Central Data Lake architecture
+- [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] — Container persistent volume claims and CSI drivers
+- [[en/02-services/compute-containers/lambda|lambda]] — Serverless data processing and EFS integration
+- [[en/02-services/analytics-streaming/emr/emr|emr]] — Big data processing clusters, EMRFS, and Spark shuffle storage
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

@@ -22,7 +22,7 @@ date: 2026-08-24
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/macie) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon S3 data lakes များအနှံ့တွင် ထိခိုက်လွယ်သော Personally Identifiable Information (PII)၊ ဘဏ္ဍာရေးမှတ်တမ်းများ (financial records)၊ credentials များနှင့် custom proprietary data များကို machine learning ဖြင့် အလိုအလျောက် စဉ်ဆက်မပြတ် ရှာဖွေဖော်ထုတ်ခြင်း (continuous discovery)၊ အမျိုးအစားခွဲခြားခြင်း (classification) နှင့် ကာကွယ်စောင့်ရှောက်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 635–655
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[s3]]` | `[[cloudwatch-and-eventbridge]]` | `[[macie-and-cloudtrail]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` | `[[mm/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]`
 
 ---
 
@@ -251,8 +251,8 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes
-- `[[macie-and-cloudtrail]]` — AWS CloudTrail Audit Logging & PII Governance
-- `[[data-masking-anonymization-and-salting]]` — In-Flight Masking & Salting
-- `[[s3]]` — Amazon S3 Data Lake Security & Encryption
-- `[[cloudwatch-and-eventbridge]]` — Amazon EventBridge Security Automation
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[mm/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]` — AWS CloudTrail Audit Logging & PII Governance
+- `[[mm/02-services/security-governance/data-masking-anonymization-and-salting|data-masking-anonymization-and-salting]]` — In-Flight Masking & Salting
+- `[[mm/02-services/storage/s3/s3|s3]]` — Amazon S3 Data Lake Security & Encryption
+- `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — Amazon EventBridge Security Automation
+- `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

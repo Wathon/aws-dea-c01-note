@@ -18,9 +18,9 @@ date: 2026-08-11
 
 - **Category**: Database (Relational OLTP & Cloud-Native Storage)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/database/rds-and-aurora) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: Managed relational databases for transactional operational workloads, ACID transactions, Change Data Capture (CDC) ingestion, zero-ETL integration with [[redshift]], and direct S3 Parquet export. (transactional operational workload များ၊ ACID transaction များ၊ Change Data Capture (CDC) ingestion၊ [[redshift]] နှင့် zero-ETL integration လုပ်ခြင်းနှင့် S3 Parquet သို့ တိုက်ရိုက် export လုပ်ခြင်းတို့အတွက် Managed relational database များ)
+- **Primary Use Case**: Managed relational databases for transactional operational workloads, ACID transactions, Change Data Capture (CDC) ingestion, zero-ETL integration with [[mm/02-services/database/redshift|redshift]], and direct S3 Parquet export. (transactional operational workload များ၊ ACID transaction များ၊ Change Data Capture (CDC) ingestion၊ [[mm/02-services/database/redshift|redshift]] နှင့် zero-ETL integration လုပ်ခြင်းနှင့် S3 Parquet သို့ တိုက်ရိုက် export လုပ်ခြင်းတို့အတွက် Managed relational database များ)
 - **Slide Reference**: Pages 196–213 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[domain-1-ingestion-and-processing]] | [[redshift]] | [[dms-and-sct]] | [[s3]] | [[kms-and-secrets]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/database/redshift|redshift]] | [[mm/02-services/migration/dms-and-sct|dms-and-sct]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]]
 
 ---
 
@@ -34,8 +34,8 @@ date: 2026-08-11
 1. **Multi-AZ Deployments vs. Read Replicas**: High Availability (HA) အတွက် failover နှင့် horizontal read scalability (analytics query များ offload လုပ်ခြင်း) အကြား ကွာခြားချက်။
 2. **Aurora Distributed Storage Architecture**: 3 AZs တွင် 6-way replication ပြုလုပ်ခြင်း (4/6 write quorum နှင့် 3/6 read quorum ဖြင့်)။
 3. **Data Lake & Analytics Integrations**: S3 သို့ **Apache Parquet** format ဖြင့် native snapshot export လုပ်ခြင်း၊ direct SQL S3 export (`aws_s3`) အသုံးပြုခြင်းနှင့် **Amazon Redshift Zero-ETL integration**။
-4. **Change Data Capture (CDC)**: PostgreSQL WAL သို့မဟုတ် MySQL binlogs မှ transactional change များကို [[dms-and-sct]] (AWS DMS) အသုံးပြု၍ extract လုပ်ခြင်း။
-5. **Security & Authentication**: **IAM Database Authentication** (temporary tokens များ) နှင့် [[kms-and-secrets]] (AWS Secrets Manager) ဖြင့် automated credential rotation ပြုလုပ်ခြင်း။
+4. **Change Data Capture (CDC)**: PostgreSQL WAL သို့မဟုတ် MySQL binlogs မှ transactional change များကို [[mm/02-services/migration/dms-and-sct|dms-and-sct]] (AWS DMS) အသုံးပြု၍ extract လုပ်ခြင်း။
+5. **Security & Authentication**: **IAM Database Authentication** (temporary tokens များ) နှင့် [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] (AWS Secrets Manager) ဖြင့် automated credential rotation ပြုလုပ်ခြင်း။
 
 ```mermaid
 graph TB
@@ -306,7 +306,7 @@ graph TD
 ### 2. RDS Snapshot Export to Amazon S3 (Parquet Export)
 - Amazon RDS သို့မဟုတ် Aurora snapshot မှ data များကို **Amazon S3 သို့ Apache Parquet format** ဖြင့် တိုက်ရိုက် export လုပ်ပေးသည်။
 - **Zero Impact on Production**: Export လုပ်ငန်းစဉ်သည် AWS managed background fleet တွင် လုံးဝ run သောကြောင့်၊ active database instance ပေါ်တွင် **CPU/RAM/IOPS လုံးဝ (0) အသုံးမပြုပါ**။
-- **Analytical Optimization**: Parquet file များသည် အလိုအလျောက် columnar-formatted ဖြစ်ခြင်း၊ Snappy ဖြင့် compress လုပ်ထားခြင်းနှင့် partition ခွဲထားခြင်းတို့ကြောင့် [[athena]], [[glue]] ဖြင့် ချက်ချင်း query လုပ်နိုင်သည် (သို့မဟုတ်) [[redshift]] ထဲသို့ load လုပ်နိုင်သည်။
+- **Analytical Optimization**: Parquet file များသည် အလိုအလျောက် columnar-formatted ဖြစ်ခြင်း၊ Snappy ဖြင့် compress လုပ်ထားခြင်းနှင့် partition ခွဲထားခြင်းတို့ကြောင့် [[mm/02-services/analytics-streaming/athena/athena|athena]], [[mm/02-services/analytics-streaming/glue/glue|glue]] ဖြင့် ချက်ချင်း query လုပ်နိုင်သည် (သို့မဟုတ်) [[mm/02-services/database/redshift|redshift]] ထဲသို့ load လုပ်နိုင်သည်။
 
 ### 3. Direct SQL S3 Integration (`aws_s3` Extension for PostgreSQL)
 - RDS/Aurora PostgreSQL တွင် native `aws_s3` extension ကိုအသုံးပြု၍၊ ၎င်းမှ query result များကို S3 သို့ တိုက်ရိုက် export လုပ်နိုင်သည်-
@@ -382,7 +382,7 @@ graph LR
 - **Architecture**:
   - Web application များသည် checkout transaction များကို Aurora Primary သို့ ရေးသည်။
   - Transaction များကို Zero-ETL မှတစ်ဆင့် Redshift သို့ near real-time ဖြင့် (< 15 seconds) replicate လုပ်ပေးသည်။
-  - Business Intelligence tool များ ([[quicksight]]) က Redshift ပေါ်တွင် multi-table join များနှင့် aggregation query များကို တိုက်ရိုက် run သည်။
+  - Business Intelligence tool များ ([[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]) က Redshift ပေါ်တွင် multi-table join များနှင့် aggregation query များကို တိုက်ရိုက် run သည်။
 
 ### Pattern B: Zero-Compute Production Data Lake Hydration (Snapshot Export to S3)
 
@@ -428,12 +428,12 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[redshift]] — Petabyte-scale OLAP data warehouse and Zero-ETL target
-- [[dynamodb]] — Serverless NoSQL operational database comparisons
-- [[dms-and-sct]] — AWS Database Migration Service for CDC replication from RDS
-- [[s3]] — S3 Data Lake target for RDS Snapshot Parquet exports
-- [[athena]] — Querying RDS S3 exports and Athena Federated Queries
-- [[kms-and-secrets]] — KMS database encryption and Secrets Manager credential rotation
-- [[aws-backup]] — Centralized backup plans, PITR, and Vault Lock protection for RDS
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[mm/02-services/database/redshift|redshift]] — Petabyte-scale OLAP data warehouse and Zero-ETL target
+- [[mm/02-services/database/dynamodb|dynamodb]] — Serverless NoSQL operational database comparisons
+- [[mm/02-services/migration/dms-and-sct|dms-and-sct]] — AWS Database Migration Service for CDC replication from RDS
+- [[mm/02-services/storage/s3/s3|s3]] — S3 Data Lake target for RDS Snapshot Parquet exports
+- [[mm/02-services/analytics-streaming/athena/athena|athena]] — Querying RDS S3 exports and Athena Federated Queries
+- [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — KMS database encryption and Secrets Manager credential rotation
+- [[mm/02-services/security-governance/aws-backup|aws-backup]] — Centralized backup plans, PITR, and Vault Lock protection for RDS
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

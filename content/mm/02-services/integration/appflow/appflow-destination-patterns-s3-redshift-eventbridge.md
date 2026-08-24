@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow-destination-patterns-s3-redshift-eventbridge) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon S3 Data Lakes, Amazon Redshift Data Warehouses (staging buckets များနှင့် automated MERGE upserts များပါဝင်သော) နှင့် Amazon EventBridge event buses များအပါအဝင် AppFlow destinations များကို architect ပြုလုပ်ခြင်း။
 - **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[appflow]]` | `[[s3]]` | `[[redshift]]` | `[[cloudwatch-and-eventbridge]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/appflow/appflow|appflow]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 
@@ -149,7 +149,7 @@ SaaS applications များမှ real-time operational events များ �
 ---
 
 ## 📌 Related Notes (ဆက်စပ် မှတ်စုများ)
-- `[[appflow]]` — Amazon AppFlow Master Hub
-- `[[appflow-data-transformation-masking-and-catalog]]` — Transformations & Glue Catalog
-- `[[redshift]]` — Amazon Redshift Data Warehouse Deep-Dive
-- `[[cloudwatch-and-eventbridge]]` — Amazon EventBridge Routing
+- `[[mm/02-services/integration/appflow/appflow|appflow]]` — Amazon AppFlow Master Hub
+- `[[mm/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` — Transformations & Glue Catalog
+- `[[mm/02-services/database/redshift|redshift]]` — Amazon Redshift Data Warehouse Deep-Dive
+- `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — Amazon EventBridge Routing

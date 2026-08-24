@@ -16,7 +16,7 @@ date: 2026-07-28
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/ml-dev-cost/sagemaker-and-ai) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Data preparation (Data Wrangler)၊ feature management (Feature Store)၊ dataset labeling (Ground Truth)၊ generative AI (Amazon Bedrock, Amazon Q Business)။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 671–741
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]
 
 ---
 
@@ -51,5 +51,5 @@ Data engineer များသည် machine learning model များအတွ
 ---
 
 ## 📌 Related Notes
-- [[s3]] — S3 တွင် offline feature data သိမ်းဆည်းခြင်း
-- [[redshift]] — Redshift ML integration
+- [[mm/02-services/storage/s3/s3|s3]] — S3 တွင် offline feature data သိမ်းဆည်းခြင်း
+- [[mm/02-services/database/redshift|redshift]] — Redshift ML integration

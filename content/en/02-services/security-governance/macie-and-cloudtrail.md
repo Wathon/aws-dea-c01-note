@@ -20,7 +20,7 @@ date: 2026-08-23
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/security-governance/macie-and-cloudtrail)
 - **Primary Use Case**: Automated discovery of sensitive Personally Identifiable Information (PII) in Amazon S3 (Amazon Macie), immutable auditing of API activity and data access (AWS CloudTrail), and in-flight PII masking (AWS Glue Sensitive Data Detection).
 - **Slide Reference**: Pages 630–670 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[s3]]` | `[[glue]]` | `[[cloudwatch-and-eventbridge]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 
@@ -203,8 +203,8 @@ For SQL analysts querying data warehouses:
 ---
 
 ## 📌 Related Notes
-- `[[iam]]` — IAM Policy Evaluation & Audit Tracking
-- `[[s3]]` — Amazon S3 Data Lake Storage & Security
-- `[[glue]]` — AWS Glue ETL & Sensitive Data Detection Transform
-- `[[cloudwatch-and-eventbridge]]` — EventBridge Rules for Security Remediation
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[en/02-services/security-governance/iam|iam]]` — IAM Policy Evaluation & Audit Tracking
+- `[[en/02-services/storage/s3/s3|s3]]` — Amazon S3 Data Lake Storage & Security
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue ETL & Sensitive Data Detection Transform
+- `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — EventBridge Rules for Security Remediation
+- `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

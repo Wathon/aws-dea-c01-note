@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-workflows)
 - **Primary Use Case**: Native, serverless orchestration of multi-step Glue Crawlers, Jobs, and Triggers with dynamic parameter sharing.
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[glue]]` | `[[step-functions]]` | `[[mwaa-airflow]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/integration/step-functions/step-functions|step-functions]]` | `[[en/02-services/integration/mwaa-airflow|mwaa-airflow]]`
 
 ---
 
@@ -25,7 +25,7 @@ date: 2026-08-17
 
 **AWS Glue Workflows** is a fully managed orchestration service designed specifically to coordinate and monitor multi-step extract, transform, and load (ETL) pipelines consisting of **AWS Glue Crawlers, Jobs, and Triggers**.
 
-While enterprise-wide workflows spanning multiple AWS services (such as AWS Lambda, Amazon EMR, Amazon ECS, or Amazon SNS) are typically orchestrated using **[[step-functions]]** or **[[mwaa-airflow]]**, **Glue Workflows** provides a lightweight, zero-infrastructure solution dedicated exclusively to the AWS Glue ecosystem.
+While enterprise-wide workflows spanning multiple AWS services (such as AWS Lambda, Amazon EMR, Amazon ECS, or Amazon SNS) are typically orchestrated using **[[en/02-services/integration/step-functions/step-functions|step-functions]]** or **[[en/02-services/integration/mwaa-airflow|mwaa-airflow]]**, **Glue Workflows** provides a lightweight, zero-infrastructure solution dedicated exclusively to the AWS Glue ecosystem.
 
 ```mermaid
 graph LR
@@ -156,8 +156,8 @@ Choosing the correct orchestration tool is one of the most heavily tested concep
 ---
 
 ## 📌 Related Notes
-- `[[glue]]` — AWS Glue Architecture Overview
-- `[[glue-etl-jobs]]` — AWS Glue ETL Jobs & Transforms
-- `[[glue-crawlers]]` — Automating Data Catalog Crawls
-- `[[step-functions]]` — AWS Step Functions Enterprise Orchestration
-- `[[mwaa-airflow]]` — Amazon Managed Workflows for Apache Airflow
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture Overview
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — AWS Glue ETL Jobs & Transforms
+- `[[en/02-services/analytics-streaming/glue/glue-crawlers|glue-crawlers]]` — Automating Data Catalog Crawls
+- `[[en/02-services/integration/step-functions/step-functions|step-functions]]` — AWS Step Functions Enterprise Orchestration
+- `[[en/02-services/integration/mwaa-airflow|mwaa-airflow]]` — Amazon Managed Workflows for Apache Airflow

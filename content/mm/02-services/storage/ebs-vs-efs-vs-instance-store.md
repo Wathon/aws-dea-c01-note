@@ -19,7 +19,7 @@ date: 2026-08-10
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/ebs-vs-efs-vs-instance-store) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: **Amazon EFS** (Shared Multi-AZ File), **Amazon EBS** (Persistent Network Block), နှင့် **EC2 Instance Store** (Ultra-High IOPS Ephemeral Block) တို့အကြား တိကျသေချာသော ဆုံးဖြတ်ချက်လမ်းညွှန်နှင့် ဗိသုကာပိုင်းဆိုင်ရာ အားသာချက်/အားနည်းချက် (architectural trade-off) နှိုင်းယှဉ်ချက်။
 - **Slide Reference**: Pages 139–154 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/04-exam-tips/service-comparisons|service-comparisons]] | [[mm/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/storage/s3/s3|s3]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/04-exam-tips/service-comparisons|service-comparisons]] | [[mm/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/storage/s3/s3|s3]]
 
 ---
 

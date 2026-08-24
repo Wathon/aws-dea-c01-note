@@ -22,7 +22,7 @@ date: 2026-08-12
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/database/nosql-specialized-databases) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Microsecond in-memory caching, durable in-memory primary databases, managed Apache Cassandra, relationship graph traversal, time-series IoT telemetry, နှင့် managed MongoDB document storage အဖြစ် အသုံးပြုရန်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ၏ စာမျက်နှာ 214–219
-- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/database/dynamodb|dynamodb]] | [[mm/02-services/database/rds-and-aurora|rds-and-aurora]] | [[mm/02-services/database/redshift|redshift]] | [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/database/dynamodb|dynamodb]] | [[mm/02-services/database/rds-and-aurora|rds-and-aurora]] | [[mm/02-services/database/redshift|redshift]] | [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]
 
 ---
 

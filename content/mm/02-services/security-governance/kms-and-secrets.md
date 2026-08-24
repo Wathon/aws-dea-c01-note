@@ -22,7 +22,7 @@ date: 2026-08-23
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/kms-and-secrets) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Cryptographic keys များကို စီမံခန့်ခွဲရန် (AWS KMS)၊ S3/Redshift/RDS အနှံ့ data at rest များကို လုံခြုံစေရန်၊ S3 Bucket Keys ဖြင့် big data KMS ကုန်ကျစရိတ်များကို သက်သာစေရန် (optimize ပြုလုပ်ရန်) နှင့် AWS Secrets Manager ဖြင့် database credential rotation များကို automate ပြုလုပ်ရန်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 560–575
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[iam]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[mm/02-services/security-governance/iam|iam]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]`
 
 ---
 
@@ -251,8 +251,8 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[iam]]` — IAM Service Roles & Cross-Account Trust Policies
-- `[[s3]]` — Amazon S3 Storage & Encryption Defaults
-- `[[redshift]]` — Amazon Redshift Credential Management & KMS Encryption
-- `[[glue]]` — AWS Glue Security Configurations & Connection Secrets
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[mm/02-services/security-governance/iam|iam]]` — IAM Service Roles & Cross-Account Trust Policies
+- `[[mm/02-services/storage/s3/s3|s3]]` — Amazon S3 Storage & Encryption Defaults
+- `[[mm/02-services/database/redshift|redshift]]` — Amazon Redshift Credential Management & KMS Encryption
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Security Configurations & Connection Secrets
+- `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

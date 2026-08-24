@@ -18,9 +18,9 @@ date: 2026-08-14
 
 - **Category**: Migration & Transfer (B2B Partner File Exchange & Managed File Transfer)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/migration/transfer-family)
-- **Primary Use Case**: Providing external business partners and legacy enterprise systems with secure, seamless file transfer access (**SFTP, FTPS, FTP, AS2**) directly into [[s3]] Data Lakes and [[efs-and-fsx]] (Amazon EFS) without modifying client workflows or managing servers.
+- **Primary Use Case**: Providing external business partners and legacy enterprise systems with secure, seamless file transfer access (**SFTP, FTPS, FTP, AS2**) directly into [[en/02-services/storage/s3/s3|s3]] Data Lakes and [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] (Amazon EFS) without modifying client workflows or managing servers.
 - **Slide Reference**: Pages 284–285 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[s3]] | [[efs-and-fsx]] | [[datasync-and-snow]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[en/02-services/migration/datasync-and-snow|datasync-and-snow]]
 
 ---
 
@@ -37,7 +37,7 @@ For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you must m
    - **AS2** (Port 443): Structured B2B Electronic Data Interchange (EDI) with non-repudiation and MDN receipts.
 3. **Identity & Authentication Options**: Service-managed credentials, **Microsoft Active Directory** (via AWS Directory Service), **LDAP**, **Okta**, **Amazon Cognito**, or custom **AWS Lambda authorizers**.
 4. **Network & Endpoint Architecture**: Public internet-facing endpoints with Amazon Route 53 custom domain names vs. VPC-hosted endpoints (internal or internet-facing with Elastic IPs).
-5. **Automated Managed Workflows**: Triggering pre-processing (antivirus scanning, PII redaction, file decompression) before landing in S3, and post-processing notifications via Amazon EventBridge and [[step-functions]].
+5. **Automated Managed Workflows**: Triggering pre-processing (antivirus scanning, PII redaction, file decompression) before landing in S3, and post-processing notifications via Amazon EventBridge and [[en/02-services/integration/step-functions/step-functions|step-functions]].
 
 ```mermaid
 graph TB
@@ -131,7 +131,7 @@ graph LR
     class S3Choice,EFSChoice store;
 ```
 
-- **Amazon S3 Target**: Files uploaded via SFTP are written directly to S3 as native objects. Downstream data lake tools ([[glue]], [[athena]], [[redshift]]) can immediately query and transform the files.
+- **Amazon S3 Target**: Files uploaded via SFTP are written directly to S3 as native objects. Downstream data lake tools ([[en/02-services/analytics-streaming/glue/glue|glue]], [[en/02-services/analytics-streaming/athena/athena|athena]], [[en/02-services/database/redshift|redshift]]) can immediately query and transform the files.
 - **Amazon EFS Target**: Files uploaded via SFTP are written to an Amazon EFS file system, preserving POSIX user permissions (UID/GID) and directory hierarchies.
 
 ---
@@ -241,11 +241,11 @@ graph TD
 
 ## 📌 Related Notes
 
-- [[s3]] — Amazon S3 Data Lake target for SFTP file uploads
-- [[efs-and-fsx]] — Amazon EFS shared file system target for Transfer Family
-- [[datasync-and-snow]] — AWS DataSync & Snow Family comparison
-- [[dms-and-sct]] — Database migration and CDC streaming
-- [[data-exchange]] — Third-party commercial dataset ingestion
-- [[application-discovery-and-mgn]] — Application Discovery & MGN server migration
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/02-services/storage/s3/s3|s3]] — Amazon S3 Data Lake target for SFTP file uploads
+- [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] — Amazon EFS shared file system target for Transfer Family
+- [[en/02-services/migration/datasync-and-snow|datasync-and-snow]] — AWS DataSync & Snow Family comparison
+- [[en/02-services/migration/dms-and-sct|dms-and-sct]] — Database migration and CDC streaming
+- [[en/02-services/migration/data-exchange|data-exchange]] — Third-party commercial dataset ingestion
+- [[en/02-services/migration/application-discovery-and-mgn|application-discovery-and-mgn]] — Application Discovery & MGN server migration
+- [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-studio) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: AWS Glue PySpark/Scala ETL jobs များနှင့် serverless Jupyter notebooks များကို visual drag-and-drop ဖြင့် ရေးဆွဲခြင်း (authoring)၊ run ခြင်း၊ စစ်ဆေးခြင်း (inspecting) နှင့် စောင့်ကြည့်စစ်ဆေးခြင်း (monitoring)။
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-etl-jobs]]` | `[[glue-databrew]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[mm/02-services/analytics-streaming/glue/glue-databrew|glue-databrew]]`
 
 ---
 
@@ -140,7 +140,7 @@ Glue Studio တွင် AWS account တစ်ခုလုံးရှိ Glue E
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[glue]]` — AWS Glue Architecture Overview
-- `[[glue-etl-jobs]]` — Code-based AWS Glue ETL Jobs & DynamicFrames
-- `[[glue-data-quality]]` — Visual Data Quality Nodes in Glue Studio
-- `[[glue-databrew]]` — Visual Data Preparation for Non-Technical Analysts
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture Overview
+- `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Code-based AWS Glue ETL Jobs & DynamicFrames
+- `[[mm/02-services/analytics-streaming/glue/glue-data-quality|glue-data-quality]]` — Visual Data Quality Nodes in Glue Studio
+- `[[mm/02-services/analytics-streaming/glue/glue-databrew|glue-databrew]]` — Visual Data Preparation for Non-Technical Analysts

@@ -23,7 +23,7 @@ date: 2026-08-12
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/database/redshift) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Enterprise data warehousing, high-performance complex SQL analytics, BI reporting, Data Lakehouse querying with Redshift Spectrum, Serverless data processing, Zero-ETL replication, နှင့် real-time streaming ingestion.
 - **Slide Reference**: Pages 220–265 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[domain-1-ingestion-and-processing]] | [[athena]] | [[glue]] | [[s3]] | [[rds-and-aurora]] | [[kinesis]] | [[kms-and-secrets]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/analytics-streaming/athena/athena|athena]] | [[mm/02-services/analytics-streaming/glue/glue|glue]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/database/rds-and-aurora|rds-and-aurora]] | [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] | [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]]
 
 ---
 
@@ -538,12 +538,12 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[athena]] — Serverless SQL on S3 vs. Redshift Spectrum
-- [[s3]] — Amazon S3 Data Lake target for COPY and UNLOAD commands
-- [[glue]] — AWS Glue Data Catalog integration for Redshift Spectrum
-- [[rds-and-aurora]] — Amazon Aurora Zero-ETL integration with Redshift
-- [[kinesis]] — Streaming ingestion into Redshift Materialized Views
-- [[dynamodb]] — Exporting DynamoDB to S3 and Redshift
-- [[kms-and-secrets]] — KMS encryption and Secrets Manager integration
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[mm/02-services/analytics-streaming/athena/athena|athena]] — Serverless SQL on S3 vs. Redshift Spectrum
+- [[mm/02-services/storage/s3/s3|s3]] — Amazon S3 Data Lake target for COPY and UNLOAD commands
+- [[mm/02-services/analytics-streaming/glue/glue|glue]] — AWS Glue Data Catalog integration for Redshift Spectrum
+- [[mm/02-services/database/rds-and-aurora|rds-and-aurora]] — Amazon Aurora Zero-ETL integration with Redshift
+- [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] — Streaming ingestion into Redshift Materialized Views
+- [[mm/02-services/database/dynamodb|dynamodb]] — Exporting DynamoDB to S3 and Redshift
+- [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — KMS encryption and Secrets Manager integration
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

@@ -20,7 +20,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring)
 - **Primary Use Case**: Securing stream payloads with KMS and VPC PrivateLink, validating stream schemas via Glue Schema Registry, and detecting consumer lag via `IteratorAgeMilliseconds`.
 - **Slide Reference**: Pages 446–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[glue-schema-registry]]` | `[[security-and-compliance]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[en/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` | `[[security-and-compliance]]`
 
 ---
 
@@ -162,8 +162,8 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
-- `[[kinesis-consumers-and-scaling]]` — KCL & Enhanced Fan-Out
-- `[[glue-schema-registry]]` — AWS Glue Schema Registry Deep Dive
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling|kinesis-consumers-and-scaling]]` — KCL & Enhanced Fan-Out
+- `[[en/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` — AWS Glue Schema Registry Deep Dive
 - `[[security-and-compliance]]` — Cloud Security & Encryption Governance

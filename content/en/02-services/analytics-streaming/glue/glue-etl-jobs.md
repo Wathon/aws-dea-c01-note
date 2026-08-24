@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-etl-jobs)
 - **Primary Use Case**: Serverless Apache Spark & Python ETL, incremental processing with Job Bookmarks, semi-structured data manipulation with DynamicFrames, and performance tuning.
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[glue]]` | `[[emr]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/analytics-streaming/emr/emr|emr]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -26,7 +26,7 @@ date: 2026-08-17
 
 **AWS Glue ETL Jobs** execute data transformation scripts in a fully managed, serverless Apache Spark (PySpark or Scala) or Python Shell environment. 
 
-Unlike **[[emr]]**, where engineers must size, provision, monitor, and scale EC2/EKS clusters, AWS Glue handles all cluster lifecycle management automatically. Jobs start rapidly and are billed strictly by the second based on the number of **Data Processing Units (DPUs)** consumed (1 DPU = 4 vCPUs and 16 GB of memory).
+Unlike **[[en/02-services/analytics-streaming/emr/emr|emr]]**, where engineers must size, provision, monitor, and scale EC2/EKS clusters, AWS Glue handles all cluster lifecycle management automatically. Jobs start rapidly and are billed strictly by the second based on the number of **Data Processing Units (DPUs)** consumed (1 DPU = 4 vCPUs and 16 GB of memory).
 
 ```mermaid
 graph TD
@@ -269,8 +269,8 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[glue]]` — AWS Glue Overview & Architecture
-- `[[glue-data-catalog]]` — Glue Data Catalog Metastore
-- `[[glue-flex]]` — Saving 35% on Batch ETL with Flex Execution
-- `[[glue-data-quality]]` — Integrating Data Validation into Glue Jobs
-- `[[emr]]` — Comparing Glue Serverless Spark vs. Amazon EMR Clusters
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Overview & Architecture
+- `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Data Catalog Metastore
+- `[[en/02-services/analytics-streaming/glue/glue-flex|glue-flex]]` — Saving 35% on Batch ETL with Flex Execution
+- `[[en/02-services/analytics-streaming/glue/glue-data-quality|glue-data-quality]]` — Integrating Data Validation into Glue Jobs
+- `[[en/02-services/analytics-streaming/emr/emr|emr]]` — Comparing Glue Serverless Spark vs. Amazon EMR Clusters

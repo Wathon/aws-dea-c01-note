@@ -15,7 +15,7 @@ date: 2026-08-15
 - **Category**: Fundamentals (Analytical SQL & Pipeline Version Control)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/03-concepts/sql-and-version-control-review)
 - **Slide Reference**: Pages 51–75 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[redshift]]` | `[[cdk-cloudformation]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/database/redshift|redshift]]` | `[[en/02-services/ml-dev-cost/cdk-cloudformation|cdk-cloudformation]]`
 
 ---
 
@@ -110,6 +110,6 @@ graph LR
 
 ## 📌 Related Notes
 
-- `[[athena]]` — Running ANSI SQL queries and window functions in Amazon Athena
-- `[[redshift]]` — Redshift SQL optimization, Sort Keys, and Distribution Keys
-- `[[cdk-cloudformation]]` — AWS CloudFormation and CDK for infrastructure version control
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Running ANSI SQL queries and window functions in Amazon Athena
+- `[[en/02-services/database/redshift|redshift]]` — Redshift SQL optimization, Sort Keys, and Distribution Keys
+- `[[en/02-services/ml-dev-cost/cdk-cloudformation|cdk-cloudformation]]` — AWS CloudFormation and CDK for infrastructure version control

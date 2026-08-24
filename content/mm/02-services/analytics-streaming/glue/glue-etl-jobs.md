@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-etl-jobs) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case / အဓိက အသုံးပြုမှု**: Serverless Apache Spark & Python ETL၊ Job Bookmarks ဖြင့် incremental processing ပြုလုပ်ခြင်း၊ DynamicFrames ဖြင့် semi-structured data များကို ကိုင်တွယ်ခြင်းနှင့် performance tuning ပြုလုပ်ခြင်း။
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[emr]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/analytics-streaming/emr/emr|emr]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -27,7 +27,7 @@ date: 2026-08-17
 
 **AWS Glue ETL Jobs** သည် data transformation script များကို fully managed ဖြစ်သော serverless Apache Spark (PySpark သို့မဟုတ် Scala) သို့မဟုတ် Python Shell environment တွင် execute ပြုလုပ်ပေးသည်။ 
 
-Engineer များအနေဖြင့် EC2/EKS cluster များကို size သတ်မှတ်ခြင်း (sizing)၊ provision ပြုလုပ်ခြင်း၊ monitor လုပ်ခြင်းနှင့် scale ပြုလုပ်ခြင်းများ ပြုလုပ်ရသည့် **[[emr]]** နှင့်မတူဘဲ AWS Glue သည် cluster lifecycle management အားလုံးကို အလိုအလျောက် စီမံခန့်ခွဲပေးသည်။ Jobs များသည် လျင်မြန်စွာ စတင်နိုင်ပြီး အသုံးပြုသည့် **Data Processing Units (DPUs)** အရေအတွက်ပေါ် အခြေခံ၍ စက္ကန့်ပိုင်းအလိုက် တိကျစွာ ကောက်ခံပါသည် (1 DPU = 4 vCPUs နှင့် 16 GB of memory)။
+Engineer များအနေဖြင့် EC2/EKS cluster များကို size သတ်မှတ်ခြင်း (sizing)၊ provision ပြုလုပ်ခြင်း၊ monitor လုပ်ခြင်းနှင့် scale ပြုလုပ်ခြင်းများ ပြုလုပ်ရသည့် **[[mm/02-services/analytics-streaming/emr/emr|emr]]** နှင့်မတူဘဲ AWS Glue သည် cluster lifecycle management အားလုံးကို အလိုအလျောက် စီမံခန့်ခွဲပေးသည်။ Jobs များသည် လျင်မြန်စွာ စတင်နိုင်ပြီး အသုံးပြုသည့် **Data Processing Units (DPUs)** အရေအတွက်ပေါ် အခြေခံ၍ စက္ကန့်ပိုင်းအလိုက် တိကျစွာ ကောက်ခံပါသည် (1 DPU = 4 vCPUs နှင့် 16 GB of memory)။
 
 ```mermaid
 graph TD
@@ -270,8 +270,8 @@ graph TD
 ---
 
 ## 📌 Related Notes (ဆက်စပ် မှတ်စုများ)
-- `[[glue]]` — AWS Glue Overview & Architecture
-- `[[glue-data-catalog]]` — Glue Data Catalog Metastore
-- `[[glue-flex]]` — Saving 35% on Batch ETL with Flex Execution
-- `[[glue-data-quality]]` — Integrating Data Validation into Glue Jobs
-- `[[emr]]` — Comparing Glue Serverless Spark vs. Amazon EMR Clusters
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Overview & Architecture
+- `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Data Catalog Metastore
+- `[[mm/02-services/analytics-streaming/glue/glue-flex|glue-flex]]` — Saving 35% on Batch ETL with Flex Execution
+- `[[mm/02-services/analytics-streaming/glue/glue-data-quality|glue-data-quality]]` — Integrating Data Validation into Glue Jobs
+- `[[mm/02-services/analytics-streaming/emr/emr|emr]]` — Comparing Glue Serverless Spark vs. Amazon EMR Clusters

@@ -18,7 +18,7 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-tables) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Managed Apache Iceberg Tables, Automated Data Lake Maintenance, High-Throughput ACID Transactions
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[athena]] | [[lake-formation]] | [[glue]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/analytics-streaming/athena/athena|athena]] | [[mm/02-services/security-governance/lake-formation|lake-formation]] | [[mm/02-services/analytics-streaming/glue/glue|glue]]
 
 ---
 
@@ -85,7 +85,7 @@ graph TD
 ### 2. High-Concurrency ACID Transactions & Performance
 
 - **10x Higher Transactions per Second (TPS)**: Metadata lock များနှင့် commit လုပ်ငန်းစဉ်များကို optimized လုပ်ပေးပြီး commit conflict failure များမရှိဘဲ တစ်ပြိုင်နက်တည်းရေးသားခြင်း/ပြင်ဆင်ခြင်း (concurrent writes/updates) ထောင်ပေါင်းများစွာကို ထောက်ပံ့ပေးပါသည်။
-- **Up to 3x Faster Query Performance**: Built-in metadata indexing နှင့် automated layout optimization တို့က [[athena]], [[redshift]], နှင့် [[emr]] Spark ကဲ့သို့သော engine များတွင် query planning ကို ပိုမိုမြန်ဆန်စေပါသည်။
+- **Up to 3x Faster Query Performance**: Built-in metadata indexing နှင့် automated layout optimization တို့က [[mm/02-services/analytics-streaming/athena/athena|athena]], [[mm/02-services/database/redshift|redshift]], နှင့် [[mm/02-services/analytics-streaming/emr/emr|emr]] Spark ကဲ့သို့သော engine များတွင် query planning ကို ပိုမိုမြန်ဆန်စေပါသည်။
 
 ### 3. Integrated Governance with AWS Lake Formation
 
@@ -150,10 +150,10 @@ graph TD
 
 Amazon S3 Tables သည် standard Apache Iceberg REST catalog interface များမှတစ်ဆင့် AWS native service များနှင့် open-source analytical tool များ နှစ်ခုစလုံးနှင့် ချောမွေ့စွာ integrate လုပ်ဆောင်နိုင်ပါသည်:
 
-- **[[athena]]**: Standard ANSI SQL (`SELECT`, `INSERT`, `UPDATE`, `MERGE INTO`) ကိုအသုံးပြု၍ S3 Tables ကို တိုက်ရိုက် query ပြုလုပ်နိုင်ပါသည်။
+- **[[mm/02-services/analytics-streaming/athena/athena|athena]]**: Standard ANSI SQL (`SELECT`, `INSERT`, `UPDATE`, `MERGE INTO`) ကိုအသုံးပြု၍ S3 Tables ကို တိုက်ရိုက် query ပြုလုပ်နိုင်ပါသည်။
 - **AWS Glue Data Catalog**: S3 Tables သည် ၎င်းတို့၏ schema များကို AWS Glue Data Catalog တွင် အလိုအလျောက် မှတ်ပုံတင် (register) ပေးပါသည်။
-- **[[redshift]]**: Redshift Spectrum သို့မဟုတ် Serverless zero-copy integration ကိုအသုံးပြု၍ S3 Tables ကို query ပြုလုပ်နိုင်ပါသည်။
-- **[[emr]] & Apache Spark**: Native pushdown optimization များနှင့်အတူ `pyspark` သို့မဟုတ် Spark SQL ကိုအသုံးပြု၍ Iceberg table များကို ဖတ်ခြင်းနှင့် ရေးခြင်းပြုလုပ်နိုင်ပါသည်။
+- **[[mm/02-services/database/redshift|redshift]]**: Redshift Spectrum သို့မဟုတ် Serverless zero-copy integration ကိုအသုံးပြု၍ S3 Tables ကို query ပြုလုပ်နိုင်ပါသည်။
+- **[[mm/02-services/analytics-streaming/emr/emr|emr]] & Apache Spark**: Native pushdown optimization များနှင့်အတူ `pyspark` သို့မဟုတ် Spark SQL ကိုအသုံးပြု၍ Iceberg table များကို ဖတ်ခြင်းနှင့် ရေးခြင်းပြုလုပ်နိုင်ပါသည်။
 - **Third-Party Engines**: Standard Apache Iceberg endpoint များမှတစ်ဆင့် Snowflake, Starburst/Trino, Databricks စသည်တို့နှင့် အသုံးပြုနိုင်ပါသည်။
 
 ---
@@ -175,8 +175,8 @@ Amazon S3 Tables သည် standard Apache Iceberg REST catalog interface မျ
 
 ## 📌 Related Notes
 
-- [[s3]] — Amazon S3 Overview & Storage Classes
-- [[s3-performance]] — S3 Request Limits & Compaction Techniques
-- [[athena]] — Querying Iceberg & S3 Data Lakes
-- [[glue]] — Glue Data Catalog & ETL Compaction
-- [[lake-formation]] — Fine-Grained Governance for Data Lakes
+- [[mm/02-services/storage/s3/s3|s3]] — Amazon S3 Overview & Storage Classes
+- [[mm/02-services/storage/s3/s3-performance|s3-performance]] — S3 Request Limits & Compaction Techniques
+- [[mm/02-services/analytics-streaming/athena/athena|athena]] — Querying Iceberg & S3 Data Lakes
+- [[mm/02-services/analytics-streaming/glue/glue|glue]] — Glue Data Catalog & ETL Compaction
+- [[mm/02-services/security-governance/lake-formation|lake-formation]] — Fine-Grained Governance for Data Lakes

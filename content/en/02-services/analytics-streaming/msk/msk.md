@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk)
 - **Primary Use Case**: Fully managed, highly available Apache Kafka clusters for real-time streaming, event-driven microservices, open-source ecosystem compatibility, and high-throughput low-latency pub/sub pipelines.
 - **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[kinesis]]` | `[[glue-schema-registry]]` | `[[lambda]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` | `[[en/02-services/compute-containers/lambda|lambda]]`
 
 ---
 
@@ -125,12 +125,12 @@ graph TD
 
 To master Amazon MSK for the **AWS Certified Data Engineer - Associate (DEA-C01)** exam, explore the modular sub-topics below:
 
-1. `[[msk-cluster-architecture]]` — **Brokers, Multi-AZ Replication Factor, Storage Auto-Scaling, Tiered Storage & KRaft Mode**
-2. `[[msk-serverless]]` — **Serverless Architecture, Throughput Capacity Units, Partition Limits & Cost Model**
-3. `[[msk-connect]]` — **Kafka Connect Sinks & Sources, S3 Sink Connector, Custom Plugins & Worker Configurations**
-4. `[[msk-security-and-monitoring]]` — **IAM Auth, SASL/SCRAM, TLS Mutual Auth, Kafka ACLs, OpenMonitoring & CloudWatch Lag Metrics**
-5. `[[msk-troubleshooting-and-tuning]]` — **Broker Disk Full Recovery, Producer Timeout Exceptions, Consumer Rebalances & Partition Skew**
-6. `[[msk-kinesis-comparison-and-patterns]]` — **Comprehensive KDS vs. MSK Decision Matrix, Self-Hosted Migration & Streaming Patterns**
+1. `[[en/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — **Brokers, Multi-AZ Replication Factor, Storage Auto-Scaling, Tiered Storage & KRaft Mode**
+2. `[[en/02-services/analytics-streaming/msk/msk-serverless|msk-serverless]]` — **Serverless Architecture, Throughput Capacity Units, Partition Limits & Cost Model**
+3. `[[en/02-services/analytics-streaming/msk/msk-connect|msk-connect]]` — **Kafka Connect Sinks & Sources, S3 Sink Connector, Custom Plugins & Worker Configurations**
+4. `[[en/02-services/analytics-streaming/msk/msk-security-and-monitoring|msk-security-and-monitoring]]` — **IAM Auth, SASL/SCRAM, TLS Mutual Auth, Kafka ACLs, OpenMonitoring & CloudWatch Lag Metrics**
+5. `[[en/02-services/analytics-streaming/msk/msk-troubleshooting-and-tuning|msk-troubleshooting-and-tuning]]` — **Broker Disk Full Recovery, Producer Timeout Exceptions, Consumer Rebalances & Partition Skew**
+6. `[[en/02-services/analytics-streaming/msk/msk-kinesis-comparison-and-patterns|msk-kinesis-comparison-and-patterns]]` — **Comprehensive KDS vs. MSK Decision Matrix, Self-Hosted Migration & Streaming Patterns**
 
 ---
 
@@ -147,9 +147,9 @@ To master Amazon MSK for the **AWS Certified Data Engineer - Associate (DEA-C01)
 ---
 
 ## 📌 Related Notes
-- `[[msk-cluster-architecture]]` — Broker Architecture & Storage Sizing
-- `[[msk-connect]]` — Serverless Connectors to S3 and OpenSearch
-- `[[msk-kinesis-comparison-and-patterns]]` — MSK vs Kinesis Architecture Comparison
-- `[[kinesis]]` — Amazon Kinesis Streaming Ecosystem
-- `[[glue-schema-registry]]` — Schema Evolution for MSK and KDS
-- `[[lambda]]` — Serverless Stream Consumers with MSK Triggers
+- `[[en/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — Broker Architecture & Storage Sizing
+- `[[en/02-services/analytics-streaming/msk/msk-connect|msk-connect]]` — Serverless Connectors to S3 and OpenSearch
+- `[[en/02-services/analytics-streaming/msk/msk-kinesis-comparison-and-patterns|msk-kinesis-comparison-and-patterns]]` — MSK vs Kinesis Architecture Comparison
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Amazon Kinesis Streaming Ecosystem
+- `[[en/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` — Schema Evolution for MSK and KDS
+- `[[en/02-services/compute-containers/lambda|lambda]]` — Serverless Stream Consumers with MSK Triggers

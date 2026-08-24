@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-studio)
 - **Primary Use Case**: Visual drag-and-drop authoring, running, inspecting, and monitoring AWS Glue PySpark/Scala ETL jobs and serverless Jupyter notebooks.
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[glue]]` | `[[glue-etl-jobs]]` | `[[glue-databrew]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[en/02-services/analytics-streaming/glue/glue-databrew|glue-databrew]]`
 
 ---
 
@@ -139,7 +139,7 @@ Glue Studio includes an enterprise-wide **Monitoring Dashboard** that provides a
 ---
 
 ## 📌 Related Notes
-- `[[glue]]` — AWS Glue Architecture Overview
-- `[[glue-etl-jobs]]` — Code-based AWS Glue ETL Jobs & DynamicFrames
-- `[[glue-data-quality]]` — Visual Data Quality Nodes in Glue Studio
-- `[[glue-databrew]]` — Visual Data Preparation for Non-Technical Analysts
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture Overview
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Code-based AWS Glue ETL Jobs & DynamicFrames
+- `[[en/02-services/analytics-streaming/glue/glue-data-quality|glue-data-quality]]` — Visual Data Quality Nodes in Glue Studio
+- `[[en/02-services/analytics-streaming/glue/glue-databrew|glue-databrew]]` — Visual Data Preparation for Non-Technical Analysts

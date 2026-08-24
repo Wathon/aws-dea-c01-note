@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-flex) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အချိန် အရေးမကြီးသော၊ သတ်မှတ်ချိန် deadline (SLA) မရှိသော data integration workload များအတွက် ကုန်ကျစရိတ်ကို အများအပြား (၃၅% အထိ) လျှော့ချရန်။
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-etl-jobs]]` | `[[cost-management]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[mm/02-services/ml-dev-cost/cost-management|cost-management]]`
 
 ---
 
@@ -108,6 +108,6 @@ $$\textbf{Total Savings} = \$440 - \$290 = \mathbf{\$150.00 \text{ (34.1\% Cost 
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[glue]]` — AWS Glue Architecture Overview
-- `[[glue-etl-jobs]]` — AWS Glue Worker Types & Capacity Planning
-- `[[cost-management]]` — AWS Analytics Cost Optimization Strategies
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture Overview
+- `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — AWS Glue Worker Types & Capacity Planning
+- `[[mm/02-services/ml-dev-cost/cost-management|cost-management]]` — AWS Analytics Cost Optimization Strategies

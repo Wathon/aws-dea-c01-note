@@ -19,7 +19,7 @@ date: 2026-08-10
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/database/dynamodb) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Ultra-low-latency single-digit millisecond operational data store, real-time feature stores, streaming pipeline state tracking, Change Data Capture (CDC) with DynamoDB Streams, နှင့် distributed metadata catalogs။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 156–195
-- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/compute-containers/lambda|lambda]] | [[mm/02-services/analytics-streaming/glue/glue|glue]] | [[mm/02-services/database/redshift|redshift]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/compute-containers/lambda|lambda]] | [[mm/02-services/analytics-streaming/glue/glue|glue]] | [[mm/02-services/database/redshift|redshift]]
 
 ---
 

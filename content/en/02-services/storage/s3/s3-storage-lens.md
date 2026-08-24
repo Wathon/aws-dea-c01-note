@@ -18,13 +18,13 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-storage-lens)
 - **Primary Use Case**: Organization-Wide Storage Visibility, Cost Optimization, Security & Protection Auditing
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-performance]] | [[s3-encryption]] | [[cost-management]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/s3/s3-performance|s3-performance]] | [[en/02-services/storage/s3/s3-encryption|s3-encryption]] | [[en/02-services/ml-dev-cost/cost-management|cost-management]]
 
 ---
 
 ## 1. High-Level Summary
 
-**Amazon S3 Storage Lens** is an organization-wide cloud storage analytics feature built directly into the AWS S3 Console. In AWS Data Engineering and the **DEA-C01** exam, S3 Storage Lens is the primary service used to discover **cost-optimization opportunities** (such as uncompleted multipart uploads or cold data in S3 Standard), audit **data protection and security posture** (such as unencrypted buckets or missing replication), and export granular storage metrics to S3 in **Parquet** format for downstream analytics with [[athena]] and [[quicksight]].
+**Amazon S3 Storage Lens** is an organization-wide cloud storage analytics feature built directly into the AWS S3 Console. In AWS Data Engineering and the **DEA-C01** exam, S3 Storage Lens is the primary service used to discover **cost-optimization opportunities** (such as uncompleted multipart uploads or cold data in S3 Standard), audit **data protection and security posture** (such as unencrypted buckets or missing replication), and export granular storage metrics to S3 in **Parquet** format for downstream analytics with [[en/02-services/analytics-streaming/athena/athena|athena]] and [[en/02-services/analytics-streaming/quicksight/quicksight|quicksight]].
 
 ---
 
@@ -108,7 +108,7 @@ graph TD
 S3 Storage Lens Advanced allows exporting daily metrics files directly to a designated S3 bucket:
 
 - **Supported Formats**: **Apache Parquet** (recommended for query speed & low storage cost) or **CSV**.
-- **Querying with Athena**: You can query exported Storage Lens Parquet metrics using [[athena]] to generate automated cost reporting:
+- **Querying with Athena**: You can query exported Storage Lens Parquet metrics using [[en/02-services/analytics-streaming/athena/athena|athena]] to generate automated cost reporting:
 
 ```sql
 SELECT
@@ -123,7 +123,7 @@ HAVING sum(incomplete_multipart_upload_bytes) > 0
 ORDER BY incomplete_mpu_gb DESC;
 ```
 
-- **Visualizing with QuickSight**: Build executive storage cost dashboards and trend visualizations in [[quicksight]] connected directly to the Athena dataset.
+- **Visualizing with QuickSight**: Build executive storage cost dashboards and trend visualizations in [[en/02-services/analytics-streaming/quicksight/quicksight|quicksight]] connected directly to the Athena dataset.
 
 ---
 
@@ -154,9 +154,9 @@ ORDER BY incomplete_mpu_gb DESC;
 
 ## 📌 Related Notes
 
-- [[s3]] — Amazon S3 Overview & Storage Classes
-- [[s3-performance]] — S3 Request Limits & Performance Optimization
-- [[s3-encryption]] — S3 Encryption & Bucket Security Auditing
-- [[cost-management]] — AWS Cost Explorer, AWS Budgets & Cost Optimization
-- [[athena]] — Querying Parquet Exports with SQL
-- [[quicksight]] — BI Dashboards & Visualizations for Storage Lens
+- [[en/02-services/storage/s3/s3|s3]] — Amazon S3 Overview & Storage Classes
+- [[en/02-services/storage/s3/s3-performance|s3-performance]] — S3 Request Limits & Performance Optimization
+- [[en/02-services/storage/s3/s3-encryption|s3-encryption]] — S3 Encryption & Bucket Security Auditing
+- [[en/02-services/ml-dev-cost/cost-management|cost-management]] — AWS Cost Explorer, AWS Budgets & Cost Optimization
+- [[en/02-services/analytics-streaming/athena/athena|athena]] — Querying Parquet Exports with SQL
+- [[en/02-services/analytics-streaming/quicksight/quicksight|quicksight]] — BI Dashboards & Visualizations for Storage Lens

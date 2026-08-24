@@ -19,13 +19,13 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-storage-lens) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Organization-Wide Storage Visibility, Cost Optimization, Security & Protection Auditing
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[s3-performance]] | [[s3-encryption]] | [[cost-management]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/s3/s3-performance|s3-performance]] | [[mm/02-services/storage/s3/s3-encryption|s3-encryption]] | [[mm/02-services/ml-dev-cost/cost-management|cost-management]]
 
 ---
 
 ## 1. High-Level Summary
 
-**Amazon S3 Storage Lens** သည် AWS S3 Console တွင် တိုက်ရိုက်ထည့်သွင်းပေးထားသော organization-wide (အဖွဲ့အစည်းတစ်ခုလုံးဆိုင်ရာ) cloud storage analytics လုပ်ဆောင်ချက်တစ်ခုဖြစ်သည်။ AWS Data Engineering နှင့် **DEA-C01** exam တို့တွင်, S3 Storage Lens ကို **cost-optimization opportunities** (ကုန်ကျစရိတ်သက်သာစေမည့် အခွင့်အလမ်းများ) အား ရှာဖွေဖော်ထုတ်ရန် (ဥပမာ- ပြီးဆုံးခြင်းမရှိသော multipart upload များ သို့မဟုတ် S3 Standard တွင်ရှိသော အသုံးနည်းသည့် data များ)၊ **data protection and security posture** (ဒေတာလုံခြုံရေးနှင့် ကာကွယ်မှုအခြေအနေ) များကို စစ်ဆေးရန် (ဥပမာ- encrypt မလုပ်ထားသော bucket များ သို့မဟုတ် replication မရှိခြင်း) နှင့်၊ ၎င်းစစ်ဆေးချက်များကို [[athena]] နှင့် [[quicksight]] တို့ကိုအသုံးပြုပြီး analytics ပြုလုပ်နိုင်ရန်အတွက် **Parquet** format ဖြင့် S3 သို့ အသေးစိတ် storage metric များ export လုပ်ရန် အဓိကအသုံးပြုလေ့ရှိသည်။
+**Amazon S3 Storage Lens** သည် AWS S3 Console တွင် တိုက်ရိုက်ထည့်သွင်းပေးထားသော organization-wide (အဖွဲ့အစည်းတစ်ခုလုံးဆိုင်ရာ) cloud storage analytics လုပ်ဆောင်ချက်တစ်ခုဖြစ်သည်။ AWS Data Engineering နှင့် **DEA-C01** exam တို့တွင်, S3 Storage Lens ကို **cost-optimization opportunities** (ကုန်ကျစရိတ်သက်သာစေမည့် အခွင့်အလမ်းများ) အား ရှာဖွေဖော်ထုတ်ရန် (ဥပမာ- ပြီးဆုံးခြင်းမရှိသော multipart upload များ သို့မဟုတ် S3 Standard တွင်ရှိသော အသုံးနည်းသည့် data များ)၊ **data protection and security posture** (ဒေတာလုံခြုံရေးနှင့် ကာကွယ်မှုအခြေအနေ) များကို စစ်ဆေးရန် (ဥပမာ- encrypt မလုပ်ထားသော bucket များ သို့မဟုတ် replication မရှိခြင်း) နှင့်၊ ၎င်းစစ်ဆေးချက်များကို [[mm/02-services/analytics-streaming/athena/athena|athena]] နှင့် [[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]] တို့ကိုအသုံးပြုပြီး analytics ပြုလုပ်နိုင်ရန်အတွက် **Parquet** format ဖြင့် S3 သို့ အသေးစိတ် storage metric များ export လုပ်ရန် အဓိကအသုံးပြုလေ့ရှိသည်။
 
 ---
 
@@ -109,7 +109,7 @@ graph TD
 S3 Storage Lens Advanced သည် နေ့စဉ် metric ဖိုင်များကို သတ်မှတ်ထားသော S3 bucket သို့ တိုက်ရိုက် export လုပ်ခွင့်ပေးသည်:
 
 - **Supported Formats**: **Apache Parquet** (query အမြန်နှုန်းနှင့် storage ကုန်ကျစရိတ် သက်သာစေရန်အတွက် အကြံပြုသည်) သို့မဟုတ် **CSV**.
-- **Querying with Athena**: Export လုပ်ထားသော Storage Lens Parquet metric များကို [[athena]] အသုံးပြုပြီး query လုပ်ကာ နေ့စဉ် cost reporting ကို အလိုအလျောက်ထုတ်ယူနိုင်သည်:
+- **Querying with Athena**: Export လုပ်ထားသော Storage Lens Parquet metric များကို [[mm/02-services/analytics-streaming/athena/athena|athena]] အသုံးပြုပြီး query လုပ်ကာ နေ့စဉ် cost reporting ကို အလိုအလျောက်ထုတ်ယူနိုင်သည်:
 
 ```sql
 SELECT
@@ -124,7 +124,7 @@ HAVING sum(incomplete_multipart_upload_bytes) > 0
 ORDER BY incomplete_mpu_gb DESC;
 ```
 
-- **Visualizing with QuickSight**: Athena dataset နှင့် တိုက်ရိုက်ချိတ်ဆက်ထားသော [[quicksight]] တွင် storage ကုန်ကျစရိတ် dashboard များနှင့် trend visualization များကို တည်ဆောက်နိုင်သည်။
+- **Visualizing with QuickSight**: Athena dataset နှင့် တိုက်ရိုက်ချိတ်ဆက်ထားသော [[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]] တွင် storage ကုန်ကျစရိတ် dashboard များနှင့် trend visualization များကို တည်ဆောက်နိုင်သည်။
 
 ---
 
@@ -155,9 +155,9 @@ ORDER BY incomplete_mpu_gb DESC;
 
 ## 📌 Related Notes
 
-- [[s3]] — Amazon S3 Overview & Storage Classes
-- [[s3-performance]] — S3 Request Limits & Performance Optimization
-- [[s3-encryption]] — S3 Encryption & Bucket Security Auditing
-- [[cost-management]] — AWS Cost Explorer, AWS Budgets & Cost Optimization
-- [[athena]] — Querying Parquet Exports with SQL
-- [[quicksight]] — BI Dashboards & Visualizations for Storage Lens
+- [[mm/02-services/storage/s3/s3|s3]] — Amazon S3 Overview & Storage Classes
+- [[mm/02-services/storage/s3/s3-performance|s3-performance]] — S3 Request Limits & Performance Optimization
+- [[mm/02-services/storage/s3/s3-encryption|s3-encryption]] — S3 Encryption & Bucket Security Auditing
+- [[mm/02-services/ml-dev-cost/cost-management|cost-management]] — AWS Cost Explorer, AWS Budgets & Cost Optimization
+- [[mm/02-services/analytics-streaming/athena/athena|athena]] — Querying Parquet Exports with SQL
+- [[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]] — BI Dashboards & Visualizations for Storage Lens

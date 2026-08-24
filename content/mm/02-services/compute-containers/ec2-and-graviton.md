@@ -17,9 +17,9 @@ date: 2026-08-14
 
 - **Category**: Compute (Virtual Machine Infrastructure, Spot Pricing & Arm Processors)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/ec2-and-graviton) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: ကိုယ်ပိုင် hosting လုပ်ထားသော data platform များအတွက် Compute အဓိကအစိတ်အပိုင်း၊ [[emr]] cluster များ (Master, Core, Task nodes) အတွက် အခြေခံ instance ဖွဲ့စည်းပုံ၊ နှင့် [[msk]], [[rds-and-aurora]], [[opensearch]], နှင့် [[lambda]] တို့တွင် ကိုယ်ပိုင် **AWS Graviton** silicon ကို အသုံးပြု၍ ဈေးနှုန်း-စွမ်းဆောင်ရည် (price-performance) အမြင့်ဆုံးရယူခြင်း။
+- **Primary Use Case**: ကိုယ်ပိုင် hosting လုပ်ထားသော data platform များအတွက် Compute အဓိကအစိတ်အပိုင်း၊ [[mm/02-services/analytics-streaming/emr/emr|emr]] cluster များ (Master, Core, Task nodes) အတွက် အခြေခံ instance ဖွဲ့စည်းပုံ၊ နှင့် [[mm/02-services/analytics-streaming/msk/msk|msk]], [[mm/02-services/database/rds-and-aurora|rds-and-aurora]], [[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]], နှင့် [[mm/02-services/compute-containers/lambda|lambda]] တို့တွင် ကိုယ်ပိုင် **AWS Graviton** silicon ကို အသုံးပြု၍ ဈေးနှုန်း-စွမ်းဆောင်ရည် (price-performance) အမြင့်ဆုံးရယူခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ စာမျက်နှာ 286–288
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[emr]] | [[batch]] | [[ecr-ecs-eks]] | [[lambda]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/02-services/analytics-streaming/emr/emr|emr]] | [[mm/02-services/compute-containers/batch|batch]] | [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] | [[mm/02-services/compute-containers/lambda|lambda]]
 
 ---
 
@@ -90,7 +90,7 @@ graph TB
 | :--- | :--- | :--- | :--- |
 | **On-Demand** | အခြေခံ ဈေးနှုန်း ($0\%$) | **None** (ရပ်တန့်မခံရမချင်း ရရှိနိုင်ရန် အာမခံသည်) | • Dev/Test ပတ်ဝန်းကျင်များ<br/>• အချိန်တို၊ ကြားဖြတ်ရပ်တန့်၍မရသော တစ်ကြိမ်တည်းသော data processing များ<br/>• EMR Master node များ |
 | **Spot Instances** | **90% အထိ လျှော့ဈေး** | ⚠️ **AWS မှ 2-မိနစ် ကြိုတင်အကြောင်းကြားချက်ဖြင့် ပြန်လည်သိမ်းယူနိုင်သည်** | • **EMR Task Nodes** (Compute သီးသန့်၊ HDFS storage မပါဝင်)<br/>• **S3 checkpointing ပါဝင်သော AWS Batch job များ**<br/>• ဖြန့်ကြက်ထားသော ML model training နှင့် hyperparameter tuning |
-| **Compute Savings Plans / EC2 Instance Savings Plans** | **72% အထိ လျှော့ဈေး** | **None** (1-နှစ် သို့မဟုတ် 3-နှစ် တစ်နာရီသုံးစွဲမှု ကတိကဝတ်) | • 24/7 Production database များ ([[rds-and-aurora]])<br/>• အချိန်ကြာမြင့်စွာ အမြဲတမ်းလည်ပတ်နေသော **EMR Master & Core node များ**<br/>• 24/7 **Amazon MSK** Kafka broker fleet များ |
+| **Compute Savings Plans / EC2 Instance Savings Plans** | **72% အထိ လျှော့ဈေး** | **None** (1-နှစ် သို့မဟုတ် 3-နှစ် တစ်နာရီသုံးစွဲမှု ကတိကဝတ်) | • 24/7 Production database များ ([[mm/02-services/database/rds-and-aurora|rds-and-aurora]])<br/>• အချိန်ကြာမြင့်စွာ အမြဲတမ်းလည်ပတ်နေသော **EMR Master & Core node များ**<br/>• 24/7 **Amazon MSK** Kafka broker fleet များ |
 
 ---
 
@@ -196,10 +196,10 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[emr]] — Amazon EMR cluster architecture, Master/Core/Task node mapping
-- [[batch]] — AWS Batch for spot-driven containerized batch computing
-- [[lambda]] — AWS Lambda Arm64 Graviton execution architecture
-- [[ecr-ecs-eks]] — Running containers on EC2, Fargate, and EKS
-- [[msk]] — Amazon MSK Graviton broker deployment
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/02-services/analytics-streaming/emr/emr|emr]] — Amazon EMR cluster architecture, Master/Core/Task node mapping
+- [[mm/02-services/compute-containers/batch|batch]] — AWS Batch for spot-driven containerized batch computing
+- [[mm/02-services/compute-containers/lambda|lambda]] — AWS Lambda Arm64 Graviton execution architecture
+- [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] — Running containers on EC2, Fargate, and EKS
+- [[mm/02-services/analytics-streaming/msk/msk|msk]] — Amazon MSK Graviton broker deployment
+- [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

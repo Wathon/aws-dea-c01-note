@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/emr/emr) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Petabyte-scale distributed data processing, SQL analytics, real-time streaming နှင့် open-source big data frameworks (Apache Spark, Hadoop, Presto/Trino, Hive, Flink, HBase, Hudi, Iceberg) များကို အသုံးပြု၍ machine learning လုပ်ငန်းများ ဆောင်ရွက်ရန်။
 - **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]` | `[[s3]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]` | `[[mm/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -87,12 +87,12 @@ AWS Certified Data Engineer စာမေးပွဲအတွက် Amazon EMR �
 
 | Sub-Module Note | Primary Technical Focus | Key Exam Concepts |
 | :--- | :--- | :--- |
-| **[[emr-cluster-architecture]]** | Master, Core နှင့် Task node topology များ၊ Instance Groups vs. Instance Fleets၊ HDFS vs. EMRFS။ | Task node များတွင် Spot Instances အသုံးပြုခြင်း၊ Core node များတွင် data loss မဖြစ်အောင် ကာကွယ်ခြင်း၊ EMRFS S3 decoupling။ |
-| **[[emr-serverless]]** | Spark နှင့် Hive အတွက် Serverless big data compute။ | Pre-initialized capacity၊ auto-scaling worker pools၊ EC2 cluster maintain လုပ်စရာ မလိုခြင်း (zero maintenance)။ |
-| **[[emr-on-eks]]** | Amazon EKS Kubernetes pod များအတွင်း Spark application များကို run ခြင်း။ | Virtual clusters၊ multi-tenant infrastructure consolidation၊ IRSA role mapping။ |
-| **[[emr-performance-optimization]]** | Spark အတွက် EMR Runtime (3 ဆ အထိ ပိုမိုမြန်ဆန်ခြင်း)၊ S3DistCp နှင့် memory/executor tuning။ | Small file များကို `s3-dist-cp --groupBy` ဖြင့် စုစည်းခြင်း၊ Spark dynamic allocation နှင့် shuffle tuning။ |
-| **[[emr-security-and-governance]]** | EMR Security Configurations၊ Kerberos၊ Lake Formation နှင့် VPC private networking။ | In-transit နှင့် at-rest encryption၊ fine-grained access control၊ Apache Ranger၊ private subnets။ |
-| **[[emr-lifecycle-and-cost]]** | Bootstrap actions၊ Steps execution၊ Transient vs. Persistent clusters နှင့် Auto-Scaling။ | Custom package တပ်ဆင်ခြင်း၊ transient batch ETL ပြီးဆုံးပါက cluster terminate ပြုလုပ်ခြင်း၊ Managed Auto Scaling policies။ |
+| **[[mm/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]** | Master, Core နှင့် Task node topology များ၊ Instance Groups vs. Instance Fleets၊ HDFS vs. EMRFS။ | Task node များတွင် Spot Instances အသုံးပြုခြင်း၊ Core node များတွင် data loss မဖြစ်အောင် ကာကွယ်ခြင်း၊ EMRFS S3 decoupling။ |
+| **[[mm/02-services/analytics-streaming/emr/emr-serverless|emr-serverless]]** | Spark နှင့် Hive အတွက် Serverless big data compute။ | Pre-initialized capacity၊ auto-scaling worker pools၊ EC2 cluster maintain လုပ်စရာ မလိုခြင်း (zero maintenance)။ |
+| **[[mm/02-services/analytics-streaming/emr/emr-on-eks|emr-on-eks]]** | Amazon EKS Kubernetes pod များအတွင်း Spark application များကို run ခြင်း။ | Virtual clusters၊ multi-tenant infrastructure consolidation၊ IRSA role mapping။ |
+| **[[mm/02-services/analytics-streaming/emr/emr-performance-optimization|emr-performance-optimization]]** | Spark အတွက် EMR Runtime (3 ဆ အထိ ပိုမိုမြန်ဆန်ခြင်း)၊ S3DistCp နှင့် memory/executor tuning။ | Small file များကို `s3-dist-cp --groupBy` ဖြင့် စုစည်းခြင်း၊ Spark dynamic allocation နှင့် shuffle tuning။ |
+| **[[mm/02-services/analytics-streaming/emr/emr-security-and-governance|emr-security-and-governance]]** | EMR Security Configurations၊ Kerberos၊ Lake Formation နှင့် VPC private networking။ | In-transit နှင့် at-rest encryption၊ fine-grained access control၊ Apache Ranger၊ private subnets။ |
+| **[[mm/02-services/analytics-streaming/emr/emr-lifecycle-and-cost|emr-lifecycle-and-cost]]** | Bootstrap actions၊ Steps execution၊ Transient vs. Persistent clusters နှင့် Auto-Scaling။ | Custom package တပ်ဆင်ခြင်း၊ transient batch ETL ပြီးဆုံးပါက cluster terminate ပြုလုပ်ခြင်း၊ Managed Auto Scaling policies။ |
 
 ---
 
@@ -154,11 +154,11 @@ graph TD
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[emr-cluster-architecture]]` — Node Types, Instance Fleets & Storage
-- `[[emr-serverless]]` — Serverless Spark & Hive Applications
-- `[[emr-on-eks]]` — Containerized Distributed Processing on Kubernetes
-- `[[emr-performance-optimization]]` — Spark Optimization, S3DistCp & Performance
-- `[[emr-security-and-governance]]` — Security Configurations, Kerberos & Lake Formation
-- `[[emr-lifecycle-and-cost]]` — Bootstrap Actions, Steps & Cost Governance
-- `[[glue]]` — AWS Glue Serverless Data Integration
-- `[[athena]]` — Serverless Interactive SQL on S3
+- `[[mm/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]` — Node Types, Instance Fleets & Storage
+- `[[mm/02-services/analytics-streaming/emr/emr-serverless|emr-serverless]]` — Serverless Spark & Hive Applications
+- `[[mm/02-services/analytics-streaming/emr/emr-on-eks|emr-on-eks]]` — Containerized Distributed Processing on Kubernetes
+- `[[mm/02-services/analytics-streaming/emr/emr-performance-optimization|emr-performance-optimization]]` — Spark Optimization, S3DistCp & Performance
+- `[[mm/02-services/analytics-streaming/emr/emr-security-and-governance|emr-security-and-governance]]` — Security Configurations, Kerberos & Lake Formation
+- `[[mm/02-services/analytics-streaming/emr/emr-lifecycle-and-cost|emr-lifecycle-and-cost]]` — Bootstrap Actions, Steps & Cost Governance
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Serverless Data Integration
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Serverless Interactive SQL on S3

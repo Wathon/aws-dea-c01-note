@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/quicksight/quicksight-reporting-ml-and-embedding)
 - **Primary Use Case**: Generating scheduled multi-page executive PDF reports, leveraging ML-powered anomaly detection and forecasting, natural language querying with QuickSight Q, and embedding dashboards into custom web applications.
 - **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[quicksight]]` | `[[quicksight-security-rls-and-governance]]` | `[[s3]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` | `[[en/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` | `[[en/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -156,7 +156,7 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes
-- `[[quicksight]]` — QuickSight Master Hub
-- `[[quicksight-spice-engine]]` — SPICE In-Memory Acceleration
-- `[[quicksight-security-rls-and-governance]]` — Tag-Based RLS for Multi-Tenant Embedding
-- `[[s3]]` — S3 Export Target for Paginated Reports
+- `[[en/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` — QuickSight Master Hub
+- `[[en/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` — SPICE In-Memory Acceleration
+- `[[en/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` — Tag-Based RLS for Multi-Tenant Embedding
+- `[[en/02-services/storage/s3/s3|s3]]` — S3 Export Target for Paginated Reports

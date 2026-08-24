@@ -18,7 +18,7 @@ date: 2026-08-08
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-lifecycle-rules) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Automated Data Tiering, Retention Management, Storage Cost Reduction, Cleanup of Noncurrent Versions & Incomplete Multipart Uploads
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/s3/s3-versioning|s3-versioning]] | [[mm/02-services/ml-dev-cost/cost-management|cost-management]] | [[mm/02-services/storage/s3/s3-storage-lens|s3-storage-lens]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/s3/s3-versioning|s3-versioning]] | [[mm/02-services/ml-dev-cost/cost-management|cost-management]] | [[mm/02-services/storage/s3/s3-storage-lens|s3-storage-lens]]
 
 ---
 

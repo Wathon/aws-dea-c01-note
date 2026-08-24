@@ -21,7 +21,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/quicksight/quicksight-troubleshooting-and-patterns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: SPICE ingestion ကျရှုံးမှုများကို ဖြေရှင်းခြင်း၊ Amazon S3 နှင့် Athena IAM permission ငြင်းပယ်မှုများ (denials) ကို ရှာဖွေစစ်ဆေးခြင်း၊ VPC database timeout များကို ပြင်ဆင်ခြင်း၊ နှင့် QuickSight ကို အခြား analytical service များနှင့် နှိုင်းယှဉ်သုံးသပ်ခြင်း။
 - **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[quicksight]]` | `[[quicksight-spice-engine]]` | `[[athena]]` | `[[redshift]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/database/redshift|redshift]]`
 
 ---
 
@@ -165,8 +165,8 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[quicksight]]` — QuickSight Master Hub
-- `[[quicksight-spice-engine]]` — SPICE In-Memory Engine & Incremental Refresh
-- `[[quicksight-security-rls-and-governance]]` — Row-Level & Column-Level Security
-- `[[athena]]` — Amazon Athena Query Staging
-- `[[redshift]]` — Amazon Redshift Architecture
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` — QuickSight Master Hub
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` — SPICE In-Memory Engine & Incremental Refresh
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` — Row-Level & Column-Level Security
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Query Staging
+- `[[mm/02-services/database/redshift|redshift]]` — Amazon Redshift Architecture

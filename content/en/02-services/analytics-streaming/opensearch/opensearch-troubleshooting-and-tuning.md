@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning)
 - **Primary Use Case**: Diagnosing Red and Yellow cluster health, resolving disk watermark write blocks (`read_only_allow_delete`), clearing JVM memory pressure, and optimizing bulk indexing throughput.
 - **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[opensearch]]` | `[[opensearch-cluster-architecture]]` | `[[opensearch-security-and-monitoring]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch-security-and-monitoring|opensearch-security-and-monitoring]]`
 
 ---
 
@@ -160,7 +160,7 @@ To achieve maximum write throughput during historical data loads or batch ingest
 ---
 
 ## 📌 Related Notes
-- `[[opensearch]]` — OpenSearch Master Hub
-- `[[opensearch-cluster-architecture]]` — Primary & Replica Shards
-- `[[opensearch-storage-tiers-and-ism]]` — UltraWarm & Cold Lifecycle
-- `[[opensearch-security-and-monitoring]]` — CloudWatch Metrics & Alarms
+- `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Master Hub
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` — Primary & Replica Shards
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` — UltraWarm & Cold Lifecycle
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-security-and-monitoring|opensearch-security-and-monitoring]]` — CloudWatch Metrics & Alarms

@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-ctas) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Spark cluster များကို manage လုပ်စရာမလိုဘဲ S3 ရှိ dataset များကို transform, compress, partition နှင့် export ပြုလုပ်ရန် lightweight SQL-based ETL ကို လုပ်ဆောင်ခြင်း။
 - **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]]`
 
 ---
 

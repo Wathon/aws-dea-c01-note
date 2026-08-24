@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Hot, UltraWarm နှင့် Cold storage tier များအကြား ကုန်ကျစရိတ်သက်သာစွာဖြင့် log retention ပြုလုပ်ခြင်း၊ အလိုအလျောက် index rollover များ ဆောင်ရွက်ခြင်း နှင့် Index State Management (ISM) lifecycle policy များကို သတ်မှတ်ခြင်း။
 - **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[opensearch-cluster-architecture]]` | `[[s3]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` | `[[mm/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -209,7 +209,7 @@ graph TD
 ---
 
 ## 📌 ဆက်စပ်မှတ်စုများ (Related Notes)
-- `[[opensearch]]` — OpenSearch Service Master Hub
-- `[[opensearch-cluster-architecture]]` — Primary & Replica Shards
-- `[[opensearch-troubleshooting-and-tuning]]` — Disk Watermarks & Heap Pressures
-- `[[s3]]` — S3 Data Lake Durability & Lifecycle
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Service Master Hub
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` — Primary & Replica Shards
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning|opensearch-troubleshooting-and-tuning]]` — Disk Watermarks & Heap Pressures
+- `[[mm/02-services/storage/s3/s3|s3]]` — S3 Data Lake Durability & Lifecycle

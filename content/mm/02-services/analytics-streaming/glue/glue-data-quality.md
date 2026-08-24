@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-data-quality) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အလိုအလျောက် data quality တိုင်းတာခြင်း၊ declarative DQDL rule စစ်ဆေးအတည်ပြုခြင်း၊ ချို့ယွင်းနေသော pipeline များကို circuit breaking လုပ်ခြင်း နှင့် မမှန်ကန်သော record များကို သီးခြားခွဲထုတ်ခြင်း (quarantining)။
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-etl-jobs]]` | `[[data-validation-and-profiling]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[mm/03-concepts/data-validation-and-profiling|data-validation-and-profiling]]`
 
 ---
 
@@ -27,8 +27,8 @@ date: 2026-08-17
 **AWS Glue Data Quality** သည် serverless ဖြစ်ပြီး declarative နည်းလမ်းဖြင့် data quality တိုင်းတာခြင်းနှင့် စစ်ဆေးအတည်ပြုခြင်း (validation) ပြုလုပ်ပေးသည့် engine တစ်ခု ဖြစ်သည်။ Dataset ၏ မှန်ကန်မှုကို စစ်ဆေးအတည်ပြုရန် data engineer များအနေဖြင့် ရှုပ်ထွေးသော custom PySpark unit-testing logic ကုဒ်လိုင်း ရာပေါင်းများစွာ ရေးသားရန် မလိုတော့ဘဲ၊ AWS Glue Data Quality သည် **DQDL (Data Quality Definition Language)** ကို အသုံးပြုသည်။
 
 ၎င်းသည် operational mode နှစ်မျိုးဖြင့် data quality ကို စစ်ဆေးအကဲဖြတ် (evaluate) နိုင်ပါသည်:
-1. **Data at Rest**: **[[glue-data-catalog]]** ထဲရှိ table များပေါ်တွင် တိုက်ရိုက် run သော scheduled သို့မဟုတ် on-demand စစ်ဆေးအကဲဖြတ်မှုများ။
-2. **Data in Transit**: **[[glue-etl-jobs]]** သို့မဟုတ် Glue Studio pipeline များအတွင်း ထည့်သွင်းထားသော real-time evaluation node များ။
+1. **Data at Rest**: **[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]** ထဲရှိ table များပေါ်တွင် တိုက်ရိုက် run သော scheduled သို့မဟုတ် on-demand စစ်ဆေးအကဲဖြတ်မှုများ။
+2. **Data in Transit**: **[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]** သို့မဟုတ် Glue Studio pipeline များအတွင်း ထည့်သွင်းထားသော real-time evaluation node များ။
 
 ```mermaid
 graph TD
@@ -205,7 +205,7 @@ AWS Glue Data Quality သည် enterprise gatekeeper တစ်ခုအဖြ�
 ---
 
 ## 📌 Related Notes (ဆက်စပ် မှတ်စုများ)
-- `[[glue]]` — AWS Glue Architecture & Overview
-- `[[glue-etl-jobs]]` — Embedding Data Quality in PySpark Jobs
-- `[[glue-studio]]` — Visual Data Quality Nodes in Studio
-- `[[data-validation-and-profiling]]` — Concept: Data Validation vs. Profiling
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture & Overview
+- `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Embedding Data Quality in PySpark Jobs
+- `[[mm/02-services/analytics-streaming/glue/glue-studio|glue-studio]]` — Visual Data Quality Nodes in Studio
+- `[[mm/03-concepts/data-validation-and-profiling|data-validation-and-profiling]]` — Concept: Data Validation vs. Profiling

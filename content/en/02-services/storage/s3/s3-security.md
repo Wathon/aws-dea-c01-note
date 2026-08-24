@@ -18,7 +18,7 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-security)
 - **Primary Use Case**: Defense-in-Depth Security, Access Control, Regulatory Compliance, Data Immutability & Auditing
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-encryption]] | [[s3-access-points]] | [[iam]] | [[lake-formation]] | [[macie-and-cloudtrail]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/s3/s3-encryption|s3-encryption]] | [[en/02-services/storage/s3/s3-access-points|s3-access-points]] | [[en/02-services/security-governance/iam|iam]] | [[en/02-services/security-governance/lake-formation|lake-formation]] | [[en/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]
 
 ---
 
@@ -91,7 +91,7 @@ To prevent S3 traffic from routing over the public internet:
 
 ## 5. Pillar 3: Encryption & In-Transit Security
 
-See full deep-dive note: [[s3-encryption]].
+See full deep-dive note: [[en/02-services/storage/s3/s3-encryption|s3-encryption]].
 
 - **Encryption in Transit (HTTPS/TLS)**: Mandatory enforcement via bucket policy:
   ```json
@@ -140,7 +140,7 @@ graph TD
 ### 2. AWS CloudTrail & S3 Server Access Logging
 
 - **CloudTrail Data Events**: Records API calls (`s3:GetObject`, `s3:PutObject`, `s3:DeleteObject`) for auditing.
-- **S3 Server Access Logs**: Delivers detailed request records (requester, bucket, time, response status) into a target S3 bucket for analysis with [[athena]].
+- **S3 Server Access Logs**: Delivers detailed request records (requester, bucket, time, response status) into a target S3 bucket for analysis with [[en/02-services/analytics-streaming/athena/athena|athena]].
 
 ---
 
@@ -173,10 +173,10 @@ graph TD
 
 ## 📌 Related Notes
 
-- [[s3]] — Main Amazon S3 Overview & Storage Classes
-- [[s3-encryption]] — Deep-dive on SSE-S3, SSE-KMS, DSSE-KMS & SSE-C
-- [[s3-access-points]] — VPC Access Points & S3 Object Lambda
-- [[s3-performance]] — S3 Request Limits & Performance Optimization
-- [[iam]] — IAM Roles, Policies & Service-Linked Roles
-- [[lake-formation]] — Fine-Grained Column/Row Governance
-- [[macie-and-cloudtrail]] — AWS Macie PII Scanning & CloudTrail Audit Logs
+- [[en/02-services/storage/s3/s3|s3]] — Main Amazon S3 Overview & Storage Classes
+- [[en/02-services/storage/s3/s3-encryption|s3-encryption]] — Deep-dive on SSE-S3, SSE-KMS, DSSE-KMS & SSE-C
+- [[en/02-services/storage/s3/s3-access-points|s3-access-points]] — VPC Access Points & S3 Object Lambda
+- [[en/02-services/storage/s3/s3-performance|s3-performance]] — S3 Request Limits & Performance Optimization
+- [[en/02-services/security-governance/iam|iam]] — IAM Roles, Policies & Service-Linked Roles
+- [[en/02-services/security-governance/lake-formation|lake-formation]] — Fine-Grained Column/Row Governance
+- [[en/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]] — AWS Macie PII Scanning & CloudTrail Audit Logs

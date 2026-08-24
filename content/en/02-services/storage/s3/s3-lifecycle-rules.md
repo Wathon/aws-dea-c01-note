@@ -17,7 +17,7 @@ date: 2026-08-08
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-lifecycle-rules)
 - **Primary Use Case**: Automated Data Tiering, Retention Management, Storage Cost Reduction, Cleanup of Noncurrent Versions & Incomplete Multipart Uploads
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-versioning]] | [[cost-management]] | [[s3-storage-lens]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/s3/s3-versioning|s3-versioning]] | [[en/02-services/ml-dev-cost/cost-management|cost-management]] | [[en/02-services/storage/s3/s3-storage-lens|s3-storage-lens]]
 
 ---
 
@@ -161,7 +161,7 @@ Lifecycle rules can be applied to an entire bucket or scoped narrowly using filt
 
 ## 📌 Related Notes
 
-- [[s3]] — Main Amazon S3 Overview & Storage Classes
-- [[s3-versioning]] — S3 Versioning, Delete Markers & MFA Delete
-- [[s3-storage-lens]] — Identifying Incomplete Multipart Uploads & Cost Analytics
-- [[cost-management]] — AWS Cost Explorer & Cost Optimization Strategies
+- [[en/02-services/storage/s3/s3|s3]] — Main Amazon S3 Overview & Storage Classes
+- [[en/02-services/storage/s3/s3-versioning|s3-versioning]] — S3 Versioning, Delete Markers & MFA Delete
+- [[en/02-services/storage/s3/s3-storage-lens|s3-storage-lens]] — Identifying Incomplete Multipart Uploads & Cost Analytics
+- [[en/02-services/ml-dev-cost/cost-management|cost-management]] — AWS Cost Explorer & Cost Optimization Strategies

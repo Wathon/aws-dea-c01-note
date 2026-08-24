@@ -16,7 +16,7 @@ date: 2026-08-15
 - **Category**: Data Quality & Governance (Data Pipeline Reliability)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/03-concepts/data-validation-and-profiling)
 - **Slide Reference**: Data Quality & Governance in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[glue]]` | `[[sagemaker-and-ai]]` | `[[lambda]]` | `[[s3]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/ml-dev-cost/sagemaker-and-ai|sagemaker-and-ai]]` | `[[en/02-services/compute-containers/lambda|lambda]]` | `[[en/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -128,7 +128,7 @@ flowchart LR
 
 ## 📌 Related Notes
 
-- `[[glue]]` — AWS Glue Data Catalog, Crawlers, ETL, and Glue Data Quality
-- `[[sagemaker-and-ai]]` — SageMaker Data Wrangler profiling
-- `[[data-formats-and-compression]]` — File formats and schema validation
-- `[[service-comparisons]]` — Glue Data Quality vs. DataBrew comparative matrix
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Data Catalog, Crawlers, ETL, and Glue Data Quality
+- `[[en/02-services/ml-dev-cost/sagemaker-and-ai|sagemaker-and-ai]]` — SageMaker Data Wrangler profiling
+- `[[en/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — File formats and schema validation
+- `[[en/04-exam-tips/service-comparisons|service-comparisons]]` — Glue Data Quality vs. DataBrew comparative matrix

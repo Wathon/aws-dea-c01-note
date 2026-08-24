@@ -15,7 +15,7 @@ date: 2026-08-15
 - **Category**: Fundamentals / Data Architecture & Storage Optimization
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/03-concepts/data-modeling-and-partitioning)
 - **Slide Reference**: Pages 49–75 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[redshift]]` | `[[glue]]` | `[[s3]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/database/redshift|redshift]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -133,7 +133,7 @@ graph LR
 
 ## 📌 Related Notes
 
-- `[[big-data-fundamentals]]` — Big Data 5 V's and Data Lake architecture
-- `[[data-formats-and-compression]]` — Parquet file formatting inside S3 partitions
-- `[[athena]]` — Amazon Athena Partition Projection configuration
-- `[[redshift]]` — Redshift Distribution Keys and Sort Keys
+- `[[en/03-concepts/big-data-fundamentals|big-data-fundamentals]]` — Big Data 5 V's and Data Lake architecture
+- `[[en/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — Parquet file formatting inside S3 partitions
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Partition Projection configuration
+- `[[en/02-services/database/redshift|redshift]]` — Redshift Distribution Keys and Sort Keys

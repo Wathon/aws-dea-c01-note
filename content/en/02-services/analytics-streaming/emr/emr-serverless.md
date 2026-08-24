@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/emr/emr-serverless)
 - **Primary Use Case**: Running large-scale Apache Spark and Apache Hive workloads without provisioning, sizing, managing, or tuning underlying EC2 clusters.
 - **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[emr]]` | `[[glue-etl-jobs]]` | `[[athena-spark]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/emr/emr|emr]]` | `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[en/02-services/analytics-streaming/athena/athena-spark|athena-spark]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -96,7 +96,7 @@ When submitting a job, you can define custom worker configurations for the Spark
 ---
 
 ### 5. Custom Container Images
-- If your Spark application requires specific C++ libraries, proprietary Python packages, or specific Java dependencies that cannot be installed via PyPI at runtime, EMR Serverless supports **Custom Docker Container Images** stored in **[[ecr-ecs-eks|Amazon ECR]]**.
+- If your Spark application requires specific C++ libraries, proprietary Python packages, or specific Java dependencies that cannot be installed via PyPI at runtime, EMR Serverless supports **Custom Docker Container Images** stored in **[[en/02-services/compute-containers/ecr-ecs-eks|Amazon ECR]]**.
 
 ---
 
@@ -128,8 +128,8 @@ When submitting a job, you can define custom worker configurations for the Spark
 ---
 
 ## 📌 Related Notes
-- `[[emr]]` — Amazon EMR Overview Hub
-- `[[emr-cluster-architecture]]` — Provisioned EMR on EC2 Clusters
-- `[[emr-on-eks]]` — Containerized Spark on Kubernetes
-- `[[glue-etl-jobs]]` — AWS Glue Serverless Spark Alternative
-- `[[athena-spark]]` — Interactive Serverless Spark Notebooks
+- `[[en/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR Overview Hub
+- `[[en/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]` — Provisioned EMR on EC2 Clusters
+- `[[en/02-services/analytics-streaming/emr/emr-on-eks|emr-on-eks]]` — Containerized Spark on Kubernetes
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — AWS Glue Serverless Spark Alternative
+- `[[en/02-services/analytics-streaming/athena/athena-spark|athena-spark]]` — Interactive Serverless Spark Notebooks

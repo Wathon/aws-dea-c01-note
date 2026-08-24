@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena)
 - **Primary Use Case**: Interactive ad-hoc SQL querying on S3 Data Lakes, multi-source federated analytics, serverless Apache Spark notebooks, and lightweight ETL.
 - **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-2-data-store-management]]` | `[[domain-3-data-processing]]` | `[[s3]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]]` | `[[domain-3-data-processing]]` | `[[en/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -27,7 +27,7 @@ date: 2026-08-17
 
 Athena is completely serverless—there is no compute infrastructure, EC2 cluster, or data warehouse to size, provision, or manage. You pay strictly for the queries you run, based on the **volume of data scanned** (standard pricing: **$5.00 per Terabyte (TB) scanned**, with a 10 MB minimum per query).
 
-Under the hood, Amazon Athena is powered by **Presto / Trino** (Engine Version 3) for distributed SQL execution, and uses the **[[glue-data-catalog]]** as its centralized, Apache Hive-compatible metadata layer.
+Under the hood, Amazon Athena is powered by **Presto / Trino** (Engine Version 3) for distributed SQL execution, and uses the **[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]** as its centralized, Apache Hive-compatible metadata layer.
 
 ```mermaid
 graph TD
@@ -84,8 +84,8 @@ graph TD
 ## 2. Core Architecture & Query Execution Flow
 
 1. **Query Submission**: A user or BI tool submits a standard ANSI SQL query via the Athena Web Console, AWS CLI, SDK, or JDBC/ODBC drivers.
-2. **Metadata Retrieval**: The Athena query engine contacts the **[[glue-data-catalog]]** to retrieve the table schema, serialization library (SerDe), S3 prefix locations, and partition metadata.
-3. **Security & Access Evaluation**: Athena checks IAM permissions and evaluates fine-grained access control policies via **[[lake-formation]]** (enforcing column-level, row-level, and cell-level security filters).
+2. **Metadata Retrieval**: The Athena query engine contacts the **[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]** to retrieve the table schema, serialization library (SerDe), S3 prefix locations, and partition metadata.
+3. **Security & Access Evaluation**: Athena checks IAM permissions and evaluates fine-grained access control policies via **[[en/02-services/security-governance/lake-formation|lake-formation]]** (enforcing column-level, row-level, and cell-level security filters).
 4. **Distributed Execution**: Athena provisions distributed Presto compute workers across multiple Availability Zones to scan and aggregate the underlying S3 objects in parallel.
 5. **Result Output & Storage**: Athena writes the resulting dataset in **CSV format** along with a `.metadata` file into a designated **Amazon S3 Query Results bucket** (`s3://aws-athena-query-results-.../`).
 
@@ -97,12 +97,12 @@ To master Athena for the Data Engineer exam, understand the dedicated specialize
 
 | Feature / Sub-Topic | Primary Purpose | Key Exam Trigger | Detailed Note |
 | :--- | :--- | :--- | :--- |
-| **Performance Optimization** | Minimize data scanned and maximize query speed using Parquet, Snappy, and Partition Projection. | Converting CSV/JSON to Parquet; slow partition metadata lookups. | `[[athena-performance]]` |
-| **ACID Transactions (Apache Iceberg)** | Perform row-level `UPDATE`, `DELETE`, and `MERGE INTO` operations with time-travel queries on S3. | GDPR / CCPA right-to-be-forgotten; concurrent writers on S3. | `[[athena-iceberg]]` |
-| **Athena for Apache Spark** | Interactive PySpark analytics and Jupyter notebooks with sub-second startup (< 1 sec). | Interactive Python data exploration without waiting for EMR/Glue clusters. | `[[athena-spark]]` |
-| **Federated Queries** | Query non-S3 sources (DynamoDB, RDS, CloudWatch) in place using AWS Lambda connectors. | Querying across S3 and DynamoDB in a single SQL query without ETL. | `[[athena-federated-query]]` |
-| **Workgroups & Governance** | Multi-tenant isolation, per-query and workgroup-wide data scan limits, and mandatory encryption. | Preventing runaway query bills; separating team query histories. | `[[athena-workgroups]]` |
-| **CTAS & UNLOAD Statements** | Lightweight serverless ETL using SQL to transform, partition, and compress S3 datasets. | Transforming raw CSV to Parquet using pure SQL; exporting query results. | `[[athena-ctas]]` |
+| **Performance Optimization** | Minimize data scanned and maximize query speed using Parquet, Snappy, and Partition Projection. | Converting CSV/JSON to Parquet; slow partition metadata lookups. | `[[en/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` |
+| **ACID Transactions (Apache Iceberg)** | Perform row-level `UPDATE`, `DELETE`, and `MERGE INTO` operations with time-travel queries on S3. | GDPR / CCPA right-to-be-forgotten; concurrent writers on S3. | `[[en/02-services/analytics-streaming/athena/athena-iceberg|athena-iceberg]]` |
+| **Athena for Apache Spark** | Interactive PySpark analytics and Jupyter notebooks with sub-second startup (< 1 sec). | Interactive Python data exploration without waiting for EMR/Glue clusters. | `[[en/02-services/analytics-streaming/athena/athena-spark|athena-spark]]` |
+| **Federated Queries** | Query non-S3 sources (DynamoDB, RDS, CloudWatch) in place using AWS Lambda connectors. | Querying across S3 and DynamoDB in a single SQL query without ETL. | `[[en/02-services/analytics-streaming/athena/athena-federated-query|athena-federated-query]]` |
+| **Workgroups & Governance** | Multi-tenant isolation, per-query and workgroup-wide data scan limits, and mandatory encryption. | Preventing runaway query bills; separating team query histories. | `[[en/02-services/analytics-streaming/athena/athena-workgroups|athena-workgroups]]` |
+| **CTAS & UNLOAD Statements** | Lightweight serverless ETL using SQL to transform, partition, and compress S3 datasets. | Transforming raw CSV to Parquet using pure SQL; exporting query results. | `[[en/02-services/analytics-streaming/athena/athena-ctas|athena-ctas]]` |
 
 ---
 
@@ -154,11 +154,11 @@ Athena includes a **Query Result Reuse (Result Caching)** feature:
 ---
 
 ## 📌 Related Notes
-- `[[athena-performance]]` — Athena Cost & Performance Tuning
-- `[[athena-iceberg]]` — Apache Iceberg ACID Transactions on Athena
-- `[[athena-spark]]` — Athena for Apache Spark
-- `[[athena-federated-query]]` — Querying Non-S3 Sources with Lambda Connectors
-- `[[athena-workgroups]]` — Workgroups, Cost Limits & Security Governance
-- `[[athena-ctas]]` — Serverless Lightweight ETL with CTAS & UNLOAD
-- `[[glue-data-catalog]]` — Glue Metadata Metastore
-- `[[s3]]` — S3 Data Lake Foundation
+- `[[en/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — Athena Cost & Performance Tuning
+- `[[en/02-services/analytics-streaming/athena/athena-iceberg|athena-iceberg]]` — Apache Iceberg ACID Transactions on Athena
+- `[[en/02-services/analytics-streaming/athena/athena-spark|athena-spark]]` — Athena for Apache Spark
+- `[[en/02-services/analytics-streaming/athena/athena-federated-query|athena-federated-query]]` — Querying Non-S3 Sources with Lambda Connectors
+- `[[en/02-services/analytics-streaming/athena/athena-workgroups|athena-workgroups]]` — Workgroups, Cost Limits & Security Governance
+- `[[en/02-services/analytics-streaming/athena/athena-ctas|athena-ctas]]` — Serverless Lightweight ETL with CTAS & UNLOAD
+- `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Metadata Metastore
+- `[[en/02-services/storage/s3/s3|s3]]` — S3 Data Lake Foundation

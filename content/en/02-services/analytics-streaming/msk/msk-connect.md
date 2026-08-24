@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk-connect)
 - **Primary Use Case**: Running serverless Apache Kafka Connect source and sink connectors to ingest CDC streams and deliver Kafka data directly to Amazon S3, OpenSearch, Redshift, and Snowflake without managing worker servers.
 - **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[msk]]` | `[[kinesis-firehose]]` | `[[s3]]` | `[[opensearch]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/msk/msk|msk]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]`
 
 ---
 
@@ -133,8 +133,8 @@ A frequent architectural decision on the exam is choosing between **MSK Connect*
 ---
 
 ## 📌 Related Notes
-- `[[msk]]` — Amazon MSK Master Hub
-- `[[msk-cluster-architecture]]` — MSK Provisioned Brokers
-- `[[kinesis-firehose]]` — Serverless Micro-Batch Delivery
-- `[[s3]]` — S3 Data Lake Storage Architecture
-- `[[opensearch]]` — OpenSearch Analytics & Indexing
+- `[[en/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Master Hub
+- `[[en/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — MSK Provisioned Brokers
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Serverless Micro-Batch Delivery
+- `[[en/02-services/storage/s3/s3|s3]]` — S3 Data Lake Storage Architecture
+- `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Analytics & Indexing

@@ -16,7 +16,7 @@ date: 2026-08-15
 - **Category**: Fundamentals (ခွဲခြမ်းစိတ်ဖြာ SQL နှင့် Pipeline Version Control)
 - **Language / ဘာသာစကား**: [English Version](/en/03-concepts/sql-and-version-control-review) | **မြန်မာဘာသာ (Burmese)**
 - **Slide Reference**: Pages 51–75 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[redshift]]` | `[[cdk-cloudformation]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/ml-dev-cost/cdk-cloudformation|cdk-cloudformation]]`
 
 ---
 
@@ -111,6 +111,6 @@ graph LR
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
 
-- `[[athena]]` — Amazon Athena တွင် ANSI SQL Window Functions များ အသုံးပြုခြင်း
-- `[[redshift]]` — Amazon Redshift SQL Optimization၊ Sort Keys နှင့် Distribution Keys
-- `[[cdk-cloudformation]]` — AWS CloudFormation နှင့် CDK ဖြင့် Infrastructure Versioning ပြုလုပ်ခြင်း
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena တွင် ANSI SQL Window Functions များ အသုံးပြုခြင်း
+- `[[mm/02-services/database/redshift|redshift]]` — Amazon Redshift SQL Optimization၊ Sort Keys နှင့် Distribution Keys
+- `[[mm/02-services/ml-dev-cost/cdk-cloudformation|cdk-cloudformation]]` — AWS CloudFormation နှင့် CDK ဖြင့် Infrastructure Versioning ပြုလုပ်ခြင်း

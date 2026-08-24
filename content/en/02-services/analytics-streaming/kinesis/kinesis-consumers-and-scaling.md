@@ -19,7 +19,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling)
 - **Primary Use Case**: High-throughput stream consumption, dedicated consumer fan-out, KCL state coordination via DynamoDB, and automated Lambda error handling.
 - **Slide Reference**: Pages 425–445 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[dynamodb]]` | `[[lambda]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[en/02-services/database/dynamodb|dynamodb]]` | `[[en/02-services/compute-containers/lambda|lambda]]`
 
 ---
 
@@ -182,7 +182,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-data-streams]]` — Shards, Partition Keys & Capacity Modes
-- `[[dynamodb]]` — DynamoDB Capacity & KCL State Storage
-- `[[lambda]]` — AWS Lambda Stream Processing Architecture
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — Shards, Partition Keys & Capacity Modes
+- `[[en/02-services/database/dynamodb|dynamodb]]` — DynamoDB Capacity & KCL State Storage
+- `[[en/02-services/compute-containers/lambda|lambda]]` — AWS Lambda Stream Processing Architecture

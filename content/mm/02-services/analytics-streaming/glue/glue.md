@@ -16,7 +16,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case / အဓိက အသုံးပြုမှု**: Serverless ETL၊ ဗဟိုချုပ်ကိုင်မှုရှိသော Metadata Management၊ အလိုအလျောက် Schema Discovery ပြုလုပ်ခြင်း၊ Data Quality Governance၊ Visual နှင့် Code အခြေပြု Data Preparation များ ဆောင်ရွက်ခြင်း။
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -24,7 +24,7 @@ date: 2026-08-17
 
 **AWS Glue** သည် Analytics၊ Machine Learning နှင့် Application Development တို့အတွက် ဒေတာများကို ရှာဖွေတွေ့ရှိခြင်း (discover)၊ ပြင်ဆင်ခြင်း (prepare)၊ အသွင်ပြောင်းလဲခြင်း (transform) နှင့် ပေါင်းစပ်ခြင်း (combine) တို့ကို လွယ်ကူချောမွေ့စွာ ပြုလုပ်နိုင်သော fully managed၊ event-driven ဖြစ်သည့် serverless data integration service တစ်ခုဖြစ်သည်။ ၎င်းသည် AWS Modern Data Architecture တစ်လျှောက်တွင် အခြေခံအကျဆုံး data pipeline engine အဖြစ် ဆောင်ရွက်ပေးသည်။
 
-**[[emr]]** ကဲ့သို့ cluster-based framework များနှင့်မတူဘဲ AWS Glue သည် အောက်ခြေ compute infrastructure အားလုံးကို abstract လုပ်ထားပြီး စီမံခန့်ခွဲစရာမလိုအောင် ဖယ်ရှားပေးသည်။ ၎င်းသည် လိုအပ်သော compute resource များကို အလိုအလျောက် provision ပြုလုပ်ခြင်း၊ configure ချခြင်းနှင့် auto-scale လုပ်ဆောင်ခြင်းတို့ကို ဆောင်ရွက်ပေးပြီး၊ jobs များမှ အသုံးပြုသော **Data Processing Units (DPUs)** ပေါ်တွင်သာ တစ်စက္ကန့်ချင်းအလိုက် (per-second) တိကျစွာ ကုန်ကျစရိတ် ကောက်ခံပါသည် (1 DPU = 4 vCPUs နှင့် 16 GB memory)။
+**[[mm/02-services/analytics-streaming/emr/emr|emr]]** ကဲ့သို့ cluster-based framework များနှင့်မတူဘဲ AWS Glue သည် အောက်ခြေ compute infrastructure အားလုံးကို abstract လုပ်ထားပြီး စီမံခန့်ခွဲစရာမလိုအောင် ဖယ်ရှားပေးသည်။ ၎င်းသည် လိုအပ်သော compute resource များကို အလိုအလျောက် provision ပြုလုပ်ခြင်း၊ configure ချခြင်းနှင့် auto-scale လုပ်ဆောင်ခြင်းတို့ကို ဆောင်ရွက်ပေးပြီး၊ jobs များမှ အသုံးပြုသော **Data Processing Units (DPUs)** ပေါ်တွင်သာ တစ်စက္ကန့်ချင်းအလိုက် (per-second) တိကျစွာ ကုန်ကျစရိတ် ကောက်ခံပါသည် (1 DPU = 4 vCPUs နှင့် 16 GB memory)။
 
 ```mermaid
 graph TD
@@ -96,15 +96,15 @@ AWS Glue သည် tool တစ်ခုတည်းသာ မဟုတ်ဘဲ 
 
 | Component | Primary Function (အဓိက လုပ်ဆောင်ချက်) | Core Technology / Language | Detailed Note |
 | :--- | :--- | :--- | :--- |
-| **Glue Data Catalog** | Table definitions၊ partitions၊ schema versions များနှင့် connections များအတွက် ဗဟို Apache Hive-compatible metastore ဖြစ်သည်။ | Apache Hive Metastore API | `[[glue-data-catalog]]` |
-| **Glue Crawlers** | Schema များကို တွက်ဆဖော်ထုတ်ရန်၊ partition များကို သိရှိရှာဖွေရန်နှင့် catalog ကို update လုပ်ရန် Data stores များ (S3, JDBC, DynamoDB) ကို အလိုအလျောက် scan ဖတ်ပေးသော scanner ဖြစ်သည်။ | Classifiers (Grok / Built-in) | `[[glue-crawlers]]` |
-| **Glue ETL Jobs** | Built-in DynamicFrames နှင့် state management ပါဝင်သော Serverless batch နှင့် streaming data transformation engine ဖြစ်သည်။ | PySpark, Spark Scala, Python Shell | `[[glue-etl-jobs]]` |
-| **Glue Data Quality** | Data health ကို တိုင်းတာရန်၊ job များကို fail ဖြစ်စေရန် သို့မဟုတ် မမှန်ကန်သော bad records များကို သီးခြားခွဲထုတ်ရန် (quarantine) DQDL rulesets များကို အသုံးပြုသည့် Declarative data validation framework ဖြစ်သည်။ | DQDL (Data Quality Definition Lang) | `[[glue-data-quality]]` |
-| **Glue DataBrew** | Business analysts များနှင့် data scientists များအတွက် 250+ pre-built transformations များပါဝင်သော Visual, spreadsheet ပုံစံ data preparation tool ဖြစ်သည်။ | Visual UI / Recipe Engine | `[[glue-databrew]]` |
-| **Glue Studio** | Code ရေးစရာမလိုဘဲ Spark ETL jobs များကို ရေးဆွဲခြင်း၊ run ခြင်း၊ စစ်ဆေးခြင်းနှင့် စောင့်ကြည့်ခြင်းတို့ ပြုလုပ်နိုင်သည့် Visual drag-and-drop DAG interface ဖြစ်သည်။ | Visual GUI / Auto-generated Spark | `[[glue-studio]]` |
-| **Glue Flex Execution** | အချိန်နှင့် တပြေးညီ လုပ်ဆောင်ရန် မလိုအပ်သော (non-time-sensitive)၊ non-SLA batch jobs များအတွက် 35% အထိ ကုန်ကျစရိတ် သက်သာစေသော execution class ဖြစ်သည်။ | Spot-like compute capacity | `[[glue-flex]]` |
-| **Glue Workflows** | အဆင့်ဆင့်ပါဝင်သော Glue pipelines များ (Triggers, Crawlers, and Jobs) ကို visual DAGs အနေဖြင့် စီမံခန့်ခွဲရန် သီးသန့်တည်ဆောက်ထားသော orchestration service ဖြစ်သည်။ | Native Glue Orchestration | `[[glue-workflows]]` |
-| **Glue Schema Registry** | Real time တွင် message structure များကို validate လုပ်ပေးပြီး evolve ဖြစ်စေသည့် ဗဟိုချုပ်ကိုင်မှုရှိသော streaming schema governance ဖြစ်သည်။ | Apache Avro, JSON Schema, Protobuf | `[[glue-schema-registry]]` |
+| **Glue Data Catalog** | Table definitions၊ partitions၊ schema versions များနှင့် connections များအတွက် ဗဟို Apache Hive-compatible metastore ဖြစ်သည်။ | Apache Hive Metastore API | `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` |
+| **Glue Crawlers** | Schema များကို တွက်ဆဖော်ထုတ်ရန်၊ partition များကို သိရှိရှာဖွေရန်နှင့် catalog ကို update လုပ်ရန် Data stores များ (S3, JDBC, DynamoDB) ကို အလိုအလျောက် scan ဖတ်ပေးသော scanner ဖြစ်သည်။ | Classifiers (Grok / Built-in) | `[[mm/02-services/analytics-streaming/glue/glue-crawlers|glue-crawlers]]` |
+| **Glue ETL Jobs** | Built-in DynamicFrames နှင့် state management ပါဝင်သော Serverless batch နှင့် streaming data transformation engine ဖြစ်သည်။ | PySpark, Spark Scala, Python Shell | `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` |
+| **Glue Data Quality** | Data health ကို တိုင်းတာရန်၊ job များကို fail ဖြစ်စေရန် သို့မဟုတ် မမှန်ကန်သော bad records များကို သီးခြားခွဲထုတ်ရန် (quarantine) DQDL rulesets များကို အသုံးပြုသည့် Declarative data validation framework ဖြစ်သည်။ | DQDL (Data Quality Definition Lang) | `[[mm/02-services/analytics-streaming/glue/glue-data-quality|glue-data-quality]]` |
+| **Glue DataBrew** | Business analysts များနှင့် data scientists များအတွက် 250+ pre-built transformations များပါဝင်သော Visual, spreadsheet ပုံစံ data preparation tool ဖြစ်သည်။ | Visual UI / Recipe Engine | `[[mm/02-services/analytics-streaming/glue/glue-databrew|glue-databrew]]` |
+| **Glue Studio** | Code ရေးစရာမလိုဘဲ Spark ETL jobs များကို ရေးဆွဲခြင်း၊ run ခြင်း၊ စစ်ဆေးခြင်းနှင့် စောင့်ကြည့်ခြင်းတို့ ပြုလုပ်နိုင်သည့် Visual drag-and-drop DAG interface ဖြစ်သည်။ | Visual GUI / Auto-generated Spark | `[[mm/02-services/analytics-streaming/glue/glue-studio|glue-studio]]` |
+| **Glue Flex Execution** | အချိန်နှင့် တပြေးညီ လုပ်ဆောင်ရန် မလိုအပ်သော (non-time-sensitive)၊ non-SLA batch jobs များအတွက် 35% အထိ ကုန်ကျစရိတ် သက်သာစေသော execution class ဖြစ်သည်။ | Spot-like compute capacity | `[[mm/02-services/analytics-streaming/glue/glue-flex|glue-flex]]` |
+| **Glue Workflows** | အဆင့်ဆင့်ပါဝင်သော Glue pipelines များ (Triggers, Crawlers, and Jobs) ကို visual DAGs အနေဖြင့် စီမံခန့်ခွဲရန် သီးသန့်တည်ဆောက်ထားသော orchestration service ဖြစ်သည်။ | Native Glue Orchestration | `[[mm/02-services/analytics-streaming/glue/glue-workflows|glue-workflows]]` |
+| **Glue Schema Registry** | Real time တွင် message structure များကို validate လုပ်ပေးပြီး evolve ဖြစ်စေသည့် ဗဟိုချုပ်ကိုင်မှုရှိသော streaming schema governance ဖြစ်သည်။ | Apache Avro, JSON Schema, Protobuf | `[[mm/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` |
 
 ---
 
@@ -194,15 +194,15 @@ AWS Glue သည် ETL lifecycle တစ်ခုလုံးတွင် encrypt
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[glue-data-catalog]]` — Glue Data Catalog, Metastore & Partition Indexes
-- `[[glue-crawlers]]` — Glue Crawlers, Classifiers & Schema Drift
-- `[[glue-etl-jobs]]` — Glue ETL Jobs, DynamicFrames & Performance Tuning
-- `[[glue-data-quality]]` — AWS Glue Data Quality & DQDL Rules
-- `[[glue-databrew]]` — AWS Glue DataBrew for Visual Preparation
-- `[[glue-studio]]` — AWS Glue Studio Visual ETL
-- `[[glue-flex]]` — AWS Glue Flex Execution Class
-- `[[glue-workflows]]` — AWS Glue Workflows Orchestration
-- `[[glue-schema-registry]]` — AWS Glue Schema Registry for Streaming
-- `[[athena]]` — Amazon Athena Integration
-- `[[emr]]` — Amazon EMR vs. AWS Glue
-- `[[lake-formation]]` — AWS Lake Formation Centralized Governance
+- `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Data Catalog, Metastore & Partition Indexes
+- `[[mm/02-services/analytics-streaming/glue/glue-crawlers|glue-crawlers]]` — Glue Crawlers, Classifiers & Schema Drift
+- `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Glue ETL Jobs, DynamicFrames & Performance Tuning
+- `[[mm/02-services/analytics-streaming/glue/glue-data-quality|glue-data-quality]]` — AWS Glue Data Quality & DQDL Rules
+- `[[mm/02-services/analytics-streaming/glue/glue-databrew|glue-databrew]]` — AWS Glue DataBrew for Visual Preparation
+- `[[mm/02-services/analytics-streaming/glue/glue-studio|glue-studio]]` — AWS Glue Studio Visual ETL
+- `[[mm/02-services/analytics-streaming/glue/glue-flex|glue-flex]]` — AWS Glue Flex Execution Class
+- `[[mm/02-services/analytics-streaming/glue/glue-workflows|glue-workflows]]` — AWS Glue Workflows Orchestration
+- `[[mm/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` — AWS Glue Schema Registry for Streaming
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Integration
+- `[[mm/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR vs. AWS Glue
+- `[[mm/02-services/security-governance/lake-formation|lake-formation]]` — AWS Lake Formation Centralized Governance

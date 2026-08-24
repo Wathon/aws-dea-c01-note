@@ -21,7 +21,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sns/sns-delivery-retries-and-dead-letter-queues) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Downstream subscriber endpoint များ fail သည့်အခါ delivery retry policy များ configure လုပ်ခြင်း၊ SNS subscription များတွင် Amazon SQS Dead-Letter Queues (DLQs) ချိတ်ဆက်ခြင်း၊ နှင့် ပြန်လည်မရရှိနိုင်သော message drops ဖြစ်ပေါ်မှုကို ကာကွယ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 499–525
-- **Hub Links**: `[[mm/index]]` | `[[sns]]` | `[[sqs-dead-letter-queues-and-error-handling]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/sns/sns|sns]]` | `[[mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -157,7 +157,7 @@ SNS subscription တစ်ခုသို့ SQS Dead-Letter Queue ချိတ�
 ---
 
 ## 📌 Related Notes
-- `[[sns]]` — SNS Master Hub
-- `[[sqs-dead-letter-queues-and-error-handling]]` — SQS DLQs and Redrive
-- `[[sns-subscription-filter-policies]]` — Subscription Filter Policies
-- `[[domain-3-data-operations-and-support]]` — CloudWatch & Incident Recovery
+- `[[mm/02-services/integration/sns/sns|sns]]` — SNS Master Hub
+- `[[mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` — SQS DLQs and Redrive
+- `[[mm/02-services/integration/sns/sns-subscription-filter-policies|sns-subscription-filter-policies]]` — Subscription Filter Policies
+- `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — CloudWatch & Incident Recovery

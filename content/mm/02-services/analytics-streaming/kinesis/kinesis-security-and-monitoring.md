@@ -21,7 +21,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Stream payloads များကို KMS နှင့် VPC PrivateLink ဖြင့် လုံခြုံအောင် ပြုလုပ်ခြင်း၊ Glue Schema Registry မှတစ်ဆင့် stream schemas များကို စစ်ဆေးအတည်ပြုခြင်း (validating) နှင့် `IteratorAgeMilliseconds` မှတစ်ဆင့် consumer lag ကို စောင့်ကြည့်ထောက်လှမ်းခြင်း။
 - **Slide Reference**: Pages 446–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[glue-schema-registry]]` | `[[security-and-compliance]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[mm/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` | `[[security-and-compliance]]`
 
 ---
 
@@ -163,8 +163,8 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
-- `[[kinesis-consumers-and-scaling]]` — KCL & Enhanced Fan-Out
-- `[[glue-schema-registry]]` — AWS Glue Schema Registry Deep Dive
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling|kinesis-consumers-and-scaling]]` — KCL & Enhanced Fan-Out
+- `[[mm/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` — AWS Glue Schema Registry Deep Dive
 - `[[security-and-compliance]]` — Cloud Security & Encryption Governance

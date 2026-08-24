@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/step-functions/step-functions-vs-mwaa-and-troubleshooting)
 - **Primary Use Case**: Choosing between AWS Step Functions and Amazon MWAA (Apache Airflow), configuring CloudWatch and AWS X-Ray monitoring, and resolving common production state machine errors.
 - **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[step-functions]]` | `[[mwaa-airflow]]` | `[[cloudwatch-and-eventbridge]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/step-functions/step-functions|step-functions]]` | `[[en/02-services/integration/mwaa-airflow|mwaa-airflow]]` | `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` | `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -102,7 +102,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[step-functions]]` — Step Functions Master Hub
-- `[[mwaa-airflow]]` — Amazon MWAA Deep-Dive Suite
-- `[[step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
-- `[[domain-3-data-operations-and-support]]` — CloudWatch & Incident Triage
+- `[[en/02-services/integration/step-functions/step-functions|step-functions]]` — Step Functions Master Hub
+- `[[en/02-services/integration/mwaa-airflow|mwaa-airflow]]` — Amazon MWAA Deep-Dive Suite
+- `[[en/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns|step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
+- `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — CloudWatch & Incident Triage

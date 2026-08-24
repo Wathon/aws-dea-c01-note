@@ -18,13 +18,13 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-ctas)
 - **Primary Use Case**: Performing lightweight SQL-based ETL to transform, compress, partition, and export datasets in S3 without managing Spark clusters.
 - **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[athena]]` | `[[glue-etl-jobs]]` | `[[data-formats-and-compression]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[en/03-concepts/data-formats-and-compression|data-formats-and-compression]]`
 
 ---
 
 ## 1. High-Level Summary
 
-**CTAS (Create Table As Select)** is a standard ANSI SQL statement supported by Amazon Athena that runs a query on an existing table and saves the result as a **new, fully managed table** in Amazon S3, automatically adding its schema and partition metadata into the **[[glue-data-catalog]]**.
+**CTAS (Create Table As Select)** is a standard ANSI SQL statement supported by Amazon Athena that runs a query on an existing table and saves the result as a **new, fully managed table** in Amazon S3, automatically adding its schema and partition metadata into the **[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]**.
 
 Alongside CTAS, Athena provides the **`UNLOAD`** statement, which extracts query results directly into S3 in desired formats (Parquet, ORC, Avro, JSON, CSV) with partitioning and compression **without creating a table definition in the Data Catalog**.
 
@@ -178,7 +178,7 @@ WITH (
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Amazon Athena Overview
-- `[[athena-performance]]` — Why Columnar Formats Matter
-- `[[glue-etl-jobs]]` — Heavyweight PySpark ETL Alternatives
-- `[[data-formats-and-compression]]` — Parquet, ORC & Compression
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Overview
+- `[[en/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — Why Columnar Formats Matter
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Heavyweight PySpark ETL Alternatives
+- `[[en/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — Parquet, ORC & Compression

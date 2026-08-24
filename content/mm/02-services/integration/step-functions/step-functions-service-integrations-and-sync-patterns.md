@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: `.sync` integrations များကို အသုံးပြု၍ asynchronous big data jobs များ (AWS Glue, Amazon EMR, Amazon Athena, Amazon Redshift) ကို ညှိနှိုင်းချိတ်ဆက်ခြင်း (coordinating) နှင့် `.waitForTaskToken` ဖြင့် လူကိုယ်တိုင် အတည်ပြုချက်များ (human approvals) ကို စီမံကိုင်တွယ်ခြင်း။
 - **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[step-functions]]` | `[[step-functions-standard-vs-express-workflows]]` | `[[glue]]` | `[[emr]]` | `[[athena]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` | `[[mm/02-services/integration/step-functions/step-functions-standard-vs-express-workflows|step-functions-standard-vs-express-workflows]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/analytics-streaming/emr/emr|emr]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]`
 
 ---
 
@@ -133,7 +133,7 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes (ဆက်စပ် မှတ်စုများ)
-- `[[step-functions]]` — Step Functions Master Hub
-- `[[step-functions-standard-vs-express-workflows]]` — Standard vs Express Workflows
-- `[[glue]]` — AWS Glue ETL & Spark Jobs
-- `[[athena]]` — Amazon Athena Query Orchestration
+- `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` — Step Functions Master Hub
+- `[[mm/02-services/integration/step-functions/step-functions-standard-vs-express-workflows|step-functions-standard-vs-express-workflows]]` — Standard vs Express Workflows
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue ETL & Spark Jobs
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Query Orchestration

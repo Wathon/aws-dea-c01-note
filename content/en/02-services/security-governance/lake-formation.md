@@ -21,7 +21,7 @@ date: 2026-08-23
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/security-governance/lake-formation)
 - **Primary Use Case**: Centralized data lake security management, fine-grained access control (column-level, row-level, and cell-level filtering), Lake Formation Tag-Based Access Control (LF-TBAC), and cross-account data sharing via AWS RAM.
 - **Slide Reference**: Pages 360–364 & 576–589 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[iam]]` | `[[glue]]` | `[[athena]]` | `[[redshift]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[en/02-services/security-governance/iam|iam]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/database/redshift|redshift]]`
 
 ---
 
@@ -227,8 +227,8 @@ Lake Formation integrates with **AWS Resource Access Manager (AWS RAM)** to shar
 ---
 
 ## 📌 Related Notes
-- `[[iam]]` — IAM Service Roles & Policy Evaluation Logic
-- `[[glue]]` — AWS Glue Data Catalog & Crawler Metadata
-- `[[athena]]` — Amazon Athena Query Engine & Lake Formation Integration
-- `[[redshift]]` — Amazon Redshift Spectrum External Tables
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[en/02-services/security-governance/iam|iam]]` — IAM Service Roles & Policy Evaluation Logic
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Data Catalog & Crawler Metadata
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Query Engine & Lake Formation Integration
+- `[[en/02-services/database/redshift|redshift]]` — Amazon Redshift Spectrum External Tables
+- `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

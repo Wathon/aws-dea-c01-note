@@ -21,7 +21,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sqs/sqs-integration-patterns-and-fanout) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: SNS+SQS Fan-Out architecture ကို implement ပြုလုပ်ခြင်း၊ bursty ဖြစ်သော S3 event notifications များကို buffer ပြုလုပ်ခြင်း၊ SQS Extended Client Library ဖြင့် large payloads များကို ကိုင်တွယ်ခြင်း၊ နှင့် SQS အား Kinesis နှင့် MSK တို့နှင့် နှိုင်းယှဉ်သုံးသပ်ခြင်း။
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` | `[[mm/02-services/storage/s3/s3-event-notifications|s3-event-notifications]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` | `[[mm/02-services/storage/s3/s3-event-notifications|s3-event-notifications]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]`
 
 ---
 

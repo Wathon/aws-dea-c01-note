@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sqs/sqs) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Fully managed message queuing, data ingestion spikes များကို buffer လုပ်ခြင်း၊ microservices များနှင့် ETL pipelines များကို decouple လုပ်ခြင်း၊ နှင့် စိတ်ချရသော asynchronous batch processing ပြုလုပ်နိုင်စေခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 499–525
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-operations-and-support]]` | `[[lambda]]` | `[[s3]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` | `[[mm/02-services/compute-containers/lambda|lambda]]` | `[[mm/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -113,11 +113,11 @@ sequenceDiagram
 
 **AWS Certified Data Engineer - Associate (DEA-C01)** စာမေးပွဲအတွက် Amazon SQS ကို ကျွမ်းကျင်ပိုင်နိုင်စေရန် အောက်ပါ modular notes များကို လေ့လာပါ-
 
-1. `[[sqs-standard-vs-fifo-queues]]` — **Standard vs. FIFO Queues, Message Group ID, Deduplication ID & High-Throughput Mode**
-2. `[[sqs-timing-parameters-and-polling]]` — **Visibility Timeout, ChangeMessageVisibility, Short vs. Long Polling & Delay Queues**
-3. `[[sqs-dead-letter-queues-and-error-handling]]` — **Dead-Letter Queues (DLQ), RedrivePolicy, maxReceiveCount, Poison Pill Isolation & DLQ Redrive**
-4. `[[sqs-integration-patterns-and-fanout]]` — **SNS + SQS Fan-Out, S3 Event Notifications, Extended Client Library & SQS vs. Kinesis vs. MSK Matrix**
-5. `[[sqs-security-monitoring-and-troubleshooting]]` — **Queue Access Policies, KMS Encryption, CloudWatch Backlog Metrics & Production Triage**
+1. `[[mm/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` — **Standard vs. FIFO Queues, Message Group ID, Deduplication ID & High-Throughput Mode**
+2. `[[mm/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` — **Visibility Timeout, ChangeMessageVisibility, Short vs. Long Polling & Delay Queues**
+3. `[[mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` — **Dead-Letter Queues (DLQ), RedrivePolicy, maxReceiveCount, Poison Pill Isolation & DLQ Redrive**
+4. `[[mm/02-services/integration/sqs/sqs-integration-patterns-and-fanout|sqs-integration-patterns-and-fanout]]` — **SNS + SQS Fan-Out, S3 Event Notifications, Extended Client Library & SQS vs. Kinesis vs. MSK Matrix**
+5. `[[mm/02-services/integration/sqs/sqs-security-monitoring-and-troubleshooting|sqs-security-monitoring-and-troubleshooting]]` — **Queue Access Policies, KMS Encryption, CloudWatch Backlog Metrics & Production Triage**
 
 ---
 
@@ -135,8 +135,8 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes
-- `[[sqs-standard-vs-fifo-queues]]` — SQS Standard vs FIFO Architecture
-- `[[sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Long Polling
-- `[[sqs-dead-letter-queues-and-error-handling]]` — DLQ Configuration & Redrive
-- `[[lambda]]` — AWS Lambda SQS Event Source Mapping
-- `[[s3-event-notifications]]` — Triggering SQS Queues from S3 Events
+- `[[mm/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` — SQS Standard vs FIFO Architecture
+- `[[mm/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Long Polling
+- `[[mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` — DLQ Configuration & Redrive
+- `[[mm/02-services/compute-containers/lambda|lambda]]` — AWS Lambda SQS Event Source Mapping
+- `[[mm/02-services/storage/s3/s3-event-notifications|s3-event-notifications]]` — Triggering SQS Queues from S3 Events

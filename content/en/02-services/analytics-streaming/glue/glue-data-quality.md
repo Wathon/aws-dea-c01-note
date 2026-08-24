@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-data-quality)
 - **Primary Use Case**: Automated data quality measurement, declarative DQDL rule validation, circuit breaking bad pipelines, and quarantining invalid records.
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[glue]]` | `[[glue-etl-jobs]]` | `[[data-validation-and-profiling]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[en/03-concepts/data-validation-and-profiling|data-validation-and-profiling]]`
 
 ---
 
@@ -26,8 +26,8 @@ date: 2026-08-17
 **AWS Glue Data Quality** is a serverless, declarative data quality measurement and validation engine. Instead of requiring data engineers to write hundreds of lines of complex, custom PySpark unit-testing logic to assert dataset validity, AWS Glue Data Quality uses **DQDL (Data Quality Definition Language)**.
 
 It can evaluate data quality across two distinct operational modes:
-1. **Data at Rest**: Scheduled or on-demand evaluations run directly against tables in the **[[glue-data-catalog]]**.
-2. **Data in Transit**: Real-time evaluation nodes embedded inside **[[glue-etl-jobs]]** or Glue Studio pipelines.
+1. **Data at Rest**: Scheduled or on-demand evaluations run directly against tables in the **[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]**.
+2. **Data in Transit**: Real-time evaluation nodes embedded inside **[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]** or Glue Studio pipelines.
 
 ```mermaid
 graph TD
@@ -204,7 +204,7 @@ AWS Glue Data Quality acts as an enterprise gatekeeper with three primary failur
 ---
 
 ## 📌 Related Notes
-- `[[glue]]` — AWS Glue Architecture & Overview
-- `[[glue-etl-jobs]]` — Embedding Data Quality in PySpark Jobs
-- `[[glue-studio]]` — Visual Data Quality Nodes in Studio
-- `[[data-validation-and-profiling]]` — Concept: Data Validation vs. Profiling
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture & Overview
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Embedding Data Quality in PySpark Jobs
+- `[[en/02-services/analytics-streaming/glue/glue-studio|glue-studio]]` — Visual Data Quality Nodes in Studio
+- `[[en/03-concepts/data-validation-and-profiling|data-validation-and-profiling]]` — Concept: Data Validation vs. Profiling

@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/emr/emr-on-eks)
 - **Primary Use Case**: Running Apache Spark applications inside Amazon EKS Kubernetes clusters to share compute infrastructure with microservices and achieve fast pod-level autoscaling.
 - **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[emr]]` | `[[ecr-ecs-eks]]` | `[[domain-1-ingestion-and-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/emr/emr|emr]]` | `[[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]`
 
 ---
 
@@ -97,7 +97,7 @@ graph TD
 
 ### 4. Custom Container Images via Amazon ECR
 - Data engineers can package custom Spark applications, Python virtual environments, compiled C++ extensions, and custom JARs into standard Docker container images.
-- Images are published to **[[ecr-ecs-eks|Amazon ECR]]** and referenced in the job submission payload.
+- Images are published to **[[en/02-services/compute-containers/ecr-ecs-eks|Amazon ECR]]** and referenced in the job submission payload.
 
 ---
 
@@ -128,7 +128,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[emr]]` — Amazon EMR Overview Hub
-- `[[emr-serverless]]` — Serverless Big Data Compute
-- `[[emr-cluster-architecture]]` — Provisioned EMR on EC2 Clusters
-- `[[ecr-ecs-eks]]` — Amazon ECR, ECS & EKS Architecture
+- `[[en/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR Overview Hub
+- `[[en/02-services/analytics-streaming/emr/emr-serverless|emr-serverless]]` — Serverless Big Data Compute
+- `[[en/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]` — Provisioned EMR on EC2 Clusters
+- `[[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]]` — Amazon ECR, ECS & EKS Architecture

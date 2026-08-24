@@ -16,7 +16,7 @@ date: 2026-07-28
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/networking-monitoring/cloudwatch-and-eventbridge) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Metrics များ၊ log aggregation၊ CloudWatch Logs Insights၊ event routing နှင့် pipeline automation rules များ။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 618–670
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -48,5 +48,5 @@ Amazon CloudWatch သည် AWS infrastructure အတွက် monitoring နှ
 ---
 
 ## 📌 Related Notes
-- [[step-functions]] — EventBridge အတွက် Trigger target
-- [[lambda]] — CloudWatch ထဲသို့ Lambda logging မှတ်တမ်းတင်ခြင်း
+- [[mm/02-services/integration/step-functions/step-functions|step-functions]] — EventBridge အတွက် Trigger target
+- [[mm/02-services/compute-containers/lambda|lambda]] — CloudWatch ထဲသို့ Lambda logging မှတ်တမ်းတင်ခြင်း

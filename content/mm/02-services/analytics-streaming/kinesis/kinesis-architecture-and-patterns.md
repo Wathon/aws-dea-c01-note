@@ -20,7 +20,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/kinesis/kinesis-architecture-and-patterns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: End-to-end streaming data pipelines များ ဒီဇိုင်းဆွဲခြင်း၊ record deduplication ပြုလုပ်ခြင်း၊ poison pill များကို isolate လုပ်ခြင်း၊ နှင့် KDS, Firehose, MSK, SQS တို့အကြား ရွေးချယ်အသုံးပြုခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 414–459
-- **Hub Links**: `[[mm/index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[kinesis-firehose]]` | `[[kinesis-apache-flink]]` | `[[msk]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-apache-flink|kinesis-apache-flink]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]`
 
 ---
 
@@ -146,9 +146,9 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-data-streams]]` — KDS Ingestion & Shards
-- `[[kinesis-firehose]]` — Micro-Batch Streaming Delivery
-- `[[kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
-- `[[msk]]` — Amazon Managed Streaming for Apache Kafka
-- `[[dynamodb]]` — Deduplication State Storage
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shards
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Micro-Batch Streaming Delivery
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-apache-flink|kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
+- `[[mm/02-services/analytics-streaming/msk/msk|msk]]` — Amazon Managed Streaming for Apache Kafka
+- `[[mm/02-services/database/dynamodb|dynamodb]]` — Deduplication State Storage

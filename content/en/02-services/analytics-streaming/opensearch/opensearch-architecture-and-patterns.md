@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/opensearch/opensearch-architecture-and-patterns)
 - **Primary Use Case**: Designing enterprise log analytics pipelines, implementing Generative AI RAG vector search with Amazon Bedrock, and evaluating OpenSearch against Athena, Redshift, and CloudWatch Logs Insights.
 - **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[opensearch]]` | `[[athena]]` | `[[redshift]]` | `[[cloudwatch-and-eventbridge]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/database/redshift|redshift]]` | `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 
@@ -135,9 +135,9 @@ A primary differentiator tested on the DEA-C01 exam is choosing between OpenSear
 ---
 
 ## 📌 Related Notes
-- `[[opensearch]]` — OpenSearch Master Hub
-- `[[opensearch-serverless]]` — Vector Search & Serverless Collections
-- `[[opensearch-storage-tiers-and-ism]]` — UltraWarm & Index State Management
-- `[[athena]]` — S3 Serverless SQL Engine
-- `[[redshift]]` — Enterprise Data Warehousing
-- `[[cloudwatch-and-eventbridge]]` — CloudWatch Logs & Subscription Filters
+- `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Master Hub
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-serverless|opensearch-serverless]]` — Vector Search & Serverless Collections
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` — UltraWarm & Index State Management
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — S3 Serverless SQL Engine
+- `[[en/02-services/database/redshift|redshift]]` — Enterprise Data Warehousing
+- `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — CloudWatch Logs & Subscription Filters

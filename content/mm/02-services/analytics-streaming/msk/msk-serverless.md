@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/msk/msk-serverless) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အခြေခံအဆောက်အအုံ စီမံခန့်ခွဲမှု (infrastructure management) ပြုလုပ်ရန် လုံးဝမလိုဘဲ Apache Kafka workload များကို run နိုင်ခြင်း၊ အတက်အကျရှိသော traffic များအတွက် automatic scaling ပြုလုပ်ပေးခြင်းနှင့် throughput ပေါ်မူတည်၍ ကျသင့်ငွေပေးချေရသော (pay-for-throughput) စနစ် ဖြစ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 450–459
-- **Hub Links**: `[[mm/index]]` | `[[msk]]` | `[[msk-cluster-architecture]]` | `[[kinesis-data-streams]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]` | `[[mm/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]`
 
 ---
 
@@ -121,7 +121,7 @@ Amazon MSK Serverless သည် ပုံသေ EC2 broker ကုန်ကျစ
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[msk]]` — Amazon MSK Master Hub
-- `[[msk-cluster-architecture]]` — MSK Provisioned Clusters & Brokers
-- `[[msk-security-and-monitoring]]` — IAM Authentication & Kafka ACLs
-- `[[kinesis-data-streams]]` — Kinesis On-Demand Mode Comparison
+- `[[mm/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Master Hub
+- `[[mm/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — MSK Provisioned Clusters & Brokers
+- `[[mm/02-services/analytics-streaming/msk/msk-security-and-monitoring|msk-security-and-monitoring]]` — IAM Authentication & Kafka ACLs
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — Kinesis On-Demand Mode Comparison

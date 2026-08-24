@@ -20,22 +20,22 @@ date: 2026-08-13
 
 - **Category**: Migration & Transfer (Online High-Speed Network Transfer & Physical Offline Appliances)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/migration/datasync-and-snow)
-- **Primary Use Case**: Large-scale online file & object synchronization into [[s3]], [[efs-and-fsx]], and petabyte/exabyte-scale offline physical data migrations.
+- **Primary Use Case**: Large-scale online file & object synchronization into [[en/02-services/storage/s3/s3|s3]], [[en/02-services/storage/efs-and-fsx|efs-and-fsx]], and petabyte/exabyte-scale offline physical data migrations.
 - **Slide Reference**: Pages 276–285 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[s3]] | [[efs-and-fsx]] | [[dms-and-sct]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[en/02-services/migration/dms-and-sct|dms-and-sct]]
 
 ---
 
 ## 1. High-Level Summary
 
-Moving large datasets into AWS requires choosing between **network-based online transfer** ([[datasync-and-snow]] — AWS DataSync) and **physical appliance-based offline transfer** (AWS Snow Family) depending on available network bandwidth, dataset size, security requirements, and time constraints.
+Moving large datasets into AWS requires choosing between **network-based online transfer** ([[en/02-services/migration/datasync-and-snow|datasync-and-snow]] — AWS DataSync) and **physical appliance-based offline transfer** (AWS Snow Family) depending on available network bandwidth, dataset size, security requirements, and time constraints.
 
 For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you must master:
-1. **Online Transfer (AWS DataSync)**: Agent-based, accelerated network data transfer for NFS, SMB, HDFS, and Object storage into [[s3]], [[efs-and-fsx]] (EFS, FSx for Lustre/ONTAP/Windows/OpenZFS).
+1. **Online Transfer (AWS DataSync)**: Agent-based, accelerated network data transfer for NFS, SMB, HDFS, and Object storage into [[en/02-services/storage/s3/s3|s3]], [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] (EFS, FSx for Lustre/ONTAP/Windows/OpenZFS).
 2. **Offline Physical Transfer (AWS Snow Family)**: **AWS Snowcone** (8–14 TB), **AWS Snowball Edge** (80–210 TB Storage / Compute Optimized), and **AWS Snowmobile** (up to 100 PB per truck).
 3. **The 1–2 Week Network Bandwidth Rule**: Mathematical formulas for calculating transfer time and selecting between DataSync and Snowball Edge.
 4. **Service Differentiation**: Distinguishing **AWS DataSync** vs. **AWS Snowball** vs. **AWS Storage Gateway** vs. **AWS Transfer Family** vs. **S3 Transfer Acceleration**.
-5. **Hybrid Migration Workflows**: Using Snowball Edge for initial mass data transfer and AWS DataSync or [[dms-and-sct]] for ongoing delta catch-up.
+5. **Hybrid Migration Workflows**: Using Snowball Edge for initial mass data transfer and AWS DataSync or [[en/02-services/migration/dms-and-sct|dms-and-sct]] for ongoing delta catch-up.
 
 ```mermaid
 graph TB
@@ -177,7 +177,7 @@ graph TD
 | **Target Storage** | Amazon S3 | Amazon S3 | Amazon S3 | Amazon S3 |
 
 ### 2. Device Security & Management (AWS OpsHub)
-- **Encryption**: All data is automatically encrypted with 256-bit keys using [[kms-and-secrets]] (AWS KMS) before being written to disk.
+- **Encryption**: All data is automatically encrypted with 256-bit keys using [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] (AWS KMS) before being written to disk.
 - **Hardware Security**: Uses an onboard **Trusted Platform Module (TPM)** chip with tamper-evident seals and automatic cryptographic erasure upon physical tampering.
 - **AWS OpsHub**: A dedicated desktop GUI application used to unlock Snow devices, configure network settings, view metrics, launch EC2 instances, and manage local NFS storage.
 
@@ -185,7 +185,7 @@ graph TD
 
 ## 4. The 1–2 Week Decision Rule & Transfer Time Formulas
 
-When deciding between online network transfer ([[datasync-and-snow]] / Direct Connect) and offline physical transfer (Snowball Edge), apply the transfer time formula:
+When deciding between online network transfer ([[en/02-services/migration/datasync-and-snow|datasync-and-snow]] / Direct Connect) and offline physical transfer (Snowball Edge), apply the transfer time formula:
 
 $$\text{Transfer Time (Seconds)} = \frac{\text{Data Size (Bits)}}{\text{Available Bandwidth (Bits/Second)} \times \text{Network Efficiency Factor}}$$
 
@@ -314,11 +314,11 @@ graph TD
 
 ## 📌 Related Notes
 
-- [[dms-and-sct]] — AWS DMS & SCT for database migrations and Snowball hybrid loads
-- [[s3]] — Amazon S3 Data Lake target for Snowball and DataSync ingestion
-- [[efs-and-fsx]] — Amazon EFS and AWS FSx target shared file systems
-- [[s3-performance]] — S3 Multi-part uploads & S3 Transfer Acceleration
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/02-services/migration/dms-and-sct|dms-and-sct]] — AWS DMS & SCT for database migrations and Snowball hybrid loads
+- [[en/02-services/storage/s3/s3|s3]] — Amazon S3 Data Lake target for Snowball and DataSync ingestion
+- [[en/02-services/storage/efs-and-fsx|efs-and-fsx]] — Amazon EFS and AWS FSx target shared file systems
+- [[en/02-services/storage/s3/s3-performance|s3-performance]] — S3 Multi-part uploads & S3 Transfer Acceleration
+- [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
 

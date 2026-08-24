@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/quicksight/quicksight)
 - **Primary Use Case**: Serverless business intelligence, sub-second interactive dashboards, SPICE in-memory calculation engine, ML-powered anomaly detection, paginated executive reports, and embedded analytics.
 - **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-3-data-operations-and-support]]` | `[[athena]]` | `[[redshift]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/database/redshift|redshift]]`
 
 ---
 
@@ -118,11 +118,11 @@ graph TD
 
 To master Amazon QuickSight for the **AWS Certified Data Engineer - Associate (DEA-C01)** exam, study the following modular notes:
 
-1. `[[quicksight-spice-engine]]` — **SPICE In-Memory Calculation Engine, Direct Query vs. SPICE, Incremental Refresh & Cost Offloading**
-2. `[[quicksight-data-preparation-and-modeling]]` — **Data Sources, Multi-Table Joins, Level of Aware Calculations (LAC-A / LAC-M), Parameters & Cascading Filters**
-3. `[[quicksight-security-rls-and-governance]]` — **Row-Level Security (RLS), Column-Level Security (CLS), VPC Connections, and IAM Identity Center (SSO)**
-4. `[[quicksight-reporting-ml-and-embedding]]` — **Paginated Reports, ML Insights Anomaly Detection, QuickSight Q (GenAI) & Embedded Analytics**
-5. `[[quicksight-troubleshooting-and-patterns]]` — **SPICE Ingestion Errors, Athena/S3 Permissions, VPC Timeouts & BI Service Decision Matrix**
+1. `[[en/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` — **SPICE In-Memory Calculation Engine, Direct Query vs. SPICE, Incremental Refresh & Cost Offloading**
+2. `[[en/02-services/analytics-streaming/quicksight/quicksight-data-preparation-and-modeling|quicksight-data-preparation-and-modeling]]` — **Data Sources, Multi-Table Joins, Level of Aware Calculations (LAC-A / LAC-M), Parameters & Cascading Filters**
+3. `[[en/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` — **Row-Level Security (RLS), Column-Level Security (CLS), VPC Connections, and IAM Identity Center (SSO)**
+4. `[[en/02-services/analytics-streaming/quicksight/quicksight-reporting-ml-and-embedding|quicksight-reporting-ml-and-embedding]]` — **Paginated Reports, ML Insights Anomaly Detection, QuickSight Q (GenAI) & Embedded Analytics**
+5. `[[en/02-services/analytics-streaming/quicksight/quicksight-troubleshooting-and-patterns|quicksight-troubleshooting-and-patterns]]` — **SPICE Ingestion Errors, Athena/S3 Permissions, VPC Timeouts & BI Service Decision Matrix**
 
 ---
 
@@ -139,8 +139,8 @@ To master Amazon QuickSight for the **AWS Certified Data Engineer - Associate (D
 ---
 
 ## 📌 Related Notes
-- `[[quicksight-spice-engine]]` — SPICE Capacity, Incremental Refresh & Cost Offload
-- `[[quicksight-security-rls-and-governance]]` — Row-Level & Column-Level Security
-- `[[athena]]` — Serverless SQL Data Lake Engine
-- `[[redshift]]` — Enterprise Data Warehouse Storage
-- `[[domain-3-data-operations-and-support]]` — Governance & Operational Excellence
+- `[[en/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` — SPICE Capacity, Incremental Refresh & Cost Offload
+- `[[en/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` — Row-Level & Column-Level Security
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Serverless SQL Data Lake Engine
+- `[[en/02-services/database/redshift|redshift]]` — Enterprise Data Warehouse Storage
+- `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — Governance & Operational Excellence

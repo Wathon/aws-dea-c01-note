@@ -20,7 +20,7 @@ date: 2026-08-24
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/networking-monitoring/waf-and-shield)
 - **Primary Use Case**: Protecting data ingestion endpoints (Amazon API Gateway, AWS AppSync, ALBs) and search/BI portals (Amazon OpenSearch, Amazon CloudFront) against web exploits (SQLi, XSS), runaway API scraping, and Distributed Denial of Service (DDoS) attacks.
 - **Slide Reference**: Pages 600–625 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[vpc-and-networking]]` | `[[kinesis]]` | `[[opensearch-security-and-monitoring]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[en/02-services/networking-monitoring/vpc-and-networking|vpc-and-networking]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch-security-and-monitoring|opensearch-security-and-monitoring]]`
 
 ---
 
@@ -217,8 +217,8 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[vpc-and-networking]]` — Amazon VPC, Security Groups & NACLs
-- `[[kinesis]]` — Amazon Kinesis Data Streams & Firehose Ingestion
-- `[[opensearch-security-and-monitoring]]` — OpenSearch Dashboard Access & Security
-- `[[macie-and-cloudtrail]]` — AWS CloudTrail API Auditing
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[en/02-services/networking-monitoring/vpc-and-networking|vpc-and-networking]]` — Amazon VPC, Security Groups & NACLs
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Amazon Kinesis Data Streams & Firehose Ingestion
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-security-and-monitoring|opensearch-security-and-monitoring]]` — OpenSearch Dashboard Access & Security
+- `[[en/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]` — AWS CloudTrail API Auditing
+- `[[en/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

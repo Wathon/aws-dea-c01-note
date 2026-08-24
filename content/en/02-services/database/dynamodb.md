@@ -18,7 +18,7 @@ date: 2026-08-10
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/database/dynamodb)
 - **Primary Use Case**: Ultra-low-latency single-digit millisecond operational data store, real-time feature stores, streaming pipeline state tracking, Change Data Capture (CDC) with DynamoDB Streams, and distributed metadata catalogs.
 - **Slide Reference**: Pages 156–195 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[domain-1-ingestion-and-processing]] | [[s3]] | [[lambda]] | [[glue]] | [[redshift]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/compute-containers/lambda|lambda]] | [[en/02-services/analytics-streaming/glue/glue|glue]] | [[en/02-services/database/redshift|redshift]]
 
 ---
 
@@ -272,7 +272,7 @@ $$\text{WCU (Transactional Write)} = \left\lceil \frac{\text{Item Size in KB}}{1
 ### Accelerating Large Table Scans: Parallel Scan
 If a full table scan is mandatory (e.g., bulk export or feeding an Apache Spark ETL job), use **Parallel Scan**:
 - Divides the table into logical segments (`Segment` and `TotalSegments` parameters in API).
-- Multiple threads or [[emr]] / [[glue]] worker tasks scan their dedicated segment in parallel, saturating provisioned throughput and finishing drastically faster.
+- Multiple threads or [[en/02-services/analytics-streaming/emr/emr|emr]] / [[en/02-services/analytics-streaming/glue/glue|glue]] worker tasks scan their dedicated segment in parallel, saturating provisioned throughput and finishing drastically faster.
 
 ---
 
@@ -359,7 +359,7 @@ graph LR
 
 ## 8. DynamoDB Data Lake Integration: Native S3 Export & Import
 
-Exporting large DynamoDB tables to Amazon S3 for analytics querying via [[athena]] or ETL processing via [[glue]] is a cornerstone DEA-C01 architectural pattern.
+Exporting large DynamoDB tables to Amazon S3 for analytics querying via [[en/02-services/analytics-streaming/athena/athena|athena]] or ETL processing via [[en/02-services/analytics-streaming/glue/glue|glue]] is a cornerstone DEA-C01 architectural pattern.
 
 ```mermaid
 graph LR
@@ -450,11 +450,11 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[lambda]] — Serverless compute integration with DynamoDB Streams
-- [[s3]] — Amazon S3 Data Lake target for DynamoDB exports and archives
-- [[glue]] — AWS Glue ETL connectors for DynamoDB tables
-- [[athena]] — Querying exported DynamoDB tables in S3
-- [[opensearch]] — Search index replication from DynamoDB Streams
-- [[kinesis]] — Kinesis Data Streams for DynamoDB CDC pipelines
-- [[aws-backup]] — Centralized backup plans, PITR, and Vault Lock protection for DynamoDB
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[en/02-services/compute-containers/lambda|lambda]] — Serverless compute integration with DynamoDB Streams
+- [[en/02-services/storage/s3/s3|s3]] — Amazon S3 Data Lake target for DynamoDB exports and archives
+- [[en/02-services/analytics-streaming/glue/glue|glue]] — AWS Glue ETL connectors for DynamoDB tables
+- [[en/02-services/analytics-streaming/athena/athena|athena]] — Querying exported DynamoDB tables in S3
+- [[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]] — Search index replication from DynamoDB Streams
+- [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]] — Kinesis Data Streams for DynamoDB CDC pipelines
+- [[en/02-services/security-governance/aws-backup|aws-backup]] — Centralized backup plans, PITR, and Vault Lock protection for DynamoDB
+- [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

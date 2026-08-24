@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-schema-registry)
 - **Primary Use Case**: Centralized discovery, validation, and controlled evolution of event stream schemas for Amazon MSK, Amazon Kinesis, and Apache Flink.
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[glue]]` | `[[msk]]` | `[[kinesis]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/analytics-streaming/msk/msk|msk]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]`
 
 ---
 
@@ -27,7 +27,7 @@ date: 2026-08-17
 
 **AWS Glue Schema Registry** is a serverless feature within AWS Glue that provides a centralized repository for validating, discovering, and evolving schemas across streaming data applications. 
 
-When building distributed streaming architectures using **[[msk]]**, **[[kinesis]]**, or **Amazon Managed Service for Apache Flink**, disparate producer and consumer teams must adhere to a strict data contract. The Glue Schema Registry enforces this contract at the producer level, preventing malformed or breaking schema changes from ever reaching your data streams.
+When building distributed streaming architectures using **[[en/02-services/analytics-streaming/msk/msk|msk]]**, **[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]**, or **Amazon Managed Service for Apache Flink**, disparate producer and consumer teams must adhere to a strict data contract. The Glue Schema Registry enforces this contract at the producer level, preventing malformed or breaking schema changes from ever reaching your data streams.
 
 ```mermaid
 graph LR
@@ -143,7 +143,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[glue]]` — AWS Glue Architecture Overview
-- `[[msk]]` — Amazon Managed Streaming for Apache Kafka
-- `[[kinesis]]` — Amazon Kinesis Data Streams
-- `[[glue-data-catalog]]` — Glue Metadata Catalog
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture Overview
+- `[[en/02-services/analytics-streaming/msk/msk|msk]]` — Amazon Managed Streaming for Apache Kafka
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Amazon Kinesis Data Streams
+- `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Metadata Catalog

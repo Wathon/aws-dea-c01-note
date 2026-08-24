@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-performance) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Columnar storage၊ compression၊ partition projection နှင့် query tuning တို့ကို အသုံးပြု၍ SQL query speed ကို အမြင့်ဆုံးမြှင့်တင်ရန်နှင့် Athena scan charges ($5/TB) ကို အနည်းဆုံးဖြစ်အောင် လျှော့ချရန်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 365–382
-- **Hub Links**: `[[mm/index]]` | `[[athena]]` | `[[s3]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -91,7 +91,7 @@ graph TD
 
 ## 3. Deep Dive: Partition Projection
 
-Partition ပေါင်း သိန်းနှင့်ချီ ပါဝင်သော massive data lake များတွင် (ဥပမာ- `device_id` နှင့် `timestamp` ဖြင့် partition ခွဲထားသော IoT telemetry များ) API call များမှတစ်ဆင့် **[[glue-data-catalog]]** metadata ကို query လုပ်ခြင်းသည် အဓိက bottleneck ဖြစ်လာပြီး planning phase အတွင်း query များ ရပ်တန့် (hang) သွားစေတတ်ပါသည်။
+Partition ပေါင်း သိန်းနှင့်ချီ ပါဝင်သော massive data lake များတွင် (ဥပမာ- `device_id` နှင့် `timestamp` ဖြင့် partition ခွဲထားသော IoT telemetry များ) API call များမှတစ်ဆင့် **[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]** metadata ကို query လုပ်ခြင်းသည် အဓိက bottleneck ဖြစ်လာပြီး planning phase အတွင်း query များ ရပ်တန့် (hang) သွားစေတတ်ပါသည်။
 
 **Partition Projection** သည် Glue Data Catalog partition lookup ကို လုံးဝ ကျော်လွှား (bypass) ပေးပါသည်။ Metadata API call များ ပြုလုပ်မည့်အစား Athena သည် table properties တွင် သတ်မှတ်ထားသော regex/range rule များအပေါ် အခြေခံ၍ **partition တည်နေရာများကို memory အတွင်း dynamically (in-memory) တွက်ချက်ပေးပါသည်**။
 
@@ -208,7 +208,7 @@ WITH (
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Amazon Athena Architecture Overview
-- `[[athena-ctas]]` — CTAS ကို အသုံးပြု၍ CSV မှ Parquet သို့ ပြောင်းလဲခြင်း
-- `[[data-formats-and-compression]]` — Parquet, ORC, Snappy & ZSTD Specs များ
-- `[[glue-data-catalog]]` — Glue Partition Indexes များ
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Architecture Overview
+- `[[mm/02-services/analytics-streaming/athena/athena-ctas|athena-ctas]]` — CTAS ကို အသုံးပြု၍ CSV မှ Parquet သို့ ပြောင်းလဲခြင်း
+- `[[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — Parquet, ORC, Snappy & ZSTD Specs များ
+- `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Partition Indexes များ

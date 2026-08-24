@@ -17,9 +17,9 @@ date: 2026-08-14
 
 - **Category**: Compute (Serverless Compute & Event-Driven Processing)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/lambda) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: Real-time event-driven data processing, [[kinesis]] နှင့် [[msk]] တို့မှ streaming micro-batching လုပ်ခြင်း၊ ပေါ့ပါးသော ETL၊ S3 file ingestion triggers များနှင့် workflow orchestration glue အဖြစ် အသုံးပြုခြင်း။
+- **Primary Use Case**: Real-time event-driven data processing, [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] နှင့် [[mm/02-services/analytics-streaming/msk/msk|msk]] တို့မှ streaming micro-batching လုပ်ခြင်း၊ ပေါ့ပါးသော ETL၊ S3 file ingestion triggers များနှင့် workflow orchestration glue အဖြစ် အသုံးပြုခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 289–310 
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[kinesis]] | [[s3]] | [[dynamodb]] | [[redshift]] | [[efs-and-fsx]] | [[step-functions]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/database/dynamodb|dynamodb]] | [[mm/02-services/database/redshift|redshift]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/integration/step-functions/step-functions|step-functions]]
 
 ---
 
@@ -28,10 +28,10 @@ date: 2026-08-14
 **AWS Lambda** သည် server များကို provision လုပ်ခြင်း သို့မဟုတ် စီမံခန့်ခွဲခြင်းများ မလိုအပ်ဘဲ event များတုံ့ပြန်မှုအဖြစ် code ကို run ပေးသော fully managed, event-driven serverless compute service တစ်ခုဖြစ်ပါသည်။ Lambda သည် သုညမှ သောင်းနှင့်ချီသော concurrent executions အထိ အလိုအလျောက် scale လုပ်ပေးနိုင်ပြီး 1-millisecond အပိုင်းအခြားဖြင့် compute ကြာမြင့်ချိန် (duration) ကိုသာ တိကျစွာ ငွေကောက်ခံပါသည်။
 
 Data engineering architectures များတွင် AWS Lambda သည် မရှိမဖြစ်လိုအပ်သော **event-driven glue** အဖြစ် လုပ်ဆောင်ပေးပါသည်-
-1. **Real-Time File Processing**: Validate လုပ်ရန်၊ decompress လုပ်ရန် သို့မဟုတ် metadata ထုတ်ယူရန် [[s3]] object creation events (`s3:ObjectCreated:*`) ဖြင့် ချက်ချင်း trigger လုပ်ပါသည်။
-2. **Stream Processing & Micro-Batching**: [[kinesis]] Data Streams, [[dynamodb]] Streams, နှင့် [[msk]] တို့မှ streaming records များကိုဖတ်ရှုပြီး transform လုပ်ပါသည်။
-3. **Data Lake Hydration & Data Warehouse Loading**: [[redshift]] အတွင်းသို့ bulk `COPY` commands ကို အစပျိုးပေးခြင်း သို့မဟုတ် [[glue]] Data Catalog တွင် metadata ကို update လုပ်ပေးခြင်း။
-4. **Database Event Streaming**: Operational databases များမှ change events များကို [[opensearch]] ကဲ့သို့သော search indexes များသို့ ပွားယူခြင်း သို့မဟုတ် [[sqs-and-sns]] မှတစ်ဆင့် alerting topics များသို့ပေးပို့ခြင်း။
+1. **Real-Time File Processing**: Validate လုပ်ရန်၊ decompress လုပ်ရန် သို့မဟုတ် metadata ထုတ်ယူရန် [[mm/02-services/storage/s3/s3|s3]] object creation events (`s3:ObjectCreated:*`) ဖြင့် ချက်ချင်း trigger လုပ်ပါသည်။
+2. **Stream Processing & Micro-Batching**: [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] Data Streams, [[mm/02-services/database/dynamodb|dynamodb]] Streams, နှင့် [[mm/02-services/analytics-streaming/msk/msk|msk]] တို့မှ streaming records များကိုဖတ်ရှုပြီး transform လုပ်ပါသည်။
+3. **Data Lake Hydration & Data Warehouse Loading**: [[mm/02-services/database/redshift|redshift]] အတွင်းသို့ bulk `COPY` commands ကို အစပျိုးပေးခြင်း သို့မဟုတ် [[mm/02-services/analytics-streaming/glue/glue|glue]] Data Catalog တွင် metadata ကို update လုပ်ပေးခြင်း။
+4. **Database Event Streaming**: Operational databases များမှ change events များကို [[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]] ကဲ့သို့သော search indexes များသို့ ပွားယူခြင်း သို့မဟုတ် [[mm/02-services/integration/sqs-and-sns|sqs-and-sns]] မှတစ်ဆင့် alerting topics များသို့ပေးပို့ခြင်း။
 
 **AWS Certified Data Engineer – Associate (DEA-C01)** exam အတွက် သင် ကျွမ်းကျင်ထားရမည့်အချက်များ-
 - **Invocation Models**: Synchronous နှင့် Asynchronous အပြင် Event Source Mapping (Stream/Queue Polling) အကြောင်း။
@@ -110,11 +110,11 @@ graph TB
 
 | Parameter / Resource | Hard / Soft Limit | Data Engineering Significance |
 | :--- | :--- | :--- |
-| **Max Execution Timeout** | **15 minutes (900 seconds)** | **Strict Hard Limit**: 15 မိနစ်ထက်ကျော်လွန်သော long-running Spark သို့မဟုတ် custom ETL jobs များကို [[glue]], [[emr]], [[batch]], သို့မဟုတ် [[ecr-ecs-eks]] တွင်မဖြစ်မနေ run ရပါမည်။ |
+| **Max Execution Timeout** | **15 minutes (900 seconds)** | **Strict Hard Limit**: 15 မိနစ်ထက်ကျော်လွန်သော long-running Spark သို့မဟုတ် custom ETL jobs များကို [[mm/02-services/analytics-streaming/glue/glue|glue]], [[mm/02-services/analytics-streaming/emr/emr|emr]], [[mm/02-services/compute-containers/batch|batch]], သို့မဟုတ် [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] တွင်မဖြစ်မနေ run ရပါမည်။ |
 | **Memory Allocation** | **128 MB မှ 10,240 MB (10 GB) အထိ** | 1 MB တိုးနှုန်းများဖြင့် configure လုပ်နိုင်သည်။ **CPU သည် memory နှင့်အချိုးကျစွာ scale လုပ်ပါသည်** (1,769 MB တွင် Lambda သည် full vCPU 1 ခုကို ခွဲဝေချထားပေးပြီး၊ 10 GB တွင် 6 vCPUs အထိ ရရှိပါသည်)။ |
 | **Ephemeral Storage (`/tmp`)** | **512 MB မှ 10,240 MB (10 GB) အထိ** | Configure လုပ်နိုင်သော local scratch disk space ဖြစ်သည်။ S3 သို့ upload မလုပ်မီ multi-gigabyte files များကို local တွင် download, uncompress နှင့် process လုပ်ရန်အတွက် မရှိမဖြစ်လိုအပ်ပါသည်။ |
 | **Direct Deployment Package Size** | **50 MB** (zipped) / **250 MB** (unzipped) | Code နှင့် unzipped dependencies များပါဝင်ပါသည်။ |
-| **Container Image Deployment** | **10 GB အထိ** | [[ecr-ecs-eks]] (Amazon ECR) တွင်သိမ်းဆည်းထားသော Docker container အနေဖြင့် package လုပ်ထားသည်။ ကြီးမားသော ML packages များ (TensorFlow, PyTorch) သို့မဟုတ် custom C++ libraries များအတွက် အထူးသင့်လျော်ပါသည်။ |
+| **Container Image Deployment** | **10 GB အထိ** | [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] (Amazon ECR) တွင်သိမ်းဆည်းထားသော Docker container အနေဖြင့် package လုပ်ထားသည်။ ကြီးမားသော ML packages များ (TensorFlow, PyTorch) သို့မဟုတ် custom C++ libraries များအတွက် အထူးသင့်လျော်ပါသည်။ |
 | **Lambda Layers** | Function တစ်ခုလျှင် အများဆုံး **5 layers** | Shared reusable libraries များ (ဥပမာ AWS SDK, `awswrangler`, `numpy`, `pandas`) ဖြစ်သည်။ Function ၏ unzipped size စုစုပေါင်းနှင့် layers အားလုံးပေါင်းသည် 250 MB ထက် မကျော်လွန်ရပါ။ |
 | **Default Regional Concurrency** | **1,000 concurrent executions** | AWS Region တစ်ခုအတွက် Soft limit (quota request မှတစ်ဆင့် တိုးမြှင့်နိုင်ပါသည်)။ |
 
@@ -224,7 +224,7 @@ graph TD
 
 1. **Reserved Concurrency**:
    - တိကျသော function တစ်ခုအတွက် အများဆုံး concurrent execution instances အရေအတွက်ကို အာမခံချက်ဖြင့် သီးသန့်ဖယ်ထားပေးပါသည်။
-   - **Crucial Data Engineering Role**: အများအပြားသော events များ Lambda သို့ ဝင်ရောက်လာသည့်အခါ downstream transactional databases ([[rds-and-aurora]]) များကို connections ပြည့်သွားခြင်းမှ ကာကွယ်ပေးရန် **rate limiter (circuit breaker)** အနေဖြင့် လုပ်ဆောင်ပေးပါသည်။
+   - **Crucial Data Engineering Role**: အများအပြားသော events များ Lambda သို့ ဝင်ရောက်လာသည့်အခါ downstream transactional databases ([[mm/02-services/database/rds-and-aurora|rds-and-aurora]]) များကို connections ပြည့်သွားခြင်းမှ ကာကွယ်ပေးရန် **rate limiter (circuit breaker)** အနေဖြင့် လုပ်ဆောင်ပေးပါသည်။
 2. **Provisioned Concurrency**:
    - တောင်းဆိုထားသော execution environments အရေအတွက်ကို ကြိုတင် (pre-initializes) ပြင်ဆင်ပေးပါသည် (code ကို download လုပ်ခြင်း, runtime ကို initialize လုပ်ခြင်း, initialization code များကို run ခြင်း)။
    - Real-time APIs သို့မဟုတ် synchronous stream transformations များအတွက် **cold start latency** ကို လုံးဝပပျောက်စေပါသည်။
@@ -304,7 +304,7 @@ sequenceDiagram
 ```
 
 ### Pattern B: Real-Time Stream Ingestion & OpenSearch Log Indexing
-- **Scenario**: High-volume clickstream logs များသည် [[kinesis]] Data Streams အတွင်းသို့ စီးဝင်နေပါသည်။ Analytics dashboards များသည် စက္ကန့်ပိုင်းအတွင်း ရှာဖွေနိုင်သော documents များကို [[opensearch]] တွင် လိုအပ်ပါသည်။
+- **Scenario**: High-volume clickstream logs များသည် [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] Data Streams အတွင်းသို့ စီးဝင်နေပါသည်။ Analytics dashboards များသည် စက္ကန့်ပိုင်းအတွင်း ရှာဖွေနိုင်သော documents များကို [[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]] တွင် လိုအပ်ပါသည်။
 - **Architecture**:
   - Kinesis Data Streams သည် log records များကို ဖမ်းယူပါသည်။
   - Lambda Event Source Mapping သည် `BatchSize: 500` နှင့် `MaximumBatchingWindowInSeconds: 10` ဖြင့် Kinesis ကို poll လုပ်ပါသည်။
@@ -337,11 +337,11 @@ sequenceDiagram
 
 ## 📌 Related Notes
 
-- [[batch]] — 15 မိနစ်ထက်ကျော်လွန်သော long-running containerized batch computing အတွက် AWS Batch
-- [[glue]] — Distributed serverless Spark ETL အတွက် AWS Glue
-- [[emr]] — Petabyte-scale distributed cluster processing အတွက် Amazon EMR
-- [[kinesis]] — Lambda consumers များဖြင့် streaming ingestion အတွက် Amazon Kinesis
-- [[s3-event-notifications]] — S3 Event Notifications နှင့် EventBridge integration
-- [[step-functions]] — Multi-step Lambda workflows များကို Orchestrating လုပ်ခြင်း
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/02-services/compute-containers/batch|batch]] — 15 မိနစ်ထက်ကျော်လွန်သော long-running containerized batch computing အတွက် AWS Batch
+- [[mm/02-services/analytics-streaming/glue/glue|glue]] — Distributed serverless Spark ETL အတွက် AWS Glue
+- [[mm/02-services/analytics-streaming/emr/emr|emr]] — Petabyte-scale distributed cluster processing အတွက် Amazon EMR
+- [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] — Lambda consumers များဖြင့် streaming ingestion အတွက် Amazon Kinesis
+- [[mm/02-services/storage/s3/s3-event-notifications|s3-event-notifications]] — S3 Event Notifications နှင့် EventBridge integration
+- [[mm/02-services/integration/step-functions/step-functions|step-functions]] — Multi-step Lambda workflows များကို Orchestrating လုပ်ခြင်း
+- [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

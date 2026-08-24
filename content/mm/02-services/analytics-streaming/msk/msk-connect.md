@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/msk/msk-connect) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Worker servers များကို manage လုပ်ရန်မလိုဘဲ CDC streams များကို ingest လုပ်ရန်နှင့် Kafka data များကို Amazon S3, OpenSearch, Redshift နှင့် Snowflake များဆီသို့ တိုက်ရိုက် deliver လုပ်ရန် serverless Apache Kafka Connect source နှင့် sink connectors များကို run ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 450–459
-- **Hub Links**: `[[mm/index]]` | `[[msk]]` | `[[kinesis-firehose]]` | `[[s3]]` | `[[opensearch]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]`
 
 ---
 
@@ -134,8 +134,8 @@ Exam တွင် မကြာခဏတွေ့ရလေ့ရှိသော a
 ---
 
 ## 📌 Related Notes
-- `[[msk]]` — Amazon MSK Master Hub
-- `[[msk-cluster-architecture]]` — MSK Provisioned Brokers
-- `[[kinesis-firehose]]` — Serverless Micro-Batch Delivery
-- `[[s3]]` — S3 Data Lake Storage Architecture
-- `[[opensearch]]` — OpenSearch Analytics & Indexing
+- `[[mm/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Master Hub
+- `[[mm/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — MSK Provisioned Brokers
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Serverless Micro-Batch Delivery
+- `[[mm/02-services/storage/s3/s3|s3]]` — S3 Data Lake Storage Architecture
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Analytics & Indexing

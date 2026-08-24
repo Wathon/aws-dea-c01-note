@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/step-functions/step-functions-standard-vs-express-workflows)
 - **Primary Use Case**: Choosing between Standard and Express workflow types based on duration, throughput, execution semantics, and cost efficiency.
 - **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[step-functions]]` | `[[step-functions-service-integrations-and-sync-patterns]]` | `[[domain-1-ingestion-and-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/step-functions/step-functions|step-functions]]` | `[[en/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns|step-functions-service-integrations-and-sync-patterns]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]`
 
 ---
 
@@ -113,7 +113,7 @@ Express Workflows are purpose-built for high-volume, event-driven microservices 
 ---
 
 ## 📌 Related Notes
-- `[[step-functions]]` — Step Functions Master Hub
-- `[[step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
-- `[[glue]]` — AWS Glue ETL Orchestration
-- `[[kinesis-data-streams]]` — Streaming Ingestion with Express Workflows
+- `[[en/02-services/integration/step-functions/step-functions|step-functions]]` — Step Functions Master Hub
+- `[[en/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns|step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue ETL Orchestration
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — Streaming Ingestion with Express Workflows

@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk-security-and-monitoring)
 - **Primary Use Case**: Securing Kafka clusters with IAM authentication, configuring TLS encryption, monitoring consumer group lag (`SumOffsetLag`), and integrating Prometheus OpenMonitoring.
 - **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[msk]]` | `[[msk-cluster-architecture]]` | `[[glue-schema-registry]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/msk/msk|msk]]` | `[[en/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` | `[[en/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]`
 
 ---
 
@@ -124,8 +124,8 @@ These metrics can be scraped seamlessly by **Amazon Managed Service for Promethe
 ---
 
 ## 📌 Related Notes
-- `[[msk]]` — Amazon MSK Master Hub
-- `[[msk-cluster-architecture]]` — MSK Replication & Storage
-- `[[msk-troubleshooting-and-tuning]]` — Diagnosing Lag & Timeout Errors
-- `[[glue-schema-registry]]` — Data Governance & Schema Evolution
-- `[[kinesis-security-and-monitoring]]` — Kinesis CloudWatch & KMS Comparison
+- `[[en/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Master Hub
+- `[[en/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — MSK Replication & Storage
+- `[[en/02-services/analytics-streaming/msk/msk-troubleshooting-and-tuning|msk-troubleshooting-and-tuning]]` — Diagnosing Lag & Timeout Errors
+- `[[en/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` — Data Governance & Schema Evolution
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring|kinesis-security-and-monitoring]]` — Kinesis CloudWatch & KMS Comparison

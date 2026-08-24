@@ -18,7 +18,7 @@ date: 2026-08-14
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/compute-containers/batch)
 - **Primary Use Case**: Running long-running (> 15 min) batch computing jobs, non-Spark data transformations, scientific simulations, ML data preprocessing, and Dockerized image processing on managed EC2, Spot Instances, or AWS Fargate.
 - **Slide Reference**: Pages 311–312 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[lambda]] | [[glue]] | [[emr]] | [[ecr-ecs-eks]] | [[step-functions]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/02-services/compute-containers/lambda|lambda]] | [[en/02-services/analytics-streaming/glue/glue|glue]] | [[en/02-services/analytics-streaming/emr/emr|emr]] | [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] | [[en/02-services/integration/step-functions/step-functions|step-functions]]
 
 ---
 
@@ -111,7 +111,7 @@ graph LR
 
 ### 1. Job Definitions
 A blueprint specifying how jobs are executed:
-- **Container Properties**: Docker image URI hosted in [[ecr-ecs-eks]] (Amazon ECR), required vCPUs (e.g., 4 vCPU), memory allocation (e.g., 16 GB), command parameters, and environment variables.
+- **Container Properties**: Docker image URI hosted in [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] (Amazon ECR), required vCPUs (e.g., 4 vCPU), memory allocation (e.g., 16 GB), command parameters, and environment variables.
 - **IAM Roles**:
   - **Job Role**: Permissions granted to the container application code (e.g., `s3:GetObject`, `s3:PutObject`, `dynamodb:UpdateItem`).
   - **Execution Role**: Used by the container agent to pull images from ECR and stream logs to Amazon CloudWatch.
@@ -237,11 +237,11 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[lambda]] — AWS Lambda for serverless micro-batch processing (< 15 mins)
-- [[glue]] — AWS Glue for distributed serverless Apache Spark ETL
-- [[emr]] — Amazon EMR for petabyte-scale distributed big data clusters
-- [[ecr-ecs-eks]] — Amazon ECR container registry and ECS/EKS orchestration
-- [[step-functions]] — Orchestrating AWS Batch multi-step data pipelines
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/02-services/compute-containers/lambda|lambda]] — AWS Lambda for serverless micro-batch processing (< 15 mins)
+- [[en/02-services/analytics-streaming/glue/glue|glue]] — AWS Glue for distributed serverless Apache Spark ETL
+- [[en/02-services/analytics-streaming/emr/emr|emr]] — Amazon EMR for petabyte-scale distributed big data clusters
+- [[en/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] — Amazon ECR container registry and ECS/EKS orchestration
+- [[en/02-services/integration/step-functions/step-functions|step-functions]] — Orchestrating AWS Batch multi-step data pipelines
+- [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
 

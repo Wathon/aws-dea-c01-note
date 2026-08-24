@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: User identity ပေါ် အခြေခံ၍ dashboard row များနှင့် column များကို ကန့်သတ်ခြင်း (RLS & CLS)၊ QuickSight VPC connection များမှတစ်ဆင့် private database များကို ချိတ်ဆက်ခြင်း၊ နှင့် IAM Identity Center ဖြင့် enterprise SSO ကို စီမံခန့်ခွဲခြင်း။
 - **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[quicksight]]` | `[[redshift]]` | `[[rds-and-aurora]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/database/rds-and-aurora|rds-and-aurora]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -177,7 +177,7 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[quicksight]]` — QuickSight Master Hub
-- `[[quicksight-spice-engine]]` — SPICE In-Memory Engine
-- `[[redshift]]` — Securing Amazon Redshift Clusters
-- `[[rds-and-aurora]]` — Private VPC Database Connectivity
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` — QuickSight Master Hub
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` — SPICE In-Memory Engine
+- `[[mm/02-services/database/redshift|redshift]]` — Securing Amazon Redshift Clusters
+- `[[mm/02-services/database/rds-and-aurora|rds-and-aurora]]` — Private VPC Database Connectivity

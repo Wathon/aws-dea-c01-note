@@ -22,7 +22,7 @@ date: 2026-08-23
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/lake-formation) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Centralized data lake security management, fine-grained access control (column-level, row-level, နှင့် cell-level filtering), Lake Formation Tag-Based Access Control (LF-TBAC), နှင့် AWS RAM မှတစ်ဆင့် cross-account data sharing ပြုလုပ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 360–364 & 576–589
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[iam]]` | `[[glue]]` | `[[athena]]` | `[[redshift]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[mm/02-services/security-governance/iam|iam]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/database/redshift|redshift]]`
 
 ---
 

@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/quicksight/quicksight-spice-engine) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Dashboard queries များကို sub-second speed အထိ မြန်ဆန်စေခြင်း၊ Full နှင့် Incremental SPICE refresh များကို configure ပြုလုပ်ခြင်း၊ နှင့် Amazon Athena နှင့် database scan costs များကို သိသိသာသာ လျှော့ချခြင်း။
 - **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[quicksight]]` | `[[athena]]` | `[[redshift]]` | `[[rds-and-aurora]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/database/rds-and-aurora|rds-and-aurora]]`
 
 ---
 
@@ -180,8 +180,8 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[quicksight]]` — QuickSight Master Hub
-- `[[quicksight-data-preparation-and-modeling]]` — Dataset Joins & Calculated Fields
-- `[[athena]]` — Amazon Athena Query Engine
-- `[[redshift]]` — Amazon Redshift Data Warehousing
-- `[[glue-etl-jobs]]` — Orchestrating ETL Pipelines before SPICE Ingestion
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` — QuickSight Master Hub
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight-data-preparation-and-modeling|quicksight-data-preparation-and-modeling]]` — Dataset Joins & Calculated Fields
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Query Engine
+- `[[mm/02-services/database/redshift|redshift]]` — Amazon Redshift Data Warehousing
+- `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Orchestrating ETL Pipelines before SPICE Ingestion

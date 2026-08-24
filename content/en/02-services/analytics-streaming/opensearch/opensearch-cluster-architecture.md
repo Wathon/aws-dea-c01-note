@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture)
 - **Primary Use Case**: Designing resilient multi-AZ OpenSearch clusters, configuring dedicated cluster manager nodes, and sizing primary and replica shards according to AWS best practices.
 - **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[opensearch]]` | `[[opensearch-storage-tiers-and-ism]]` | `[[opensearch-troubleshooting-and-tuning]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning|opensearch-troubleshooting-and-tuning]]`
 
 ---
 
@@ -152,7 +152,7 @@ A common cause of OpenSearch cluster failure on the DEA-C01 exam is **over-shard
 ---
 
 ## 📌 Related Notes
-- `[[opensearch]]` — OpenSearch Service Master Hub
-- `[[opensearch-storage-tiers-and-ism]]` — UltraWarm & Index State Management
-- `[[opensearch-troubleshooting-and-tuning]]` — Diagnosing Cluster Yellow/Red States
-- `[[ec2-and-graviton]]` — Graviton Silicon for OpenSearch Nodes
+- `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Service Master Hub
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` — UltraWarm & Index State Management
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning|opensearch-troubleshooting-and-tuning]]` — Diagnosing Cluster Yellow/Red States
+- `[[en/02-services/compute-containers/ec2-and-graviton|ec2-and-graviton]]` — Graviton Silicon for OpenSearch Nodes

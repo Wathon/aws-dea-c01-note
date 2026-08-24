@@ -18,7 +18,7 @@ date: 2026-08-08
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-event-notifications)
 - **Primary Use Case**: Automated Data Pipeline Triggering, Asynchronous ETL Ingestion, Decoupled Processing
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[lambda]] | [[sqs-and-sns]] | [[cloudwatch-and-eventbridge]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/compute-containers/lambda|lambda]] | [[en/02-services/integration/sqs-and-sns|sqs-and-sns]] | [[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]
 
 ---
 
@@ -164,8 +164,8 @@ A common exam trap involves S3 event notifications failing to deliver messages d
 
 ## 📌 Related Notes
 
-- [[s3]] — Main Amazon S3 Overview & Storage Classes
-- [[lambda]] — Serverless Event Processing & Execution Timeouts
-- [[sqs-and-sns]] — Decoupling Data Pipelines & Fan-Out Architecture
-- [[cloudwatch-and-eventbridge]] — EventBridge Event Buses, Rules, Archive & Replay
-- [[step-functions]] — Orchestrating Complex Serverless ETL Workflows
+- [[en/02-services/storage/s3/s3|s3]] — Main Amazon S3 Overview & Storage Classes
+- [[en/02-services/compute-containers/lambda|lambda]] — Serverless Event Processing & Execution Timeouts
+- [[en/02-services/integration/sqs-and-sns|sqs-and-sns]] — Decoupling Data Pipelines & Fan-Out Architecture
+- [[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]] — EventBridge Event Buses, Rules, Archive & Replay
+- [[en/02-services/integration/step-functions/step-functions|step-functions]] — Orchestrating Complex Serverless ETL Workflows

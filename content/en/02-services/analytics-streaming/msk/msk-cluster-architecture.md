@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk-cluster-architecture)
 - **Primary Use Case**: Designing fault-tolerant multi-AZ MSK broker topologies, configuring EBS storage auto-scaling, leveraging MSK Tiered Storage with S3, and understanding KRaft metadata mode.
 - **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[msk]]` | `[[msk-serverless]]` | `[[msk-security-and-monitoring]]` | `[[kinesis-data-streams]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/msk/msk|msk]]` | `[[en/02-services/analytics-streaming/msk/msk-serverless|msk-serverless]]` | `[[en/02-services/analytics-streaming/msk/msk-security-and-monitoring|msk-security-and-monitoring]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]`
 
 ---
 
@@ -176,8 +176,8 @@ kafka-topics.sh --bootstrap-server $BS \
 ---
 
 ## 📌 Related Notes
-- `[[msk]]` — Amazon MSK Ecosystem Overview
-- `[[msk-serverless]]` — Serverless On-Demand MSK Scaling
-- `[[msk-security-and-monitoring]]` — IAM Auth & Offset Lag Monitoring
-- `[[ebs-and-instance-store]]` — EBS gp3 Volumes & IOPS
-- `[[kinesis-data-streams]]` — KDS Shard Architecture Comparison
+- `[[en/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Ecosystem Overview
+- `[[en/02-services/analytics-streaming/msk/msk-serverless|msk-serverless]]` — Serverless On-Demand MSK Scaling
+- `[[en/02-services/analytics-streaming/msk/msk-security-and-monitoring|msk-security-and-monitoring]]` — IAM Auth & Offset Lag Monitoring
+- `[[en/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]]` — EBS gp3 Volumes & IOPS
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Shard Architecture Comparison

@@ -14,7 +14,7 @@ date: 2026-07-28
 - **Category**: Machine Learning
 - **Primary Use Case**: Data preparation (Data Wrangler), feature management (Feature Store), dataset labeling (Ground Truth), generative AI (Amazon Bedrock, Amazon Q Business).
 - **Slide Reference**: Pages 671–741 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]
 
 ---
 
@@ -49,5 +49,5 @@ Data engineers provide cleaned, structured feature sets for machine learning mod
 ---
 
 ## 📌 Related Notes
-- [[s3]] — Storing offline feature data in S3
-- [[redshift]] — Redshift ML integration
+- [[en/02-services/storage/s3/s3|s3]] — Storing offline feature data in S3
+- [[en/02-services/database/redshift|redshift]] — Redshift ML integration

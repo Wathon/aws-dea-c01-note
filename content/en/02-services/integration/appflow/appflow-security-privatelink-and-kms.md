@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/appflow/appflow-security-privatelink-and-kms)
 - **Primary Use Case**: Establishing private connections between SaaS applications and AWS via AWS PrivateLink, encrypting in-flight and at-rest data with AWS KMS CMKs, and managing OAuth credentials.
 - **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[appflow]]` | `[[kms-and-secrets]]` | `[[iam]]` | `[[vpc-and-networking]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/appflow/appflow|appflow]]` | `[[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]]` | `[[en/02-services/security-governance/iam|iam]]` | `[[en/02-services/networking-monitoring/vpc-and-networking|vpc-and-networking]]`
 
 ---
 
@@ -141,7 +141,7 @@ To allow Amazon AppFlow to write files into an Amazon S3 bucket, the S3 bucket p
 ---
 
 ## 📌 Related Notes
-- `[[appflow]]` — Amazon AppFlow Master Hub
-- `[[kms-and-secrets]]` — AWS KMS Encryption & Secrets Manager
-- `[[iam]]` — IAM Policies & Service Principals
-- `[[vpc-and-networking]]` — AWS PrivateLink & Interface Endpoints
+- `[[en/02-services/integration/appflow/appflow|appflow]]` — Amazon AppFlow Master Hub
+- `[[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]]` — AWS KMS Encryption & Secrets Manager
+- `[[en/02-services/security-governance/iam|iam]]` — IAM Policies & Service Principals
+- `[[en/02-services/networking-monitoring/vpc-and-networking|vpc-and-networking]]` — AWS PrivateLink & Interface Endpoints

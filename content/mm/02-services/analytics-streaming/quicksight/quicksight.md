@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/quicksight/quicksight) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Serverless business intelligence၊ sub-second interactive dashboards၊ SPICE in-memory calculation engine၊ ML-powered anomaly detection၊ paginated executive reports များနှင့် embedded analytics များ လုပ်ဆောင်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 479–498
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-3-data-operations-and-support]]` | `[[athena]]` | `[[redshift]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/database/redshift|redshift]]`
 
 ---
 
@@ -119,11 +119,11 @@ graph TD
 
 **AWS Certified Data Engineer - Associate (DEA-C01)** စာမေးပွဲအတွက် Amazon QuickSight ကို ကျွမ်းကျင်စေရန်၊ အောက်ဖော်ပြပါ modular note များကို လေ့လာပါ:
 
-1. `[[quicksight-spice-engine]]` — **SPICE In-Memory Calculation Engine, Direct Query vs. SPICE, Incremental Refresh & Cost Offloading**
-2. `[[quicksight-data-preparation-and-modeling]]` — **Data Sources, Multi-Table Joins, Level of Aware Calculations (LAC-A / LAC-M), Parameters & Cascading Filters**
-3. `[[quicksight-security-rls-and-governance]]` — **Row-Level Security (RLS), Column-Level Security (CLS), VPC Connections, and IAM Identity Center (SSO)**
-4. `[[quicksight-reporting-ml-and-embedding]]` — **Paginated Reports, ML Insights Anomaly Detection, QuickSight Q (GenAI) & Embedded Analytics**
-5. `[[quicksight-troubleshooting-and-patterns]]` — **SPICE Ingestion Errors, Athena/S3 Permissions, VPC Timeouts & BI Service Decision Matrix**
+1. `[[mm/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` — **SPICE In-Memory Calculation Engine, Direct Query vs. SPICE, Incremental Refresh & Cost Offloading**
+2. `[[mm/02-services/analytics-streaming/quicksight/quicksight-data-preparation-and-modeling|quicksight-data-preparation-and-modeling]]` — **Data Sources, Multi-Table Joins, Level of Aware Calculations (LAC-A / LAC-M), Parameters & Cascading Filters**
+3. `[[mm/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` — **Row-Level Security (RLS), Column-Level Security (CLS), VPC Connections, and IAM Identity Center (SSO)**
+4. `[[mm/02-services/analytics-streaming/quicksight/quicksight-reporting-ml-and-embedding|quicksight-reporting-ml-and-embedding]]` — **Paginated Reports, ML Insights Anomaly Detection, QuickSight Q (GenAI) & Embedded Analytics**
+5. `[[mm/02-services/analytics-streaming/quicksight/quicksight-troubleshooting-and-patterns|quicksight-troubleshooting-and-patterns]]` — **SPICE Ingestion Errors, Athena/S3 Permissions, VPC Timeouts & BI Service Decision Matrix**
 
 ---
 
@@ -140,8 +140,8 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[quicksight-spice-engine]]` — SPICE Capacity, Incremental Refresh & Cost Offload
-- `[[quicksight-security-rls-and-governance]]` — Row-Level & Column-Level Security
-- `[[athena]]` — Serverless SQL Data Lake Engine
-- `[[redshift]]` — Enterprise Data Warehouse Storage
-- `[[domain-3-data-operations-and-support]]` — Governance & Operational Excellence
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` — SPICE Capacity, Incremental Refresh & Cost Offload
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` — Row-Level & Column-Level Security
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Serverless SQL Data Lake Engine
+- `[[mm/02-services/database/redshift|redshift]]` — Enterprise Data Warehouse Storage
+- `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — Governance & Operational Excellence

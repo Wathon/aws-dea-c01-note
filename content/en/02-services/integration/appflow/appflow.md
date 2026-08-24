@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/appflow/appflow)
 - **Primary Use Case**: Fully managed, serverless data transfer between SaaS applications (Salesforce, SAP, ServiceNow, Zendesk, Slack) and AWS data stores (Amazon S3, Amazon Redshift, Amazon EventBridge) with built-in transformations, PII masking, and AWS PrivateLink security.
 - **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-operations-and-support]]` | `[[s3]]` | `[[redshift]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[en/02-services/database/redshift|redshift]]`
 
 ---
 
@@ -101,11 +101,11 @@ graph LR
 
 To master Amazon AppFlow for the **AWS Certified Data Engineer - Associate (DEA-C01)** exam, study the following modular notes:
 
-1. `[[appflow-triggers-and-transfer-modes]]` — **On-Demand, Scheduled Incremental & Event-Driven Real-Time Triggers**
-2. `[[appflow-data-transformation-masking-and-catalog]]` — **Field Mapping, PII Masking, Parquet Conversion & AWS Glue Catalog Integration**
-3. `[[appflow-destination-patterns-s3-redshift-eventbridge]]` — **S3 Lakehouse Ingestion, Redshift Upsert / MERGE & EventBridge Event Routing**
-4. `[[appflow-security-privatelink-and-kms]]` — **AWS PrivateLink for Salesforce/SAP, KMS Encryption, OAuth Governance & VPC Security**
-5. `[[appflow-comparison-and-troubleshooting]]` — **AppFlow vs. Glue vs. EventBridge Matrix, SaaS API Rate Limits & Triage**
+1. `[[en/02-services/integration/appflow/appflow-triggers-and-transfer-modes|appflow-triggers-and-transfer-modes]]` — **On-Demand, Scheduled Incremental & Event-Driven Real-Time Triggers**
+2. `[[en/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` — **Field Mapping, PII Masking, Parquet Conversion & AWS Glue Catalog Integration**
+3. `[[en/02-services/integration/appflow/appflow-destination-patterns-s3-redshift-eventbridge|appflow-destination-patterns-s3-redshift-eventbridge]]` — **S3 Lakehouse Ingestion, Redshift Upsert / MERGE & EventBridge Event Routing**
+4. `[[en/02-services/integration/appflow/appflow-security-privatelink-and-kms|appflow-security-privatelink-and-kms]]` — **AWS PrivateLink for Salesforce/SAP, KMS Encryption, OAuth Governance & VPC Security**
+5. `[[en/02-services/integration/appflow/appflow-comparison-and-troubleshooting|appflow-comparison-and-troubleshooting]]` — **AppFlow vs. Glue vs. EventBridge Matrix, SaaS API Rate Limits & Triage**
 
 ---
 
@@ -123,8 +123,8 @@ To master Amazon AppFlow for the **AWS Certified Data Engineer - Associate (DEA-
 ---
 
 ## 📌 Related Notes
-- `[[appflow-triggers-and-transfer-modes]]` — AppFlow Triggers & Incremental Sync
-- `[[appflow-data-transformation-masking-and-catalog]]` — Transformations & Glue Catalog
-- `[[s3]]` — Amazon S3 Data Lake Destination
-- `[[redshift]]` — Amazon Redshift Data Warehouse Loading
-- `[[athena]]` — Querying AppFlow Datasets in S3
+- `[[en/02-services/integration/appflow/appflow-triggers-and-transfer-modes|appflow-triggers-and-transfer-modes]]` — AppFlow Triggers & Incremental Sync
+- `[[en/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` — Transformations & Glue Catalog
+- `[[en/02-services/storage/s3/s3|s3]]` — Amazon S3 Data Lake Destination
+- `[[en/02-services/database/redshift|redshift]]` — Amazon Redshift Data Warehouse Loading
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Querying AppFlow Datasets in S3

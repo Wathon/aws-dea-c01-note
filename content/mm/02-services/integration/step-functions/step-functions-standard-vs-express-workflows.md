@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/step-functions/step-functions-standard-vs-express-workflows) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Duration၊ throughput၊ execution semantics နှင့် cost efficiency တို့အပေါ် အခြေခံ၍ Standard နှင့် Express workflow အမျိုးအစားများအကြား ရွေးချယ်အသုံးပြုခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 526–529
-- **Hub Links**: `[[mm/index]]` | `[[step-functions]]` | `[[step-functions-service-integrations-and-sync-patterns]]` | `[[domain-1-ingestion-and-processing]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` | `[[mm/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns|step-functions-service-integrations-and-sync-patterns]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]`
 
 ---
 
@@ -114,7 +114,7 @@ Express Workflows ကို high-volume, event-driven microservices များ
 ---
 
 ## 📌 Related Notes
-- `[[step-functions]]` — Step Functions Master Hub
-- `[[step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
-- `[[glue]]` — AWS Glue ETL Orchestration
-- `[[kinesis-data-streams]]` — Express Workflows ဖြင့် Streaming Ingestion ပြုလုပ်ခြင်း
+- `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` — Step Functions Master Hub
+- `[[mm/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns|step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue ETL Orchestration
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — Express Workflows ဖြင့် Streaming Ingestion ပြုလုပ်ခြင်း

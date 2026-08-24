@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sns/sns-delivery-retries-and-dead-letter-queues)
 - **Primary Use Case**: Configuring delivery retry policies for failing subscriber endpoints, attaching Amazon SQS Dead-Letter Queues (DLQs) to SNS subscriptions, and preventing unrecoverable message drops.
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[sns]]` | `[[sqs-dead-letter-queues-and-error-handling]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/sns/sns|sns]]` | `[[en/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` | `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -156,7 +156,7 @@ To attach an SQS Dead-Letter Queue to an SNS subscription:
 ---
 
 ## 📌 Related Notes
-- `[[sns]]` — SNS Master Hub
-- `[[sqs-dead-letter-queues-and-error-handling]]` — SQS DLQs and Redrive
-- `[[sns-subscription-filter-policies]]` — Subscription Filter Policies
-- `[[domain-3-data-operations-and-support]]` — CloudWatch & Incident Recovery
+- `[[en/02-services/integration/sns/sns|sns]]` — SNS Master Hub
+- `[[en/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` — SQS DLQs and Redrive
+- `[[en/02-services/integration/sns/sns-subscription-filter-policies|sns-subscription-filter-policies]]` — Subscription Filter Policies
+- `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — CloudWatch & Incident Recovery

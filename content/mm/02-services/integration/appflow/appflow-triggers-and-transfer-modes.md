@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow-triggers-and-transfer-modes) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Third-party API quota များကို ထိန်းသိမ်းရင်း SaaS ingestion pipeline များကို optimize ဖြစ်စေရန် On-Demand, Scheduled (Incremental Sync), နှင့် Event-Driven flow trigger များကို configure ပြုလုပ်ခြင်း။
 - **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/integration/appflow/appflow|appflow]]` | `[[mm/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` | `[[mm/02-services/integration/appflow/appflow-destination-patterns-s3-redshift-eventbridge|appflow-destination-patterns-s3-redshift-eventbridge]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/appflow/appflow|appflow]]` | `[[mm/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` | `[[mm/02-services/integration/appflow/appflow-destination-patterns-s3-redshift-eventbridge|appflow-destination-patterns-s3-redshift-eventbridge]]`
 
 ---
 

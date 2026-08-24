@@ -17,7 +17,7 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-encryption)
 - **Primary Use Case**: Data Protection at Rest & In Transit, Compliance, Fine-Grained Access Control
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-performance]] | [[kms-and-secrets]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/s3/s3-performance|s3-performance]] | [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]]
 
 ---
 
@@ -208,7 +208,7 @@ sequenceDiagram
 
 ## 📌 Related Notes
 
-- [[s3]] — Amazon S3 Overview & Storage Classes
-- [[s3-performance]] — S3 Bucket Keys & Request Performance
-- [[kms-and-secrets]] — AWS KMS Key Policies, Symmetric vs Asymmetric Keys & CloudTrail Audit
-- [[lake-formation]] — Data Lake Access Control & Encryption Governance
+- [[en/02-services/storage/s3/s3|s3]] — Amazon S3 Overview & Storage Classes
+- [[en/02-services/storage/s3/s3-performance|s3-performance]] — S3 Bucket Keys & Request Performance
+- [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — AWS KMS Key Policies, Symmetric vs Asymmetric Keys & CloudTrail Audit
+- [[en/02-services/security-governance/lake-formation|lake-formation]] — Data Lake Access Control & Encryption Governance

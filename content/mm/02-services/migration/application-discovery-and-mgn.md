@@ -19,7 +19,7 @@ date: 2026-08-14
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/migration/application-discovery-and-mgn) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Enterprise cloud migration များကို စီစဉ်ရာတွင် on-premises server infrastructure များကို ရှာဖွေဖော်ထုတ်ခြင်း၊ dependency များကို မြေပုံဆွဲခြင်း နှင့် continuous block-level replication ကိုအသုံးပြုကာ အလိုအလျောက် lift-and-shift (rehost) server migration များကို လုပ်ဆောင်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 267–268
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[dms-and-sct]] | [[datasync-and-snow]] | [[data-exchange]] | [[transfer-family]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/migration/dms-and-sct|dms-and-sct]] | [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] | [[mm/02-services/migration/data-exchange|data-exchange]] | [[mm/02-services/migration/transfer-family|transfer-family]]
 
 ---
 
@@ -244,9 +244,9 @@ graph TD
 
 ## 📌 Related Notes
 
-- [[dms-and-sct]] — AWS DMS & SCT for database migrations and CDC replication
-- [[datasync-and-snow]] — AWS DataSync & Snow Family for file and object migration
-- [[data-exchange]] — AWS Data Exchange for third-party datasets and Redshift integration
-- [[transfer-family]] — AWS Transfer Family for SFTP/FTPS workflows
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/02-services/migration/dms-and-sct|dms-and-sct]] — AWS DMS & SCT for database migrations and CDC replication
+- [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] — AWS DataSync & Snow Family for file and object migration
+- [[mm/02-services/migration/data-exchange|data-exchange]] — AWS Data Exchange for third-party datasets and Redshift integration
+- [[mm/02-services/migration/transfer-family|transfer-family]] — AWS Transfer Family for SFTP/FTPS workflows
+- [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

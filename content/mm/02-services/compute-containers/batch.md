@@ -19,7 +19,7 @@ date: 2026-08-14
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/batch) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အချိန်ကြာမြင့်စွာ run ရသော (> 15 min) batch computing job များ၊ Spark မဟုတ်သော data transformation များ၊ scientific simulation များ၊ ML data preprocessing နှင့် Dockerized image processing များကို managed EC2, Spot Instances, သို့မဟုတ် AWS Fargate တွင် run ရန်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 311–312
-- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/compute-containers/lambda|lambda]] | [[mm/02-services/analytics-streaming/glue/glue|glue]] | [[mm/02-services/analytics-streaming/emr/emr|emr]] | [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] | [[mm/02-services/integration/step-functions/step-functions|step-functions]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/compute-containers/lambda|lambda]] | [[mm/02-services/analytics-streaming/glue/glue|glue]] | [[mm/02-services/analytics-streaming/emr/emr|emr]] | [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] | [[mm/02-services/integration/step-functions/step-functions|step-functions]]
 
 ---
 

@@ -21,7 +21,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow-security-privatelink-and-kms) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: AWS PrivateLink မှတစ်ဆင့် SaaS application များနှင့် AWS အကြား private connection များ တည်ဆောက်ရန်၊ AWS KMS CMKs ဖြင့် in-flight နှင့် at-rest data များကို encrypt ပြုလုပ်ရန်နှင့် OAuth credentials များကို စီမံခန့်ခွဲရန်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 530–537
-- **Hub Links**: `[[mm/index]]` | `[[appflow]]` | `[[kms-and-secrets]]` | `[[iam]]` | `[[vpc-and-networking]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/appflow/appflow|appflow]]` | `[[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]]` | `[[mm/02-services/security-governance/iam|iam]]` | `[[mm/02-services/networking-monitoring/vpc-and-networking|vpc-and-networking]]`
 
 ---
 
@@ -142,7 +142,7 @@ Amazon AppFlow အား Amazon S3 bucket အတွင်းသို့ file �
 ---
 
 ## 📌 Related Notes
-- `[[appflow]]` — Amazon AppFlow Master Hub
-- `[[kms-and-secrets]]` — AWS KMS Encryption & Secrets Manager
-- `[[iam]]` — IAM Policies & Service Principals
-- `[[vpc-and-networking]]` — AWS PrivateLink & Interface Endpoints
+- `[[mm/02-services/integration/appflow/appflow|appflow]]` — Amazon AppFlow Master Hub
+- `[[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]]` — AWS KMS Encryption & Secrets Manager
+- `[[mm/02-services/security-governance/iam|iam]]` — IAM Policies & Service Principals
+- `[[mm/02-services/networking-monitoring/vpc-and-networking|vpc-and-networking]]` — AWS PrivateLink & Interface Endpoints

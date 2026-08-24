@@ -21,7 +21,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sqs/sqs-standard-vs-fifo-queues) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Standard နှင့် FIFO queue semantics အကြား ရွေးချယ်ခြင်း၊ အစဉ်လိုက် parallel processing ပြုလုပ်နိုင်ရန် Message Group IDs များ configure လုပ်ခြင်း၊ Content-Based Deduplication ကို enable လုပ်ခြင်း နှင့် High-Throughput FIFO mode ဖြင့် scale ပြုလုပ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 499–525
-- **Hub Links**: `[[mm/index]]` | `[[sqs]]` | `[[sqs-timing-parameters-and-polling]]` | `[[sqs-dead-letter-queues-and-error-handling]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` | `[[mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]`
 
 ---
 
@@ -154,7 +154,7 @@ Deduplication နည်းလမ်း ၂ မျိုး ရှိပါသည
 ---
 
 ## 📌 ဆက်စပ်မှတ်စုများ (Related Notes)
-- `[[sqs]]` — SQS Master Hub
-- `[[sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Long Polling
-- `[[sqs-dead-letter-queues-and-error-handling]]` — DLQs and Poison Pill Isolation
-- `[[lambda]]` — SQS Batch Size and Scaling
+- `[[mm/02-services/integration/sqs/sqs|sqs]]` — SQS Master Hub
+- `[[mm/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Long Polling
+- `[[mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` — DLQs and Poison Pill Isolation
+- `[[mm/02-services/compute-containers/lambda|lambda]]` — SQS Batch Size and Scaling

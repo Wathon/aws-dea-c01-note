@@ -16,9 +16,9 @@ date: 2026-08-13
 
 - **Category**: Migration & Transfer (Database & Analytics Migration, Continuous CDC Ingestion)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/migration/dms-and-sct)
-- **Primary Use Case**: Heterogeneous and homogeneous database migrations, continuous Change Data Capture (CDC) streaming into [[s3]] Data Lakes, [[redshift]], [[kinesis]], [[msk]], and [[dynamodb]] with minimal downtime.
+- **Primary Use Case**: Heterogeneous and homogeneous database migrations, continuous Change Data Capture (CDC) streaming into [[en/02-services/storage/s3/s3|s3]] Data Lakes, [[en/02-services/database/redshift|redshift]], [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]], [[en/02-services/analytics-streaming/msk/msk|msk]], and [[en/02-services/database/dynamodb|dynamodb]] with minimal downtime.
 - **Slide Reference**: Pages 269–275 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[rds-and-aurora]] | [[redshift]] | [[s3]] | [[datasync-and-snow]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/02-services/database/rds-and-aurora|rds-and-aurora]] | [[en/02-services/database/redshift|redshift]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/migration/datasync-and-snow|datasync-and-snow]]
 
 ---
 
@@ -32,9 +32,9 @@ For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you must m
 1. **Homogeneous vs. Heterogeneous Migrations**: When DMS works standalone (same engine) vs. when AWS SCT is strictly required (different engines).
 2. **DMS Replication Tasks & Load Modes**: Full load, Full load + CDC, and CDC-only.
 3. **Change Data Capture (CDC) Mechanics**: Reading transaction logs (PostgreSQL WAL, MySQL binlogs, Oracle Redo/LogMiner, SQL Server MS-CDC) and streaming inserts/updates/deletes.
-4. **Target Data Lake & Streaming Integrations**: Outputting CDC events to [[s3]] in CSV or Apache Parquet format (with `Op` operation column), [[kinesis]], and [[msk]].
+4. **Target Data Lake & Streaming Integrations**: Outputting CDC events to [[en/02-services/storage/s3/s3|s3]] in CSV or Apache Parquet format (with `Op` operation column), [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]], and [[en/02-services/analytics-streaming/msk/msk|msk]].
 5. **LOB (Large Object) Handling Tradeoffs**: Limited LOB mode vs. Full LOB mode vs. Inline LOB mode.
-6. **SCT Data Extraction Agents & Hybrid Snowball Migration**: Migrating multi-terabyte/petabyte data warehouses (Teradata, Oracle, Greenplum) offline via [[datasync-and-snow]] (Snowball Edge) + DMS continuous CDC catch-up.
+6. **SCT Data Extraction Agents & Hybrid Snowball Migration**: Migrating multi-terabyte/petabyte data warehouses (Teradata, Oracle, Greenplum) offline via [[en/02-services/migration/datasync-and-snow|datasync-and-snow]] (Snowball Edge) + DMS continuous CDC catch-up.
 7. **DMS Serverless & DMS Fleet Advisor**: Auto-scaling replication capacity units (DCUs) and automated fleet discovery.
 
 ```mermaid
@@ -139,7 +139,7 @@ graph LR
 - **Storage Subsystem**: Uses Amazon EBS storage to buffer in-flight transactions and cache Large Objects (LOBs) during active CDC.
 
 ### 2. Endpoints (Source & Target)
-An endpoint defines connection properties, credentials (or IAM roles / [[kms-and-secrets]] Secrets Manager ARNs), database type, network protocols, and Extra Connection Attributes (ECAs).
+An endpoint defines connection properties, credentials (or IAM roles / [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] Secrets Manager ARNs), database type, network protocols, and Extra Connection Attributes (ECAs).
 
 | Dimension | Supported Sources | Supported Targets |
 | :--- | :--- | :--- |
@@ -204,7 +204,7 @@ graph TD
 | **Homogeneous PostgreSQL $\rightarrow$ Aurora PostgreSQL** | **AWS DMS** (Minimal downtime) | `pg_dump` + `pg_restore` or Logical Replication | `pg_dump` requires maintenance downtime; DMS CDC allows live syncing. |
 | **Heterogeneous Oracle $\rightarrow$ Aurora PostgreSQL** | **AWS SCT + AWS DMS** | None native | SCT converts PL/SQL and datatypes; DMS moves data and streams WAL. |
 | **Heterogeneous Teradata / Netezza $\rightarrow$ Amazon Redshift** | **AWS SCT + SCT Data Extraction Agents** | Custom python ETL scripts | SCT converts complex DW SQL queries, schemas, and extracts data in parallel chunks. |
-| **Relational DB $\rightarrow$ S3 Data Lake** | **AWS DMS (CDC to Parquet)** | [[glue]] JDBC Jobs (Batch only) | DMS provides continuous streaming CDC into S3; Glue is scheduled batch. |
+| **Relational DB $\rightarrow$ S3 Data Lake** | **AWS DMS (CDC to Parquet)** | [[en/02-services/analytics-streaming/glue/glue|glue]] JDBC Jobs (Batch only) | DMS provides continuous streaming CDC into S3; Glue is scheduled batch. |
 
 ---
 
@@ -305,7 +305,7 @@ When configuring Amazon S3 as a target endpoint for DMS CDC, DMS writes change r
 
 > [!IMPORTANT]
 > **Processing DMS CDC in S3 Data Lakes**:
-> - Downstream consumers (such as [[glue]] ETL jobs, Apache Hudi, or [[s3-tables]] Apache Iceberg) use the `Op` column and primary keys to apply upserts (`INSERT` and `UPDATE`) and hard deletes (`DELETE`) onto Silver/Gold Data Lake tables.
+> - Downstream consumers (such as [[en/02-services/analytics-streaming/glue/glue|glue]] ETL jobs, Apache Hudi, or [[en/02-services/storage/s3/s3-tables|s3-tables]] Apache Iceberg) use the `Op` column and primary keys to apply upserts (`INSERT` and `UPDATE`) and hard deletes (`DELETE`) onto Silver/Gold Data Lake tables.
 
 ---
 
@@ -430,12 +430,12 @@ sequenceDiagram
 
 ## 📌 Related Notes
 
-- [[datasync-and-snow]] — AWS DataSync & Snowball Edge for offline hybrid database migration
-- [[rds-and-aurora]] — Target operational database engines and RDS CDC configuration
-- [[redshift]] — Amazon Redshift data warehouse target and Zero-ETL comparison
-- [[s3]] — S3 Data Lake target for CDC Parquet ingestion
-- [[kinesis]] — Streaming ingestion target for real-time CDC
-- [[msk]] — Managed Kafka target for change stream event messaging
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/02-services/migration/datasync-and-snow|datasync-and-snow]] — AWS DataSync & Snowball Edge for offline hybrid database migration
+- [[en/02-services/database/rds-and-aurora|rds-and-aurora]] — Target operational database engines and RDS CDC configuration
+- [[en/02-services/database/redshift|redshift]] — Amazon Redshift data warehouse target and Zero-ETL comparison
+- [[en/02-services/storage/s3/s3|s3]] — S3 Data Lake target for CDC Parquet ingestion
+- [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]] — Streaming ingestion target for real-time CDC
+- [[en/02-services/analytics-streaming/msk/msk|msk]] — Managed Kafka target for change stream event messaging
+- [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
 

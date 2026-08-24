@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/quicksight/quicksight-data-preparation-and-modeling) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Cross-source dataset များကို ပေါင်းစည်းခြင်း (Combining cross-source datasets)၊ Custom SQL query များ ဖန်တီးခြင်း၊ အဆင့်မြင့် Level of Aware Calculations (LAC-A / LAC-M) တည်ဆောက်ခြင်းနှင့် dynamic cascading filter များ configure ပြုလုပ်ခြင်း။
 - **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[quicksight]]` | `[[quicksight-spice-engine]]` | `[[athena]]` | `[[rds-and-aurora]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/database/rds-and-aurora|rds-and-aurora]]`
 
 ---
 
@@ -154,7 +154,7 @@ graph LR
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[quicksight]]` — QuickSight Master Hub
-- `[[quicksight-spice-engine]]` — SPICE In-Memory Engine
-- `[[athena]]` — Querying S3 Datasets
-- `[[rds-and-aurora]]` — Relational Sources for QuickSight
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` — QuickSight Master Hub
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` — SPICE In-Memory Engine
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Querying S3 Datasets
+- `[[mm/02-services/database/rds-and-aurora|rds-and-aurora]]` — Relational Sources for QuickSight

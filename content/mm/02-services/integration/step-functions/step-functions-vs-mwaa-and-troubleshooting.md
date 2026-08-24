@@ -21,7 +21,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/step-functions/step-functions-vs-mwaa-and-troubleshooting) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: AWS Step Functions နှင့် Amazon MWAA (Apache Airflow) တို့အကြား ရွေးချယ်ခြင်း၊ CloudWatch နှင့် AWS X-Ray monitoring တို့ကို configure လုပ်ခြင်းနှင့် အဖြစ်များသော production state machine errors များကို ဖြေရှင်းခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 526–529
-- **Hub Links**: `[[mm/index]]` | `[[step-functions]]` | `[[mwaa-airflow]]` | `[[cloudwatch-and-eventbridge]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` | `[[mm/02-services/integration/mwaa-airflow|mwaa-airflow]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -103,7 +103,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[step-functions]]` — Step Functions Master Hub
-- `[[mwaa-airflow]]` — Amazon MWAA Deep-Dive Suite
-- `[[step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
-- `[[domain-3-data-operations-and-support]]` — CloudWatch & Incident Triage
+- `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` — Step Functions Master Hub
+- `[[mm/02-services/integration/mwaa-airflow|mwaa-airflow]]` — Amazon MWAA Deep-Dive Suite
+- `[[mm/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns|step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
+- `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — CloudWatch & Incident Triage

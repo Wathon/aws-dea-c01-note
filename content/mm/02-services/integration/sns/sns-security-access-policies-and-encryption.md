@@ -21,7 +21,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sns/sns-security-access-policies-and-encryption) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Topic Access Policies မှတစ်ဆင့် AWS services များနှင့် cross-account publishers များအား ခွင့်ပြုချက်ပေးခြင်း (authorizing)၊ AWS KMS ဖြင့် data at rest မက်ဆေ့ဂျ်များကို encrypt ပြုလုပ်လုံခြုံစေခြင်း၊ VPC PrivateLink မှတစ်ဆင့် လမ်းကြောင်းပေးပို့ခြင်း (routing) နှင့် delivery health ကို စောင့်ကြည့်စစ်ဆေးခြင်း။
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[sns]]` | `[[sns-standard-vs-fifo-topics]]` | `[[sns-delivery-retries-and-dead-letter-queues]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/sns/sns|sns]]` | `[[mm/02-services/integration/sns/sns-standard-vs-fifo-topics|sns-standard-vs-fifo-topics]]` | `[[mm/02-services/integration/sns/sns-delivery-retries-and-dead-letter-queues|sns-delivery-retries-and-dead-letter-queues]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -161,7 +161,7 @@ SNS topic တစ်ခုပေါ်တွင် SSE-KMS encryption ကို e
 ---
 
 ## 📌 Related Notes
-- `[[sns]]` — SNS Master Hub
-- `[[sns-standard-vs-fifo-topics]]` — Standard vs FIFO Topics
-- `[[sns-delivery-retries-and-dead-letter-queues]]` — Delivery Retries & DLQs
-- `[[sqs-security-monitoring-and-troubleshooting]]` — SQS Security & Access Governance
+- `[[mm/02-services/integration/sns/sns|sns]]` — SNS Master Hub
+- `[[mm/02-services/integration/sns/sns-standard-vs-fifo-topics|sns-standard-vs-fifo-topics]]` — Standard vs FIFO Topics
+- `[[mm/02-services/integration/sns/sns-delivery-retries-and-dead-letter-queues|sns-delivery-retries-and-dead-letter-queues]]` — Delivery Retries & DLQs
+- `[[mm/02-services/integration/sqs/sqs-security-monitoring-and-troubleshooting|sqs-security-monitoring-and-troubleshooting]]` — SQS Security & Access Governance

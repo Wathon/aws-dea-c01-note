@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/appflow/appflow-triggers-and-transfer-modes)
 - **Primary Use Case**: Configuring On-Demand, Scheduled (Incremental Sync), and Event-Driven flow triggers to optimize SaaS ingestion pipelines while respecting third-party API quotas.
 - **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[appflow]]` | `[[appflow-data-transformation-masking-and-catalog]]` | `[[appflow-destination-patterns-s3-redshift-eventbridge]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/appflow/appflow|appflow]]` | `[[en/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` | `[[en/02-services/integration/appflow/appflow-destination-patterns-s3-redshift-eventbridge|appflow-destination-patterns-s3-redshift-eventbridge]]`
 
 ---
 
@@ -125,7 +125,7 @@ Enterprise SaaS applications (such as Salesforce and ServiceNow) enforce strict 
 ---
 
 ## 📌 Related Notes
-- `[[appflow]]` — Amazon AppFlow Master Hub
-- `[[appflow-data-transformation-masking-and-catalog]]` — Field Transformations & PII Masking
-- `[[appflow-destination-patterns-s3-redshift-eventbridge]]` — Destinations: S3, Redshift & EventBridge
-- `[[mwaa-airflow]]` — Orchestrating AppFlow from MWAA Airflow
+- `[[en/02-services/integration/appflow/appflow|appflow]]` — Amazon AppFlow Master Hub
+- `[[en/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` — Field Transformations & PII Masking
+- `[[en/02-services/integration/appflow/appflow-destination-patterns-s3-redshift-eventbridge|appflow-destination-patterns-s3-redshift-eventbridge]]` — Destinations: S3, Redshift & EventBridge
+- `[[en/02-services/integration/mwaa-airflow|mwaa-airflow]]` — Orchestrating AppFlow from MWAA Airflow

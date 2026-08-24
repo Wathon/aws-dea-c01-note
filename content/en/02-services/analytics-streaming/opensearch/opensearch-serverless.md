@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/opensearch/opensearch-serverless)
 - **Primary Use Case**: Running full-text search, time-series log analytics, and ML vector search without managing cluster instances, node sizing, shard counts, or storage scaling.
 - **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[opensearch]]` | `[[opensearch-storage-tiers-and-ism]]` | `[[s3]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[en/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` | `[[en/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -145,7 +145,7 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[opensearch]]` — OpenSearch Master Hub
-- `[[opensearch-cluster-architecture]]` — Provisioned Cluster Topologies
-- `[[opensearch-ingestion-and-pipelines]]` — Ingesting into OpenSearch
-- `[[s3]]` — S3 Persistent Storage Layer
+- `[[en/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Master Hub
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` — Provisioned Cluster Topologies
+- `[[en/02-services/analytics-streaming/opensearch/opensearch-ingestion-and-pipelines|opensearch-ingestion-and-pipelines]]` — Ingesting into OpenSearch
+- `[[en/02-services/storage/s3/s3|s3]]` — S3 Persistent Storage Layer

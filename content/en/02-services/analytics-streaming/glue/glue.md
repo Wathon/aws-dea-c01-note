@@ -15,7 +15,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue)
 - **Primary Use Case**: Serverless ETL, Centralized Metadata Management, Automated Schema Discovery, Data Quality Governance, Visual & Code-based Data Preparation.
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -23,7 +23,7 @@ date: 2026-08-17
 
 **AWS Glue** is a fully managed, event-driven, serverless data integration service that makes it easy to discover, prepare, transform, and combine data for analytics, machine learning, and application development. It serves as the foundational data pipeline engine across the AWS Modern Data Architecture.
 
-Unlike cluster-based frameworks such as **[[emr]]**, AWS Glue abstracts away all underlying compute infrastructure. It provisions, configures, and scales resources automatically, billing strictly per second for the **Data Processing Units (DPUs)** consumed by jobs (1 DPU = 4 vCPUs and 16 GB of memory).
+Unlike cluster-based frameworks such as **[[en/02-services/analytics-streaming/emr/emr|emr]]**, AWS Glue abstracts away all underlying compute infrastructure. It provisions, configures, and scales resources automatically, billing strictly per second for the **Data Processing Units (DPUs)** consumed by jobs (1 DPU = 4 vCPUs and 16 GB of memory).
 
 ```mermaid
 graph TD
@@ -95,15 +95,15 @@ AWS Glue is not a single tool; it is a unified suite composed of several purpose
 
 | Component | Primary Function | Core Technology / Language | Detailed Note |
 | :--- | :--- | :--- | :--- |
-| **Glue Data Catalog** | Central Apache Hive-compatible metastore for table definitions, partitions, schema versions, and connections. | Apache Hive Metastore API | `[[glue-data-catalog]]` |
-| **Glue Crawlers** | Automated scanners that inspect data stores (S3, JDBC, DynamoDB) to infer schemas, detect partitions, and update the catalog. | Classifiers (Grok / Built-in) | `[[glue-crawlers]]` |
-| **Glue ETL Jobs** | Serverless batch and streaming data transformation engine with built-in DynamicFrames and state management. | PySpark, Spark Scala, Python Shell | `[[glue-etl-jobs]]` |
-| **Glue Data Quality** | Declarative data validation framework using DQDL rulesets to measure data health, fail jobs, or quarantine bad records. | DQDL (Data Quality Definition Lang) | `[[glue-data-quality]]` |
-| **Glue DataBrew** | Visual, spreadsheet-like data preparation tool with 250+ pre-built transformations for business analysts and data scientists. | Visual UI / Recipe Engine | `[[glue-databrew]]` |
-| **Glue Studio** | Visual drag-and-drop DAG interface for authoring, running, inspecting, and monitoring Spark ETL jobs without writing code. | Visual GUI / Auto-generated Spark | `[[glue-studio]]` |
-| **Glue Flex Execution** | Flexible, cost-optimized execution class offering up to 35% discount for non-time-sensitive, non-SLA batch jobs. | Spot-like compute capacity | `[[glue-flex]]` |
-| **Glue Workflows** | Purpose-built orchestration service for managing multi-step Glue pipelines (Triggers, Crawlers, and Jobs) as visual DAGs. | Native Glue Orchestration | `[[glue-workflows]]` |
-| **Glue Schema Registry** | Centralized streaming schema governance that validates and evolves message structures in real time. | Apache Avro, JSON Schema, Protobuf | `[[glue-schema-registry]]` |
+| **Glue Data Catalog** | Central Apache Hive-compatible metastore for table definitions, partitions, schema versions, and connections. | Apache Hive Metastore API | `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` |
+| **Glue Crawlers** | Automated scanners that inspect data stores (S3, JDBC, DynamoDB) to infer schemas, detect partitions, and update the catalog. | Classifiers (Grok / Built-in) | `[[en/02-services/analytics-streaming/glue/glue-crawlers|glue-crawlers]]` |
+| **Glue ETL Jobs** | Serverless batch and streaming data transformation engine with built-in DynamicFrames and state management. | PySpark, Spark Scala, Python Shell | `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` |
+| **Glue Data Quality** | Declarative data validation framework using DQDL rulesets to measure data health, fail jobs, or quarantine bad records. | DQDL (Data Quality Definition Lang) | `[[en/02-services/analytics-streaming/glue/glue-data-quality|glue-data-quality]]` |
+| **Glue DataBrew** | Visual, spreadsheet-like data preparation tool with 250+ pre-built transformations for business analysts and data scientists. | Visual UI / Recipe Engine | `[[en/02-services/analytics-streaming/glue/glue-databrew|glue-databrew]]` |
+| **Glue Studio** | Visual drag-and-drop DAG interface for authoring, running, inspecting, and monitoring Spark ETL jobs without writing code. | Visual GUI / Auto-generated Spark | `[[en/02-services/analytics-streaming/glue/glue-studio|glue-studio]]` |
+| **Glue Flex Execution** | Flexible, cost-optimized execution class offering up to 35% discount for non-time-sensitive, non-SLA batch jobs. | Spot-like compute capacity | `[[en/02-services/analytics-streaming/glue/glue-flex|glue-flex]]` |
+| **Glue Workflows** | Purpose-built orchestration service for managing multi-step Glue pipelines (Triggers, Crawlers, and Jobs) as visual DAGs. | Native Glue Orchestration | `[[en/02-services/analytics-streaming/glue/glue-workflows|glue-workflows]]` |
+| **Glue Schema Registry** | Centralized streaming schema governance that validates and evolves message structures in real time. | Apache Avro, JSON Schema, Protobuf | `[[en/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` |
 
 ---
 
@@ -193,15 +193,15 @@ AWS Glue provides **Security Configurations** to enforce encryption across the e
 ---
 
 ## 📌 Related Notes
-- `[[glue-data-catalog]]` — Glue Data Catalog, Metastore & Partition Indexes
-- `[[glue-crawlers]]` — Glue Crawlers, Classifiers & Schema Drift
-- `[[glue-etl-jobs]]` — Glue ETL Jobs, DynamicFrames & Performance Tuning
-- `[[glue-data-quality]]` — AWS Glue Data Quality & DQDL Rules
-- `[[glue-databrew]]` — AWS Glue DataBrew for Visual Preparation
-- `[[glue-studio]]` — AWS Glue Studio Visual ETL
-- `[[glue-flex]]` — AWS Glue Flex Execution Class
-- `[[glue-workflows]]` — AWS Glue Workflows Orchestration
-- `[[glue-schema-registry]]` — AWS Glue Schema Registry for Streaming
-- `[[athena]]` — Amazon Athena Integration
-- `[[emr]]` — Amazon EMR vs. AWS Glue
-- `[[lake-formation]]` — AWS Lake Formation Centralized Governance
+- `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Data Catalog, Metastore & Partition Indexes
+- `[[en/02-services/analytics-streaming/glue/glue-crawlers|glue-crawlers]]` — Glue Crawlers, Classifiers & Schema Drift
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Glue ETL Jobs, DynamicFrames & Performance Tuning
+- `[[en/02-services/analytics-streaming/glue/glue-data-quality|glue-data-quality]]` — AWS Glue Data Quality & DQDL Rules
+- `[[en/02-services/analytics-streaming/glue/glue-databrew|glue-databrew]]` — AWS Glue DataBrew for Visual Preparation
+- `[[en/02-services/analytics-streaming/glue/glue-studio|glue-studio]]` — AWS Glue Studio Visual ETL
+- `[[en/02-services/analytics-streaming/glue/glue-flex|glue-flex]]` — AWS Glue Flex Execution Class
+- `[[en/02-services/analytics-streaming/glue/glue-workflows|glue-workflows]]` — AWS Glue Workflows Orchestration
+- `[[en/02-services/analytics-streaming/glue/glue-schema-registry|glue-schema-registry]]` — AWS Glue Schema Registry for Streaming
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Integration
+- `[[en/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR vs. AWS Glue
+- `[[en/02-services/security-governance/lake-formation|lake-formation]]` — AWS Lake Formation Centralized Governance

@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sns/sns-standard-vs-fifo-topics)
 - **Primary Use Case**: Choosing between Standard and FIFO topic semantics, preserving message sequence across multiple subscriber queues, enabling Content-Based Deduplication, and integrating FIFO topics with SQS FIFO queues.
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[sns]]` | `[[sqs-standard-vs-fifo-queues]]` | `[[sns-subscription-filter-policies]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/sns/sns|sns]]` | `[[en/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` | `[[en/02-services/integration/sns/sns-subscription-filter-policies|sns-subscription-filter-policies]]`
 
 ---
 
@@ -159,7 +159,7 @@ When you need to trigger a serverless Lambda function while maintaining strict F
 ---
 
 ## 📌 Related Notes
-- `[[sns]]` — SNS Master Hub
-- `[[sqs-standard-vs-fifo-queues]]` — SQS Standard vs FIFO Queues
-- `[[sns-subscription-filter-policies]]` — SNS Subscription Filter Policies
-- `[[kinesis-firehose]]` — Amazon Data Firehose Ingestion
+- `[[en/02-services/integration/sns/sns|sns]]` — SNS Master Hub
+- `[[en/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` — SQS Standard vs FIFO Queues
+- `[[en/02-services/integration/sns/sns-subscription-filter-policies|sns-subscription-filter-policies]]` — SNS Subscription Filter Policies
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Amazon Data Firehose Ingestion

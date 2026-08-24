@@ -15,7 +15,7 @@ date: 2026-08-07
 - **Category**: Hands-on Exercises & Implementation Code
 - **Language / ဘာသာစကား**: [English (Original)](/en/00-hub/lab-materials-index) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Practical AWS Data Engineering Labs များ၊ CLI Scripts များ၊ Sample Datasets များ၊ Infrastructure as Code (IaC)
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[dea-c01-roadmap]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/00-hub/dea-c01-roadmap|dea-c01-roadmap]]
 
 ---
 
@@ -42,11 +42,11 @@ graph TD
 - **`content/materials/S3TablesActivity.txt`**:
   - **Apache Iceberg** ဖြင့် **Amazon S3 Tables** ကို စမ်းသပ်ရန် SQL script ဖြစ်သည်။
   - Iceberg `TBLPROPERTIES` ဖြင့် `CREATE TABLE` ပြုလုပ်ခြင်း၊ year အလိုက် partitioning ခွဲခြင်း၊ multi-row `INSERT` ပြုလုပ်ခြင်းနှင့် Athena တွင် aggregation queries များ စမ်းသပ်ခြင်းတို့ကို သရုပ်ပြထားသည်။
-  - Linked Note: [[s3-tables]] | [[athena]]
+  - Linked Note: [[mm/02-services/storage/s3/s3-tables|s3-tables]] | [[mm/02-services/analytics-streaming/athena/athena|athena]]
 - **`content/materials/USCensus.csv`**:
   - Standard CSV dataset (အမေရိကန်ပြည်ထောင်စု ပြည်နယ်အလိုက် လူဦးရေနှင့် သန်းခေါင်စာရင်း demographic data)။
   - S3 ingestion၊ Glue Crawlers၊ Athena query performance စမ်းသပ်မှုများနှင့် Parquet conversion labs များအတွက် အသုံးပြုသည်။
-  - Linked Note: [[s3]] | [[data-formats-and-compression]]
+  - Linked Note: [[mm/02-services/storage/s3/s3|s3]] | [[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]]
 - **`content/materials/code/s3/`**:
   - S3 static website hosting နှင့် CORS configurations များကို စမ်းသပ်ရန်အတွက် Sample static assets များ (`index.html`၊ test images)။
 
@@ -54,16 +54,16 @@ graph TD
 
 - **`content/materials/kms/kms-demo-cli.sh`**:
   - AWS KMS CLI လုပ်ဆောင်ချက်များကို သရုပ်ပြထားသော Shell script ဖြစ်သည်: envelope encryption၊ data key generation (`aws kms generate-data-key`) နှင့် encryption/decryption validation များ ပါဝင်သည်။
-  - Linked Note: [[kms-and-secrets]] | [[s3-encryption]]
+  - Linked Note: [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] | [[mm/02-services/storage/s3/s3-encryption|s3-encryption]]
 - **`content/materials/DataZoneSampleData.txt`**:
   - Amazon DataZone တွင် data assets များ၊ metadata forms များနှင့် data governance policies များကို publish လုပ်ရာတွင် အသုံးပြုသည့် structured text payload ဖြစ်သည်။
-  - Linked Note: [[lake-formation]]
+  - Linked Note: [[mm/02-services/security-governance/lake-formation|lake-formation]]
 
 ### 3. Streaming & Analytics Labs (`Kinesis` & Serverless)
 
 - **`content/materials/code/kinesis/kinesis-data-streams.sh`**:
   - Kinesis Data Streams ထဲသို့ records များ ထည့်သွင်းခြင်း (`aws kinesis put-record`)၊ shard iterators များကို စစ်ဆေးခြင်းနှင့် stream consumer throughput ကို စမ်းသပ်ခြင်းတို့အတွက် CLI script ဖြစ်သည်။
-  - Linked Note: [[kinesis]]
+  - Linked Note: [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]
 
 ### 4. Infrastructure as Code & Automation (`CDK`, `CloudFormation`, `SAM`)
 
@@ -88,5 +88,5 @@ graph TD
 
 ## 📌 Master Hub Links
 
-- ပင်မ Hub သို့ ပြန်သွားရန်: [[mm/index]]
-- AWS Service Catalog: [[service-catalog]]
+- ပင်မ Hub သို့ ပြန်သွားရန်: [[mm/index|index]]
+- AWS Service Catalog: [[mm/00-hub/service-catalog|service-catalog]]

@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-workgroups)
 - **Primary Use Case**: Multi-tenant isolation, per-query and workgroup-level data scan limits, mandatory encryption enforcement, and granular cost tracking.
 - **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[athena]]` | `[[domain-5-security-and-governance]]` | `[[cost-management]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[domain-5-security-and-governance]]` | `[[en/02-services/ml-dev-cost/cost-management|cost-management]]`
 
 ---
 
@@ -170,7 +170,7 @@ Athena automatically streams real-time execution metrics per workgroup to **Amaz
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Amazon Athena Architecture Overview
-- `[[athena-performance]]` — Query Cost Optimization
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Architecture Overview
+- `[[en/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — Query Cost Optimization
 - `[[domain-5-security-and-governance]]` — Security, Encryption & IAM Policies
-- `[[cost-management]]` — AWS Analytics Cost Allocation
+- `[[en/02-services/ml-dev-cost/cost-management|cost-management]]` — AWS Analytics Cost Allocation

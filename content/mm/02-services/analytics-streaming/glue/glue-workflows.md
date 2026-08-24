@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-workflows) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: dynamic parameter sharing ဖြင့် multi-step Glue Crawlers, Jobs နှင့် Triggers များကို native, serverless ပုံစံဖြင့် ချိတ်ဆက်စီမံခန့်ခွဲခြင်း (orchestration)။
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[step-functions]]` | `[[mwaa-airflow]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` | `[[mm/02-services/integration/mwaa-airflow|mwaa-airflow]]`
 
 ---
 
@@ -26,7 +26,7 @@ date: 2026-08-17
 
 **AWS Glue Workflows** သည် **AWS Glue Crawlers, Jobs နှင့် Triggers** များဖြင့် ဖွဲ့စည်းထားသော အဆင့်များစွာပါဝင်သည့် extract, transform, and load (ETL) pipeline များကို ချိတ်ဆက်ညှိနှိုင်းရန်နှင့် စောင့်ကြည့်စစ်ဆေးရန် (coordinate and monitor) အထူးဖန်တီးထားသည့် fully managed orchestration service တစ်ခု ဖြစ်သည်။
 
-AWS services အများအပြား (ဥပမာ AWS Lambda, Amazon EMR, Amazon ECS သို့မဟုတ် Amazon SNS စသည်တို့) ပါဝင်သော enterprise-wide workflows များကို များသောအားဖြင့် **[[step-functions]]** သို့မဟုတ် **[[mwaa-airflow]]** ဖြင့် orchestrate လုပ်လေ့ရှိသော်လည်း **Glue Workflows** သည် AWS Glue ecosystem အတွက် သီးသန့်ရည်ရွယ်ထားသည့် ပေါ့ပါးပြီး zero-infrastructure ဖြစ်သော ဖြေရှင်းချက်တစ်ခုကို ပေးစွမ်းသည်။
+AWS services အများအပြား (ဥပမာ AWS Lambda, Amazon EMR, Amazon ECS သို့မဟုတ် Amazon SNS စသည်တို့) ပါဝင်သော enterprise-wide workflows များကို များသောအားဖြင့် **[[mm/02-services/integration/step-functions/step-functions|step-functions]]** သို့မဟုတ် **[[mm/02-services/integration/mwaa-airflow|mwaa-airflow]]** ဖြင့် orchestrate လုပ်လေ့ရှိသော်လည်း **Glue Workflows** သည် AWS Glue ecosystem အတွက် သီးသန့်ရည်ရွယ်ထားသည့် ပေါ့ပါးပြီး zero-infrastructure ဖြစ်သော ဖြေရှင်းချက်တစ်ခုကို ပေးစွမ်းသည်။
 
 ```mermaid
 graph LR
@@ -157,8 +157,8 @@ print(f"Processing partition date: {current_date}")
 ---
 
 ## 📌 Related Notes (ဆက်စပ် မှတ်စုများ)
-- `[[glue]]` — AWS Glue Architecture Overview
-- `[[glue-etl-jobs]]` — AWS Glue ETL Jobs & Transforms
-- `[[glue-crawlers]]` — Automating Data Catalog Crawls
-- `[[step-functions]]` — AWS Step Functions Enterprise Orchestration
-- `[[mwaa-airflow]]` — Amazon Managed Workflows for Apache Airflow
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture Overview
+- `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — AWS Glue ETL Jobs & Transforms
+- `[[mm/02-services/analytics-streaming/glue/glue-crawlers|glue-crawlers]]` — Automating Data Catalog Crawls
+- `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` — AWS Step Functions Enterprise Orchestration
+- `[[mm/02-services/integration/mwaa-airflow|mwaa-airflow]]` — Amazon Managed Workflows for Apache Airflow

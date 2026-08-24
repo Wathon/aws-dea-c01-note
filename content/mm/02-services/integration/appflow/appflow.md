@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case / အဓိက အသုံးပြုမှု**: Custom API connectors များ ရေးသားရန်မလိုဘဲ SaaS applications များ (Salesforce, SAP, ServiceNow, Zendesk, Slack) နှင့် AWS data stores များ (Amazon S3, Amazon Redshift, Amazon EventBridge) အကြား built-in transformations၊ PII masking နှင့် AWS PrivateLink လုံခြုံရေးတို့ဖြင့် fully managed၊ serverless data transfer ပြုလုပ်ခြင်း။
 - **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-operations-and-support]]` | `[[s3]]` | `[[redshift]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/database/redshift|redshift]]`
 
 ---
 
@@ -102,11 +102,11 @@ graph LR
 
 **AWS Certified Data Engineer - Associate (DEA-C01)** စာမေးပွဲအတွက် Amazon AppFlow ကို ကျွမ်းကျင်စွာ နားလည်စေရန် အောက်ပါ အသေးစိတ် မှတ်စုများကို လေ့လာပါ-
 
-1. `[[appflow-triggers-and-transfer-modes]]` — **On-Demand, Scheduled Incremental & Event-Driven Real-Time Triggers**
-2. `[[appflow-data-transformation-masking-and-catalog]]` — **Field Mapping, PII Masking, Parquet Conversion & AWS Glue Catalog Integration**
-3. `[[appflow-destination-patterns-s3-redshift-eventbridge]]` — **S3 Lakehouse Ingestion, Redshift Upsert / MERGE & EventBridge Event Routing**
-4. `[[appflow-security-privatelink-and-kms]]` — **AWS PrivateLink for Salesforce/SAP, KMS Encryption, OAuth Governance & VPC Security**
-5. `[[appflow-comparison-and-troubleshooting]]` — **AppFlow vs. Glue vs. EventBridge Matrix, SaaS API Rate Limits & Triage**
+1. `[[mm/02-services/integration/appflow/appflow-triggers-and-transfer-modes|appflow-triggers-and-transfer-modes]]` — **On-Demand, Scheduled Incremental & Event-Driven Real-Time Triggers**
+2. `[[mm/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` — **Field Mapping, PII Masking, Parquet Conversion & AWS Glue Catalog Integration**
+3. `[[mm/02-services/integration/appflow/appflow-destination-patterns-s3-redshift-eventbridge|appflow-destination-patterns-s3-redshift-eventbridge]]` — **S3 Lakehouse Ingestion, Redshift Upsert / MERGE & EventBridge Event Routing**
+4. `[[mm/02-services/integration/appflow/appflow-security-privatelink-and-kms|appflow-security-privatelink-and-kms]]` — **AWS PrivateLink for Salesforce/SAP, KMS Encryption, OAuth Governance & VPC Security**
+5. `[[mm/02-services/integration/appflow/appflow-comparison-and-troubleshooting|appflow-comparison-and-troubleshooting]]` — **AppFlow vs. Glue vs. EventBridge Matrix, SaaS API Rate Limits & Triage**
 
 ---
 
@@ -124,8 +124,8 @@ graph LR
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[appflow-triggers-and-transfer-modes]]` — AppFlow Triggers & Incremental Sync
-- `[[appflow-data-transformation-masking-and-catalog]]` — Transformations & Glue Catalog
-- `[[s3]]` — Amazon S3 Data Lake Destination
-- `[[redshift]]` — Amazon Redshift Data Warehouse Loading
-- `[[athena]]` — Querying AppFlow Datasets in S3
+- `[[mm/02-services/integration/appflow/appflow-triggers-and-transfer-modes|appflow-triggers-and-transfer-modes]]` — AppFlow Triggers & Incremental Sync
+- `[[mm/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` — Transformations & Glue Catalog
+- `[[mm/02-services/storage/s3/s3|s3]]` — Amazon S3 Data Lake Destination
+- `[[mm/02-services/database/redshift|redshift]]` — Amazon Redshift Data Warehouse Loading
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Querying AppFlow Datasets in S3

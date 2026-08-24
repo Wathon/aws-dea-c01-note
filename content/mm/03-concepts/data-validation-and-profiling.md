@@ -17,7 +17,7 @@ date: 2026-08-15
 - **Category**: Data Quality & Governance (ဒေတာ အရည်အသွေး စီမံခန့်ခွဲမှု)
 - **Language / ဘာသာစကား**: [English Version](/en/03-concepts/data-validation-and-profiling) | **မြန်မာဘာသာ (Burmese)**
 - **Slide Reference**: Data Quality & Governance in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[glue]]` | `[[sagemaker-and-ai]]` | `[[lambda]]` | `[[s3]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/ml-dev-cost/sagemaker-and-ai|sagemaker-and-ai]]` | `[[mm/02-services/compute-containers/lambda|lambda]]` | `[[mm/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -128,7 +128,7 @@ flowchart LR
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
 
-- `[[glue]]` — AWS Glue Data Catalog, Crawlers, ETL နှင့် Glue Data Quality
-- `[[sagemaker-and-ai]]` — SageMaker Data Wrangler profiling စနစ်များ
-- `[[data-formats-and-compression]]` — File formats နှင့် Schema Validation
-- `[[service-comparisons]]` — Glue Data Quality vs. Glue DataBrew နှိုင်းယှဉ်ချက်
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Data Catalog, Crawlers, ETL နှင့် Glue Data Quality
+- `[[mm/02-services/ml-dev-cost/sagemaker-and-ai|sagemaker-and-ai]]` — SageMaker Data Wrangler profiling စနစ်များ
+- `[[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — File formats နှင့် Schema Validation
+- `[[mm/04-exam-tips/service-comparisons|service-comparisons]]` — Glue Data Quality vs. Glue DataBrew နှိုင်းယှဉ်ချက်

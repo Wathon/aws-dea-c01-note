@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/emr/emr-performance-optimization)
 - **Primary Use Case**: Maximizing Spark execution performance, solving the small file problem via S3DistCp, and fine-tuning YARN/Spark memory allocations.
 - **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[emr]]` | `[[s3]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/emr/emr|emr]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -158,7 +158,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[emr]]` — Amazon EMR Overview Hub
-- `[[emr-cluster-architecture]]` — Node Types & Storage
-- `[[athena-performance]]` — Athena Small File Optimization
-- `[[data-formats-and-compression]]` — Parquet, ORC, Snappy & ZSTD
+- `[[en/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR Overview Hub
+- `[[en/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]` — Node Types & Storage
+- `[[en/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — Athena Small File Optimization
+- `[[en/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — Parquet, ORC, Snappy & ZSTD

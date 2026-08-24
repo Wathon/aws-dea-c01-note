@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/emr/emr-performance-optimization) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Spark execution performance ကို အမြင့်ဆုံးမြှင့်တင်ရန်၊ S3DistCp မှတစ်ဆင့် small file ပြဿနာကို ဖြေရှင်းရန်နှင့် YARN/Spark memory allocation များကို အသေးစိတ် ညှိယူပြင်ဆင်ရန် (fine-tuning)။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 383–413
-- **Hub Links**: `[[mm/index]]` | `[[emr]]` | `[[s3]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/emr/emr|emr]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -159,7 +159,7 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[emr]]` — Amazon EMR Overview Hub
-- `[[emr-cluster-architecture]]` — Node Types & Storage
-- `[[athena-performance]]` — Athena Small File Optimization
-- `[[data-formats-and-compression]]` — Parquet, ORC, Snappy & ZSTD
+- `[[mm/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR Overview Hub
+- `[[mm/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]` — Node Types & Storage
+- `[[mm/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — Athena Small File Optimization
+- `[[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — Parquet, ORC, Snappy & ZSTD

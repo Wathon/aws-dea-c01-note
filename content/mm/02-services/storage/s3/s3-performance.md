@@ -17,7 +17,7 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-performance) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: High-Throughput Analytics, Low-Latency Data Lake I/O, Large File Transfers
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[domain-2-data-store-management]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]]
 
 ---
 
@@ -82,7 +82,7 @@ graph TD
 - **How it works**: Object တစ်ခု၏ သတ်မှတ်ထားသော byte ranges များကို အပြိုင် download ဆွဲရန် HTTP `Range` header (`Range: bytes=0-1048576`) ကို အသုံးပြုပါသည်။
 - **Use Cases (အသုံးပြုနိုင်သော အခြေအနေများ)**:
   - ဖိုင်အကြီးစားများကို threads/connections အများအပြားအသုံးပြု၍ အပြိုင် downloads ဆွဲခြင်း။
-  - **Footer Reads in Columnar Files**: Analytical engines ဖွဲ့စည်းမှုများ ([[athena]], [[emr]] Spark) သည် object တစ်ခုလုံးကို download မဆွဲဘဲ Parquet/ORC files များ၏ metadata/footers များကို ဖတ်ရန် byte-range fetches ကို အသုံးပြုကြသည်။
+  - **Footer Reads in Columnar Files**: Analytical engines ဖွဲ့စည်းမှုများ ([[mm/02-services/analytics-streaming/athena/athena|athena]], [[mm/02-services/analytics-streaming/emr/emr|emr]] Spark) သည် object တစ်ခုလုံးကို download မဆွဲဘဲ Parquet/ORC files များ၏ metadata/footers များကို ဖတ်ရန် byte-range fetches ကို အသုံးပြုကြသည်။
 
 ### 3. S3 Transfer Acceleration
 
@@ -125,9 +125,9 @@ flowchart LR
 - **Problem**: ဖိုင်ငယ်သန်းပေါင်းများစွာ (< 128 MB) ရှိခြင်းသည် S3 API overhead၊ Glue crawler indexing latency နှင့် Spark/Athena task scheduling overhead တို့ကြောင့် performance ကို ကျဆင်းစေပါသည်။
 - **Target File Size**: **128 MB မှ 512 MB** အထိ (ကြီးမားသော analytical scans များအတွက် 1 GB အထိ)။
 - **Solutions**:
-  - ဖိုင်ငယ်များကို ပိုကြီးသောဖိုင်များအဖြစ် ပေါင်းစည်းရန် (merge/compact) [[glue]] ETL jobs သို့မဟုတ် AWS Lambda scripts များကို run ပါ။
-  - ဖိုင်ငယ်များကို target sizes များအဖြစ် ပြန်ရေးရန် [[athena]] `CREATE TABLE AS SELECT` (`CTAS`) ကို အသုံးပြုပါ။
-  - Spark / [[emr]] တွင် S3 သို့ မရေးမီ `coalesce()` သို့မဟုတ် `repartition()` ကို အသုံးပြုပါ။
+  - ဖိုင်ငယ်များကို ပိုကြီးသောဖိုင်များအဖြစ် ပေါင်းစည်းရန် (merge/compact) [[mm/02-services/analytics-streaming/glue/glue|glue]] ETL jobs သို့မဟုတ် AWS Lambda scripts များကို run ပါ။
+  - ဖိုင်ငယ်များကို target sizes များအဖြစ် ပြန်ရေးရန် [[mm/02-services/analytics-streaming/athena/athena|athena]] `CREATE TABLE AS SELECT` (`CTAS`) ကို အသုံးပြုပါ။
+  - Spark / [[mm/02-services/analytics-streaming/emr/emr|emr]] တွင် S3 သို့ မရေးမီ `coalesce()` သို့မဟုတ် `repartition()` ကို အသုံးပြုပါ။
 
 ### 2. Compression & Columnar Formats (ချုံ့ခြင်းနှင့် Columnar Formats များ)
 
@@ -176,10 +176,10 @@ flowchart LR
 
 ## 📌 Related Notes
 
-- [[s3]] — Main Amazon S3 Overview & Storage Classes
-- [[data-formats-and-compression]] — Parquet, ORC, Snappy & Zstd details
-- [[data-modeling-and-partitioning]] — Partition strategies for S3 & Athena
-- [[athena]] — Athena query optimization & CTAS
-- [[glue]] — Glue compaction ETL jobs
-- [[emr]] — EMR Spark tuning on S3
-- [[kms-and-secrets]] — SSE-KMS & S3 Bucket Keys
+- [[mm/02-services/storage/s3/s3|s3]] — Main Amazon S3 Overview & Storage Classes
+- [[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]] — Parquet, ORC, Snappy & Zstd details
+- [[mm/03-concepts/data-modeling-and-partitioning|data-modeling-and-partitioning]] — Partition strategies for S3 & Athena
+- [[mm/02-services/analytics-streaming/athena/athena|athena]] — Athena query optimization & CTAS
+- [[mm/02-services/analytics-streaming/glue/glue|glue]] — Glue compaction ETL jobs
+- [[mm/02-services/analytics-streaming/emr/emr|emr]] — EMR Spark tuning on S3
+- [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — SSE-KMS & S3 Bucket Keys

@@ -14,7 +14,7 @@ date: 2026-07-28
 - **Category**: Application Integration / Orchestration
 - **Primary Use Case**: Managed open-source Apache Airflow orchestration, Python DAG-based workflows, multi-cloud ETL coordination.
 - **Slide Reference**: Pages 538–541 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]
 
 ---
 
@@ -42,5 +42,5 @@ Amazon MWAA is a managed orchestration service for Apache Airflow that makes it 
 ---
 
 ## 📌 Related Notes
-- [[step-functions]] — Step Functions vs MWAA
-- [[glue]] — Executing Glue jobs via Airflow operators
+- [[en/02-services/integration/step-functions/step-functions|step-functions]] — Step Functions vs MWAA
+- [[en/02-services/analytics-streaming/glue/glue|glue]] — Executing Glue jobs via Airflow operators

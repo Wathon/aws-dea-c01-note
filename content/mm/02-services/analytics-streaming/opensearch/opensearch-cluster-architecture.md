@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: ကြံ့ခိုင်မှုရှိသော multi-AZ OpenSearch cluster များကို ဒီဇိုင်းထုတ်ခြင်း၊ dedicated cluster manager node များကို ချိန်ညှိသတ်မှတ်ခြင်း၊ နှင့် AWS best practices များအရ primary နှင့် replica shard များကို အရွယ်အစားတွက်ချက်သတ်မှတ်ခြင်း (sizing)။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ စာမျက်နှာ 460–478
-- **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[opensearch-storage-tiers-and-ism]]` | `[[opensearch-troubleshooting-and-tuning]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning|opensearch-troubleshooting-and-tuning]]`
 
 ---
 
@@ -153,7 +153,7 @@ DEA-C01 စာမေးပွဲတွင် တွေ့ရလေ့ရှိ�
 ---
 
 ## 📌 Related Notes
-- `[[opensearch]]` — OpenSearch Service Master Hub
-- `[[opensearch-storage-tiers-and-ism]]` — UltraWarm & Index State Management
-- `[[opensearch-troubleshooting-and-tuning]]` — Cluster Yellow/Red State များကို စစ်ဆေးရှာဖွေခြင်း (Diagnosing)
-- `[[ec2-and-graviton]]` — OpenSearch Node များအတွက် Graviton Silicon
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Service Master Hub
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` — UltraWarm & Index State Management
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning|opensearch-troubleshooting-and-tuning]]` — Cluster Yellow/Red State များကို စစ်ဆေးရှာဖွေခြင်း (Diagnosing)
+- `[[mm/02-services/compute-containers/ec2-and-graviton|ec2-and-graviton]]` — OpenSearch Node များအတွက် Graviton Silicon

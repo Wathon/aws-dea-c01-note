@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-workgroups) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Multi-tenant isolation ပြုလုပ်ရန်၊ per-query နှင့် workgroup အဆင့် data scan limit များ သတ်မှတ်ရန်၊ မဖြစ်မနေ encryption သတ်မှတ်စေရန် (mandatory encryption enforcement) နှင့် အသေးစိတ် cost tracking ပြုလုပ်ရန်။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 365–382
-- **Hub Links**: `[[mm/index]]` | `[[athena]]` | `[[domain-5-security-and-governance]]` | `[[cost-management]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[domain-5-security-and-governance]]` | `[[mm/02-services/ml-dev-cost/cost-management|cost-management]]`
 
 ---
 
@@ -171,7 +171,7 @@ Athena သည် workgroup တစ်ခုချင်းစီ၏ real-time exe
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Amazon Athena Architecture Overview
-- `[[athena-performance]]` — Query Cost Optimization
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Architecture Overview
+- `[[mm/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — Query Cost Optimization
 - `[[domain-5-security-and-governance]]` — Security, Encryption & IAM Policies
-- `[[cost-management]]` — AWS Analytics Cost Allocation
+- `[[mm/02-services/ml-dev-cost/cost-management|cost-management]]` — AWS Analytics Cost Allocation

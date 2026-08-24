@@ -19,7 +19,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis-firehose)
 - **Primary Use Case**: Serverless, zero-maintenance streaming ingestion to S3 data lakes, Redshift, and OpenSearch with native Parquet conversion and dynamic S3 partitioning.
 - **Slide Reference**: Pages 436–450 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[s3]]` | `[[glue-data-catalog]]` | `[[athena]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]`
 
 ---
 
@@ -202,7 +202,7 @@ Firehose supports S3 backup streams to prevent data loss:
 ---
 
 ## 📌 Related Notes
-- `[[kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
-- `[[kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
-- `[[glue-data-catalog]]` — Glue Metastore for Firehose Schema Lookups
-- `[[athena]]` — Querying Firehose Parquet Output with Serverless SQL
+- `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Streaming Ecosystem Overview Hub
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shard Architecture
+- `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Metastore for Firehose Schema Lookups
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Querying Firehose Parquet Output with Serverless SQL

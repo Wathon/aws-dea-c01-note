@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-federated-query) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: S3 မဟုတ်သော data store များ (DynamoDB, RDS, CloudWatch, Redshift, DocumentDB) ရှိ data များကို S3 သို့ ရွှေ့စရာမလိုဘဲ standard SQL ကို အသုံးပြုကာ မူလနေရာတွင်ပင် in-place query ပြုလုပ်ခြင်း။
 - **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[athena]]` | `[[dynamodb]]` | `[[lambda]]` | `[[domain-1-ingestion-and-processing]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/database/dynamodb|dynamodb]]` | `[[mm/02-services/compute-containers/lambda|lambda]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]`
 
 ---
 
@@ -129,7 +129,7 @@ WHERE s3_orders.year = '2026'
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Amazon Athena Architecture Overview
-- `[[dynamodb]]` — Amazon DynamoDB Ingestion & Analytics
-- `[[lambda]]` — Serverless Compute with AWS Lambda
-- `[[glue-etl-jobs]]` — When to use full Glue ETL vs. Federated Query
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Architecture Overview
+- `[[mm/02-services/database/dynamodb|dynamodb]]` — Amazon DynamoDB Ingestion & Analytics
+- `[[mm/02-services/compute-containers/lambda|lambda]]` — Serverless Compute with AWS Lambda
+- `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — When to use full Glue ETL vs. Federated Query

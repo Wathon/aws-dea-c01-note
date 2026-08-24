@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sns/sns)
 - **Primary Use Case**: Fully managed Pub/Sub messaging, broadcasting single events to thousands of subscribers (Fan-Out), triggering downstream ETL pipelines, and streaming data directly into Amazon Data Firehose.
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-operations-and-support]]` | `[[sqs]]` | `[[kinesis]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` | `[[en/02-services/integration/sqs/sqs|sqs]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]`
 
 ---
 
@@ -100,11 +100,11 @@ graph TD
 
 To master Amazon SNS for the **AWS Certified Data Engineer - Associate (DEA-C01)** exam, study the following modular notes:
 
-1. `[[sns-standard-vs-fifo-topics]]` — **Standard vs. FIFO Topics, Message Group ID, Deduplication & SQS FIFO Integration**
-2. `[[sns-subscription-filter-policies]]` — **Message Attributes, Payload-Based Filtering, Numeric Ranges & Ingestion Cost Optimization**
-3. `[[sns-delivery-retries-and-dead-letter-queues]]` — **4-Phase Delivery Retry Policies, Subscription DLQs & Fault-Tolerant Fanout**
-4. `[[sns-fanout-firehose-and-eventbridge]]` — **SNS + SQS Fan-Out, Direct Amazon Data Firehose Streaming & SNS vs. EventBridge vs. SQS Matrix**
-5. `[[sns-security-access-policies-and-encryption]]` — **Topic Access Policies, SSE-KMS Encryption, Cross-Account Publishing & VPC Endpoints**
+1. `[[en/02-services/integration/sns/sns-standard-vs-fifo-topics|sns-standard-vs-fifo-topics]]` — **Standard vs. FIFO Topics, Message Group ID, Deduplication & SQS FIFO Integration**
+2. `[[en/02-services/integration/sns/sns-subscription-filter-policies|sns-subscription-filter-policies]]` — **Message Attributes, Payload-Based Filtering, Numeric Ranges & Ingestion Cost Optimization**
+3. `[[en/02-services/integration/sns/sns-delivery-retries-and-dead-letter-queues|sns-delivery-retries-and-dead-letter-queues]]` — **4-Phase Delivery Retry Policies, Subscription DLQs & Fault-Tolerant Fanout**
+4. `[[en/02-services/integration/sns/sns-fanout-firehose-and-eventbridge|sns-fanout-firehose-and-eventbridge]]` — **SNS + SQS Fan-Out, Direct Amazon Data Firehose Streaming & SNS vs. EventBridge vs. SQS Matrix**
+5. `[[en/02-services/integration/sns/sns-security-access-policies-and-encryption|sns-security-access-policies-and-encryption]]` — **Topic Access Policies, SSE-KMS Encryption, Cross-Account Publishing & VPC Endpoints**
 
 ---
 
@@ -122,8 +122,8 @@ To master Amazon SNS for the **AWS Certified Data Engineer - Associate (DEA-C01)
 ---
 
 ## 📌 Related Notes
-- `[[sns-standard-vs-fifo-topics]]` — Standard vs FIFO Topics
-- `[[sns-subscription-filter-policies]]` — Subscription Filter Policies
-- `[[sqs]]` — Amazon SQS Modular Deep-Dive Suite
-- `[[kinesis-firehose]]` — Amazon Data Firehose Ingestion
-- `[[cloudwatch-and-eventbridge]]` — EventBridge vs SNS Comparison
+- `[[en/02-services/integration/sns/sns-standard-vs-fifo-topics|sns-standard-vs-fifo-topics]]` — Standard vs FIFO Topics
+- `[[en/02-services/integration/sns/sns-subscription-filter-policies|sns-subscription-filter-policies]]` — Subscription Filter Policies
+- `[[en/02-services/integration/sqs/sqs|sqs]]` — Amazon SQS Modular Deep-Dive Suite
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Amazon Data Firehose Ingestion
+- `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — EventBridge vs SNS Comparison

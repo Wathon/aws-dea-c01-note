@@ -17,9 +17,9 @@ date: 2026-08-13
 
 - **Category**: Migration & Transfer (Database & Analytics Migration, Continuous CDC Ingestion)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/migration/dms-and-sct) | **မြန်မာဘာသာ (Burmese)**
-- **Primary Use Case**: Heterogeneous နှင့် homogeneous database migration များ၊ application downtime အနည်းဆုံးဖြင့် [[s3]] Data Lakes, [[redshift]], [[kinesis]], [[msk]], နှင့် [[dynamodb]] တို့သို့ ဆက်တိုက် Change Data Capture (CDC) streaming ပြုလုပ်ခြင်း။
+- **Primary Use Case**: Heterogeneous နှင့် homogeneous database migration များ၊ application downtime အနည်းဆုံးဖြင့် [[mm/02-services/storage/s3/s3|s3]] Data Lakes, [[mm/02-services/database/redshift|redshift]], [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]], [[mm/02-services/analytics-streaming/msk/msk|msk]], နှင့် [[mm/02-services/database/dynamodb|dynamodb]] တို့သို့ ဆက်တိုက် Change Data Capture (CDC) streaming ပြုလုပ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ Pages 269–275
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[rds-and-aurora]] | [[redshift]] | [[s3]] | [[datasync-and-snow]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/02-services/database/rds-and-aurora|rds-and-aurora]] | [[mm/02-services/database/redshift|redshift]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]]
 
 ---
 
@@ -33,9 +33,9 @@ date: 2026-08-13
 1. **Homogeneous vs. Heterogeneous Migrations**: DMS ကို သီးခြား (standalone - same engine) အသုံးပြုနိုင်သည့် အခြေအနေ နှင့် AWS SCT ကို မဖြစ်မနေ လိုအပ်သည့် အခြေအနေ (different engines)။
 2. **DMS Replication Tasks & Load Modes**: Full load, Full load + CDC, နှင့် CDC-only။
 3. **Change Data Capture (CDC) Mechanics**: Transaction logs များကို ဖတ်ခြင်း (PostgreSQL WAL, MySQL binlogs, Oracle Redo/LogMiner, SQL Server MS-CDC) နှင့် inserts/updates/deletes များကို stream လုပ်ခြင်း။
-4. **Target Data Lake & Streaming Integrations**: CDC event များကို [[s3]] သို့ CSV သို့မဟုတ် Apache Parquet format ( `Op` operation column ဖြင့်) ထုတ်ပေးခြင်း၊ [[kinesis]], နှင့် [[msk]] တို့သို့ ချိတ်ဆက်ခြင်း။
+4. **Target Data Lake & Streaming Integrations**: CDC event များကို [[mm/02-services/storage/s3/s3|s3]] သို့ CSV သို့မဟုတ် Apache Parquet format ( `Op` operation column ဖြင့်) ထုတ်ပေးခြင်း၊ [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]], နှင့် [[mm/02-services/analytics-streaming/msk/msk|msk]] တို့သို့ ချိတ်ဆက်ခြင်း။
 5. **LOB (Large Object) Handling Tradeoffs**: Limited LOB mode vs. Full LOB mode vs. Inline LOB mode.
-6. **SCT Data Extraction Agents & Hybrid Snowball Migration**: [[datasync-and-snow]] (Snowball Edge) ကိုသုံး၍ offline ဖြင့် multi-terabyte/petabyte data warehouses များကို ပြောင်းရွှေ့ခြင်း (Teradata, Oracle, Greenplum) နှင့် DMS continuous CDC ဖြင့် ဆက်တိုက် catch-up လုပ်ခြင်း။
+6. **SCT Data Extraction Agents & Hybrid Snowball Migration**: [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] (Snowball Edge) ကိုသုံး၍ offline ဖြင့် multi-terabyte/petabyte data warehouses များကို ပြောင်းရွှေ့ခြင်း (Teradata, Oracle, Greenplum) နှင့် DMS continuous CDC ဖြင့် ဆက်တိုက် catch-up လုပ်ခြင်း။
 7. **DMS Serverless & DMS Fleet Advisor**: Replication capacity units (DCUs) ကို auto-scaling လုပ်ခြင်း နှင့် fleet များကို automated အနေဖြင့် ရှာဖွေဖော်ထုတ်ခြင်း (discovery)။
 
 ```mermaid
@@ -140,7 +140,7 @@ graph LR
 - **Storage Subsystem**: Active CDC လုပ်နေစဉ်အတွင်း in-flight transactions များကို buffer လုပ်ရန်နှင့် Large Objects (LOBs) များကို cache လုပ်ရန် Amazon EBS storage ကို အသုံးပြုသည်။
 
 ### 2. Endpoints (Source & Target)
-Endpoint တစ်ခုသည် connection properties, credentials (သို့မဟုတ် IAM roles / [[kms-and-secrets]] Secrets Manager ARNs), database type, network protocols, နှင့် Extra Connection Attributes (ECAs) တို့ကို သတ်မှတ်ပေးသည်။
+Endpoint တစ်ခုသည် connection properties, credentials (သို့မဟုတ် IAM roles / [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] Secrets Manager ARNs), database type, network protocols, နှင့် Extra Connection Attributes (ECAs) တို့ကို သတ်မှတ်ပေးသည်။
 
 | Dimension | Supported Sources | Supported Targets |
 | :--- | :--- | :--- |
@@ -205,7 +205,7 @@ graph TD
 | **Homogeneous PostgreSQL $\rightarrow$ Aurora PostgreSQL** | **AWS DMS** (Minimal downtime) | `pg_dump` + `pg_restore` သို့မဟုတ် Logical Replication | `pg_dump` သည် maintenance downtime လိုအပ်သည်၊ DMS CDC သည် live sync လုပ်ခွင့်ပေးသည်။ |
 | **Heterogeneous Oracle $\rightarrow$ Aurora PostgreSQL** | **AWS SCT + AWS DMS** | None native | SCT သည် PL/SQL နှင့် datatype များကို convert လုပ်ပေးသည်၊ DMS သည် ဒေတာများကို ရွှေ့ပြောင်းပြီး WAL ကို stream လုပ်ပေးသည်။ |
 | **Heterogeneous Teradata / Netezza $\rightarrow$ Amazon Redshift** | **AWS SCT + SCT Data Extraction Agents** | Custom python ETL scripts | SCT သည် ရှုပ်ထွေးသော DW SQL query များ၊ schema များကို convert လုပ်ပေးပြီး ဒေတာများကို parallel chunk များဖြင့် extract လုပ်ပေးသည်။ |
-| **Relational DB $\rightarrow$ S3 Data Lake** | **AWS DMS (CDC to Parquet)** | [[glue]] JDBC Jobs (Batch only) | DMS သည် S3 သို့ continuous streaming CDC ထောက်ပံ့ပေးသည်၊ Glue သည် scheduled batch အတွက်ဖြစ်သည်။ |
+| **Relational DB $\rightarrow$ S3 Data Lake** | **AWS DMS (CDC to Parquet)** | [[mm/02-services/analytics-streaming/glue/glue|glue]] JDBC Jobs (Batch only) | DMS သည် S3 သို့ continuous streaming CDC ထောက်ပံ့ပေးသည်၊ Glue သည် scheduled batch အတွက်ဖြစ်သည်။ |
 
 ---
 
@@ -306,7 +306,7 @@ Amazon S3 ကို DMS CDC အတွက် target endpoint အဖြစ် conf
 
 > [!IMPORTANT]
 > **Processing DMS CDC in S3 Data Lakes**:
-> - အောက်ပိုင်းမှ အသုံးပြုသူများ (Downstream consumers) (ဥပမာ - [[glue]] ETL jobs, Apache Hudi, သို့မဟုတ် [[s3-tables]] Apache Iceberg) သည် Silver/Gold Data Lake table များပေါ်တွင် upserts (`INSERT` နှင့် `UPDATE`) နှင့် hard deletes (`DELETE`) တို့ကို apply လုပ်ရန် `Op` column နှင့် primary key များကို အသုံးပြုကြသည်။
+> - အောက်ပိုင်းမှ အသုံးပြုသူများ (Downstream consumers) (ဥပမာ - [[mm/02-services/analytics-streaming/glue/glue|glue]] ETL jobs, Apache Hudi, သို့မဟုတ် [[mm/02-services/storage/s3/s3-tables|s3-tables]] Apache Iceberg) သည် Silver/Gold Data Lake table များပေါ်တွင် upserts (`INSERT` နှင့် `UPDATE`) နှင့် hard deletes (`DELETE`) တို့ကို apply လုပ်ရန် `Op` column နှင့် primary key များကို အသုံးပြုကြသည်။
 
 ---
 
@@ -431,11 +431,11 @@ sequenceDiagram
 
 ## 📌 Related Notes
 
-- [[datasync-and-snow]] — AWS DataSync & Snowball Edge for offline hybrid database migration
-- [[rds-and-aurora]] — Target operational database engines and RDS CDC configuration
-- [[redshift]] — Amazon Redshift data warehouse target and Zero-ETL comparison
-- [[s3]] — S3 Data Lake target for CDC Parquet ingestion
-- [[kinesis]] — Streaming ingestion target for real-time CDC
-- [[msk]] — Managed Kafka target for change stream event messaging
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] — AWS DataSync & Snowball Edge for offline hybrid database migration
+- [[mm/02-services/database/rds-and-aurora|rds-and-aurora]] — Target operational database engines and RDS CDC configuration
+- [[mm/02-services/database/redshift|redshift]] — Amazon Redshift data warehouse target and Zero-ETL comparison
+- [[mm/02-services/storage/s3/s3|s3]] — S3 Data Lake target for CDC Parquet ingestion
+- [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] — Streaming ingestion target for real-time CDC
+- [[mm/02-services/analytics-streaming/msk/msk|msk]] — Managed Kafka target for change stream event messaging
+- [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/emr/emr-security-and-governance)
 - **Primary Use Case**: Securing EMR clusters using EMR Security Configurations, at-rest/in-transit encryption, Kerberos authentication, and AWS Lake Formation fine-grained governance.
 - **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[emr]]` | `[[domain-5-security-and-governance]]` | `[[kms]]` | `[[lake-formation]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/emr/emr|emr]]` | `[[domain-5-security-and-governance]]` | `[[kms]]` | `[[en/02-services/security-governance/lake-formation|lake-formation]]`
 
 ---
 
@@ -172,7 +172,7 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[emr]]` — Amazon EMR Overview Hub
-- `[[emr-cluster-architecture]]` — Node Types & Storage
-- `[[lake-formation]]` — AWS Lake Formation Governance
+- `[[en/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR Overview Hub
+- `[[en/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]` — Node Types & Storage
+- `[[en/02-services/security-governance/lake-formation|lake-formation]]` — AWS Lake Formation Governance
 - `[[kms]]` — AWS Key Management Service (KMS)

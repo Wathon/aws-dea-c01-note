@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/quicksight/quicksight-reporting-ml-and-embedding) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: သတ်မှတ်ထားသော အချိန်ဇယားအတိုင်း multi-page executive PDF report များကို generate ပြုလုပ်ခြင်း၊ ML-powered anomaly detection နှင့် forecasting တို့ကို အသုံးချခြင်း၊ QuickSight Q ဖြင့် natural language အသုံးပြု query ပြုလုပ်ခြင်း၊ နှင့် dashboard များကို custom web application များထဲသို့ embed ပြုလုပ်ထည့်သွင်းခြင်း။
 - **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` | `[[mm/02-services/storage/s3/s3|s3]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` | `[[mm/02-services/storage/s3/s3|s3]]`
 
 ---
 

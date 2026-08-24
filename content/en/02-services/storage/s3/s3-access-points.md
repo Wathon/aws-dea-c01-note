@@ -17,7 +17,7 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-access-points)
 - **Primary Use Case**: Simplified Large-Scale Access Control, Multi-Tenant Data Lakes, In-Transit Data Transformation
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-encryption]] | [[vpc-and-networking]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/storage/s3/s3-encryption|s3-encryption]] | [[en/02-services/networking-monitoring/vpc-and-networking|vpc-and-networking]]
 
 ---
 
@@ -169,9 +169,9 @@ To enforce access control through Access Points, permissions must be aligned acr
 
 ## 📌 Related Notes
 
-- [[s3]] — Amazon S3 Overview & Storage Classes
-- [[s3-encryption]] — S3 Encryption & Bucket Policies
-- [[s3-performance]] — S3 Request Limits & Performance
-- [[vpc-and-networking]] — S3 VPC Gateway & Interface Endpoints
-- [[lambda]] — AWS Lambda Event Triggers & Function Compute
-- [[lake-formation]] — Fine-Grained Column/Row Governance
+- [[en/02-services/storage/s3/s3|s3]] — Amazon S3 Overview & Storage Classes
+- [[en/02-services/storage/s3/s3-encryption|s3-encryption]] — S3 Encryption & Bucket Policies
+- [[en/02-services/storage/s3/s3-performance|s3-performance]] — S3 Request Limits & Performance
+- [[en/02-services/networking-monitoring/vpc-and-networking|vpc-and-networking]] — S3 VPC Gateway & Interface Endpoints
+- [[en/02-services/compute-containers/lambda|lambda]] — AWS Lambda Event Triggers & Function Compute
+- [[en/02-services/security-governance/lake-formation|lake-formation]] — Fine-Grained Column/Row Governance

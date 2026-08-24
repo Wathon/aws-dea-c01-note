@@ -16,9 +16,9 @@ date: 2026-08-14
 
 - **Category**: Migration & Transfer (Third-Party Data Ingestion, Data Marketplace & Data Licensing)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/migration/data-exchange)
-- **Primary Use Case**: Finding, subscribing to, and seamlessly loading third-party external datasets into [[s3]], querying external data directly in [[redshift]] without ETL, and invoking third-party APIs using native AWS IAM governance.
+- **Primary Use Case**: Finding, subscribing to, and seamlessly loading third-party external datasets into [[en/02-services/storage/s3/s3|s3]], querying external data directly in [[en/02-services/database/redshift|redshift]] without ETL, and invoking third-party APIs using native AWS IAM governance.
 - **Slide Reference**: Pages 281–283 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[s3]] | [[redshift]] | [[lake-formation]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/database/redshift|redshift]] | [[en/02-services/security-governance/lake-formation|lake-formation]]
 
 ---
 
@@ -27,11 +27,11 @@ date: 2026-08-14
 **AWS Data Exchange** makes it easy to find, subscribe to, and use thousands of third-party datasets from commercial providers (such as Reuters, Dun & Bradstreet, Foursquare, Change Healthcare, S&P Global) in the cloud. Instead of managing custom SFTP pipelines, one-off API credentials, or physical media contracts, AWS Data Exchange standardizes data delivery, automated updates, billing, and governance natively within AWS.
 
 For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you must master:
-1. **Core Data Ingestion into Amazon S3**: Automating exports of newly published dataset revisions into [[s3]] data lakes for downstream processing by [[glue]], [[athena]], and [[emr]].
-2. **AWS Data Exchange for Amazon Redshift**: Querying live, third-party data directly from [[redshift]] tables **without copying data or building ETL pipelines** (powered by Redshift Data Sharing).
+1. **Core Data Ingestion into Amazon S3**: Automating exports of newly published dataset revisions into [[en/02-services/storage/s3/s3|s3]] data lakes for downstream processing by [[en/02-services/analytics-streaming/glue/glue|glue]], [[en/02-services/analytics-streaming/athena/athena|athena]], and [[en/02-services/analytics-streaming/emr/emr|emr]].
+2. **AWS Data Exchange for Amazon Redshift**: Querying live, third-party data directly from [[en/02-services/database/redshift|redshift]] tables **without copying data or building ETL pipelines** (powered by Redshift Data Sharing).
 3. **AWS Data Exchange for Amazon S3**: Directly accessing and querying provider-managed S3 buckets without copying multi-terabyte datasets to your account.
 4. **AWS Data Exchange for APIs**: Calling third-party REST APIs with standardized **AWS SDKs**, native IAM authentication, and consolidated AWS billing.
-5. **Data Lake & ML Integrations**: Combining external market/financial/demographic data with internal operational datasets for machine learning in Amazon SageMaker and analytics in [[quicksight]].
+5. **Data Lake & ML Integrations**: Combining external market/financial/demographic data with internal operational datasets for machine learning in Amazon SageMaker and analytics in [[en/02-services/analytics-streaming/quicksight/quicksight|quicksight]].
 
 ```mermaid
 graph TB
@@ -198,7 +198,7 @@ sequenceDiagram
     ```sql
     CREATE DATABASE market_data FROM DATA EXCHANGE 'arn:aws:dataexchange:us-east-1:...';
     ```
-  - Data analysts and BI dashboards ([[quicksight]]) run real-time join queries against the external database with **zero latency and zero ETL overhead**.
+  - Data analysts and BI dashboards ([[en/02-services/analytics-streaming/quicksight/quicksight|quicksight]]) run real-time join queries against the external database with **zero latency and zero ETL overhead**.
 
 ---
 
@@ -236,9 +236,9 @@ sequenceDiagram
 
 ## 📌 Related Notes
 
-- [[redshift]] — Amazon Redshift data warehouse, Datashares, and Spectrum
-- [[s3]] — S3 Data Lake destination for Data Exchange revisions
-- [[application-discovery-and-mgn]] — Application discovery and automated server migration
-- [[transfer-family]] — Managed SFTP/FTPS file ingestion
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/02-services/database/redshift|redshift]] — Amazon Redshift data warehouse, Datashares, and Spectrum
+- [[en/02-services/storage/s3/s3|s3]] — S3 Data Lake destination for Data Exchange revisions
+- [[en/02-services/migration/application-discovery-and-mgn|application-discovery-and-mgn]] — Application discovery and automated server migration
+- [[en/02-services/migration/transfer-family|transfer-family]] — Managed SFTP/FTPS file ingestion
+- [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

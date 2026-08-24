@@ -18,13 +18,13 @@ date: 2026-08-09
 - **Language / ဘာသာစကား**: [English Version](/en/02-services/storage/ebs-and-instance-store) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: EC2 compute instance များအတွက် Block-level storage၊ big data processing လုပ်ဆောင်ရန်အတွက် high-throughput ရှိသော ကြားခံ scratch storage၊ database များအတွက် persistent volume များနှင့် streaming broker storage အဖြစ် အသုံးပြုပါသည်။
 - **Slide Reference**: Pages 139–154 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[s3]] | [[efs-and-fsx]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]]
 
 ---
 
 ## 1. High-Level Summary
 
-Block storage သည် compute instance များ ([[ecr-ecs-eks]] / EC2) သို့ တိုက်ရိုက်ချိတ်ဆက်ထားသော dedicated, low-latency disk volume များကို ထောက်ပံ့ပေးသည်။ ခေတ်သစ် AWS Data Engineering architecture များတွင် block storage သည် data processing engine များ၊ distributed streaming broker များနှင့် self-hosted database များအတွက် အလုပ်လုပ်ရာ storage layer (working storage layer) အနေဖြင့် ဆောင်ရွက်ပေးသည်။
+Block storage သည် compute instance များ ([[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] / EC2) သို့ တိုက်ရိုက်ချိတ်ဆက်ထားသော dedicated, low-latency disk volume များကို ထောက်ပံ့ပေးသည်။ ခေတ်သစ် AWS Data Engineering architecture များတွင် block storage သည် data processing engine များ၊ distributed streaming broker များနှင့် self-hosted database များအတွက် အလုပ်လုပ်ရာ storage layer (working storage layer) အနေဖြင့် ဆောင်ရွက်ပေးသည်။
 
 Data engineer များသည် **EC2 Instance Store** (ရုပ်ပိုင်းဆိုင်ရာတိုက်ရိုက်ချိတ်ဆက်ထားသော၊ ခေတ္တသာခံသော၊ အမြင့်ဆုံး IOPS/throughput ရရှိသော) နှင့် **Amazon EBS** (network မှတစ်ဆင့်ချိတ်ဆက်သော၊ အမြဲတမ်းသိမ်းဆည်းပေးသော၊ snapshot ဖြင့် backup ယူနိုင်သော block storage) တို့အကြား အားသာချက်/အားနည်းချက်များကို သေချာနားလည်ရမည့်အပြင်၊ မိမိတို့ workload ၏ access pattern နှင့် ကိုက်ညီမည့် အတိအကျဖြစ်သော EBS volume type (`gp3`, `io2`, `st1`, `sc1`) ကိုလည်း မှန်ကန်စွာ ရွေးချယ်နိုင်ရမည်။
 
@@ -145,8 +145,8 @@ graph TD
 - ကြီးမား၍ အစဉ်လိုက် read/write လုပ်ဆောင်မှုများရှိသော **မကြာခဏအသုံးပြုသည့် throughput-intensive workload များ** အတွက် အထူးဖန်တီးထားသည်။
 - Burst-bucket credit model ကို အသုံးပြုသည်: baseline throughput အနေဖြင့် ၁ TiB လျှင် ၄၀ MB/s နှုန်းဖြင့် ၂၅၀ MB/s အထိရရှိပြီး၊ ၅၀၀ MB/s အထိ burst လုပ်နိုင်သည်။
 - **Data Engineering Key Fit**:
-  - EC2 / [[emr]] ပေါ်ရှိ Apache Spark / Hadoop cluster များ။
-  - Distributed Kafka broker logs ([[msk]]).
+  - EC2 / [[mm/02-services/analytics-streaming/emr/emr|emr]] ပေါ်ရှိ Apache Spark / Hadoop cluster များ။
+  - Distributed Kafka broker logs ([[mm/02-services/analytics-streaming/msk/msk|msk]]).
   - Data warehouse staging နှင့် log aggregation pipeline များ။
 - **Limitation**: **OS boot volume အဖြစ် အသုံးမပြုနိုင်ပါ**။
 
@@ -215,7 +215,7 @@ sequenceDiagram
 
 ## 5. EBS Security & Encryption
 
-Amazon EBS သည် [[kms-and-secrets]] (AWS KMS) နှင့် ချောမွေ့စွာပေါင်းစပ်ကာ end-to-end encryption ကို ထောက်ပံ့ပေးသည်။
+Amazon EBS သည် [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] (AWS KMS) နှင့် ချောမွေ့စွာပေါင်းစပ်ကာ end-to-end encryption ကို ထောက်ပံ့ပေးသည်။
 
 ```mermaid
 graph LR
@@ -311,7 +311,7 @@ graph TD
 | **Amazon EBS (`gp3`/`io2`)** | Block device (Network)          | 99.8% – 99.999%           | Single-digit ms (Sub-ms on `io2`)               | Up to 64 TiB per volume                     | Database storage (Postgres, RDS, Cassandra), persistent stateful compute disk များ။         |
 | **Amazon EBS (`st1`)**       | Block device (Network)          | 99.8% – 99.9%             | Milliseconds (Up to 500 MB/s)                   | Up to 16 TiB per volume                     | **MapReduce sequential storage, Kafka commit logs, ETL staging directory များ။**           |
 | **EC2 Instance Store**       | Block device (Direct Host NVMe) | Single disk (Ephemeral)   | **Sub-millisecond (Fastest)**                   | Instance type အပေါ်မူတည်သည် (TB ပေါင်းများစွာအထိ) | **Spark shuffle data, intermediate MapReduce spills, memory swap, temporary cache များ။**   |
-| **Amazon EFS**               | POSIX File (NFSv4)              | 11 9's (Multi-AZ)         | Low ms                                          | Elastic (Petabytes)                         | EC2 / [[ecr-ecs-eks]] pod များစွာအကြား မျှဝေအသုံးပြုသော application storage။      |
+| **Amazon EFS**               | POSIX File (NFSv4)              | 11 9's (Multi-AZ)         | Low ms                                          | Elastic (Petabytes)                         | EC2 / [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] pod များစွာအကြား မျှဝေအသုံးပြုသော application storage။      |
 | **AWS FSx for Lustre**       | POSIX High Performance File     | High (Integrated with S3) | **Sub-millisecond (Hundreds of GB/s)**          | Petabytes                                   | **HPC, high-throughput distributed ML model training, massive parallel S3 processing.** |
 
 ---
@@ -332,7 +332,7 @@ graph TD
 
 ### Pattern C: Decoupled Storage & Compute Architecture
 
-- **Rule of Thumb**: ရေရှည်သိမ်းဆည်းရမည့် data lake asset များကို EBS သို့မဟုတ် Instance Store ပေါ်တွင် ဘယ်တော့မှ မသိမ်းဆည်းပါနှင့်။ ဒေတာများကို ပိုမိုခိုင်မာစေရန်၊ lifecycle tiering လုပ်နိုင်ရန်နှင့် [[athena]], [[glue]], နှင့် [[redshift]] ကဲ့သို့သော အင်ဂျင်အမျိုးမျိုးမှ စုံစမ်းစစ်ဆေးနိုင်ရန်အတွက် (query) EBS/Instance Store မှ **Amazon S3** သို့ အမြဲတမ်း stream သို့မဟုတ် stage လုပ်ပေးပါ။
+- **Rule of Thumb**: ရေရှည်သိမ်းဆည်းရမည့် data lake asset များကို EBS သို့မဟုတ် Instance Store ပေါ်တွင် ဘယ်တော့မှ မသိမ်းဆည်းပါနှင့်။ ဒေတာများကို ပိုမိုခိုင်မာစေရန်၊ lifecycle tiering လုပ်နိုင်ရန်နှင့် [[mm/02-services/analytics-streaming/athena/athena|athena]], [[mm/02-services/analytics-streaming/glue/glue|glue]], နှင့် [[mm/02-services/database/redshift|redshift]] ကဲ့သို့သော အင်ဂျင်အမျိုးမျိုးမှ စုံစမ်းစစ်ဆေးနိုင်ရန်အတွက် (query) EBS/Instance Store မှ **Amazon S3** သို့ အမြဲတမ်း stream သို့မဟုတ် stage လုပ်ပေးပါ။
 
 ---
 
@@ -361,12 +361,12 @@ graph TD
 
 ## 📌 Related Notes
 
-- [[s3]] — Persistent object storage and Data Lake architecture
-- [[efs-and-fsx]] — Amazon EFS & AWS FSx (Lustre, ONTAP, Windows)
-- [[emr]] — Amazon EMR cluster node storage and EMRFS
-- [[msk]] — Managed Streaming for Apache Kafka broker storage
-- [[rds-and-aurora]] — Amazon RDS storage engines and Aurora distributed storage
-- [[kms-and-secrets]] — AWS KMS encryption keys and EBS volume encryption
-- [[service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)
-- [[ebs-vs-efs-vs-instance-store]] — Deep Dive: Amazon EFS vs. EBS vs. EC2 Instance Store
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[mm/02-services/storage/s3/s3|s3]] — Persistent object storage and Data Lake architecture
+- [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] — Amazon EFS & AWS FSx (Lustre, ONTAP, Windows)
+- [[mm/02-services/analytics-streaming/emr/emr|emr]] — Amazon EMR cluster node storage and EMRFS
+- [[mm/02-services/analytics-streaming/msk/msk|msk]] — Managed Streaming for Apache Kafka broker storage
+- [[mm/02-services/database/rds-and-aurora|rds-and-aurora]] — Amazon RDS storage engines and Aurora distributed storage
+- [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — AWS KMS encryption keys and EBS volume encryption
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Service decision matrix (S3 vs EBS vs EFS vs FSx)
+- [[mm/02-services/storage/ebs-vs-efs-vs-instance-store|ebs-vs-efs-vs-instance-store]] — Deep Dive: Amazon EFS vs. EBS vs. EC2 Instance Store
+- [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

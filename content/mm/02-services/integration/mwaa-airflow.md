@@ -16,7 +16,7 @@ date: 2026-07-28
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/mwaa-airflow) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Managed open-source Apache Airflow orchestration, Python DAG-based workflows, multi-cloud ETL coordination များ ဆောင်ရွက်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 538–541
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]`
 
 ---
 
@@ -44,5 +44,5 @@ Amazon MWAA သည် Apache Airflow အတွက် managed orchestration servi
 ---
 
 ## 📌 Related Notes
-- `[[step-functions]]` — Step Functions vs MWAA
-- `[[glue]]` — Airflow operators များမှတစ်ဆင့် Glue jobs များကို execute လုပ်ခြင်း
+- `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` — Step Functions vs MWAA
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — Airflow operators များမှတစ်ဆင့် Glue jobs များကို execute လုပ်ခြင်း

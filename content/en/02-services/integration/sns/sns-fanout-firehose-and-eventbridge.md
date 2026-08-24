@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sns/sns-fanout-firehose-and-eventbridge)
 - **Primary Use Case**: Architecting the SNS+SQS Fan-Out pattern, delivering SNS topics directly into Amazon Data Firehose for serverless S3/Redshift data lake ingestion, and choosing between SNS and Amazon EventBridge.
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[sns]]` | `[[sqs]]` | `[[kinesis-firehose]]` | `[[cloudwatch-and-eventbridge]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/sns/sns|sns]]` | `[[en/02-services/integration/sqs/sqs|sqs]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 
@@ -131,7 +131,7 @@ Both SNS and EventBridge route events across AWS, but they target different late
 ---
 
 ## 📌 Related Notes
-- `[[sns]]` — SNS Master Hub
-- `[[sqs]]` — SQS Modular Suite
-- `[[kinesis-firehose]]` — Amazon Data Firehose Delivery
-- `[[cloudwatch-and-eventbridge]]` — EventBridge Rules & Schema Registry
+- `[[en/02-services/integration/sns/sns|sns]]` — SNS Master Hub
+- `[[en/02-services/integration/sqs/sqs|sqs]]` — SQS Modular Suite
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Amazon Data Firehose Delivery
+- `[[en/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — EventBridge Rules & Schema Registry

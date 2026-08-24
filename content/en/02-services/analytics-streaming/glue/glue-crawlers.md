@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-crawlers)
 - **Primary Use Case**: Automatic schema inference, partition detection, schema drift handling, and automated Glue Data Catalog population.
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[glue]]` | `[[glue-data-catalog]]` | `[[athena]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]`
 
 ---
 
@@ -25,7 +25,7 @@ date: 2026-08-17
 
 **AWS Glue Crawlers** are automated discovery agents that inspect data stored in Amazon S3, Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Amazon Redshift, and external JDBC databases. 
 
-A crawler reads sample files from the data store, infers the data format and schema (column names and data types), determines Hive-compatible partition hierarchies, and creates or updates metadata tables in the **[[glue-data-catalog]]**.
+A crawler reads sample files from the data store, infers the data format and schema (column names and data types), determines Hive-compatible partition hierarchies, and creates or updates metadata tables in the **[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]**.
 
 ```mermaid
 graph TD
@@ -203,7 +203,7 @@ Scanning an entire multi-terabyte data lake during every scheduled crawl is slow
 ---
 
 ## 📌 Related Notes
-- `[[glue]]` — AWS Glue Overview
-- `[[glue-data-catalog]]` — Glue Data Catalog Metastore
-- `[[athena]]` — Querying Crawler-Generated Tables
-- `[[data-modeling-and-partitioning]]` — S3 Partition Strategies
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Overview
+- `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Data Catalog Metastore
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Querying Crawler-Generated Tables
+- `[[en/03-concepts/data-modeling-and-partitioning|data-modeling-and-partitioning]]` — S3 Partition Strategies

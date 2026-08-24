@@ -19,7 +19,7 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-security) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Defense-in-Depth Security, Access Control, Regulatory Compliance, Data Immutability & Auditing
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/s3/s3-encryption|s3-encryption]] | [[mm/02-services/storage/s3/s3-access-points|s3-access-points]] | [[mm/02-services/security-governance/iam|iam]] | [[mm/02-services/security-governance/lake-formation|lake-formation]] | [[mm/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/s3/s3-encryption|s3-encryption]] | [[mm/02-services/storage/s3/s3-access-points|s3-access-points]] | [[mm/02-services/security-governance/iam|iam]] | [[mm/02-services/security-governance/lake-formation|lake-formation]] | [[mm/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]
 
 ---
 

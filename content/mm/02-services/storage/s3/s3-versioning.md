@@ -18,7 +18,7 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-versioning) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အမှတ်တမဲ့ ဖျက်မိခြင်းနှင့် အပေါ်မှထပ်ရေးမိခြင်းများမှ ကာကွယ်ခြင်း (Protection Against Accidental Overwrites & Deletions), ဘေးအန္တရာယ်မှ ပြန်လည်ကုစားခြင်း (Disaster Recovery), S3 Replication & Object Lock အတွက် ကြိုတင်လိုအပ်ချက်
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[s3-security]] | [[s3-encryption]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/s3/s3-security|s3-security]] | [[mm/02-services/storage/s3/s3-encryption|s3-encryption]]
 
 ---
 
@@ -195,8 +195,8 @@ S3 Versioning သည် အဓိက S3 အင်္ဂါရပ်အချိ�
 
 ## 📌 Related Notes
 
-- [[s3]] — Main Amazon S3 Overview & Storage Classes
-- [[s3-security]] — S3 Security, Object Lock Compliance & Access Management
-- [[s3-encryption]] — S3 Encryption (SSE-S3, SSE-KMS, DSSE-KMS, SSE-C)
-- [[s3-performance]] — Request Performance & S3 Bucket Keys
-- [[cost-management]] — Cost Optimization & Lifecycle Tiering
+- [[mm/02-services/storage/s3/s3|s3]] — Main Amazon S3 Overview & Storage Classes
+- [[mm/02-services/storage/s3/s3-security|s3-security]] — S3 Security, Object Lock Compliance & Access Management
+- [[mm/02-services/storage/s3/s3-encryption|s3-encryption]] — S3 Encryption (SSE-S3, SSE-KMS, DSSE-KMS, SSE-C)
+- [[mm/02-services/storage/s3/s3-performance|s3-performance]] — Request Performance & S3 Bucket Keys
+- [[mm/02-services/ml-dev-cost/cost-management|cost-management]] — Cost Optimization & Lifecycle Tiering

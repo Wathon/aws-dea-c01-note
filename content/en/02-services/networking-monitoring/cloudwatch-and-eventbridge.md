@@ -14,7 +14,7 @@ date: 2026-07-28
 - **Category**: Management, Governance & Monitoring
 - **Primary Use Case**: Metrics, log aggregation, CloudWatch Logs Insights, event routing, pipeline automation rules.
 - **Slide Reference**: Pages 618–670 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-3-data-operations-and-support]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]
 
 ---
 
@@ -46,5 +46,5 @@ Amazon CloudWatch provides monitoring and telemetry data for AWS infrastructure.
 ---
 
 ## 📌 Related Notes
-- [[step-functions]] — Trigger target for EventBridge
-- [[lambda]] — Lambda logging into CloudWatch
+- [[en/02-services/integration/step-functions/step-functions|step-functions]] — Trigger target for EventBridge
+- [[en/02-services/compute-containers/lambda|lambda]] — Lambda logging into CloudWatch

@@ -18,9 +18,9 @@ Top high-frequency scenario patterns and traps compiled directly from the AWS Ce
 
 ### 1. The "Lowest Operational Overhead" Rule
 - If the question asks for a solution with **least operational effort**, always prefer **Serverless** native AWS services over managing EC2 clusters!
-  - Choose [[athena]] over setting up Presto on EC2.
-  - Choose [[glue]] ETL over managing custom Spark on EC2.
-  - Choose [[kinesis]] Data Firehose over custom consumer EC2 instances.
+  - Choose [[en/02-services/analytics-streaming/athena/athena|athena]] over setting up Presto on EC2.
+  - Choose [[en/02-services/analytics-streaming/glue/glue|glue]] ETL over managing custom Spark on EC2.
+  - Choose [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]] Data Firehose over custom consumer EC2 instances.
 
 ### 2. The "Glue Data Quality (DQDL)" Pattern
 - If requirement asks to validate incoming dataset quality (e.g. non-null emails, valid ranges) before loading to data warehouse without writing custom code -> Choose **AWS Glue Data Quality**.
@@ -52,4 +52,4 @@ Top high-frequency scenario patterns and traps compiled directly from the AWS Ce
 ---
 
 ## 📌 Master Hub Link
-Return to main hub: [[index]]
+Return to main hub: [[en/index|index]]

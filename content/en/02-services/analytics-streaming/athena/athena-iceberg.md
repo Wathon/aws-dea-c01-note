@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-iceberg)
 - **Primary Use Case**: Enabling row-level `UPDATE`, `DELETE`, `MERGE INTO`, time-travel queries, and concurrent write guarantees on S3 Data Lakes.
 - **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[athena]]` | `[[domain-2-data-store-management]]` | `[[s3-tables]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]]` | `[[en/02-services/storage/s3/s3-tables|s3-tables]]`
 
 ---
 
@@ -202,7 +202,7 @@ Over time, frequent row-level updates and streaming ingestion create thousands o
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Amazon Athena Architecture Overview
-- `[[athena-performance]]` — S3 Performance & Partitioning
-- `[[s3-tables]]` — Amazon S3 Tables for Apache Iceberg
-- `[[glue-etl-jobs]]` — Using AWS Glue with Apache Iceberg
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Architecture Overview
+- `[[en/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — S3 Performance & Partitioning
+- `[[en/02-services/storage/s3/s3-tables|s3-tables]]` — Amazon S3 Tables for Apache Iceberg
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Using AWS Glue with Apache Iceberg

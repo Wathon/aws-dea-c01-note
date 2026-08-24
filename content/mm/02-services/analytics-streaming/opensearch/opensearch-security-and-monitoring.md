@@ -21,7 +21,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-security-and-monitoring) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Fine-Grained Access Control (FGAC) ကို configure ပြုလုပ်ခြင်း၊ Document နှင့် Field-Level Security ကို implement ပြုလုပ်ခြင်း၊ Amazon Cognito ဖြင့် OpenSearch Dashboards ကို လုံခြုံအောင် ပြုလုပ်ခြင်း နှင့် အရေးကြီးသော cluster health metrics များကို စောင့်ကြည့်ထောက်လှမ်းခြင်း (monitoring)။
 - **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[opensearch-cluster-architecture]]` | `[[opensearch-troubleshooting-and-tuning]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning|opensearch-troubleshooting-and-tuning]]`
 
 ---
 
@@ -140,7 +140,7 @@ AWS IAM credentials များကို ဖြန့်ဝေပေးရန�
 ---
 
 ## 📌 Related Notes
-- `[[opensearch]]` — OpenSearch Master Hub
-- `[[opensearch-cluster-architecture]]` — Master & Data Node Topologies
-- `[[opensearch-troubleshooting-and-tuning]]` — Diagnosing Red/Yellow Status & Watermarks
-- `[[cloudwatch-and-eventbridge]]` — CloudWatch Metrics & Alarms
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Master Hub
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` — Master & Data Node Topologies
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning|opensearch-troubleshooting-and-tuning]]` — Diagnosing Red/Yellow Status & Watermarks
+- `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — CloudWatch Metrics & Alarms

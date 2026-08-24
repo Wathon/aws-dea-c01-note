@@ -21,7 +21,7 @@ date: 2026-08-23
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/macie-and-cloudtrail) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon S3 အတွင်းရှိ ထိခိုက်လွယ်သော Personally Identifiable Information (PII) များကို အလိုအလျောက် ရှာဖွေဖော်ထုတ်ခြင်း (Amazon Macie)၊ API လုပ်ဆောင်ချက်များနှင့် data access များကို ပြင်ဆင်ပြောင်းလဲ၍မရအောင် audit မှတ်တမ်းတင်ခြင်း (AWS CloudTrail)၊ နှင့် data pipeline စီးဆင်းနေစဉ်အတွင်း PII များကို mask ပြုလုပ်ခြင်း (AWS Glue Sensitive Data Detection)။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 630–670
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[s3]]` | `[[glue]]` | `[[cloudwatch-and-eventbridge]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 
@@ -204,8 +204,8 @@ Data warehouse များကို query ပြုလုပ်သော SQL an
 ---
 
 ## 📌 ဆက်စပ်မှတ်စုများ (Related Notes)
-- `[[iam]]` — IAM Policy Evaluation & Audit Tracking
-- `[[s3]]` — Amazon S3 Data Lake Storage & Security
-- `[[glue]]` — AWS Glue ETL & Sensitive Data Detection Transform
-- `[[cloudwatch-and-eventbridge]]` — EventBridge Rules for Security Remediation
-- `[[domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[mm/02-services/security-governance/iam|iam]]` — IAM Policy Evaluation & Audit Tracking
+- `[[mm/02-services/storage/s3/s3|s3]]` — Amazon S3 Data Lake Storage & Security
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue ETL & Sensitive Data Detection Transform
+- `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — EventBridge Rules for Security Remediation
+- `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

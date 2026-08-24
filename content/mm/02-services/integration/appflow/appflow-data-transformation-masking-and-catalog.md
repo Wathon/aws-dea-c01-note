@@ -21,7 +21,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: In-flight field mapping များကို အသုံးပြုခြင်း၊ persistence မပြုလုပ်မီ sensitive PII များကို mask ပြုလုပ်ခြင်း၊ SaaS records များကို Snappy compression ဖြင့် Apache Parquet သို့ ပြောင်းလဲခြင်း (convert) နှင့် AWS Glue Data Catalog တွင် tables များကို auto-register ပြုလုပ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ Pages 530–537
-- **Hub Links**: `[[mm/index]]` | `[[appflow]]` | `[[appflow-triggers-and-transfer-modes]]` | `[[glue-data-catalog]]` | `[[athena]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/appflow/appflow|appflow]]` | `[[mm/02-services/integration/appflow/appflow-triggers-and-transfer-modes|appflow-triggers-and-transfer-modes]]` | `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]`
 
 ---
 
@@ -141,7 +141,7 @@ Amazon S3 ထဲသို့ ရေးသားသည့်အခါ AppFlow သ
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[appflow]]` — Amazon AppFlow Master Hub
-- `[[appflow-triggers-and-transfer-modes]]` — Flow Triggers & Synchronization
-- `[[glue-data-catalog]]` — AWS Glue Data Catalog Deep-Dive
-- `[[athena]]` — Serverless SQL Analytics with Amazon Athena
+- `[[mm/02-services/integration/appflow/appflow|appflow]]` — Amazon AppFlow Master Hub
+- `[[mm/02-services/integration/appflow/appflow-triggers-and-transfer-modes|appflow-triggers-and-transfer-modes]]` — Flow Triggers & Synchronization
+- `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — AWS Glue Data Catalog Deep-Dive
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Serverless SQL Analytics with Amazon Athena

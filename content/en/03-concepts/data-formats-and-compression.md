@@ -15,7 +15,7 @@ date: 2026-08-15
 - **Category**: Fundamentals / Storage & Query Optimization
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/03-concepts/data-formats-and-compression)
 - **Slide Reference**: Pages 38–48 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[glue]]` | `[[redshift]]` | `[[emr]]` | `[[s3]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/00-hub/service-catalog|service-catalog]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/database/redshift|redshift]]` | `[[en/02-services/analytics-streaming/emr/emr|emr]]` | `[[en/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -122,8 +122,8 @@ graph LR
 
 ## 📌 Related Notes
 
-- `[[big-data-fundamentals]]` — Big Data 5 V's and Data Lake Architecture
-- `[[data-modeling-and-partitioning]]` — Structuring S3 partitions for Parquet datasets
-- `[[athena]]` — Query performance and cost optimization on Parquet
-- `[[glue]]` — Format conversion jobs in AWS Glue ETL
-- `[[msk]]` — Avro serialization and Schema Registry
+- `[[en/03-concepts/big-data-fundamentals|big-data-fundamentals]]` — Big Data 5 V's and Data Lake Architecture
+- `[[en/03-concepts/data-modeling-and-partitioning|data-modeling-and-partitioning]]` — Structuring S3 partitions for Parquet datasets
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Query performance and cost optimization on Parquet
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — Format conversion jobs in AWS Glue ETL
+- `[[en/02-services/analytics-streaming/msk/msk|msk]]` — Avro serialization and Schema Registry

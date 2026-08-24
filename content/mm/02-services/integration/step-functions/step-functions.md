@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/step-functions/step-functions) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: ရှုပ်ထွေးပြီး အဆင့်များစွာပါဝင်သော ETL workflows များ၊ data processing pipelines များ (AWS Glue, Amazon EMR, Amazon Athena, AWS Lambda, Amazon Redshift) ကို ညှိနှိုင်းပေါင်းစပ်ခြင်း (coordinating) နှင့် serverless state machines များဖြင့် အလိုအလျောက် error handling ဆောင်ရွက်ခြင်း။
 - **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-operations-and-support]]` | `[[glue]]` | `[[emr]]` | `[[lambda]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/analytics-streaming/emr/emr|emr]]` | `[[mm/02-services/compute-containers/lambda|lambda]]`
 
 ---
 
@@ -101,11 +101,11 @@ Step Functions ရှိ State machines များကို structured JSON-ba
 
 **AWS Certified Data Engineer - Associate (DEA-C01)** စာမေးပွဲအတွက် AWS Step Functions ကို ကျွမ်းကျင်စွာ တတ်မြောက်နိုင်ရန် အောက်ပါ modular notes များကို လေ့လာပါ:
 
-1. `[[step-functions-standard-vs-express-workflows]]` — **Standard vs. Express Workflows, Execution Models & Cost Architecture**
-2. `[[step-functions-service-integrations-and-sync-patterns]]` — **Service Integrations: `.sync`, Request-Response, Task Tokens, Glue, EMR & Athena Pipelines**
-3. `[[step-functions-parallel-and-distributed-map]]` — **Parallel State, Inline Map & High-Throughput Distributed Map for S3 Big Data**
-4. `[[step-functions-error-handling-retry-and-sagas]]` — **Error Handling, Exponential Backoff Retries, Catchers & Saga Pattern**
-5. `[[step-functions-vs-mwaa-and-troubleshooting]]` — **Step Functions vs. Apache Airflow / MWAA Matrix, Observability, CloudWatch & X-Ray**
+1. `[[mm/02-services/integration/step-functions/step-functions-standard-vs-express-workflows|step-functions-standard-vs-express-workflows]]` — **Standard vs. Express Workflows, Execution Models & Cost Architecture**
+2. `[[mm/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns|step-functions-service-integrations-and-sync-patterns]]` — **Service Integrations: `.sync`, Request-Response, Task Tokens, Glue, EMR & Athena Pipelines**
+3. `[[mm/02-services/integration/step-functions/step-functions-parallel-and-distributed-map|step-functions-parallel-and-distributed-map]]` — **Parallel State, Inline Map & High-Throughput Distributed Map for S3 Big Data**
+4. `[[mm/02-services/integration/step-functions/step-functions-error-handling-retry-and-sagas|step-functions-error-handling-retry-and-sagas]]` — **Error Handling, Exponential Backoff Retries, Catchers & Saga Pattern**
+5. `[[mm/02-services/integration/step-functions/step-functions-vs-mwaa-and-troubleshooting|step-functions-vs-mwaa-and-troubleshooting]]` — **Step Functions vs. Apache Airflow / MWAA Matrix, Observability, CloudWatch & X-Ray**
 
 ---
 
@@ -123,9 +123,9 @@ Step Functions ရှိ State machines များကို structured JSON-ba
 ---
 
 ## 📌 Related Notes
-- `[[step-functions-standard-vs-express-workflows]]` — Standard vs Express Workflows
-- `[[step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
-- `[[step-functions-parallel-and-distributed-map]]` — Distributed Map for Big Data
-- `[[glue]]` — AWS Glue Spark ETL Jobs
-- `[[emr]]` — Amazon EMR Big Data Processing
-- `[[mwaa-airflow]]` — Managed Airflow vs Step Functions
+- `[[mm/02-services/integration/step-functions/step-functions-standard-vs-express-workflows|step-functions-standard-vs-express-workflows]]` — Standard vs Express Workflows
+- `[[mm/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns|step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
+- `[[mm/02-services/integration/step-functions/step-functions-parallel-and-distributed-map|step-functions-parallel-and-distributed-map]]` — Distributed Map for Big Data
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Spark ETL Jobs
+- `[[mm/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR Big Data Processing
+- `[[mm/02-services/integration/mwaa-airflow|mwaa-airflow]]` — Managed Airflow vs Step Functions

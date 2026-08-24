@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sqs/sqs-timing-parameters-and-polling)
 - **Primary Use Case**: Configuring visibility timeouts to prevent duplicate processing, implementing `ChangeMessageVisibility` for long-running ETL jobs, slashing costs with Long Polling, and configuring Delay Queues.
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[sqs]]` | `[[sqs-standard-vs-fifo-queues]]` | `[[sqs-dead-letter-queues-and-error-handling]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/sqs/sqs|sqs]]` | `[[en/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` | `[[en/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]`
 
 ---
 
@@ -169,7 +169,7 @@ Amazon SQS allows you to postpone the visibility of new messages when downstream
 ---
 
 ## 📌 Related Notes
-- `[[sqs]]` — SQS Master Hub
-- `[[sqs-standard-vs-fifo-queues]]` — Standard vs FIFO Queues
-- `[[sqs-dead-letter-queues-and-error-handling]]` — Handling Poison Pills & DLQs
-- `[[s3]]` — S3 Object Storage for Extended Payloads
+- `[[en/02-services/integration/sqs/sqs|sqs]]` — SQS Master Hub
+- `[[en/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` — Standard vs FIFO Queues
+- `[[en/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` — Handling Poison Pills & DLQs
+- `[[en/02-services/storage/s3/s3|s3]]` — S3 Object Storage for Extended Payloads

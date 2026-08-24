@@ -18,7 +18,7 @@ date: 2026-08-08
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-replication) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Disaster Recovery (DR), Cross-Region Data Distribution, Compliance Data Residency, Log Aggregation
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[s3-versioning]] | [[s3-security]] | [[s3-encryption]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/s3/s3-versioning|s3-versioning]] | [[mm/02-services/storage/s3/s3-security|s3-security]] | [[mm/02-services/storage/s3/s3-encryption|s3-encryption]]
 
 ---
 
@@ -158,8 +158,8 @@ Account များအကြား replicate လုပ်သည့်အခါ�
 
 ## 📌 Related Notes
 
-- [[s3]] — Main Amazon S3 Overview & Storage Classes
-- [[s3-versioning]] — S3 Versioning, Delete Markers & MFA Delete
-- [[s3-security]] — S3 Security & Cross-Account Access
-- [[s3-encryption]] — SSE-S3, SSE-KMS & Cross-Account KMS CMK Setup
-- [[kms-and-secrets]] — AWS KMS Key Policies & Cross-Account Access
+- [[mm/02-services/storage/s3/s3|s3]] — Main Amazon S3 Overview & Storage Classes
+- [[mm/02-services/storage/s3/s3-versioning|s3-versioning]] — S3 Versioning, Delete Markers & MFA Delete
+- [[mm/02-services/storage/s3/s3-security|s3-security]] — S3 Security & Cross-Account Access
+- [[mm/02-services/storage/s3/s3-encryption|s3-encryption]] — SSE-S3, SSE-KMS & Cross-Account KMS CMK Setup
+- [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — AWS KMS Key Policies & Cross-Account Access

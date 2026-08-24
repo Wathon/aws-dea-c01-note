@@ -17,9 +17,9 @@ date: 2026-08-11
 
 - **Category**: Database (Relational OLTP & Cloud-Native Storage)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/database/rds-and-aurora)
-- **Primary Use Case**: Managed relational databases for transactional operational workloads, ACID transactions, Change Data Capture (CDC) ingestion, zero-ETL integration with [[redshift]], and direct S3 Parquet export.
+- **Primary Use Case**: Managed relational databases for transactional operational workloads, ACID transactions, Change Data Capture (CDC) ingestion, zero-ETL integration with [[en/02-services/database/redshift|redshift]], and direct S3 Parquet export.
 - **Slide Reference**: Pages 196–213 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[domain-1-ingestion-and-processing]] | [[redshift]] | [[dms-and-sct]] | [[s3]] | [[kms-and-secrets]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/02-services/database/redshift|redshift]] | [[en/02-services/migration/dms-and-sct|dms-and-sct]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]]
 
 ---
 
@@ -33,8 +33,8 @@ For the **AWS Certified Data Engineer – Associate (DEA-C01)** exam, you must m
 1. **Multi-AZ Deployments vs. Read Replicas**: High Availability (HA) failover vs. horizontal read scalability and analytics offloading.
 2. **Aurora Distributed Storage Architecture**: 6-way replication across 3 AZs with 4/6 write quorum and 3/6 read quorum.
 3. **Data Lake & Analytics Integrations**: Native snapshot export to S3 in **Apache Parquet**, direct SQL S3 export (`aws_s3`), and **Amazon Redshift Zero-ETL integration**.
-4. **Change Data Capture (CDC)**: Extracting transactional changes from PostgreSQL WAL or MySQL binlogs via [[dms-and-sct]] (AWS DMS).
-5. **Security & Authentication**: **IAM Database Authentication** (temporary tokens) and automated credential rotation with [[kms-and-secrets]] (AWS Secrets Manager).
+4. **Change Data Capture (CDC)**: Extracting transactional changes from PostgreSQL WAL or MySQL binlogs via [[en/02-services/migration/dms-and-sct|dms-and-sct]] (AWS DMS).
+5. **Security & Authentication**: **IAM Database Authentication** (temporary tokens) and automated credential rotation with [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] (AWS Secrets Manager).
 
 ```mermaid
 graph TB
@@ -305,7 +305,7 @@ graph TD
 ### 2. RDS Snapshot Export to Amazon S3 (Parquet Export)
 - Exports the data from an Amazon RDS or Aurora snapshot directly into **Amazon S3 in Apache Parquet format**.
 - **Zero Impact on Production**: The export process runs completely in the AWS managed background fleet; **consumes 0 CPU/RAM/IOPS** on the active database instance.
-- **Analytical Optimization**: Parquet files are automatically columnar-formatted, compressed with Snappy, and partitioned, making them instantly queryable by [[athena]], [[glue]], or loadable into [[redshift]].
+- **Analytical Optimization**: Parquet files are automatically columnar-formatted, compressed with Snappy, and partitioned, making them instantly queryable by [[en/02-services/analytics-streaming/athena/athena|athena]], [[en/02-services/analytics-streaming/glue/glue|glue]], or loadable into [[en/02-services/database/redshift|redshift]].
 
 ### 3. Direct SQL S3 Integration (`aws_s3` Extension for PostgreSQL)
 - Using the native `aws_s3` extension in RDS/Aurora PostgreSQL, you can export query results directly to S3:
@@ -381,7 +381,7 @@ graph LR
 - **Architecture**:
   - Web applications write checkout transactions to Aurora Primary.
   - Transactions replicate to Redshift in near real-time (< 15 seconds) via Zero-ETL.
-  - Business Intelligence tools ([[quicksight]]) run complex multi-table join and aggregation queries directly against Redshift.
+  - Business Intelligence tools ([[en/02-services/analytics-streaming/quicksight/quicksight|quicksight]]) run complex multi-table join and aggregation queries directly against Redshift.
 
 ### Pattern B: Zero-Compute Production Data Lake Hydration (Snapshot Export to S3)
 
@@ -427,12 +427,12 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[redshift]] — Petabyte-scale OLAP data warehouse and Zero-ETL target
-- [[dynamodb]] — Serverless NoSQL operational database comparisons
-- [[dms-and-sct]] — AWS Database Migration Service for CDC replication from RDS
-- [[s3]] — S3 Data Lake target for RDS Snapshot Parquet exports
-- [[athena]] — Querying RDS S3 exports and Athena Federated Queries
-- [[kms-and-secrets]] — KMS database encryption and Secrets Manager credential rotation
-- [[aws-backup]] — Centralized backup plans, PITR, and Vault Lock protection for RDS
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[en/02-services/database/redshift|redshift]] — Petabyte-scale OLAP data warehouse and Zero-ETL target
+- [[en/02-services/database/dynamodb|dynamodb]] — Serverless NoSQL operational database comparisons
+- [[en/02-services/migration/dms-and-sct|dms-and-sct]] — AWS Database Migration Service for CDC replication from RDS
+- [[en/02-services/storage/s3/s3|s3]] — S3 Data Lake target for RDS Snapshot Parquet exports
+- [[en/02-services/analytics-streaming/athena/athena|athena]] — Querying RDS S3 exports and Athena Federated Queries
+- [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — KMS database encryption and Secrets Manager credential rotation
+- [[en/02-services/security-governance/aws-backup|aws-backup]] — Centralized backup plans, PITR, and Vault Lock protection for RDS
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

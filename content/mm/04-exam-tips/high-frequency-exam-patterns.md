@@ -12,7 +12,7 @@ date: 2026-07-28
 # 🎯 High-Frequency DEA-C01 Exam Scenarios & Traps
 
 - **Language / ဘာသာစကား**: [English (Original)](/en/04-exam-tips/high-frequency-exam-patterns) | **မြန်မာဘာသာ (Burmese)**
-- **Hub Links**: `[[mm/index]]`
+- **Hub Links**: `[[mm/index|index]]`
 
 AWS Certified Data Engineer Associate သင်ရိုးညွှန်းတမ်းမှ တိုက်ရိုက်စုစည်းထားသော စာမေးပွဲတွင် အမေးအများဆုံး scenario pattern များနှင့် သတိထားရမည့် အမှားအယွင်းထောင်ချောက်များ (traps) ဖြစ်ပါသည်။
 
@@ -22,9 +22,9 @@ AWS Certified Data Engineer Associate သင်ရိုးညွှန်းတ
 
 ### 1. The "Lowest Operational Overhead" Rule
 - အကယ်၍ မေးခွန်းတွင် **least operational effort** (သို့မဟုတ် least operational overhead / အနည်းဆုံး စီမံခန့်ခွဲမှုစိုက်ထုတ်မှု) ရှိသော ဖြေရှင်းချက်ကို တောင်းဆိုပါက EC2 cluster များကို စီမံခန့်ခွဲခြင်းထက် **Serverless** native AWS service များကို အမြဲ ဦးစားပေးရွေးချယ်ပါ!
-  - EC2 ပေါ်တွင် Presto တည်ဆောက်ခြင်းထက် [[athena]] ကို ရွေးချယ်ပါ။
-  - EC2 ပေါ်တွင် custom Spark စီမံခန့်ခွဲခြင်းထက် [[glue]] ETL ကို ရွေးချယ်ပါ။
-  - Custom consumer EC2 instance များ တည်ဆောက်ခြင်းထက် [[kinesis]] Data Firehose ကို ရွေးချယ်ပါ။
+  - EC2 ပေါ်တွင် Presto တည်ဆောက်ခြင်းထက် [[mm/02-services/analytics-streaming/athena/athena|athena]] ကို ရွေးချယ်ပါ။
+  - EC2 ပေါ်တွင် custom Spark စီမံခန့်ခွဲခြင်းထက် [[mm/02-services/analytics-streaming/glue/glue|glue]] ETL ကို ရွေးချယ်ပါ။
+  - Custom consumer EC2 instance များ တည်ဆောက်ခြင်းထက် [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] Data Firehose ကို ရွေးချယ်ပါ။
 
 ### 2. The "Glue Data Quality (DQDL)" Pattern
 - အကယ်၍ လိုအပ်ချက်တွင် custom code ရေးသားစရာမလိုဘဲ data warehouse သို့ load မလုပ်မီ ဝင်ရောက်လာသော dataset ၏ အရည်အသွေးကို စစ်ဆေးအတည်ပြုရန် (ဥပမာ- non-null email များ၊ သတ်မှတ် range အတွင်းရှိ တန်ဖိုးများ) တောင်းဆိုပါက -> **AWS Glue Data Quality** ကို ရွေးချယ်ပါ။
@@ -56,4 +56,4 @@ AWS Certified Data Engineer Associate သင်ရိုးညွှန်းတ
 ---
 
 ## 📌 Master Hub Link
-Return to main hub: [[mm/index]]
+Return to main hub: [[mm/index|index]]

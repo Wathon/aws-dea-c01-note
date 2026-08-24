@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sqs/sqs-security-monitoring-and-troubleshooting)
 - **Primary Use Case**: Securing queues with Access Policies and KMS encryption, monitoring backlog depth and message age with CloudWatch, scaling worker fleets via Backlog per Worker, and troubleshooting production failures.
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[sqs]]` | `[[sqs-timing-parameters-and-polling]]` | `[[sqs-dead-letter-queues-and-error-handling]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/sqs/sqs|sqs]]` | `[[en/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` | `[[en/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` | `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -167,8 +167,8 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[sqs]]` — SQS Master Hub
-- `[[sqs-standard-vs-fifo-queues]]` — Standard vs FIFO Architecture
-- `[[sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Polling
-- `[[sqs-dead-letter-queues-and-error-handling]]` — DLQ Configuration & Redrive
-- `[[domain-3-data-operations-and-support]]` — CloudWatch & Operational Excellence
+- `[[en/02-services/integration/sqs/sqs|sqs]]` — SQS Master Hub
+- `[[en/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` — Standard vs FIFO Architecture
+- `[[en/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Polling
+- `[[en/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` — DLQ Configuration & Redrive
+- `[[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — CloudWatch & Operational Excellence

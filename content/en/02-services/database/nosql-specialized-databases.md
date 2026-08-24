@@ -21,7 +21,7 @@ date: 2026-08-12
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/database/nosql-specialized-databases)
 - **Primary Use Case**: Microsecond in-memory caching, durable in-memory primary databases, managed Apache Cassandra, relationship graph traversal, time-series IoT telemetry, and managed MongoDB document storage.
 - **Slide Reference**: Pages 214–219 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[domain-1-ingestion-and-processing]] | [[dynamodb]] | [[rds-and-aurora]] | [[redshift]] | [[kinesis]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/02-services/database/dynamodb|dynamodb]] | [[en/02-services/database/rds-and-aurora|rds-and-aurora]] | [[en/02-services/database/redshift|redshift]] | [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]]
 
 ---
 
@@ -312,7 +312,7 @@ Timestream uses ANSI SQL with built-in analytical functions:
   - Sensors stream data into **AWS IoT Core** $\rightarrow$ **Amazon Kinesis Data Streams**.
   - Kinesis writes directly to **Amazon Timestream**.
   - Timestream retains data in **Memory Store for 7 days** (serving real-time Grafana dashboards) and automatically tiers to **Magnetic Store for 5 years**.
-  - Scheduled queries aggregate hourly averages and save Parquet datasets to **Amazon S3** for machine learning training in [[sagemaker-and-ai]].
+  - Scheduled queries aggregate hourly averages and save Parquet datasets to **Amazon S3** for machine learning training in [[en/02-services/ml-dev-cost/sagemaker-and-ai|sagemaker-and-ai]].
 
 ```mermaid
 graph LR
@@ -372,11 +372,11 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[dynamodb]] — Serverless NoSQL operational database and DynamoDB Streams
-- [[rds-and-aurora]] — Relational OLTP database engines and Aurora distributed storage
-- [[redshift]] — Petabyte-scale OLAP data warehouse
-- [[kinesis]] — Ingesting streaming telemetry into specialized databases
-- [[s3]] — S3 Data Lake archiving and downstream analytics
-- [[sagemaker-and-ai]] — Machine learning feature extraction and Neptune ML
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
-- [[domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[en/02-services/database/dynamodb|dynamodb]] — Serverless NoSQL operational database and DynamoDB Streams
+- [[en/02-services/database/rds-and-aurora|rds-and-aurora]] — Relational OLTP database engines and Aurora distributed storage
+- [[en/02-services/database/redshift|redshift]] — Petabyte-scale OLAP data warehouse
+- [[en/02-services/analytics-streaming/kinesis/kinesis|kinesis]] — Ingesting streaming telemetry into specialized databases
+- [[en/02-services/storage/s3/s3|s3]] — S3 Data Lake archiving and downstream analytics
+- [[en/02-services/ml-dev-cost/sagemaker-and-ai|sagemaker-and-ai]] — Machine learning feature extraction and Neptune ML
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

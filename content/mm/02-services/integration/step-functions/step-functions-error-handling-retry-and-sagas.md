@@ -21,7 +21,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/step-functions/step-functions-error-handling-retry-and-sagas) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: exponential backoff ပါဝင်သော automated `Retry` policies များကို configure လုပ်ခြင်း၊ `Catch` handlers များဖြင့် မအောင်မြင်သော pipeline states များကို သီးခြားခွဲထုတ်ကိုင်တွယ်ခြင်း (isolating failed states) နှင့် distributed compensating transactions များအတွက် Saga Pattern ကို အကောင်အထည်ဖော်ခြင်း (implementing Saga Pattern)။
 - **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[step-functions]]` | `[[step-functions-standard-vs-express-workflows]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` | `[[mm/02-services/integration/step-functions/step-functions-standard-vs-express-workflows|step-functions-standard-vs-express-workflows]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -164,7 +164,7 @@ graph LR
 ---
 
 ## 📌 Related Notes (ဆက်စပ်လေ့လာရန်များ)
-- `[[step-functions]]` — Step Functions Master Hub
-- `[[step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
-- `[[domain-3-data-operations-and-support]]` — Incident Triage & Operations
-- `[[sns]]` — Amazon SNS Alerting Destinations
+- `[[mm/02-services/integration/step-functions/step-functions|step-functions]]` — Step Functions Master Hub
+- `[[mm/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns|step-functions-service-integrations-and-sync-patterns]]` — Service Integrations (.sync)
+- `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — Incident Triage & Operations
+- `[[mm/02-services/integration/sns/sns|sns]]` — Amazon SNS Alerting Destinations

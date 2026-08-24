@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-data-catalog) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: S3 Data Lakes, Athena, EMR နှင့် Redshift Spectrum တို့အတွက် ဗဟိုပြု persistent Apache Hive-compatible metastore အဖြစ် အသုံးပြုခြင်း။
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[athena]]` | `[[lake-formation]]` | `[[domain-2-data-store-management]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/security-governance/lake-formation|lake-formation]]` | `[[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]]`
 
 ---
 
@@ -26,7 +26,7 @@ date: 2026-08-17
 
 **AWS Glue Data Catalog** သည် fully managed, serverless ဖြစ်ပြီး ဗဟို Apache Hive-compatible metastore တစ်ခုဖြစ်သည်။ ၎င်းသည် Amazon S3, Amazon RDS, Amazon Redshift, Amazon DynamoDB နှင့် ပြင်ပ JDBC sources များတွင် သိမ်းဆည်းထားသော ဒေတာများအတွက် structural နှင့် operational metadata များကို သိုလှောင်ထိန်းသိမ်းပေးသည်။
 
-သီးသန့် EC2 instances သို့မဟုတ် Amazon EMR ပေါ်တွင် Apache Hive Metastore ကို ကိုယ်တိုင် run ပြီး ထိန်းသိမ်းစရာမလိုဘဲ Glue Data Catalog သည် AWS analytics ecosystem တစ်ခုလုံးအတွက် single source of truth (ဗဟိုအချက်အလက်ရင်းမြစ်) အဖြစ် အသုံးတော်ခံသည်။ Glue Data Catalog တွင် သတ်မှတ်ထားသော မည်သည့် schema ကိုမဆို **[[athena]]**, **[[emr]]**, **[[redshift]]** (Redshift Spectrum နှင့် federated queries များမှတစ်ဆင့်) နှင့် **AWS Glue ETL jobs** များက ချက်ချင်း query ပြုလုပ်နိုင်သည်။
+သီးသန့် EC2 instances သို့မဟုတ် Amazon EMR ပေါ်တွင် Apache Hive Metastore ကို ကိုယ်တိုင် run ပြီး ထိန်းသိမ်းစရာမလိုဘဲ Glue Data Catalog သည် AWS analytics ecosystem တစ်ခုလုံးအတွက် single source of truth (ဗဟိုအချက်အလက်ရင်းမြစ်) အဖြစ် အသုံးတော်ခံသည်။ Glue Data Catalog တွင် သတ်မှတ်ထားသော မည်သည့် schema ကိုမဆို **[[mm/02-services/analytics-streaming/athena/athena|athena]]**, **[[mm/02-services/analytics-streaming/emr/emr|emr]]**, **[[mm/02-services/database/redshift|redshift]]** (Redshift Spectrum နှင့် federated queries များမှတစ်ဆင့်) နှင့် **AWS Glue ETL jobs** များက ချက်ချင်း query ပြုလုပ်နိုင်သည်။
 
 ```mermaid
 graph TD
@@ -193,9 +193,9 @@ Data Catalog သည် ပြင်ပ data stores များအတွက် a
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[glue]]` — AWS Glue Architecture & Taxonomy
-- `[[glue-crawlers]]` — Automating Data Catalog Schema Population
-- `[[lake-formation]]` — Fine-Grained Access Control over Data Catalog
-- `[[athena]]` — Querying Tables in the Glue Data Catalog
-- `[[athena-performance]]` — Partition Projection vs. Partition Indexes
-- `[[redshift]]` — Querying Glue Data Catalog tables with Redshift Spectrum
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture & Taxonomy
+- `[[mm/02-services/analytics-streaming/glue/glue-crawlers|glue-crawlers]]` — Automating Data Catalog Schema Population
+- `[[mm/02-services/security-governance/lake-formation|lake-formation]]` — Fine-Grained Access Control over Data Catalog
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Querying Tables in the Glue Data Catalog
+- `[[mm/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — Partition Projection vs. Partition Indexes
+- `[[mm/02-services/database/redshift|redshift]]` — Querying Glue Data Catalog tables with Redshift Spectrum

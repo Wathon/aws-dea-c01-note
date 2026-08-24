@@ -16,7 +16,7 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-performance)
 - **Primary Use Case**: High-Throughput Analytics, Low-Latency Data Lake I/O, Large File Transfers
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[domain-2-data-store-management]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/02-services/storage/s3/s3|s3]] | [[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]]
 
 ---
 
@@ -81,7 +81,7 @@ graph TD
 - **How it works**: Uses the HTTP `Range` header (`Range: bytes=0-1048576`) to download specific byte ranges of an object in parallel.
 - **Use Cases**:
   - Parallelizing downloads of giant files across multiple threads/connections.
-  - **Footer Reads in Columnar Files**: Analytical engines ([[athena]], [[emr]] Spark) perform byte-range fetches to read metadata/footers of Parquet/ORC files without fetching the entire object.
+  - **Footer Reads in Columnar Files**: Analytical engines ([[en/02-services/analytics-streaming/athena/athena|athena]], [[en/02-services/analytics-streaming/emr/emr|emr]] Spark) perform byte-range fetches to read metadata/footers of Parquet/ORC files without fetching the entire object.
 
 ### 3. S3 Transfer Acceleration
 
@@ -124,9 +124,9 @@ flowchart LR
 - **Problem**: Millions of small files (< 128 MB) degrade performance due to S3 API overhead, Glue crawler indexing latency, and Spark/Athena task scheduling overhead.
 - **Target File Size**: **128 MB to 512 MB** (up to 1 GB for large analytical scans).
 - **Solutions**:
-  - Run [[glue]] ETL jobs or AWS Lambda scripts to merge/compact small files into larger files.
-  - Use [[athena]] `CREATE TABLE AS SELECT` (`CTAS`) to rewrite small files into target sizes.
-  - In Spark / [[emr]], use `coalesce()` or `repartition()` before writing to S3.
+  - Run [[en/02-services/analytics-streaming/glue/glue|glue]] ETL jobs or AWS Lambda scripts to merge/compact small files into larger files.
+  - Use [[en/02-services/analytics-streaming/athena/athena|athena]] `CREATE TABLE AS SELECT` (`CTAS`) to rewrite small files into target sizes.
+  - In Spark / [[en/02-services/analytics-streaming/emr/emr|emr]], use `coalesce()` or `repartition()` before writing to S3.
 
 ### 2. Compression & Columnar Formats
 
@@ -175,10 +175,10 @@ flowchart LR
 
 ## 📌 Related Notes
 
-- [[s3]] — Main Amazon S3 Overview & Storage Classes
-- [[data-formats-and-compression]] — Parquet, ORC, Snappy & Zstd details
-- [[data-modeling-and-partitioning]] — Partition strategies for S3 & Athena
-- [[athena]] — Athena query optimization & CTAS
-- [[glue]] — Glue compaction ETL jobs
-- [[emr]] — EMR Spark tuning on S3
-- [[kms-and-secrets]] — SSE-KMS & S3 Bucket Keys
+- [[en/02-services/storage/s3/s3|s3]] — Main Amazon S3 Overview & Storage Classes
+- [[en/03-concepts/data-formats-and-compression|data-formats-and-compression]] — Parquet, ORC, Snappy & Zstd details
+- [[en/03-concepts/data-modeling-and-partitioning|data-modeling-and-partitioning]] — Partition strategies for S3 & Athena
+- [[en/02-services/analytics-streaming/athena/athena|athena]] — Athena query optimization & CTAS
+- [[en/02-services/analytics-streaming/glue/glue|glue]] — Glue compaction ETL jobs
+- [[en/02-services/analytics-streaming/emr/emr|emr]] — EMR Spark tuning on S3
+- [[en/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — SSE-KMS & S3 Bucket Keys

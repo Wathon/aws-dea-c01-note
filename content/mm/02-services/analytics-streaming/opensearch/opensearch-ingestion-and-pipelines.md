@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-ingestion-and-pipelines) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Serverless OpenSearch Ingestion (OSIS)၊ Amazon Data Firehose၊ CloudWatch subscription filters နှင့် Amazon DynamoDB Zero-ETL တို့ကို အသုံးပြု၍ high-throughput streaming logs များကို OpenSearch ထဲသို့ ingest ပြုလုပ်ခြင်း။
 - **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 460–478
-- **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[kinesis-firehose]]` | `[[dynamodb]]` | `[[cloudwatch-and-eventbridge]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[mm/02-services/database/dynamodb|dynamodb]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 
@@ -145,7 +145,7 @@ Zero-ETL မပေါ်မီအချိန်က DynamoDB data များ�
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[opensearch]]` — OpenSearch Master Hub
-- `[[kinesis-firehose]]` — Firehose Buffering & Destinations
-- `[[dynamodb]]` — DynamoDB Architecture & Streams
-- `[[cloudwatch-and-eventbridge]]` — CloudWatch Log Subscriptions
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Master Hub
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Firehose Buffering & Destinations
+- `[[mm/02-services/database/dynamodb|dynamodb]]` — DynamoDB Architecture & Streams
+- `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — CloudWatch Log Subscriptions

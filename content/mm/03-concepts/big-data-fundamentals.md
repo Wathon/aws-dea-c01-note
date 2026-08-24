@@ -16,7 +16,7 @@ date: 2026-08-15
 - **Category**: Fundamentals (ဒေတာ အင်ဂျင်နီယာ အခြေခံသဘောတရားများ)
 - **Language / ဘာသာစကား**: [English Version](/en/03-concepts/big-data-fundamentals) | **မြန်မာဘာသာ (Burmese)**
 - **Slide Reference**: Pages 12–37 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-2-data-store-management]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/00-hub/service-catalog|service-catalog]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]]` | `[[mm/02-services/storage/s3/s3|s3]]` | `[[mm/02-services/database/redshift|redshift]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]`
 
 ---
 
@@ -117,12 +117,12 @@ graph TD
     class DS,DS_Desc ds;
 ```
 
-| အချက်အလက် (Characteristic) | Data Warehouse (e.g. `[[redshift]]`) | Data Lake (e.g. `[[s3]]`) | Data Swamp (အမှိုက်ပုံသဖွယ် ဖြစ်နေသော Data) |
+| အချက်အလက် (Characteristic) | Data Warehouse (e.g. `[[mm/02-services/database/redshift|redshift]]`) | Data Lake (e.g. `[[mm/02-services/storage/s3/s3|s3]]`) | Data Swamp (အမှိုက်ပုံသဖွယ် ဖြစ်နေသော Data) |
 | :--- | :--- | :--- | :--- |
 | **Data Structure** | **Schema-on-Write**: ဒေတာမထည့်မီ Table Schema ကို ကြိုတင်သတ်မှတ်ရသည်။ | **Schema-on-Read**: မူရင်းဒေတာကို သိမ်းဆည်းထားပြီး ဖတ်ယူသည့်အခါမှ Schema သတ်မှတ်သည်။ | Governance မရှိဘဲ စည်းမဲ့ကမ်းမဲ့ စုပုံထားသော ဒေတာများ။ |
 | **Data Formats** | Structured (Relational / Tabular OLAP) ဒေတာများသာ။ | Structured၊ Semi-structured (JSON, Parquet)၊ Unstructured ဒေတာအားလုံး။ | မည်သည့်ဒေတာမဆို ဖော်မတ်မဲ့ ရောထွေးနေသည်။ |
 | **Storage vs. Compute** | Managed Scaling (Redshift Serverless သို့မဟုတ် Provisioned Cluster)။ | **Fully Decoupled**: သိုလှောင်မှု (S3) နှင့် တွက်ချက်မှု (Athena/Spark) ကို သီးခြားစီ ခွဲထားသည်။ | Decoupled ဖြစ်သော်လည်း ရှာဖွေရယူရန် မဖြစ်နိုင်။ |
-| **Governance & Catalog** | Strict ACID Transactions & Table Constraints | `[[lake-formation]]` နှင့် `[[glue]]` Data Catalog ဖြင့် စီမံခန့်ခွဲသည်။ | Metadata Catalog နှင့် လုံခြုံရေး မရှိပါ။ |
+| **Governance & Catalog** | Strict ACID Transactions & Table Constraints | `[[mm/02-services/security-governance/lake-formation|lake-formation]]` နှင့် `[[mm/02-services/analytics-streaming/glue/glue|glue]]` Data Catalog ဖြင့် စီမံခန့်ခွဲသည်။ | Metadata Catalog နှင့် လုံခြုံရေး မရှိပါ။ |
 | **အဓိက အသုံးပြုသူများ** | Business Analysts, BI Developers, SQL Users | Data Engineers, Data Scientists, ML Engineers | မည်သူမျှ အသုံးမပြုနိုင် (Unusable)။ |
 
 ---
@@ -172,9 +172,9 @@ graph LR
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
 
-- `[[data-formats-and-compression]]` — Parquet, ORC, Avro နှင့် Compression စနစ်များ
-- `[[data-modeling-and-partitioning]]` — S3 Partitioning နှင့် Star Schema ပုံစံများ
-- `[[data-validation-and-profiling]]` — Glue Data Quality (DQDL) ဖြင့် ဒေတာအရည်အသွေး စစ်ဆေးခြင်း
-- `[[s3]]` — Amazon S3 Data Lake ဗိသုကာ
-- `[[redshift]]` — Amazon Redshift Data Warehouse
-- `[[glue]]` — AWS Glue ETL နှင့် Data Catalog
+- `[[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — Parquet, ORC, Avro နှင့် Compression စနစ်များ
+- `[[mm/03-concepts/data-modeling-and-partitioning|data-modeling-and-partitioning]]` — S3 Partitioning နှင့် Star Schema ပုံစံများ
+- `[[mm/03-concepts/data-validation-and-profiling|data-validation-and-profiling]]` — Glue Data Quality (DQDL) ဖြင့် ဒေတာအရည်အသွေး စစ်ဆေးခြင်း
+- `[[mm/02-services/storage/s3/s3|s3]]` — Amazon S3 Data Lake ဗိသုကာ
+- `[[mm/02-services/database/redshift|redshift]]` — Amazon Redshift Data Warehouse
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue ETL နှင့် Data Catalog

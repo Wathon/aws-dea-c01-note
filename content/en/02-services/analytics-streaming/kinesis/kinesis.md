@@ -19,7 +19,7 @@ date: 2026-08-18
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis)
 - **Primary Use Case**: Massive real-time stream ingestion, sub-second analytics, managed micro-batch delivery to data lakes, and continuous stream transformations.
 - **Slide Reference**: Pages 414–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]` | `[[s3]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]` | `[[en/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -122,13 +122,13 @@ graph TD
 
 To prepare comprehensively for all scenario questions in the DEA-C01 examination, explore the specialized sub-topic modules below:
 
-1. `[[kinesis-data-streams]]` — **KDS Shards, Provisioned vs. On-Demand Modes, Partition Keys & Producers (SDK, KPL, Agent)**
-2. `[[kinesis-consumers-and-scaling]]` — **Standard vs. Enhanced Fan-Out (EFO), KCL DynamoDB Lease Coordination, Lambda Triggers & Resharding**
-3. `[[kinesis-firehose]]` — **Destinations, Buffering Rules, Inline Lambda Transforms, Native Parquet Conversion & Dynamic Partitioning**
-4. `[[kinesis-apache-flink]]` — **KPU Sizing, Tumbling / Sliding / Session Windows, Event-Time Watermarks & RocksDB Checkpoints**
-5. `[[kinesis-security-and-monitoring]]` — **KMS SSE, VPC PrivateLink, Glue Schema Registry Integration & `IteratorAgeMilliseconds` Alerting**
-6. `[[kinesis-architecture-and-patterns]]` — **End-to-End Real-Time Pipelines, Hot Shard Mitigation, Deduplication & Comparison Matrices**
-7. `[[kinesis-troubleshooting-and-tuning]]` — **Production Troubleshooting, Hot Shards, Consumer Lag (`IteratorAge`), and Poison Pill Isolation**
+1. `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — **KDS Shards, Provisioned vs. On-Demand Modes, Partition Keys & Producers (SDK, KPL, Agent)**
+2. `[[en/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling|kinesis-consumers-and-scaling]]` — **Standard vs. Enhanced Fan-Out (EFO), KCL DynamoDB Lease Coordination, Lambda Triggers & Resharding**
+3. `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — **Destinations, Buffering Rules, Inline Lambda Transforms, Native Parquet Conversion & Dynamic Partitioning**
+4. `[[en/02-services/analytics-streaming/kinesis/kinesis-apache-flink|kinesis-apache-flink]]` — **KPU Sizing, Tumbling / Sliding / Session Windows, Event-Time Watermarks & RocksDB Checkpoints**
+5. `[[en/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring|kinesis-security-and-monitoring]]` — **KMS SSE, VPC PrivateLink, Glue Schema Registry Integration & `IteratorAgeMilliseconds` Alerting**
+6. `[[en/02-services/analytics-streaming/kinesis/kinesis-architecture-and-patterns|kinesis-architecture-and-patterns]]` — **End-to-End Real-Time Pipelines, Hot Shard Mitigation, Deduplication & Comparison Matrices**
+7. `[[en/02-services/analytics-streaming/kinesis/kinesis-troubleshooting-and-tuning|kinesis-troubleshooting-and-tuning]]` — **Production Troubleshooting, Hot Shards, Consumer Lag (`IteratorAge`), and Poison Pill Isolation**
 
 ---
 
@@ -145,11 +145,11 @@ To prepare comprehensively for all scenario questions in the DEA-C01 examination
 ---
 
 ## 📌 Related Notes
-- `[[kinesis-data-streams]]` — Kinesis Data Streams Core Architecture
-- `[[kinesis-consumers-and-scaling]]` — Standard vs. Enhanced Fan-Out & KCL
-- `[[kinesis-troubleshooting-and-tuning]]` — Troubleshooting & Performance Tuning
-- `[[kinesis-firehose]]` — Amazon Data Firehose Delivery Pipelines
-- `[[kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
-- `[[msk]]` — Amazon Managed Streaming for Apache Kafka
-- `[[lambda]]` — Serverless Stream Consumers
-- `[[s3]]` — S3 Data Lake Storage Architecture
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — Kinesis Data Streams Core Architecture
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling|kinesis-consumers-and-scaling]]` — Standard vs. Enhanced Fan-Out & KCL
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-troubleshooting-and-tuning|kinesis-troubleshooting-and-tuning]]` — Troubleshooting & Performance Tuning
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Amazon Data Firehose Delivery Pipelines
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-apache-flink|kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
+- `[[en/02-services/analytics-streaming/msk/msk|msk]]` — Amazon Managed Streaming for Apache Kafka
+- `[[en/02-services/compute-containers/lambda|lambda]]` — Serverless Stream Consumers
+- `[[en/02-services/storage/s3/s3|s3]]` — S3 Data Lake Storage Architecture

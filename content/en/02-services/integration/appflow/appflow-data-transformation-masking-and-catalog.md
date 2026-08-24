@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog)
 - **Primary Use Case**: Applying in-flight field mapping, masking sensitive PII before persistence, converting SaaS records to Apache Parquet with Snappy compression, and auto-registering tables in the AWS Glue Data Catalog.
 - **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[appflow]]` | `[[appflow-triggers-and-transfer-modes]]` | `[[glue-data-catalog]]` | `[[athena]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/integration/appflow/appflow|appflow]]` | `[[en/02-services/integration/appflow/appflow-triggers-and-transfer-modes|appflow-triggers-and-transfer-modes]]` | `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]`
 
 ---
 
@@ -140,7 +140,7 @@ In traditional architectures, after files land in S3, data engineers must run an
 ---
 
 ## 📌 Related Notes
-- `[[appflow]]` — Amazon AppFlow Master Hub
-- `[[appflow-triggers-and-transfer-modes]]` — Flow Triggers & Synchronization
-- `[[glue-data-catalog]]` — AWS Glue Data Catalog Deep-Dive
-- `[[athena]]` — Serverless SQL Analytics with Amazon Athena
+- `[[en/02-services/integration/appflow/appflow|appflow]]` — Amazon AppFlow Master Hub
+- `[[en/02-services/integration/appflow/appflow-triggers-and-transfer-modes|appflow-triggers-and-transfer-modes]]` — Flow Triggers & Synchronization
+- `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — AWS Glue Data Catalog Deep-Dive
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Serverless SQL Analytics with Amazon Athena

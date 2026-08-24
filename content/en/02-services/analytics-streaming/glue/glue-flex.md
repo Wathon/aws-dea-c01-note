@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-flex)
 - **Primary Use Case**: Massive cost reduction (up to 35%) for non-urgent, non-time-sensitive, and non-SLA data integration workloads.
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[glue]]` | `[[glue-etl-jobs]]` | `[[cost-management]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[en/02-services/ml-dev-cost/cost-management|cost-management]]`
 
 ---
 
@@ -107,6 +107,6 @@ $$\textbf{Total Savings} = \$440 - \$290 = \mathbf{\$150.00 \text{ (34.1\% Cost 
 ---
 
 ## 📌 Related Notes
-- `[[glue]]` — AWS Glue Architecture Overview
-- `[[glue-etl-jobs]]` — AWS Glue Worker Types & Capacity Planning
-- `[[cost-management]]` — AWS Analytics Cost Optimization Strategies
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture Overview
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — AWS Glue Worker Types & Capacity Planning
+- `[[en/02-services/ml-dev-cost/cost-management|cost-management]]` — AWS Analytics Cost Optimization Strategies

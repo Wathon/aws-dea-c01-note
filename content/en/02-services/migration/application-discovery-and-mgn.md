@@ -18,7 +18,7 @@ date: 2026-08-14
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/migration/application-discovery-and-mgn)
 - **Primary Use Case**: Planning enterprise cloud migrations by discovering on-premises server infrastructure, mapping dependencies, and executing automated lift-and-shift (rehost) server migrations with continuous block-level replication.
 - **Slide Reference**: Pages 267–268 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[dms-and-sct]] | [[datasync-and-snow]] | [[data-exchange]] | [[transfer-family]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[en/02-services/migration/dms-and-sct|dms-and-sct]] | [[en/02-services/migration/datasync-and-snow|datasync-and-snow]] | [[en/02-services/migration/data-exchange|data-exchange]] | [[en/02-services/migration/transfer-family|transfer-family]]
 
 ---
 
@@ -243,9 +243,9 @@ graph TD
 
 ## 📌 Related Notes
 
-- [[dms-and-sct]] — AWS DMS & SCT for database migrations and CDC replication
-- [[datasync-and-snow]] — AWS DataSync & Snow Family for file and object migration
-- [[data-exchange]] — AWS Data Exchange for third-party datasets and Redshift integration
-- [[transfer-family]] — AWS Transfer Family for SFTP/FTPS workflows
-- [[domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[en/02-services/migration/dms-and-sct|dms-and-sct]] — AWS DMS & SCT for database migrations and CDC replication
+- [[en/02-services/migration/datasync-and-snow|datasync-and-snow]] — AWS DataSync & Snow Family for file and object migration
+- [[en/02-services/migration/data-exchange|data-exchange]] — AWS Data Exchange for third-party datasets and Redshift integration
+- [[en/02-services/migration/transfer-family|transfer-family]] — AWS Transfer Family for SFTP/FTPS workflows
+- [[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[en/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

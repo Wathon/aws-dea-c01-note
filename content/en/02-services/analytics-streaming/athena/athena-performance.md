@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-performance)
 - **Primary Use Case**: Maximizing SQL query speed and minimizing Athena scan charges ($5/TB) through columnar storage, compression, partition projection, and query tuning.
 - **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[athena]]` | `[[s3]]` | `[[domain-3-data-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/storage/s3/s3|s3]]` | `[[domain-3-data-processing]]`
 
 ---
 
@@ -90,7 +90,7 @@ graph TD
 
 ## 3. Deep Dive: Partition Projection
 
-In massive data lakes with hundreds of thousands of partitions (e.g., IoT telemetry partitioned by `device_id` and `timestamp`), querying the **[[glue-data-catalog]]** metadata via API calls becomes a major bottleneck, causing queries to hang during the planning phase.
+In massive data lakes with hundreds of thousands of partitions (e.g., IoT telemetry partitioned by `device_id` and `timestamp`), querying the **[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]** metadata via API calls becomes a major bottleneck, causing queries to hang during the planning phase.
 
 **Partition Projection** completely bypasses the Glue Data Catalog partition lookup. Instead of making metadata API calls, Athena **calculates partition locations dynamically in-memory** based on regex/range rules defined in the table properties.
 
@@ -207,7 +207,7 @@ WITH (
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Amazon Athena Architecture Overview
-- `[[athena-ctas]]` — Converting CSV to Parquet using CTAS
-- `[[data-formats-and-compression]]` — Parquet, ORC, Snappy & ZSTD Specs
-- `[[glue-data-catalog]]` — Glue Partition Indexes
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Architecture Overview
+- `[[en/02-services/analytics-streaming/athena/athena-ctas|athena-ctas]]` — Converting CSV to Parquet using CTAS
+- `[[en/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — Parquet, ORC, Snappy & ZSTD Specs
+- `[[en/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Partition Indexes

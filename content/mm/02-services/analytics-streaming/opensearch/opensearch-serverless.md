@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-serverless) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Cluster instances စီမံခန့်ခွဲခြင်း၊ node sizing၊ shard အရေအတွက် သို့မဟုတ် storage scaling တို့ကို ပြုလုပ်စရာမလိုဘဲ full-text search၊ time-series log analytics နှင့် ML vector search တို့ကို run လုပ်ဆောင်ခြင်း။
 - **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[opensearch-storage-tiers-and-ism]]` | `[[s3]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` | `[[mm/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism|opensearch-storage-tiers-and-ism]]` | `[[mm/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -146,7 +146,7 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[opensearch]]` — OpenSearch Master Hub
-- `[[opensearch-cluster-architecture]]` — Provisioned Cluster Topologies
-- `[[opensearch-ingestion-and-pipelines]]` — Ingesting into OpenSearch
-- `[[s3]]` — S3 Persistent Storage Layer
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]]` — OpenSearch Master Hub
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture|opensearch-cluster-architecture]]` — Provisioned Cluster Topologies
+- `[[mm/02-services/analytics-streaming/opensearch/opensearch-ingestion-and-pipelines|opensearch-ingestion-and-pipelines]]` — Ingesting into OpenSearch
+- `[[mm/02-services/storage/s3/s3|s3]]` — S3 Persistent Storage Layer

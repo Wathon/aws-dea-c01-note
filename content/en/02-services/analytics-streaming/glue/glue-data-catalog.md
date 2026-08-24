@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-data-catalog)
 - **Primary Use Case**: Centralized, persistent, Apache Hive-compatible metastore for S3 Data Lakes, Athena, EMR, and Redshift Spectrum.
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[glue]]` | `[[athena]]` | `[[lake-formation]]` | `[[domain-2-data-store-management]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/security-governance/lake-formation|lake-formation]]` | `[[en/01-domains/domain-2-data-store-management|domain-2-data-store-management]]`
 
 ---
 
@@ -25,7 +25,7 @@ date: 2026-08-17
 
 The **AWS Glue Data Catalog** is a fully managed, serverless, centralized Apache Hive-compatible metastore. It stores structural and operational metadata for data stored in Amazon S3, Amazon RDS, Amazon Redshift, Amazon DynamoDB, and external JDBC sources.
 
-Instead of running and maintaining an Apache Hive Metastore on dedicated EC2 instances or Amazon EMR, the Glue Data Catalog serves as a single source of truth across the AWS analytics ecosystem. Any schema defined in the Glue Data Catalog is immediately queryable by **[[athena]]**, **[[emr]]**, **[[redshift]]** (via Redshift Spectrum and federated queries), and **AWS Glue ETL jobs**.
+Instead of running and maintaining an Apache Hive Metastore on dedicated EC2 instances or Amazon EMR, the Glue Data Catalog serves as a single source of truth across the AWS analytics ecosystem. Any schema defined in the Glue Data Catalog is immediately queryable by **[[en/02-services/analytics-streaming/athena/athena|athena]]**, **[[en/02-services/analytics-streaming/emr/emr|emr]]**, **[[en/02-services/database/redshift|redshift]]** (via Redshift Spectrum and federated queries), and **AWS Glue ETL jobs**.
 
 ```mermaid
 graph TD
@@ -192,9 +192,9 @@ You can encrypt the entire Glue Data Catalog metadata using **AWS Key Management
 ---
 
 ## 📌 Related Notes
-- `[[glue]]` — AWS Glue Architecture & Taxonomy
-- `[[glue-crawlers]]` — Automating Data Catalog Schema Population
-- `[[lake-formation]]` — Fine-Grained Access Control over Data Catalog
-- `[[athena]]` — Querying Tables in the Glue Data Catalog
-- `[[athena-performance]]` — Partition Projection vs. Partition Indexes
-- `[[redshift]]` — Querying Glue Data Catalog tables with Redshift Spectrum
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture & Taxonomy
+- `[[en/02-services/analytics-streaming/glue/glue-crawlers|glue-crawlers]]` — Automating Data Catalog Schema Population
+- `[[en/02-services/security-governance/lake-formation|lake-formation]]` — Fine-Grained Access Control over Data Catalog
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Querying Tables in the Glue Data Catalog
+- `[[en/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — Partition Projection vs. Partition Indexes
+- `[[en/02-services/database/redshift|redshift]]` — Querying Glue Data Catalog tables with Redshift Spectrum

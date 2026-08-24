@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-databrew)
 - **Primary Use Case**: Visual, zero-code data cleaning, statistical data profiling, PII masking, and data normalization for analysts and data scientists.
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[glue]]` | `[[glue-studio]]` | `[[data-validation-and-profiling]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/glue/glue|glue]]` | `[[en/02-services/analytics-streaming/glue/glue-studio|glue-studio]]` | `[[en/03-concepts/data-validation-and-profiling|data-validation-and-profiling]]`
 
 ---
 
@@ -142,7 +142,7 @@ DataBrew provides 250+ built-in operations that solve common data wrangling task
 ---
 
 ## 📌 Related Notes
-- `[[glue]]` — AWS Glue Architecture Overview
-- `[[glue-studio]]` — Glue Studio Visual DAG Authoring
-- `[[glue-etl-jobs]]` — Code-based Spark Transformations
-- `[[data-validation-and-profiling]]` — Concept: Data Profiling vs. Validation
+- `[[en/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Architecture Overview
+- `[[en/02-services/analytics-streaming/glue/glue-studio|glue-studio]]` — Glue Studio Visual DAG Authoring
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Code-based Spark Transformations
+- `[[en/03-concepts/data-validation-and-profiling|data-validation-and-profiling]]` — Concept: Data Profiling vs. Validation

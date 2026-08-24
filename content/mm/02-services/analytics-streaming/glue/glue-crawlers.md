@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-crawlers) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case / အဓိက အသုံးပြုမှု**: Schema များကို အလိုအလျောက် ရှာဖွေဖော်ထုတ်ခြင်း (Automatic schema inference)၊ Partition ခွဲခြားသတ်မှတ်ခြင်း (partition detection)၊ Schema ပြောင်းလဲမှုများကို ကိုင်တွယ်ခြင်း (schema drift handling) နှင့် Glue Data Catalog အတွင်းသို့ metadata များကို အလိုအလျောက် ဖြည့်သွင်းခြင်း။
 - **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-data-catalog]]` | `[[athena]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/glue/glue|glue]]` | `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]`
 
 ---
 
@@ -26,7 +26,7 @@ date: 2026-08-17
 
 **AWS Glue Crawlers** များသည် Amazon S3, Amazon RDS, Amazon Aurora, Amazon DynamoDB, Amazon DocumentDB, Amazon Redshift နှင့် အခြား ပြင်ပ JDBC databases များတွင် သိမ်းဆည်းထားသော ဒေတာများကို အလိုအလျောက် စစ်ဆေးရှာဖွေပေးသည့် discovery agents များ ဖြစ်ကြသည်။
 
-Crawler တစ်ခုသည် data store ထဲမှ sample file များကို ဖတ်ရှုပြီး ဒေတာ format နှင့် schema (column အမည်များနှင့် data types များ) ကို infer လုပ်ကာ၊ Hive-compatible partition hierarchies များကို ခွဲခြားသတ်မှတ်ပြီး **[[glue-data-catalog]]** ထဲတွင် metadata table များကို အသစ်ဖန်တီးခြင်း သို့မဟုတ် update ပြုလုပ်ပေးခြင်းတို့ကို ဆောင်ရွက်သည်။
+Crawler တစ်ခုသည် data store ထဲမှ sample file များကို ဖတ်ရှုပြီး ဒေတာ format နှင့် schema (column အမည်များနှင့် data types များ) ကို infer လုပ်ကာ၊ Hive-compatible partition hierarchies များကို ခွဲခြားသတ်မှတ်ပြီး **[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]** ထဲတွင် metadata table များကို အသစ်ဖန်တီးခြင်း သို့မဟုတ် update ပြုလုပ်ပေးခြင်းတို့ကို ဆောင်ရွက်သည်။
 
 ```mermaid
 graph TD
@@ -204,7 +204,7 @@ Multi-terabyte ပမာဏရှိသော data lake တစ်ခုလုံ
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[glue]]` — AWS Glue Overview
-- `[[glue-data-catalog]]` — Glue Data Catalog Metastore
-- `[[athena]]` — Querying Crawler-Generated Tables
-- `[[data-modeling-and-partitioning]]` — S3 Partition Strategies
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Overview
+- `[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]` — Glue Data Catalog Metastore
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Querying Crawler-Generated Tables
+- `[[mm/03-concepts/data-modeling-and-partitioning|data-modeling-and-partitioning]]` — S3 Partition Strategies

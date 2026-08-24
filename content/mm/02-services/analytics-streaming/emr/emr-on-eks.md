@@ -20,7 +20,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/emr/emr-on-eks) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Microservices များနှင့် compute infrastructure များကို မျှဝေသုံးစွဲရန်နှင့် လျင်မြန်သော pod-level autoscaling ရရှိစေရန် Amazon EKS Kubernetes clusters များအတွင်း Apache Spark application များကို run ရန်။
 - **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[emr]]` | `[[ecr-ecs-eks]]` | `[[domain-1-ingestion-and-processing]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/analytics-streaming/emr/emr|emr]]` | `[[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]]` | `[[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]`
 
 ---
 
@@ -98,7 +98,7 @@ graph TD
 
 ### 4. Amazon ECR မှတစ်ဆင့် Custom Container Image များကို အသုံးပြုခြင်း
 - Data engineer များသည် custom Spark application များ၊ Python virtual environment များ၊ compiled C++ extension များနှင့် custom JAR များကို standard Docker container image များအတွင်း ထည့်သွင်း package ပြုလုပ်နိုင်ပါသည်။
-- Image များကို **[[ecr-ecs-eks|Amazon ECR]]** သို့ publish ပြုလုပ်ပြီး job submission payload ထဲတွင် ရည်ညွှန်းအသုံးပြုနိုင်ပါသည်။
+- Image များကို **[[mm/02-services/compute-containers/ecr-ecs-eks|Amazon ECR]]** သို့ publish ပြုလုပ်ပြီး job submission payload ထဲတွင် ရည်ညွှန်းအသုံးပြုနိုင်ပါသည်။
 
 ---
 
@@ -129,7 +129,7 @@ graph TD
 ---
 
 ## 📌 ဆက်စပ် မှတ်စုများ (Related Notes)
-- `[[emr]]` — Amazon EMR Overview Hub
-- `[[emr-serverless]]` — Serverless Big Data Compute
-- `[[emr-cluster-architecture]]` — Provisioned EMR on EC2 Clusters
-- `[[ecr-ecs-eks]]` — Amazon ECR, ECS & EKS Architecture
+- `[[mm/02-services/analytics-streaming/emr/emr|emr]]` — Amazon EMR Overview Hub
+- `[[mm/02-services/analytics-streaming/emr/emr-serverless|emr-serverless]]` — Serverless Big Data Compute
+- `[[mm/02-services/analytics-streaming/emr/emr-cluster-architecture|emr-cluster-architecture]]` — Provisioned EMR on EC2 Clusters
+- `[[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]]` — Amazon ECR, ECS & EKS Architecture

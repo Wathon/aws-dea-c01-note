@@ -17,7 +17,7 @@ date: 2026-08-07
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-tables)
 - **Primary Use Case**: Managed Apache Iceberg Tables, Automated Data Lake Maintenance, High-Throughput ACID Transactions
 - **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[athena]] | [[lake-formation]] | [[glue]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/02-services/storage/s3/s3|s3]] | [[en/02-services/analytics-streaming/athena/athena|athena]] | [[en/02-services/security-governance/lake-formation|lake-formation]] | [[en/02-services/analytics-streaming/glue/glue|glue]]
 
 ---
 
@@ -84,7 +84,7 @@ In standard S3 buckets, Apache Iceberg tables accumulate millions of small data 
 ### 2. High-Concurrency ACID Transactions & Performance
 
 - **10x Higher Transactions per Second (TPS)**: Optimizes metadata locks and commit operations, supporting thousands of concurrent writes/updates without commit conflict failures.
-- **Up to 3x Faster Query Performance**: Built-in metadata indexing and automated layout optimization accelerate query planning in engines like [[athena]], [[redshift]], and [[emr]] Spark.
+- **Up to 3x Faster Query Performance**: Built-in metadata indexing and automated layout optimization accelerate query planning in engines like [[en/02-services/analytics-streaming/athena/athena|athena]], [[en/02-services/database/redshift|redshift]], and [[en/02-services/analytics-streaming/emr/emr|emr]] Spark.
 
 ### 3. Integrated Governance with AWS Lake Formation
 
@@ -149,10 +149,10 @@ graph TD
 
 Amazon S3 Tables seamlessly integrates with both AWS native services and open-source analytical tools via standard Apache Iceberg REST catalog interfaces:
 
-- **[[athena]]**: Query S3 Tables directly using standard ANSI SQL (`SELECT`, `INSERT`, `UPDATE`, `MERGE INTO`).
+- **[[en/02-services/analytics-streaming/athena/athena|athena]]**: Query S3 Tables directly using standard ANSI SQL (`SELECT`, `INSERT`, `UPDATE`, `MERGE INTO`).
 - **AWS Glue Data Catalog**: S3 Tables automatically register their schemas in the AWS Glue Data Catalog.
-- **[[redshift]]**: Query S3 Tables using Redshift Spectrum or Serverless zero-copy integration.
-- **[[emr]] & Apache Spark**: Read and write Iceberg tables using `pyspark` or Spark SQL with native pushdown optimizations.
+- **[[en/02-services/database/redshift|redshift]]**: Query S3 Tables using Redshift Spectrum or Serverless zero-copy integration.
+- **[[en/02-services/analytics-streaming/emr/emr|emr]] & Apache Spark**: Read and write Iceberg tables using `pyspark` or Spark SQL with native pushdown optimizations.
 - **Third-Party Engines**: Snowflake, Starburst/Trino, Databricks via standard Apache Iceberg endpoints.
 
 ---
@@ -174,8 +174,8 @@ Amazon S3 Tables seamlessly integrates with both AWS native services and open-so
 
 ## 📌 Related Notes
 
-- [[s3]] — Amazon S3 Overview & Storage Classes
-- [[s3-performance]] — S3 Request Limits & Compaction Techniques
-- [[athena]] — Querying Iceberg & S3 Data Lakes
-- [[glue]] — Glue Data Catalog & ETL Compaction
-- [[lake-formation]] — Fine-Grained Governance for Data Lakes
+- [[en/02-services/storage/s3/s3|s3]] — Amazon S3 Overview & Storage Classes
+- [[en/02-services/storage/s3/s3-performance|s3-performance]] — S3 Request Limits & Compaction Techniques
+- [[en/02-services/analytics-streaming/athena/athena|athena]] — Querying Iceberg & S3 Data Lakes
+- [[en/02-services/analytics-streaming/glue/glue|glue]] — Glue Data Catalog & ETL Compaction
+- [[en/02-services/security-governance/lake-formation|lake-formation]] — Fine-Grained Governance for Data Lakes

@@ -22,7 +22,7 @@ date: 2026-08-14
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/ecr-ecs-eks) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Container image များကို Amazon ECR တွင် သိမ်းဆည်းခြင်း၊ containerized microservices များနှင့် data processing များကို Amazon ECS (EC2/Fargate) တွင် run ခြင်းနှင့် distributed big data engines (အထူးသဖြင့် **Amazon EMR on EKS**) များကို managed Kubernetes တွင် run ခြင်း။
 - **Slide Reference**: Pages 313–330 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/compute-containers/batch|batch]] | [[mm/02-services/compute-containers/lambda|lambda]] | [[mm/02-services/analytics-streaming/emr/emr|emr]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/analytics-streaming/glue/glue|glue]] | [[mm/02-services/integration/step-functions/step-functions|step-functions]]
+- **Hub Links**: [[mm/index|index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/compute-containers/batch|batch]] | [[mm/02-services/compute-containers/lambda|lambda]] | [[mm/02-services/analytics-streaming/emr/emr|emr]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/analytics-streaming/glue/glue|glue]] | [[mm/02-services/integration/step-functions/step-functions|step-functions]]
 
 ---
 

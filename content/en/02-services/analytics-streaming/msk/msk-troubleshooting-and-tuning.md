@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk-troubleshooting-and-tuning)
 - **Primary Use Case**: Diagnosing broker disk full failures, resolving producer `TimeoutException`, eliminating consumer rebalance storms, tuning producer batching, and rebalancing partition skew.
 - **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[msk]]` | `[[msk-cluster-architecture]]` | `[[msk-security-and-monitoring]]` | `[[kinesis-troubleshooting-and-tuning]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/msk/msk|msk]]` | `[[en/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` | `[[en/02-services/analytics-streaming/msk/msk-security-and-monitoring|msk-security-and-monitoring]]` | `[[en/02-services/analytics-streaming/kinesis/kinesis-troubleshooting-and-tuning|kinesis-troubleshooting-and-tuning]]`
 
 ---
 
@@ -168,7 +168,7 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes
-- `[[msk]]` — Amazon MSK Master Hub
-- `[[msk-cluster-architecture]]` — Broker Topologies & Tiered Storage
-- `[[msk-security-and-monitoring]]` — CloudWatch Metrics & `SumOffsetLag`
-- `[[kinesis-troubleshooting-and-tuning]]` — Kinesis Data Streams Troubleshooting Comparison
+- `[[en/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Master Hub
+- `[[en/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — Broker Topologies & Tiered Storage
+- `[[en/02-services/analytics-streaming/msk/msk-security-and-monitoring|msk-security-and-monitoring]]` — CloudWatch Metrics & `SumOffsetLag`
+- `[[en/02-services/analytics-streaming/kinesis/kinesis-troubleshooting-and-tuning|kinesis-troubleshooting-and-tuning]]` — Kinesis Data Streams Troubleshooting Comparison

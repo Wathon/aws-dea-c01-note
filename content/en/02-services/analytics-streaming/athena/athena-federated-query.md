@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-federated-query)
 - **Primary Use Case**: Querying data in-place across non-S3 data stores (DynamoDB, RDS, CloudWatch, Redshift, DocumentDB) using standard SQL without moving data to S3.
 - **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[index]]` | `[[athena]]` | `[[dynamodb]]` | `[[lambda]]` | `[[domain-1-ingestion-and-processing]]`
+- **Hub Links**: `[[en/index|index]]` | `[[en/02-services/analytics-streaming/athena/athena|athena]]` | `[[en/02-services/database/dynamodb|dynamodb]]` | `[[en/02-services/compute-containers/lambda|lambda]]` | `[[en/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]]`
 
 ---
 
@@ -128,7 +128,7 @@ WHERE s3_orders.year = '2026'
 ---
 
 ## 📌 Related Notes
-- `[[athena]]` — Amazon Athena Architecture Overview
-- `[[dynamodb]]` — Amazon DynamoDB Ingestion & Analytics
-- `[[lambda]]` — Serverless Compute with AWS Lambda
-- `[[glue-etl-jobs]]` — When to use full Glue ETL vs. Federated Query
+- `[[en/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Architecture Overview
+- `[[en/02-services/database/dynamodb|dynamodb]]` — Amazon DynamoDB Ingestion & Analytics
+- `[[en/02-services/compute-containers/lambda|lambda]]` — Serverless Compute with AWS Lambda
+- `[[en/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — When to use full Glue ETL vs. Federated Query

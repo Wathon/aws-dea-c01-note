@@ -14,7 +14,7 @@ date: 2026-07-28
 - **Category**: Developer Tools
 - **Primary Use Case**: Infrastructure as Code (IaC), automated deployment of data pipelines, reproducible stack creation.
 - **Slide Reference**: Pages 742–755 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
-- **Hub Links**: [[index]] | [[service-catalog]] | [[domain-3-data-operations-and-support]]
+- **Hub Links**: [[en/index|index]] | [[en/00-hub/service-catalog|service-catalog]] | [[en/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]
 
 ---
 
@@ -42,5 +42,5 @@ Deploying production data engineering pipelines requires Infrastructure as Code 
 ---
 
 ## 📌 Related Notes
-- [[lambda]] — SAM deployment target
-- [[step-functions]] — CDK workflow deployment
+- [[en/02-services/compute-containers/lambda|lambda]] — SAM deployment target
+- [[en/02-services/integration/step-functions/step-functions|step-functions]] — CDK workflow deployment

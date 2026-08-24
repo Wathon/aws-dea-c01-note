@@ -21,7 +21,7 @@ date: 2026-08-21
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sqs/sqs-security-monitoring-and-troubleshooting) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Access Policies နှင့် KMS encryption ဖြင့် queue များကို လုံခြုံအောင် ပြုလုပ်ခြင်း၊ CloudWatch ဖြင့် backlog depth နှင့် message age ကို စောင့်ကြည့်ခြင်း၊ Backlog per Worker မှတစ်ဆင့် worker fleets များကို auto scale ပြုလုပ်ခြင်းနှင့် production failures များကို ဖြေရှင်းခြင်း (troubleshooting)။
 - **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
-- **Hub Links**: `[[mm/index]]` | `[[sqs]]` | `[[sqs-timing-parameters-and-polling]]` | `[[sqs-dead-letter-queues-and-error-handling]]` | `[[domain-3-data-operations-and-support]]`
+- **Hub Links**: `[[mm/index|index]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` | `[[mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` | `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]`
 
 ---
 
@@ -168,8 +168,8 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[sqs]]` — SQS Master Hub
-- `[[sqs-standard-vs-fifo-queues]]` — Standard vs FIFO Architecture
-- `[[sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Polling
-- `[[sqs-dead-letter-queues-and-error-handling]]` — DLQ Configuration & Redrive
-- `[[domain-3-data-operations-and-support]]` — CloudWatch & Operational Excellence
+- `[[mm/02-services/integration/sqs/sqs|sqs]]` — SQS Master Hub
+- `[[mm/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` — Standard vs FIFO Architecture
+- `[[mm/02-services/integration/sqs/sqs-timing-parameters-and-polling|sqs-timing-parameters-and-polling]]` — Visibility Timeouts & Polling
+- `[[mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling|sqs-dead-letter-queues-and-error-handling]]` — DLQ Configuration & Redrive
+- `[[mm/01-domains/domain-3-data-operations-and-support|domain-3-data-operations-and-support]]` — CloudWatch & Operational Excellence
