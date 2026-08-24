@@ -17,7 +17,7 @@ date: 2026-08-09
 - **Category**: Storage (Block Storage)
 - **Language / ဘာသာစကား**: [English Version](/en/02-services/storage/ebs-and-instance-store) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: EC2 compute instance များအတွက် Block-level storage၊ big data processing လုပ်ဆောင်ရန်အတွက် high-throughput ရှိသော ကြားခံ scratch storage၊ database များအတွက် persistent volume များနှင့် streaming broker storage အဖြစ် အသုံးပြုပါသည်။
-- **Slide Reference**: Pages 139–154 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 139–154 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[s3]] | [[efs-and-fsx]]
 
 ---

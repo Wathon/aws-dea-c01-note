@@ -90,6 +90,6 @@ date: 2026-07-28
 ---
 
 ## 📌 Checklist for Domain 1
-- [ ] [[AWSCertifiedDataEngineerSlides.pdf]] ရှိ slide စာမျက်နှာများဖြစ်သော 266-312 (Migration & Compute) နှင့် 331-459 (Analytics & Streaming) ကို ပြန်လည်လေ့လာရန်
+- [ ] [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf) ရှိ slide စာမျက်နှာများဖြစ်သော 266-312 (Migration & Compute) နှင့် 331-459 (Analytics & Streaming) ကို ပြန်လည်လေ့လာရန်
 - [ ] Service notes များကို အပြီးသတ်လေ့လာရန်: [[glue]], [[kinesis]], [[lambda]], [[step-functions]], [[mwaa-airflow]]
 - [ ] Data formats များကို ပြန်လည်သုံးသပ်ရန်: [[data-formats-and-compression]]

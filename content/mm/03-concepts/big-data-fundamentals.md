@@ -15,7 +15,7 @@ date: 2026-08-15
 
 - **Category**: Fundamentals (ဒေတာ အင်ဂျင်နီယာ အခြေခံသဘောတရားများ)
 - **Language / ဘာသာစကား**: [English Version](/en/03-concepts/big-data-fundamentals) | **မြန်မာဘာသာ (Burmese)**
-- **Slide Reference**: Pages 12–37 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 12–37 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-2-data-store-management]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
 
 ---

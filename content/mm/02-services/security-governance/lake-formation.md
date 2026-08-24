@@ -21,7 +21,7 @@ date: 2026-08-23
 - **Category**: Security, Identity, & Compliance / Data Lake Governance & Authorization
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/lake-formation) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Centralized data lake security management, fine-grained access control (column-level, row-level, နှင့် cell-level filtering), Lake Formation Tag-Based Access Control (LF-TBAC), နှင့် AWS RAM မှတစ်ဆင့် cross-account data sharing ပြုလုပ်ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 360–364 & 576–589
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 360–364 & 576–589
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[iam]]` | `[[glue]]` | `[[athena]]` | `[[redshift]]`
 
 ---
@@ -228,8 +228,8 @@ Lake Formation သည် **physical S3 file များကို replicate လ�
 ---
 
 ## 📌 Related Notes
-- `[[mm/iam]]` — IAM Service Roles & Policy Evaluation Logic
-- `[[mm/glue]]` — AWS Glue Data Catalog & Crawler Metadata
-- `[[mm/athena]]` — Amazon Athena Query Engine & Lake Formation Integration
-- `[[mm/redshift]]` — Amazon Redshift Spectrum External Tables
-- `[[mm/domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide
+- `[[mm/02-services/security-governance/iam|iam]]` — IAM Service Roles & Policy Evaluation Logic
+- `[[mm/02-services/analytics-streaming/glue/glue|glue]]` — AWS Glue Data Catalog & Crawler Metadata
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Query Engine & Lake Formation Integration
+- `[[mm/02-services/database/redshift|redshift]]` — Amazon Redshift Spectrum External Tables
+- `[[mm/01-domains/domain-4-data-security-and-governance|domain-4-data-security-and-governance]]` — DEA-C01 Domain 4 Study Guide

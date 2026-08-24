@@ -14,7 +14,7 @@ date: 2026-08-17
 - **Category**: Analytics / Data Pipelines
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue)
 - **Primary Use Case**: Serverless ETL, Centralized Metadata Management, Automated Schema Discovery, Data Quality Governance, Visual & Code-based Data Preparation.
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]`
 
 ---

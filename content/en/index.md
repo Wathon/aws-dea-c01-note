@@ -79,7 +79,7 @@ date: 2026-08-15
 
 #### 📊 Analytics & Data Pipelines
 
-- [[glue/glue|AWS Glue Overview]] — Serverless Data Integration & ETL
+- [[glue|AWS Glue Overview]] — Serverless Data Integration & ETL
 - [[glue-data-catalog]] — Glue Data Catalog & Metastore
 - [[glue-crawlers]] — Glue Crawlers & Schema Inference
 - [[glue-etl-jobs]] — Glue ETL Jobs, DynamicFrames & Bookmarks

@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Storage Optimization & Lifecycle Automation
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/opensearch/opensearch-storage-tiers-and-ism)
 - **Primary Use Case**: Cost-effective log retention across Hot, UltraWarm, and Cold storage tiers, automated index rollovers, and defining Index State Management (ISM) lifecycle policies.
-- **Slide Reference**: Pages 460–478 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[opensearch]]` | `[[opensearch-cluster-architecture]]` | `[[s3]]`
 
 ---

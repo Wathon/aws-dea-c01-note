@@ -77,5 +77,5 @@ date: 2026-07-28
 ---
 
 ## 📌 Checklist for Domain 4
-- [ ] Review slide pages: 542-589 (Security) and 590-617 (Networking) in [[AWSCertifiedDataEngineerSlides.pdf]]
+- [ ] Review slide pages: 542-589 (Security) and 590-617 (Networking) in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - [ ] Complete service notes: [[lake-formation]], [[iam]], [[kms-and-secrets]], [[macie-and-cloudtrail]], [[vpc-and-networking]], [[aws-backup]]

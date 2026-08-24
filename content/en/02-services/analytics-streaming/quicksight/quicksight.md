@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Cloud Business Intelligence & Interactive Reporting
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/quicksight/quicksight)
 - **Primary Use Case**: Serverless business intelligence, sub-second interactive dashboards, SPICE in-memory calculation engine, ML-powered anomaly detection, paginated executive reports, and embedded analytics.
-- **Slide Reference**: Pages 479–498 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-3-data-operations-and-support]]` | `[[athena]]` | `[[redshift]]`
 
 ---

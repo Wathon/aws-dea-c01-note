@@ -21,8 +21,8 @@ date: 2026-08-14
 - **Category**: Compute & Containers (Container Registry, Serverless Containers & Kubernetes Orchestration)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/ecr-ecs-eks) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Container image များကို Amazon ECR တွင် သိမ်းဆည်းခြင်း၊ containerized microservices များနှင့် data processing များကို Amazon ECS (EC2/Fargate) တွင် run ခြင်းနှင့် distributed big data engines (အထူးသဖြင့် **Amazon EMR on EKS**) များကို managed Kubernetes တွင် run ခြင်း။
-- **Slide Reference**: Pages 313–330 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-1-ingestion-and-processing]] | [[mm/batch]] | [[mm/lambda]] | [[mm/emr]] | [[mm/efs-and-fsx]] | [[mm/s3]] | [[mm/glue]] | [[mm/step-functions]]
+- **Slide Reference**: Pages 313–330 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
+- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/compute-containers/batch|batch]] | [[mm/02-services/compute-containers/lambda|lambda]] | [[mm/02-services/analytics-streaming/emr/emr|emr]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/analytics-streaming/glue/glue|glue]] | [[mm/02-services/integration/step-functions/step-functions|step-functions]]
 
 ---
 
@@ -31,7 +31,7 @@ date: 2026-08-14
 Containers များသည် application code, runtime environments, system libraries များနှင့် configurations များကို standard ဖြစ်၊ isolated ဖြစ်ပြီး immutable ဖြစ်သော unit များအဖြစ် ပေါင်းစည်းပေးပြီး development, testing နှင့် cloud production environment များအကြားတွင် ယုံကြည်စိတ်ချစွာ run နိုင်စေပါသည်။
 
 ခေတ်သစ် AWS data engineering architectures များတွင်-
-1. **Amazon Elastic Container Registry (Amazon ECR)**: Secure ဖြစ်ပြီး scalable ဖြစ်သော private Docker နှင့် OCI-compliant registry ဖြစ်ပြီး custom ETL container images များ၊ machine learning model scoring containers များနှင့် [[mm/batch]] job definitions များကို သိမ်းဆည်းပေးသည်။
+1. **Amazon Elastic Container Registry (Amazon ECR)**: Secure ဖြစ်ပြီး scalable ဖြစ်သော private Docker နှင့် OCI-compliant registry ဖြစ်ပြီး custom ETL container images များ၊ machine learning model scoring containers များနှင့် [[mm/02-services/compute-containers/batch|batch]] job definitions များကို သိမ်းဆည်းပေးသည်။
 2. **Amazon Elastic Container Service (Amazon ECS)**: AWS-native ဖြစ်သော၊ သတ်မှတ်ချက်အတိအကျရှိသော (opinionated) container orchestration platform ဖြစ်ပြီး traditional **Amazon EC2 Launch Types** နှင့် serverless **AWS Fargate** compute နှစ်ခုလုံးကို အထောက်အပံ့ပေးသည်။
 3. **Amazon Elastic Kubernetes Service (Amazon EKS)**: Managed Kubernetes platform ဖြစ်ပြီး enterprise များအား distributed big data analytics engines များ—အထူးသဖြင့် **Amazon EMR on EKS** (Apache Spark)—ကို operational microservices များနှင့်အတူ shared compute cluster တစ်ခုတည်းပေါ်တွင် run နိုင်စေသည်။
 4. **AWS Fargate**: Amazon ECS နှင့် Amazon EKS နှစ်ခုလုံးအတွက် serverless compute engine ဖြစ်ပြီး virtual machine cluster များကို provision လုပ်ခြင်း၊ configure လုပ်ခြင်း၊ patch လုပ်ခြင်း သို့မဟုတ် scale လုပ်ခြင်းများ ပြုလုပ်ရန်မလိုအောင် ဖယ်ရှားပေးသည်။
@@ -541,7 +541,7 @@ graph TB
 2. **Dynamic Pod Lifecycle**: EMR သည် job စတင်သောအခါ Spark driver နှင့် executor pods များကို dynamically provision လုပ်ပေးပြီး job ပြီးဆုံးသည်နှင့် ၎င်းတို့ကို ချက်ချင်း terminate လုပ်ပေးသည်။
 3. **Up to 3x Faster**: စွမ်းဆောင်ရည် အကောင်းဆုံးဖြစ်အောင် ပြင်ဆင်ထားသော **EMR runtime for Apache Spark** ကို အသုံးပြုသည် (open-source Spark on Kubernetes ထက် ၃ ဆအထိ ပိုမြန်ပြီး ကုန်ကျစရိတ် ၆၈% ပိုသက်သာသည်)။
 4. **Per-Job Isolation**: မတူညီသောအဖွဲ့များသည် မတူညီသော Spark versions များနှင့် custom Docker container images များကို သီးခြား IAM execution roles များဖြင့် cluster တစ်ခုတည်းပေါ်တွင် run နိုင်ကြသည်။
-5. **Native Integration**: [[mm/glue]] Data Catalog များနှင့် data governance အတွက် [[mm/lake-formation]] တို့နှင့် ချောမွေ့စွာ ချိတ်ဆက်ပေးသည်။
+5. **Native Integration**: [[mm/02-services/analytics-streaming/glue/glue|glue]] Data Catalog များနှင့် data governance အတွက် [[mm/02-services/security-governance/lake-formation|lake-formation]] တို့နှင့် ချောမွေ့စွာ ချိတ်ဆက်ပေးသည်။
 
 ---
 
@@ -551,8 +551,8 @@ graph TB
 graph TD
     ContainerNeeds{What is the Container Workload?}
 
-    ContainerNeeds -->|"Short event-driven snippet (< 15 mins)"| Lambda["[[mm/lambda]] (AWS Lambda Container Image)"]
-    ContainerNeeds -->|"Long-running container batch / Array jobs / Spot"| Batch["[[mm/batch]] (AWS Batch on ECS / EKS)"]
+    ContainerNeeds -->|"Short event-driven snippet (< 15 mins)"| Lambda["[[mm/02-services/compute-containers/lambda|lambda]] (AWS Lambda Container Image)"]
+    ContainerNeeds -->|"Long-running container batch / Array jobs / Spot"| Batch["[[mm/02-services/compute-containers/batch|batch]] (AWS Batch on ECS / EKS)"]
     ContainerNeeds -->|"AWS-native microservices / serverless containers"| ECS["Amazon ECS (AWS Fargate)"]
     ContainerNeeds -->|"Distributed Spark Big Data on Kubernetes"| EMREKS["Amazon EMR on EKS"]
     ContainerNeeds -->|"Fully managed Web App / API from ECR (No orchestrator config)"| AppRunner["AWS App Runner"]
@@ -670,12 +670,12 @@ graph LR
 
 ## 📌 Related Notes (ဆက်စပ် မှတ်စုများ)
 
-- [[mm/batch]] — Managed containerized batch compute နှင့် Spot optimization အတွက် AWS Batch
-- [[mm/lambda]] — Serverless micro-batch processing နှင့် container image packaging အတွက် AWS Lambda
-- [[mm/emr]] — Amazon EMR distributed analytics နှင့် EMR on EKS architecture
-- [[mm/efs-and-fsx]] — Containers များနှင့် Amazon EFS shared storage ပေါင်းစပ်မှု
-- [[mm/s3]] — Containerized ETL pipelines များအတွက် Amazon S3 Data Lake ပစ်မှတ်
-- [[mm/glue]] — AWS Glue serverless Spark ETL နှင့် Data Catalog ပေါင်းစပ်မှု
-- [[mm/step-functions]] — ECS/EKS containerized pipelines များကို Orchestrate လုပ်ခြင်း
-- [[mm/domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 လေ့လာမှုလမ်းညွှန်
-- [[mm/service-comparisons]] — Master DEA-C01 Service Decision ဇယား
+- [[mm/02-services/compute-containers/batch|batch]] — Managed containerized batch compute နှင့် Spot optimization အတွက် AWS Batch
+- [[mm/02-services/compute-containers/lambda|lambda]] — Serverless micro-batch processing နှင့် container image packaging အတွက် AWS Lambda
+- [[mm/02-services/analytics-streaming/emr/emr|emr]] — Amazon EMR distributed analytics နှင့် EMR on EKS architecture
+- [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] — Containers များနှင့် Amazon EFS shared storage ပေါင်းစပ်မှု
+- [[mm/02-services/storage/s3/s3|s3]] — Containerized ETL pipelines များအတွက် Amazon S3 Data Lake ပစ်မှတ်
+- [[mm/02-services/analytics-streaming/glue/glue|glue]] — AWS Glue serverless Spark ETL နှင့် Data Catalog ပေါင်းစပ်မှု
+- [[mm/02-services/integration/step-functions/step-functions|step-functions]] — ECS/EKS containerized pipelines များကို Orchestrate လုပ်ခြင်း
+- [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 လေ့လာမှုလမ်းညွှန်
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision ဇယား

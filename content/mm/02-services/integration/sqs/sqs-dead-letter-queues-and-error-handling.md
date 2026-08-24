@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Fault Tolerance, Error Handling & Message Redrive
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Process မလုပ်နိုင်သော poison pill message များကို သီးသန့်ခွဲထုတ်ခြင်း (quarantine/isolate လုပ်ခြင်း)၊ `RedrivePolicy` နှင့် `maxReceiveCount` configure ပြုလုပ်ခြင်း၊ အဆုံးမရှိ ထပ်ခါတလဲလဲ retry လုပ်နေသည့် loop များကို ကာကွယ်ခြင်း၊ နှင့် batch အလိုက် ပြန်လည် process လုပ်ရန် DLQ Redrive ကို run ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 499–525
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 499–525
 - **Hub Links**: `[[mm/index]]` | `[[sqs]]` | `[[sqs-standard-vs-fifo-queues]]` | `[[sqs-timing-parameters-and-polling]]` | `[[domain-3-data-operations-and-support]]`
 
 ---

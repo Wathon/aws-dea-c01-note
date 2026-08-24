@@ -17,7 +17,7 @@ date: 2026-08-07
 - **Category**: Tabular Object Storage & Data Lake Architecture
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-tables) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Managed Apache Iceberg Tables, Automated Data Lake Maintenance, High-Throughput ACID Transactions
-- **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[athena]] | [[lake-formation]] | [[glue]]
 
 ---

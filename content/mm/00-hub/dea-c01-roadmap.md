@@ -74,7 +74,7 @@ gantt
 ### Week 4: Scenarios, Optimization & Exam Practice
 - Cross-service decision matrix ကို ပြန်လည်သုံးသပ်ခြင်း: [[service-comparisons]]
 - စာမေးပွဲတွင် မကြာခဏတွေ့ရတတ်သော High-frequency exam traps & keywords များ: [[high-frequency-exam-patterns]]
-- Slide Exam Tips များကို ပြန်လည်သုံးသပ်ခြင်း: [[AWSCertifiedDataEngineerSlides.pdf]]
+- Slide Exam Tips များကို ပြန်လည်သုံးသပ်ခြင်း: [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 
 ---
 

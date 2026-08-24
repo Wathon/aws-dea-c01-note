@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Distributed Patterns & Streaming Service Comparison
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sqs/sqs-integration-patterns-and-fanout)
 - **Primary Use Case**: Implementing the SNS+SQS Fan-Out architecture, buffering bursty S3 event notifications, handling large payloads with the SQS Extended Client Library, and comparing SQS with Kinesis and MSK.
-- **Slide Reference**: Pages 499–525 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[sqs]]` | `[[sqs-standard-vs-fifo-queues]]` | `[[s3-event-notifications]]` | `[[kinesis]]` | `[[msk]]`
 
 ---

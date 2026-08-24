@@ -17,7 +17,7 @@ date: 2026-08-14
 - **Category**: Migration & Transfer (Discovery, Assessment, Dependency Mapping & Automated Server Rehosting)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/migration/application-discovery-and-mgn)
 - **Primary Use Case**: Planning enterprise cloud migrations by discovering on-premises server infrastructure, mapping dependencies, and executing automated lift-and-shift (rehost) server migrations with continuous block-level replication.
-- **Slide Reference**: Pages 267–268 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 267–268 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[dms-and-sct]] | [[datasync-and-snow]] | [[data-exchange]] | [[transfer-family]]
 
 ---

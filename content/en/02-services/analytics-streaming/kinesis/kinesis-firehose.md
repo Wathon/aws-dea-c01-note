@@ -18,7 +18,7 @@ date: 2026-08-18
 - **Category**: Analytics / Managed Streaming Delivery & ETL
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis-firehose)
 - **Primary Use Case**: Serverless, zero-maintenance streaming ingestion to S3 data lakes, Redshift, and OpenSearch with native Parquet conversion and dynamic S3 partitioning.
-- **Slide Reference**: Pages 436–450 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 436–450 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[s3]]` | `[[glue-data-catalog]]` | `[[athena]]`
 
 ---

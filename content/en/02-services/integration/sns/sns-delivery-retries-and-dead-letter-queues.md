@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Reliable Delivery, Retries & Subscription-Level DLQ
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sns/sns-delivery-retries-and-dead-letter-queues)
 - **Primary Use Case**: Configuring delivery retry policies for failing subscriber endpoints, attaching Amazon SQS Dead-Letter Queues (DLQs) to SNS subscriptions, and preventing unrecoverable message drops.
-- **Slide Reference**: Pages 499–525 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[sns]]` | `[[sqs-dead-letter-queues-and-error-handling]]` | `[[domain-3-data-operations-and-support]]`
 
 ---

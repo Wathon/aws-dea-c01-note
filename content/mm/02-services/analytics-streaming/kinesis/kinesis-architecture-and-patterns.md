@@ -19,7 +19,7 @@ date: 2026-08-18
 - **Category**: Analytics / Streaming Architecture & System Design
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/kinesis/kinesis-architecture-and-patterns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: End-to-end streaming data pipelines များ ဒီဇိုင်းဆွဲခြင်း၊ record deduplication ပြုလုပ်ခြင်း၊ poison pill များကို isolate လုပ်ခြင်း၊ နှင့် KDS, Firehose, MSK, SQS တို့အကြား ရွေးချယ်အသုံးပြုခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 414–459
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 414–459
 - **Hub Links**: `[[mm/index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[kinesis-firehose]]` | `[[kinesis-apache-flink]]` | `[[msk]]`
 
 ---

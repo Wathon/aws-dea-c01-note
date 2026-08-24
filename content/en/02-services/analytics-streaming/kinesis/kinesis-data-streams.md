@@ -18,7 +18,7 @@ date: 2026-08-18
 - **Category**: Analytics / Real-Time Data Streaming & Ingestion
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis-data-streams)
 - **Primary Use Case**: Ingesting massive data streams with custom partition keys, sub-second latency, multi-consumer replay, and flexible capacity scaling.
-- **Slide Reference**: Pages 414–435 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 414–435 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[kinesis]]` | `[[kinesis-consumers-and-scaling]]` | `[[domain-1-ingestion-and-processing]]`
 
 ---

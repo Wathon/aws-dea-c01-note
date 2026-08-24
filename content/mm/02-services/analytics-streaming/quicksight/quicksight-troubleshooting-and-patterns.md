@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Category**: Analytics / Production Troubleshooting, Permissions & BI System Design
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/quicksight/quicksight-troubleshooting-and-patterns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: SPICE ingestion ကျရှုံးမှုများကို ဖြေရှင်းခြင်း၊ Amazon S3 နှင့် Athena IAM permission ငြင်းပယ်မှုများ (denials) ကို ရှာဖွေစစ်ဆေးခြင်း၊ VPC database timeout များကို ပြင်ဆင်ခြင်း၊ နှင့် QuickSight ကို အခြား analytical service များနှင့် နှိုင်းယှဉ်သုံးသပ်ခြင်း။
-- **Slide Reference**: Pages 479–498 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[quicksight]]` | `[[quicksight-spice-engine]]` | `[[athena]]` | `[[redshift]]`
 
 ---

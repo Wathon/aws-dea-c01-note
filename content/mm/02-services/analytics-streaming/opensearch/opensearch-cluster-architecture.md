@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Category**: Analytics / Search Engine Architecture & Infrastructure Design
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: ကြံ့ခိုင်မှုရှိသော multi-AZ OpenSearch cluster များကို ဒီဇိုင်းထုတ်ခြင်း၊ dedicated cluster manager node များကို ချိန်ညှိသတ်မှတ်ခြင်း၊ နှင့် AWS best practices များအရ primary နှင့် replica shard များကို အရွယ်အစားတွက်ချက်သတ်မှတ်ခြင်း (sizing)။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ စာမျက်နှာ 460–478
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ စာမျက်နှာ 460–478
 - **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[opensearch-storage-tiers-and-ism]]` | `[[opensearch-troubleshooting-and-tuning]]`
 
 ---

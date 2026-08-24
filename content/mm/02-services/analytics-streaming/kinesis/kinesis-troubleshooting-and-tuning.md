@@ -20,7 +20,7 @@ date: 2026-08-18
 - **Category**: Analytics / Production Troubleshooting, Performance Optimization & Resilience
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/kinesis/kinesis-troubleshooting-and-tuning) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Producer/consumer throttling များကို ရှာဖွေဖော်ထုတ်ခြင်း၊ consumer lag (`IteratorAgeMilliseconds`) ကို စုံစမ်းစစ်ဆေးခြင်း၊ KCL/DynamoDB lease performance ကို tune ပြုလုပ်ခြင်း နှင့် poison pill blocking ပြဿနာများကို ဖြေရှင်းခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 420–459
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 420–459
 - **Hub Links**: `[[mm/index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[kinesis-consumers-and-scaling]]` | `[[kinesis-security-and-monitoring]]`
 
 ---

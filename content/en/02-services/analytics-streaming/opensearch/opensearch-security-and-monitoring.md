@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Category**: Analytics / Governance, Identity & Cluster Observability
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/opensearch/opensearch-security-and-monitoring)
 - **Primary Use Case**: Configuring Fine-Grained Access Control (FGAC), implementing Document and Field-Level Security, securing OpenSearch Dashboards with Amazon Cognito, and monitoring critical cluster health metrics.
-- **Slide Reference**: Pages 460–478 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[opensearch]]` | `[[opensearch-cluster-architecture]]` | `[[opensearch-troubleshooting-and-tuning]]`
 
 ---

@@ -18,8 +18,8 @@ date: 2026-08-14
 - **Category**: Compute (Containerized Batch Processing & High-Performance Computing)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/batch) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အချိန်ကြာမြင့်စွာ run ရသော (> 15 min) batch computing job များ၊ Spark မဟုတ်သော data transformation များ၊ scientific simulation များ၊ ML data preprocessing နှင့် Dockerized image processing များကို managed EC2, Spot Instances, သို့မဟုတ် AWS Fargate တွင် run ရန်။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 311–312
-- **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-1-ingestion-and-processing]] | [[mm/lambda]] | [[mm/glue]] | [[mm/emr]] | [[mm/ecr-ecs-eks]] | [[mm/step-functions]]
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 311–312
+- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/compute-containers/lambda|lambda]] | [[mm/02-services/analytics-streaming/glue/glue|glue]] | [[mm/02-services/analytics-streaming/emr/emr|emr]] | [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] | [[mm/02-services/integration/step-functions/step-functions|step-functions]]
 
 ---
 
@@ -112,7 +112,7 @@ graph LR
 
 ### 1. Job Definitions
 Job များကို မည်သို့ execute လုပ်မည်ကို သတ်မှတ်ထားသော blueprint တစ်ခုဖြစ်သည်:
-- **Container Properties**: [[mm/ecr-ecs-eks]] (Amazon ECR) တွင် host လုပ်ထားသော Docker image URI, လိုအပ်သော vCPUs (ဥပမာ 4 vCPU), memory allocation (ဥပမာ 16 GB), command parameter များနှင့် environment variable များ။
+- **Container Properties**: [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] (Amazon ECR) တွင် host လုပ်ထားသော Docker image URI, လိုအပ်သော vCPUs (ဥပမာ 4 vCPU), memory allocation (ဥပမာ 16 GB), command parameter များနှင့် environment variable များ။
 - **IAM Roles**:
   - **Job Role**: Container application code ကို ပေးထားသော permission များ (ဥပမာ `s3:GetObject`, `s3:PutObject`, `dynamodb:UpdateItem`)။
   - **Execution Role**: Container agent မှ ECR မှ image များကို ဆွဲယူရန် (pull) နှင့် Amazon CloudWatch သို့ log များကို ပို့ရန် အသုံးပြုပါသည်။
@@ -169,13 +169,13 @@ AWS batch compute engine များအကြား ရွေးချယ်ခ
 graph TD
     WorkloadType{What is the Processing Workload?}
     
-    WorkloadType -->|"Light event-driven micro-batch (< 15 mins)"| LambdaChoice["[[mm/lambda]] (AWS Lambda)<br/>• Serverless, instant scaling, 15-min timeout"]
+    WorkloadType -->|"Light event-driven micro-batch (< 15 mins)"| LambdaChoice["[[mm/02-services/compute-containers/lambda|lambda]] (AWS Lambda)<br/>• Serverless, instant scaling, 15-min timeout"]
     
-    WorkloadType -->|"Distributed Tabular / Spark ETL (SQL/PySpark)"| GlueChoice["[[mm/glue]] (AWS Glue ETL)<br/>• Managed Apache Spark, Data Catalog integration, DynamicFrames"]
+    WorkloadType -->|"Distributed Tabular / Spark ETL (SQL/PySpark)"| GlueChoice["[[mm/02-services/analytics-streaming/glue/glue|glue]] (AWS Glue ETL)<br/>• Managed Apache Spark, Data Catalog integration, DynamicFrames"]
     
-    WorkloadType -->|"Custom Containers / Non-Spark Binaries / C++ / Python / Long Jobs"| BatchChoice["[[mm/batch]] (AWS Batch)<br/>• Any Docker image, Spot instances, HPC, > 15 mins"]
+    WorkloadType -->|"Custom Containers / Non-Spark Binaries / C++ / Python / Long Jobs"| BatchChoice["[[mm/02-services/compute-containers/batch|batch]] (AWS Batch)<br/>• Any Docker image, Spot instances, HPC, > 15 mins"]
     
-    WorkloadType -->|"Large-scale custom Hadoop / Spark / Presto / HBase clusters"| EMRChoice["[[mm/emr]] (Amazon EMR)<br/>• Dedicated clusters, custom open-source libraries, fine tuning"]
+    WorkloadType -->|"Large-scale custom Hadoop / Spark / Presto / HBase clusters"| EMRChoice["[[mm/02-services/analytics-streaming/emr/emr|emr]] (Amazon EMR)<br/>• Dedicated clusters, custom open-source libraries, fine tuning"]
 
     classDef dec fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
     classDef choice fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#fff;
@@ -238,10 +238,10 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[mm/lambda]] — ဆာဗာမဲ့ micro-batch processing အတွက် AWS Lambda (< 15 mins)
-- [[mm/glue]] — Distributed serverless Apache Spark ETL အတွက် AWS Glue
-- [[mm/emr]] — Petabyte-scale distributed big data cluster များအတွက် Amazon EMR
-- [[mm/ecr-ecs-eks]] — Amazon ECR container registry နှင့် ECS/EKS orchestration
-- [[mm/step-functions]] — AWS Batch ၏ အဆင့်များစွာပါဝင်သော data pipeline များကို စီမံခန့်ခွဲရန် (Orchestrating)
-- [[mm/domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[mm/service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/02-services/compute-containers/lambda|lambda]] — ဆာဗာမဲ့ micro-batch processing အတွက် AWS Lambda (< 15 mins)
+- [[mm/02-services/analytics-streaming/glue/glue|glue]] — Distributed serverless Apache Spark ETL အတွက် AWS Glue
+- [[mm/02-services/analytics-streaming/emr/emr|emr]] — Petabyte-scale distributed big data cluster များအတွက် Amazon EMR
+- [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] — Amazon ECR container registry နှင့် ECS/EKS orchestration
+- [[mm/02-services/integration/step-functions/step-functions|step-functions]] — AWS Batch ၏ အဆင့်များစွာပါဝင်သော data pipeline များကို စီမံခန့်ခွဲရန် (Orchestrating)
+- [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

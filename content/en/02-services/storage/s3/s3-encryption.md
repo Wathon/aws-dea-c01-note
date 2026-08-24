@@ -16,7 +16,7 @@ date: 2026-08-07
 - **Category**: Security & Storage Governance
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-encryption)
 - **Primary Use Case**: Data Protection at Rest & In Transit, Compliance, Fine-Grained Access Control
-- **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-performance]] | [[kms-and-secrets]]
 
 ---

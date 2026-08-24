@@ -18,8 +18,8 @@ date: 2026-08-07
 - **Category**: Storage Security & Data Protection
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-security) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Defense-in-Depth Security, Access Control, Regulatory Compliance, Data Immutability & Auditing
-- **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
-- **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/s3]] | [[mm/s3-encryption]] | [[mm/s3-access-points]] | [[mm/iam]] | [[mm/lake-formation]] | [[mm/macie-and-cloudtrail]]
+- **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
+- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/s3/s3-encryption|s3-encryption]] | [[mm/02-services/storage/s3/s3-access-points|s3-access-points]] | [[mm/02-services/security-governance/iam|iam]] | [[mm/02-services/security-governance/lake-formation|lake-formation]] | [[mm/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]]
 
 ---
 
@@ -92,7 +92,7 @@ S3 အသွားအလာများကို public internet မှတစ်
 
 ## 5. Pillar 3: Encryption & In-Transit Security
 
-အသေးစိတ်ကို [[mm/s3-encryption]] မှတ်စုတွင် ကြည့်ပါ။
+အသေးစိတ်ကို [[mm/02-services/storage/s3/s3-encryption|s3-encryption]] မှတ်စုတွင် ကြည့်ပါ။
 
 - **Encryption in Transit (HTTPS/TLS)**: Bucket policy မှတစ်ဆင့် မဖြစ်မနေ လိုက်နာရန် သတ်မှတ်ခြင်း:
   ```json
@@ -141,7 +141,7 @@ graph TD
 ### 2. AWS CloudTrail & S3 Server Access Logging
 
 - **CloudTrail Data Events**: စစ်ဆေးမှု (auditing) အတွက် API calls များ (`s3:GetObject`, `s3:PutObject`, `s3:DeleteObject`) ကို မှတ်တမ်းတင်ပေးသည်။
-- **S3 Server Access Logs**: [[mm/athena]] ဖြင့် ခွဲခြမ်းစိတ်ဖြာနိုင်ရန် အသေးစိတ် request မှတ်တမ်းများ (requester, bucket, time, response status) ကို target S3 bucket အတွင်းသို့ ပေးပို့သည်။
+- **S3 Server Access Logs**: [[mm/02-services/analytics-streaming/athena/athena|athena]] ဖြင့် ခွဲခြမ်းစိတ်ဖြာနိုင်ရန် အသေးစိတ် request မှတ်တမ်းများ (requester, bucket, time, response status) ကို target S3 bucket အတွင်းသို့ ပေးပို့သည်။
 
 ---
 
@@ -174,10 +174,10 @@ graph TD
 
 ## 📌 Related Notes
 
-- [[mm/s3]] — Main Amazon S3 Overview & Storage Classes
-- [[mm/s3-encryption]] — Deep-dive on SSE-S3, SSE-KMS, DSSE-KMS & SSE-C
-- [[mm/s3-access-points]] — VPC Access Points & S3 Object Lambda
-- [[mm/s3-performance]] — S3 Request Limits & Performance Optimization
-- [[mm/iam]] — IAM Roles, Policies & Service-Linked Roles
-- [[mm/lake-formation]] — Fine-Grained Column/Row Governance
-- [[mm/macie-and-cloudtrail]] — AWS Macie PII Scanning & CloudTrail Audit Logs
+- [[mm/02-services/storage/s3/s3|s3]] — Main Amazon S3 Overview & Storage Classes
+- [[mm/02-services/storage/s3/s3-encryption|s3-encryption]] — Deep-dive on SSE-S3, SSE-KMS, DSSE-KMS & SSE-C
+- [[mm/02-services/storage/s3/s3-access-points|s3-access-points]] — VPC Access Points & S3 Object Lambda
+- [[mm/02-services/storage/s3/s3-performance|s3-performance]] — S3 Request Limits & Performance Optimization
+- [[mm/02-services/security-governance/iam|iam]] — IAM Roles, Policies & Service-Linked Roles
+- [[mm/02-services/security-governance/lake-formation|lake-formation]] — Fine-Grained Column/Row Governance
+- [[mm/02-services/security-governance/macie-and-cloudtrail|macie-and-cloudtrail]] — AWS Macie PII Scanning & CloudTrail Audit Logs

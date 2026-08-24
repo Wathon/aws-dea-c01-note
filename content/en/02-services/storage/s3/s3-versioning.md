@@ -16,7 +16,7 @@ date: 2026-08-07
 - **Category**: Storage Protection & Data Governance
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-versioning)
 - **Primary Use Case**: Protection Against Accidental Overwrites & Deletions, Disaster Recovery, Prerequisite for S3 Replication & Object Lock
-- **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-security]] | [[s3-encryption]]
 
 ---

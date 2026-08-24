@@ -15,7 +15,7 @@ date: 2026-08-10
 
 - **Category**: Security, Governance & Storage Management
 - **Primary Use Case**: Centralized, automated, policy-driven backup management, disaster recovery, WORM compliance (**AWS Backup Vault Lock**), and cross-account / cross-Region data protection across AWS services.
-- **Slide Reference**: Pages 139–154, 410–430 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 139–154, 410–430 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-4-data-security-and-governance]] | [[domain-2-data-store-management]] | [[s3]] | [[ebs-and-instance-store]] | [[efs-and-fsx]]
 
 ---

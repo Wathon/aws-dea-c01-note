@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Topic Security Governance, Encryption & CloudWatch Monitoring
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sns/sns-security-access-policies-and-encryption)
 - **Primary Use Case**: Authorizing AWS services and cross-account publishers via Topic Access Policies, securing messages at rest with AWS KMS, routing via VPC PrivateLink, and monitoring delivery health.
-- **Slide Reference**: Pages 499–525 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[sns]]` | `[[sns-standard-vs-fifo-topics]]` | `[[sns-delivery-retries-and-dead-letter-queues]]` | `[[domain-3-data-operations-and-support]]`
 
 ---

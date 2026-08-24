@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Service Integration Patterns & Synchronous Polling
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/step-functions/step-functions-service-integrations-and-sync-patterns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: `.sync` integrations များကို အသုံးပြု၍ asynchronous big data jobs များ (AWS Glue, Amazon EMR, Amazon Athena, Amazon Redshift) ကို ညှိနှိုင်းချိတ်ဆက်ခြင်း (coordinating) နှင့် `.waitForTaskToken` ဖြင့် လူကိုယ်တိုင် အတည်ပြုချက်များ (human approvals) ကို စီမံကိုင်တွယ်ခြင်း။
-- **Slide Reference**: Pages 526–529 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[step-functions]]` | `[[step-functions-standard-vs-express-workflows]]` | `[[glue]]` | `[[emr]]` | `[[athena]]`
 
 ---

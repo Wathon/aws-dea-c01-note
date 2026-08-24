@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Cross-Source Zero-ETL Analytics
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-federated-query)
 - **Primary Use Case**: Querying data in-place across non-S3 data stores (DynamoDB, RDS, CloudWatch, Redshift, DocumentDB) using standard SQL without moving data to S3.
-- **Slide Reference**: Pages 365–382 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[athena]]` | `[[dynamodb]]` | `[[lambda]]` | `[[domain-1-ingestion-and-processing]]`
 
 ---

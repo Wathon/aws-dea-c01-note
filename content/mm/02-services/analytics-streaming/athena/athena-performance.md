@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Category**: Analytics / Performance Tuning & Cost Reduction
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-performance) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Columnar storage၊ compression၊ partition projection နှင့် query tuning တို့ကို အသုံးပြု၍ SQL query speed ကို အမြင့်ဆုံးမြှင့်တင်ရန်နှင့် Athena scan charges ($5/TB) ကို အနည်းဆုံးဖြစ်အောင် လျှော့ချရန်။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 365–382
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 365–382
 - **Hub Links**: `[[mm/index]]` | `[[athena]]` | `[[s3]]` | `[[domain-3-data-processing]]`
 
 ---

@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Visual No-Code Data Preparation & Profiling
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-databrew) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Analysts များနှင့် Data Scientists များအတွက် Visual၊ Zero-code Data Cleaning၊ Statistical Data Profiling၊ PII Masking နှင့် Data Normalization ပြုလုပ်ခြင်း။
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-studio]]` | `[[data-validation-and-profiling]]`
 
 ---

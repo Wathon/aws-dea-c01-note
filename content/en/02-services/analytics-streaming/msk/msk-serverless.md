@@ -17,7 +17,7 @@ date: 2026-08-19
 - **Category**: Analytics / Serverless Streaming Architecture
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk-serverless)
 - **Primary Use Case**: Running Apache Kafka workloads with zero infrastructure management, automatic scaling for variable traffic, and pay-for-throughput billing.
-- **Slide Reference**: Pages 450–459 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[msk]]` | `[[msk-cluster-architecture]]` | `[[kinesis-data-streams]]`
 
 ---

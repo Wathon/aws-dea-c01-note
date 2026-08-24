@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Interactive SQL & Data Lake Analytics
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: S3 Data Lakes ပေါ်တွင် Interactive ad-hoc SQL querying ပြုလုပ်ခြင်း၊ multi-source federated analytics၊ serverless Apache Spark notebooks များနှင့် lightweight ETL များ ပြုလုပ်ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 365–382
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 365–382
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-2-data-store-management]]` | `[[domain-3-data-processing]]` | `[[s3]]`
 
 ---

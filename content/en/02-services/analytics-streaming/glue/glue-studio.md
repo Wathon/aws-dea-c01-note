@@ -16,7 +16,7 @@ date: 2026-08-17
 - **Category**: Analytics / Visual ETL Authoring & Monitoring
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-studio)
 - **Primary Use Case**: Visual drag-and-drop authoring, running, inspecting, and monitoring AWS Glue PySpark/Scala ETL jobs and serverless Jupyter notebooks.
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[glue-etl-jobs]]` | `[[glue-databrew]]`
 
 ---

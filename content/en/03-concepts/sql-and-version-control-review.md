@@ -14,7 +14,7 @@ date: 2026-08-15
 
 - **Category**: Fundamentals (Analytical SQL & Pipeline Version Control)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/03-concepts/sql-and-version-control-review)
-- **Slide Reference**: Pages 51–75 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 51–75 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[redshift]]` | `[[cdk-cloudformation]]`
 
 ---

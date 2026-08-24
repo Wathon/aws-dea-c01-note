@@ -19,7 +19,7 @@ date: 2026-08-18
 - **Category**: Analytics / Stateful Real-Time Stream Processing
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/kinesis/kinesis-apache-flink) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case / အဓိက အသုံးပြုမှု**: Sub-second၊ stateful stream processing၊ continuous anomaly detection၊ time-window aggregations (Tumbling၊ Sliding၊ Session) နှင့် exact-once delivery semantics များ လုပ်ဆောင်ရန်။
-- **Slide Reference**: Pages 451–459 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 451–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[s3]]` | `[[domain-3-data-processing]]`
 
 ---

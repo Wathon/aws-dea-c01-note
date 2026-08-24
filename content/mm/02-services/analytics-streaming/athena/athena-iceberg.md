@@ -18,8 +18,8 @@ date: 2026-08-17
 - **Category**: Analytics / Data Lake Table Formats & ACID Transactions
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-iceberg) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: S3 Data Lakes များပေါ်တွင် row-level `UPDATE`၊ `DELETE`၊ `MERGE INTO`၊ time-travel queries များနှင့် concurrent write guarantees များကို လုပ်ဆောင်နိုင်စေရန်။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 365–382
-- **Hub Links**: `[[mm/index]]` | `[[mm/athena]]` | `[[mm/domain-2-data-store-management]]` | `[[mm/s3-tables]]`
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 365–382
+- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]]` | `[[mm/02-services/storage/s3/s3-tables|s3-tables]]`
 
 ---
 
@@ -203,7 +203,7 @@ Iceberg သည် **Optimistic Concurrency Control (OCC)** ကို အသု�
 ---
 
 ## 📌 Related Notes
-- `[[mm/athena]]` — Amazon Athena Architecture Overview
-- `[[mm/athena-performance]]` — S3 Performance & Partitioning
-- `[[mm/s3-tables]]` — Amazon S3 Tables for Apache Iceberg
-- `[[mm/glue-etl-jobs]]` — Using AWS Glue with Apache Iceberg
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Architecture Overview
+- `[[mm/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — S3 Performance & Partitioning
+- `[[mm/02-services/storage/s3/s3-tables|s3-tables]]` — Amazon S3 Tables for Apache Iceberg
+- `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Using AWS Glue with Apache Iceberg

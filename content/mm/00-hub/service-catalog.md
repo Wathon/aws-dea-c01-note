@@ -13,7 +13,7 @@ date: 2026-07-28
 
 - **Language / ဘာသာစကား**: [English (Original)](/en/00-hub/service-catalog) | **မြန်မာဘာသာ (Burmese)**
 
-**AWS Certified Data Engineer – Associate** slides (`[[AWSCertifiedDataEngineerSlides.pdf]]`) တွင် ပါဝင်သော AWS services အားလုံးကို ကဏ္ဍအလိုက် စုစည်းထားသော index ဖြစ်ပါသည်။
+**AWS Certified Data Engineer – Associate** slides (`[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`) တွင် ပါဝင်သော AWS services အားလုံးကို ကဏ္ဍအလိုက် စုစည်းထားသော index ဖြစ်ပါသည်။
 
 ---
 

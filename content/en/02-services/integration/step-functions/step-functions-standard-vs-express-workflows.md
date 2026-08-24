@@ -18,7 +18,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Workflow Types, Execution Guarantees & Pricing
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/step-functions/step-functions-standard-vs-express-workflows)
 - **Primary Use Case**: Choosing between Standard and Express workflow types based on duration, throughput, execution semantics, and cost efficiency.
-- **Slide Reference**: Pages 526–529 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[step-functions]]` | `[[step-functions-service-integrations-and-sync-patterns]]` | `[[domain-1-ingestion-and-processing]]`
 
 ---

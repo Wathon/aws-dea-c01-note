@@ -20,8 +20,8 @@ date: 2026-08-21
 - **Category**: Application Integration / Distributed Patterns & Streaming Service Comparison
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sqs/sqs-integration-patterns-and-fanout) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: SNS+SQS Fan-Out architecture ကို implement ပြုလုပ်ခြင်း၊ bursty ဖြစ်သော S3 event notifications များကို buffer ပြုလုပ်ခြင်း၊ SQS Extended Client Library ဖြင့် large payloads များကို ကိုင်တွယ်ခြင်း၊ နှင့် SQS အား Kinesis နှင့် MSK တို့နှင့် နှိုင်းယှဉ်သုံးသပ်ခြင်း။
-- **Slide Reference**: Pages 499–525 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: `[[mm/index]]` | `[[mm/sqs]]` | `[[mm/sqs-standard-vs-fifo-queues]]` | `[[mm/s3-event-notifications]]` | `[[mm/kinesis]]` | `[[mm/msk]]`
+- **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
+- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` | `[[mm/02-services/storage/s3/s3-event-notifications|s3-event-notifications]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]`
 
 ---
 
@@ -152,8 +152,8 @@ graph LR
 ---
 
 ## 📌 Related Notes
-- `[[mm/sqs]]` — SQS Master Hub
-- `[[mm/sqs-standard-vs-fifo-queues]]` — Standard vs FIFO Queues
-- `[[mm/s3-event-notifications]]` — S3 Event Triggers
-- `[[mm/kinesis]]` — Kinesis Data Streams
-- `[[mm/msk]]` — Amazon Managed Streaming for Apache Kafka
+- `[[mm/02-services/integration/sqs/sqs|sqs]]` — SQS Master Hub
+- `[[mm/02-services/integration/sqs/sqs-standard-vs-fifo-queues|sqs-standard-vs-fifo-queues]]` — Standard vs FIFO Queues
+- `[[mm/02-services/storage/s3/s3-event-notifications|s3-event-notifications]]` — S3 Event Triggers
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Kinesis Data Streams
+- `[[mm/02-services/analytics-streaming/msk/msk|msk]]` — Amazon Managed Streaming for Apache Kafka

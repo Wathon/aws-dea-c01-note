@@ -13,7 +13,7 @@ date: 2026-07-28
 
 - **Category**: Application Integration / Orchestration
 - **Primary Use Case**: Managed open-source Apache Airflow orchestration, Python DAG-based workflows, multi-cloud ETL coordination.
-- **Slide Reference**: Pages 538–541 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 538–541 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]]
 
 ---

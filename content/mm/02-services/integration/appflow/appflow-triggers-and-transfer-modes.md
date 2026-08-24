@@ -19,8 +19,8 @@ date: 2026-08-21
 - **Category**: Application Integration / Flow Execution Triggers & Synchronization Modes
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow-triggers-and-transfer-modes) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Third-party API quota များကို ထိန်းသိမ်းရင်း SaaS ingestion pipeline များကို optimize ဖြစ်စေရန် On-Demand, Scheduled (Incremental Sync), နှင့် Event-Driven flow trigger များကို configure ပြုလုပ်ခြင်း။
-- **Slide Reference**: Pages 530–537 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: `[[mm/index]]` | `[[mm/appflow]]` | `[[mm/appflow-data-transformation-masking-and-catalog]]` | `[[mm/appflow-destination-patterns-s3-redshift-eventbridge]]`
+- **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
+- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/integration/appflow/appflow|appflow]]` | `[[mm/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` | `[[mm/02-services/integration/appflow/appflow-destination-patterns-s3-redshift-eventbridge|appflow-destination-patterns-s3-redshift-eventbridge]]`
 
 ---
 
@@ -126,7 +126,7 @@ Enterprise SaaS application များ (ဥပမာ - Salesforce နှင့
 ---
 
 ## 📌 Related Notes
-- `[[mm/appflow]]` — Amazon AppFlow Master Hub
-- `[[mm/appflow-data-transformation-masking-and-catalog]]` — Field Transformations & PII Masking
-- `[[mm/appflow-destination-patterns-s3-redshift-eventbridge]]` — Destinations: S3, Redshift & EventBridge
-- `[[mm/mwaa-airflow]]` — Orchestrating AppFlow from MWAA Airflow
+- `[[mm/02-services/integration/appflow/appflow|appflow]]` — Amazon AppFlow Master Hub
+- `[[mm/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog|appflow-data-transformation-masking-and-catalog]]` — Field Transformations & PII Masking
+- `[[mm/02-services/integration/appflow/appflow-destination-patterns-s3-redshift-eventbridge|appflow-destination-patterns-s3-redshift-eventbridge]]` — Destinations: S3, Redshift & EventBridge
+- `[[mm/02-services/integration/mwaa-airflow|mwaa-airflow]]` — Orchestrating AppFlow from MWAA Airflow

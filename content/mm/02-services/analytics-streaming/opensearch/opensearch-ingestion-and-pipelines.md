@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Category**: Analytics / Real-Time Data Ingestion & Stream Processing
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-ingestion-and-pipelines) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Serverless OpenSearch Ingestion (OSIS)၊ Amazon Data Firehose၊ CloudWatch subscription filters နှင့် Amazon DynamoDB Zero-ETL တို့ကို အသုံးပြု၍ high-throughput streaming logs များကို OpenSearch ထဲသို့ ingest ပြုလုပ်ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 460–478
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 460–478
 - **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[kinesis-firehose]]` | `[[dynamodb]]` | `[[cloudwatch-and-eventbridge]]`
 
 ---

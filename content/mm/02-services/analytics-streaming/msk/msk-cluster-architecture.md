@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Category**: Analytics / Distributed Streaming Infrastructure
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/msk/msk-cluster-architecture) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Fault-tolerant ဖြစ်သော multi-AZ MSK broker topologies များကို design ပြုလုပ်ရန်၊ EBS storage auto-scaling ကို configure ပြုလုပ်ရန်၊ S3 နှင့် တွဲဖက်ထားသော MSK Tiered Storage ကို အသုံးချရန်နှင့် KRaft metadata mode ကို နားလည်သဘောပေါက်ရန်။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 450–459
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 450–459
 - **Hub Links**: `[[mm/index]]` | `[[msk]]` | `[[msk-serverless]]` | `[[msk-security-and-monitoring]]` | `[[kinesis-data-streams]]`
 
 ---

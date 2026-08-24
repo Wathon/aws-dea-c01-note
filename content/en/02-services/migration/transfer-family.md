@@ -19,7 +19,7 @@ date: 2026-08-14
 - **Category**: Migration & Transfer (B2B Partner File Exchange & Managed File Transfer)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/migration/transfer-family)
 - **Primary Use Case**: Providing external business partners and legacy enterprise systems with secure, seamless file transfer access (**SFTP, FTPS, FTP, AS2**) directly into [[s3]] Data Lakes and [[efs-and-fsx]] (Amazon EFS) without modifying client workflows or managing servers.
-- **Slide Reference**: Pages 284–285 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 284–285 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[s3]] | [[efs-and-fsx]] | [[datasync-and-snow]]
 
 ---

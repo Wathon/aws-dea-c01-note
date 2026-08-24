@@ -13,7 +13,7 @@ date: 2026-07-28
 
 - **Category**: Management, Governance & Monitoring
 - **Primary Use Case**: Metrics, log aggregation, CloudWatch Logs Insights, event routing, pipeline automation rules.
-- **Slide Reference**: Pages 618–670 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 618–670 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-3-data-operations-and-support]]
 
 ---

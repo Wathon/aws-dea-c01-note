@@ -13,7 +13,7 @@ date: 2026-07-28
 
 - **Category**: Management & Governance
 - **Primary Use Case**: Cost monitoring, budget enforcement, resource tagging, Savings Plans, Cost & Usage Reports (CUR).
-- **Slide Reference**: Pages 756–768 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 756–768 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-3-data-operations-and-support]]
 
 ---

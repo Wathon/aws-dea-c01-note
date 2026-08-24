@@ -17,7 +17,7 @@ date: 2026-08-13
 - **Category**: Migration & Transfer (Database & Analytics Migration, Continuous CDC Ingestion)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/migration/dms-and-sct)
 - **Primary Use Case**: Heterogeneous and homogeneous database migrations, continuous Change Data Capture (CDC) streaming into [[s3]] Data Lakes, [[redshift]], [[kinesis]], [[msk]], and [[dynamodb]] with minimal downtime.
-- **Slide Reference**: Pages 269–275 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 269–275 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[rds-and-aurora]] | [[redshift]] | [[s3]] | [[datasync-and-snow]]
 
 ---

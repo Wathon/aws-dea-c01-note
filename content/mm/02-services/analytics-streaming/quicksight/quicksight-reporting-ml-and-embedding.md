@@ -19,8 +19,8 @@ date: 2026-08-19
 - **Category**: Analytics / Automated Reporting, Machine Learning & Embedded BI
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/quicksight/quicksight-reporting-ml-and-embedding) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: သတ်မှတ်ထားသော အချိန်ဇယားအတိုင်း multi-page executive PDF report များကို generate ပြုလုပ်ခြင်း၊ ML-powered anomaly detection နှင့် forecasting တို့ကို အသုံးချခြင်း၊ QuickSight Q ဖြင့် natural language အသုံးပြု query ပြုလုပ်ခြင်း၊ နှင့် dashboard များကို custom web application များထဲသို့ embed ပြုလုပ်ထည့်သွင်းခြင်း။
-- **Slide Reference**: Pages 479–498 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: `[[mm/index]]` | `[[mm/quicksight]]` | `[[mm/quicksight-security-rls-and-governance]]` | `[[mm/s3]]`
+- **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
+- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` | `[[mm/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` | `[[mm/02-services/storage/s3/s3|s3]]`
 
 ---
 
@@ -157,7 +157,7 @@ sequenceDiagram
 ---
 
 ## 📌 Related Notes
-- `[[mm/quicksight]]` — QuickSight Master Hub
-- `[[mm/quicksight-spice-engine]]` — SPICE In-Memory Acceleration
-- `[[mm/quicksight-security-rls-and-governance]]` — Tag-Based RLS for Multi-Tenant Embedding
-- `[[mm/s3]]` — S3 Export Target for Paginated Reports
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight|quicksight]]` — QuickSight Master Hub
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight-spice-engine|quicksight-spice-engine]]` — SPICE In-Memory Acceleration
+- `[[mm/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance|quicksight-security-rls-and-governance]]` — Tag-Based RLS for Multi-Tenant Embedding
+- `[[mm/02-services/storage/s3/s3|s3]]` — S3 Export Target for Paginated Reports

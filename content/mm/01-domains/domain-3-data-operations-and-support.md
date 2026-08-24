@@ -69,6 +69,6 @@ date: 2026-07-28
 ---
 
 ## 📌 Checklist for Domain 3
-- [ ] [[AWSCertifiedDataEngineerSlides.pdf]] ရှိ slide pages: 618-670 (Monitoring & Governance) နှင့် 756-768 (Cost Management) ကို ပြန်လည်လေ့လာသုံးသပ်ရန် (Review)
+- [ ] [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf) ရှိ slide pages: 618-670 (Monitoring & Governance) နှင့် 756-768 (Cost Management) ကို ပြန်လည်လေ့လာသုံးသပ်ရန် (Review)
 - [ ] Service notes များကို ပြီးစီးအောင် လေ့လာရန်: [[cloudwatch-and-eventbridge]], [[glue]], [[sqs-and-sns]], [[cost-management]]
 - [ ] IaC ကို ပြန်လည်လေ့လာသုံးသပ်ရန်: [[cdk-cloudformation]]

@@ -15,7 +15,7 @@ date: 2026-08-15
 
 - **Category**: Fundamentals / Data Architecture & Storage Optimization
 - **Language / ဘာသာစကား**: [English Version](/en/03-concepts/data-modeling-and-partitioning) | **မြန်မာဘာသာ (Burmese)**
-- **Slide Reference**: Pages 49–75 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 49–75 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[redshift]]` | `[[glue]]` | `[[s3]]`
 
 ---

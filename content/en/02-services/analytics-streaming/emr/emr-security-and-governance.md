@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Category**: Analytics / Enterprise Security, Encryption & Compliance
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/emr/emr-security-and-governance)
 - **Primary Use Case**: Securing EMR clusters using EMR Security Configurations, at-rest/in-transit encryption, Kerberos authentication, and AWS Lake Formation fine-grained governance.
-- **Slide Reference**: Pages 383–413 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[emr]]` | `[[domain-5-security-and-governance]]` | `[[kms]]` | `[[lake-formation]]`
 
 ---

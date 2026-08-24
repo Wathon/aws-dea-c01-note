@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Data Lake Table Formats & ACID Transactions
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-iceberg)
 - **Primary Use Case**: Enabling row-level `UPDATE`, `DELETE`, `MERGE INTO`, time-travel queries, and concurrent write guarantees on S3 Data Lakes.
-- **Slide Reference**: Pages 365–382 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[athena]]` | `[[domain-2-data-store-management]]` | `[[s3-tables]]`
 
 ---

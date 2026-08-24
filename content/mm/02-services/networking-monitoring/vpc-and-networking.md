@@ -19,7 +19,7 @@ date: 2026-08-23
 - **Category**: Networking & Content Delivery / Network Isolation & Private Data Transport
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/networking-monitoring/vpc-and-networking) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Data resources များ (Amazon Redshift, RDS, EMR, Lambda, Glue) ကို private subnets များအတွင်း သီးခြားခွဲထုတ်ထားခြင်း (isolating)၊ VPC Endpoints & AWS PrivateLink မှတစ်ဆင့် private connectivity တည်ဆောက်ခြင်း၊ နှင့် S3 Data Perimeters များကို enforce ပြုလုပ်ခြင်း။
-- **Slide Reference**: Pages 590–617 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 590–617 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
 
 ---

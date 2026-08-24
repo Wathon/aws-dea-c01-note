@@ -18,8 +18,8 @@ date: 2026-08-10
 - **Category**: Storage Architecture & Service Selection
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/ebs-vs-efs-vs-instance-store) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: **Amazon EFS** (Shared Multi-AZ File), **Amazon EBS** (Persistent Network Block), နှင့် **EC2 Instance Store** (Ultra-High IOPS Ephemeral Block) တို့အကြား တိကျသေချာသော ဆုံးဖြတ်ချက်လမ်းညွှန်နှင့် ဗိသုကာပိုင်းဆိုင်ရာ အားသာချက်/အားနည်းချက် (architectural trade-off) နှိုင်းယှဉ်ချက်။
-- **Slide Reference**: Pages 139–154 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-2-data-store-management]] | [[mm/service-comparisons]] | [[mm/ebs-and-instance-store]] | [[mm/efs-and-fsx]] | [[mm/s3]]
+- **Slide Reference**: Pages 139–154 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
+- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/04-exam-tips/service-comparisons|service-comparisons]] | [[mm/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/storage/s3/s3|s3]]
 
 ---
 
@@ -35,7 +35,7 @@ AWS သည် မတူညီသော latency profiles, persistence guarantees,
    - **Data သည် ephemeral ဖြစ်သည်**: Instance ကို **stopped**, **terminated** လုပ်လျှင် သို့မဟုတ် **host hardware failure** ကြုံတွေ့ရလျှင် (OS reboots လုပ်လျှင်သာ အချက်အလက်များ ကျန်ရှိမည်) အချက်အလက်များ အပြီးအပိုင် ပျောက်ဆုံးသွားမည်ဖြစ်သည်။
 2. **Amazon EBS (Persistent Network Block)**:
    - Dedicated network bandwidth မှတဆင့် EC2 နှင့် ဆက်သွယ်သော Network-attached virtual block devices များဖြစ်သည်။
-   - **Persistent & independent**: Data သည် instance stops, terminations, နှင့် host migrations များကို ကျော်လွန်၍ တည်ရှိသည်; [[mm/s3]] သို့ point-in-time incremental snapshots များဖြင့် back up လုပ်ထားနိုင်သည်။
+   - **Persistent & independent**: Data သည် instance stops, terminations, နှင့် host migrations များကို ကျော်လွန်၍ တည်ရှိသည်; [[mm/02-services/storage/s3/s3|s3]] သို့ point-in-time incremental snapshots များဖြင့် back up လုပ်ထားနိုင်သည်။
    - **Single-AZ boundary**: Single Availability Zone အတွင်းတွင်သာ ကန့်သတ်ထားသည် (Multi-Attach ကို တူညီသော AZ အတွင်းရှိ Nitro instances 16 ခုအထိ `io1`/`io2` တွင် ထောက်ပံ့ပေးသည်)။
 3. **Amazon EFS (Elastic Shared Multi-AZ POSIX File)**:
    - **NFSv4** မှတဆင့် ထောင်ပေါင်းများစွာသော compute instances များက တပြိုင်နက်တည်း ဝင်ရောက်အသုံးပြုနိုင်သော Fully managed, serverless, elastic POSIX-compliant shared file system ဖြစ်သည်။
@@ -266,8 +266,8 @@ graph TD
   - **EFS Access Points**: POSIX user identities (`UID`/`GID`) ကို သတ်မှတ်ပြဋ္ဌာန်းပြီး clients များကို သတ်မှတ်ထားသော root directory paths များသို့သာ ကန့်သတ်ထားသည် (Lambda ဖြင့် ပေါင်းစပ်ရာတွင် မဖြစ်မနေ လိုအပ်သည်)။
   - **Automated Lifecycle Tiering**: အသုံးမပြုသော files များကို **Standard** မှ **Infrequent Access (IA)** (92% သက်သာသည်) နှင့် **Archive** tiers များသို့ ပွင့်လင်းမြင်သာစွာ ရွှေ့ပေးသည်။ **EFS Intelligent-Tiering** သည် အသုံးပြုသည့် files များကို Standard သို့ အလိုအလျောက် ပြန်လည်ပို့ဆောင်ပေးသည်။
 - **Top Data Engineering Use Cases**:
-  1. **Serverless ML Model Inference & ETL**: ကြီးမားသော model weights (> 10 GB) များကို EFS Access Points မှတဆင့် [[mm/lambda]] functions များသို့ mount လုပ်ခြင်း။
-  2. **Multi-Tenant Container Storage**: [[mm/ecr-ecs-eks]] (ECS/EKS) ပေါ်ရှိ data science notebooks (JupyterHub) အတွက် Shared persistent storage အဖြစ်အသုံးပြုခြင်း။
+  1. **Serverless ML Model Inference & ETL**: ကြီးမားသော model weights (> 10 GB) များကို EFS Access Points မှတဆင့် [[mm/02-services/compute-containers/lambda|lambda]] functions များသို့ mount လုပ်ခြင်း။
+  2. **Multi-Tenant Container Storage**: [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] (ECS/EKS) ပေါ်ရှိ data science notebooks (JupyterHub) အတွက် Shared persistent storage အဖြစ်အသုံးပြုခြင်း။
   3. **Shared Application & Enterprise Directories**: Multi-AZ web applications, ETL script repositories, နှင့် cross-AZ log aggregation.
 
 ---
@@ -365,11 +365,11 @@ graph TB
 
 ## 📌 Related Notes
 
-- [[mm/ebs-and-instance-store]] — EBS volume types (`gp3`, `io2`, `st1`, `sc1`), snapshots, နှင့် Instance Store အကြောင်း အသေးစိတ် လေ့လာချက်
-- [[mm/efs-and-fsx]] — Amazon EFS (Access Points, Tiering) နှင့် AWS FSx (Lustre, ONTAP, Windows) အကြောင်း အသေးစိတ် လေ့လာချက်
-- [[mm/s3]] — Persistent object storage နှင့် Central Data Lake architecture
-- [[mm/ecr-ecs-eks]] — Container persistent volume claims နှင့် CSI drivers
-- [[mm/lambda]] — Serverless data processing နှင့် EFS integration
-- [[mm/emr]] — Big data processing clusters, EMRFS, နှင့် Spark shuffle storage
-- [[mm/service-comparisons]] — Master DEA-C01 Service Decision Matrix
-- [[mm/domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[mm/02-services/storage/ebs-and-instance-store|ebs-and-instance-store]] — EBS volume types (`gp3`, `io2`, `st1`, `sc1`), snapshots, နှင့် Instance Store အကြောင်း အသေးစိတ် လေ့လာချက်
+- [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] — Amazon EFS (Access Points, Tiering) နှင့် AWS FSx (Lustre, ONTAP, Windows) အကြောင်း အသေးစိတ် လေ့လာချက်
+- [[mm/02-services/storage/s3/s3|s3]] — Persistent object storage နှင့် Central Data Lake architecture
+- [[mm/02-services/compute-containers/ecr-ecs-eks|ecr-ecs-eks]] — Container persistent volume claims နှင့် CSI drivers
+- [[mm/02-services/compute-containers/lambda|lambda]] — Serverless data processing နှင့် EFS integration
+- [[mm/02-services/analytics-streaming/emr/emr|emr]] — Big data processing clusters, EMRFS, နှင့် Spark shuffle storage
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

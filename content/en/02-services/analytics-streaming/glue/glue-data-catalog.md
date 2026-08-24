@@ -16,7 +16,7 @@ date: 2026-08-17
 - **Category**: Analytics / Metadata Management & Governance
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-data-catalog)
 - **Primary Use Case**: Centralized, persistent, Apache Hive-compatible metastore for S3 Data Lakes, Athena, EMR, and Redshift Spectrum.
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[athena]]` | `[[lake-formation]]` | `[[domain-2-data-store-management]]`
 
 ---

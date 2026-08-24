@@ -17,7 +17,7 @@ date: 2026-08-08
 - **Category**: Storage Resilience & Data Availability
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-replication) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Disaster Recovery (DR), Cross-Region Data Distribution, Compliance Data Residency, Log Aggregation
-- **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[s3-versioning]] | [[s3-security]] | [[s3-encryption]]
 
 ---

@@ -17,7 +17,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Message Queuing & Distributed Systems Decoupling
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sqs/sqs)
 - **Primary Use Case**: Fully managed message queuing, buffering data ingestion spikes, decoupling microservices and ETL pipelines, and enabling reliable asynchronous batch processing.
-- **Slide Reference**: Pages 499–525 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-operations-and-support]]` | `[[lambda]]` | `[[s3]]`
 
 ---

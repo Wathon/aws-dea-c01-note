@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Publish-Subscribe Messaging & Event Fan-Out
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sns/sns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Fully managed Pub/Sub messaging၊ single event တစ်ခုတည်းကို subscribers ထောင်ပေါင်းများစွာထံသို့ broadcast လုပ်ခြင်း (Fan-Out)၊ downstream ETL pipelines များကို trigger လုပ်ခြင်း နှင့် Amazon Data Firehose ထံသို့ data များကို တိုက်ရိုက် stream လုပ်ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 499–525
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 499–525
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-operations-and-support]]` | `[[sqs]]` | `[[kinesis]]`
 
 ---

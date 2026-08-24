@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Category**: Analytics / Containerized Distributed Processing
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/emr/emr-on-eks) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Microservices များနှင့် compute infrastructure များကို မျှဝေသုံးစွဲရန်နှင့် လျင်မြန်သော pod-level autoscaling ရရှိစေရန် Amazon EKS Kubernetes clusters များအတွင်း Apache Spark application များကို run ရန်။
-- **Slide Reference**: Pages 383–413 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[emr]]` | `[[ecr-ecs-eks]]` | `[[domain-1-ingestion-and-processing]]`
 
 ---

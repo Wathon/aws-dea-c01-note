@@ -67,6 +67,6 @@ date: 2026-07-28
 ---
 
 ## 📌 Checklist for Domain 2
-- [ ] [[AWSCertifiedDataEngineerSlides.pdf]] မှ Slide စာမျက်နှာများ: 76-154 (Storage) နှင့် 155-265 (Database) တို့ကို ပြန်လည်လေ့လာရန်
+- [ ] [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf) မှ Slide စာမျက်နှာများ: 76-154 (Storage) နှင့် 155-265 (Database) တို့ကို ပြန်လည်လေ့လာရန်
 - [ ] Service မှတ်စုများကို ပြီးမြောက်အောင် ဖတ်ရှုရန်: [[s3]], [[redshift]], [[dynamodb]], [[rds-and-aurora]]
 - [ ] အဓိက သဘောတရားများကို ပြန်လည်သုံးသပ်ရန်: [[data-modeling-and-partitioning]], [[data-formats-and-compression]]

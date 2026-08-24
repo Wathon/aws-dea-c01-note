@@ -18,7 +18,7 @@ date: 2026-08-11
 - **Category**: Database (Relational OLTP & Cloud-Native Storage)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/database/rds-and-aurora)
 - **Primary Use Case**: Managed relational databases for transactional operational workloads, ACID transactions, Change Data Capture (CDC) ingestion, zero-ETL integration with [[redshift]], and direct S3 Parquet export.
-- **Slide Reference**: Pages 196–213 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 196–213 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[domain-1-ingestion-and-processing]] | [[redshift]] | [[dms-and-sct]] | [[s3]] | [[kms-and-secrets]]
 
 ---

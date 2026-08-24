@@ -15,7 +15,7 @@ date: 2026-08-15
 
 - **Category**: Fundamentals / Storage & Query Optimization
 - **Language / ဘာသာစကား**: [English Version](/en/03-concepts/data-formats-and-compression) | **မြန်မာဘာသာ (Burmese)**
-- **Slide Reference**: Pages 38–48 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 38–48 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[athena]]` | `[[glue]]` | `[[redshift]]` | `[[emr]]` | `[[s3]]`
 
 ---

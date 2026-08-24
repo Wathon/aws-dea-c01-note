@@ -21,7 +21,7 @@ date: 2026-08-23
 - **Category**: Security, Identity, & Compliance / Cryptography, Data Protection & Secrets Governance
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/kms-and-secrets) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Cryptographic keys များကို စီမံခန့်ခွဲရန် (AWS KMS)၊ S3/Redshift/RDS အနှံ့ data at rest များကို လုံခြုံစေရန်၊ S3 Bucket Keys ဖြင့် big data KMS ကုန်ကျစရိတ်များကို သက်သာစေရန် (optimize ပြုလုပ်ရန်) နှင့် AWS Secrets Manager ဖြင့် database credential rotation များကို automate ပြုလုပ်ရန်။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 560–575
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 560–575
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[iam]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
 
 ---

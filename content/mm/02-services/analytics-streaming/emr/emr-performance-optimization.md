@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Category**: Analytics / Big Data Tuning & Distributed Data Transfer
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/emr/emr-performance-optimization) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Spark execution performance ကို အမြင့်ဆုံးမြှင့်တင်ရန်၊ S3DistCp မှတစ်ဆင့် small file ပြဿနာကို ဖြေရှင်းရန်နှင့် YARN/Spark memory allocation များကို အသေးစိတ် ညှိယူပြင်ဆင်ရန် (fine-tuning)။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 383–413
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 383–413
 - **Hub Links**: `[[mm/index]]` | `[[emr]]` | `[[s3]]` | `[[domain-3-data-processing]]`
 
 ---

@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Category**: Analytics / Serverless Big Data Processing
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/emr/emr-serverless) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အောက်ခံ EC2 cluster များကို provision လုပ်ခြင်း၊ အရွယ်အစား သတ်မှတ်ခြင်း (sizing)၊ စီမံခန့်ခွဲခြင်း (managing) သို့မဟုတ် tuning ပြုလုပ်ခြင်းများ မလိုအပ်ဘဲ အကြီးစား Apache Spark နှင့် Apache Hive workload များကို run ရန်။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 383–413
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 383–413
 - **Hub Links**: `[[mm/index]]` | `[[emr]]` | `[[glue-etl-jobs]]` | `[[athena-spark]]` | `[[domain-3-data-processing]]`
 
 ---

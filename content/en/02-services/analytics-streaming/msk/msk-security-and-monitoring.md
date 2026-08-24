@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Governance, Identity & Stream Observability
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk-security-and-monitoring)
 - **Primary Use Case**: Securing Kafka clusters with IAM authentication, configuring TLS encryption, monitoring consumer group lag (`SumOffsetLag`), and integrating Prometheus OpenMonitoring.
-- **Slide Reference**: Pages 450–459 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[msk]]` | `[[msk-cluster-architecture]]` | `[[glue-schema-registry]]`
 
 ---

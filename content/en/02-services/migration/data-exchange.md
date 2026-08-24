@@ -17,7 +17,7 @@ date: 2026-08-14
 - **Category**: Migration & Transfer (Third-Party Data Ingestion, Data Marketplace & Data Licensing)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/migration/data-exchange)
 - **Primary Use Case**: Finding, subscribing to, and seamlessly loading third-party external datasets into [[s3]], querying external data directly in [[redshift]] without ETL, and invoking third-party APIs using native AWS IAM governance.
-- **Slide Reference**: Pages 281–283 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 281–283 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[s3]] | [[redshift]] | [[lake-formation]]
 
 ---

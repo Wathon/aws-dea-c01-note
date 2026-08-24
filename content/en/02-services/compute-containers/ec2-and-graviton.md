@@ -17,7 +17,7 @@ date: 2026-08-14
 - **Category**: Compute (Virtual Machine Infrastructure, Spot Pricing & Arm Processors)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/compute-containers/ec2-and-graviton)
 - **Primary Use Case**: Compute backbone for self-hosted data platforms, underlying instance topology for [[emr]] clusters (Master, Core, Task nodes), and maximizing price-performance using custom **AWS Graviton** silicon across [[msk]], [[rds-and-aurora]], [[opensearch]], and [[lambda]].
-- **Slide Reference**: Pages 286–288 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 286–288 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[domain-2-data-store-management]] | [[emr]] | [[batch]] | [[ecr-ecs-eks]] | [[lambda]]
 
 ---

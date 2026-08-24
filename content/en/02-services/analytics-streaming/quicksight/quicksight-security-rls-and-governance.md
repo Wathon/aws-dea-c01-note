@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Governance, Multi-Tenant Security & Network Isolation
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/quicksight/quicksight-security-rls-and-governance)
 - **Primary Use Case**: Restricting dashboard rows and columns based on user identity (RLS & CLS), connecting to private databases via QuickSight VPC connections, and managing enterprise SSO with IAM Identity Center.
-- **Slide Reference**: Pages 479–498 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[quicksight]]` | `[[redshift]]` | `[[rds-and-aurora]]` | `[[domain-3-data-operations-and-support]]`
 
 ---

@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Orchestrator Comparison, Observability & Production Triage
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/step-functions/step-functions-vs-mwaa-and-troubleshooting)
 - **Primary Use Case**: Choosing between AWS Step Functions and Amazon MWAA (Apache Airflow), configuring CloudWatch and AWS X-Ray monitoring, and resolving common production state machine errors.
-- **Slide Reference**: Pages 526–529 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[step-functions]]` | `[[mwaa-airflow]]` | `[[cloudwatch-and-eventbridge]]` | `[[domain-3-data-operations-and-support]]`
 
 ---

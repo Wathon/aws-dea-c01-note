@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Category**: Analytics / Semantic Data Modeling & Advanced Business Calculations
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/quicksight/quicksight-data-preparation-and-modeling) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Cross-source dataset များကို ပေါင်းစည်းခြင်း (Combining cross-source datasets)၊ Custom SQL query များ ဖန်တီးခြင်း၊ အဆင့်မြင့် Level of Aware Calculations (LAC-A / LAC-M) တည်ဆောက်ခြင်းနှင့် dynamic cascading filter များ configure ပြုလုပ်ခြင်း။
-- **Slide Reference**: Pages 479–498 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[quicksight]]` | `[[quicksight-spice-engine]]` | `[[athena]]` | `[[rds-and-aurora]]`
 
 ---

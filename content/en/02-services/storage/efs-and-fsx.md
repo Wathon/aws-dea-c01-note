@@ -17,7 +17,7 @@ date: 2026-08-09
 - **Category**: Storage (Shared Managed File Systems)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/efs-and-fsx)
 - **Primary Use Case**: Shared POSIX file storage for distributed Linux compute clusters, container persistent volumes ([[ecr-ecs-eks]]), serverless functions ([[lambda]]), and ultra-high-throughput HPC / ML data staging from [[s3]].
-- **Slide Reference**: Pages 139–154 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 139–154 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[s3]] | [[ebs-and-instance-store]]
 
 ---

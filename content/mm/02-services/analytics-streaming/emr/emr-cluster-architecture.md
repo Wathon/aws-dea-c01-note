@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Category**: Analytics / Cluster Topology & Storage Decoupling
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/emr/emr-cluster-architecture) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Master၊ Core နှင့် Task nodes များ၊ Spot Instance Fleets၊ HDFS နှင့် Amazon S3 ပေါ်ရှိ EMRFS တို့ကို အသုံးပြု၍ fault-tolerant ဖြစ်ပြီး cost-effective သော EMR clusters များကို design ပြုလုပ်ရန်။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 383–413
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 383–413
 - **Hub Links**: `[[mm/index]]` | `[[emr]]` | `[[s3]]` | `[[ec2-and-graviton]]` | `[[domain-1-ingestion-and-processing]]`
 
 ---

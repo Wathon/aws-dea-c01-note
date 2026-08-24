@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / SaaS ETL & Cloud Data Ingestion
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case / အဓိက အသုံးပြုမှု**: Custom API connectors များ ရေးသားရန်မလိုဘဲ SaaS applications များ (Salesforce, SAP, ServiceNow, Zendesk, Slack) နှင့် AWS data stores များ (Amazon S3, Amazon Redshift, Amazon EventBridge) အကြား built-in transformations၊ PII masking နှင့် AWS PrivateLink လုံခြုံရေးတို့ဖြင့် fully managed၊ serverless data transfer ပြုလုပ်ခြင်း။
-- **Slide Reference**: Pages 530–537 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-operations-and-support]]` | `[[s3]]` | `[[redshift]]`
 
 ---

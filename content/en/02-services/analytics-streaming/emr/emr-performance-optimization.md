@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Big Data Tuning & Distributed Data Transfer
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/emr/emr-performance-optimization)
 - **Primary Use Case**: Maximizing Spark execution performance, solving the small file problem via S3DistCp, and fine-tuning YARN/Spark memory allocations.
-- **Slide Reference**: Pages 383–413 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[emr]]` | `[[s3]]` | `[[domain-3-data-processing]]`
 
 ---

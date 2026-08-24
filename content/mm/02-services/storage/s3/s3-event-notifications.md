@@ -18,8 +18,8 @@ date: 2026-08-08
 - **Category**: Event-Driven Architecture & Integration
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-event-notifications) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Automated Data Pipeline Triggering, Asynchronous ETL Ingestion, Decoupled Processing
-- **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
-- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[lambda]] | [[sqs-and-sns]] | [[eventbridge]]
+- **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
+- **Hub Links**: [[mm/index]] | [[service-catalog]] | [[s3]] | [[lambda]] | [[sqs-and-sns]] | [[cloudwatch-and-eventbridge]]
 
 ---
 
@@ -168,5 +168,5 @@ AWS သည် S3 event များကို လုပ်ဆောင်ရန�
 - [[s3]] — Main Amazon S3 Overview & Storage Classes
 - [[lambda]] — Serverless Event Processing & Execution Timeouts
 - [[sqs-and-sns]] — Decoupling Data Pipelines & Fan-Out Architecture
-- [[eventbridge]] — EventBridge Event Buses, Rules, Archive & Replay
+- [[cloudwatch-and-eventbridge]] — EventBridge Event Buses, Rules, Archive & Replay
 - [[step-functions]] — Orchestrating Complex Serverless ETL Workflows

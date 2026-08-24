@@ -20,8 +20,8 @@ This knowledge base is structured directly from the **AWS Certified Data Enginee
 
 | Language / ဘာသာစကား | Description | Entry Point |
 | :--- | :--- | :--- |
-| 🇬🇧 **English (Original)** | Complete technical deep-dives for all 4 Exam Domains, AWS Services, Concepts, and Decision Matrices. | 👉 **[[en/index\|Enter English Hub (/en/)]]** |
-| 🇲🇲 **မြန်မာဘာသာ (Burmese)** | Big Data Concepts, Data Lake Architecture, Data Quality, SQL & Storage Optimization in Burmese. | 👉 **[[mm/index\|မြန်မာဘာသာ လေ့လာရေးဗဟို (/mm/)]]** |
+| 🇬🇧 **English (Original)** | Complete technical deep-dives for all 4 Exam Domains, AWS Services, Concepts, and Decision Matrices. | 👉 **[[en/index|Enter English Hub (/en/)]]** |
+| 🇲🇲 **မြန်မာဘာသာ (Burmese)** | Big Data Concepts, Data Lake Architecture, Data Quality, SQL & Storage Optimization in Burmese. | 👉 **[[mm/index|မြန်မာဘာသာ လေ့လာရေးဗဟို (/mm/)]]** |
 
 ---
 

@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Category**: Analytics / Cluster Lifecycle, Automation & Cost Governance
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/emr/emr-lifecycle-and-cost)
 - **Primary Use Case**: Automating node initialization via Bootstrap Actions, orchestrating batch workflows via Steps, and maximizing cost savings via Transient Clusters and EMR Managed Scaling.
-- **Slide Reference**: Pages 383–413 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[emr]]` | `[[cost-management]]` | `[[step-functions]]` | `[[domain-3-data-processing]]`
 
 ---

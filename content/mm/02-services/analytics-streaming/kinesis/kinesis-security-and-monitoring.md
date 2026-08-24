@@ -20,7 +20,7 @@ date: 2026-08-18
 - **Category**: Analytics / Stream Security, Network Isolation & Observability
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/kinesis/kinesis-security-and-monitoring) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Stream payloads များကို KMS နှင့် VPC PrivateLink ဖြင့် လုံခြုံအောင် ပြုလုပ်ခြင်း၊ Glue Schema Registry မှတစ်ဆင့် stream schemas များကို စစ်ဆေးအတည်ပြုခြင်း (validating) နှင့် `IteratorAgeMilliseconds` မှတစ်ဆင့် consumer lag ကို စောင့်ကြည့်ထောက်လှမ်းခြင်း။
-- **Slide Reference**: Pages 446–459 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 446–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[glue-schema-registry]]` | `[[security-and-compliance]]`
 
 ---

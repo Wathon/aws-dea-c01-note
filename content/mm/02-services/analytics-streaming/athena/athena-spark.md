@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Category**: Analytics / Distributed Serverless Processing & Interactive Notebooks
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-spark) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Spark cluster များကို provision လုပ်စရာမလိုဘဲ S3 ပေါ်တွင် ချက်ချင်း အလုပ်လုပ်နိုင်သော interactive PySpark data exploration နှင့် serverless Jupyter notebooks များကို အသုံးပြုရန်။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 365–382
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 365–382
 - **Hub Links**: `[[mm/index]]` | `[[athena]]` | `[[glue-etl-jobs]]` | `[[emr]]` | `[[domain-3-data-processing]]`
 
 ---

@@ -18,7 +18,7 @@ date: 2026-08-17
 - **Category**: Analytics / Big Data & Distributed Processing
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/emr/emr) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Petabyte-scale distributed data processing, SQL analytics, real-time streaming နှင့် open-source big data frameworks (Apache Spark, Hadoop, Presto/Trino, Hive, Flink, HBase, Hudi, Iceberg) များကို အသုံးပြု၍ machine learning လုပ်ငန်းများ ဆောင်ရွက်ရန်။
-- **Slide Reference**: Pages 383–413 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 383–413 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]` | `[[s3]]`
 
 ---

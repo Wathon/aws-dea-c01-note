@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Destination Architectures, Redshift Upsert & Event Routing
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow-destination-patterns-s3-redshift-eventbridge) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon S3 Data Lakes, Amazon Redshift Data Warehouses (staging buckets များနှင့် automated MERGE upserts များပါဝင်သော) နှင့် Amazon EventBridge event buses များအပါအဝင် AppFlow destinations များကို architect ပြုလုပ်ခြင်း။
-- **Slide Reference**: Pages 530–537 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[appflow]]` | `[[s3]]` | `[[redshift]]` | `[[cloudwatch-and-eventbridge]]`
 
 ---

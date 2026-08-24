@@ -20,7 +20,7 @@ date: 2026-08-23
 - **Category**: Security, Identity, & Compliance / Sensitive Data Discovery, Audit Logging & PII Governance
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/macie-and-cloudtrail) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon S3 အတွင်းရှိ ထိခိုက်လွယ်သော Personally Identifiable Information (PII) များကို အလိုအလျောက် ရှာဖွေဖော်ထုတ်ခြင်း (Amazon Macie)၊ API လုပ်ဆောင်ချက်များနှင့် data access များကို ပြင်ဆင်ပြောင်းလဲ၍မရအောင် audit မှတ်တမ်းတင်ခြင်း (AWS CloudTrail)၊ နှင့် data pipeline စီးဆင်းနေစဉ်အတွင်း PII များကို mask ပြုလုပ်ခြင်း (AWS Glue Sensitive Data Detection)။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 630–670
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 630–670
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[s3]]` | `[[glue]]` | `[[cloudwatch-and-eventbridge]]`
 
 ---

@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / High-Performance In-Memory Analytics & Query Caching
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/quicksight/quicksight-spice-engine)
 - **Primary Use Case**: Accelerating dashboard queries to sub-second speeds, configuring Full vs. Incremental SPICE refreshes, and drastically reducing Amazon Athena and database scan costs.
-- **Slide Reference**: Pages 479–498 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[quicksight]]` | `[[athena]]` | `[[redshift]]` | `[[rds-and-aurora]]`
 
 ---

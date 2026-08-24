@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Category**: Application Integration / In-Flight Data Preparation, PII Governance & Cataloging
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow-data-transformation-masking-and-catalog) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: In-flight field mapping များကို အသုံးပြုခြင်း၊ persistence မပြုလုပ်မီ sensitive PII များကို mask ပြုလုပ်ခြင်း၊ SaaS records များကို Snappy compression ဖြင့် Apache Parquet သို့ ပြောင်းလဲခြင်း (convert) နှင့် AWS Glue Data Catalog တွင် tables များကို auto-register ပြုလုပ်ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ Pages 530–537
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ Pages 530–537
 - **Hub Links**: `[[mm/index]]` | `[[appflow]]` | `[[appflow-triggers-and-transfer-modes]]` | `[[glue-data-catalog]]` | `[[athena]]`
 
 ---

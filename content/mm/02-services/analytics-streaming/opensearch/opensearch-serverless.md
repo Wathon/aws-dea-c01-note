@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Category**: Analytics / Serverless Search, Observability & Vector Search
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-serverless) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Cluster instances စီမံခန့်ခွဲခြင်း၊ node sizing၊ shard အရေအတွက် သို့မဟုတ် storage scaling တို့ကို ပြုလုပ်စရာမလိုဘဲ full-text search၊ time-series log analytics နှင့် ML vector search တို့ကို run လုပ်ဆောင်ခြင်း။
-- **Slide Reference**: Pages 460–478 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[opensearch-storage-tiers-and-ism]]` | `[[s3]]`
 
 ---

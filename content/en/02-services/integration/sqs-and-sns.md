@@ -13,7 +13,7 @@ date: 2026-07-28
 
 - **Category**: Application Integration
 - **Primary Use Case**: Asynchronous message queuing, pub/sub notification fanout, decoupling microservices.
-- **Slide Reference**: Pages 499–525 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 499–525 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]]
 
 ---

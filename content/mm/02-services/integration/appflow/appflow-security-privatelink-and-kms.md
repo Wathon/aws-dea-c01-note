@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Enterprise SaaS Security, Private Networking & Key Management
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow-security-privatelink-and-kms) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: AWS PrivateLink မှတစ်ဆင့် SaaS application များနှင့် AWS အကြား private connection များ တည်ဆောက်ရန်၊ AWS KMS CMKs ဖြင့် in-flight နှင့် at-rest data များကို encrypt ပြုလုပ်ရန်နှင့် OAuth credentials များကို စီမံခန့်ခွဲရန်။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 530–537
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 530–537
 - **Hub Links**: `[[mm/index]]` | `[[appflow]]` | `[[kms-and-secrets]]` | `[[iam]]` | `[[vpc-and-networking]]`
 
 ---

@@ -19,7 +19,7 @@ date: 2026-08-17
 - **Category**: Analytics / Streaming Schema Governance & Evolution
 - **Language / ဘာသာစကား**: [English Version](/en/02-services/analytics-streaming/glue/glue-schema-registry) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon MSK, Amazon Kinesis နှင့် Apache Flink တို့အတွက် event stream schemas များကို ဗဟိုမှ ရှာဖွေတွေ့ရှိခြင်း (discovery)၊ စစ်ဆေးအတည်ပြုခြင်း (validation) နှင့် စနစ်တကျ ထိန်းချုပ်ပြောင်းလဲခြင်း (controlled evolution) ပြုလုပ်ရန်။
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[msk]]` | `[[kinesis]]`
 
 ---

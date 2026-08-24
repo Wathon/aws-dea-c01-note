@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Serverless Workflow Orchestration & Data Pipeline Coordination
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/step-functions/step-functions) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: ရှုပ်ထွေးပြီး အဆင့်များစွာပါဝင်သော ETL workflows များ၊ data processing pipelines များ (AWS Glue, Amazon EMR, Amazon Athena, AWS Lambda, Amazon Redshift) ကို ညှိနှိုင်းပေါင်းစပ်ခြင်း (coordinating) နှင့် serverless state machines များဖြင့် အလိုအလျောက် error handling ဆောင်ရွက်ခြင်း။
-- **Slide Reference**: Pages 526–529 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-operations-and-support]]` | `[[glue]]` | `[[emr]]` | `[[lambda]]`
 
 ---

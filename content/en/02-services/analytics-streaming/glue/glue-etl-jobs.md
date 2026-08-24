@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Distributed Serverless Processing
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-etl-jobs)
 - **Primary Use Case**: Serverless Apache Spark & Python ETL, incremental processing with Job Bookmarks, semi-structured data manipulation with DynamicFrames, and performance tuning.
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[emr]]` | `[[domain-3-data-processing]]`
 
 ---

@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Fault Tolerance, Error Handling & Message Redrive
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sqs/sqs-dead-letter-queues-and-error-handling)
 - **Primary Use Case**: Isolating unprocessable poison pill messages, configuring `RedrivePolicy` and `maxReceiveCount`, preventing infinite retry loops, and executing DLQ Redrive for batch reprocessing.
-- **Slide Reference**: Pages 499–525 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[sqs]]` | `[[sqs-standard-vs-fifo-queues]]` | `[[sqs-timing-parameters-and-polling]]` | `[[domain-3-data-operations-and-support]]`
 
 ---

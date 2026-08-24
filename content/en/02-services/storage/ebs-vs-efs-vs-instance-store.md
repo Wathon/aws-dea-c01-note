@@ -17,7 +17,7 @@ date: 2026-08-10
 - **Category**: Storage Architecture & Service Selection
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/ebs-vs-efs-vs-instance-store)
 - **Primary Use Case**: Definitive decision guide and architectural trade-off comparison between **Amazon EFS** (Shared Multi-AZ File), **Amazon EBS** (Persistent Network Block), and **EC2 Instance Store** (Ultra-High IOPS Ephemeral Block).
-- **Slide Reference**: Pages 139–154 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 139–154 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[service-comparisons]] | [[ebs-and-instance-store]] | [[efs-and-fsx]] | [[s3]]
 
 ---

@@ -18,7 +18,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Flow Execution Triggers & Synchronization Modes
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/appflow/appflow-triggers-and-transfer-modes)
 - **Primary Use Case**: Configuring On-Demand, Scheduled (Incremental Sync), and Event-Driven flow triggers to optimize SaaS ingestion pipelines while respecting third-party API quotas.
-- **Slide Reference**: Pages 530–537 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[appflow]]` | `[[appflow-data-transformation-masking-and-catalog]]` | `[[appflow-destination-patterns-s3-redshift-eventbridge]]`
 
 ---

@@ -17,7 +17,7 @@ date: 2026-08-19
 - **Category**: Analytics / Distributed Streaming & Real-Time Data Ingestion
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk)
 - **Primary Use Case**: Fully managed, highly available Apache Kafka clusters for real-time streaming, event-driven microservices, open-source ecosystem compatibility, and high-throughput low-latency pub/sub pipelines.
-- **Slide Reference**: Pages 450–459 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[kinesis]]` | `[[glue-schema-registry]]` | `[[lambda]]`
 
 ---

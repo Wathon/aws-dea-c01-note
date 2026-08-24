@@ -18,7 +18,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Smart Event Routing & Downstream Cost Reduction
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sns/sns-subscription-filter-policies)
 - **Primary Use Case**: Routing messages to specific subscribers based on Message Attributes or Payload contents, eliminating unneeded downstream Lambda invocations and SQS processing costs.
-- **Slide Reference**: Pages 499–525 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[sns]]` | `[[sns-standard-vs-fifo-topics]]` | `[[sqs]]` | `[[lambda]]`
 
 ---

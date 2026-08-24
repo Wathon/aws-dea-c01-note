@@ -21,8 +21,8 @@ date: 2026-08-12
 - **Category**: Database (Purpose-Built NoSQL & Specialized Engines)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/database/nosql-specialized-databases) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Microsecond in-memory caching, durable in-memory primary databases, managed Apache Cassandra, relationship graph traversal, time-series IoT telemetry, နှင့် managed MongoDB document storage အဖြစ် အသုံးပြုရန်။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ၏ စာမျက်နှာ 214–219
-- **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-2-data-store-management]] | [[mm/domain-1-ingestion-and-processing]] | [[mm/dynamodb]] | [[mm/rds-and-aurora]] | [[mm/redshift]] | [[mm/kinesis]]
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ၏ စာမျက်နှာ 214–219
+- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/database/dynamodb|dynamodb]] | [[mm/02-services/database/rds-and-aurora|rds-and-aurora]] | [[mm/02-services/database/redshift|redshift]] | [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]
 
 ---
 
@@ -313,7 +313,7 @@ Timestream သည် အောက်ပါ built-in analytical functions မျ�
   - Sensors များမှ data များကို **AWS IoT Core** $\rightarrow$ **Amazon Kinesis Data Streams** သို့ stream လုပ်ပါသည်။
   - Kinesis မှတစ်ဆင့် **Amazon Timestream** သို့ တိုက်ရိုက်ရေးသားပါသည်။
   - Timestream သည် (real-time Grafana dashboards များကို serve လုပ်ရန်အတွက်) **Memory Store တွင် ၇ ရက်** သိမ်းဆည်းထားပြီးနောက်၊ **Magnetic Store သို့ ၅ နှစ်စာ** အလိုအလျောက် tier ပြောင်းလဲသိမ်းဆည်းပေးပါသည်။
-  - Scheduled queries များသည် နာရီအလိုက် ပျမ်းမျှတန်ဖိုးများကို တွက်ချက်ကာ၊ [[mm/sagemaker-and-ai]] တွင် machine learning training ပြုလုပ်ရန် Parquet datasets များအဖြစ် **Amazon S3** သို့ သိမ်းဆည်းပါသည်။
+  - Scheduled queries များသည် နာရီအလိုက် ပျမ်းမျှတန်ဖိုးများကို တွက်ချက်ကာ၊ [[mm/02-services/ml-dev-cost/sagemaker-and-ai|sagemaker-and-ai]] တွင် machine learning training ပြုလုပ်ရန် Parquet datasets များအဖြစ် **Amazon S3** သို့ သိမ်းဆည်းပါသည်။
 
 ```mermaid
 graph LR
@@ -373,11 +373,11 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[mm/dynamodb]] — Serverless NoSQL operational database နှင့် DynamoDB Streams
-- [[mm/rds-and-aurora]] — Relational OLTP database engines နှင့် Aurora distributed storage
-- [[mm/redshift]] — Petabyte-scale OLAP data warehouse
-- [[mm/kinesis]] — Streaming telemetry များကို specialized databases များသို့ Ingest လုပ်ခြင်း
-- [[mm/s3]] — S3 Data Lake သိမ်းဆည်းခြင်းနှင့် downstream analytics
-- [[mm/sagemaker-and-ai]] — Machine learning feature extraction နှင့် Neptune ML
-- [[mm/service-comparisons]] — Master DEA-C01 Service Decision Matrix
-- [[mm/domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[mm/02-services/database/dynamodb|dynamodb]] — Serverless NoSQL operational database နှင့် DynamoDB Streams
+- [[mm/02-services/database/rds-and-aurora|rds-and-aurora]] — Relational OLTP database engines နှင့် Aurora distributed storage
+- [[mm/02-services/database/redshift|redshift]] — Petabyte-scale OLAP data warehouse
+- [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] — Streaming telemetry များကို specialized databases များသို့ Ingest လုပ်ခြင်း
+- [[mm/02-services/storage/s3/s3|s3]] — S3 Data Lake သိမ်းဆည်းခြင်းနှင့် downstream analytics
+- [[mm/02-services/ml-dev-cost/sagemaker-and-ai|sagemaker-and-ai]] — Machine learning feature extraction နှင့် Neptune ML
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Serverless Streaming Architecture
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/msk/msk-serverless) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အခြေခံအဆောက်အအုံ စီမံခန့်ခွဲမှု (infrastructure management) ပြုလုပ်ရန် လုံးဝမလိုဘဲ Apache Kafka workload များကို run နိုင်ခြင်း၊ အတက်အကျရှိသော traffic များအတွက် automatic scaling ပြုလုပ်ပေးခြင်းနှင့် throughput ပေါ်မူတည်၍ ကျသင့်ငွေပေးချေရသော (pay-for-throughput) စနစ် ဖြစ်ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 450–459
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 450–459
 - **Hub Links**: `[[mm/index]]` | `[[msk]]` | `[[msk-cluster-architecture]]` | `[[kinesis-data-streams]]`
 
 ---

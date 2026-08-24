@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Search Engine Architecture & Infrastructure Design
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/opensearch/opensearch-cluster-architecture)
 - **Primary Use Case**: Designing resilient multi-AZ OpenSearch clusters, configuring dedicated cluster manager nodes, and sizing primary and replica shards according to AWS best practices.
-- **Slide Reference**: Pages 460–478 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[opensearch]]` | `[[opensearch-storage-tiers-and-ism]]` | `[[opensearch-troubleshooting-and-tuning]]`
 
 ---

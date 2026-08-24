@@ -20,7 +20,7 @@ date: 2026-08-12
 - **Category**: Database (Purpose-Built NoSQL & Specialized Engines)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/database/nosql-specialized-databases)
 - **Primary Use Case**: Microsecond in-memory caching, durable in-memory primary databases, managed Apache Cassandra, relationship graph traversal, time-series IoT telemetry, and managed MongoDB document storage.
-- **Slide Reference**: Pages 214–219 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 214–219 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[domain-1-ingestion-and-processing]] | [[dynamodb]] | [[rds-and-aurora]] | [[redshift]] | [[kinesis]]
 
 ---

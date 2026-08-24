@@ -20,7 +20,7 @@ date: 2026-08-23
 - **Category**: Security, Identity, & Compliance / Cryptography, Data Protection & Secrets Governance
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/security-governance/kms-and-secrets)
 - **Primary Use Case**: Managing cryptographic keys (AWS KMS), securing data at rest across S3/Redshift/RDS, optimizing big data KMS costs with S3 Bucket Keys, and automating database credential rotation with AWS Secrets Manager.
-- **Slide Reference**: Pages 560–575 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 560–575 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[iam]]` | `[[s3]]` | `[[redshift]]` | `[[glue]]`
 
 ---

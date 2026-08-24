@@ -16,7 +16,7 @@ date: 2026-08-15
 
 - **Category**: Data Quality & Governance (ဒေတာ အရည်အသွေး စီမံခန့်ခွဲမှု)
 - **Language / ဘာသာစကား**: [English Version](/en/03-concepts/data-validation-and-profiling) | **မြန်မာဘာသာ (Burmese)**
-- **Slide Reference**: Data Quality & Governance in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Data Quality & Governance in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[glue]]` | `[[sagemaker-and-ai]]` | `[[lambda]]` | `[[s3]]`
 
 ---

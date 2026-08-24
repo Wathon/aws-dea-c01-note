@@ -16,7 +16,7 @@ date: 2026-08-17
 - **Category**: Analytics / Cost Optimization & Execution Classes
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-flex)
 - **Primary Use Case**: Massive cost reduction (up to 35%) for non-urgent, non-time-sensitive, and non-SLA data integration workloads.
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[glue-etl-jobs]]` | `[[cost-management]]`
 
 ---

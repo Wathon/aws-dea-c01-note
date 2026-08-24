@@ -90,6 +90,6 @@ date: 2026-07-28
 ---
 
 ## 📌 Checklist for Domain 1
-- [ ] Review slide pages: 266-312 (Migration & Compute) and 331-459 (Analytics & Streaming) in [[AWSCertifiedDataEngineerSlides.pdf]]
+- [ ] Review slide pages: 266-312 (Migration & Compute) and 331-459 (Analytics & Streaming) in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - [ ] Complete service notes: [[glue]], [[kinesis]], [[lambda]], [[step-functions]], [[mwaa-airflow]]
 - [ ] Review data formats: [[data-formats-and-compression]]

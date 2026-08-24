@@ -18,14 +18,14 @@ date: 2026-08-17
 - **Category**: Analytics / Lightweight Serverless ETL & Data Transformation
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/athena/athena-ctas) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Spark cluster များကို manage လုပ်စရာမလိုဘဲ S3 ရှိ dataset များကို transform, compress, partition နှင့် export ပြုလုပ်ရန် lightweight SQL-based ETL ကို လုပ်ဆောင်ခြင်း။
-- **Slide Reference**: Pages 365–382 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: `[[mm/index]]` | `[[mm/athena]]` | `[[mm/glue-etl-jobs]]` | `[[mm/data-formats-and-compression]]`
+- **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
+- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/analytics-streaming/athena/athena|athena]]` | `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` | `[[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]]`
 
 ---
 
 ## 1. High-Level Summary
 
-**CTAS (Create Table As Select)** သည် Amazon Athena မှ support ပေးထားသော standard ANSI SQL statement တစ်ခုဖြစ်ပြီး၊ လက်ရှိရှိနေသော table တစ်ခုပေါ်တွင် query တစ်ခု run ကာ ရလဒ် (result) ကို Amazon S3 တွင် **new, fully managed table** အသစ်တစ်ခုအနေဖြင့် သိမ်းဆည်းပေးကာ ၎င်း၏ schema နှင့် partition metadata များကို **[[mm/glue-data-catalog]]** ထဲသို့ အလိုအလျောက် ထည့်သွင်းပေးပါသည်။
+**CTAS (Create Table As Select)** သည် Amazon Athena မှ support ပေးထားသော standard ANSI SQL statement တစ်ခုဖြစ်ပြီး၊ လက်ရှိရှိနေသော table တစ်ခုပေါ်တွင် query တစ်ခု run ကာ ရလဒ် (result) ကို Amazon S3 တွင် **new, fully managed table** အသစ်တစ်ခုအနေဖြင့် သိမ်းဆည်းပေးကာ ၎င်း၏ schema နှင့် partition metadata များကို **[[mm/02-services/analytics-streaming/glue/glue-data-catalog|glue-data-catalog]]** ထဲသို့ အလိုအလျောက် ထည့်သွင်းပေးပါသည်။
 
 CTAS နှင့်အတူ Athena သည် **`UNLOAD`** statement ကိုလည်း ပံ့ပိုးပေးထားပြီး၊ ၎င်းသည် **Data Catalog တွင် table definition တစ်ခု ဖန်တီးစရာမလိုဘဲ** query ရလဒ်များကို လိုလားသော format များ (Parquet, ORC, Avro, JSON, CSV) ဖြင့် partitioning နှင့် compression ပြုလုပ်ကာ S3 ထဲသို့ တိုက်ရိုက် extract လုပ်ထုတ်ပေးပါသည်။
 
@@ -179,7 +179,7 @@ WITH (
 ---
 
 ## 📌 Related Notes
-- `[[mm/athena]]` — Amazon Athena Overview
-- `[[mm/athena-performance]]` — Why Columnar Formats Matter
-- `[[mm/glue-etl-jobs]]` — Heavyweight PySpark ETL Alternatives
-- `[[mm/data-formats-and-compression]]` — Parquet, ORC & Compression
+- `[[mm/02-services/analytics-streaming/athena/athena|athena]]` — Amazon Athena Overview
+- `[[mm/02-services/analytics-streaming/athena/athena-performance|athena-performance]]` — Why Columnar Formats Matter
+- `[[mm/02-services/analytics-streaming/glue/glue-etl-jobs|glue-etl-jobs]]` — Heavyweight PySpark ETL Alternatives
+- `[[mm/03-concepts/data-formats-and-compression|data-formats-and-compression]]` — Parquet, ORC & Compression

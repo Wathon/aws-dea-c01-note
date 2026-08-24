@@ -19,7 +19,7 @@ date: 2026-08-18
 - **Category**: Analytics / Stream Processing & Consumer Scaling
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/kinesis/kinesis-consumers-and-scaling) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: High-throughput stream consumption, dedicated consumer fan-out, DynamoDB မှတစ်ဆင့် KCL state coordination ပြုလုပ်ခြင်း နှင့် automated Lambda error handling လုပ်ဆောင်ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 425–445
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 425–445
 - **Hub Links**: `[[mm/index]]` | `[[kinesis]]` | `[[kinesis-data-streams]]` | `[[dynamodb]]` | `[[lambda]]`
 
 ---

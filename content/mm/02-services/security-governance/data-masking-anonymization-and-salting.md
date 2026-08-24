@@ -22,7 +22,7 @@ date: 2026-08-24
 - **Category**: Security, Identity, & Compliance / Data Privacy, Cryptographic Protection & Performance Engineering
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/security-governance/data-masking-anonymization-and-salting) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Data masking၊ tokenization၊ cryptographic key salting ဖြင့် hashing ပြုလုပ်ခြင်းတို့ကို အသုံးပြု၍ data engineering lifecycle တစ်လျှောက်လုံးတွင် Personally Identifiable Information (PII) များကို ကာကွယ်ခြင်းနှင့် partition key salting ကို အသုံးပြု၍ data skew ပြဿနာများကို ရှင်းထုတ်ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 630–675
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 630–675
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[redshift]]` | `[[glue]]` | `[[athena]]` | `[[kinesis]]` | `[[dynamodb]]`
 
 ---

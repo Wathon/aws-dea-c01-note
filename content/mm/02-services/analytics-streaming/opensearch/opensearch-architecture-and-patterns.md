@@ -19,7 +19,7 @@ date: 2026-08-19
 - **Category**: Analytics / System Design, End-to-End Pipelines & Technology Selection
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-architecture-and-patterns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Enterprise log analytics pipelines များ ဒီဇိုင်းဆွဲခြင်း၊ Amazon Bedrock ဖြင့် Generative AI RAG vector search အကောင်အထည်ဖော်ခြင်း၊ နှင့် OpenSearch ကို Athena, Redshift, CloudWatch Logs Insights တို့နှင့် နှိုင်းယှဉ်သုံးသပ်ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 460–478
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 460–478
 - **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[athena]]` | `[[redshift]]` | `[[cloudwatch-and-eventbridge]]`
 
 ---

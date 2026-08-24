@@ -19,7 +19,7 @@ date: 2026-08-24
 - **Category**: Security, Identity, & Compliance / Web Application Firewall & DDoS Mitigation
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/networking-monitoring/waf-and-shield)
 - **Primary Use Case**: Protecting data ingestion endpoints (Amazon API Gateway, AWS AppSync, ALBs) and search/BI portals (Amazon OpenSearch, Amazon CloudFront) against web exploits (SQLi, XSS), runaway API scraping, and Distributed Denial of Service (DDoS) attacks.
-- **Slide Reference**: Pages 600–625 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 600–625 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[vpc-and-networking]]` | `[[kinesis]]` | `[[opensearch-security-and-monitoring]]`
 
 ---

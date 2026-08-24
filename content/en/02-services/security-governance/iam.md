@@ -18,7 +18,7 @@ date: 2026-08-23
 - **Category**: Security, Identity, & Compliance / Access Management & Data Authorization
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/security-governance/iam)
 - **Primary Use Case**: Least-privilege identity access management, pipeline execution roles (AWS Glue, Lambda, EMR, Redshift), cross-account data lake access, and IAM database authentication.
-- **Slide Reference**: Pages 542–559 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 542–559 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[lake-formation]]` | `[[kms-and-secrets]]` | `[[glue]]` | `[[redshift]]`
 
 ---

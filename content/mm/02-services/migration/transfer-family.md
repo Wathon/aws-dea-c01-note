@@ -20,8 +20,8 @@ date: 2026-08-14
 - **Category**: Migration & Transfer (B2B Partner File Exchange & Managed File Transfer)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/migration/transfer-family) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: ပြင်ပ စီးပွားရေးလုပ်ဖော်ကိုင်ဖက်များနှင့် legacy enterprise system များကို client ၏ workflow များ ပြောင်းလဲရန်မလိုဘဲ သို့မဟုတ် server များ စီမံခန့်ခွဲရန်မလိုဘဲ **SFTP, FTPS, FTP, AS2** မှတစ်ဆင့် လုံခြုံစိတ်ချရသော ဖိုင်လွှဲပြောင်းမှုဖြင့် [[s3]] Data Lakes များနှင့် [[efs-and-fsx]] (Amazon EFS) ထဲသို့ တိုက်ရိုက် ချိတ်ဆက်ပေးရန် ဖြစ်သည်။
-- **Slide Reference**: Pages 284–285 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-1-ingestion-and-processing]] | [[mm/domain-2-data-store-management]] | [[mm/s3]] | [[mm/efs-and-fsx]] | [[mm/datasync-and-snow]]
+- **Slide Reference**: Pages 284–285 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
+- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] | [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]]
 
 ---
 
@@ -242,11 +242,11 @@ graph TD
 
 ## 📌 Related Notes
 
-- [[mm/s3]] — SFTP file uploads များအတွက် Amazon S3 Data Lake target
-- [[mm/efs-and-fsx]] — Transfer Family အတွက် Amazon EFS shared file system target
-- [[mm/datasync-and-snow]] — AWS DataSync နှင့် Snow Family နှိုင်းယှဉ်ချက်
-- [[mm/dms-and-sct]] — Database migration နှင့် CDC streaming
-- [[mm/data-exchange]] — Third-party commercial dataset ရယူခြင်း
-- [[mm/application-discovery-and-mgn]] — Application Discovery နှင့် MGN server migration
-- [[mm/domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
-- [[mm/service-comparisons]] — Master DEA-C01 Service Decision Matrix
+- [[mm/02-services/storage/s3/s3|s3]] — SFTP file uploads များအတွက် Amazon S3 Data Lake target
+- [[mm/02-services/storage/efs-and-fsx|efs-and-fsx]] — Transfer Family အတွက် Amazon EFS shared file system target
+- [[mm/02-services/migration/datasync-and-snow|datasync-and-snow]] — AWS DataSync နှင့် Snow Family နှိုင်းယှဉ်ချက်
+- [[mm/02-services/migration/dms-and-sct|dms-and-sct]] — Database migration နှင့် CDC streaming
+- [[mm/02-services/migration/data-exchange|data-exchange]] — Third-party commercial dataset ရယူခြင်း
+- [[mm/02-services/migration/application-discovery-and-mgn|application-discovery-and-mgn]] — Application Discovery နှင့် MGN server migration
+- [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] — DEA-C01 Domain 1 Study Guide
+- [[mm/04-exam-tips/service-comparisons|service-comparisons]] — Master DEA-C01 Service Decision Matrix

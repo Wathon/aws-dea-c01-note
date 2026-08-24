@@ -67,6 +67,6 @@ date: 2026-07-28
 ---
 
 ## 📌 Checklist for Domain 3
-- [ ] Review slide pages: 618-670 (Monitoring & Governance) and 756-768 (Cost Management) in [[AWSCertifiedDataEngineerSlides.pdf]]
+- [ ] Review slide pages: 618-670 (Monitoring & Governance) and 756-768 (Cost Management) in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - [ ] Complete service notes: [[cloudwatch-and-eventbridge]], [[glue]], [[sqs-and-sns]], [[cost-management]]
 - [ ] Review IaC: [[cdk-cloudformation]]

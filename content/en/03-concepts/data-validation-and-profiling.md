@@ -15,7 +15,7 @@ date: 2026-08-15
 
 - **Category**: Data Quality & Governance (Data Pipeline Reliability)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/03-concepts/data-validation-and-profiling)
-- **Slide Reference**: Data Quality & Governance in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Data Quality & Governance in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[glue]]` | `[[sagemaker-and-ai]]` | `[[lambda]]` | `[[s3]]`
 
 ---

@@ -13,7 +13,7 @@ date: 2026-07-28
 
 - **Category**: Developer Tools
 - **Primary Use Case**: Infrastructure as Code (IaC), automated deployment of data pipelines, reproducible stack creation.
-- **Slide Reference**: Pages 742–755 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 742–755 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-3-data-operations-and-support]]
 
 ---

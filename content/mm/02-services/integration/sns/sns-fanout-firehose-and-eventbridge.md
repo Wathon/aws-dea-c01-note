@@ -19,8 +19,8 @@ date: 2026-08-21
 - **Category**: Application Integration / Event Fan-Out, Direct Firehose Streaming & Event Router Comparison
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sns/sns-fanout-firehose-and-eventbridge) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: SNS+SQS Fan-Out pattern ကို architect ပြုလုပ်ခြင်း၊ serverless S3/Redshift data lake ingestion အတွက် SNS topics များမှ Amazon Data Firehose ထဲသို့ တိုက်ရိုက် deliver ပြုလုပ်ခြင်း၊ နှင့် SNS နှင့် Amazon EventBridge တို့အကြား ရွေးချယ်အသုံးပြုခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 499–525
-- **Hub Links**: `[[mm/index]]` | `[[mm/sns]]` | `[[mm/sqs]]` | `[[mm/kinesis-firehose]]` | `[[mm/cloudwatch-and-eventbridge]]`
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 499–525
+- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/integration/sns/sns|sns]]` | `[[mm/02-services/integration/sqs/sqs|sqs]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` | `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]`
 
 ---
 
@@ -132,7 +132,7 @@ SNS နှင့် EventBridge နှစ်ခုစလုံးသည် AWS �
 ---
 
 ## 📌 Related Notes
-- `[[mm/sns]]` — SNS Master Hub
-- `[[mm/sqs]]` — SQS Modular Suite
-- `[[mm/kinesis-firehose]]` — Amazon Data Firehose Delivery
-- `[[mm/cloudwatch-and-eventbridge]]` — EventBridge Rules & Schema Registry
+- `[[mm/02-services/integration/sns/sns|sns]]` — SNS Master Hub
+- `[[mm/02-services/integration/sqs/sqs|sqs]]` — SQS Modular Suite
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Amazon Data Firehose Delivery
+- `[[mm/02-services/networking-monitoring/cloudwatch-and-eventbridge|cloudwatch-and-eventbridge]]` — EventBridge Rules & Schema Registry

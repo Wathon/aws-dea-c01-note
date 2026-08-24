@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Service Comparison, API Governance & Production Triage
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/appflow/appflow-comparison-and-troubleshooting) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: AppFlow ကို AWS Glue, Lambda, EventBridge တို့နှင့် နှိုင်းယှဉ်ခြင်း၊ SaaS API quotas များကို စီမံခန့်ခွဲခြင်းနှင့် အဖြစ်များသော production authentication, staging နှင့် network errors များကို ဖြေရှင်းခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 530–537
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 530–537
 - **Hub Links**: `[[mm/index]]` | `[[appflow]]` | `[[glue]]` | `[[cloudwatch-and-eventbridge]]` | `[[domain-3-data-operations-and-support]]`
 
 ---

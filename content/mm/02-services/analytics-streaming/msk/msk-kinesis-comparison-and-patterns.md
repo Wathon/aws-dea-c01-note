@@ -19,8 +19,8 @@ date: 2026-08-19
 - **Category**: Analytics / System Design, Technology Evaluation & Architecture Patterns
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/msk/msk-kinesis-comparison-and-patterns) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon MSK နှင့် Amazon Kinesis Data Streams တို့အကြား trade-offs များကို အကဲဖြတ်ခြင်း၊ MirrorMaker 2 ကို အသုံးပြု၍ Kafka-to-MSK migration များ ပြုလုပ်ခြင်း၊ နှင့် multi-service streaming architectures များကို ဒီဇိုင်းရေးဆွဲခြင်း။
-- **Slide Reference**: Pages 414–459 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
-- **Hub Links**: `[[mm/index]]` | `[[mm/msk]]` | `[[mm/kinesis]]` | `[[mm/kinesis-data-streams]]` | `[[mm/kinesis-firehose]]`
+- **Slide Reference**: Pages 414–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
+- **Hub Links**: `[[mm/index]]` | `[[mm/02-services/analytics-streaming/msk/msk|msk]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` | `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]`
 
 ---
 
@@ -153,10 +153,10 @@ graph TD
 ---
 
 ## 📌 Related Notes
-- `[[mm/msk]]` — Amazon MSK Master Hub
-- `[[mm/msk-cluster-architecture]]` — MSK Broker Architecture & Tiered Storage
-- `[[mm/msk-connect]]` — Serverless S3 Sink Connectors
-- `[[mm/kinesis]]` — Amazon Kinesis Ecosystem Hub
-- `[[mm/kinesis-data-streams]]` — KDS Ingestion & Shards
-- `[[mm/kinesis-firehose]]` — Serverless Micro-Batch Delivery
-- `[[mm/kinesis-apache-flink]]` — Real-Time Stateful Stream Processing
+- `[[mm/02-services/analytics-streaming/msk/msk|msk]]` — Amazon MSK Master Hub
+- `[[mm/02-services/analytics-streaming/msk/msk-cluster-architecture|msk-cluster-architecture]]` — MSK Broker Architecture & Tiered Storage
+- `[[mm/02-services/analytics-streaming/msk/msk-connect|msk-connect]]` — Serverless S3 Sink Connectors
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]]` — Amazon Kinesis Ecosystem Hub
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-data-streams|kinesis-data-streams]]` — KDS Ingestion & Shards
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-firehose|kinesis-firehose]]` — Serverless Micro-Batch Delivery
+- `[[mm/02-services/analytics-streaming/kinesis/kinesis-apache-flink|kinesis-apache-flink]]` — Real-Time Stateful Stream Processing

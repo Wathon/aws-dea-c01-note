@@ -72,7 +72,7 @@ gantt
 ### Week 4: Scenarios, Optimization & Exam Practice
 - Review cross-service decision matrix: [[service-comparisons]]
 - High-frequency exam traps & keywords: [[high-frequency-exam-patterns]]
-- Slide Exam Tips review: [[AWSCertifiedDataEngineerSlides.pdf]]
+- Slide Exam Tips review: [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 
 ---
 

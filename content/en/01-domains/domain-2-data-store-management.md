@@ -65,6 +65,6 @@ date: 2026-07-28
 ---
 
 ## 📌 Checklist for Domain 2
-- [ ] Review slide pages: 76-154 (Storage) and 155-265 (Database) in [[AWSCertifiedDataEngineerSlides.pdf]]
+- [ ] Review slide pages: 76-154 (Storage) and 155-265 (Database) in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - [ ] Complete service notes: [[s3]], [[redshift]], [[dynamodb]], [[rds-and-aurora]]
 - [ ] Review concepts: [[data-modeling-and-partitioning]], [[data-formats-and-compression]]

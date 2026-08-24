@@ -22,7 +22,7 @@ date: 2026-08-12
 - **Category**: Database (Petabyte-Scale Columnar OLAP Data Warehouse)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/database/redshift) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Enterprise data warehousing, high-performance complex SQL analytics, BI reporting, Data Lakehouse querying with Redshift Spectrum, Serverless data processing, Zero-ETL replication, နှင့် real-time streaming ingestion.
-- **Slide Reference**: Pages 220–265 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 220–265 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-2-data-store-management]] | [[domain-1-ingestion-and-processing]] | [[athena]] | [[glue]] | [[s3]] | [[rds-and-aurora]] | [[kinesis]] | [[kms-and-secrets]]
 
 ---

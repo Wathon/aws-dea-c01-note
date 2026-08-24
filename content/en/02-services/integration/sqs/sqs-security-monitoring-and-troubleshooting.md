@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Security Governance, Observability & Production Triage
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sqs/sqs-security-monitoring-and-troubleshooting)
 - **Primary Use Case**: Securing queues with Access Policies and KMS encryption, monitoring backlog depth and message age with CloudWatch, scaling worker fleets via Backlog per Worker, and troubleshooting production failures.
-- **Slide Reference**: Pages 499–525 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[sqs]]` | `[[sqs-timing-parameters-and-polling]]` | `[[sqs-dead-letter-queues-and-error-handling]]` | `[[domain-3-data-operations-and-support]]`
 
 ---

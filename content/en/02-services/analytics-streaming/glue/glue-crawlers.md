@@ -16,7 +16,7 @@ date: 2026-08-17
 - **Category**: Analytics / Automated Schema Discovery & Partition Management
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/glue/glue-crawlers)
 - **Primary Use Case**: Automatic schema inference, partition detection, schema drift handling, and automated Glue Data Catalog population.
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[glue]]` | `[[glue-data-catalog]]` | `[[athena]]`
 
 ---

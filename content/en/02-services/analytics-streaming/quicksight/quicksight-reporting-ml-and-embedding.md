@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Automated Reporting, Machine Learning & Embedded BI
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/quicksight/quicksight-reporting-ml-and-embedding)
 - **Primary Use Case**: Generating scheduled multi-page executive PDF reports, leveraging ML-powered anomaly detection and forecasting, natural language querying with QuickSight Q, and embedding dashboards into custom web applications.
-- **Slide Reference**: Pages 479–498 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 479–498 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[quicksight]]` | `[[quicksight-security-rls-and-governance]]` | `[[s3]]`
 
 ---

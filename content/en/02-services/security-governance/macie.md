@@ -20,7 +20,7 @@ date: 2026-08-24
 - **Category**: Security, Identity, & Compliance / Automated Sensitive Data Discovery & Classification
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/security-governance/macie)
 - **Primary Use Case**: Continuous, machine learning-powered discovery, classification, and protection of sensitive Personally Identifiable Information (PII), financial records, credentials, and custom proprietary data across Amazon S3 data lakes.
-- **Slide Reference**: Pages 635–655 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 635–655 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[s3]]` | `[[cloudwatch-and-eventbridge]]` | `[[macie-and-cloudtrail]]`
 
 ---

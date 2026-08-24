@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Lightweight Serverless ETL & Data Transformation
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-ctas)
 - **Primary Use Case**: Performing lightweight SQL-based ETL to transform, compress, partition, and export datasets in S3 without managing Spark clusters.
-- **Slide Reference**: Pages 365–382 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[athena]]` | `[[glue-etl-jobs]]` | `[[data-formats-and-compression]]`
 
 ---

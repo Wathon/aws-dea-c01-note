@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Data Governance & Validation
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-data-quality) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အလိုအလျောက် data quality တိုင်းတာခြင်း၊ declarative DQDL rule စစ်ဆေးအတည်ပြုခြင်း၊ ချို့ယွင်းနေသော pipeline များကို circuit breaking လုပ်ခြင်း နှင့် မမှန်ကန်သော record များကို သီးခြားခွဲထုတ်ခြင်း (quarantining)။
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-etl-jobs]]` | `[[data-validation-and-profiling]]`
 
 ---

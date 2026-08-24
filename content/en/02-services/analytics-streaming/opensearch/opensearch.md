@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Distributed Search, Log Analytics & Vector Search
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/opensearch/opensearch)
 - **Primary Use Case**: Managed distributed Lucene search engine for real-time application monitoring, operational log analytics, interactive full-text search, and AI/ML vector similarity search.
-- **Slide Reference**: Pages 460–478 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-2-data-store-management]]` | `[[kinesis-firehose]]` | `[[cloudwatch-and-eventbridge]]`
 
 ---

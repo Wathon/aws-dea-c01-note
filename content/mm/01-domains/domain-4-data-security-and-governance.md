@@ -79,5 +79,5 @@ date: 2026-07-28
 ---
 
 ## 📌 Checklist for Domain 4
-- [ ] [[AWSCertifiedDataEngineerSlides.pdf]] ရှိ Slide စာမျက်နှာများ: 542-589 (Security) နှင့် 590-617 (Networking) တို့ကို ပြန်လည်လေ့လာရန်
+- [ ] [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf) ရှိ Slide စာမျက်နှာများ: 542-589 (Security) နှင့် 590-617 (Networking) တို့ကို ပြန်လည်လေ့လာရန်
 - [ ] Service notes များကို အပြီးသတ်ဖတ်ရှုရန်: [[lake-formation]], [[iam]], [[kms-and-secrets]], [[macie-and-cloudtrail]], [[vpc-and-networking]], [[aws-backup]]

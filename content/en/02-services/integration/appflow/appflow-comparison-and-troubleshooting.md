@@ -18,7 +18,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Service Comparison, API Governance & Production Triage
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/appflow/appflow-comparison-and-troubleshooting)
 - **Primary Use Case**: Comparing AppFlow against AWS Glue, Lambda, and EventBridge, managing SaaS API quotas, and resolving common production authentication, staging, and network errors.
-- **Slide Reference**: Pages 530–537 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 530–537 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[appflow]]` | `[[glue]]` | `[[cloudwatch-and-eventbridge]]` | `[[domain-3-data-operations-and-support]]`
 
 ---

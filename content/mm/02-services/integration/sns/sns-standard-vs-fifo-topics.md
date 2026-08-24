@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Topic Ordering, Deduplication & FIFO Fanout
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sns/sns-standard-vs-fifo-topics) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Standard နှင့် FIFO topic semantics များအကြား ရွေးချယ်ခြင်း၊ subscriber queue အများအပြားတစ်လျှောက် message sequence ကို ထိန်းသိမ်းခြင်း၊ Content-Based Deduplication ကို enable ပြုလုပ်ခြင်းနှင့် FIFO topic များကို SQS FIFO queue များနှင့် ပေါင်းစပ်ချိတ်ဆက် (integrate) ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 499–525
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 499–525
 - **Hub Links**: `[[mm/index]]` | `[[sns]]` | `[[sqs-standard-vs-fifo-queues]]` | `[[sns-subscription-filter-policies]]`
 
 ---

@@ -10,7 +10,7 @@ date: 2026-07-28
 
 # 📚 AWS Service Catalog for DEA-C01
 
-Categorized index of all AWS services covered in the **AWS Certified Data Engineer – Associate** slides (`[[AWSCertifiedDataEngineerSlides.pdf]]`).
+Categorized index of all AWS services covered in the **AWS Certified Data Engineer – Associate** slides (`[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`).
 
 ---
 

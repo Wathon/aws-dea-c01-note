@@ -18,7 +18,7 @@ date: 2026-08-14
 - **Category**: Compute (Serverless Compute & Event-Driven Processing)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/compute-containers/lambda) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Real-time event-driven data processing, [[kinesis]] နှင့် [[msk]] တို့မှ streaming micro-batching လုပ်ခြင်း၊ ပေါ့ပါးသော ETL၊ S3 file ingestion triggers များနှင့် workflow orchestration glue အဖြစ် အသုံးပြုခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 289–310 
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 289–310 
 - **Hub Links**: [[mm/index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[kinesis]] | [[s3]] | [[dynamodb]] | [[redshift]] | [[efs-and-fsx]] | [[step-functions]]
 
 ---

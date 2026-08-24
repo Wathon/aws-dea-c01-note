@@ -13,7 +13,7 @@ date: 2026-07-28
 
 - **Category**: Machine Learning
 - **Primary Use Case**: Data preparation (Data Wrangler), feature management (Feature Store), dataset labeling (Ground Truth), generative AI (Amazon Bedrock, Amazon Q Business).
-- **Slide Reference**: Pages 671–741 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 671–741 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]]
 
 ---

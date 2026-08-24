@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Resilient Workflow Execution & Distributed Error Recovery
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/step-functions/step-functions-error-handling-retry-and-sagas) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: exponential backoff ပါဝင်သော automated `Retry` policies များကို configure လုပ်ခြင်း၊ `Catch` handlers များဖြင့် မအောင်မြင်သော pipeline states များကို သီးခြားခွဲထုတ်ကိုင်တွယ်ခြင်း (isolating failed states) နှင့် distributed compensating transactions များအတွက် Saga Pattern ကို အကောင်အထည်ဖော်ခြင်း (implementing Saga Pattern)။
-- **Slide Reference**: Pages 526–529 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[step-functions]]` | `[[step-functions-standard-vs-express-workflows]]` | `[[domain-3-data-operations-and-support]]`
 
 ---

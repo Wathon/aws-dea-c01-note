@@ -17,7 +17,7 @@ date: 2026-08-07
 - **Category**: Storage Security & Data Protection
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-security)
 - **Primary Use Case**: Defense-in-Depth Security, Access Control, Regulatory Compliance, Data Immutability & Auditing
-- **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-encryption]] | [[s3-access-points]] | [[iam]] | [[lake-formation]] | [[macie-and-cloudtrail]]
 
 ---

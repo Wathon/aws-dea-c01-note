@@ -19,7 +19,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Queue Mechanics & Consumer Optimization
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/integration/sqs/sqs-timing-parameters-and-polling)
 - **Primary Use Case**: Configuring visibility timeouts to prevent duplicate processing, implementing `ChangeMessageVisibility` for long-running ETL jobs, slashing costs with Long Polling, and configuring Delay Queues.
-- **Slide Reference**: Pages 499–525 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 499–525 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[sqs]]` | `[[sqs-standard-vs-fifo-queues]]` | `[[sqs-dead-letter-queues-and-error-handling]]`
 
 ---

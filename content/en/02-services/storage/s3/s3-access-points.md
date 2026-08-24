@@ -16,7 +16,7 @@ date: 2026-08-07
 - **Category**: Storage Governance & Access Management
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/storage/s3/s3-access-points)
 - **Primary Use Case**: Simplified Large-Scale Access Control, Multi-Tenant Data Lakes, In-Transit Data Transformation
-- **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
+- **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
 - **Hub Links**: [[index]] | [[service-catalog]] | [[s3]] | [[s3-encryption]] | [[vpc-and-networking]]
 
 ---

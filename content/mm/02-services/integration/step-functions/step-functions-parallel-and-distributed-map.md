@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Category**: Application Integration / High-Throughput Parallelism & Big Data Processing
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/step-functions/step-functions-parallel-and-distributed-map) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Amazon S3 objects သန်းပေါင်းများစွာကို concurrent child executions ၁၀,၀၀၀ အထိဖြင့် process လုပ်ရန် Parallel branching, Inline Map iteration နှင့် Distributed Map တို့အကြား သင့်လျော်ရာကို ရွေးချယ်အသုံးပြုခြင်း။
-- **Slide Reference**: Pages 526–529 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 526–529 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[step-functions]]` | `[[s3]]` | `[[lambda]]` | `[[domain-1-ingestion-and-processing]]`
 
 ---

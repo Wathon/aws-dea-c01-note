@@ -17,8 +17,8 @@ date: 2026-08-08
 - **Category**: Storage Governance & Cost Optimization
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-lifecycle-rules) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Automated Data Tiering, Retention Management, Storage Cost Reduction, Cleanup of Noncurrent Versions & Incomplete Multipart Uploads
-- **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
-- **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/s3]] | [[mm/s3-versioning]] | [[mm/cost-management]] | [[mm/s3-storage-lens]]
+- **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
+- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/s3/s3-versioning|s3-versioning]] | [[mm/02-services/ml-dev-cost/cost-management|cost-management]] | [[mm/02-services/storage/s3/s3-storage-lens|s3-storage-lens]]
 
 ---
 
@@ -162,7 +162,7 @@ Lifecycle rule များကို bucket တစ်ခုလုံးအပေ
 
 ## 📌 Related Notes
 
-- [[mm/s3]] — Main Amazon S3 Overview & Storage Classes
-- [[mm/s3-versioning]] — S3 Versioning, Delete Markers & MFA Delete
-- [[mm/s3-storage-lens]] — Identifying Incomplete Multipart Uploads & Cost Analytics
-- [[mm/cost-management]] — AWS Cost Explorer & Cost Optimization Strategies
+- [[mm/02-services/storage/s3/s3|s3]] — Main Amazon S3 Overview & Storage Classes
+- [[mm/02-services/storage/s3/s3-versioning|s3-versioning]] — S3 Versioning, Delete Markers & MFA Delete
+- [[mm/02-services/storage/s3/s3-storage-lens|s3-storage-lens]] — Identifying Incomplete Multipart Uploads & Cost Analytics
+- [[mm/02-services/ml-dev-cost/cost-management|cost-management]] — AWS Cost Explorer & Cost Optimization Strategies

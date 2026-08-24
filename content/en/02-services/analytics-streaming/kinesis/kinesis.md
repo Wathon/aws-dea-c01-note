@@ -18,7 +18,7 @@ date: 2026-08-18
 - **Category**: Analytics / Real-Time Data Streaming & Ingestion
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/kinesis/kinesis)
 - **Primary Use Case**: Massive real-time stream ingestion, sub-second analytics, managed micro-batch delivery to data lakes, and continuous stream transformations.
-- **Slide Reference**: Pages 414–459 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 414–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[domain-1-ingestion-and-processing]]` | `[[domain-3-data-processing]]` | `[[s3]]`
 
 ---

@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Automated Schema Discovery & Partition Management
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-crawlers) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case / အဓိက အသုံးပြုမှု**: Schema များကို အလိုအလျောက် ရှာဖွေဖော်ထုတ်ခြင်း (Automatic schema inference)၊ Partition ခွဲခြားသတ်မှတ်ခြင်း (partition detection)၊ Schema ပြောင်းလဲမှုများကို ကိုင်တွယ်ခြင်း (schema drift handling) နှင့် Glue Data Catalog အတွင်းသို့ metadata များကို အလိုအလျောက် ဖြည့်သွင်းခြင်း။
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-data-catalog]]` | `[[athena]]`
 
 ---

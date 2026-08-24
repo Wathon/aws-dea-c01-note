@@ -17,8 +17,8 @@ date: 2026-08-07
 - **Category**: Security & Storage Governance
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/storage/s3/s3-encryption) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Data Protection at Rest & In Transit, Compliance, Fine-Grained Access Control
-- **Slide Reference**: Pages 77–138 in [[AWSCertifiedDataEngineerSlides.pdf]]
-- **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/s3]] | [[mm/s3-performance]] | [[mm/kms-and-secrets]]
+- **Slide Reference**: Pages 77–138 in [AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)
+- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/storage/s3/s3-performance|s3-performance]] | [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]]
 
 ---
 
@@ -209,7 +209,7 @@ sequenceDiagram
 
 ## 📌 Related Notes
 
-- [[mm/s3]] — Amazon S3 Overview & Storage Classes
-- [[mm/s3-performance]] — S3 Bucket Keys & Request Performance
-- [[mm/kms-and-secrets]] — AWS KMS Key Policies, Symmetric vs Asymmetric Keys & CloudTrail Audit
-- [[mm/lake-formation]] — Data Lake Access Control & Encryption Governance
+- [[mm/02-services/storage/s3/s3|s3]] — Amazon S3 Overview & Storage Classes
+- [[mm/02-services/storage/s3/s3-performance|s3-performance]] — S3 Bucket Keys & Request Performance
+- [[mm/02-services/security-governance/kms-and-secrets|kms-and-secrets]] — AWS KMS Key Policies, Symmetric vs Asymmetric Keys & CloudTrail Audit
+- [[mm/02-services/security-governance/lake-formation|lake-formation]] — Data Lake Access Control & Encryption Governance

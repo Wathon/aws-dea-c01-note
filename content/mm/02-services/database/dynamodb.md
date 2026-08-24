@@ -18,8 +18,8 @@ date: 2026-08-10
 - **Category**: Database (Serverless NoSQL Key-Value & Document)
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/database/dynamodb) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Ultra-low-latency single-digit millisecond operational data store, real-time feature stores, streaming pipeline state tracking, Change Data Capture (CDC) with DynamoDB Streams, နှင့် distributed metadata catalogs။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 156–195
-- **Hub Links**: [[mm/index]] | [[mm/service-catalog]] | [[mm/domain-2-data-store-management]] | [[mm/domain-1-ingestion-and-processing]] | [[mm/s3]] | [[mm/lambda]] | [[mm/glue]] | [[mm/redshift]]
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 156–195
+- **Hub Links**: [[mm/index]] | [[mm/00-hub/service-catalog|service-catalog]] | [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] | [[mm/01-domains/domain-1-ingestion-and-processing|domain-1-ingestion-and-processing]] | [[mm/02-services/storage/s3/s3|s3]] | [[mm/02-services/compute-containers/lambda|lambda]] | [[mm/02-services/analytics-streaming/glue/glue|glue]] | [[mm/02-services/database/redshift|redshift]]
 
 ---
 
@@ -273,7 +273,7 @@ $$\text{WCU (Transactional Write)} = \left\lceil \frac{\text{Item Size in KB}}{1
 ### Accelerating Large Table Scans: Parallel Scan
 အကယ်၍ full table scan တစ်ခု မဖြစ်မနေ လိုအပ်ပါက (ဥပမာ bulk export သို့မဟုတ် Apache Spark ETL job တစ်ခုသို့ feed ရန်)၊ **Parallel Scan** ကို အသုံးပြုပါ-
 - Table ကို logical segment များအဖြစ် ခွဲခြားသည် (API ရှိ `Segment` နှင့် `TotalSegments` parameter များ)။
-- Thread အများအပြား သို့မဟုတ် [[mm/emr]] / [[mm/glue]] worker task များသည် ၎င်းတို့၏ သက်ဆိုင်ရာ segment ကို ပြိုင်တူ (in parallel) scan ဖတ်ကြပြီး၊ provisioned throughput ကို အပြည့်အဝအသုံးပြုကာ အလွန်မြန်ဆန်စွာ ပြီးစီးစေပါသည်။
+- Thread အများအပြား သို့မဟုတ် [[mm/02-services/analytics-streaming/emr/emr|emr]] / [[mm/02-services/analytics-streaming/glue/glue|glue]] worker task များသည် ၎င်းတို့၏ သက်ဆိုင်ရာ segment ကို ပြိုင်တူ (in parallel) scan ဖတ်ကြပြီး၊ provisioned throughput ကို အပြည့်အဝအသုံးပြုကာ အလွန်မြန်ဆန်စွာ ပြီးစီးစေပါသည်။
 
 ---
 
@@ -360,7 +360,7 @@ graph LR
 
 ## 8. DynamoDB Data Lake Integration: Native S3 Export & Import
 
-ကြီးမားသော DynamoDB table များကို [[mm/athena]] ဖြင့် analytics query ပြုလုပ်ရန် သို့မဟုတ် [[mm/glue]] ဖြင့် ETL process ပြုလုပ်ရန် Amazon S3 သို့ export လုပ်ခြင်းသည် အရေးကြီးသော DEA-C01 architectural pattern တစ်ခုဖြစ်ပါသည်။
+ကြီးမားသော DynamoDB table များကို [[mm/02-services/analytics-streaming/athena/athena|athena]] ဖြင့် analytics query ပြုလုပ်ရန် သို့မဟုတ် [[mm/02-services/analytics-streaming/glue/glue|glue]] ဖြင့် ETL process ပြုလုပ်ရန် Amazon S3 သို့ export လုပ်ခြင်းသည် အရေးကြီးသော DEA-C01 architectural pattern တစ်ခုဖြစ်ပါသည်။
 
 ```mermaid
 graph LR
@@ -451,11 +451,11 @@ graph LR
 
 ## 📌 Related Notes
 
-- [[mm/lambda]] — Serverless compute integration with DynamoDB Streams
-- [[mm/s3]] — Amazon S3 Data Lake target for DynamoDB exports and archives
-- [[mm/glue]] — AWS Glue ETL connectors for DynamoDB tables
-- [[mm/athena]] — Querying exported DynamoDB tables in S3
-- [[mm/opensearch]] — Search index replication from DynamoDB Streams
-- [[mm/kinesis]] — Kinesis Data Streams for DynamoDB CDC pipelines
-- [[mm/aws-backup]] — Centralized backup plans, PITR, and Vault Lock protection for DynamoDB
-- [[mm/domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide
+- [[mm/02-services/compute-containers/lambda|lambda]] — Serverless compute integration with DynamoDB Streams
+- [[mm/02-services/storage/s3/s3|s3]] — Amazon S3 Data Lake target for DynamoDB exports and archives
+- [[mm/02-services/analytics-streaming/glue/glue|glue]] — AWS Glue ETL connectors for DynamoDB tables
+- [[mm/02-services/analytics-streaming/athena/athena|athena]] — Querying exported DynamoDB tables in S3
+- [[mm/02-services/analytics-streaming/opensearch/opensearch|opensearch]] — Search index replication from DynamoDB Streams
+- [[mm/02-services/analytics-streaming/kinesis/kinesis|kinesis]] — Kinesis Data Streams for DynamoDB CDC pipelines
+- [[mm/02-services/security-governance/aws-backup|aws-backup]] — Centralized backup plans, PITR, and Vault Lock protection for DynamoDB
+- [[mm/01-domains/domain-2-data-store-management|domain-2-data-store-management]] — DEA-C01 Domain 2 Study Guide

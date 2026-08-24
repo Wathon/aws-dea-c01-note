@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Pipeline Orchestration
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-workflows) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: dynamic parameter sharing ဖြင့် multi-step Glue Crawlers, Jobs နှင့် Triggers များကို native, serverless ပုံစံဖြင့် ချိတ်ဆက်စီမံခန့်ခွဲခြင်း (orchestration)။
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[step-functions]]` | `[[mwaa-airflow]]`
 
 ---

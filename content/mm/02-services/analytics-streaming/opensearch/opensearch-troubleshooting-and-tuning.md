@@ -20,7 +20,7 @@ date: 2026-08-19
 - **Category**: Analytics / Production Troubleshooting & Cluster Optimization
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/opensearch/opensearch-troubleshooting-and-tuning) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Red နှင့် Yellow cluster health များကို ရောဂါရှာဖွေစစ်ဆေးခြင်း (diagnosing)၊ disk watermark write blocks (`read_only_allow_delete`) များကို ဖြေရှင်းခြင်း၊ JVM memory pressure ရှင်းလင်းခြင်း နှင့် bulk indexing throughput ကို optimize ပြုလုပ်ခြင်း။
-- **Slide Reference**: Pages 460–478 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 460–478 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[opensearch]]` | `[[opensearch-cluster-architecture]]` | `[[opensearch-security-and-monitoring]]`
 
 ---

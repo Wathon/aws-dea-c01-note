@@ -17,7 +17,7 @@ date: 2026-08-14
 - **Category**: Compute (Containerized Batch Processing & High-Performance Computing)
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/compute-containers/batch)
 - **Primary Use Case**: Running long-running (> 15 min) batch computing jobs, non-Spark data transformations, scientific simulations, ML data preprocessing, and Dockerized image processing on managed EC2, Spot Instances, or AWS Fargate.
-- **Slide Reference**: Pages 311–312 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 311–312 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: [[index]] | [[service-catalog]] | [[domain-1-ingestion-and-processing]] | [[lambda]] | [[glue]] | [[emr]] | [[ecr-ecs-eks]] | [[step-functions]]
 
 ---

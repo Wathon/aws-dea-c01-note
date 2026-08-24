@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Governance, Security & Cost Controls
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/athena/athena-workgroups)
 - **Primary Use Case**: Multi-tenant isolation, per-query and workgroup-level data scan limits, mandatory encryption enforcement, and granular cost tracking.
-- **Slide Reference**: Pages 365–382 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 365–382 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[athena]]` | `[[domain-5-security-and-governance]]` | `[[cost-management]]`
 
 ---

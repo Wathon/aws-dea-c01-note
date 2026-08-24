@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Managed Stream Integration & Data Delivery
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk-connect)
 - **Primary Use Case**: Running serverless Apache Kafka Connect source and sink connectors to ingest CDC streams and deliver Kafka data directly to Amazon S3, OpenSearch, Redshift, and Snowflake without managing worker servers.
-- **Slide Reference**: Pages 450–459 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[msk]]` | `[[kinesis-firehose]]` | `[[s3]]` | `[[opensearch]]`
 
 ---

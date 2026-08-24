@@ -17,7 +17,7 @@ date: 2026-08-17
 - **Category**: Analytics / Cost Optimization & Execution Classes
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/glue/glue-flex) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: အချိန် အရေးမကြီးသော၊ သတ်မှတ်ချိန် deadline (SLA) မရှိသော data integration workload များအတွက် ကုန်ကျစရိတ်ကို အများအပြား (၃၅% အထိ) လျှော့ချရန်။
-- **Slide Reference**: Pages 331–364 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 331–364 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[mm/index]]` | `[[glue]]` | `[[glue-etl-jobs]]` | `[[cost-management]]`
 
 ---

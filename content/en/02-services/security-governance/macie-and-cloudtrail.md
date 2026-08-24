@@ -19,7 +19,7 @@ date: 2026-08-23
 - **Category**: Security, Identity, & Compliance / Sensitive Data Discovery, Audit Logging & PII Governance
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/security-governance/macie-and-cloudtrail)
 - **Primary Use Case**: Automated discovery of sensitive Personally Identifiable Information (PII) in Amazon S3 (Amazon Macie), immutable auditing of API activity and data access (AWS CloudTrail), and in-flight PII masking (AWS Glue Sensitive Data Detection).
-- **Slide Reference**: Pages 630–670 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 630–670 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[service-catalog]]` | `[[domain-4-data-security-and-governance]]` | `[[s3]]` | `[[glue]]` | `[[cloudwatch-and-eventbridge]]`
 
 ---

@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Distributed Streaming & Real-Time Data Ingestion
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/analytics-streaming/msk/msk) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case / အဓိက အသုံးပြုမှု**: Real-time streaming၊ event-driven microservices၊ open-source ecosystem compatibility နှင့် high-throughput low-latency pub/sub pipelines များအတွက် fully managed ဖြစ်ပြီး highly available ဖြစ်သော Apache Kafka cluster များကို ထောက်ပံ့ပေးခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` ရှိ စာမျက်နှာ 450–459
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` ရှိ စာမျက်နှာ 450–459
 - **Hub Links**: `[[mm/index]]` | `[[service-catalog]]` | `[[kinesis]]` | `[[glue-schema-registry]]` | `[[lambda]]`
 
 ---

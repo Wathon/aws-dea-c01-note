@@ -20,7 +20,7 @@ date: 2026-08-21
 - **Category**: Application Integration / Message Ordering & Delivery Semantics
 - **Language / ဘာသာစကား**: [English (Original)](/en/02-services/integration/sqs/sqs-standard-vs-fifo-queues) | **မြန်မာဘာသာ (Burmese)**
 - **Primary Use Case**: Standard နှင့် FIFO queue semantics အကြား ရွေးချယ်ခြင်း၊ အစဉ်လိုက် parallel processing ပြုလုပ်နိုင်ရန် Message Group IDs များ configure လုပ်ခြင်း၊ Content-Based Deduplication ကို enable လုပ်ခြင်း နှင့် High-Throughput FIFO mode ဖြင့် scale ပြုလုပ်ခြင်း။
-- **Slide Reference**: `[[AWSCertifiedDataEngineerSlides.pdf]]` မှ Pages 499–525
+- **Slide Reference**: `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)` မှ Pages 499–525
 - **Hub Links**: `[[mm/index]]` | `[[sqs]]` | `[[sqs-timing-parameters-and-polling]]` | `[[sqs-dead-letter-queues-and-error-handling]]`
 
 ---

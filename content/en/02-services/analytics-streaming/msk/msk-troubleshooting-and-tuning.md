@@ -18,7 +18,7 @@ date: 2026-08-19
 - **Category**: Analytics / Production Troubleshooting & Cluster Optimization
 - **Language / ဘာသာစကား**: **English (Original)** | [မြန်မာဘာသာ (Burmese)](/mm/02-services/analytics-streaming/msk/msk-troubleshooting-and-tuning)
 - **Primary Use Case**: Diagnosing broker disk full failures, resolving producer `TimeoutException`, eliminating consumer rebalance storms, tuning producer batching, and rebalancing partition skew.
-- **Slide Reference**: Pages 450–459 in `[[AWSCertifiedDataEngineerSlides.pdf]]`
+- **Slide Reference**: Pages 450–459 in `[AWSCertifiedDataEngineerSlides.pdf](/docs/AWSCertifiedDataEngineerSlides.pdf)`
 - **Hub Links**: `[[index]]` | `[[msk]]` | `[[msk-cluster-architecture]]` | `[[msk-security-and-monitoring]]` | `[[kinesis-troubleshooting-and-tuning]]`
 
 ---
